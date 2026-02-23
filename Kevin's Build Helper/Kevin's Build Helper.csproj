@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Kevin_s_Build_Helper</RootNamespace>
+    <AssemblyName>KevinsBuildHelper</AssemblyName>
+  </PropertyGroup>
+
+</Project>

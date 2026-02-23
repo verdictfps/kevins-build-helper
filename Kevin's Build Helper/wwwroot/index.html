@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Kevin's Build Helper</title>
+    <link rel="stylesheet" type="text/css"
+          href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: auto auto;
+            background-color: #2D424B;
+            padding: 10px;
+        }
+
+            .container div {
+                background-color: #f1f1f1;
+                border: 1px solid black;
+                padding: 10px;
+                font-size: 30px;
+                text-align: center;
+            }
+
+        .resultcontainer {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #2D424B;
+            padding: 10px;
+        }
+
+            .resultcontainer div {
+                background-color: #f1f1f1;
+                border: 1px solid black;
+                padding: 10px;
+                font-size: 30px;
+                text-align: center;
+            }
+    </style>
+    <script src="OilFunctions.js"></script>
+</head>
+<body>
+    <h1>Kevin's Build Helper</h1>
+    <h2>Select build components</h2>
+    <div class="container">
+        <div>
+            <h3>Weapons</h3>
+            <select name="weapons" id="weapons">
+                <option value="random-all">Random - All</option>
+
+                <option value="random-pistols">Random - Pistols</option>
+                <option value="beck-8">&nbsp;&nbsp;&nbsp;&nbsp;Beck 8</option>
+                <option value="bronco-89">&nbsp;&nbsp;&nbsp;&nbsp;Bronco 89</option>
+                <option value="cavalier">&nbsp;&nbsp;&nbsp;&nbsp;Cavalier</option>
+                <option value="flicker">&nbsp;&nbsp;&nbsp;&nbsp;Flicker</option>
+                <option value="gravekeeper">&nbsp;&nbsp;&nbsp;&nbsp;Gravekeeper</option>
+                <option value="hell-n-back">&nbsp;&nbsp;&nbsp;&nbsp;Hell 'N' Back</option>
+                <option value="p38-dirk">&nbsp;&nbsp;&nbsp;&nbsp;P38 Dirk</option>
+                <option value="salamander">&nbsp;&nbsp;&nbsp;&nbsp;Salamander</option>
+                <option value="socom-9">&nbsp;&nbsp;&nbsp;&nbsp;Socom 9</option>
+                <option value="star-witness">&nbsp;&nbsp;&nbsp;&nbsp;Star &amp; Witness</option>
+                <option value="unknown">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</option>
+
+                <option value="random-revolvers">Random - Revolvers</option>
+                <option value="357-balthazar">&nbsp;&nbsp;&nbsp;&nbsp;.357 Balthazar</option>
+                <option value="palehorse-topclipper">&nbsp;&nbsp;&nbsp;&nbsp;Palehorse Topclipper</option>
+                <option value="snut-38">&nbsp;&nbsp;&nbsp;&nbsp;Snut .38</option>
+                <option value="wyatt-pulsar">&nbsp;&nbsp;&nbsp;&nbsp;Wyatt PULSAR</option>
+
+                <option value="random-shotguns">Random - Shotguns</option>
+                <option value="1889-mario">&nbsp;&nbsp;&nbsp;&nbsp;1889 Mario</option>
+                <option value="arbiter-2">&nbsp;&nbsp;&nbsp;&nbsp;Arbiter 2</option>
+                <option value="augusta">&nbsp;&nbsp;&nbsp;&nbsp;Augusta</option>
+                <option value="breacher-8">&nbsp;&nbsp;&nbsp;&nbsp;Breacher 8</option>
+                <option value="flock-76">&nbsp;&nbsp;&nbsp;&nbsp;Flock 76</option>
+                <option value="majordome">&nbsp;&nbsp;&nbsp;&nbsp;Majordome</option>
+                <option value="mossman">&nbsp;&nbsp;&nbsp;&nbsp;Mossman</option>
+
+                <option value="random-smgs">Random - SMGs</option>
+                <option value="deathstar-pg">&nbsp;&nbsp;&nbsp;&nbsp;Deathstar PG</option>
+                <option value="drifter-9">&nbsp;&nbsp;&nbsp;&nbsp;Drifter 9</option>
+                <option value="ferryman">&nbsp;&nbsp;&nbsp;&nbsp;Ferryman</option>
+                <option value="m3-termite">&nbsp;&nbsp;&nbsp;&nbsp;M3 Termite</option>
+                <option value="ploika-compact">&nbsp;&nbsp;&nbsp;&nbsp;Ploika Compact</option>
+                <option value="valet">&nbsp;&nbsp;&nbsp;&nbsp;Valet</option>
+                <option value="vrede">&nbsp;&nbsp;&nbsp;&nbsp;Vrede</option>
+
+                <option value="random-assault-rifles">Random - Assault Rifles</option>
+                <option value="catacoil-rapid-x">&nbsp;&nbsp;&nbsp;&nbsp;Catacoil Rapid X</option>
+                <option value="corpsemaker">&nbsp;&nbsp;&nbsp;&nbsp;Corpsemaker</option>
+                <option value="m11a2-fisk">&nbsp;&nbsp;&nbsp;&nbsp;M11A2 Fisk</option>
+                <option value="type-80-typhoon">&nbsp;&nbsp;&nbsp;&nbsp;Type 80 Typhoon</option>
+                <option value="wingman">&nbsp;&nbsp;&nbsp;&nbsp;Wingman</option>
+
+                <option value="random-lmgs">Random - LMGs</option>
+                <option value="duhar">&nbsp;&nbsp;&nbsp;&nbsp;Duhar</option>
+                <option value="neuraxis-f22">&nbsp;&nbsp;&nbsp;&nbsp;Neuraxis F22</option>
+                <option value="rektor-100rd">&nbsp;&nbsp;&nbsp;&nbsp;Rektor 100rd</option>
+
+                <option value="random-rifles">Random - Rifles</option>
+                <option value="farsight">&nbsp;&nbsp;&nbsp;&nbsp;Farsight</option>
+                <option value="knop-22">&nbsp;&nbsp;&nbsp;&nbsp;Knop .22</option>
+                <option value="m182-pierre-fusil">&nbsp;&nbsp;&nbsp;&nbsp;M182 Pierre-Fusil</option>
+                <option value="tailor-marksman-mkii">&nbsp;&nbsp;&nbsp;&nbsp;Tailor Marksman MKII</option>
+
+                <option value="random-sniper-rifles">Random - Sniper Rifles</option>
+                <option value="d4rt">&nbsp;&nbsp;&nbsp;&nbsp;D4RT</option>
+                <option value="dolphin-99">&nbsp;&nbsp;&nbsp;&nbsp;Dolphin 99</option>
+                <option value="impala-gravita">&nbsp;&nbsp;&nbsp;&nbsp;Impala Gravita</option>
+                <option value="longboy">&nbsp;&nbsp;&nbsp;&nbsp;Longboy</option>
+                <option value="rokua-308">&nbsp;&nbsp;&nbsp;&nbsp;Rokua .308</option>
+            </select>
+            <h3>Enchantments</h3>
+            <span class="label oils" for="enchantments">Oil 1</span>
+            <select name="oilCategory1" id="oilCategory1" onchange="oilCategory('oilCategory1', this.value)">
+                <option selected disabled hidden value="select-category">Select a category...</option>
+                <option value="ammo-consume-chance-oils">Ammo Consume Chance Oils</option>
+                <option value="base-crit-chance-oils">Base Crit Chance Oils</option>
+                <option value="bullet-bounces-oils">Bullet Bounces Oils</option>
+                <option value="bullet-speed-oils">Bullet Speed Oils</option>
+                <option value="add-damage-oils">Add Damage Oils</option>
+                <option value="percent-damage-oils">% Damage Oils</option>
+                <option value="durability-oils">Durability Oils</option>
+                <option value="penetration-oils">Penetration Oils</option>
+                <option value="projectiles-oils">Projectiles Oils</option>
+                <option value="recoil-oils">Recoil Oils</option>
+                <option value="reload-speed-oils">Reload Speed Oils</option>
+                <option value="rpm-oils">RPM Oils</option>
+                <option value="spread-oils">Spread Oils</option>
+            </select>
+            <select name="oils1selector" id="oils1selector" onchange="oilRemover('oils1selector', this.value)">
+                <option selected disabled hidden value="static-choose">Select an oil...</option>
+                <optgroup label="Ammo Consume Chance" id="oils1AmmoCat" hidden="hidden">
+                    <option value="static-random-ammo-consume-chance">Random Ammo Consume Chance Oil</option>
+                    <option value="bulk-oil">Bulk Oil</option>
+                    <option value="carefree-oil">Carefree Oil</option>
+                    <option value="cheap-oil">Cheap Oil</option>
+                    <option value="do-over-oil">Do-over Oil</option>
+                    <option value="food-stamp-oil">Food Stamp Oil</option>
+                    <option value="heavy-pockets-oil">Heavy Pockets Oil</option>
+                    <option value="helium-oil">Helium Oil</option>
+                    <option value="keep-oil">Keep Oil</option>
+                    <option value="last-drop-oil">Last Drop Oil</option>
+                    <option value="mosquito-oil">Mosquito Oil</option>
+                    <option value="plop-back-oil">Plop Back Oil</option>
+                    <option value="recycle-oil">Recycle Oil</option>
+                    <option value="satiety-oil">Satiety Oil</option>
+                    <option value="saviour-oil">Saviour Oil</option>
+                    <option value="walk-easy-oil">Walk Easy Oil</option>
+                    <option value="whos-counting-oil">Whos Counting Oil</option>
+                </optgroup>
+                <optgroup label="Base Crit Chance" id="oils1CritCat" hidden="hidden">
+                    <option value="static-random-base-crit-chance">Random Base Crit Chance Oil</option>
+                    <option value="aimless-oil">Aimless Oil</option>
+                    <option value="artery-oil">Artery Oil</option>
+                    <option value="axe-oil">Axe Oil</option>
+                    <option value="blindfold-oil">Blindfold Oil</option>
+                    <option value="confidence-oil">Confidence Oil</option>
+                    <option value="critical-oil">Critical Oil</option>
+                    <option value="gambler-oil">Gambler Oil</option>
+                    <option value="happy-accident-oil">Happy Accident Oil</option>
+                    <option value="hunter-oil">Hunter Oil</option>
+                    <option value="hustler-oil">Hustler Oil</option>
+                    <option value="low-roller-oil">Low Roller Oil</option>
+                    <option value="manifestation-oil">Manifestation Oil</option>
+                    <option value="no-need-oil">No Need Oil</option>
+                    <option value="out-of-the-box-oil">Out of the Box Oil</option>
+                    <option value="puncture-oil">Puncture Oil</option>
+                    <option value="slotmachine-oil">Slotmachine Oil</option>
+                    <option value="smart-bullet-oil">Smart Bullet Oil</option>
+                </optgroup>
+                <option value="static-no-selection">None</option>
+                <option value="static-random-all">Random Oil - All</option>
+            </select>
+            <span class="label oils" for="enchantments">Oil 2</span>
+            <select name="oilCategory2" id="oilCategory2" onchange="oilCategory('oilCategory2', this.value)">
+                <option selected disabled hidden value="select-category">Select a category...</option>
+                <option value="ammo-consume-chance-oils">Ammo Consume Chance Oils</option>
+                <option value="base-crit-chance-oils">Base Crit Chance Oils</option>
+                <option value="bullet-bounces-oils">Bullet Bounces Oils</option>
+                <option value="bullet-speed-oils">Bullet Speed Oils</option>
+                <option value="add-damage-oils">Add Damage Oils</option>
+                <option value="percent-damage-oils">% Damage Oils</option>
+                <option value="durability-oils">Durability Oils</option>
+                <option value="penetration-oils">Penetration Oils</option>
+                <option value="projectiles-oils">Projectiles Oils</option>
+                <option value="recoil-oils">Recoil Oils</option>
+                <option value="reload-speed-oils">Reload Speed Oils</option>
+                <option value="rpm-oils">RPM Oils</option>
+                <option value="spread-oils">Spread Oils</option>
+            </select>
+            <select name="oils2selector" id="oils2selector" onchange="oilRemover('oils2selector', this.value)">
+                <option selected disabled hidden value="static-choose">Select an oil...</option>
+                <optgroup label="Ammo Consume Chance" id="oils2AmmoCat" hidden="hidden">
+                    <option value="static-random-ammo-consume-chance">Random - Ammo Consume Chance</option>
+                    <option value="bulk-oil">Bulk Oil</option>
+                    <option value="carefree-oil">Carefree Oil</option>
+                    <option value="cheap-oil">Cheap Oil</option>
+                    <option value="do-over-oil">Do-over Oil</option>
+                    <option value="food-stamp-oil">Food Stamp Oil</option>
+                    <option value="heavy-pockets-oil">Heavy Pockets Oil</option>
+                    <option value="helium-oil">Helium Oil</option>
+                    <option value="keep-oil">Keep Oil</option>
+                    <option value="last-drop-oil">Last Drop Oil</option>
+                    <option value="mosquito-oil">Mosquito Oil</option>
+                    <option value="plop-back-oil">Plop Back Oil</option>
+                    <option value="recycle-oil">Recycle Oil</option>
+                    <option value="satiety-oil">Satiety Oil</option>
+                    <option value="saviour-oil">Saviour Oil</option>
+                    <option value="walk-easy-oil">Walk Easy Oil</option>
+                    <option value="whos-counting-oil">Whos Counting Oil</option>
+                </optgroup>
+                <optgroup label="Base Crit Chance" id="oils2CritCat" hidden="hidden">
+                    <option value="static-random-base-crit-chance">Random - Base Crit Chance</option>
+                    <option value="aimless-oil">Aimless Oil</option>
+                    <option value="artery-oil">Artery Oil</option>
+                    <option value="axe-oil">Axe Oil</option>
+                    <option value="blindfold-oil">Blindfold Oil</option>
+                    <option value="confidence-oil">Confidence Oil</option>
+                    <option value="critical-oil">Critical Oil</option>
+                    <option value="gambler-oil">Gambler Oil</option>
+                    <option value="happy-accident-oil">Happy Accident Oil</option>
+                    <option value="hunter-oil">Hunter Oil</option>
+                    <option value="hustler-oil">Hustler Oil</option>
+                    <option value="low-roller-oil">Low Roller Oil</option>
+                    <option value="manifestation-oil">Manifestation Oil</option>
+                    <option value="no-need-oil">No Need Oil</option>
+                    <option value="out-of-the-box-oil">Out of the Box Oil</option>
+                    <option value="puncture-oil">Puncture Oil</option>
+                    <option value="slotmachine-oil">Slotmachine Oil</option>
+                    <option value="smart-bullet-oil">Smart Bullet Oil</option>
+                </optgroup>
+                <option value="static-no-selection">None</option>
+                <option value="static-random-all">Random Oil - All</option>
+            </select>
+        </div>
+        <div>
+            <div class="resultcontainer">
+                <div>
+                    <h3>Stat Col 1</h3>
+                </div>
+                <div>
+                    <h3>Stat Col 2</h3>
+                </div>
+                <div>
+                    <h3>Stat Col 3</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
