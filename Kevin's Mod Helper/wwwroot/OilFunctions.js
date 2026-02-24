@@ -21,18 +21,72 @@
             if (selector2Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
                 selector2Options[i].hidden = true;
             }
+            if (selector3Options[i].hidden === true) {
+                selector3Options[i].hidden = false;
+                if (selector3Options[i].value === "static-choose") {
+                    selector3Options[i].hidden = false;
+                }
+            }
+            if (selector3Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector3Options[i].hidden = true;
+            }
+            if (selector4Options[i].hidden === true) {
+                selector4Options[i].hidden = false;
+                if (selector4Options[i].value === "static-choose") {
+                    selector4Options[i].hidden = false;
+                }
+            }
+            if (selector4Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector4Options[i].hidden = true;
+            }
+            if (selector5Options[i].hidden === true) {
+                selector5Options[i].hidden = false;
+                if (selector5Options[i].value === "static-choose") {
+                    selector5Options[i].hidden = false;
+                }
+            }
+            if (selector5Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector5Options[i].hidden = true;
+            }
         }
     }
     if (selector === 'oils2selector') {
         for (var i = 0; i < selector1Options.length; i++) {
             if (selector1Options[i].hidden === true) {
                 selector1Options[i].hidden = false;
-                if (selector2Options[i].value === "static-choose") {
-                    selector2Options[i].hidden = false;
+                if (selector1Options[i].value === "static-choose") {
+                    selector1Options[i].hidden = false;
                 }
             }
             if (selector1Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
                 selector1Options[i].hidden = true;
+            }
+            if (selector3Options[i].hidden === true) {
+                selector3Options[i].hidden = false;
+                if (selector3Options[i].value === "static-choose") {
+                    selector3Options[i].hidden = false;
+                }
+            }
+            if (selector3Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector3Options[i].hidden = true;
+            }
+            if (selector4Options[i].hidden === true) {
+                selector4Options[i].hidden = false;
+                if (selector4Options[i].value === "static-choose") {
+                    selector4Options[i].hidden = false;
+                }
+            }
+            if (selector4Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector4Options[i].hidden = true;
+            }
+            if (selector5Options[i].hidden === true) {
+                selector5Options[i].hidden = false;
+                if (selector5Options[i].value === "static-choose") {
+                    selector5Options[i].hidden = false;
+                }
+            }
+            if (selector5Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector5Options[i].hidden = true;
             }
         }
     }
