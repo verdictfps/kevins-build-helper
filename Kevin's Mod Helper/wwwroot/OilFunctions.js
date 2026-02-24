@@ -90,45 +90,162 @@
             }
         }
     }
+    if (selector === 'oils3selector') {
+        for (var i = 0; i < selector1Options.length; i++) {
+            if (selector1Options[i].hidden === true) {
+                selector1Options[i].hidden = false;
+                if (selector1Options[i].value === "static-choose") {
+                    selector1Options[i].hidden = false;
+                }
+            }
+            if (selector1Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector1Options[i].hidden = true;
+            }
+            if (selector2Options[i].hidden === true) {
+                selector2Options[i].hidden = false;
+                if (selector2Options[i].value === "static-choose") {
+                    selector2Options[i].hidden = false;
+                }
+            }
+            if (selector2Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector2Options[i].hidden = true;
+            }
+            if (selector4Options[i].hidden === true) {
+                selector4Options[i].hidden = false;
+                if (selector4Options[i].value === "static-choose") {
+                    selector4Options[i].hidden = false;
+                }
+            }
+            if (selector4Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector4Options[i].hidden = true;
+            }
+            if (selector5Options[i].hidden === true) {
+                selector5Options[i].hidden = false;
+                if (selector5Options[i].value === "static-choose") {
+                    selector5Options[i].hidden = false;
+                }
+            }
+            if (selector5Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector5Options[i].hidden = true;
+            }
+        }
+    }
+    if (selector === 'oils4selector') {
+        for (var i = 0; i < selector1Options.length; i++) {
+            if (selector1Options[i].hidden === true) {
+                selector1Options[i].hidden = false;
+                if (selector1Options[i].value === "static-choose") {
+                    selector1Options[i].hidden = false;
+                }
+            }
+            if (selector1Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector1Options[i].hidden = true;
+            }
+            if (selector2Options[i].hidden === true) {
+                selector2Options[i].hidden = false;
+                if (selector2Options[i].value === "static-choose") {
+                    selector2Options[i].hidden = false;
+                }
+            }
+            if (selector2Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector2Options[i].hidden = true;
+            }
+            if (selector3Options[i].hidden === true) {
+                selector3Options[i].hidden = false;
+                if (selector3Options[i].value === "static-choose") {
+                    selector3Options[i].hidden = false;
+                }
+            }
+            if (selector3Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector3Options[i].hidden = true;
+            }
+            if (selector5Options[i].hidden === true) {
+                selector5Options[i].hidden = false;
+                if (selector5Options[i].value === "static-choose") {
+                    selector5Options[i].hidden = false;
+                }
+            }
+            if (selector5Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                selector5Options[i].hidden = true;
+            }
+        }
+        if (selector === 'oils5selector') {
+            for (var i = 0; i < selector1Options.length; i++) {
+                if (selector1Options[i].hidden === true) {
+                    selector1Options[i].hidden = false;
+                    if (selector1Options[i].value === "static-choose") {
+                        selector1Options[i].hidden = false;
+                    }
+                }
+                if (selector1Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                    selector1Options[i].hidden = true;
+                }
+                if (selector2Options[i].hidden === true) {
+                    selector2Options[i].hidden = false;
+                    if (selector2Options[i].value === "static-choose") {
+                        selector2Options[i].hidden = false;
+                    }
+                }
+                if (selector2Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                    selector2Options[i].hidden = true;
+                }
+                if (selector3Options[i].hidden === true) {
+                    selector3Options[i].hidden = false;
+                    if (selector3Options[i].value === "static-choose") {
+                        selector3Options[i].hidden = false;
+                    }
+                }
+                if (selector3Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                    selector3Options[i].hidden = true;
+                }
+                if (selector4Options[i].hidden === true) {
+                    selector4Options[i].hidden = false;
+                    if (selector4Options[i].value === "static-choose") {
+                        selector4Options[i].hidden = false;
+                    }
+                }
+                if (selector4Options[i].value === selectedvalue && !(selectedvalue.startsWith("static"))) {
+                    selector4Options[i].hidden = true;
+                }
+            }
+        }
+    }
 } 
 
-function oilCategory(categoryselector, selectedvalue) {
+function oilCategory(selectorNumber, selectedvalue) {
+
+    const suffixMap = {
+        "ammo-consume-chance-oils": "AmmoCat",
+        "base-crit-chance-oils": "CritCat",
+        "bullet-bounces-oils": "BounceCat",
+        "bullet-speed-oils": "SpeedCat",
+        "add-damage-oils": "AddDmgCat",
+        "percent-damage-oils": "MultDmgCat",
+        "durability-oils": "DurCat",
+        "penetration-oils": "PenCat",
+        "projectiles-oils": "ProjCat",
+        "recoil-oils": "RecoilCat",
+        "reload-speed-oils": "ReloadCat",
+        "rpm-oils": "RPMCat",
+        "spread-oils": "SpreadCat"
+    };
+
+    const allSuffixes = Object.values(suffixMap);
+
+    allSuffixes.forEach(suffix => {
+        const element = document.getElementById(`oils${selectorNumber}${suffix}`);
+        if (element) {
+            element.hidden = "hidden";
+        }
+    });
+
+    if (selectedvalue === "select-category") return;
     
-    if (categoryselector === "oilCategory1") {
-        var currentSel1 = document.getElementById("oils1selector")
+    const selectedSuffix = suffixMap[selectedvalue];
+    if (!selectedSuffix) return;
 
-        currentSel1.value = "static-choose";
-
-        document.getElementById("oils1AmmoCat").hidden = "hidden";
-        document.getElementById("oils1CritCat").hidden = "hidden";
-        switch (selectedvalue) {
-            case "select-category":
-                break;
-            case "ammo-consume-chance-oils":
-                document.getElementById("oils1AmmoCat").hidden = "";
-                break;
-            case "base-crit-chance-oils":
-                document.getElementById("oils1CritCat").hidden = "";
-                break;
-            default:
-        }
-
-    }
-    if (categoryselector === "oilCategory2") {
-        var currentSel2 = document.getElementById("oils2selector")
-
-        currentSel2.value = "static-choose";
-
-        switch (selectedvalue) {
-            case "select-category":
-                break;
-            case "ammo-consume-chance-oils":
-                document.getElementById("oils2AmmoCat").hidden = "";
-                break;
-            case "base-crit-chance-oils":
-                document.getElementById("oils2CritCat").hidden = "";
-                break;
-            default:
-        }
+    const elementToShow = document.getElementById(`oils${selectorNumber}${selectedSuffix}`);
+    if (elementToShow) {
+        elementToShow.hidden = "";
     }
 }
