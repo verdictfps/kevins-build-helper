@@ -286,36 +286,31 @@ function addName(weapon, value) {
 function rollWeapon(name) {
     name = document.getElementById("weapons");
     const selectedValue = name.value;
-    if (selectedValue.startsWith("random")) {
-        /*if (selectedValue === "random-all-weapons") {
+    switch (selectedValue) {
+        case "random-all-weapons":
             shuffle(gunsAll);
-            name = gunsAll[0].name;
+            name = gunsAll[0];
             addName(name, selectedValue);
-        }*/
-        switch (selectedValue) {
-            case "random-all-weapons":
-                shuffle(gunsAll);
-                name = gunsAll[0];
-                addName(name, selectedValue);
-                break;
-            case "random-pistols":
-                break;
-            case "random-revolvers":
-                break;
-            case "random-shotguns":
-                break;
-            case "random-submachine-guns":
-                break;
-            case "random-assault-rifles":
-                break;
-            case "random-lmgs":
-                break;
-            case "random-rifles":
-                break;
-            case "random-sniper-rifles":
-                break;
-            default:
-        }
+            break;
+        case "random-pistols":
+            break;
+        case "random-revolvers":
+            break;
+        case "random-shotguns":
+            break;
+        case "random-submachine-guns":
+            break;
+        case "random-assault-rifles":
+            break;
+        case "random-lmgs":
+            break;
+        case "random-rifles":
+            break;
+        case "random-sniper-rifles":
+            break;
+        default:
+            name = gunsAll[0];
+            addName(name, selectedValue)
     }
 }
 
