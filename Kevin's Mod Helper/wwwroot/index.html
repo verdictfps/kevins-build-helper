@@ -40,6 +40,8 @@
             }
     </style>
     <script src="OilFunctions.js"></script>
+    <script src="Generate.js"></script>
+    <script src="Random.js"></script>
 </head>
 <body>
     <h1>Kevin's Build Helper</h1>
@@ -47,8 +49,8 @@
     <div class="container">
         <div>
             <h3>Weapons</h3>
-            <select name="weapons" id="weapons">
-                <option value="random-all">Random - All</option>
+            <select name="weapons" id="weapons" onchange="this.value">
+                <option value="random-all-weapons">Random - All</option>
                 <optgroup label="Pistols">
                     <option value="random-pistols">Random Pistol</option>
                     <option value="beck-8">&nbsp;&nbsp;&nbsp;&nbsp;Beck 8</option>
@@ -119,7 +121,7 @@
                     <option value="longboy">&nbsp;&nbsp;&nbsp;&nbsp;Longboy</option>
                     <option value="rokua-308">&nbsp;&nbsp;&nbsp;&nbsp;Rokua .308</option>
                 </optgroup>
-</select>
+            </select>
             <h3>Enchantments</h3>
             <span class="label oils" for="enchantments">Oil 1</span>
             <select name="oilCategory1" id="oilCategory1" onchange="oilCategory(1, this.value)">
@@ -1566,11 +1568,14 @@
                 <option value="static-no-selection">None</option>
                 <option value="static-random-all">Random Oil - All</option>
             </select>
+            
+            <button id="buttonGenerate" onclick="onGenerate()">Click Me</button>
         </div>
         <div>
             <div class="resultcontainer">
                 <div>
                     <h3>Stat Col 1</h3>
+                    <p id="cardWeaponName"></p>
                 </div>
                 <div>
                     <h3>Stat Col 2</h3>
