@@ -39,12 +39,11 @@
                 text-align: center;
             }
     </style>
-    <script src="OilFunctions.js"></script>
-    <script src="Generate.js"></script>
-    <script src="Random.js"></script>
+    <script src="functions.js"></script>
 </head>
 <body>
     <h1>Kevin's Build Helper</h1>
+    <button id="buttonGenerate" onclick="onGenerate()">Click Me</button>
     <h2>Select build components</h2>
     <div class="container">
         <div>
@@ -1568,8 +1567,8 @@
                 <option value="static-no-selection">None</option>
                 <option value="static-random-all">Random Oil - All</option>
             </select>
-            
-            <button id="buttonGenerate" onclick="onGenerate()">Click Me</button>
+
+
         </div>
         <div>
             <div class="resultcontainer">

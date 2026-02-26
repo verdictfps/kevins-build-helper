@@ -269,18 +269,12 @@ function oilCategory(selectorNumber, selectedvalue) {
 // For when the button is clicked.
 function onGenerate() {
     const weaponName = "name";
+    console.log("Button clicked");
     rollWeapon(weaponName);
 }
 function addName(weapon, value) {
-    if (value.startsWith("random")) {
-        document.getElementById("cardWeaponName").textContent = weapon;
-    }
-    else {
-        const selectElement = document.getElementById("weapons");
-        const selectedIndex = selectElement.selectedIndex;
-        const selectedText = selectElement.options[selectedIndex].text;
-        document.getElementById("cardWeaponName").textContent = selectedText;
-    }
+    console.log("Set name");
+    document.getElementById("cardWeaponName").textContent = weapon;
 }
 
 function rollWeapon(name) {
@@ -288,6 +282,8 @@ function rollWeapon(name) {
     const selectedValue = name.value;
     switch (selectedValue) {
         case "random-all-weapons":
+            console.log("Random weapon");
+
             shuffle(gunsAll);
             name = gunsAll[0];
             addName(name, selectedValue);
@@ -309,8 +305,11 @@ function rollWeapon(name) {
         case "random-sniper-rifles":
             break;
         default:
-            name = gunsAll[0];
-            addName(name, selectedValue)
+            console.log("Default option");
+
+            const selectedIndex = name.selectedIndex;
+            const selectedText = selectElement.options[selectedIndex].text;
+            addName(selectedText, selectedValue)
     }
 }
 
