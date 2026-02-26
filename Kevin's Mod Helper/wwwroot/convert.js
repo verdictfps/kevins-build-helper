@@ -1,6 +1,6 @@
 ﻿const fs = require("fs");
 
-const input = JSON.parse(fs.readFileSync("Oils.json", "utf8"));
+const input = JSON.parse(fs.readFileSync("Chamber.json", "utf8"));
 
 const transformed = {
     Oil: {}

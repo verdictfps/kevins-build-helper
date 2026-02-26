@@ -1,4 +1,21 @@
-﻿// It's time to shuffle
+﻿// Global Variables
+
+let weaponsData = null;
+let oilsData = null;
+let selectedWeapon = null;
+let modifiedWeapon = null;
+let oil1 = null;
+let oil2 = null;
+let oil3 = null;
+let oil4 = null;
+let oil5 = null;
+let rolledOils = [];
+let weaponName = null;
+let chamberData = null;
+let selectedChamber = null;
+
+
+// It's time to shuffle
 function shuffle(array) {
     let currentIndex = array.length;
 
@@ -268,31 +285,1309 @@ function oilCategory(selectorNumber, selectedvalue) {
 
 // For when the button is clicked.
 function onGenerate() {
-    const weaponName = "name";
     rollWeapon(weaponName);
     rollOils();
 }
+
 function addName(name, value, type) {
     if (type === "weapon") {
         document.getElementById("cardWeaponName").textContent = name;
     } else if (type === "oil") {
+        console.log(value);
         document.getElementById(value).textContent = name;
     }
 }
 
-let oilsData = null;
+async function loadChamber() {
+    const response = await fetch("./Chamber.json");
+    chamberData = await response.json();
+}
+
+async function loadWeapons() {
+    const response = await fetch("./Weapons.json");
+    weaponsData = await response.json();
+}
 
 async function loadOils() {
     const response = await fetch("./Oils.json");
     oilsData = await response.json();
 }
 
-function oilStats() {
+function oilStats(selectedOil, calcOil) {
+    if (selectedOil.AmmoConsumeChance != 0.0) {
+        calcOil.AmmoConsumeChance += selectedOil.AmmoConsumeChance;
+    }
+    if (selectedOil.Bounces != 0) {
+        calcOil.Bounces += selectedOil.Bounces;
+    }
+    if (selectedOil.BulletDrop != 0) {
+        calcOil.BulletDrop += selectedOil.BulletDrop;
+    }
+    if (selectedOil.BulletSpeed != 0.0) {
+        calcOil.BulletSpeed += selectedOil.BulletSpeed;
+    }
+    if (selectedOil.ExtraAmmoUseChance != 0.0) {
+        calcOil.ExtraAmmoUseChance += selectedOil.ExtraAmmoUseChance;
+    }
+    if (selectedOil.BaseCritChance != 0.0) {
+        calcOil.BaseCritChance += selectedOil.BaseCritChance;
+    }
+    if (selectedOil.DamageAdd != 0.0) {
+        calcOil.DamageAdd += selectedOil.DamageAdd;
+    }
+    if (selectedOil.DamageMult != 0.0) {
+        calcOil.DamageMult += selectedOil.DamageMult;
+    }
+    if (selectedOil.CanADS != "Yes") {
+        calcOil.CanADS = selectedOil.CanADS;
+    }
+    if (selectedOil.JumpPower != 0.0) {
+        calcOil.JumpPower += selectedOil.JumpPower;
+    }
+    if (selectedOil.LootDropChance != 0.0) {
+        calcOil.LootDropChance += selectedOil.LootDropChance;
+    }
+    if (selectedOil.DurabilityMult != 0.0) {
+        calcOil.DurabilityMult += selectedOil.DurabilityMult;
+    }
+    if (selectedOil.MovementSpeedMult != 0.0) {
+        calcOil.MovementSpeedMult += selectedOil.MovementSpeedMult;
+    }
+    if (selectedOil.MoneyDrops != "Yes") {
+        calcOil.MoneyDrops = selectedOil.MoneyDrops;
+    }
+    if (selectedOil.OrganDrops != "Yes") {
+        calcOil.OrganDrops = selectedOil.OrganDrops;
+    }
+    if (selectedOil.Penetrations != 0) {
+        calcOil.Penetrations += selectedOil.Penetrations;
+    }
+    if (selectedOil.ProjectileMult != 0.0) {
+        calcOil.ProjectileMult += selectedOil.ProjectileMult;
+    }
+    if (selectedOil.RPM != 0.0) {
+        calcOil.RPM += selectedOil.RPM;
+    }
+    if (selectedOil.RecoilAdd != 0.0) {
+        calcOil.RecoilAdd += selectedOil.RecoilAdd;
+    }
+    if (selectedOil.RecoilMult != 0.0) {
+        calcOil.RecoilMult += selectedOil.RecoilMult;
+    }
+    if (selectedOil.ReloadSpeed != 0.0) {
+        calcOil.ReloadSpeed += selectedOil.ReloadSpeed;
+    }
+    if (selectedOil.SpreadAdd != 0.0) {
+        calcOil.SpreadAdd += selectedOil.SpreadAdd;
+    }
+    if (selectedOil.SpreadMult != 0.0) {
+        calcOil.SpreadMult += selectedOil.SpreadMult;
+    }
+    if (selectedOil.Drag != 0.0) {
+        calcOil.Drag += selectedOil.Drag;
+    }
+    if (selectedOil.DurabilityUsage != 0.0) {
+        calcOil.DurabilityUsage += selectedOil.DurabilityUsage;
+    }
+    if (selectedOil.BulletBounciness != 0.0) {
+        calcOil.BulletBounciness += selectedOil.BulletBounciness;
+    }
+    if (selectedOil.MovingAccuracy != 0.0) {
+        calcOil.MovingAccuracy += selectedOil.MovingAccuracy;
+    }
+    oilCalcs(calcOil);
+}
 
+function oilCalcs() {
+
+    let weapon = modifiedWeapon;
+    let weaponOriginal = selectedWeapon;
+
+    selectedChamber = getChamberByName(`Chamber Chisel - ${weaponOriginal.AmmoType}`)
+
+    // Oils to Weapon calculations & card additions
+    //// Clear Main Card fields
+    /*this.cardDamage.Inlines.Clear();
+    this.cardDamageTotal.Inlines.Clear();
+    this.cardSpread.Inlines.Clear();
+    this.cardBaseCritChance.Inlines.Clear();
+    this.cardTotalCritChance.Inlines.Clear();
+    this.cardBounces.Inlines.Clear();
+    this.cardReloadSpeed.Inlines.Clear();
+    this.cardReloadTime.Inlines.Clear();
+    this.cardBulletSpeed.Inlines.Clear();
+    this.cardCanADS.Inlines.Clear();
+    this.cardLootDropChance.Inlines.Clear();
+    this.cardDrag.Inlines.Clear();
+    this.cardDurabilityUsage.Inlines.Clear();
+    this.cardRPM.Inlines.Clear();
+    this.cardDurability.Inlines.Clear();
+    this.cardADSCritChance.Inlines.Clear();
+    this.cardPenetrations.Inlines.Clear();
+    this.cardRecoil.Inlines.Clear();
+    this.cardMoneyDrops.Inlines.Clear();
+    this.cardOrganDrops.Inlines.Clear();
+    this.cardWeaponWeight.Inlines.Clear();
+    this.cardFinalMovementSpeed.Inlines.Clear();
+    this.cardAmmoConsumeChance.Inlines.Clear();
+    this.cardExtraAmmoUseChance.Inlines.Clear();
+    this.cardBulletDrop.Inlines.Clear();
+    this.cardJumpPower.Inlines.Clear();
+    this.cardBulletDropMeters.Inlines.Clear();
+    this.cardShotsToBreak.Inlines.Clear();*/
+
+    /////////////
+    //// RPM ////
+    /////////////
+
+    weapon.RPM *= (1 + oilModifierStats.RPM);
+
+    if (weapon.RPM < 1) {
+        weapon.RPM = 1;
+    }
+
+    if (weapon.RPM > weaponOriginal.RPM) {
+                Run runRPM = new Run($"{weapon.RPM.ToString("#####0.#")}");
+        runRPM.Foreground = Brushes.Lime;
+
+                Run runArrowUp = new Run("🡅");
+        runArrowUp.Foreground = Brushes.Lime;
+
+                Run runNoRPM = new Run($"({weaponOriginal.RPM})");
+        runNoRPM.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardRPM.Inlines.Add("RPM: ");
+        this.cardRPM.Inlines.Add(runRPM);
+        this.cardRPM.Inlines.Add(runArrowUp);
+        this.cardRPM.Inlines.Add(runSpace);
+        this.cardRPM.Inlines.Add(runNoRPM);
+    }
+    if (weapon.RPM < weaponOriginal.RPM) {
+                Run runRPM = new Run($"{weapon.RPM.ToString("#####0.#")}");
+        runRPM.Foreground = Brushes.OrangeRed;
+
+                Run runArrowDown = new Run("🡇");
+        runArrowDown.Foreground = Brushes.OrangeRed;
+
+                Run runNoRPM = new Run($"({weaponOriginal.RPM})");
+        runNoRPM.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardRPM.Inlines.Add("RPM: ");
+        this.cardRPM.Inlines.Add(runRPM);
+        this.cardRPM.Inlines.Add(runArrowDown);
+        this.cardRPM.Inlines.Add(runSpace);
+        this.cardRPM.Inlines.Add(runNoRPM);
+    }
+    if (weapon.RPM == weaponOriginal.RPM) {
+        this.cardRPM.Inlines.Add($"RPM: {weapon.RPM}");
+    }
+
+    ///////////////////////////////
+    //// Ammo Consume Chance ////
+    ///////////////////////////////
+
+    weapon.AmmoConsumeChance += oilModifierStats.AmmoConsumeChance;
+    weapon.AmmoConsumeChance *= 100;
+
+    if (weapon.AmmoConsumeChance < 0) {
+        weapon.AmmoConsumeChance = 0;
+    }
+
+    if (weapon.AmmoConsumeChance < 100) {
+                Run runAmmoConsumeChance = new Run($"{weapon.AmmoConsumeChance.ToString("#####0.#")}%");
+        runAmmoConsumeChance.Foreground = Brushes.Lime;
+
+                Run runArrowDown = new Run("🡇");
+        runArrowDown.Foreground = Brushes.Lime;
+
+                Run runNoAmmoConsumeChance = new Run("(100%)");
+        runNoAmmoConsumeChance.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardAmmoConsumeChance.Inlines.Add("Ammo Consume Chance: ");
+        this.cardAmmoConsumeChance.Inlines.Add(runAmmoConsumeChance);
+        this.cardAmmoConsumeChance.Inlines.Add(runArrowDown);
+        this.cardAmmoConsumeChance.Inlines.Add(runSpace);
+        this.cardAmmoConsumeChance.Inlines.Add(runNoAmmoConsumeChance);
+    }
+    if (weapon.AmmoConsumeChance == 100) {
+        this.cardAmmoConsumeChance.Inlines.Add("Ammo Consume Chance: 100%");
+    }
+
+    ///////////////////////////////
+    //// Extra Ammo Use Chance ////
+    ///////////////////////////////
+
+    weapon.ExtraAmmoUseChance += oilModifierStats.ExtraAmmoUseChance;
+    weapon.ExtraAmmoUseChance *= 100;
+
+    if (weapon.ExtraAmmoUseChance > 100) {
+        weapon.ExtraAmmoUseChance = 100;
+    }
+
+    if (weapon.ExtraAmmoUseChance > 0.0) {
+                Run runExtraAmmoUseChance = new Run($"{weapon.ExtraAmmoUseChance.ToString("#####0.#")}%");
+        runExtraAmmoUseChance.Foreground = Brushes.OrangeRed;
+
+                Run runArrowUp = new Run("🡅");
+        runArrowUp.Foreground = Brushes.OrangeRed;
+
+                Run runNoExtraAmmoUseChance = new Run("(0%)");
+        runNoExtraAmmoUseChance.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardExtraAmmoUseChance.Inlines.Add("Extra Ammo Use Chance: ");
+        this.cardExtraAmmoUseChance.Inlines.Add(runExtraAmmoUseChance);
+        this.cardExtraAmmoUseChance.Inlines.Add(runArrowUp);
+        this.cardExtraAmmoUseChance.Inlines.Add(runSpace);
+        this.cardExtraAmmoUseChance.Inlines.Add(runNoExtraAmmoUseChance);
+    }
+    if (weapon.ExtraAmmoUseChance == 0) {
+        this.cardExtraAmmoUseChance.Inlines.Add("Extra Ammo Use Chance: 0%");
+    }
+
+    /////////////////
+    //// Bounces ////
+    /////////////////
+
+    weapon.Bounces = oilModifierStats.Bounces;
+
+    if (weapon.Bounces > 0.0) {
+                Run runBounces = new Run(weapon.Bounces.ToString("#####0.#"));
+        runBounces.Foreground = Brushes.Lime;
+
+                Run runArrowUp1 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+
+                Run runNoBounce = new Run("(0)");
+        runNoBounce.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardBounces.Inlines.Add("Bounces: ");
+        this.cardBounces.Inlines.Add(runBounces);
+        this.cardBounces.Inlines.Add(runArrowUp1);
+        this.cardBounces.Inlines.Add(runSpace);
+        this.cardBounces.Inlines.Add(runNoBounce);
+    }
+    else {
+        this.cardBounces.Inlines.Add("Bounces: ");
+        this.cardBounces.Inlines.Add(weapon.Bounces.ToString("#####0.#"));
+    }
+
+    /////////////////////
+    //// Bullet Drop ////
+    /////////////////////
+
+    weapon.BulletDrop += oilModifierStats.BulletDrop;
+
+    if (weapon.BulletDrop > 0) {
+                Run runBulletDrop = new Run($"{weapon.BulletDrop.ToString("#####0.#")}");
+        runBulletDrop.Foreground = Brushes.OrangeRed;
+
+                Run runArrowUp = new Run("🡅");
+        runArrowUp.Foreground = Brushes.OrangeRed;
+
+                Run runNoBulletDrop = new Run("(0)");
+        runNoBulletDrop.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardBulletDrop.Inlines.Add("Bullet Drop: ");
+        this.cardBulletDrop.Inlines.Add(runBulletDrop);
+        this.cardBulletDrop.Inlines.Add(runArrowUp);
+        this.cardBulletDrop.Inlines.Add(runSpace);
+        this.cardBulletDrop.Inlines.Add(runNoBulletDrop);
+
+        this.cardDropImage.Source = new BitmapImage(new Uri(".\\Images\\bullet drop pos.png", UriKind.Relative));
+
+                double dropMeters = (100 / (Math.Log(weapon.BulletDrop)) - 18);
+                double meterResult = Math.Round(dropMeters, 2, MidpointRounding.AwayFromZero);
+                Run runDropMeters = new Run(meterResult.ToString());
+
+        this.cardBulletDropMeters.Inlines.Add(meterResult.ToString());
+        this.cardBulletDropMeters.Inlines.Add(" meters");
+    }
+    if (weapon.BulletDrop == 0) {
+        this.cardBulletDrop.Inlines.Add("Bullet Drop: 0");
+        this.cardDropImage.Source = new BitmapImage(new Uri(".\\Images\\bullet drop 0.png", UriKind.Relative));
+    }
+
+    //////////////////////
+    //// Bullet Speed ////
+    //////////////////////
+
+    weapon.BulletSpeed += oilModifierStats.BulletSpeed;
+    weapon.BulletSpeed *= 100;
+
+    if (weapon.BulletSpeed < 1) {
+        weapon.BulletSpeed = 1;
+    }
+
+    if (weapon.BulletSpeed > 100) {
+                Run runBulletSpeed = new Run($"{weapon.BulletSpeed.ToString("#####0.#")}%");
+        runBulletSpeed.Foreground = Brushes.Lime;
+
+                Run runArrowUp = new Run("🡅");
+        runArrowUp.Foreground = Brushes.Lime;
+
+                Run runNoBulletSpeed = new Run("(100%)");
+        runNoBulletSpeed.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardBulletSpeed.Inlines.Add("Bullet Speed: ");
+        this.cardBulletSpeed.Inlines.Add(runBulletSpeed);
+        this.cardBulletSpeed.Inlines.Add(runArrowUp);
+        this.cardBulletSpeed.Inlines.Add(runSpace);
+        this.cardBulletSpeed.Inlines.Add(runNoBulletSpeed);
+    }
+    if (weapon.BulletSpeed < 100) {
+        if (weapon.BulletSpeed < 1) {
+            weapon.BulletSpeed = 1;
+        }
+                Run runBulletSpeed = new Run($"{weapon.BulletSpeed.ToString("#####0.#")}%");
+        runBulletSpeed.Foreground = Brushes.OrangeRed;
+
+                Run runArrowDown = new Run("🡇");
+        runArrowDown.Foreground = Brushes.OrangeRed;
+
+                Run runNoBulletSpeed = new Run("(100%)");
+        runNoBulletSpeed.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardBulletSpeed.Inlines.Add("Bullet Speed: ");
+        this.cardBulletSpeed.Inlines.Add(runBulletSpeed);
+        this.cardBulletSpeed.Inlines.Add(runArrowDown);
+        this.cardBulletSpeed.Inlines.Add(runSpace);
+        this.cardBulletSpeed.Inlines.Add(runNoBulletSpeed);
+    }
+    if (weapon.BulletSpeed == 100) {
+        this.cardBulletSpeed.Inlines.Add("Bullet Speed: 100%");
+    }
+
+    //////////////////////////
+    //// Base Crit Chance ////
+    //////////////////////////
+
+    weapon.BaseCritChance += (oilModifierStats.BaseCritChance * 100);
+
+    if (weapon.BaseCritChance > 0.0) {
+                Run runCrit = new Run($"{weapon.BaseCritChance.ToString("#####0.#")}%");
+        runCrit.Foreground = Brushes.Lime;
+
+                Run runArrowUp1 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+
+                Run runNoCrit = new Run("(0%)");
+        runNoCrit.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardBaseCritChance.Inlines.Add("Base Crit Chance: ");
+        this.cardBaseCritChance.Inlines.Add(runCrit);
+        this.cardBaseCritChance.Inlines.Add(runArrowUp1);
+        this.cardBaseCritChance.Inlines.Add(runSpace);
+        this.cardBaseCritChance.Inlines.Add(runNoCrit);
+    }
+    else {
+        this.cardBaseCritChance.Inlines.Add("Base Crit Chance: 0%");
+    }
+
+    /////////////////////////
+    //// ADS Crit Chance ////
+    /////////////////////////
+
+    weapon.ADSCritChance += (attachmentStats.ADSCritChance * 100);
+
+    if (weapon.ADSCritChance > 0.0) {
+                Run runACrit = new Run($"{weapon.ADSCritChance.ToString("#####0.#")}%");
+        runACrit.Foreground = Brushes.Lime;
+
+                Run runArrowUp1 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+
+                Run runNoACrit = new Run("(0%)");
+        runNoACrit.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardADSCritChance.Inlines.Add("ADS Crit Chance: ");
+        this.cardADSCritChance.Inlines.Add(runACrit);
+        this.cardADSCritChance.Inlines.Add(runArrowUp1);
+        this.cardADSCritChance.Inlines.Add(runSpace);
+        this.cardADSCritChance.Inlines.Add(runNoACrit);
+    }
+    else {
+        this.cardADSCritChance.Inlines.Add("ADS Crit Chance: 0%");
+    }
+
+    ///////////////////////////
+    //// Total Crit Chance ////
+    ///////////////////////////
+
+    weapon.TotalCritChance = weapon.ADSCritChance + weapon.BaseCritChance;
+
+    if (weapon.TotalCritChance > 0.0) {
+                Run runTCrit = new Run($"{weapon.TotalCritChance.ToString("#####0.#")}%");
+        runTCrit.Foreground = Brushes.Lime;
+
+                Run runArrowUp1 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+
+                Run runNoTCrit = new Run("(0%)");
+        runNoTCrit.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardTotalCritChance.Inlines.Add("Total: ");
+        this.cardTotalCritChance.Inlines.Add(runTCrit);
+        this.cardTotalCritChance.Inlines.Add(runArrowUp1);
+        this.cardTotalCritChance.Inlines.Add(runSpace);
+        this.cardTotalCritChance.Inlines.Add(runNoTCrit);
+    }
+    else {
+        this.cardTotalCritChance.Inlines.Add("Total: 0%");
+    }
+
+    //////////////////////////////
+    //// Damage & Projectiles ////
+    //////////////////////////////
+
+    //// Projectiles
+    weapon.Projectiles *= (1 + oilModifierStats.ProjectileMult);
+    //// Damage Add
+    weapon.Damage += oilModifierStats.DamageAdd;
+    var zeroDamage = weapon.Damage;
+    //// Damage Multiplier
+    weapon.Damage *= (1 + oilModifierStats.DamageMult + attachmentStats.DamageMult);
+    if (zeroDamage > 0 && weapon.Damage <= 0) {
+        weapon.Damage = zeroDamage * 0.01;
+    }
+    //// Total Damage Calc
+    weapon.TotalDamage = weapon.Damage * weapon.Projectiles * weapon.MultiShot;
+
+            Run runDmgProjOrig = null;
+
+    if (weapon.MultiShot == 1.0) {
+        runDmgProjOrig = new Run($"({weaponOriginal.Damage.ToString("#####0.#")}x{weaponOriginal.Projectiles.ToString("#####0.#")})");
+        runDmgProjOrig.FontFamily = new FontFamily("Fredoka Light");
+    }
+    if (weapon.MultiShot > 1.0) {
+        runDmgProjOrig = new Run($"({weaponOriginal.Damage.ToString("#####0.#")}x{weaponOriginal.MultiShot.ToString("#####0.#")}x{weaponOriginal.Projectiles.ToString("#####0.#")})");
+        runDmgProjOrig.FontFamily = new FontFamily("Fredoka Light");
+    }
+
+
+    ////// Damage & Projectiles card addition
+    if (weapon.Damage < weaponOriginal.Damage) {
+                Run runDamageFinal = new Run(weapon.Damage.ToString("#####0.#"));
+        runDamageFinal.Foreground = Brushes.OrangeRed;
+
+                Run runArrowDown1 = new Run("🡇");
+        runArrowDown1.Foreground = Brushes.OrangeRed;
+                Run runArrowDown2 = new Run("🡇");
+        runArrowDown2.Foreground = Brushes.OrangeRed;
+
+                Run runArrowUp1 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+                Run runArrowUp2 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+
+
+        if (weapon.Projectiles < weaponOriginal.Projectiles) {
+                    Run runProjFinal = new Run(weapon.Projectiles.ToString());
+            runProjFinal.Foreground = Brushes.OrangeRed;
+
+            this.cardDamage.Inlines.Add("Damage: ");
+            this.cardDamage.Inlines.Add(runDamageFinal);
+            this.cardDamage.Inlines.Add(runArrowDown1);
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runX);
+            if (weapon.MultiShot > 1.0) {
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(runX);
+            }
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runProjFinal);
+            this.cardDamage.Inlines.Add(runArrowDown2);
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runDmgProjOrig);
+        }
+        if (weapon.Projectiles > weaponOriginal.Projectiles) {
+                    Run runProjFinal = new Run(weapon.Projectiles.ToString("#####0.#"));
+            runProjFinal.Foreground = Brushes.Lime;
+
+            this.cardDamage.Inlines.Add("Damage: ");
+            this.cardDamage.Inlines.Add(runDamageFinal);
+            this.cardDamage.Inlines.Add(runArrowDown1);
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runX);
+            if (weapon.MultiShot > 1.0) {
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(runX);
+            }
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runProjFinal);
+            this.cardDamage.Inlines.Add(runArrowUp1);
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runDmgProjOrig);
+        }
+        if (weapon.Projectiles == weaponOriginal.Projectiles) {
+            this.cardDamage.Inlines.Add("Damage: ");
+            this.cardDamage.Inlines.Add(runDamageFinal);
+            this.cardDamage.Inlines.Add(runArrowDown1);
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runX);
+            if (weapon.MultiShot > 1.0) {
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(runX);
+            }
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(weapon.Projectiles.ToString());
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runDmgProjOrig);
+        }
+    }
+    if (weapon.Damage > weaponOriginal.Damage) {
+                Run runDamageFinal = new Run(weapon.Damage.ToString("#####0.#"));
+        runDamageFinal.Foreground = Brushes.Lime;
+
+                Run runArrowDown1 = new Run("🡇");
+        runArrowDown1.Foreground = Brushes.OrangeRed;
+                Run runArrowDown2 = new Run("🡇");
+        runArrowDown2.Foreground = Brushes.OrangeRed;
+
+                Run runArrowUp1 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+                Run runArrowUp2 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+
+
+        if (weapon.Projectiles < weaponOriginal.Projectiles) {
+                    Run runProjFinal = new Run(weapon.Projectiles.ToString("#####0.#"));
+            runProjFinal.Foreground = Brushes.OrangeRed;
+
+            this.cardDamage.Inlines.Add("Damage: ");
+            this.cardDamage.Inlines.Add(runDamageFinal);
+            this.cardDamage.Inlines.Add(runArrowUp1);
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runX);
+            if (weapon.MultiShot > 1.0) {
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(runX);
+            }
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runProjFinal);
+            this.cardDamage.Inlines.Add(runArrowDown1);
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runDmgProjOrig);
+        }
+        if (weapon.Projectiles > weaponOriginal.Projectiles) {
+                    Run runProjFinal = new Run(weapon.Projectiles.ToString("#####0.#"));
+            runProjFinal.Foreground = Brushes.Lime;
+
+            this.cardDamage.Inlines.Add("Damage: ");
+            this.cardDamage.Inlines.Add(runDamageFinal);
+            this.cardDamage.Inlines.Add(runArrowUp1);
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runX);
+            if (weapon.MultiShot > 1.0) {
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(runX);
+            }
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runProjFinal);
+            this.cardDamage.Inlines.Add(runArrowUp2);
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runDmgProjOrig);
+        }
+        if (weapon.Projectiles == weaponOriginal.Projectiles) {
+            this.cardDamage.Inlines.Add("Damage: ");
+            this.cardDamage.Inlines.Add(runDamageFinal);
+            this.cardDamage.Inlines.Add(runArrowUp1);
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runX);
+            if (weapon.MultiShot > 1.0) {
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(runX);
+            }
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(weapon.Projectiles.ToString());
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runDmgProjOrig);
+        }
+    }
+    if (weapon.Damage == weaponOriginal.Damage) {
+                Run runArrowDown1 = new Run("🡇");
+        runArrowDown1.Foreground = Brushes.OrangeRed;
+                Run runArrowDown2 = new Run("🡇");
+        runArrowDown2.Foreground = Brushes.OrangeRed;
+
+                Run runArrowUp1 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+                Run runArrowUp2 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+
+
+        if (weapon.Projectiles < weaponOriginal.Projectiles) {
+                    Run runProjFinal = new Run(weapon.Projectiles.ToString("#####0.#"));
+            runProjFinal.Foreground = Brushes.OrangeRed;
+
+            this.cardDamage.Inlines.Add("Damage: ");
+            this.cardDamage.Inlines.Add(weapon.Damage.ToString());
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runX);
+            if (weapon.MultiShot > 1.0) {
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(runX);
+            }
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runProjFinal);
+            this.cardDamage.Inlines.Add(runArrowDown1);
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runDmgProjOrig);
+        }
+        if (weapon.Projectiles > weaponOriginal.Projectiles) {
+                    Run runProjFinal = new Run(weapon.Projectiles.ToString("#####0.#"));
+            runProjFinal.Foreground = Brushes.Lime;
+
+            this.cardDamage.Inlines.Add("Damage: ");
+            this.cardDamage.Inlines.Add(weapon.Damage.ToString());
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runX);
+            if (weapon.MultiShot > 1.0) {
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(runX);
+            }
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runProjFinal);
+            this.cardDamage.Inlines.Add(runArrowUp1);
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runDmgProjOrig);
+        }
+        if (weapon.Projectiles == weaponOriginal.Projectiles) {
+            this.cardDamage.Inlines.Add("Damage: ");
+            this.cardDamage.Inlines.Add(weapon.Damage.ToString());
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(runX);
+            if (weapon.MultiShot > 1.0) {
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
+                this.cardDamage.Inlines.Add(runSpace);
+                this.cardDamage.Inlines.Add(runX);
+            }
+            this.cardDamage.Inlines.Add(runSpace);
+            this.cardDamage.Inlines.Add(weapon.Projectiles.ToString("#####0.#"));
+            this.cardDamage.Inlines.Add(runSpace);
+        }
+    }
+
+            ////// Total Damage card addition
+
+            Run runTotDmgOrig = new Run($"({weaponOriginal.TotalDamage.ToString("#####0.#")})");
+    runTotDmgOrig.FontFamily = new FontFamily("Fredoka Light");
+
+    if (weapon.TotalDamage > weaponOriginal.TotalDamage) {
+                Run runTotDmgFinal = new Run(weapon.TotalDamage.ToString("#####0.#"));
+        runTotDmgFinal.Foreground = Brushes.Lime;
+
+                Run runArrowDown1 = new Run("🡇");
+        runArrowDown1.Foreground = Brushes.OrangeRed;
+                Run runArrowDown2 = new Run("🡇");
+        runArrowDown2.Foreground = Brushes.OrangeRed;
+
+                Run runArrowUp1 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+                Run runArrowUp2 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+
+
+        this.cardDamageTotal.Inlines.Add("Total: ");
+        this.cardDamageTotal.Inlines.Add(runTotDmgFinal);
+        this.cardDamageTotal.Inlines.Add(runArrowUp1);
+        this.cardDamageTotal.Inlines.Add(runSpace);
+        this.cardDamageTotal.Inlines.Add(runTotDmgOrig);
+    }
+    if (weapon.TotalDamage < weaponOriginal.TotalDamage) {
+                Run runTotDmgFinal = new Run(weapon.TotalDamage.ToString("#####0.#"));
+        runTotDmgFinal.Foreground = Brushes.OrangeRed;
+
+                Run runArrowDown1 = new Run("🡇");
+        runArrowDown1.Foreground = Brushes.OrangeRed;
+                Run runArrowDown2 = new Run("🡇");
+        runArrowDown2.Foreground = Brushes.OrangeRed;
+
+                Run runArrowUp1 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+                Run runArrowUp2 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+
+
+        this.cardDamageTotal.Inlines.Add("Total: ");
+        this.cardDamageTotal.Inlines.Add(runTotDmgFinal);
+        this.cardDamageTotal.Inlines.Add(runArrowDown1);
+        this.cardDamageTotal.Inlines.Add(runSpace);
+        this.cardDamageTotal.Inlines.Add(runTotDmgOrig);
+    }
+    if (weapon.TotalDamage == weaponOriginal.TotalDamage) {
+        this.cardDamageTotal.Inlines.Add("Total: ");
+        this.cardDamageTotal.Inlines.Add(weapon.TotalDamage.ToString("#####0.#"));
+    }
+
+    /////////////////
+    //// Can ADS ////
+    /////////////////
+
+    weapon.CanADS = oilModifierStats.CanADS;
+
+    if (weapon.CanADS == "No") {
+                Run runCanADS = new Run(weapon.CanADS);
+        runCanADS.Foreground = Brushes.Goldenrod;
+
+        this.cardCanADS.Inlines.Add("Can ADS: ");
+        this.cardCanADS.Inlines.Add(runCanADS);
+    }
+    if (weapon.CanADS == "Yes") {
+        this.cardCanADS.Inlines.Add("Can ADS: Yes");
+    }
+
+    ////////////////////
+    //// Jump Power ////
+    ////////////////////
+
+    weapon.JumpPower += oilModifierStats.JumpPower;
+    weapon.JumpPower *= 100;
+    weaponOriginal.JumpPower *= 100;
+
+    if (weapon.JumpPower < 1) {
+        weapon.JumpPower = 1;
+    }
+
+    if (weapon.JumpPower < weaponOriginal.JumpPower) {
+                Run runJump = new Run($"{weapon.JumpPower.ToString("#####0.#")}%");
+        runJump.Foreground = Brushes.OrangeRed;
+
+                Run runArrowDown = new Run("🡇");
+        runArrowDown.Foreground = Brushes.OrangeRed;
+
+                Run runNoJump = new Run($"{weaponOriginal.JumpPower.ToString("#####0.#")}%");
+        runNoJump.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardJumpPower.Inlines.Add("Jump Power: ");
+        this.cardJumpPower.Inlines.Add(runJump);
+        this.cardJumpPower.Inlines.Add(runArrowDown);
+        this.cardJumpPower.Inlines.Add(runSpace);
+        this.cardJumpPower.Inlines.Add(runNoJump);
+    }
+    if (weapon.JumpPower > weaponOriginal.JumpPower) {
+                Run runJump = new Run($"{weapon.JumpPower.ToString("#####0.#")}%");
+        runJump.Foreground = Brushes.Lime;
+
+                Run runArrowUp = new Run("🡅");
+        runArrowUp.Foreground = Brushes.Lime;
+
+                Run runNoJump = new Run($"{weaponOriginal.JumpPower.ToString("#####0.#")}%");
+        runNoJump.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardJumpPower.Inlines.Add("Jump Power: ");
+        this.cardJumpPower.Inlines.Add(runJump);
+        this.cardJumpPower.Inlines.Add(runArrowUp);
+        this.cardJumpPower.Inlines.Add(runSpace);
+        this.cardJumpPower.Inlines.Add(runNoJump);
+    }
+    if (weapon.JumpPower == weaponOriginal.JumpPower) {
+        this.cardJumpPower.Inlines.Add($"Jump Power: {weapon.JumpPower.ToString("#####0.#")}%");
+    }
+
+    //////////////////////////
+    //// Loot Drop Chance ////
+    //////////////////////////
+
+    weapon.LootDropChance += oilModifierStats.LootDropChance;
+    weapon.LootDropChance *= 100;
+    weaponOriginal.LootDropChance *= 100;
+
+    if (weapon.LootDropChance < 0) {
+        weapon.LootDropChance = 0;
+    }
+
+    if (weapon.LootDropChance < weaponOriginal.LootDropChance) {
+                Run runLoot = new Run($"{weapon.LootDropChance.ToString("#####0.#")}%");
+        runLoot.Foreground = Brushes.OrangeRed;
+
+                Run runArrowDown = new Run("🡇");
+        runArrowDown.Foreground = Brushes.OrangeRed;
+
+                Run runNoLoot = new Run($"({weaponOriginal.LootDropChance.ToString("#####0.#")}%)");
+        runNoLoot.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardLootDropChance.Inlines.Add("Loot Drop Chance: ");
+        this.cardLootDropChance.Inlines.Add(runLoot);
+        this.cardLootDropChance.Inlines.Add(runArrowDown);
+        this.cardLootDropChance.Inlines.Add(runSpace);
+        this.cardLootDropChance.Inlines.Add(runNoLoot);
+    }
+    if (weapon.LootDropChance == weaponOriginal.LootDropChance) {
+        this.cardLootDropChance.Inlines.Add($"Loot Drop Chance: {weapon.LootDropChance.ToString("#####0.#")}%");
+    }
+
+    ///////////////////////////////
+    //// Durability Multiplier ////
+    ///////////////////////////////
+
+    weapon.Durability *= (1 + oilModifierStats.DurabilityMult);
+
+    if (weapon.Durability < 1) {
+        weapon.Durability = 1;
+    }
+
+    if (weapon.Durability < weaponOriginal.Durability) {
+                Run runDur = new Run($"{weapon.Durability.ToString("#####0.#")}");
+        runDur.Foreground = Brushes.OrangeRed;
+
+                Run runArrowDown = new Run("🡇");
+        runArrowDown.Foreground = Brushes.OrangeRed;
+
+                Run runNoDur = new Run(weaponOriginal.Durability.ToString("#####0.#"));
+        runNoDur.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardDurability.Inlines.Add("Durability: ");
+        this.cardDurability.Inlines.Add(runDur);
+        this.cardDurability.Inlines.Add(runArrowDown);
+        this.cardDurability.Inlines.Add(runSpace);
+        this.cardDurability.Inlines.Add(runNoDur);
+    }
+    if (weapon.Durability > weaponOriginal.Durability) {
+                Run runDur = new Run($"{weapon.Durability.ToString("#####0.#")}");
+        runDur.Foreground = Brushes.Lime;
+
+                Run runArrowUp = new Run("🡅");
+        runArrowUp.Foreground = Brushes.Lime;
+
+                Run runNoDur = new Run(weaponOriginal.Durability.ToString("#####0.#"));
+        runNoDur.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardDurability.Inlines.Add("Durability: ");
+        this.cardDurability.Inlines.Add(runDur);
+        this.cardDurability.Inlines.Add(runArrowUp);
+        this.cardDurability.Inlines.Add(runSpace);
+        this.cardDurability.Inlines.Add(runNoDur);
+    }
+    if (weapon.Durability == weaponOriginal.Durability) {
+        this.cardDurability.Inlines.Add($"Durability: {weapon.Durability.ToString("#####0.#")}");
+    }
+
+
+    /////////////////////////
+    //// Movement Speed  ////
+    /////////////////////////
+
+    this.cardWeaponWeight.Inlines.Add($"Weapon Weight: {weapon.WeaponWeight.ToString("#####0.#")}");
+
+            double weaponWeightAdjustment = (double)0.0;
+            double s = weapon.MovementSpeedModifier;
+            //// Duplicate calculation for original comparison
+            double resultFirstMvmntStepComp = (1 - weapon.WeightClassFactor) * (1 + weaponWeightAdjustment);
+            double resultSecondMvmntStepComp = 1 - resultFirstMvmntStepComp;
+            double resultMovementSpeedComp = resultSecondMvmntStepComp * (s * 100);
+            //// Actual Calculation
+            double resultFirstMvmntStep = (1 - weapon.WeightClassFactor) * (1 + weaponWeightAdjustment);
+            double resultSecondMvmntStep = 1 - resultFirstMvmntStep;
+            double resultMovementSpeed = resultSecondMvmntStep * (s * 100);
+    weapon.FinalMovementSpeed = resultMovementSpeed * (1 + oilModifierStats.MovementSpeedMult + attachmentStats.MovementSpeedMult);
+
+    if (weapon.FinalMovementSpeed < 1) {
+        weapon.FinalMovementSpeed = 1;
+    }
+
+    //// Comparison for colors
+    this.cardFinalMovementSpeed.Inlines.Clear();
+    if (weapon.FinalMovementSpeed < resultMovementSpeedComp) {
+                Run runMovementFinal = new Run($"{weapon.FinalMovementSpeed.ToString("#####0.#")}%");
+        runMovementFinal.Foreground = Brushes.OrangeRed;
+
+                Run runMovementComp = new Run($"{resultMovementSpeedComp.ToString("#####0.#")}%");
+        runMovementComp.FontFamily = new FontFamily("Fredoka Light");
+
+                Run runArrowDown1 = new Run("🡇");
+        runArrowDown1.Foreground = Brushes.OrangeRed;
+
+        this.cardFinalMovementSpeed.Inlines.Add($"Final Movement Speed: ");
+        this.cardFinalMovementSpeed.Inlines.Add(runMovementFinal);
+        this.cardFinalMovementSpeed.Inlines.Add(runSpace);
+        this.cardFinalMovementSpeed.Inlines.Add(runArrowDown1);
+        this.cardFinalMovementSpeed.Inlines.Add(runSpace);
+        this.cardFinalMovementSpeed.Inlines.Add($"({runMovementComp})%");
+    }
+    if (weapon.FinalMovementSpeed > resultMovementSpeedComp) {
+                Run runMovementFinal = new Run(weapon.FinalMovementSpeed.ToString("#####0.#"));
+        runMovementFinal.Foreground = Brushes.Lime;
+
+                Run runMovementComp = new Run($"{resultMovementSpeedComp.ToString("#####0.#")}%");
+        runMovementComp.FontFamily = new FontFamily("Fredoka Light");
+
+                Run runArrowUp1 = new Run("🡅");
+        runArrowUp1.Foreground = Brushes.Lime;
+
+        this.cardFinalMovementSpeed.Inlines.Add($"Final Movement Speed: ");
+        this.cardFinalMovementSpeed.Inlines.Add(runMovementFinal);
+        this.cardFinalMovementSpeed.Inlines.Add(runSpace);
+        this.cardFinalMovementSpeed.Inlines.Add(runArrowUp1);
+        this.cardFinalMovementSpeed.Inlines.Add(runSpace);
+        this.cardFinalMovementSpeed.Inlines.Add(runMovementComp);
+    }
+    else {
+        this.cardFinalMovementSpeed.Inlines.Add($"Final Movement Speed: {weapon.FinalMovementSpeed}%");
+    }
+
+    /////////////////////
+    //// Money Drops ////
+    /////////////////////
+
+    weapon.MoneyDrops = oilModifierStats.MoneyDrops;
+
+    if (weapon.MoneyDrops == "No") {
+                Run runMon = new Run($"{weapon.MoneyDrops}");
+        runMon.Foreground = Brushes.OrangeRed;
+
+        this.cardMoneyDrops.Inlines.Add("Money Drops: ");
+        this.cardMoneyDrops.Inlines.Add(runMon);
+        this.cardMoneyDrops.Inlines.Add(runSpace);
+    }
+    if (weapon.MoneyDrops == "Yes") {
+        this.cardMoneyDrops.Inlines.Add($"Money Drops: {weapon.MoneyDrops}");
+    }
+
+    /////////////////////
+    //// Organ Drops ////
+    /////////////////////
+
+    weapon.OrganDrops = oilModifierStats.OrganDrops;
+
+    if (weapon.OrganDrops == "No") {
+                Run runOrg = new Run($"{weapon.OrganDrops}");
+        runOrg.Foreground = Brushes.OrangeRed;
+
+
+        this.cardOrganDrops.Inlines.Add("Organ Drops: ");
+        this.cardOrganDrops.Inlines.Add(runOrg);
+        this.cardOrganDrops.Inlines.Add(runSpace);
+    }
+    if (weapon.OrganDrops == "Yes") {
+        this.cardOrganDrops.Inlines.Add($"Organ Drops: {weapon.OrganDrops}");
+    }
+
+    //////////////////////
+    //// Penetrations ////
+    //////////////////////
+
+    weapon.Penetrations += oilModifierStats.Penetrations;
+
+    if (weapon.Penetrations > weaponOriginal.Penetrations) {
+                Run runPen = new Run($"{weapon.Penetrations.ToString("#####0.#")}");
+        runPen.Foreground = Brushes.Lime;
+
+                Run runArrowUp = new Run("🡅");
+        runArrowUp.Foreground = Brushes.Lime;
+
+                Run runNoPen = new Run("(0)");
+        runNoPen.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardPenetrations.Inlines.Add("Penetrations: ");
+        this.cardPenetrations.Inlines.Add(runPen);
+        this.cardPenetrations.Inlines.Add(runArrowUp);
+        this.cardPenetrations.Inlines.Add(runSpace);
+        this.cardPenetrations.Inlines.Add(runNoPen);
+    }
+    if (weapon.Penetrations == weaponOriginal.Penetrations) {
+        this.cardPenetrations.Inlines.Add($"Penetrations: {weapon.Penetrations.ToString()}");
+    }
+
+    ////////////////
+    //// Recoil ////
+    ////////////////
+
+    if (weapon.AmmoType == "Energy") {
+        weapon.RecoilBase = 0.0;
+    }
+    if (weapon.AmmoType == "9mm") {
+        weapon.RecoilBase = weapon.RecoilBase9mm;
+    }
+    if (weapon.AmmoType == "7.62mm") {
+        weapon.RecoilBase = weapon.RecoilBase762;
+    }
+    if (weapon.AmmoType == "5.56mm") {
+        weapon.RecoilBase = weapon.RecoilBase556;
+    }
+    if (weapon.AmmoType == ".50 BMG") {
+        weapon.RecoilBase = weapon.RecoilBase50bmg;
+    }
+    if (weapon.AmmoType == "12Ga") {
+        weapon.RecoilBase = weapon.RecoilBase12ga;
+    }
+
+    //// Recoil Add
+
+    weapon.RecoilMult += oilModifierStats.RecoilAdd;
+
+    //// Recoil Multiplier
+
+    weapon.RecoilBase *= (weapon.RecoilMult * (1 + oilModifierStats.RecoilMult));
+
+    if (weapon.RecoilBase < 1 && weapon.AmmoType != "Energy") {
+        weapon.RecoilBase = 1;
+    }
+
+    if (weapon.RecoilBase < weaponOriginal.RecoilBase) {
+                Run runRecoil = new Run($"{weapon.RecoilBase.ToString("#####0.#")}");
+        runRecoil.Foreground = Brushes.Lime;
+
+                Run runArrowDown = new Run("🡇");
+        runArrowDown.Foreground = Brushes.Lime;
+
+                Run runNoRecoil = new Run($"({weaponOriginal.RecoilBase.ToString("#####0.#")})");
+        runNoRecoil.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardRecoil.Inlines.Add("Recoil: ");
+        this.cardRecoil.Inlines.Add(runRecoil);
+        this.cardRecoil.Inlines.Add(runArrowDown);
+        this.cardRecoil.Inlines.Add(runSpace);
+        this.cardRecoil.Inlines.Add(runNoRecoil);
+    }
+    if (weapon.RecoilBase > weaponOriginal.RecoilBase) {
+                Run runRecoil = new Run($"{weapon.RecoilBase.ToString("#####0.#")}");
+        runRecoil.Foreground = Brushes.OrangeRed;
+
+                Run runArrowUp = new Run("🡅");
+        runArrowUp.Foreground = Brushes.OrangeRed;
+
+                Run runNoRecoil = new Run($"({weaponOriginal.RecoilBase.ToString("#####0.#")})");
+        runNoRecoil.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardRecoil.Inlines.Add("Recoil: ");
+        this.cardRecoil.Inlines.Add(runRecoil);
+        this.cardRecoil.Inlines.Add(runArrowUp);
+        this.cardRecoil.Inlines.Add(runSpace);
+        this.cardRecoil.Inlines.Add(runNoRecoil);
+    }
+    if (weapon.RecoilBase == weaponOriginal.RecoilBase) {
+        this.cardRecoil.Inlines.Add($"Recoil: {weapon.RecoilBase.ToString()}");
+    }
+
+    //////////////////////
+    //// Reload Speed ////
+    //////////////////////
+    var reloadTimeModifier = (weapon.ReloadSpeed * (1 + oilModifierStats.ReloadSpeed));
+    weapon.ReloadSpeed *= ((1 + oilModifierStats.ReloadSpeed) * 100);
+    weaponOriginal.ReloadSpeed *= 100;
+
+    if (weapon.ReloadSpeed < 1) {
+        weapon.ReloadSpeed = 1;
+    }
+
+    if (weapon.ReloadSpeed < weaponOriginal.ReloadSpeed) {
+                Run runReload = new Run($"{weapon.ReloadSpeed.ToString("#####0.#")}%");
+        runReload.Foreground = Brushes.OrangeRed;
+
+                Run runArrowDown = new Run("🡇");
+        runArrowDown.Foreground = Brushes.OrangeRed;
+
+                Run runNoReload = new Run("(100%)");
+        runNoReload.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardReloadSpeed.Inlines.Add("Reload Speed: ");
+        this.cardReloadSpeed.Inlines.Add(runReload);
+        this.cardReloadSpeed.Inlines.Add(runArrowDown);
+        this.cardReloadSpeed.Inlines.Add(runSpace);
+        this.cardReloadSpeed.Inlines.Add(runNoReload);
+    }
+    if (weapon.ReloadSpeed > weaponOriginal.ReloadSpeed) {
+                Run runReload = new Run($"{weapon.ReloadSpeed.ToString("#####0.#")}%");
+        runReload.Foreground = Brushes.Lime;
+
+                Run runArrowUp = new Run("🡅");
+        runArrowUp.Foreground = Brushes.Lime;
+
+                Run runNoReload = new Run("(100%)");
+        runNoReload.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardReloadSpeed.Inlines.Add("Reload Speed: ");
+        this.cardReloadSpeed.Inlines.Add(runReload);
+        this.cardReloadSpeed.Inlines.Add(runArrowUp);
+        this.cardReloadSpeed.Inlines.Add(runSpace);
+        this.cardReloadSpeed.Inlines.Add(runNoReload);
+    }
+    if (weapon.ReloadSpeed == weaponOriginal.ReloadSpeed) {
+        this.cardReloadSpeed.Inlines.Add($"Reload Speed: {weapon.ReloadSpeed.ToString()}%");
+    }
+
+    //// Reload time
+
+    var reloadTime = weapon.ReloadTime / reloadTimeModifier;
+
+    if (reloadTime > weapon.ReloadTime) {
+                Run runReloadTime = new Run($"{reloadTime.ToString("###0.##")}s");
+        runReloadTime.Foreground = Brushes.OrangeRed;
+
+                Run runArrowDown = new Run("🡅");
+        runArrowDown.Foreground = Brushes.OrangeRed;
+
+                Run runNoReloadTime = new Run($"({weapon.ReloadTime.ToString("###0.##")}s)");
+        runNoReloadTime.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardReloadTime.Inlines.Add("Reload Time: ");
+        this.cardReloadTime.Inlines.Add(runReloadTime);
+        this.cardReloadTime.Inlines.Add(runArrowDown);
+        this.cardReloadTime.Inlines.Add(runSpace);
+        this.cardReloadTime.Inlines.Add(runNoReloadTime);
+    }
+    if (reloadTime < weaponOriginal.ReloadTime) {
+                Run runReloadTime = new Run($"{reloadTime.ToString("###0.##")}s");
+        runReloadTime.Foreground = Brushes.Lime;
+
+                Run runArrowUp = new Run("🡇");
+        runArrowUp.Foreground = Brushes.Lime;
+
+                Run runNoReloadTime = new Run($"({weapon.ReloadTime.ToString("###0.##")}s)");
+        runNoReloadTime.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardReloadTime.Inlines.Add("Reload Time: ");
+        this.cardReloadTime.Inlines.Add(runReloadTime);
+        this.cardReloadTime.Inlines.Add(runArrowUp);
+        this.cardReloadTime.Inlines.Add(runSpace);
+        this.cardReloadTime.Inlines.Add(runNoReloadTime);
+    }
+    if (reloadTime == weaponOriginal.ReloadTime) {
+        this.cardReloadTime.Inlines.Add($"Reload Time: {reloadTime.ToString("###0.##")}s");
+    }
+
+
+    ////////////////
+    //// Spread ////
+    ////////////////
+
+    //// Spread Add
+
+    if (weapon.AmmoType == "12Ga") {
+        weapon.Spread = weapon.Spread12ga;
+        weaponOriginal.Spread = weaponOriginal.Spread12ga;
+    }
+    else {
+        weapon.Spread = weapon.SpreadOther;
+        weaponOriginal.Spread = weaponOriginal.SpreadOther;
+    }
+
+    weapon.Spread += oilModifierStats.SpreadAdd;
+    weapon.Spread += attachmentStats.SpreadAdd;
+    //// Spread Multiplier
+    weapon.Spread *= (1 + oilModifierStats.SpreadMult);
+
+    if (weapon.Spread < 0) {
+        weapon.Spread = 0;
+    }
+
+    if (weapon.Spread > weaponOriginal.Spread) {
+                Run runSpread = new Run($"{weapon.Spread.ToString("#####0.##")}");
+        runSpread.Foreground = Brushes.OrangeRed;
+
+                Run runArrowUp = new Run("🡅");
+        runArrowUp.Foreground = Brushes.OrangeRed;
+
+                Run runNoSpread = new Run(weaponOriginal.Spread.ToString("#####0.##"));
+        runNoSpread.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardSpread.Inlines.Add("Spread: ");
+        this.cardSpread.Inlines.Add(runSpread);
+        this.cardSpread.Inlines.Add(runArrowUp);
+        this.cardSpread.Inlines.Add(runSpace);
+        this.cardSpread.Inlines.Add(runNoSpread);
+    }
+    if (weapon.Spread < weaponOriginal.Spread) {
+                Run runSpread = new Run($"{weapon.Spread.ToString("#####0.##")}");
+        runSpread.Foreground = Brushes.Lime;
+
+                Run runArrowDown = new Run("🡇");
+        runArrowDown.Foreground = Brushes.Lime;
+
+                Run runNoSpread = new Run(weaponOriginal.Spread.ToString("#####0.##"));
+        runNoSpread.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardSpread.Inlines.Add("Spread: ");
+        this.cardSpread.Inlines.Add(runSpread);
+        this.cardSpread.Inlines.Add(runArrowDown);
+        this.cardSpread.Inlines.Add(runSpace);
+        this.cardSpread.Inlines.Add(runNoSpread);
+    }
+    if (weapon.Spread == weaponOriginal.Spread) {
+        this.cardSpread.Inlines.Add($"Spread: {weapon.Spread.ToString()}");
+    }
+
+    //////////////
+    //// Drag ////
+    //////////////
+
+    weapon.Drag += oilModifierStats.Drag;
+
+    if (weapon.Drag > 0) {
+                Run runDrag = new Run(weapon.Drag.ToString("#####0.#"));
+        runDrag.Foreground = Brushes.Goldenrod;
+
+                Run runArrowUp = new Run("🡅");
+        runArrowUp.Foreground = Brushes.Goldenrod;
+
+                Run runNoDrag = new Run("(0)");
+        runNoDrag.FontFamily = new FontFamily("Fredoka Light");
+
+        this.cardDrag.Inlines.Add("Drag: ");
+        this.cardDrag.Inlines.Add(runDrag);
+        this.cardDrag.Inlines.Add(runArrowUp);
+        this.cardDrag.Inlines.Add(runSpace);
+        this.cardDrag.Inlines.Add(runNoDrag);
+    }
+    if (weapon.Drag == 0) {
+        this.cardDrag.Inlines.Add("Drag: 0");
+    }
+
+    //////////////////////////
+    //// Durability Usage ////
+    //////////////////////////
+
+    weapon.DurabilityUsage = oilModifierStats.DurabilityUsage;
+
+    this.cardDurabilityUsage.Inlines.Add($"Durability Usage: {weapon.DurabilityUsage.ToString("#####0.#")}");
+
+    // Add Weapon to Grid
+    this.build_box.Items[0] = (new MyItem { Item = "Gun", Selection = weapon.Name });
+
+    // Write Weapon Name to Card
+    this.cardWeaponName.Text = weapon.Name;
+    this.cardWeaponType.Text = $"Type: {weapon.Type}";
+    this.cardAmmoType.Text = $"Ammo Type: {weapon.AmmoType}";
+
+    // Add image to card
+    this.cardWeaponImage.Source = new BitmapImage(new Uri($".\\Images\\Guns\\{weapon.Name}.png", UriKind.Relative));
+
+    //// Shots to break
+
+    var shotsToBreak = weapon.Durability / weapon.DurabilityUsage;
+    var shotsToBreakRounded = Math.Ceiling(shotsToBreak);
+
+    this.cardShotsToBreak.Inlines.Add("Shots to Break: ");
+    this.cardShotsToBreak.Inlines.Add(shotsToBreakRounded.ToString());
 }
 
 function getOilByName(name) {
     return oilsData?.Oil[name] || null;
+}
+
+function getWeaponByName(name) {
+    return weaponsData?.Weapon[name] || null;
+}
+
+function getChamberByName(name) {
+    return chamberData?.Chamber[name] || null;
 }
 
 function rollOils() {
@@ -301,86 +1596,99 @@ function rollOils() {
     oil3 = document.getElementById("oils3selector").value;
     oil4 = document.getElementById("oils4selector").value;
     oil5 = document.getElementById("oils5selector").value;
-
-    let oilIncrement = 0;
-
-    console.log(oilIncrement);
-
+    
     const selectedOil = [oil1, oil2, oil3, oil4, oil5];
-    for (const oilValue of selectedOil) {
-        oilIncrement++;
-        switch (oilValue) {
+
+    let calcOilStats = 0;
+
+    for (let i = 0; i < selectedOil.length; i++) {
+
+        switch (selectedOil[i]) {
             case "static-random-all":
                 shuffle(oilsAll);
-                oil[oilIncrement] = oilsAll[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
-                addName(oil[oilIncrement].Name, `cardOilName${oilIncrement}`, "oil");
-                console.log(oil[oilIncrement]);
+                rolledOils[i] = oilsAll[0];
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                calcOilStats = oilsData?.Oil["Default"];
+                oilStats(rolledOils[i], calcOilStats);
+                addName(rolledOils[i].Name, `cardOilName${i+1}`, "oil");
                 break;
             case "static-random-ammo-consume-chance":
                 shuffle(oilsAmmo);
                 oil[oilIncrement] = oilsAmmo[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-base-crit-chance":
                 shuffle(oilsCrit);
                 oil[oilIncrement] = oilsCrit[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-bullet-bounce":
                 shuffle(oilsBounce);
                 oil[oilIncrement] = oilsBounce[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-bullet-speed":
                 shuffle(oilsSpeed);
                 oil[oilIncrement] = oilsSpeed[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-add-damage":
                 shuffle(oilsAddDam);
                 oil[oilIncrement] = oilsAddDam[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-mult-damage":
                 shuffle(oilsMultDam);
                 oil[oilIncrement] = oilsMultDam[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-max-durability":
                 shuffle(oilsDur);
                 oil[oilIncrement] = oilsDur[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-penetration":
                 shuffle(oilsPen);
                 oil[oilIncrement] = oilsPen[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-projectiles":
                 shuffle(oilsProj);
                 oil[oilIncrement] = oilsProj[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-recoil":
                 shuffle(oilsRecoil);
                 oil[oilIncrement] = oilsRecoil[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-reload-speed":
                 shuffle(oilsReload);
                 oil[oilIncrement] = oilsReload[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-rpm":
                 shuffle(oilsRPM);
                 oil[oilIncrement] = oilsRPM[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-spread":
                 shuffle(oilsSpread);
                 oil[oilIncrement] = oilsSpread[0];
-                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                rolledOils[i] = getOilByName(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             default:
         }
@@ -394,57 +1702,79 @@ function rollWeapon(name) {
         case "random-all-weapons":
             shuffle(gunsAll);
             name = gunsAll[0];
+            selectedWeapon = getWeaponByName(name);
+            modifiedWeapon = getWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-pistols":
             shuffle(gunsPistols);
             name = gunsPistols[0];
+            selectedWeapon = getWeaponByName(name);
+            modifiedWeapon = getWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-revolvers":
             shuffle(gunsRevolvers);
             name = gunsRevolvers[0];
+            selectedWeapon = getWeaponByName(name);
+            modifiedWeapon = getWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-shotguns":
             shuffle(gunsShotguns);
             name = gunsShotguns[0];
+            selectedWeapon = getWeaponByName(name);
+            modifiedWeapon = getWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-submachine-guns":
             shuffle(gunsSMGs);
             name = gunsSMGs[0];
+            selectedWeapon = getWeaponByName(name);
+            modifiedWeapon = getWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-assault-rifles":
             shuffle(gunsARs);
             name = gunsARs[0];
+            selectedWeapon = getWeaponByName(name);
+            modifiedWeapon = getWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-lmgs":
             shuffle(gunsLMGs);
             name = gunsLMGs[0];
+            selectedWeapon = getWeaponByName(name);
+            modifiedWeapon = getWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-rifles":
             shuffle(gunsRifles);
             name = gunsRifles[0];
+            selectedWeapon = getWeaponByName(name);
+            modifiedWeapon = getWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-sniper-rifles":
             shuffle(gunsSnipers);
             name = gunsSnipers[0];
+            selectedWeapon = getWeaponByName(name);
+            modifiedWeapon = getWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         default:
             const selectedIndex = name.selectedIndex;
             const selectedText = name.options[selectedIndex].text;
-            addName(selectedText, selectedValue)
+            selectedWeapon = getWeaponByName(selectedText);
+            modifiedWeapon = getWeaponByName(selectedText);
+            addName(selectedWeapon.Name, selectedValue, "weapon")
     }
 }
 
+function modifyWeapon(weapon) {
+}
 
-// Don't add functions below this
+// Arrays; don't add functions below this
 
 const oilsAll = [
     "Action Oil",
