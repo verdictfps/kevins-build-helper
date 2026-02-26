@@ -269,12 +269,122 @@ function oilCategory(selectorNumber, selectedvalue) {
 // For when the button is clicked.
 function onGenerate() {
     const weaponName = "name";
-    console.log("Button clicked");
     rollWeapon(weaponName);
+    rollOils();
 }
-function addName(weapon, value) {
-    console.log("Set name");
-    document.getElementById("cardWeaponName").textContent = weapon;
+function addName(name, value, type) {
+    if (type === "weapon") {
+        document.getElementById("cardWeaponName").textContent = name;
+    } else if (type === "oil") {
+        document.getElementById(value).textContent = name;
+    }
+}
+
+let oilsData = null;
+
+async function loadOils() {
+    const response = await fetch("./Oils.json");
+    oilsData = await response.json();
+}
+
+function oilStats() {
+
+}
+
+function getOilByName(name) {
+    return oilsData?.Oil[name] || null;
+}
+
+function rollOils() {
+    oil1 = document.getElementById("oils1selector").value;
+    oil2 = document.getElementById("oils2selector").value;
+    oil3 = document.getElementById("oils3selector").value;
+    oil4 = document.getElementById("oils4selector").value;
+    oil5 = document.getElementById("oils5selector").value;
+
+    let oilIncrement = 0;
+
+    console.log(oilIncrement);
+
+    const selectedOil = [oil1, oil2, oil3, oil4, oil5];
+    for (const oilValue of selectedOil) {
+        oilIncrement++;
+        switch (oilValue) {
+            case "static-random-all":
+                shuffle(oilsAll);
+                oil[oilIncrement] = oilsAll[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                addName(oil[oilIncrement].Name, `cardOilName${oilIncrement}`, "oil");
+                console.log(oil[oilIncrement]);
+                break;
+            case "static-random-ammo-consume-chance":
+                shuffle(oilsAmmo);
+                oil[oilIncrement] = oilsAmmo[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            case "static-random-base-crit-chance":
+                shuffle(oilsCrit);
+                oil[oilIncrement] = oilsCrit[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            case "static-random-bullet-bounce":
+                shuffle(oilsBounce);
+                oil[oilIncrement] = oilsBounce[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            case "static-random-bullet-speed":
+                shuffle(oilsSpeed);
+                oil[oilIncrement] = oilsSpeed[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            case "static-random-add-damage":
+                shuffle(oilsAddDam);
+                oil[oilIncrement] = oilsAddDam[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            case "static-random-mult-damage":
+                shuffle(oilsMultDam);
+                oil[oilIncrement] = oilsMultDam[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            case "static-random-max-durability":
+                shuffle(oilsDur);
+                oil[oilIncrement] = oilsDur[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            case "static-random-penetration":
+                shuffle(oilsPen);
+                oil[oilIncrement] = oilsPen[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            case "static-random-projectiles":
+                shuffle(oilsProj);
+                oil[oilIncrement] = oilsProj[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            case "static-random-recoil":
+                shuffle(oilsRecoil);
+                oil[oilIncrement] = oilsRecoil[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            case "static-random-reload-speed":
+                shuffle(oilsReload);
+                oil[oilIncrement] = oilsReload[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            case "static-random-rpm":
+                shuffle(oilsRPM);
+                oil[oilIncrement] = oilsRPM[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            case "static-random-spread":
+                shuffle(oilsSpread);
+                oil[oilIncrement] = oilsSpread[0];
+                oil[oilIncrement] = getOilByName(oil[oilIncrement]);
+                break;
+            default:
+        }
+    };
 }
 
 function rollWeapon(name) {
@@ -282,33 +392,53 @@ function rollWeapon(name) {
     const selectedValue = name.value;
     switch (selectedValue) {
         case "random-all-weapons":
-            console.log("Random weapon");
-
             shuffle(gunsAll);
             name = gunsAll[0];
-            addName(name, selectedValue);
+            addName(name, selectedValue, "weapon");
             break;
         case "random-pistols":
+            shuffle(gunsPistols);
+            name = gunsPistols[0];
+            addName(name, selectedValue, "weapon");
             break;
         case "random-revolvers":
+            shuffle(gunsRevolvers);
+            name = gunsRevolvers[0];
+            addName(name, selectedValue, "weapon");
             break;
         case "random-shotguns":
+            shuffle(gunsShotguns);
+            name = gunsShotguns[0];
+            addName(name, selectedValue, "weapon");
             break;
         case "random-submachine-guns":
+            shuffle(gunsSMGs);
+            name = gunsSMGs[0];
+            addName(name, selectedValue, "weapon");
             break;
         case "random-assault-rifles":
+            shuffle(gunsARs);
+            name = gunsARs[0];
+            addName(name, selectedValue, "weapon");
             break;
         case "random-lmgs":
+            shuffle(gunsLMGs);
+            name = gunsLMGs[0];
+            addName(name, selectedValue, "weapon");
             break;
         case "random-rifles":
+            shuffle(gunsRifles);
+            name = gunsRifles[0];
+            addName(name, selectedValue, "weapon");
             break;
         case "random-sniper-rifles":
+            shuffle(gunsSnipers);
+            name = gunsSnipers[0];
+            addName(name, selectedValue, "weapon");
             break;
         default:
-            console.log("Default option");
-
             const selectedIndex = name.selectedIndex;
-            const selectedText = selectElement.options[selectedIndex].text;
+            const selectedText = name.options[selectedIndex].text;
             addName(selectedText, selectedValue)
     }
 }
