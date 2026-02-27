@@ -14,6 +14,11 @@ let weaponName = null;
 let chamberData = null;
 let selectedChamber = null;
 let oilStatModifiers = null;
+let selectedBarrel = null;
+let selectedOptic = null;
+let selectedLaser = null;
+let selectedFiremode = null;
+let selectedChamber = null;
 
 
 
@@ -246,6 +251,64 @@ function oilRemover(selector, selectedvalue) {
     }
 } 
 
+function attachmentFilter(selWepValue, selWepName) {
+    console.log(selWepName);
+
+    let name = document.getElementById("weapons");
+
+    const selectedText = name.options[selWepName].text;
+
+    let selectorBarrel = document.getElementById("barrelselector");
+    let selectorOptic = document.getElementById("opticselector");
+    let selectorLaser = document.getElementById("laserselector");
+    let selectorFiremode = document.getElementById("firemodeselector");
+    let selectorChamber = document.getElementById("chamberselector");
+
+    let dropdownWeapon = getWeaponByName(selectedText);
+
+    document.getElementById("priming-bolt").hidden = "";
+    document.getElementById("gun-crank").hidden = "";
+    document.getElementById("chamberselector").disabled = "";
+    document.getElementById("barrelselector").disabled = "";
+    document.getElementById("firemodeselector").disabled = "";
+
+    if (selectorChamber.value === "static-not-applicable") {
+        selectorChamber.value = "static-choose";
+    }
+    if (selectorBarrel.value === "static-not-applicable") {
+        selectorBarrel.value = "static-choose";
+    }
+    if (selectorFiremode.value === "static-not-applicable") {
+        selectorFiremode.value = "static-choose";
+    }
+
+    switch (dropdownWeapon.Firemode) {
+        case "Single":
+            document.getElementById("priming-bolt").hidden = "hidden";
+            if (selectorFiremode.value === "priming-bolt") {
+                selectorFiremode.value = "static-choose";
+            }
+            break;
+        case "Auto":
+            document.getElementById("gun-crank").hidden = "hidden";
+            if (selectorFiremode.value === "gun-crank") {
+                selectorFiremode.value = "static-choose";
+            }
+            break;
+        case "Static":
+            document.getElementById("firemodeselector").disabled = "disabled";
+            selectorFiremode.value = "static-not-applicable";
+        default:
+    }
+
+    if (dropdownWeapon.AmmoType === "Energy") {
+        selectorChamber.value = "static-not-applicable";
+        selectorBarrel.value = "static-not-applicable";
+        document.getElementById("chamberselector").disabled = "disabled";
+        document.getElementById("barrelselector").disabled = "disabled";
+    }
+}
+
 // Unhides categories and their options when selected, and hides the previous category
 function oilCategory(selectorNumber, selectedvalue) {
 
@@ -294,8 +357,18 @@ function onGenerate() {
     oil3 = null;
     oil4 = null;
     oil5 = null;
+    selectedBarrel = null;
+    selectedOptic = null;
+    selectedLaser = null;
+    selectedFiremode = null;
+    selectedChamber = null;
     rolledOils = [];
     selectedChamber = null;
+    loadChamber()
+    loadWeapons()
+    loadOils()
+    loadOrigWeapons()
+    loadAttachments()
     oilStatModifiers = oilsData?.Oil["Default"];
     rollWeapon(weaponName);
     rollOils();
@@ -306,7 +379,6 @@ function addName(name, value, type) {
     if (type === "weapon") {
         document.getElementById("cardWeaponName").textContent = name;
     } else if (type === "oil") {
-        console.log(value);
         document.getElementById(value).textContent = name;
     }
 }
@@ -319,6 +391,16 @@ async function loadChamber() {
 async function loadWeapons() {
     const response = await fetch("./Weapons.json");
     weaponsData = await response.json();
+}
+
+async function loadOrigWeapons() {
+    const response = await fetch("./OrigWeapons.json");
+    weaponsOrigData = await response.json();
+}
+
+async function loadAttachments() {
+    const response = await fetch("./OrigWeapons.json");
+    attachmentsData = await response.json();
 }
 
 async function loadOils() {
@@ -417,11 +499,9 @@ function oilCalcs(calcOil) {
     let chamber = selectedChamber;
 
     chamber = getChamberByName(`Chamber Chisel - ${weaponOriginal.AmmoType}`)
-    console.log(calcOil);
 
     if (weapon.AmmoType != "Energy") {
         weapon.Damage = weapon.DamageMult * chamber.Damage;
-        console.log(`Weapon damage: ${weapon.Damage}`);
         weapon.AmmoType = chamber.AmmoType;
         weapon.Projectiles = chamber.Projectiles;
     }
@@ -461,48 +541,38 @@ function oilCalcs(calcOil) {
     //// RPM ////
     /////////////
 
-    /*weapon.RPM *= (1 + calcOil.RPM);
+    document.getElementById("cardRPM").textContent = "";
+    document.getElementById("cardRPM").style.color = "";
+    document.getElementById("cardRPMArrow").textContent = "";
+    document.getElementById("cardRPMArrow").style.color = "";
+    document.getElementById("cardRPMComp").textContent = "";
+
+    weapon.RPM *= (1 + calcOil.RPM);
 
     if (weapon.RPM < 1) {
         weapon.RPM = 1;
     }
 
     if (weapon.RPM > weaponOriginal.RPM) {
-                Run runRPM = new Run($"{weapon.RPM.ToString("#####0.#")}");
-        runRPM.Foreground = Brushes.Lime;
 
-                Run runArrowUp = new Run("🡅");
-        runArrowUp.Foreground = Brushes.Lime;
-
-                Run runNoRPM = new Run($"({weaponOriginal.RPM})");
-        runNoRPM.FontFamily = new FontFamily("Fredoka Light");
-
-        this.cardRPM.Inlines.Add("RPM: ");
-        this.cardRPM.Inlines.Add(runRPM);
-        this.cardRPM.Inlines.Add(runArrowUp);
-        this.cardRPM.Inlines.Add(runSpace);
-        this.cardRPM.Inlines.Add(runNoRPM);
+        document.getElementById("cardRPM").textContent = weapon.RPM;
+        document.getElementById("cardRPM").style.color = "Lime";
+        document.getElementById("cardRPMArrow").textContent = "🡅";
+        document.getElementById("cardRPMArrow").style.color = "Lime";
+        document.getElementById("cardRPMComp").textContent = weaponOriginal.RPM;
     }
     if (weapon.RPM < weaponOriginal.RPM) {
-                Run runRPM = new Run($"{weapon.RPM.ToString("#####0.#")}");
-        runRPM.Foreground = Brushes.OrangeRed;
 
-                Run runArrowDown = new Run("🡇");
-        runArrowDown.Foreground = Brushes.OrangeRed;
-
-                Run runNoRPM = new Run($"({weaponOriginal.RPM})");
-        runNoRPM.FontFamily = new FontFamily("Fredoka Light");
-
-        this.cardRPM.Inlines.Add("RPM: ");
-        this.cardRPM.Inlines.Add(runRPM);
-        this.cardRPM.Inlines.Add(runArrowDown);
-        this.cardRPM.Inlines.Add(runSpace);
-        this.cardRPM.Inlines.Add(runNoRPM);
+        document.getElementById("cardRPM").textContent = weapon.RPM;
+        document.getElementById("cardRPM").style.color = "OrangeRed";
+        document.getElementById("cardRPMArrow").textContent = "🡇";
+        document.getElementById("cardRPMArrow").style.color = "OrangeRed";
+        document.getElementById("cardRPMComp").textContent = weaponOriginal.RPM;
     }
     if (weapon.RPM == weaponOriginal.RPM) {
-        this.cardRPM.Inlines.Add($"RPM: {weapon.RPM}");
+        document.getElementById("cardRPM").textContent = weapon.RPM;
     }
-
+    /*
     ///////////////////////////////
     //// Ammo Consume Chance ////
     ///////////////////////////////
@@ -1486,12 +1556,18 @@ function oilCalcs(calcOil) {
         this.cardReloadTime.Inlines.Add($"Reload Time: {reloadTime.ToString("###0.##")}s");
     }
 
-
+    */
     ////////////////
     //// Spread ////
     ////////////////
 
     //// Spread Add
+
+    document.getElementById("cardSpread").textContent = "";
+    document.getElementById("cardSpread").style.color = "";
+    document.getElementById("cardSpreadArrow").textContent = "";
+    document.getElementById("cardSpreadArrow").style.color = "";
+    document.getElementById("cardSpreadComp").textContent = "";
 
     if (weapon.AmmoType == "12Ga") {
         weapon.Spread = weapon.Spread12ga;
@@ -1503,50 +1579,34 @@ function oilCalcs(calcOil) {
     }
 
     weapon.Spread += calcOil.SpreadAdd;
-    weapon.Spread += attachmentStats.SpreadAdd;
+    //weapon.Spread += attachmentStats.SpreadAdd;
+
     //// Spread Multiplier
+
     weapon.Spread *= (1 + calcOil.SpreadMult);
 
     if (weapon.Spread < 0) {
         weapon.Spread = 0;
     }
-
+   
     if (weapon.Spread > weaponOriginal.Spread) {
-                Run runSpread = new Run($"{weapon.Spread.ToString("#####0.##")}");
-        runSpread.Foreground = Brushes.OrangeRed;
-
-                Run runArrowUp = new Run("🡅");
-        runArrowUp.Foreground = Brushes.OrangeRed;
-
-                Run runNoSpread = new Run(weaponOriginal.Spread.ToString("#####0.##"));
-        runNoSpread.FontFamily = new FontFamily("Fredoka Light");
-
-        this.cardSpread.Inlines.Add("Spread: ");
-        this.cardSpread.Inlines.Add(runSpread);
-        this.cardSpread.Inlines.Add(runArrowUp);
-        this.cardSpread.Inlines.Add(runSpace);
-        this.cardSpread.Inlines.Add(runNoSpread);
+        document.getElementById("cardSpread").textContent = weapon.Spread;
+        document.getElementById("cardSpread").style.color = "OrangeRed";
+        document.getElementById("cardSpreadArrow").textContent = "🡅";
+        document.getElementById("cardSpreadArrow").style.color = "OrangeRed";
+        document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
     }
     if (weapon.Spread < weaponOriginal.Spread) {
-                Run runSpread = new Run($"{weapon.Spread.ToString("#####0.##")}");
-        runSpread.Foreground = Brushes.Lime;
-
-                Run runArrowDown = new Run("🡇");
-        runArrowDown.Foreground = Brushes.Lime;
-
-                Run runNoSpread = new Run(weaponOriginal.Spread.ToString("#####0.##"));
-        runNoSpread.FontFamily = new FontFamily("Fredoka Light");
-
-        this.cardSpread.Inlines.Add("Spread: ");
-        this.cardSpread.Inlines.Add(runSpread);
-        this.cardSpread.Inlines.Add(runArrowDown);
-        this.cardSpread.Inlines.Add(runSpace);
-        this.cardSpread.Inlines.Add(runNoSpread);
+        document.getElementById("cardSpread").textContent = weapon.Spread;
+        document.getElementById("cardSpread").style.color = "Lime";
+        document.getElementById("cardSpreadArrow").textContent = "🡇";
+        document.getElementById("cardSpreadArrow").style.color = "Lime";
+        document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
     }
     if (weapon.Spread == weaponOriginal.Spread) {
-        this.cardSpread.Inlines.Add($"Spread: {weapon.Spread.ToString()}");
+        document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
     }
-
+    /*
     //////////////
     //// Drag ////
     //////////////
@@ -1605,8 +1665,16 @@ function getOilByName(name) {
     return oilsData?.Oil[name] || null;
 }
 
+function getAttachmentByName(name) {
+    return attachmentsData?.Attachment[name] || null;
+}
+
 function getWeaponByName(name) {
     return weaponsData?.Weapon[name] || null;
+}
+
+function getOrigWeaponByName(name) {
+    return weaponsOrigData?.Weapon[name] || null;
 }
 
 function getChamberByName(name) {
@@ -1623,7 +1691,7 @@ function rollOils() {
     const selectedOil = [oil1, oil2, oil3, oil4, oil5];
 
     for (let i = 0; i < selectedOil.length; i++) {
-
+        console.log((selectedOil[i].value));
         switch (selectedOil[i].value) {
             case "static-random-all":
                 shuffle(oilsAll);
@@ -1728,24 +1796,32 @@ function rollOils() {
                 oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
-            case "static - choose":
+            case "static-choose":
                 rolledOils[i] = getOilByName("None");
+                console.log("hi");
                 oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case null:
                 rolledOils[i] = getOilByName("None");
+                console.log(rolledOils[i]);
+                oilStats(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
+                break;
+            case "":
+                rolledOils[i] = getOilByName("None");
+                console.log(rolledOils[i]);
                 oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             default: //  working on this - getoilbyname is returning null
-                const selectedIndex = selectedOil[i].selectedIndex;
-                const selectedText = selectedOil[i].options[selectedIndex].text;
-                rolledOils[i] = selectedText;
-                rolledOils[i] = getOilByName(selectedText);
-                console.log(getOilByName(selectedText));
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
+                    const selectedIndex = selectedOil[i].selectedIndex;
+                    const selectedText = selectedOil[i].options[selectedIndex].text;
+                    let selOil = getOilByName(selectedText);
+                    rolledOils[i] = selOil;
+                    oilStats(rolledOils[i]);
+                    addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
+                    break;
         }
     };
 }
@@ -1757,75 +1833,77 @@ function rollWeapon() {
         case "random-all-weapons":
             shuffle(gunsAll);
             name = gunsAll[0];
-            console.log(name);
             selectedWeapon = getWeaponByName(name);
-            console.log(getWeaponByName(name));
-            modifiedWeapon = getWeaponByName(name);
+            modifiedWeapon = getOrigWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-pistols":
             shuffle(gunsPistols);
             name = gunsPistols[0];
             selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getWeaponByName(name);
+            modifiedWeapon = getOrigWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-revolvers":
             shuffle(gunsRevolvers);
             name = gunsRevolvers[0];
             selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getWeaponByName(name);
+            modifiedWeapon = getOrigWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-shotguns":
             shuffle(gunsShotguns);
             name = gunsShotguns[0];
             selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getWeaponByName(name);
+            modifiedWeapon = getOrigWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-submachine-guns":
             shuffle(gunsSMGs);
             name = gunsSMGs[0];
             selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getWeaponByName(name);
+            modifiedWeapon = getOrigWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-assault-rifles":
             shuffle(gunsARs);
             name = gunsARs[0];
             selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getWeaponByName(name);
+            modifiedWeapon = getOrigWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-lmgs":
             shuffle(gunsLMGs);
             name = gunsLMGs[0];
             selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getWeaponByName(name);
+            modifiedWeapon = getOrigWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-rifles":
             shuffle(gunsRifles);
             name = gunsRifles[0];
             selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getWeaponByName(name);
+            modifiedWeapon = getOrigWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         case "random-sniper-rifles":
             shuffle(gunsSnipers);
             name = gunsSnipers[0];
             selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getWeaponByName(name);
+            modifiedWeapon = getOrigWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
         default:
             const selectedIndex = name.selectedIndex;
             const selectedText = name.options[selectedIndex].text;
             selectedWeapon = getWeaponByName(selectedText);
-            modifiedWeapon = getWeaponByName(selectedText);
+            modifiedWeapon = getOrigWeaponByName(selectedText);
             addName(selectedWeapon.Name, selectedValue, "weapon")
     }
+}
+
+function rollAttachments() {
+
 }
 
 function modifyWeapon(weapon) {

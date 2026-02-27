@@ -54,6 +54,8 @@
     <script>window.addEventListener("DOMContentLoaded", loadOils);</script>
     <script>window.addEventListener("DOMContentLoaded", loadWeapons);</script>
     <script>window.addEventListener("DOMContentLoaded", loadChamber);</script>
+    <script>window.addEventListener("DOMContentLoaded", loadOrigWeapons);</script>
+    <script>window.addEventListener("DOMContentLoaded", loadAttachments);</script>
 </head>
 <body>
     <h1>Kevin's Build Helper</h1>
@@ -62,7 +64,7 @@
     <div class="container">
         <div>
             <h3>Weapons</h3>
-            <select name="weapons" id="weapons" onchange="this.value">
+            <select name="weapons" id="weapons" onchange="attachmentFilter(this.value, this.selectedIndex)">
                 <option value="random-all-weapons">Random - All</option>
                 <optgroup label="Pistols">
                     <option value="random-pistols">Random Pistol</option>
@@ -140,7 +142,7 @@
                 <div>
                     <span class="label oils" for="enchantments">Oil 1 OR Scroll</span>
                     <select name="oilCategory1" id="oilCategory1" onchange="oilCategory(1, this.value)" style="font-size:0.7em; width:100%">
-                        <option selected disabled hidden value="select-category">Select a category...</option>
+                        <option selected hidden value="select-category">Select a category...</option>
                         <option value="scrolls">Scrolls</option>
                         <option value="ammo-consume-chance-oils">Ammo Consume Chance Oils</option>
                         <option value="base-crit-chance-oils">Base Crit Chance Oils</option>
@@ -157,7 +159,7 @@
                         <option value="spread-oils">Spread Oils</option>
                     </select>
                     <select name="oils1selector" id="oils1selector" onchange="oilRemover('oils1selector', this.value)" style="font-size:0.7em; width:100%">
-                        <option selected disabled hidden value="static-choose">Select an oil...</option>
+                        <option selected hidden value="static-choose">Select an oil...</option>
                         <optgroup label="Ammo Consume Chance" id="oils1AmmoCat" hidden="hidden">
                             <option value="static-random-ammo-consume-chance">Random Ammo Consume Chance Oil</option>
                             <option value="bulk-oil">Bulk Oil</option>
@@ -449,7 +451,7 @@
                         <option value="spread-oils">Spread Oils</option>
                     </select>
                     <select name="oils2selector" id="oils2selector" onchange="oilRemover('oils2selector', this.value)" style="font-size:0.7em; width:100%">
-                        <option selected disabled hidden value="static-choose">Select an oil...</option>
+                        <option selected hidden value="static-choose">Select an oil...</option>
                         <optgroup label="Ammo Consume Chance" id="oils2AmmoCat" hidden="hidden">
                             <option value="static-random-ammo-consume-chance">Random - Ammo Consume Chance</option>
                             <option value="bulk-oil">Bulk Oil</option>
@@ -740,7 +742,7 @@
                         <option value="spread-oils">Spread Oils</option>
                     </select>
                     <select name="oils3selector" id="oils3selector" onchange="oilRemover('oils3selector', this.value)" style="font-size:0.7em; width:100%">
-                        <option selected disabled hidden value="static-choose">Select an oil...</option>
+                        <option selected hidden value="static-choose">Select an oil...</option>
                         <optgroup label="Ammo Consume Chance" id="oils3AmmoCat" hidden="hidden">
                             <option value="static-random-ammo-consume-chance">Random - Ammo Consume Chance</option>
                             <option value="bulk-oil">Bulk Oil</option>
@@ -1015,7 +1017,7 @@
                 <div>
                     <span class="label oils" for="enchantments">Oil 4</span>
                     <select name="oilCategory4" id="oilCategory4" onchange="oilCategory(4, this.value)" style="font-size:0.7em; width:100%">
-                        <option selected disabled hidden value="select-category">Select a category...</option>
+                        <option selected hidden disabled value="select-category">Select a category...</option>
                         <option value="ammo-consume-chance-oils">Ammo Consume Chance Oils</option>
                         <option value="base-crit-chance-oils">Base Crit Chance Oils</option>
                         <option value="bullet-bounces-oils">Bullet Bounces Oils</option>
@@ -1031,7 +1033,7 @@
                         <option value="spread-oils">Spread Oils</option>
                     </select>
                     <select name="oils4selector" id="oils4selector" onchange="oilRemover('oils4selector', this.value)" style="font-size:0.7em; width:100%">
-                        <option selected disabled hidden value="static-choose">Select an oil...</option>
+                        <option selected hidden value="static-choose">Select an oil...</option>
                         <optgroup label="Ammo Consume Chance" id="oils4AmmoCat" hidden="hidden">
                             <option value="static-random-ammo-consume-chance">Random - Ammo Consume Chance</option>
                             <option value="bulk-oil">Bulk Oil</option>
@@ -1322,7 +1324,7 @@
                         <option value="spread-oils">Spread Oils</option>
                     </select>
                     <select name="oils5selector" id="oils5selector" onchange="oilRemover('oils5selector', this.value)" style="font-size:0.7em; width:100%">
-                        <option selected disabled hidden value="static-choose">Select an oil...</option>
+                        <option selected hidden value="static-choose">Select an oil...</option>
                         <optgroup label="Ammo Consume Chance" id="oils5AmmoCat" hidden="hidden">
                             <option value="static-random-ammo-consume-chance">Random - Ammo Consume Chance</option>
                             <option value="bulk-oil">Bulk Oil</option>
@@ -1595,6 +1597,90 @@
                 </div>
 
             </div>
+            <div class="oilcontainer">
+                <div>
+                    <span class="label oils" for="enchantments">Barrel</span>
+                    <select name="barrelselector" id="barrelselector" style="font-size:0.7em; width:100%">
+                        <option selected hidden value="static-choose">Select a barrel...</option>
+                        <option hidden value="static-not-applicable">Not applicable to weapon</option>
+                        <optgroup label="Barrels" id="barrelGroup">
+                            <option value="none">None</option>
+                            <option value="static-random-barrel">Random Barrel</option>
+                            <option value="a12c-muzzle-brake">A12C Muzzle Brake</option>
+                            <option value="aftermarket-haukland-silencer">Aftermarket Haukland Silencer</option>
+                            <option value="barrel-extension-2in">Barrel Extension 2in</option>
+                            <option value="barrel-extension-4in">Barrel Extension 4in</option>
+                            <option value="barrel-extension-6in">Barrel Extension 6in</option>
+                            <option value="breznik-bmd-tactical">Breznik BMD (Tactical)</option>
+                            <option value="breznik-bmd">Breznik BMD</option>
+                            <option value="haukland-flash-hider">Haukland Flash Hider</option>
+                            <option value="haukland-ilencer">Haukland Silencer</option>
+                            <option value="improvised-barrel-extension">Improvised Barrel Extension</option>
+                            <option value="m87-albatross-silencer">M87 Albatross Silencer</option>
+                            <option value="shrouded-barrel-extension">Shrouded Barrel Extension</option>
+                            <option value="sr-p3-silencer">SR-P3 Silencer</option>
+                            <option value="warmage-compensator">Warmage Compensator</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <span class="label oils" for="enchantments">Optic</span>
+                    <select name="opticselector" id="opticselector" style="font-size:0.7em; width:100%">
+                        <option selected hidden value="static-choose">Select an optic...</option>
+                        <optgroup label="Optics" id="opticGroup">
+                            <option value="none">None</option>
+                            <option value="static-random-optic">Random Optic</option>
+                            <option value="assault-scope">Assault Scope</option>
+                            <option value="compact-sight">Compact Sight</option>
+                            <option value="holographic-sight">Holographic Sight</option>
+                            <option value="hunting-scope">Hunting Scope</option>
+                            <option value="recon-scope">Recon Scope</option>
+                            <option value="reflex-sight">Reflex Sight</option>
+                            <option value="sniper-scope">Sniper Scope</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <span class="label oils" for="enchantments">Laser</span>
+                    <select name="laserselector" id="laserselector" style="font-size:0.7em; width:100%">
+                        <option selected hidden value="static-choose">Select a laser...</option>
+                        <optgroup label="Lasers" id="laserGroup">
+                            <option value="none">None</option>
+                            <option value="static-random-laser">Random Laser</option>
+                            <option value="red-laser">Red</option>
+                            <option value="yellow-laser">Yellow</option>
+                            <option value="green-laser">Green</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <span class="label oils" for="enchantments">Firemode</span>
+                    <select name="firemodeselector" id="firemodeselector" style="font-size:0.7em; width:100%">
+                        <option selected hidden value="static-choose">Select a firemode...</option>
+                        <option hidden value="static-not-applicable">Not applicable to weapon</option>
+                        <optgroup label="Firemodes" id="firemodeGroup">
+                            <option value="none">None</option>
+                            <option value="gun-crank" id="gun-crank">Gun Crank</option>
+                            <option value="priming-bolt" id="priming-bolt">Priming Bolt</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <span class="label oils" for="enchantments">Rechamber</span>
+                    <select name="chamberselector" id="chamberselector" style="font-size:0.7em; width:100%">
+                        <option selected hidden value="static-choose">Select a rechamber...</option>
+                        <option hidden value="static-not-applicable">Not applicable to weapon</option>
+                        <optgroup label="Rechambers" id="rechamberGroup">
+                            <option value="none">None</option>
+                            <option value="chamber-chisel-50-bmg">Chamber Chisel - .50 BMG</option>
+                            <option value="chamber-chisel-12ga">Chamber Chisel - .12Ga</option>
+                            <option value="chamber-chisel-556mm">Chamber Chisel - 5.56mm</option>
+                            <option value="chamber-chisel-762mm">Chamber Chisel - 7.62mm</option>
+                            <option value="chamber-chisel-9mm">Chamber Chisel - 9mm</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
         </div>
         <div>
             <p id="cardWeaponName"></p>
@@ -1604,10 +1690,10 @@
                     <p>Type: <span id="cardWeaponType">Gun</span></p>
                     <p>Ammo Type: <span id="cardAmmoType">Bullet</span></p>
                     <p>Damage: <span id="cardDamage">a number</span><span id="cardDamageArrow">a number</span><span id="cardDamageX">x</span><span id="cardDamageProj">notha numba</span></p>
-                    <p>Total: <span id="cardDamageTotal">maybe</span></p>
-                    <p>RPM: <span id="cardRPM">wow</span></p>
-                    <p>Mag Size: <span id="cardMagSize">9999</span></p>
-                    <p>Spread: <span id="cardSpread"></span>-8</p>
+                    <p>Total: <span id="cardDamageTotal">maybe</span><span id="cardDamageTotalArrow">a number</span></p>
+                    <p>RPM: <span id="cardRPM"></span><span id="cardRPMArrow"></span><span id="cardRPMspace"> </span><span id="cardRPMLBrac"></span><span id="cardRPMComp"></span><span id="cardRPMRBrac"></span></p>
+                    <p>Mag Size: <span id="cardMagSize"></span></p>
+                    <p>Spread: <span id="cardSpread"></span><span id="cardSpreadArrow"></span><span id="cardSpreadspace"> </span><span id="cardSpreadLBrac"></span><span id="cardSpreadComp"></span><span id="cardSpreadRBrac"></span></p>
                     <p>Durability: <span id="cardDurability">brokey</span></p>
                     <p>Durability Usage: <span id="cardDurabilityUsage">fucton</span></p>
                     <p>Shots to Break: <span id="cardShotsToBreak">git gud</span></p>

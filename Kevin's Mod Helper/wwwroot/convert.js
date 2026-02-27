@@ -1,6 +1,6 @@
 ﻿const fs = require("fs");
 
-const input = JSON.parse(fs.readFileSync("Chamber.json", "utf8"));
+const input = JSON.parse(fs.readFileSync("Attachments1.json", "utf8"));
 
 const transformed = {
     Oil: {}
@@ -11,7 +11,7 @@ for (const oil of input) {
 }
 
 fs.writeFileSync(
-    "Oils_Converted.json",
+    "Attachments.json",
     JSON.stringify(transformed, null, 2)
 );
 

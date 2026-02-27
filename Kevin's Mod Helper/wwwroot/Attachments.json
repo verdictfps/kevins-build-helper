@@ -1,0 +1,155 @@
+{
+    "Attachment": {
+        "Barrel": {
+            "A12C Muzzle Brake": {
+                "Name": "A12C Muzzle Brake",
+                "Type": "Barrel",
+                "SpreadAdd": -0.75,
+                "MovementSpeedMult": 0
+            },
+            "Aftermarket Haukland Silencer": {
+                "Name": "Aftermarket Haukland Silencer",
+                "Type": "Barrel",
+                "SpreadAdd": -0.5,
+                "MovementSpeedMult": 0
+            },
+            "Barrel Extension 2in": {
+                "Name": "Barrel Extension 2in",
+                "Type": "Barrel",
+                "SpreadAdd": -0.5,
+                "MovementSpeedMult": -0.05
+            },
+            "Barrel Extension 4in": {
+                "Name": "Barrel Extension 4in",
+                "Type": "Barrel",
+                "SpreadAdd": -0.75,
+                "MovementSpeedMult": -0.07
+            },
+            "Barrel Extension 6in": {
+                "Name": "Barrel Extension 6in",
+                "Type": "Barrel",
+                "SpreadAdd": -1,
+                "MovementSpeedMult": -0.1
+            },
+            "Breznik BMD (Tactical)": {
+                "Name": "Breznik BMD (Tactical)",
+                "Type": "Barrel",
+                "SpreadAdd": -0.75,
+                "MovementSpeedMult": 0
+            },
+            "Breznik BMD": {
+                "Name": "Breznik BMD",
+                "Type": "Barrel",
+                "SpreadAdd": -0.75,
+                "MovementSpeedMult": 0
+            },
+            "Haukland Flash Hider": {
+                "Name": "Haukland Flash Hider",
+                "Type": "Barrel",
+                "SpreadAdd": -0.75,
+                "MovementSpeedMult": 0
+            },
+            "Haukland Silencer": {
+                "Name": "Haukland Silencer",
+                "Type": "Barrel",
+                "SpreadAdd": -0.75,
+                "MovementSpeedMult": 0
+            },
+            "Improvised Barrel Extension": {
+                "Name": "Improvised Barrel Extension",
+                "Type": "Barrel",
+                "SpreadAdd": -0.3,
+                "MovementSpeedMult": 0
+            },
+            "M87 Albatross Silencer": {
+                "Name": "M87 Albatross Silencer",
+                "Type": "Barrel",
+                "SpreadAdd": -0.25,
+                "MovementSpeedMult": 0
+            },
+            "Shrouded Barrel Extension": {
+                "Name": "Shrouded Barrel Extension",
+                "Type": "Barrel",
+                "SpreadAdd": -0.75,
+                "MovementSpeedMult": 0
+            },
+            "SR-P3 Silencer": {
+                "Name": "SR-P3 Silencer",
+                "Type": "Barrel",
+                "SpreadAdd": -0.75,
+                "MovementSpeedMult": 0
+            },
+            "Warmage Compensator": {
+                "Name": "Warmage Compensator",
+                "Type": "Barrel",
+                "SpreadAdd": -0.75,
+                "MovementSpeedMult": 0
+            }
+        },
+        "Chamber": {
+            "Chamber Chisel - .50 BMG": {
+                "Name": "Chamber Chisel - .50 BMG",
+                "AmmoType": ".50 BMG",
+                "Damage": 200,
+                "Projectiles": 1
+            },
+            "Chamber Chisel - 12Ga": {
+                "Name": "Chamber Chisel - 12Ga",
+                "AmmoType": "12Ga",
+                "Damage": 20,
+                "Projectiles": 8
+            },
+            "Chamber Chisel - 5.56mm": {
+                "Name": "Chamber Chisel - 5.56mm",
+                "AmmoType": "5.56mm",
+                "Damage": 80,
+                "Projectiles": 1
+            },
+            "Chamber Chisel - 7.62mm": {
+                "Name": "Chamber Chisel - 7.62mm",
+                "AmmoType": "7.62mm",
+                "Damage": 100,
+                "Projectiles": 1
+            },
+            "Chamber Chisel - 9mm": {
+                "Name": "Chamber Chisel - 9mm",
+                "AmmoType": "9mm",
+                "Damage": 60,
+                "Projectiles": 1
+            }
+        },
+        "Firemode": {
+            "Gun Crank": {
+                "Name": "Gun Crank",
+                "Type": "Firemode",
+                "DamageMult": 0,
+                "SpreadAdd": 0,
+                "Firemode": "Auto"
+            },
+            "Priming Bolt": {
+                "Name": "Priming Bolt",
+                "Type": "Firemode",
+                "DamageMult": 0.1,
+                "SpreadAdd": -0.1,
+                "Firemode": "Single"
+            }
+        },
+        "Laser": {
+            "Green": {
+                "Name": "Green",
+                "Type": "Laser",
+                "MovingAccuracy": 0.5
+            },
+            "Red": {
+                "Name": "Red",
+                "Type": "Laser",
+                "MovingAccuracy": 0.5
+            },
+            "Yellow": {
+                "Name": "Yellow",
+                "Type": "Laser",
+                "MovingAccuracy": 0.5
+            }
+        }
+    }
+}

@@ -25,7 +25,7 @@ async function combineJsonFromFolder(folderPath) {
 
         const jsonString = JSON.stringify(combined, null, 2);
 
-        fs.writeFile('C:\\Users\\verdi\\source\\repos\\Kevin\'s Mod Helper\\Kevin\'s Mod Helper\\wwwroot\\Chamber.json', jsonString, (err) => {
+        fs.writeFile('C:\\Users\\verdi\\source\\repos\\Kevin\'s Mod Helper\\Kevin\'s Mod Helper\\wwwroot\\Attachments.json', jsonString, (err) => {
             if (err) {
                 throw err;
             }
@@ -40,7 +40,7 @@ async function combineJsonFromFolder(folderPath) {
     }
 }
 
-combineJsonFromFolder("C:\\Users\\verdi\\source\\repos\\SULFURBuildGenerator\\SULFURBuildGenerator\\JSON\\Chamber")
+combineJsonFromFolder("C:\\Users\\verdi\\source\\repos\\Kevin's Mod Helper\\Kevin's Mod Helper\\wwwroot\\New folder")
     .then(result => {
         console.log(result);
     });

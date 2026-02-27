@@ -26,9 +26,9 @@
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
-      "DurabilityUsage": 1,
+      "DurabilityUsage": 0,
       "BulletBounciness": 0,
-      "MovingAccuracy": 1
+      "MovingAccuracy": 0
     },
     "None": {
       "Name": "None",
@@ -56,9 +56,9 @@
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
-      "DurabilityUsage": 1,
+      "DurabilityUsage": 0,
       "BulletBounciness": 0,
-      "MovingAccuracy": 1
+      "MovingAccuracy": 0
     },
     "Action Oil": {
       "Name": "Action Oil",

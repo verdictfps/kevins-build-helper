@@ -1,0 +1,39 @@
+{
+  "optic": {
+    "Assault Scope": {
+      "Name": "Assault Scope",
+      "Type": "Optic",
+      "ADSCritChance": 0.2
+    },
+    "Compact Sight": {
+      "Name": "Compact Sight",
+      "Type": "Optic",
+      "ADSCritChance": 0.2
+    },
+    "Holographic Sight": {
+      "Name": "Holographic Sight",
+      "Type": "Optic",
+      "ADSCritChance": 0.1
+    },
+    "Hunting Scope": {
+      "Name": "Hunting Scope",
+      "Type": "Optic",
+      "ADSCritChance": 0.25
+    },
+    "Recon Scope": {
+      "Name": "Recon Scope",
+      "Type": "Optic",
+      "ADSCritChance": 0.1
+    },
+    "Reflex Sight": {
+      "Name": "Reflex Sight",
+      "Type": "Optic",
+      "ADSCritChance": 0.15
+    },
+    "Sniper Scope": {
+      "Name": "Sniper Scope",
+      "Type": "Optic",
+      "ADSCritChance": 0.3
+    }
+  }
+}

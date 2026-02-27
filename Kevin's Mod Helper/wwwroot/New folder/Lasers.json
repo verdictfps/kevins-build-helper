@@ -1,0 +1,19 @@
+{
+  "Laser": {
+    "Green": {
+      "Name": "Green",
+      "Type": "Laser",
+      "MovingAccuracy": 0.5
+    },
+    "Red": {
+      "Name": "Red",
+      "Type": "Laser",
+      "MovingAccuracy": 0.5
+    },
+    "Yellow": {
+      "Name": "Yellow",
+      "Type": "Laser",
+      "MovingAccuracy": 0.5
+    }
+  }
+}

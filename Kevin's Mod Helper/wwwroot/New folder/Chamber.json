@@ -1,0 +1,34 @@
+{
+  "Chamber": {
+    "Chamber Chisel - .50 BMG": {
+      "Name": "Chamber Chisel - .50 BMG",
+      "AmmoType": ".50 BMG",
+      "Damage": 200,
+      "Projectiles": 1
+    },
+    "Chamber Chisel - 12Ga": {
+      "Name": "Chamber Chisel - 12Ga",
+      "AmmoType": "12Ga",
+      "Damage": 20,
+      "Projectiles": 8
+    },
+    "Chamber Chisel - 5.56mm": {
+      "Name": "Chamber Chisel - 5.56mm",
+      "AmmoType": "5.56mm",
+      "Damage": 80,
+      "Projectiles": 1
+    },
+    "Chamber Chisel - 7.62mm": {
+      "Name": "Chamber Chisel - 7.62mm",
+      "AmmoType": "7.62mm",
+      "Damage": 100,
+      "Projectiles": 1
+    },
+    "Chamber Chisel - 9mm": {
+      "Name": "Chamber Chisel - 9mm",
+      "AmmoType": "9mm",
+      "Damage": 60,
+      "Projectiles": 1
+    }
+  }
+}

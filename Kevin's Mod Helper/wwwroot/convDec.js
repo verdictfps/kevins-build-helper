@@ -1,7 +1,7 @@
 ﻿const fs = require("fs");
 const path = require("path");
 
-const inputPath = path.join(__dirname, "Chamber.json");
+const inputPath = path.join(__dirname, "Optics.json");
 const outputPath = path.join(__dirname, "Oils_NumbersFixed.json");
 
 // Recursively convert numeric strings to numbers
