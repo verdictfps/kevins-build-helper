@@ -13,6 +13,8 @@ let rolledOils = [];
 let weaponName = null;
 let chamberData = null;
 let selectedChamber = null;
+let oilStatModifiers = null;
+
 
 
 // It's time to shuffle
@@ -285,8 +287,19 @@ function oilCategory(selectorNumber, selectedvalue) {
 
 // For when the button is clicked.
 function onGenerate() {
+    selectedWeapon = null;
+    modifiedWeapon = null;
+    oil1 = null;
+    oil2 = null;
+    oil3 = null;
+    oil4 = null;
+    oil5 = null;
+    rolledOils = [];
+    selectedChamber = null;
+    oilStatModifiers = oilsData?.Oil["Default"];
     rollWeapon(weaponName);
     rollOils();
+    oilCalcs(oilStatModifiers);
 }
 
 function addName(name, value, type) {
@@ -313,97 +326,105 @@ async function loadOils() {
     oilsData = await response.json();
 }
 
-function oilStats(selectedOil, calcOil) {
+function oilStats(selectedOil) {
     if (selectedOil.AmmoConsumeChance != 0.0) {
-        calcOil.AmmoConsumeChance += selectedOil.AmmoConsumeChance;
+        oilStatModifiers.AmmoConsumeChance += selectedOil.AmmoConsumeChance;
     }
     if (selectedOil.Bounces != 0) {
-        calcOil.Bounces += selectedOil.Bounces;
+        oilStatModifiers.Bounces += selectedOil.Bounces;
     }
     if (selectedOil.BulletDrop != 0) {
-        calcOil.BulletDrop += selectedOil.BulletDrop;
+        oilStatModifiers.BulletDrop += selectedOil.BulletDrop;
     }
     if (selectedOil.BulletSpeed != 0.0) {
-        calcOil.BulletSpeed += selectedOil.BulletSpeed;
+        oilStatModifiers.BulletSpeed += selectedOil.BulletSpeed;
     }
     if (selectedOil.ExtraAmmoUseChance != 0.0) {
-        calcOil.ExtraAmmoUseChance += selectedOil.ExtraAmmoUseChance;
+        oilStatModifiers.ExtraAmmoUseChance += selectedOil.ExtraAmmoUseChance;
     }
     if (selectedOil.BaseCritChance != 0.0) {
-        calcOil.BaseCritChance += selectedOil.BaseCritChance;
+        oilStatModifiers.BaseCritChance += selectedOil.BaseCritChance;
     }
     if (selectedOil.DamageAdd != 0.0) {
-        calcOil.DamageAdd += selectedOil.DamageAdd;
+        oilStatModifiers.DamageAdd += selectedOil.DamageAdd;
     }
     if (selectedOil.DamageMult != 0.0) {
-        calcOil.DamageMult += selectedOil.DamageMult;
+        oilStatModifiers.DamageMult += selectedOil.DamageMult;
     }
     if (selectedOil.CanADS != "Yes") {
-        calcOil.CanADS = selectedOil.CanADS;
+        oilStatModifiers.CanADS = selectedOil.CanADS;
     }
     if (selectedOil.JumpPower != 0.0) {
-        calcOil.JumpPower += selectedOil.JumpPower;
+        oilStatModifiers.JumpPower += selectedOil.JumpPower;
     }
     if (selectedOil.LootDropChance != 0.0) {
-        calcOil.LootDropChance += selectedOil.LootDropChance;
+        oilStatModifiers.LootDropChance += selectedOil.LootDropChance;
     }
     if (selectedOil.DurabilityMult != 0.0) {
-        calcOil.DurabilityMult += selectedOil.DurabilityMult;
+        oilStatModifiers.DurabilityMult += selectedOil.DurabilityMult;
     }
     if (selectedOil.MovementSpeedMult != 0.0) {
-        calcOil.MovementSpeedMult += selectedOil.MovementSpeedMult;
+        oilStatModifiers.MovementSpeedMult += selectedOil.MovementSpeedMult;
     }
     if (selectedOil.MoneyDrops != "Yes") {
-        calcOil.MoneyDrops = selectedOil.MoneyDrops;
+        oilStatModifiers.MoneyDrops = selectedOil.MoneyDrops;
     }
     if (selectedOil.OrganDrops != "Yes") {
-        calcOil.OrganDrops = selectedOil.OrganDrops;
+        oilStatModifiers.OrganDrops = selectedOil.OrganDrops;
     }
     if (selectedOil.Penetrations != 0) {
-        calcOil.Penetrations += selectedOil.Penetrations;
+        oilStatModifiers.Penetrations += selectedOil.Penetrations;
     }
     if (selectedOil.ProjectileMult != 0.0) {
-        calcOil.ProjectileMult += selectedOil.ProjectileMult;
+        oilStatModifiers.ProjectileMult += selectedOil.ProjectileMult;
     }
     if (selectedOil.RPM != 0.0) {
-        calcOil.RPM += selectedOil.RPM;
+        oilStatModifiers.RPM += selectedOil.RPM;
     }
     if (selectedOil.RecoilAdd != 0.0) {
-        calcOil.RecoilAdd += selectedOil.RecoilAdd;
+        oilStatModifiers.RecoilAdd += selectedOil.RecoilAdd;
     }
     if (selectedOil.RecoilMult != 0.0) {
-        calcOil.RecoilMult += selectedOil.RecoilMult;
+        oilStatModifiers.RecoilMult += selectedOil.RecoilMult;
     }
     if (selectedOil.ReloadSpeed != 0.0) {
-        calcOil.ReloadSpeed += selectedOil.ReloadSpeed;
+        oilStatModifiers.ReloadSpeed += selectedOil.ReloadSpeed;
     }
     if (selectedOil.SpreadAdd != 0.0) {
-        calcOil.SpreadAdd += selectedOil.SpreadAdd;
+        oilStatModifiers.SpreadAdd += selectedOil.SpreadAdd;
     }
     if (selectedOil.SpreadMult != 0.0) {
-        calcOil.SpreadMult += selectedOil.SpreadMult;
+        oilStatModifiers.SpreadMult += selectedOil.SpreadMult;
     }
     if (selectedOil.Drag != 0.0) {
-        calcOil.Drag += selectedOil.Drag;
+        oilStatModifiers.Drag += selectedOil.Drag;
     }
     if (selectedOil.DurabilityUsage != 0.0) {
-        calcOil.DurabilityUsage += selectedOil.DurabilityUsage;
+        oilStatModifiers.DurabilityUsage += selectedOil.DurabilityUsage;
     }
     if (selectedOil.BulletBounciness != 0.0) {
-        calcOil.BulletBounciness += selectedOil.BulletBounciness;
+        oilStatModifiers.BulletBounciness += selectedOil.BulletBounciness;
     }
     if (selectedOil.MovingAccuracy != 0.0) {
-        calcOil.MovingAccuracy += selectedOil.MovingAccuracy;
+        oilStatModifiers.MovingAccuracy += selectedOil.MovingAccuracy;
     }
-    oilCalcs(calcOil);
 }
 
-function oilCalcs() {
+function oilCalcs(calcOil) {
 
     let weapon = modifiedWeapon;
     let weaponOriginal = selectedWeapon;
+    let chamber = selectedChamber;
 
-    selectedChamber = getChamberByName(`Chamber Chisel - ${weaponOriginal.AmmoType}`)
+    chamber = getChamberByName(`Chamber Chisel - ${weaponOriginal.AmmoType}`)
+    console.log(calcOil);
+
+    if (weapon.AmmoType != "Energy") {
+        weapon.Damage = weapon.DamageMult * chamber.Damage;
+        console.log(`Weapon damage: ${weapon.Damage}`);
+        weapon.AmmoType = chamber.AmmoType;
+        weapon.Projectiles = chamber.Projectiles;
+    }
 
     // Oils to Weapon calculations & card additions
     //// Clear Main Card fields
@@ -440,7 +461,7 @@ function oilCalcs() {
     //// RPM ////
     /////////////
 
-    weapon.RPM *= (1 + oilModifierStats.RPM);
+    /*weapon.RPM *= (1 + calcOil.RPM);
 
     if (weapon.RPM < 1) {
         weapon.RPM = 1;
@@ -486,7 +507,7 @@ function oilCalcs() {
     //// Ammo Consume Chance ////
     ///////////////////////////////
 
-    weapon.AmmoConsumeChance += oilModifierStats.AmmoConsumeChance;
+    weapon.AmmoConsumeChance += calcOil.AmmoConsumeChance;
     weapon.AmmoConsumeChance *= 100;
 
     if (weapon.AmmoConsumeChance < 0) {
@@ -517,7 +538,7 @@ function oilCalcs() {
     //// Extra Ammo Use Chance ////
     ///////////////////////////////
 
-    weapon.ExtraAmmoUseChance += oilModifierStats.ExtraAmmoUseChance;
+    weapon.ExtraAmmoUseChance += calcOil.ExtraAmmoUseChance;
     weapon.ExtraAmmoUseChance *= 100;
 
     if (weapon.ExtraAmmoUseChance > 100) {
@@ -548,7 +569,7 @@ function oilCalcs() {
     //// Bounces ////
     /////////////////
 
-    weapon.Bounces = oilModifierStats.Bounces;
+    weapon.Bounces = calcOil.Bounces;
 
     if (weapon.Bounces > 0.0) {
                 Run runBounces = new Run(weapon.Bounces.ToString("#####0.#"));
@@ -575,7 +596,7 @@ function oilCalcs() {
     //// Bullet Drop ////
     /////////////////////
 
-    weapon.BulletDrop += oilModifierStats.BulletDrop;
+    weapon.BulletDrop += calcOil.BulletDrop;
 
     if (weapon.BulletDrop > 0) {
                 Run runBulletDrop = new Run($"{weapon.BulletDrop.ToString("#####0.#")}");
@@ -611,7 +632,7 @@ function oilCalcs() {
     //// Bullet Speed ////
     //////////////////////
 
-    weapon.BulletSpeed += oilModifierStats.BulletSpeed;
+    weapon.BulletSpeed += calcOil.BulletSpeed;
     weapon.BulletSpeed *= 100;
 
     if (weapon.BulletSpeed < 1) {
@@ -661,7 +682,7 @@ function oilCalcs() {
     //// Base Crit Chance ////
     //////////////////////////
 
-    weapon.BaseCritChance += (oilModifierStats.BaseCritChance * 100);
+    weapon.BaseCritChance += (calcOil.BaseCritChance * 100);
 
     if (weapon.BaseCritChance > 0.0) {
                 Run runCrit = new Run($"{weapon.BaseCritChance.ToString("#####0.#")}%");
@@ -733,26 +754,28 @@ function oilCalcs() {
     }
     else {
         this.cardTotalCritChance.Inlines.Add("Total: 0%");
-    }
+    }*/
 
     //////////////////////////////
     //// Damage & Projectiles ////
     //////////////////////////////
 
     //// Projectiles
-    weapon.Projectiles *= (1 + oilModifierStats.ProjectileMult);
+    weapon.Projectiles *= (1 + calcOil.ProjectileMult);
     //// Damage Add
-    weapon.Damage += oilModifierStats.DamageAdd;
+    weapon.Damage += calcOil.DamageAdd;
     var zeroDamage = weapon.Damage;
     //// Damage Multiplier
-    weapon.Damage *= (1 + oilModifierStats.DamageMult + attachmentStats.DamageMult);
+    weapon.Damage *= (1 + calcOil.DamageMult /*+ attachmentStats.DamageMult*/);
     if (zeroDamage > 0 && weapon.Damage <= 0) {
         weapon.Damage = zeroDamage * 0.01;
     }
     //// Total Damage Calc
     weapon.TotalDamage = weapon.Damage * weapon.Projectiles * weapon.MultiShot;
 
-            Run runDmgProjOrig = null;
+    document.getElementById("cardDamageTotal").textContent = weapon.TotalDamage;
+    /*
+    let runDmgProjOrig = null;
 
     if (weapon.MultiShot == 1.0) {
         runDmgProjOrig = new Run($"({weaponOriginal.Damage.ToString("#####0.#")}x{weaponOriginal.Projectiles.ToString("#####0.#")})");
@@ -1040,7 +1063,7 @@ function oilCalcs() {
     //// Can ADS ////
     /////////////////
 
-    weapon.CanADS = oilModifierStats.CanADS;
+    weapon.CanADS = calcOil.CanADS;
 
     if (weapon.CanADS == "No") {
                 Run runCanADS = new Run(weapon.CanADS);
@@ -1057,7 +1080,7 @@ function oilCalcs() {
     //// Jump Power ////
     ////////////////////
 
-    weapon.JumpPower += oilModifierStats.JumpPower;
+    weapon.JumpPower += calcOil.JumpPower;
     weapon.JumpPower *= 100;
     weaponOriginal.JumpPower *= 100;
 
@@ -1105,7 +1128,7 @@ function oilCalcs() {
     //// Loot Drop Chance ////
     //////////////////////////
 
-    weapon.LootDropChance += oilModifierStats.LootDropChance;
+    weapon.LootDropChance += calcOil.LootDropChance;
     weapon.LootDropChance *= 100;
     weaponOriginal.LootDropChance *= 100;
 
@@ -1137,7 +1160,7 @@ function oilCalcs() {
     //// Durability Multiplier ////
     ///////////////////////////////
 
-    weapon.Durability *= (1 + oilModifierStats.DurabilityMult);
+    weapon.Durability *= (1 + calcOil.DurabilityMult);
 
     if (weapon.Durability < 1) {
         weapon.Durability = 1;
@@ -1196,7 +1219,7 @@ function oilCalcs() {
             double resultFirstMvmntStep = (1 - weapon.WeightClassFactor) * (1 + weaponWeightAdjustment);
             double resultSecondMvmntStep = 1 - resultFirstMvmntStep;
             double resultMovementSpeed = resultSecondMvmntStep * (s * 100);
-    weapon.FinalMovementSpeed = resultMovementSpeed * (1 + oilModifierStats.MovementSpeedMult + attachmentStats.MovementSpeedMult);
+    weapon.FinalMovementSpeed = resultMovementSpeed * (1 + calcOil.MovementSpeedMult + attachmentStats.MovementSpeedMult);
 
     if (weapon.FinalMovementSpeed < 1) {
         weapon.FinalMovementSpeed = 1;
@@ -1246,7 +1269,7 @@ function oilCalcs() {
     //// Money Drops ////
     /////////////////////
 
-    weapon.MoneyDrops = oilModifierStats.MoneyDrops;
+    weapon.MoneyDrops = calcOil.MoneyDrops;
 
     if (weapon.MoneyDrops == "No") {
                 Run runMon = new Run($"{weapon.MoneyDrops}");
@@ -1264,7 +1287,7 @@ function oilCalcs() {
     //// Organ Drops ////
     /////////////////////
 
-    weapon.OrganDrops = oilModifierStats.OrganDrops;
+    weapon.OrganDrops = calcOil.OrganDrops;
 
     if (weapon.OrganDrops == "No") {
                 Run runOrg = new Run($"{weapon.OrganDrops}");
@@ -1283,7 +1306,7 @@ function oilCalcs() {
     //// Penetrations ////
     //////////////////////
 
-    weapon.Penetrations += oilModifierStats.Penetrations;
+    weapon.Penetrations += calcOil.Penetrations;
 
     if (weapon.Penetrations > weaponOriginal.Penetrations) {
                 Run runPen = new Run($"{weapon.Penetrations.ToString("#####0.#")}");
@@ -1330,11 +1353,11 @@ function oilCalcs() {
 
     //// Recoil Add
 
-    weapon.RecoilMult += oilModifierStats.RecoilAdd;
+    weapon.RecoilMult += calcOil.RecoilAdd;
 
     //// Recoil Multiplier
 
-    weapon.RecoilBase *= (weapon.RecoilMult * (1 + oilModifierStats.RecoilMult));
+    weapon.RecoilBase *= (weapon.RecoilMult * (1 + calcOil.RecoilMult));
 
     if (weapon.RecoilBase < 1 && weapon.AmmoType != "Energy") {
         weapon.RecoilBase = 1;
@@ -1379,8 +1402,8 @@ function oilCalcs() {
     //////////////////////
     //// Reload Speed ////
     //////////////////////
-    var reloadTimeModifier = (weapon.ReloadSpeed * (1 + oilModifierStats.ReloadSpeed));
-    weapon.ReloadSpeed *= ((1 + oilModifierStats.ReloadSpeed) * 100);
+    var reloadTimeModifier = (weapon.ReloadSpeed * (1 + calcOil.ReloadSpeed));
+    weapon.ReloadSpeed *= ((1 + calcOil.ReloadSpeed) * 100);
     weaponOriginal.ReloadSpeed *= 100;
 
     if (weapon.ReloadSpeed < 1) {
@@ -1479,10 +1502,10 @@ function oilCalcs() {
         weaponOriginal.Spread = weaponOriginal.SpreadOther;
     }
 
-    weapon.Spread += oilModifierStats.SpreadAdd;
+    weapon.Spread += calcOil.SpreadAdd;
     weapon.Spread += attachmentStats.SpreadAdd;
     //// Spread Multiplier
-    weapon.Spread *= (1 + oilModifierStats.SpreadMult);
+    weapon.Spread *= (1 + calcOil.SpreadMult);
 
     if (weapon.Spread < 0) {
         weapon.Spread = 0;
@@ -1528,7 +1551,7 @@ function oilCalcs() {
     //// Drag ////
     //////////////
 
-    weapon.Drag += oilModifierStats.Drag;
+    weapon.Drag += calcOil.Drag;
 
     if (weapon.Drag > 0) {
                 Run runDrag = new Run(weapon.Drag.ToString("#####0.#"));
@@ -1554,7 +1577,7 @@ function oilCalcs() {
     //// Durability Usage ////
     //////////////////////////
 
-    weapon.DurabilityUsage = oilModifierStats.DurabilityUsage;
+    weapon.DurabilityUsage = calcOil.DurabilityUsage;
 
     this.cardDurabilityUsage.Inlines.Add($"Durability Usage: {weapon.DurabilityUsage.ToString("#####0.#")}");
 
@@ -1575,7 +1598,7 @@ function oilCalcs() {
     var shotsToBreakRounded = Math.Ceiling(shotsToBreak);
 
     this.cardShotsToBreak.Inlines.Add("Shots to Break: ");
-    this.cardShotsToBreak.Inlines.Add(shotsToBreakRounded.ToString());
+    this.cardShotsToBreak.Inlines.Add(shotsToBreakRounded.ToString());*/
 }
 
 function getOilByName(name) {
@@ -1591,118 +1614,152 @@ function getChamberByName(name) {
 }
 
 function rollOils() {
-    oil1 = document.getElementById("oils1selector").value;
-    oil2 = document.getElementById("oils2selector").value;
-    oil3 = document.getElementById("oils3selector").value;
-    oil4 = document.getElementById("oils4selector").value;
-    oil5 = document.getElementById("oils5selector").value;
+    oil1 = document.getElementById("oils1selector");
+    oil2 = document.getElementById("oils2selector");
+    oil3 = document.getElementById("oils3selector");
+    oil4 = document.getElementById("oils4selector");
+    oil5 = document.getElementById("oils5selector");
     
     const selectedOil = [oil1, oil2, oil3, oil4, oil5];
 
-    let calcOilStats = 0;
-
     for (let i = 0; i < selectedOil.length; i++) {
 
-        switch (selectedOil[i]) {
+        switch (selectedOil[i].value) {
             case "static-random-all":
                 shuffle(oilsAll);
                 rolledOils[i] = oilsAll[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
-                calcOilStats = oilsData?.Oil["Default"];
-                oilStats(rolledOils[i], calcOilStats);
-                addName(rolledOils[i].Name, `cardOilName${i+1}`, "oil");
+                oilStats(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-ammo-consume-chance":
                 shuffle(oilsAmmo);
-                oil[oilIncrement] = oilsAmmo[0];
+                rolledOils[i] = oilsAmmo[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-base-crit-chance":
                 shuffle(oilsCrit);
-                oil[oilIncrement] = oilsCrit[0];
+                rolledOils[i] = oilsCrit[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-bullet-bounce":
                 shuffle(oilsBounce);
-                oil[oilIncrement] = oilsBounce[0];
+                rolledOils[i] = oilsBounce[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-bullet-speed":
                 shuffle(oilsSpeed);
-                oil[oilIncrement] = oilsSpeed[0];
+                rolledOils[i] = oilsSpeed[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-add-damage":
                 shuffle(oilsAddDam);
-                oil[oilIncrement] = oilsAddDam[0];
+                rolledOils[i] = oilsAddDam[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-mult-damage":
                 shuffle(oilsMultDam);
-                oil[oilIncrement] = oilsMultDam[0];
+                rolledOils[i] = oilsMultDam[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-max-durability":
                 shuffle(oilsDur);
-                oil[oilIncrement] = oilsDur[0];
+                rolledOils[i] = oilsDur[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-penetration":
                 shuffle(oilsPen);
-                oil[oilIncrement] = oilsPen[0];
+                rolledOils[i] = oilsPen[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-projectiles":
                 shuffle(oilsProj);
-                oil[oilIncrement] = oilsProj[0];
+                rolledOils[i] = oilsProj[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-recoil":
                 shuffle(oilsRecoil);
-                oil[oilIncrement] = oilsRecoil[0];
+                rolledOils[i] = oilsRecoil[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-reload-speed":
                 shuffle(oilsReload);
-                oil[oilIncrement] = oilsReload[0];
+                rolledOils[i] = oilsReload[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-rpm":
                 shuffle(oilsRPM);
-                oil[oilIncrement] = oilsRPM[0];
+                rolledOils[i] = oilsRPM[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "static-random-spread":
                 shuffle(oilsSpread);
-                oil[oilIncrement] = oilsSpread[0];
+                rolledOils[i] = oilsSpread[0];
                 rolledOils[i] = getOilByName(rolledOils[i]);
+                oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
-            default:
+            case "static-no-selection":
+                rolledOils[i] = getOilByName("None");
+                oilStats(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
+                break;
+            case "static - choose":
+                rolledOils[i] = getOilByName("None");
+                oilStats(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
+                break;
+            case null:
+                rolledOils[i] = getOilByName("None");
+                oilStats(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
+                break;
+            default: //  working on this - getoilbyname is returning null
+                const selectedIndex = selectedOil[i].selectedIndex;
+                const selectedText = selectedOil[i].options[selectedIndex].text;
+                rolledOils[i] = selectedText;
+                rolledOils[i] = getOilByName(selectedText);
+                console.log(getOilByName(selectedText));
+                oilStats(rolledOils[i]);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
         }
     };
 }
 
-function rollWeapon(name) {
-    name = document.getElementById("weapons");
+function rollWeapon() {
+    let name = document.getElementById("weapons");
     const selectedValue = name.value;
     switch (selectedValue) {
         case "random-all-weapons":
             shuffle(gunsAll);
             name = gunsAll[0];
+            console.log(name);
             selectedWeapon = getWeaponByName(name);
+            console.log(getWeaponByName(name));
             modifiedWeapon = getWeaponByName(name);
             addName(name, selectedValue, "weapon");
             break;
