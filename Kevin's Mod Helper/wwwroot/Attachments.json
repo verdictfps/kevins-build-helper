@@ -1,17 +1,17 @@
 {
-  "Attachment": {
-    "All": {
-      "SpreadAdd": 0,
-      "MovementSpeedMult": 0,
-      "DamageMult": 0,
-      "MovingAccuracy": 0.0,
-      "ADSCritChance": 0.0
-    },
+    "Attachment": {
+        "All": {
+                "SpreadAdd": 0,
+                "MovementSpeedMult": 0,
+                "DamageMult": 0,
+                "MovingAccuracy": 0.0,
+                "ADSCritChance": 0.0
+       },
       "Barrel": {
         "None": {
           "Name": "None",
           "Type": "Barrel",
-          "SpreadAdd": -0.75,
+          "SpreadAdd": 0,
           "MovementSpeedMult": 0
         },
         "A12C Muzzle Brake": {
@@ -182,41 +182,46 @@
         "MovingAccuracy": 0.5
       }
     },
-      "Optic": {
+    "Optic": {
+        "None": {
+            "Name": "None",
+            "Type": "Optic",
+            "ADSCritChance": 0.0
+        },
         "Assault Scope": {
-          "Name": "Assault Scope",
-          "Type": "Optic",
-          "ADSCritChance": 0.2
+            "Name": "Assault Scope",
+            "Type": "Optic",
+            "ADSCritChance": 0.2
         },
         "Compact Sight": {
-          "Name": "Compact Sight",
-          "Type": "Optic",
-          "ADSCritChance": 0.2
+            "Name": "Compact Sight",
+            "Type": "Optic",
+            "ADSCritChance": 0.2
         },
         "Holographic Sight": {
-          "Name": "Holographic Sight",
-          "Type": "Optic",
-          "ADSCritChance": 0.1
+            "Name": "Holographic Sight",
+            "Type": "Optic",
+            "ADSCritChance": 0.1
         },
         "Hunting Scope": {
-          "Name": "Hunting Scope",
-          "Type": "Optic",
-          "ADSCritChance": 0.25
+            "Name": "Hunting Scope",
+            "Type": "Optic",
+            "ADSCritChance": 0.25
         },
         "Recon Scope": {
-          "Name": "Recon Scope",
-          "Type": "Optic",
-          "ADSCritChance": 0.1
+            "Name": "Recon Scope",
+            "Type": "Optic",
+            "ADSCritChance": 0.1
         },
         "Reflex Sight": {
-          "Name": "Reflex Sight",
-          "Type": "Optic",
-          "ADSCritChance": 0.15
+            "Name": "Reflex Sight",
+            "Type": "Optic",
+            "ADSCritChance": 0.15
         },
         "Sniper Scope": {
-          "Name": "Sniper Scope",
-          "Type": "Optic",
-          "ADSCritChance": 0.3
+            "Name": "Sniper Scope",
+            "Type": "Optic",
+            "ADSCritChance": 0.3
         }
     }
   }

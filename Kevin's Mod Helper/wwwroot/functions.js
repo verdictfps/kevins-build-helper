@@ -12,7 +12,6 @@ let oil5 = null;
 let rolledOils = [];
 let weaponName = null;
 let chamberData = null;
-let selectedChamber = null;
 let oilStatModifiers = null;
 let selectedBarrel = null;
 let selectedOptic = null;
@@ -253,7 +252,6 @@ function oilRemover(selector, selectedvalue) {
 } 
 
 function attachmentFilter(selWepValue, selWepName) {
-    console.log(selWepName);
 
     let name = document.getElementById("weapons");
 
@@ -372,6 +370,7 @@ function onGenerate() {
     loadAttachments()
     oilStatModifiers = oilsData?.Oil["Default"];
     rollWeapon(weaponName);
+    rollAttachments();
     rollOils();
     oilCalcs(oilStatModifiers);
 }
@@ -400,7 +399,7 @@ async function loadOrigWeapons() {
 }
 
 async function loadAttachments() {
-    const response = await fetch("./OrigWeapons.json");
+    const response = await fetch("./Attachments.json");
     attachmentsData = await response.json();
 }
 
@@ -498,12 +497,22 @@ function oilCalcs(calcOil) {
     let weapon = modifiedWeapon;
     let weaponOriginal = selectedWeapon;
     let chamber = selectedChamber;
+    let attachmentStats = selectedAttachments;
+    let weaponOriginalChamber = getChamberByName(`Chamber Chisel - ${selectedWeapon.AmmoType}`);
 
     if (weapon.AmmoType != "Energy") {
         weapon.Damage = weapon.DamageMult * chamber.Damage;
         weapon.AmmoType = chamber.AmmoType;
         weapon.Projectiles = chamber.Projectiles;
     }
+
+    if (weaponOriginal.AmmoType != "Energy") {
+        weaponOriginal.Damage = weaponOriginal.DamageMult * weaponOriginalChamber.Damage;
+        weaponOriginal.AmmoType = weaponOriginalChamber.AmmoType;
+        weaponOriginal.Projectiles = weaponOriginalChamber.Projectiles;
+    }
+
+    document.getElementById("cardAmmoType").textContent = weapon.AmmoType;
 
     // Oils to Weapon calculations & card additions
     //// Clear Main Card fields
@@ -593,16 +602,15 @@ function oilCalcs(calcOil) {
                 Run runNoAmmoConsumeChance = new Run("(100%)");
         runNoAmmoConsumeChance.FontFamily = new FontFamily("Fredoka Light");
 
-        this.cardAmmoConsumeChance.Inlines.Add("Ammo Consume Chance: ");
-        this.cardAmmoConsumeChance.Inlines.Add(runAmmoConsumeChance);
-        this.cardAmmoConsumeChance.Inlines.Add(runArrowDown);
-        this.cardAmmoConsumeChance.Inlines.Add(runSpace);
-        this.cardAmmoConsumeChance.Inlines.Add(runNoAmmoConsumeChance);
+        document.getElementById("cardRPM").textContent = weapon.RPM;
+        document.getElementById("cardRPM").style.color = "Lime";
+        document.getElementById("cardRPMArrow").textContent = "🡅";
+        document.getElementById("cardRPMArrow").style.color = "Lime";
+        document.getElementById("cardRPMComp").textContent = weaponOriginal.RPM;
     }
     if (weapon.AmmoConsumeChance == 100) {
         this.cardAmmoConsumeChance.Inlines.Add("Ammo Consume Chance: 100%");
     }
-
     ///////////////////////////////
     //// Extra Ammo Use Chance ////
     ///////////////////////////////
@@ -829,13 +837,33 @@ function oilCalcs(calcOil) {
     //// Damage & Projectiles ////
     //////////////////////////////
 
+    document.getElementById("cardDamage").textContent = "";
+    document.getElementById("cardDamage").style.color = "";
+    document.getElementById("cardDamageArrow").textContent = "";
+    document.getElementById("cardDamageArrow").style.color = "";
+    document.getElementById("cardDamageComp").textContent = "";
+    document.getElementById("cardDamageLBrac").textContent = "";
+    document.getElementById("cardDamageRBrac").textContent = "";
+    document.getElementById("cardDamageProj").textContent = "";
+    document.getElementById("cardDamageProj").style.color = "";
+    document.getElementById("cardDamageProjArrow").textContent = "";
+    document.getElementById("cardDamageProjArrow").style.color = "";
+    document.getElementById("cardDamageProjComp").textContent = "";
+    document.getElementById("cardDamageX").textContent = "";
+    document.getElementById("cardDamageMultiX").textContent = "";
+    document.getElementById("cardDamageMulti").textContent = "";
+    document.getElementById("cardDamageMulti").style.color = "";
+    document.getElementById("cardDamageMultiXComp").textContent = "";
+    document.getElementById("cardDamageMultiComp").textContent = "";
+    document.getElementById("cardDamageXComp").textContent = "";
+
     //// Projectiles
     weapon.Projectiles *= (1 + calcOil.ProjectileMult);
     //// Damage Add
     weapon.Damage += calcOil.DamageAdd;
     var zeroDamage = weapon.Damage;
     //// Damage Multiplier
-    weapon.Damage *= (1 + calcOil.DamageMult /*+ attachmentStats.DamageMult*/);
+    weapon.Damage *= (1 + calcOil.DamageMult + attachmentStats.DamageMult);
     if (zeroDamage > 0 && weapon.Damage <= 0) {
         weapon.Damage = zeroDamage * 0.01;
     }
@@ -843,240 +871,196 @@ function oilCalcs(calcOil) {
     weapon.TotalDamage = weapon.Damage * weapon.Projectiles * weapon.MultiShot;
 
     document.getElementById("cardDamageTotal").textContent = weapon.TotalDamage;
-    /*
-    let runDmgProjOrig = null;
-
-    if (weapon.MultiShot == 1.0) {
-        runDmgProjOrig = new Run($"({weaponOriginal.Damage.ToString("#####0.#")}x{weaponOriginal.Projectiles.ToString("#####0.#")})");
-        runDmgProjOrig.FontFamily = new FontFamily("Fredoka Light");
-    }
-    if (weapon.MultiShot > 1.0) {
-        runDmgProjOrig = new Run($"({weaponOriginal.Damage.ToString("#####0.#")}x{weaponOriginal.MultiShot.ToString("#####0.#")}x{weaponOriginal.Projectiles.ToString("#####0.#")})");
-        runDmgProjOrig.FontFamily = new FontFamily("Fredoka Light");
-    }
-
 
     ////// Damage & Projectiles card addition
     if (weapon.Damage < weaponOriginal.Damage) {
-                Run runDamageFinal = new Run(weapon.Damage.ToString("#####0.#"));
-        runDamageFinal.Foreground = Brushes.OrangeRed;
-
-                Run runArrowDown1 = new Run("🡇");
-        runArrowDown1.Foreground = Brushes.OrangeRed;
-                Run runArrowDown2 = new Run("🡇");
-        runArrowDown2.Foreground = Brushes.OrangeRed;
-
-                Run runArrowUp1 = new Run("🡅");
-        runArrowUp1.Foreground = Brushes.Lime;
-                Run runArrowUp2 = new Run("🡅");
-        runArrowUp1.Foreground = Brushes.Lime;
-
 
         if (weapon.Projectiles < weaponOriginal.Projectiles) {
-                    Run runProjFinal = new Run(weapon.Projectiles.ToString());
-            runProjFinal.Foreground = Brushes.OrangeRed;
-
-            this.cardDamage.Inlines.Add("Damage: ");
-            this.cardDamage.Inlines.Add(runDamageFinal);
-            this.cardDamage.Inlines.Add(runArrowDown1);
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runX);
+            document.getElementById("cardDamage").textContent = weapon.Damage;
+            document.getElementById("cardDamage").style.color = "OrangeRed";
+            document.getElementById("cardDamageArrow").textContent = "🡇";
+            document.getElementById("cardDamageArrow").style.color = OrangeRed;
+            document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
+            document.getElementById("cardDamageLBrac").textContent = "(";
+            document.getElementById("cardDamageRBrac").textContent = ")";
+            document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
+            document.getElementById("cardDamageProj").style.color = "OrangeRed";
+            document.getElementById("cardDamageProjArrow").textContent = "🡇";
+            document.getElementById("cardDamageProjArrow").style.color = OrangeRed;
+            document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
+            document.getElementById("cardDamageX").textContent = "x";
+            document.getElementById("cardDamageXComp").textContent = "x";
             if (weapon.MultiShot > 1.0) {
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(runX);
+                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
+                document.getElementById("cardDamageMulti").style.color = "OrangeRed";
+                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runProjFinal);
-            this.cardDamage.Inlines.Add(runArrowDown2);
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runDmgProjOrig);
         }
         if (weapon.Projectiles > weaponOriginal.Projectiles) {
-                    Run runProjFinal = new Run(weapon.Projectiles.ToString("#####0.#"));
-            runProjFinal.Foreground = Brushes.Lime;
-
-            this.cardDamage.Inlines.Add("Damage: ");
-            this.cardDamage.Inlines.Add(runDamageFinal);
-            this.cardDamage.Inlines.Add(runArrowDown1);
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runX);
+            document.getElementById("cardDamage").textContent = weapon.Damage;
+            document.getElementById("cardDamage").style.color = "OrangeRed";
+            document.getElementById("cardDamageArrow").textContent = "🡇";
+            document.getElementById("cardDamageArrow").style.color = "OrangeRed";
+            document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
+            document.getElementById("cardDamageLBrac").textContent = "(";
+            document.getElementById("cardDamageRBrac").textContent = ")";
+            document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
+            document.getElementById("cardDamageProj").style.color = "Lime";
+            document.getElementById("cardDamageProjArrow").textContent = "🡅";
+            document.getElementById("cardDamageProjArrow").style.color = "Lime";
+            document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
+            document.getElementById("cardDamageX").textContent = "x";
+            document.getElementById("cardDamageXComp").textContent = "x";
             if (weapon.MultiShot > 1.0) {
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(runX);
+                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
+                document.getElementById("cardDamageMulti").style.color = "OrangeRed";
+                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runProjFinal);
-            this.cardDamage.Inlines.Add(runArrowUp1);
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runDmgProjOrig);
         }
-        if (weapon.Projectiles == weaponOriginal.Projectiles) {
-            this.cardDamage.Inlines.Add("Damage: ");
-            this.cardDamage.Inlines.Add(runDamageFinal);
-            this.cardDamage.Inlines.Add(runArrowDown1);
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runX);
+        if (weapon.Projectiles === weaponOriginal.Projectiles) {
+            document.getElementById("cardDamage").textContent = weapon.Damage;
+            document.getElementById("cardDamage").style.color = "OrangeRed";
+            document.getElementById("cardDamageArrow").textContent = "🡇";
+            document.getElementById("cardDamageArrow").style.color = "OrangeRed";
+            document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
+            document.getElementById("cardDamageLBrac").textContent = "(";
+            document.getElementById("cardDamageRBrac").textContent = ")";
+            document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
+            document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
+            document.getElementById("cardDamageX").textContent = "x";
+            document.getElementById("cardDamageXComp").textContent = "x";
             if (weapon.MultiShot > 1.0) {
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(runX);
+                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
+                document.getElementById("cardDamageMulti").style.color = "OrangeRed";
+                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(weapon.Projectiles.ToString());
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runDmgProjOrig);
         }
     }
     if (weapon.Damage > weaponOriginal.Damage) {
-                Run runDamageFinal = new Run(weapon.Damage.ToString("#####0.#"));
-        runDamageFinal.Foreground = Brushes.Lime;
-
-                Run runArrowDown1 = new Run("🡇");
-        runArrowDown1.Foreground = Brushes.OrangeRed;
-                Run runArrowDown2 = new Run("🡇");
-        runArrowDown2.Foreground = Brushes.OrangeRed;
-
-                Run runArrowUp1 = new Run("🡅");
-        runArrowUp1.Foreground = Brushes.Lime;
-                Run runArrowUp2 = new Run("🡅");
-        runArrowUp1.Foreground = Brushes.Lime;
-
-
         if (weapon.Projectiles < weaponOriginal.Projectiles) {
-                    Run runProjFinal = new Run(weapon.Projectiles.ToString("#####0.#"));
-            runProjFinal.Foreground = Brushes.OrangeRed;
-
-            this.cardDamage.Inlines.Add("Damage: ");
-            this.cardDamage.Inlines.Add(runDamageFinal);
-            this.cardDamage.Inlines.Add(runArrowUp1);
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runX);
+            document.getElementById("cardDamage").textContent = weapon.Damage;
+            document.getElementById("cardDamage").style.color = "Lime";
+            document.getElementById("cardDamageArrow").textContent = "🡅";
+            document.getElementById("cardDamageArrow").style.color = "Lime";
+            document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
+            document.getElementById("cardDamageLBrac").textContent = "(";
+            document.getElementById("cardDamageRBrac").textContent = ")";
+            document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
+            document.getElementById("cardDamageProj").style.color = "OrangeRed";
+            document.getElementById("cardDamageProjArrow").textContent = "🡇";
+            document.getElementById("cardDamageProjArrow").style.color = "OrangeRed";
+            document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
+            document.getElementById("cardDamageX").textContent = "x";
+            document.getElementById("cardDamageXComp").textContent = "x";
             if (weapon.MultiShot > 1.0) {
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(runX);
+                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
+                document.getElementById("cardDamageMulti").style.color = "Lime";
+                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runProjFinal);
-            this.cardDamage.Inlines.Add(runArrowDown1);
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runDmgProjOrig);
         }
         if (weapon.Projectiles > weaponOriginal.Projectiles) {
-                    Run runProjFinal = new Run(weapon.Projectiles.ToString("#####0.#"));
-            runProjFinal.Foreground = Brushes.Lime;
-
-            this.cardDamage.Inlines.Add("Damage: ");
-            this.cardDamage.Inlines.Add(runDamageFinal);
-            this.cardDamage.Inlines.Add(runArrowUp1);
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runX);
+            document.getElementById("cardDamage").textContent = weapon.Damage;
+            document.getElementById("cardDamage").style.color = "Lime";
+            document.getElementById("cardDamageArrow").textContent = "🡅";
+            document.getElementById("cardDamageArrow").style.color = "Lime";
+            document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
+            document.getElementById("cardDamageLBrac").textContent = "(";
+            document.getElementById("cardDamageRBrac").textContent = ")";
+            document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
+            document.getElementById("cardDamageProj").style.color = "Lime";
+            document.getElementById("cardDamageProjArrow").textContent = "🡅";
+            document.getElementById("cardDamageProjArrow").style.color = "Lime";
+            document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
+            document.getElementById("cardDamageX").textContent = "x";
+            document.getElementById("cardDamageXComp").textContent = "x";
             if (weapon.MultiShot > 1.0) {
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(runX);
+                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
+                document.getElementById("cardDamageMulti").style.color = "OrangeRed";
+                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runProjFinal);
-            this.cardDamage.Inlines.Add(runArrowUp2);
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runDmgProjOrig);
         }
-        if (weapon.Projectiles == weaponOriginal.Projectiles) {
-            this.cardDamage.Inlines.Add("Damage: ");
-            this.cardDamage.Inlines.Add(runDamageFinal);
-            this.cardDamage.Inlines.Add(runArrowUp1);
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runX);
+        if (weapon.Projectiles === weaponOriginal.Projectiles) {
+            document.getElementById("cardDamage").textContent = weapon.Damage;
+            document.getElementById("cardDamage").style.color = "Lime";
+            document.getElementById("cardDamageArrow").textContent = "🡅";
+            document.getElementById("cardDamageArrow").style.color = "Lime";
+            document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
+            document.getElementById("cardDamageLBrac").textContent = "(";
+            document.getElementById("cardDamageRBrac").textContent = ")";
+            document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
+            document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
+            document.getElementById("cardDamageX").textContent = "x";
+            document.getElementById("cardDamageXComp").textContent = "x";
             if (weapon.MultiShot > 1.0) {
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(runX);
+                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
+                document.getElementById("cardDamageMulti").style.color = "OrangeRed";
+                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(weapon.Projectiles.ToString());
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runDmgProjOrig);
         }
     }
     if (weapon.Damage == weaponOriginal.Damage) {
-                Run runArrowDown1 = new Run("🡇");
-        runArrowDown1.Foreground = Brushes.OrangeRed;
-                Run runArrowDown2 = new Run("🡇");
-        runArrowDown2.Foreground = Brushes.OrangeRed;
-
-                Run runArrowUp1 = new Run("🡅");
-        runArrowUp1.Foreground = Brushes.Lime;
-                Run runArrowUp2 = new Run("🡅");
-        runArrowUp1.Foreground = Brushes.Lime;
-
-
         if (weapon.Projectiles < weaponOriginal.Projectiles) {
-                    Run runProjFinal = new Run(weapon.Projectiles.ToString("#####0.#"));
-            runProjFinal.Foreground = Brushes.OrangeRed;
-
-            this.cardDamage.Inlines.Add("Damage: ");
-            this.cardDamage.Inlines.Add(weapon.Damage.ToString());
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runX);
+            document.getElementById("cardDamage").textContent = weapon.Damage;
+            document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
+            document.getElementById("cardDamageLBrac").textContent = "(";
+            document.getElementById("cardDamageRBrac").textContent = ")";
+            document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
+            document.getElementById("cardDamageProj").style.color = "OrangeRed";
+            document.getElementById("cardDamageProjArrow").textContent = "🡇";
+            document.getElementById("cardDamageProjArrow").style.color = "OrangeRed";
+            document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
+            document.getElementById("cardDamageX").textContent = "x";
+            document.getElementById("cardDamageXComp").textContent = "x";
             if (weapon.MultiShot > 1.0) {
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(runX);
+                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
+                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runProjFinal);
-            this.cardDamage.Inlines.Add(runArrowDown1);
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runDmgProjOrig);
         }
         if (weapon.Projectiles > weaponOriginal.Projectiles) {
-                    Run runProjFinal = new Run(weapon.Projectiles.ToString("#####0.#"));
-            runProjFinal.Foreground = Brushes.Lime;
-
-            this.cardDamage.Inlines.Add("Damage: ");
-            this.cardDamage.Inlines.Add(weapon.Damage.ToString());
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runX);
+            document.getElementById("cardDamage").textContent = weapon.Damage;
+            document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
+            document.getElementById("cardDamageLBrac").textContent = "(";
+            document.getElementById("cardDamageRBrac").textContent = ")";
+            document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
+            document.getElementById("cardDamageProj").style.color = "Lime";
+            document.getElementById("cardDamageProjArrow").textContent = "🡅";
+            document.getElementById("cardDamageProjArrow").style.color = "Lime";
+            document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
+            document.getElementById("cardDamageX").textContent = "x";
+            document.getElementById("cardDamageXComp").textContent = "x";
             if (weapon.MultiShot > 1.0) {
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(runX);
+                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
+                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runProjFinal);
-            this.cardDamage.Inlines.Add(runArrowUp1);
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runDmgProjOrig);
         }
-        if (weapon.Projectiles == weaponOriginal.Projectiles) {
-            this.cardDamage.Inlines.Add("Damage: ");
-            this.cardDamage.Inlines.Add(weapon.Damage.ToString());
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(runX);
+        if (weapon.Projectiles === weaponOriginal.Projectiles) {
+            document.getElementById("cardDamage").textContent = weapon.Damage;
+            document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
+            document.getElementById("cardDamageX").textContent = "x";
             if (weapon.MultiShot > 1.0) {
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(weapon.MultiShot.ToString());
-                this.cardDamage.Inlines.Add(runSpace);
-                this.cardDamage.Inlines.Add(runX);
+                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
             }
-            this.cardDamage.Inlines.Add(runSpace);
-            this.cardDamage.Inlines.Add(weapon.Projectiles.ToString("#####0.#"));
-            this.cardDamage.Inlines.Add(runSpace);
         }
     }
 
-            ////// Total Damage card addition
+     /*       ////// Total Damage card addition
 
             Run runTotDmgOrig = new Run($"({weaponOriginal.TotalDamage.ToString("#####0.#")})");
     runTotDmgOrig.FontFamily = new FontFamily("Fredoka Light");
@@ -1567,6 +1551,8 @@ function oilCalcs(calcOil) {
     document.getElementById("cardSpreadArrow").textContent = "";
     document.getElementById("cardSpreadArrow").style.color = "";
     document.getElementById("cardSpreadComp").textContent = "";
+    document.getElementById("cardSpreadLBrac").textContent = "";
+    document.getElementById("cardSpreadLBrac").textContent = "";
 
     if (weapon.AmmoType == "12Ga") {
         weapon.Spread = weapon.Spread12ga;
@@ -1578,7 +1564,7 @@ function oilCalcs(calcOil) {
     }
 
     weapon.Spread += calcOil.SpreadAdd;
-    //weapon.Spread += attachmentStats.SpreadAdd;
+    weapon.Spread += attachmentStats.SpreadAdd;
 
     //// Spread Multiplier
 
@@ -1593,14 +1579,18 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSpread").style.color = "OrangeRed";
         document.getElementById("cardSpreadArrow").textContent = "🡅";
         document.getElementById("cardSpreadArrow").style.color = "OrangeRed";
+        document.getElementById("cardSpreadLBrac").textContent = "(";
         document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
+        document.getElementById("cardSpreadLBrac").textContent = ")";
     }
     if (weapon.Spread < weaponOriginal.Spread) {
         document.getElementById("cardSpread").textContent = weapon.Spread;
         document.getElementById("cardSpread").style.color = "Lime";
         document.getElementById("cardSpreadArrow").textContent = "🡇";
         document.getElementById("cardSpreadArrow").style.color = "Lime";
+        document.getElementById("cardSpreadLBrac").textContent = "(";
         document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
+        document.getElementById("cardSpreadLBrac").textContent = ")";
     }
     if (weapon.Spread == weaponOriginal.Spread) {
         document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
@@ -1667,6 +1657,21 @@ function getOilByName(name) {
 function getAttachmentByName(name) {
     return attachmentsData?.Attachment[name] || null;
 }
+function getBarrelByName(name) {
+    return attachmentsData?.Attachment.Barrel[name] || null;
+}
+function getOpticByName(name) {
+    return attachmentsData?.Attachment.Optic[name] || null;
+}
+function getChamberByName(name) {
+    return attachmentsData?.Attachment.Chamber[name] || null;
+}
+function getLaserByName(name) {
+    return attachmentsData?.Attachment.Laser[name] || null;
+}
+function getFiremodeByName(name) {
+    return attachmentsData?.Attachment.Firemode[name] || null;
+}
 
 function getWeaponByName(name) {
     return weaponsData?.Weapon[name] || null;
@@ -1690,7 +1695,6 @@ function rollOils() {
     const selectedOil = [oil1, oil2, oil3, oil4, oil5];
 
     for (let i = 0; i < selectedOil.length; i++) {
-        console.log((selectedOil[i].value));
         switch (selectedOil[i].value) {
             case "static-random-all":
                 shuffle(oilsAll);
@@ -1797,19 +1801,16 @@ function rollOils() {
                 break;
             case "static-choose":
                 rolledOils[i] = getOilByName("None");
-                console.log("hi");
                 oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case null:
                 rolledOils[i] = getOilByName("None");
-                console.log(rolledOils[i]);
                 oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
             case "":
                 rolledOils[i] = getOilByName("None");
-                console.log(rolledOils[i]);
                 oilStats(rolledOils[i]);
                 addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil");
                 break;
@@ -1914,79 +1915,106 @@ function rollAttachments() {
 
     switch (selectorBarrel.value) {
         case "static-not-applicable":
-            selectedBarrel = getAttachmentByName("Barrel.None");
+            selectedBarrel = getBarrelByName("None");
             break;
         case "static-choose":
+            selectedBarrel = getBarrelByName("None");
+            console.log(getBarrelByName("None"));
             break;
         case "none":
+            selectedBarrel = getBarrelByName("None");
             break;
         case "static-random-barrel":
             shuffle(attachmentsBarrels);
             attSel = attachmentsBarrels[0];
-            selectedBarrel = getAttachmentByName(`Barrel.${attSel}`);
+            selectedBarrel = getBarrelByName(`Barrel.${attSel}`);
             break;
         default:
+            const selectedIndex = selectorBarrel.selectedIndex;
+            const selectedText = selectorBarrel.options[selectedIndex].text;
+            selectedBarrel = getBarrelByName(selectedText);
     }
     selectedAttachments.SpreadAdd += selectedBarrel.SpreadAdd;
     selectedAttachments.MovementSpeedMult += selectedBarrel.MovementSpeedMult;
 
     switch (selectorChamber.value) {
         case "static-not-applicable":
-
+            selectedChamber = getChamberByName(`Chamber Chisel - ${selectedWeapon.AmmoType}`);
             break;
         case "static-choose":
+            selectedChamber = getChamberByName(`Chamber Chisel - ${selectedWeapon.AmmoType}`);
             break;
         case "none":
+            selectedChamber = getChamberByName(`Chamber Chisel - ${selectedWeapon.AmmoType}`);
             break;
         case "static-random-barrel":
             shuffle(attachmentsRechamber);
             attSel = attachmentsRechamber[0];
-            selectedChamber = getAttachmentByName(`Chamber.${attSel}`);
+            selectedChamber = getChamberByName(attSel);
             break;
         default:
+            const selectedIndex = selectorChamber.selectedIndex;
+            const selectedText = selectorChamber.options[selectedIndex].text;
+            selectedChamber = getChamberByName(selectedText);
     }
     switch (selectorFiremode.value) {
         case "static-not-applicable":
-
+            selectedFiremode = getFiremodeByName("None");
             break;
         case "static-choose":
+            selectedFiremode = getFiremodeByName("None");
             break;
         case "none":
+            selectedFiremode = getFiremodeByName("None");
             break;
         default:
+            const selectedIndex = selectorFiremode.selectedIndex;
+            const selectedText = selectorFiremode.options[selectedIndex].text;
+            selectedFiremode = getFiremodeByName(selectedText);
     }
     selectedAttachments.SpreadAdd += selectedFiremode.SpreadAdd;
     selectedAttachments.DamageMult += selectedFiremode.DamageMult;
 
     switch (selectorLaser.value) {
         case "static-not-applicable":
-
+            selectedLaser = getLaserByName("None");
             break;
         case "static-choose":
+            selectedLaser = getLaserByName("None");
             break;
         case "none":
+            selectedLaser = getLaserByName("None");
             break;
         case "static-random-laser":
             shuffle(attachmentsLasers);
             attSel = attachmentsLasers[0];
-            selectedLaser = getAttachmentByName(`Laser.${attSel}`);
+            selectedLaser = getLaserByName(attSel);
             break;
         default:
+            const selectedIndex = selectorLaser.selectedIndex;
+            const selectedText = selectorLaser.options[selectedIndex].text;
+            selectedLaser = getLaserByName(selectedText);
     }
     selectedAttachments.MovingAccuracy += selectedLaser.MovingAccuracy;
 
     switch (selectorOptic.value) {
         case "static-choose":
+            selectedOptic = getOpticByName("None");
             break;
         case "none":
+            selectedOptic = getOpticByName("None");
             break;
         case "static-random-optic":
             shuffle(attachmentsOptics);
             attSel = attachmentsOptics[0];
-            selectedOptic = getAttachmentByName(`Optic.${attSel}`);
+            selectedOptic = getOpticByName(attSel);
             break;
         default:
+            const selectedIndex = selectorOptic.selectedIndex;
+            const selectedText = selectorOptic.options[selectedIndex].text;
+            selectedOptic = getOpticByName(selectedText);
     }
+    selectedAttachments.ADSCritChance += selectedOptic.ADSCritChance;
 
     // chamber: `Chamber Chisel - ${weapon.ammotype};?
 }
