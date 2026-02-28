@@ -20,7 +20,13 @@ let selectedFiremode = null;
 let selectedChamber = null;
 let selectedAttachments = null;
 
+function pokeKevin() {
+    document.getElementById("containerthing").style.backgroundimage = "url('Goblin Crosshair Guild Variant png2.png')";
+}
 
+function youCantUnpokeKevin() {
+
+}
 
 // It's time to shuffle
 function shuffle(array) {
