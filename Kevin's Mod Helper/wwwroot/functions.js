@@ -19,6 +19,7 @@ let selectedOptic = null;
 let selectedLaser = null;
 let selectedFiremode = null;
 let selectedChamber = null;
+let selectedAttachments = null;
 
 
 
@@ -497,8 +498,6 @@ function oilCalcs(calcOil) {
     let weapon = modifiedWeapon;
     let weaponOriginal = selectedWeapon;
     let chamber = selectedChamber;
-
-    chamber = getChamberByName(`Chamber Chisel - ${weaponOriginal.AmmoType}`)
 
     if (weapon.AmmoType != "Energy") {
         weapon.Damage = weapon.DamageMult * chamber.Damage;
@@ -1903,7 +1902,93 @@ function rollWeapon() {
 }
 
 function rollAttachments() {
+    let selectorBarrel = document.getElementById("barrelselector");
+    let selectorOptic = document.getElementById("opticselector");
+    let selectorLaser = document.getElementById("laserselector");
+    let selectorFiremode = document.getElementById("firemodeselector");
+    let selectorChamber = document.getElementById("chamberselector");
 
+    let attSel = null;
+
+    selectedAttachments = getAttachmentByName("All");
+
+    switch (selectorBarrel.value) {
+        case "static-not-applicable":
+            selectedBarrel = getAttachmentByName("Barrel.None");
+            break;
+        case "static-choose":
+            break;
+        case "none":
+            break;
+        case "static-random-barrel":
+            shuffle(attachmentsBarrels);
+            attSel = attachmentsBarrels[0];
+            selectedBarrel = getAttachmentByName(`Barrel.${attSel}`);
+            break;
+        default:
+    }
+    selectedAttachments.SpreadAdd += selectedBarrel.SpreadAdd;
+    selectedAttachments.MovementSpeedMult += selectedBarrel.MovementSpeedMult;
+
+    switch (selectorChamber.value) {
+        case "static-not-applicable":
+
+            break;
+        case "static-choose":
+            break;
+        case "none":
+            break;
+        case "static-random-barrel":
+            shuffle(attachmentsRechamber);
+            attSel = attachmentsRechamber[0];
+            selectedChamber = getAttachmentByName(`Chamber.${attSel}`);
+            break;
+        default:
+    }
+    switch (selectorFiremode.value) {
+        case "static-not-applicable":
+
+            break;
+        case "static-choose":
+            break;
+        case "none":
+            break;
+        default:
+    }
+    selectedAttachments.SpreadAdd += selectedFiremode.SpreadAdd;
+    selectedAttachments.DamageMult += selectedFiremode.DamageMult;
+
+    switch (selectorLaser.value) {
+        case "static-not-applicable":
+
+            break;
+        case "static-choose":
+            break;
+        case "none":
+            break;
+        case "static-random-laser":
+            shuffle(attachmentsLasers);
+            attSel = attachmentsLasers[0];
+            selectedLaser = getAttachmentByName(`Laser.${attSel}`);
+            break;
+        default:
+    }
+    selectedAttachments.MovingAccuracy += selectedLaser.MovingAccuracy;
+
+    switch (selectorOptic.value) {
+        case "static-choose":
+            break;
+        case "none":
+            break;
+        case "static-random-optic":
+            shuffle(attachmentsOptics);
+            attSel = attachmentsOptics[0];
+            selectedOptic = getAttachmentByName(`Optic.${attSel}`);
+            break;
+        default:
+    }
+
+    // chamber: `Chamber Chisel - ${weapon.ammotype};?
 }
 
 function modifyWeapon(weapon) {
@@ -2440,4 +2525,50 @@ const gunsRifles = [
 const gunsSnipers = [
     "Rokua .308", "Dolphin 99",
     "D4RT", "Impala Gravita", "Longboy"
+];
+
+const attachmentsBarrels = [
+    "A12C Muzzle Brake",
+    "Aftermarket Haukland Silencer",
+    "Barrel Extension 2in",
+    "Barrel Extension 4in",
+    "Barrel Extension 6in",
+    "Breznik BMD",
+    "Breznik BMD (Tactical)",
+    "Haukland Flash Hider",
+    "Haukland Silencer",
+    "Improvised Barrel Extension",
+    "M87 Albatross Silencer",
+    "SR-P3 Silencer",
+    "Shrouded Barrel Extension",
+    "Warmage Compensator"
+];
+
+const attachmentsOptics = [
+    "Assault Scope",
+    "Compact Sight",
+    "Holographic Sight",
+    "Hunting Scope",
+    "Recon Scope",
+    "Reflex Sight",
+    "Sniper Scope"
+];
+
+const attachmentsLaser = [
+    "Red",
+    "Green",
+    "Yellow"
+];
+
+const attachmentsFiremode = [
+    "Gun Crank",
+    "Priming Bolt"
+];
+
+const attachmentsRechamber = [
+    "Chamber Chisel - .50 BMG",
+    "Chamber Chisel - 12Ga",
+    "Chamber Chisel - 5.56mm",
+    "Chamber Chisel - 7.62mm",
+    "Chamber Chisel - 9mm"
 ];
