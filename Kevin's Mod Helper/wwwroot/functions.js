@@ -9,6 +9,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function createProDropdown(select) {
 
+    window.addEventListener("resize", () => {
+    if (wrapper.classList.contains("open"))
+        decideDirection();
+    });
+
+    // Up or down
+    function decideDirection() {
+
+    wrapper.classList.remove("drop-up");
+
+    const rect = wrapper.getBoundingClientRect();
+    const panelHeight = panel.offsetHeight || 320;
+
+    const spaceBelow = window.innerHeight - rect.bottom;
+    const spaceAbove = rect.top;
+
+    if (spaceBelow < panelHeight && spaceAbove > panelHeight) {
+        wrapper.classList.add("drop-up");
+    }
+}
     // Convert
 
     const wrapper = document.createElement("div");
@@ -88,9 +108,14 @@ function createProDropdown(select) {
     // Open Dropdown
 
     selected.addEventListener("click", () => {
-        wrapper.classList.toggle("open");
+
+    wrapper.classList.toggle("open");
+
+    if (wrapper.classList.contains("open")) {
+        decideDirection();
         search.focus();
         scrollToSelected();
+    }
     });
 
     document.addEventListener("click", e => {

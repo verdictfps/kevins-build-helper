@@ -10,7 +10,8 @@
     h1 {
         font-size: 5em;
         font-family: "Fredoka", sans-serif;
-        margin: 0.67em 0;
+        margin-bottom: 8px;
+        margin-top: -8px;
         font-weight: 300;
         color: #FDB142;
     }
@@ -19,6 +20,8 @@
         font-family: "Fredoka", sans-serif;
         font-weight: 300;
         color: #FDB142;
+        margin-top: 5px;
+        margin-bottom: 10px;
     }
 
     h3 {
@@ -68,7 +71,7 @@
             font-family: "Fredoka", sans-serif;
             font-weight: 500;
             background-color: #FDB142;
-            border: 1px solid black;
+            border: 3px solid rgb(54, 54, 54);
             width: 100%;
             color: black;
         }
@@ -77,10 +80,14 @@
             font-family: "Fredoka", sans-serif;
             font-weight: 500;
             background-color: darkslategray;
-            border: 1px solid black;
+            border: 3px solid black;
             width: 100%;
             color: black;
         }
+
+#weapons {
+    height: 0%;
+}
 
 .custom-select {
     position: relative;
@@ -118,21 +125,26 @@ select.custom-dropdown {
     font-size: 1.5em;
     margin: -10px;
     margin-right: 0px;
-    transition:transform .1s ease;
+    transition:transform .15s ease;
 }
 
-.custom-select.open .custom-arrow {
-    transform:translate(0px, 20px);
+.custom-select.open:not(.drop-up) .custom-arrow {
+    transform:translate(50px) rotate(90deg) translate(38px, 10px)  ;
+    z-index:1001;
+}
+
+.custom-select.open.drop-up .custom-arrow {
+    transform: translate(0px, -20px) rotate(145deg);
     z-index:1001;
 }
 
 .custom-select-panel {
     display:none;
     position:absolute;
-    width:95.5%;
     background:#1b1b1b;
     border:1px solid #444;
     z-index:1000;
+    width: 100%;
 }
 
 .custom-select.open .custom-select-panel {
@@ -198,6 +210,11 @@ mark {
                 box-shadow 0.15s ease,
                 text-shadow 0.15s ease,
                 color 0.15s ease;
+}
+
+.custom-select.drop-up .custom-select-panel {
+    top: auto;
+    bottom: 100%;
 }
 
 #oils1selector {
