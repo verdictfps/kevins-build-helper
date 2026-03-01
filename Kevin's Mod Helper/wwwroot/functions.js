@@ -1787,7 +1787,7 @@ function oilCalcs(calcOil) {
     document.getElementById("cardSpreadArrow").style.color = "";
     document.getElementById("cardSpreadComp").textContent = "";
     document.getElementById("cardSpreadLBrac").textContent = "";
-    document.getElementById("cardSpreadLBrac").textContent = "";
+    document.getElementById("cardSpreadRBrac").textContent = "";
 
     if (weapon.AmmoType == "12Ga") {
         weapon.Spread = weapon.Spread12ga;
@@ -1816,7 +1816,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSpreadArrow").style.color = "OrangeRed";
         document.getElementById("cardSpreadLBrac").textContent = "(";
         document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
-        document.getElementById("cardSpreadLBrac").textContent = ")";
+        document.getElementById("cardSpreadRBrac").textContent = ")";
     }
     if (weapon.Spread < weaponOriginal.Spread) {
         document.getElementById("cardSpread").textContent = weapon.Spread;
@@ -1825,7 +1825,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSpreadArrow").style.color = "Lime";
         document.getElementById("cardSpreadLBrac").textContent = "(";
         document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
-        document.getElementById("cardSpreadLBrac").textContent = ")";
+        document.getElementById("cardSpreadRBrac").textContent = ")";
     }
     if (weapon.Spread == weaponOriginal.Spread) {
         document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;

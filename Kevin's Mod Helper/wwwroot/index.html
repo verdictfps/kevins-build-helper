@@ -16,20 +16,17 @@
         }
         .containerweapchoose {
             display: grid;
-            padding: -10px;
             margin: 0px;
             grid-template-columns: 20% 80%;
             border-radius: 5px;
-            height: 10%;
         }
 
             .containerweapchoose div {
-                border: 1px solid black;
+                border: 2px solid black;
                 padding: 0px;
                 text-align: center;
                 border-radius: 5px;
                 margin: 0px;
-                height: 50%;
             }
 
         .containerinfobox {
@@ -144,96 +141,17 @@
         }
     </style>
     
-    <div class="container" style="border:0px; margin-top: -10px;">
+    <div class="container" style="border:0px; margin-top: -20px; margin-bottom: -20px;">
         <div style="margin:0px; padding:0px; border:0px solid #FDB142;">
             <div class="containerinfobox" hidden id="oil1infobox">
                 <p id="oil1infoboxname" style="color:#FDB142; font-weight: 500; font-size: 1em;">hi</p>
                 <p id="oil1infoboxtext" style="font-size: 0.8em">hi</p>
             </div>
-            <div class="containerweapchoose" style="border: 1px solid #FDB142; border-radius: 5px; margin:10px;">
-                <div>
-                    <h2>Weapons</h2>
-                </div>
-                <div style="margin-bottom: -50px;">
-                    <select name="weapons" id="weapons" class="custom-dropdown" onchange="attachmentFilter(this.value, this.selectedIndex)">
-                        <option value="random-all-weapons">Random - All</option>
-                        <optgroup label="Pistols">
-                            <option value="random-pistols">Random Pistol</option>
-                            <option value="beck-8">Beck 8</option>
-                            <option value="bronco-89">Bronco 89</option>
-                            <option value="cavalier">Cavalier</option>
-                            <option value="flicker">Flicker</option>
-                            <option value="gravekeeper">Gravekeeper</option>
-                            <option value="hell-n-back">Hell 'N' Back</option>
-                            <option value="p38-dirk">P38 Dirk</option>
-                            <option value="salamander">Salamander</option>
-                            <option value="socom-9">Socom 9</option>
-                            <option value="star-witness">Star &amp; Witness</option>
-                            <option value="unknown">Unknown</option>
-                        </optgroup>
-                        <optgroup label="Revolvers">
-                            <option value="random-revolvers">Random Revolver</option>
-                            <option value="357-balthazar">.357 Balthazar</option>
-                            <option value="palehorse-topclipper">Palehorse Topclipper</option>
-                            <option value="snut-38">Snut .38</option>
-                            <option value="wyatt-pulsar">Wyatt PULSAR</option>
-                        </optgroup>
-                        <optgroup label="Shotguns">
-                            <option value="random-shotguns">Random Shotgun</option>
-                            <option value="1889-mario">1889 Mario</option>
-                            <option value="arbiter-2">Arbiter 2</option>
-                            <option value="augusta">Augusta</option>
-                            <option value="breacher-8">Breacher 8</option>
-                            <option value="flock-76">Flock 76</option>
-                            <option value="majordome">Majordome</option>
-                            <option value="mossman">Mossman</option>
-                        </optgroup>
-                        <optgroup label="SMGs">
-                            <option value="random-smgs">Random SMG</option>
-                            <option value="deathstar-pg">Deathstar PG</option>
-                            <option value="drifter-9">Drifter 9</option>
-                            <option value="ferryman">Ferryman</option>
-                            <option value="m3-termite">M3 Termite</option>
-                            <option value="ploika-compact">Ploika Compact</option>
-                            <option value="valet">Valet</option>
-                            <option value="vrede">Vrede</option>
-                        </optgroup>
-                        <optgroup label="Assault Rifles">
-                            <option value="random-assault-rifles">Random Assault Rifle</option>
-                            <option value="catacoil-rapid-x">Catacoil Rapid X</option>
-                            <option value="corpsemaker">Corpsemaker</option>
-                            <option value="m11a2-fisk">M11A2 Fisk</option>
-                            <option value="type-80-typhoon">Type 80 Typhoon</option>
-                            <option value="wingman">Wingman</option>
-                        </optgroup>
-                        <optgroup label="LMGs">
-                            <option value="random-lmgs">Random LMG</option>
-                            <option value="duhar">Duhar</option>
-                            <option value="neuraxis-f22">Neuraxis F22</option>
-                            <option value="rektor-100rd">Rektor 100rd</option>
-                        </optgroup>
-                        <optgroup label="Rifles">
-                            <option value="random-rifles">Random Rifle</option>
-                            <option value="farsight">Farsight</option>
-                            <option value="knop-22">Knop .22</option>
-                            <option value="m182-pierre-fusil">M182 Pierre-Fusil</option>
-                            <option value="tailor-marksman-mkii">Tailor Marksman MKII</option>
-                        </optgroup>
-                        <optgroup label="Sniper Rifles">
-                            <option value="random-sniper-rifles">Random Sniper Rifle</option>
-                            <option value="d4rt">D4RT</option>
-                            <option value="dolphin-99">Dolphin 99</option>
-                            <option value="impala-gravita">Impala Gravita</option>
-                            <option value="longboy">Longboy</option>
-                            <option value="rokua-308">Rokua .308</option>
-                        </optgroup>
-                    </select>
-                </div>
-            </div>
+            
             <div style="border: 1px solid #FDB142; border-radius: 5px; margin-top:10px; margin:10px;">
                 
-                <div class="oilcontainer">
-                    <div style="border:0px; grid-column: 1 / -1;padding-bottom:0px;"><h2>Enchantments</h2></div>
+                <div class="oilcontainer" style="margin-bottom:10px;">
+                    <div style="border:0px; grid-column: 1 / -1; margin-bottom:-12px; margin-top:-5px;"><h2>Select ENCHANTMENTS</h2></div>
                     <div style="border:0px"></div>
                     <div id="width-grid" style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" for="enchantments" style="font-size:1em;">Oil 1 OR Scroll</span>
@@ -1695,7 +1613,7 @@
                 </div>
                 
                 <div class="attachmentcontainer">
-                    <div style="border:0px; grid-column: 1 / -1;padding-bottom:0px;"><h2>Attachments</h2></div>
+                    <div style="border:0px; grid-column: 1 / -1;margin-bottom:-5px; margin-top:-8px;"><h2>Select ATTACHMENTS</h2></div>
                     <div style="grid-column: 1 / -1; background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" style="font-size:1em;" for="enchantments">Barrel</span>
                         <select name="barrelselector" id="barrelselector" class="custom-dropdown" style="font-size:0.7em; width:100%">
@@ -1783,7 +1701,87 @@
         </div>
         <div style="border:0px">
             <h1>Kevin's Build Helper</h1>
-            <div class="containerweapon">
+            <div class="containerweapchoose" style="border: px solid #FDB142; border-radius: 5px; margin-bottom:20px;">
+                <div style="margin: -10px; margin-top: -7px; border: 0px;">
+                    <h2>Select a WEAPON</h2>
+                </div>
+                <div style="margin-bottom: 0px; border: 0px;">
+                    <select name="weapons" id="weapons" class="custom-dropdown" onchange="attachmentFilter(this.value, this.selectedIndex)">
+                        <option value="random-all-weapons">Random - All</option>
+                        <optgroup label="Pistols">
+                            <option value="random-pistols">Random Pistol</option>
+                            <option value="beck-8">Beck 8</option>
+                            <option value="bronco-89">Bronco 89</option>
+                            <option value="cavalier">Cavalier</option>
+                            <option value="flicker">Flicker</option>
+                            <option value="gravekeeper">Gravekeeper</option>
+                            <option value="hell-n-back">Hell 'N' Back</option>
+                            <option value="p38-dirk">P38 Dirk</option>
+                            <option value="salamander">Salamander</option>
+                            <option value="socom-9">Socom 9</option>
+                            <option value="star-witness">Star &amp; Witness</option>
+                            <option value="unknown">Unknown</option>
+                        </optgroup>
+                        <optgroup label="Revolvers">
+                            <option value="random-revolvers">Random Revolver</option>
+                            <option value="357-balthazar">.357 Balthazar</option>
+                            <option value="palehorse-topclipper">Palehorse Topclipper</option>
+                            <option value="snut-38">Snut .38</option>
+                            <option value="wyatt-pulsar">Wyatt PULSAR</option>
+                        </optgroup>
+                        <optgroup label="Shotguns">
+                            <option value="random-shotguns">Random Shotgun</option>
+                            <option value="1889-mario">1889 Mario</option>
+                            <option value="arbiter-2">Arbiter 2</option>
+                            <option value="augusta">Augusta</option>
+                            <option value="breacher-8">Breacher 8</option>
+                            <option value="flock-76">Flock 76</option>
+                            <option value="majordome">Majordome</option>
+                            <option value="mossman">Mossman</option>
+                        </optgroup>
+                        <optgroup label="SMGs">
+                            <option value="random-smgs">Random SMG</option>
+                            <option value="deathstar-pg">Deathstar PG</option>
+                            <option value="drifter-9">Drifter 9</option>
+                            <option value="ferryman">Ferryman</option>
+                            <option value="m3-termite">M3 Termite</option>
+                            <option value="ploika-compact">Ploika Compact</option>
+                            <option value="valet">Valet</option>
+                            <option value="vrede">Vrede</option>
+                        </optgroup>
+                        <optgroup label="Assault Rifles">
+                            <option value="random-assault-rifles">Random Assault Rifle</option>
+                            <option value="catacoil-rapid-x">Catacoil Rapid X</option>
+                            <option value="corpsemaker">Corpsemaker</option>
+                            <option value="m11a2-fisk">M11A2 Fisk</option>
+                            <option value="type-80-typhoon">Type 80 Typhoon</option>
+                            <option value="wingman">Wingman</option>
+                        </optgroup>
+                        <optgroup label="LMGs">
+                            <option value="random-lmgs">Random LMG</option>
+                            <option value="duhar">Duhar</option>
+                            <option value="neuraxis-f22">Neuraxis F22</option>
+                            <option value="rektor-100rd">Rektor 100rd</option>
+                        </optgroup>
+                        <optgroup label="Rifles">
+                            <option value="random-rifles">Random Rifle</option>
+                            <option value="farsight">Farsight</option>
+                            <option value="knop-22">Knop .22</option>
+                            <option value="m182-pierre-fusil">M182 Pierre-Fusil</option>
+                            <option value="tailor-marksman-mkii">Tailor Marksman MKII</option>
+                        </optgroup>
+                        <optgroup label="Sniper Rifles">
+                            <option value="random-sniper-rifles">Random Sniper Rifle</option>
+                            <option value="d4rt">D4RT</option>
+                            <option value="dolphin-99">Dolphin 99</option>
+                            <option value="impala-gravita">Impala Gravita</option>
+                            <option value="longboy">Longboy</option>
+                            <option value="rokua-308">Rokua .308</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <div class="containerweapon" style="margin-bottom:20px">
                 <p style="text-align: left; font-weight: 500; font-size: 2em; margin: 0px; padding-bottom: 15px; padding-left: 2px; padding-top: 0px;" id="cardWeaponName">Weapon</p>
                 <div class="resultcontainer">
                     <div>
@@ -1794,7 +1792,7 @@
                         <p style="font-size: 0.9em">Total: <span id="cardDamageTotal"></span><span id="cardDamageTotalArrow"></span><span> </span><span style="font-weight:300" id="cardDamageTotalLBrac"></span><span style="font-weight:300" id="cardDamageTotalComp"></span><span style="font-weight:300" id="cardDamageTotalRBrac"></span></p>
                         <p style="font-size: 0.9em">RPM: <span id="cardRPM"></span><span id="cardRPMArrow"></span><span id="cardRPMspace"> </span><span id="cardRPMLBrac"></span><span id="cardRPMComp"></span><span id="cardRPMRBrac"></span></p>
                         <p style="font-size: 0.9em">Mag Size: <span id="cardMagSize"></span></p>
-                        <p style="font-size: 0.9em">Spread: <span id="cardSpread"></span><span id="cardSpreadArrow"></span><span id="cardSpreadspace"> </span><span id="cardSpreadLBrac"></span><span id="cardSpreadComp"></span><span id="cardSpreadRBrac"></span></p>
+                        <p style="font-size: 0.9em">Spread: <span id="cardSpread"></span><span id="cardSpreadArrow"></span><span id="cardSpreadspace"> </span><span id="cardSpreadLBrac" style="font-weight:300"></span><span id="cardSpreadComp" style="font-weight:300"></span><span id="cardSpreadRBrac" style="font-weight:300"></span></p>
                         <p style="font-size: 0.9em">Durability: <span id="cardDurability">brokey</span></p>
                         <p style="font-size: 0.9em">Durability Usage: <span id="cardDurabilityUsage">fucton</span></p>
                         <p style="font-size: 0.9em">Shots to Break: <span id="cardShotsToBreak">git gud</span></p>
