@@ -14,6 +14,21 @@
             padding: 0px;
             border-radius: 15px;
         }
+        .containerinfobox {
+            z-index: 10;
+            position: absolute;
+            border: 1px solid #FDB142;
+            height: 10em;
+            width: 12em;
+            left: anchor(right);
+            top: anchor(top);
+            margin-left: 50px;
+            margin-top: 18px;
+            fill-opacity: 0.5;
+            background-color: #2D424B;
+            position-anchor: --anchoroil1;
+            color: white;
+        }
 
         .containerbutton {
             margin-top: 10px;
@@ -30,16 +45,9 @@
         }
 
             .container div {
-                background-color: #2D424B;
                 border: 1px solid #FDB142;
                 padding: 10px;
                 text-align: center;
-                background-image: url("Goblin Crosshair Guild Variant png3.png");
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: cover;
-                background-position: center;
-                background-blend-mode: overlay
             }
 
         .resultcontainer {
@@ -61,18 +69,48 @@
 
         .oilcontainer {
             display: grid;
-            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-template-columns: 50% 50%;
             background-color: #2D424B;
             padding: 15px;
             border-radius: 5px;
         }
 
             .oilcontainer div {
+                
+                border: 1px solid black;
+                padding: 5px;
+                text-align: center;
+                border-radius: 5px;
+            }
+        .attachmentcontainer {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            background-color: #2D424B;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+            .attachmentcontainer div {
                 background-color: #FDB142;
                 border: 1px solid black;
                 padding: 5px;
                 text-align: center;
             }
+        .oilresultcontainer {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            background-color: #2D424B;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+            .oilresultcontainer div {
+                background-color: #FDB142;
+                border: 1px solid black;
+                padding: 5px;
+                text-align: center;
+            }
+            
     </style>
     <script src="functions.js"></script>
     <script>window.addEventListener("DOMContentLoaded", loadOils);</script>
@@ -84,15 +122,18 @@
 <body>
     <style>
         body {
-            
             background-color: #2D424B;
-            
         }
     </style>
+    
     <div class="container">
+        <div class="containerinfobox" hidden id="oil1infobox">
+            <p id="oil1infoboxname" style="color:#FDB142; font-weight: 500; font-size: 1em;">hi</p>
+            <p id="oil1infoboxtext" style="font-size: 0.8em">hi</p>
+        </div>
         <div>
             <h2>Weapons</h2>
-            <select name="weapons" id="weapons" onchange="attachmentFilter(this.value, this.selectedIndex)">
+            <select name="weapons" id="weapons" class="custom-dropdown" onchange="attachmentFilter(this.value, this.selectedIndex)">
                 <option value="random-all-weapons">Random - All</option>
                 <optgroup label="Pistols">
                     <option value="random-pistols">Random Pistol</option>
@@ -167,9 +208,9 @@
             </select>
             <h2>Enchantments</h2>
             <div class="oilcontainer">
-                <div>
-                    <span class="label oils" for="enchantments">Oil 1 OR Scroll</span>
-                    <select name="oilCategory1" id="oilCategory1" onchange="oilCategory(1, this.value)" style="font-size:0.7em; width:100%">
+                <div id="width-grid" style="background-color: #FDB142; margin-bottom: 5px;">
+                    <span class="label oils" for="enchantments" style="font-size:1em;">Oil 1 OR Scroll</span>
+                    <select name="oilCategory1" class="custom-dropdown" id="oilCategory1" onchange="oilCategory(1, this.value)" style="font-size:0.7em; width:100%">
                         <option selected hidden value="select-category">Select a category...</option>
                         <option value="scrolls">Scrolls</option>
                         <option value="ammo-consume-chance-oils">Ammo Consume Chance Oils</option>
@@ -186,11 +227,13 @@
                         <option value="rpm-oils">RPM Oils</option>
                         <option value="spread-oils">Spread Oils</option>
                     </select>
-                    <select name="oils1selector" id="oils1selector" onchange="oilRemover('oils1selector', this.value)" style="font-size:0.7em; width:100%">
+                    <select name="oils1selector" id="oils1selector" class="custom-dropdown" onchange="oilRemover('oils1selector', this.value)" style="font-size:0.7em; width:100%">
                         <option selected hidden value="static-choose">Select an oil...</option>
+                        <option value="static-no-selection">None</option>
+                        <option value="static-random-all">Random Oil - All</option>
                         <optgroup label="Ammo Consume Chance" id="oils1AmmoCat" hidden="hidden">
                             <option value="static-random-ammo-consume-chance">Random Ammo Consume Chance Oil</option>
-                            <option value="bulk-oil">Bulk Oil</option>
+                            <option value="bulk-oil" onmouseover="oilPreview('Bulk Oil')" onmouseout="oilPreviewClear()">Bulk Oil</option>
                             <option value="carefree-oil">Carefree Oil</option>
                             <option value="cheap-oil">Cheap Oil</option>
                             <option value="do-over-oil">Do-over Oil</option>
@@ -455,14 +498,11 @@
                             <option value="thorough-oil">Thorough Oil</option>
                             <option value="vegan-oil">Vegan Oil</option>
                         </optgroup>
-                        <option value="static-no-selection">None</option>
-                        <option value="static-random-all">Random Oil - All</option>
-
                     </select>
                 </div>
-                <div>
-                    <span class="label oils" for="enchantments">Oil 2</span>
-                    <select name="oilCategory2" id="oilCategory2" onchange="oilCategory(2, this.value)" style="font-size:0.7em; width:100%">
+                <div style="background-color: #FDB142; margin-bottom: 5px; margin-right:2.5px;">
+                    <span class="label oils" for="enchantments" style="font-size:1em;">Oil 2</span>
+                    <select name="oilCategory2" id="oilCategory2" class="custom-dropdown" onchange="oilCategory(2, this.value)" style="font-size:0.7em; width:100%">
                         <option selected disabled hidden value="select-category">Select a category...</option>
                         <option value="ammo-consume-chance-oils">Ammo Consume Chance Oils</option>
                         <option value="base-crit-chance-oils">Base Crit Chance Oils</option>
@@ -478,8 +518,10 @@
                         <option value="rpm-oils">RPM Oils</option>
                         <option value="spread-oils">Spread Oils</option>
                     </select>
-                    <select name="oils2selector" id="oils2selector" onchange="oilRemover('oils2selector', this.value)" style="font-size:0.7em; width:100%">
+                    <select name="oils2selector" id="oils2selector" class="custom-dropdown" onchange="oilRemover('oils2selector', this.value)" style="font-size:0.7em; width:100%">
                         <option selected hidden value="static-choose">Select an oil...</option>
+                        <option value="static-no-selection">None</option>
+                        <option value="static-random-all">Random Oil - All</option>
                         <optgroup label="Ammo Consume Chance" id="oils2AmmoCat" hidden="hidden">
                             <option value="static-random-ammo-consume-chance">Random - Ammo Consume Chance</option>
                             <option value="bulk-oil">Bulk Oil</option>
@@ -747,13 +789,11 @@
                             <option value="thorough-oil">Thorough Oil</option>
                             <option value="vegan-oil">Vegan Oil</option>
                         </optgroup>
-                        <option value="static-no-selection">None</option>
-                        <option value="static-random-all">Random Oil - All</option>
                     </select>
                 </div>
-                <div>
-                    <span class="label oils" for="enchantments">Oil 3</span>
-                    <select name="oilCategory3" id="oilCategory3" onchange="oilCategory(3, this.value)" style="font-size:0.7em; width:100%">
+                <div style="background-color: #FDB142; margin-bottom: 5px; margin-left:2.5px;">
+                    <span class="label oils" for="enchantments" style="font-size:1em;">Oil 3</span>
+                    <select name="oilCategory3" id="oilCategory3" class="custom-dropdown" onchange="oilCategory(3, this.value)" style="font-size:0.7em; width:100%">
                         <option selected disabled hidden value="select-category">Select a category...</option>
                         <option value="ammo-consume-chance-oils">Ammo Consume Chance Oils</option>
                         <option value="base-crit-chance-oils">Base Crit Chance Oils</option>
@@ -769,8 +809,10 @@
                         <option value="rpm-oils">RPM Oils</option>
                         <option value="spread-oils">Spread Oils</option>
                     </select>
-                    <select name="oils3selector" id="oils3selector" onchange="oilRemover('oils3selector', this.value)" style="font-size:0.7em; width:100%">
+                    <select name="oils3selector" id="oils3selector" class="custom-dropdown" onchange="oilRemover('oils3selector', this.value)" style="font-size:0.7em; width:100%">
                         <option selected hidden value="static-choose">Select an oil...</option>
+                        <option value="static-no-selection">None</option>
+                        <option value="static-random-all">Random Oil - All</option>
                         <optgroup label="Ammo Consume Chance" id="oils3AmmoCat" hidden="hidden">
                             <option value="static-random-ammo-consume-chance">Random - Ammo Consume Chance</option>
                             <option value="bulk-oil">Bulk Oil</option>
@@ -1042,9 +1084,9 @@
                         <option value="static-random-all">Random Oil - All</option>
                     </select>
                 </div>
-                <div>
-                    <span class="label oils" for="enchantments">Oil 4</span>
-                    <select name="oilCategory4" id="oilCategory4" onchange="oilCategory(4, this.value)" style="font-size:0.7em; width:100%">
+                <div style="background-color: #FDB142;">
+                    <span class="label oils" for="enchantments" style="font-size:1em;">Oil 4</span>
+                    <select name="oilCategory4" id="oilCategory4" class="custom-dropdown" onchange="oilCategory(4, this.value)" style="font-size:0.7em; width:100%">
                         <option selected hidden disabled value="select-category">Select a category...</option>
                         <option value="ammo-consume-chance-oils">Ammo Consume Chance Oils</option>
                         <option value="base-crit-chance-oils">Base Crit Chance Oils</option>
@@ -1060,8 +1102,10 @@
                         <option value="rpm-oils">RPM Oils</option>
                         <option value="spread-oils">Spread Oils</option>
                     </select>
-                    <select name="oils4selector" id="oils4selector" onchange="oilRemover('oils4selector', this.value)" style="font-size:0.7em; width:100%">
+                    <select name="oils4selector" id="oils4selector" class="custom-dropdown" onchange="oilRemover('oils4selector', this.value)" style="font-size:0.7em; width:100%">
                         <option selected hidden value="static-choose">Select an oil...</option>
+                        <option value="static-no-selection">None</option>
+                        <option value="static-random-all">Random Oil - All</option>
                         <optgroup label="Ammo Consume Chance" id="oils4AmmoCat" hidden="hidden">
                             <option value="static-random-ammo-consume-chance">Random - Ammo Consume Chance</option>
                             <option value="bulk-oil">Bulk Oil</option>
@@ -1329,13 +1373,11 @@
                             <option value="thorough-oil">Thorough Oil</option>
                             <option value="vegan-oil">Vegan Oil</option>
                         </optgroup>
-                        <option value="static-no-selection">None</option>
-                        <option value="static-random-all">Random Oil - All</option>
                     </select>
                 </div>
-                <div>
-                    <span class="label oils" for="enchantments">Oil 5</span>
-                    <select name="oilCategory5" id="oilCategory5" onchange="oilCategory(5, this.value)" style="font-size:0.7em; width:100%">
+                <div style="background-color: #FDB142;">
+                    <span class="label oils" for="enchantments" style="font-size:1em;">Oil 5</span>
+                    <select name="oilCategory5" id="oilCategory5" class="custom-dropdown" onchange="oilCategory(5, this.value)" style="font-size:0.7em; width:100%">
                         <option selected disabled hidden value="select-category">Select a category...</option>
                         <option value="ammo-consume-chance-oils">Ammo Consume Chance Oils</option>
                         <option value="base-crit-chance-oils">Base Crit Chance Oils</option>
@@ -1351,8 +1393,10 @@
                         <option value="rpm-oils">RPM Oils</option>
                         <option value="spread-oils">Spread Oils</option>
                     </select>
-                    <select name="oils5selector" id="oils5selector" onchange="oilRemover('oils5selector', this.value)" style="font-size:0.7em; width:100%">
+                    <select name="oils5selector" id="oils5selector" class="custom-dropdown" onchange="oilRemover('oils5selector', this.value)" style="font-size:0.7em; width:100%">
                         <option selected hidden value="static-choose">Select an oil...</option>
+                        <option value="static-no-selection">None</option>
+                        <option value="static-random-all">Random Oil - All</option>
                         <optgroup label="Ammo Consume Chance" id="oils5AmmoCat" hidden="hidden">
                             <option value="static-random-ammo-consume-chance">Random - Ammo Consume Chance</option>
                             <option value="bulk-oil">Bulk Oil</option>
@@ -1619,14 +1663,12 @@
                             <option value="thorough-oil">Thorough Oil</option>
                             <option value="vegan-oil">Vegan Oil</option>
                         </optgroup>
-                        <option value="static-no-selection">None</option>
-                        <option value="static-random-all">Random Oil - All</option>
                     </select>
                 </div>
 
             </div>
             <h2>Attachments</h2>
-            <div class="oilcontainer">
+            <div class="attachmentcontainer">
                 <div>
                     <span class="label oils" for="enchantments">Barrel</span>
                     <select name="barrelselector" id="barrelselector" style="font-size:0.7em; width:100%">
@@ -1712,63 +1754,63 @@
             </div>
             <div class="containerbutton">
                 <button id="buttonGenerate" onclick="onGenerate()" onmousedown="pokeKevin()" onmouseup="youCantUnpokeKevin()">GENERATE BUILD</button>
-                </div>
             </div>
+        </div>
 
-            <div>
-                <h1>Kevin's Build Helper</h1>
-                <div class="containerweapon">
-                    <p style="text-align: left; font-weight: 500; font-size: 2em; margin: 15px; " id="cardWeaponName">Weapon</p>
-                    <div class="resultcontainer">
-                        <div>
-                            <h3>Stat Col 1</h3>
-                            <p style="font-size: 0.9em">Type: <span id="cardWeaponType">Gun</span></p>
-                            <p style="font-size: 0.9em">Ammo Type: <span id="cardAmmoType"></span></p>
-                            <p style="font-size: 0.9em">Damage: <span id="cardDamage"></span><span> </span><span id="cardDamageArrow"></span><span id="cardDamageX"></span><span> </span><span id="cardDamageMulti"></span><span id="cardDamageMultiX"></span><span> </span><span id="cardDamageProj"></span><span id="cardDamageProjArrow"></span><span>  </span><span style="font-weight:300" id="cardDamageLBrac"></span><span style="font-weight:300" id="cardDamageComp"></span><span> </span><span style="font-weight:300" id="cardDamageXComp"></span><span> </span><span style="font-weight:300" id="cardDamageMultiComp"></span><span style="font-weight:300" id="cardDamageMultiXComp"></span><span> </span><span style="font-weight:300" id="cardDamageProjComp"></span><span style="font-weight:300" id="cardDamageRBrac"></span></p>
-                            <p style="font-size: 0.9em">Total: <span id="cardDamageTotal"></span><span id="cardDamageTotalArrow"></span><span> </span><span style="font-weight:300" id="cardDamageTotalLBrac"></span><span style="font-weight:300" id="cardDamageTotalComp"></span><span style="font-weight:300" id="cardDamageTotalRBrac"></span></p>
-                            <p style="font-size: 0.9em">RPM: <span id="cardRPM"></span><span id="cardRPMArrow"></span><span id="cardRPMspace"> </span><span id="cardRPMLBrac"></span><span id="cardRPMComp"></span><span id="cardRPMRBrac"></span></p>
-                            <p style="font-size: 0.9em">Mag Size: <span id="cardMagSize"></span></p>
-                            <p style="font-size: 0.9em">Spread: <span id="cardSpread"></span><span id="cardSpreadArrow"></span><span id="cardSpreadspace"> </span><span id="cardSpreadLBrac"></span><span id="cardSpreadComp"></span><span id="cardSpreadRBrac"></span></p>
-                            <p style="font-size: 0.9em">Durability: <span id="cardDurability">brokey</span></p>
-                            <p style="font-size: 0.9em">Durability Usage: <span id="cardDurabilityUsage">fucton</span></p>
-                            <p style="font-size: 0.9em">Shots to Break: <span id="cardShotsToBreak">git gud</span></p>
-                        </div>
-                        <div>
-                            <h3>Stat Col 2</h3>
-                        </div>
-                        <div>
-                            <h3>Stat Col 3</h3>
-                        </div>
-                        <div>
-
-                        </div>
-                        <div>
-
-                        </div>
-                        <div>
-
-                        </div>
+        <div>
+            <h1>Kevin's Build Helper</h1>
+            <div class="containerweapon">
+                <p style="text-align: left; font-weight: 500; font-size: 2em; margin: 15px; " id="cardWeaponName">Weapon</p>
+                <div class="resultcontainer">
+                    <div>
+                        <h3>Stat Col 1</h3>
+                        <p style="font-size: 0.9em">Type: <span id="cardWeaponType">Gun</span></p>
+                        <p style="font-size: 0.9em">Ammo Type: <span id="cardAmmoType"></span></p>
+                        <p style="font-size: 0.9em">Damage: <span id="cardDamage"></span><span> </span><span id="cardDamageArrow"></span><span id="cardDamageX"></span><span> </span><span id="cardDamageMulti"></span><span id="cardDamageMultiX"></span><span> </span><span id="cardDamageProj"></span><span id="cardDamageProjArrow"></span><span>  </span><span style="font-weight:300" id="cardDamageLBrac"></span><span style="font-weight:300" id="cardDamageComp"></span><span> </span><span style="font-weight:300" id="cardDamageXComp"></span><span> </span><span style="font-weight:300" id="cardDamageMultiComp"></span><span style="font-weight:300" id="cardDamageMultiXComp"></span><span> </span><span style="font-weight:300" id="cardDamageProjComp"></span><span style="font-weight:300" id="cardDamageRBrac"></span></p>
+                        <p style="font-size: 0.9em">Total: <span id="cardDamageTotal"></span><span id="cardDamageTotalArrow"></span><span> </span><span style="font-weight:300" id="cardDamageTotalLBrac"></span><span style="font-weight:300" id="cardDamageTotalComp"></span><span style="font-weight:300" id="cardDamageTotalRBrac"></span></p>
+                        <p style="font-size: 0.9em">RPM: <span id="cardRPM"></span><span id="cardRPMArrow"></span><span id="cardRPMspace"> </span><span id="cardRPMLBrac"></span><span id="cardRPMComp"></span><span id="cardRPMRBrac"></span></p>
+                        <p style="font-size: 0.9em">Mag Size: <span id="cardMagSize"></span></p>
+                        <p style="font-size: 0.9em">Spread: <span id="cardSpread"></span><span id="cardSpreadArrow"></span><span id="cardSpreadspace"> </span><span id="cardSpreadLBrac"></span><span id="cardSpreadComp"></span><span id="cardSpreadRBrac"></span></p>
+                        <p style="font-size: 0.9em">Durability: <span id="cardDurability">brokey</span></p>
+                        <p style="font-size: 0.9em">Durability Usage: <span id="cardDurabilityUsage">fucton</span></p>
+                        <p style="font-size: 0.9em">Shots to Break: <span id="cardShotsToBreak">git gud</span></p>
                     </div>
+                    <div>
+                        <h3>Stat Col 2</h3>
+                    </div>
+                    <div>
+                        <h3>Stat Col 3</h3>
+                    </div>
+                    <div>
 
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
                 </div>
-                <div class="oilcontainer">
-                    <div>
-                        <p id="cardOilName1"></p>
-                    </div>
-                    <div>
-                        <p id="cardOilName2"></p>
-                    </div>
-                    <div>
-                        <p id="cardOilName3"></p>
-                    </div>
-                    <div>
-                        <p id="cardOilName4"></p>
-                    </div>
-                    <div>
-                        <p id="cardOilName5"></p>
-                    </div>
+
+            </div>
+            <div class="oilresultcontainer">
+                <div>
+                    <p id="cardOilName1"></p>
+                </div>
+                <div>
+                    <p id="cardOilName2"></p>
+                </div>
+                <div>
+                    <p id="cardOilName3"></p>
+                </div>
+                <div>
+                    <p id="cardOilName4"></p>
+                </div>
+                <div>
+                    <p id="cardOilName5"></p>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 </html>

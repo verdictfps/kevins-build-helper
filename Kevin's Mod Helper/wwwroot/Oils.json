@@ -91,7 +91,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +40%\nRecoil: +100%"
+      "StatDescription": "Reload Speed: +40%\\nRecoil: +100%"
     },
     "Add Damage Oil": {
       "Name": "Add Damage Oil",
@@ -157,7 +157,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +30%\nDisables aiming"
+      "StatDescription": "Crit Chance: +30%\\nDisables aiming"
     },
     "Airsoft Oil": {
       "Name": "Airsoft Oil",
@@ -190,7 +190,7 @@
       "SpreadMult": 0,
       "Drag": 7,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +40%\nDrag: +7\nDamage: -15"
+      "StatDescription": "Reload Speed: +40%\\nDrag: +7\\nDamage: -15"
     },
     "Altruistic Oil": {
       "Name": "Altruistic Oil",
@@ -223,7 +223,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -0.3\nLoot Drop Chance: -50%"
+      "StatDescription": "Spread: -0.3\\nLoot Drop Chance: -50%"
     },
     "Arkanoid Oil": {
       "Name": "Arkanoid Oil",
@@ -256,7 +256,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +13\nBullet Speed: -80%"
+      "StatDescription": "Bullet Bounces: +13\\nBullet Speed: -80%"
     },
     "Arrow Oil": {
       "Name": "Arrow Oil",
@@ -289,7 +289,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +80%\nDamage: -20%"
+      "StatDescription": "Bullet Speed: +80%\\nDamage: -20%"
     },
     "Artery Oil": {
       "Name": "Artery Oil",
@@ -355,7 +355,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -0.9\nBullet Drop: +10"
+      "StatDescription": "Spread: -0.9\\nBullet Drop: +10"
     },
     "Ascetic Oil": {
       "Name": "Ascetic Oil",
@@ -388,7 +388,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +30\nNo Money Drops"
+      "StatDescription": "Damage: +30\\nNo Money Drops"
     },
     "Assassin Dart Oil": {
       "Name": "Assassin Dart Oil",
@@ -421,7 +421,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +70%\nMove Speed: -25%"
+      "StatDescription": "Bullet Speed: +70%\\nMove Speed: -25%"
     },
     "Attack Speed Oil": {
       "Name": "Attack Speed Oil",
@@ -487,7 +487,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +25%\nBullet Drop: +10"
+      "StatDescription": "Crit Chance: +25%\\nBullet Drop: +10"
     },
     "Bad Planet Oil": {
       "Name": "Bad Planet Oil",
@@ -520,7 +520,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +1\nJump Power: -30%"
+      "StatDescription": "Penetrations: +1\\nJump Power: -30%"
     },
     "Bandit Oil": {
       "Name": "Bandit Oil",
@@ -553,7 +553,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bouinces: +1\nNo Money Drops"
+      "StatDescription": "Bullet Bouinces: +1\\nNo Money Drops"
     },
     "BB Oil": {
       "Name": "BB Oil",
@@ -619,7 +619,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +30\nBullet Speed: +20%\nBullet Drop: +20"
+      "StatDescription": "Damage: +30\\nBullet Speed: +20%\\nBullet Drop: +20"
     },
     "Black Friday Oil": {
       "Name": "Black Friday Oil",
@@ -652,7 +652,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +100%\nDamage: -15%\nDurability: -33%"
+      "StatDescription": "Projectiles: +100%\\nDamage: -15%\\nDurability: -33%"
     },
     "Blindfold Oil": {
       "Name": "Blindfold Oil",
@@ -685,7 +685,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +15%\nSpread: +2"
+      "StatDescription": "Crit Chance: +15%\\nSpread: +2"
     },
     "Blurt Oil": {
       "Name": "Blurt Oil",
@@ -718,7 +718,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +30%\nBullet Speed: -20%"
+      "StatDescription": "RPM: +30%\\nBullet Speed: -20%"
     },
     "Bolt Oil": {
       "Name": "Bolt Oil",
@@ -751,7 +751,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +50%\nDamage: -30"
+      "StatDescription": "Bullet Speed: +50%\\nDamage: -30"
     },
     "Bombard Oil": {
       "Name": "Bombard Oil",
@@ -784,7 +784,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +200%\nDamage: -10%\nBullet Drop: +10"
+      "StatDescription": "Projectiles: +200%\\nDamage: -10%\\nBullet Drop: +10"
     },
     "Boomstick Oil": {
       "Name": "Boomstick Oil",
@@ -817,7 +817,7 @@
       "SpreadMult": 0.7,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +200%\nDamage: -25%\nRecoil: +200%\nSpread: +70%"
+      "StatDescription": "Projectiles: +200%\\nDamage: -25%\\nRecoil: +200%\\nSpread: +70%"
     },
     "Boulder Oil": {
       "Name": "Boulder Oil",
@@ -851,7 +851,7 @@
       "Drag": 0,
       "DurabilityUsage": 1,
       "BulletBounciness": 0.8,
-      "StatDescription": "Bullet Bounces: +1\nDamage: +20%\nBullet Bounciness: 0.8\nBullet Drop: +10"
+      "StatDescription": "Bullet Bounces: +1\\nDamage: +20%\\nBullet Bounciness: 0.8\\nBullet Drop: +10"
     },
     "Bowl Oil": {
       "Name": "Bowl Oil",
@@ -884,7 +884,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -0.5\nBullet Speed: -20%"
+      "StatDescription": "Spread: -0.5\\nBullet Speed: -20%"
     },
     "Braced Oil": {
       "Name": "Braced Oil",
@@ -917,7 +917,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -20%\nJump Power: -50%"
+      "StatDescription": "Recoil: -20%\\nJump Power: -50%"
     },
     "Brute Oil": {
       "Name": "Brute Oil",
@@ -950,7 +950,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +30\nSpread: +0.7"
+      "StatDescription": "Damage: +30\\nSpread: +0.7"
     },
     "Bulk Oil": {
       "Name": "Bulk Oil",
@@ -983,7 +983,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -40%\nBullet Drop: +10"
+      "StatDescription": "Ammo Consume Chance: -40%\\nBullet Drop: +10"
     },
     "Bystander Oil": {
       "Name": "Bystander Oil",
@@ -1016,7 +1016,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +1\nDisables Aiming"
+      "StatDescription": "Penetrations: +1\\nDisables Aiming"
     },
     "Carefree Oil": {
       "Name": "Carefree Oil",
@@ -1049,7 +1049,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -20%\nSpread: +1"
+      "StatDescription": "Ammo Consume Chance: -20%\\nSpread: +1"
     },
     "Careful Oil": {
       "Name": "Careful Oil",
@@ -1082,7 +1082,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -0.3\nRPM: -25%"
+      "StatDescription": "Spread: -0.3\\nRPM: -25%"
     },
     "Careless Splitter Oil": {
       "Name": "Careless Splitter Oil",
@@ -1115,7 +1115,7 @@
       "SpreadMult": 2,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +300%\nDamage: -25%\nRecoil: +200%\nSpread: +200%\nDurability: -75%"
+      "StatDescription": "Projectiles: +300%\\nDamage: -25%\\nRecoil: +200%\\nSpread: +200%\\nDurability: -75%"
     },
     "Cartoon Oil": {
       "Name": "Cartoon Oil",
@@ -1148,7 +1148,7 @@
       "SpreadMult": 2,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +4\nSpread: +200%"
+      "StatDescription": "Bullet Bounces: +4\\nSpread: +200%"
     },
     "Casual Oil": {
       "Name": "Casual Oil",
@@ -1181,7 +1181,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -30%\nLoot Drop Chance: -20%"
+      "StatDescription": "Recoil: -30%\\nLoot Drop Chance: -20%"
     },
     "Cheap Oil": {
       "Name": "Cheap Oil",
@@ -1214,7 +1214,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -30%\nDamage: -20%"
+      "StatDescription": "Ammo Consume Chance: -30%\\nDamage: -20%"
     },
     "Collateral Oil": {
       "Name": "Collateral Oil",
@@ -1247,7 +1247,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +2\nRecoil: +100%"
+      "StatDescription": "Penetrations: +2\\nRecoil: +100%"
     },
     "Complicated Oil": {
       "Name": "Complicated Oil",
@@ -1280,7 +1280,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +30%\nReload Speed: -25%"
+      "StatDescription": "Damage: +30%\\nReload Speed: -25%"
     },
     "Compo Oil": {
       "Name": "Compo Oil",
@@ -1313,7 +1313,7 @@
       "SpreadMult": -0.1,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +80%\nRecoil: -10%\nSpread: -10%\nMove Speed: -60%"
+      "StatDescription": "Reload Speed: +80%\\nRecoil: -10%\\nSpread: -10%\\nMove Speed: -60%"
     },
     "Confidence Oil": {
       "Name": "Confidence Oil",
@@ -1346,7 +1346,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +20%\nReload Speed: -25%"
+      "StatDescription": "Crit Chance: +20%\\nReload Speed: -25%"
     },
     "Considerate Oil": {
       "Name": "Considerate Oil",
@@ -1379,7 +1379,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +1\nDamage: -25"
+      "StatDescription": "Penetrations: +1\\nDamage: -25"
     },
     "Contained Force Oil": {
       "Name": "Contained Force Oil",
@@ -1412,7 +1412,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -45%\nDurability: -20%"
+      "StatDescription": "Recoil: -45%\\nDurability: -20%"
     },
     "Critical Oil": {
       "Name": "Critical Oil",
@@ -1478,7 +1478,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +25%\nSpread: +1"
+      "StatDescription": "Reload Speed: +25%\\nSpread: +1"
     },
     "Damage Oil": {
       "Name": "Damage Oil",
@@ -1544,7 +1544,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +50%\nJump Power: -25%"
+      "StatDescription": "Bullet Speed: +50%\\nJump Power: -25%"
     },
     "Dead Center Oil": {
       "Name": "Dead Center Oil",
@@ -1577,7 +1577,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -2\nRecoil: +1"
+      "StatDescription": "Spread: -2\\nRecoil: +1"
     },
     "Delayed Hyper Tube Oil": {
       "Name": "Delayed Hyper Tube Oil",
@@ -1610,7 +1610,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +100%\nRPM: -50%"
+      "StatDescription": "Bullet Speed: +100%\\nRPM: -50%"
     },
     "Dense Oil": {
       "Name": "Dense Oil",
@@ -1643,7 +1643,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +20%\nJump Power: -25%\n \nDoes not increase durability usage"
+      "StatDescription": "Durability: +20%\\nJump Power: -25%\\n \\nDoes not increase durability usage"
     },
     "Detune Oil": {
       "Name": "Detune Oil",
@@ -1676,7 +1676,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +50%\nDamage: -25%\n \nDoes not increase durability usage"
+      "StatDescription": "Durability: +50%\\nDamage: -25%\\n \\nDoes not increase durability usage"
     },
     "Diesel Oil": {
       "Name": "Diesel Oil",
@@ -1709,7 +1709,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +50%\nRecoil: +30%"
+      "StatDescription": "Bullet Speed: +50%\\nRecoil: +30%"
     },
     "Discharge Oil": {
       "Name": "Discharge Oil",
@@ -1742,7 +1742,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +30\nExtra Ammo Use Chance: +30%"
+      "StatDescription": "Damage: +30\\nExtra Ammo Use Chance: +30%"
     },
     "Disposable Oil": {
       "Name": "Disposable Oil",
@@ -1775,7 +1775,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +50\nDurability: -75%"
+      "StatDescription": "Damage: +50\\nDurability: -75%"
     },
     "Division Oil": {
       "Name": "Division Oil",
@@ -1808,7 +1808,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +100%\nDamage: -20%\nSpread: +1"
+      "StatDescription": "Projectiles: +100%\\nDamage: -20%\\nSpread: +1"
     },
     "Do-over Oil": {
       "Name": "Do-over Oil",
@@ -1841,7 +1841,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -20%\nRPM: -25%"
+      "StatDescription": "Ammo Consume Chance: -20%\\nRPM: -25%"
     },
     "Double Fire Oil": {
       "Name": "Double Fire Oil",
@@ -1874,7 +1874,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +50%\nExtra Ammo Use Chance: +25%"
+      "StatDescription": "RPM: +50%\\nExtra Ammo Use Chance: +25%"
     },
     "Double Lock Oil": {
       "Name": "Double Lock Oil",
@@ -1907,7 +1907,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +35%\nRPM: -25%"
+      "StatDescription": "Reload Speed: +35%\\nRPM: -25%"
     },
     "Double Nothing Oil": {
       "Name": "Double Nothing Oil",
@@ -1940,7 +1940,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +100%\nDamage: -25%\nLoot Drop Chance: -100%"
+      "StatDescription": "Projectiles: +100%\\nDamage: -25%\\nLoot Drop Chance: -100%"
     },
     "Dum Dum Oil": {
       "Name": "Dum Dum Oil",
@@ -1973,7 +1973,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +15%\nNo Organs Drops"
+      "StatDescription": "Damage: +15%\\nNo Organs Drops"
     },
     "Dynamic Oil": {
       "Name": "Dynamic Oil",
@@ -2006,7 +2006,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +40%\nDamage: -30"
+      "StatDescription": "Reload Speed: +40%\\nDamage: -30"
     },
     "Easy Oil": {
       "Name": "Easy Oil",
@@ -2039,7 +2039,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -20%\nNo Money Drops"
+      "StatDescription": "Recoil: -20%\\nNo Money Drops"
     },
     "Easy Plop Oil": {
       "Name": "Easy Plop Oil",
@@ -2072,7 +2072,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -65%\nBullet Drop: +5"
+      "StatDescription": "Recoil: -65%\\nBullet Drop: +5"
     },
     "Elephant Oil": {
       "Name": "Elephant Oil",
@@ -2105,7 +2105,7 @@
       "SpreadMult": 2,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +200%\nDamage: -25%\nRecoil: +10%\nMove Speed: -50%\nBullet Drop: +10\nSpread: +200%"
+      "StatDescription": "Projectiles: +200%\\nDamage: -25%\\nRecoil: +10%\\nMove Speed: -50%\\nBullet Drop: +10\\nSpread: +200%"
     },
     "Exotic Barrel Oil": {
       "Name": "Exotic Barrel Oil",
@@ -2138,7 +2138,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -1.5\nDurability: -50%"
+      "StatDescription": "Spread: -1.5\\nDurability: -50%"
     },
     "Expander Oil": {
       "Name": "Expander Oil",
@@ -2171,7 +2171,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +20\nNo Organs Drop"
+      "StatDescription": "Damage: +20\\nNo Organs Drop"
     },
     "Extra Powder Oil": {
       "Name": "Extra Powder Oil",
@@ -2204,7 +2204,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +50%\nReload Speed: -25%"
+      "StatDescription": "Bullet Speed: +50%\\nReload Speed: -25%"
     },
     "Farsighted Oil": {
       "Name": "Farsighted Oil",
@@ -2237,7 +2237,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +2\nExtra Ammo Use Chance: +30%"
+      "StatDescription": "Penetrations: +2\\nExtra Ammo Use Chance: +30%"
     },
     "Fast Bet Oil": {
       "Name": "Fast Bet Oil",
@@ -2270,7 +2270,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +50%\nNo Money Drops"
+      "StatDescription": "Bullet Speed: +50%\\nNo Money Drops"
     },
     "Feature Gun Oil": {
       "Name": "Feature Gun Oil",
@@ -2303,7 +2303,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +30%\nDisables Aiming\n \n Does not increase durability usage"
+      "StatDescription": "Durability: +30%\\nDisables Aiming\\n \\n Does not increase durability usage"
     },
     "Fidget Lord Oil": {
       "Name": "Fidget Lord Oil",
@@ -2336,7 +2336,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +70%\nMove Speed: -60%"
+      "StatDescription": "Reload Speed: +70%\\nMove Speed: -60%"
     },
     "Fidget Oil": {
       "Name": "Fidget Oil",
@@ -2369,7 +2369,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +20\nReload Speed: -25%"
+      "StatDescription": "Damage: +20\\nReload Speed: -25%"
     },
     "First Blood Oil": {
       "Name": "First Blood Oil",
@@ -2402,7 +2402,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +30%\nSpread: +1"
+      "StatDescription": "Damage: +30%\\nSpread: +1"
     },
     "Flea Oil": {
       "Name": "Flea Oil",
@@ -2435,7 +2435,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +2\nDamage: -50%"
+      "StatDescription": "Bullet Bounces: +2\\nDamage: -50%"
     },
     "Flow Funnel Oil": {
       "Name": "Flow Funnel Oil",
@@ -2468,7 +2468,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -65%\nSpread: +3"
+      "StatDescription": "Recoil: -65%\\nSpread: +3"
     },
     "Food Stamp Oil": {
       "Name": "Food Stamp Oil",
@@ -2501,7 +2501,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -20%\nNo Money Drops"
+      "StatDescription": "Ammo Consume Chance: -20%\\nNo Money Drops"
     },
     "Fragile System Oil": {
       "Name": "Fragile System Oil",
@@ -2534,7 +2534,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +50%\nDurability: -30%"
+      "StatDescription": "RPM: +50%\\nDurability: -30%"
     },
     "Franciscan Oil": {
       "Name": "Franciscan Oil",
@@ -2567,7 +2567,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +15%\nNo Money Drops"
+      "StatDescription": "Damage: +15%\\nNo Money Drops"
     },
     "Frugal Oil": {
       "Name": "Frugal Oil",
@@ -2600,7 +2600,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +25\n Loot Drop Chance: -50%"
+      "StatDescription": "Damage: +25\\n Loot Drop Chance: -50%"
     },
     "Gambler Oil": {
       "Name": "Gambler Oil",
@@ -2633,7 +2633,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +20%\nDamage: -20%"
+      "StatDescription": "Crit Chance: +20%\\nDamage: -20%"
     },
     "Gemini Oil": {
       "Name": "Gemini Oil",
@@ -2666,7 +2666,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +100%\nDamage: -30"
+      "StatDescription": "Projectiles: +100%\\nDamage: -30"
     },
     "Gentle Oil": {
       "Name": "Gentle Oil",
@@ -2699,7 +2699,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +10%\n \nDoes not increase durability usage"
+      "StatDescription": "Durability: +10%\\n \\nDoes not increase durability usage"
     },
     "Glass Cannon Oil": {
       "Name": "Glass Cannon Oil",
@@ -2732,7 +2732,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +25%\nDurability: -35%"
+      "StatDescription": "Damage: +25%\\nDurability: -35%"
     },
     "Great Oil": {
       "Name": "Great Oil",
@@ -2765,7 +2765,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +40%\nBullet Speed: -20%\nBullet Drop: +40"
+      "StatDescription": "Damage: +40%\\nBullet Speed: -20%\\nBullet Drop: +40"
     },
     "Grounded Oil": {
       "Name": "Grounded Oil",
@@ -2798,7 +2798,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +15%\nJump Power: -10%"
+      "StatDescription": "Damage: +15%\\nJump Power: -10%"
     },
     "Gunslinger Oil": {
       "Name": "Gunslinger Oil",
@@ -2831,7 +2831,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +40%\nDisables Aiming"
+      "StatDescription": "Reload Speed: +40%\\nDisables Aiming"
     },
     "Happy Accident Oil": {
       "Name": "Happy Accident Oil",
@@ -2864,7 +2864,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +15%\nRecoil: +40%"
+      "StatDescription": "Crit Chance: +15%\\nRecoil: +40%"
     },
     "Heavy Lead Oil": {
       "Name": "Heavy Lead Oil",
@@ -2897,7 +2897,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +2\nBullet Drop: +20"
+      "StatDescription": "Penetrations: +2\\nBullet Drop: +20"
     },
     "Heavy Oil": {
       "Name": "Heavy Oil",
@@ -2930,7 +2930,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +60%\nBullet Drop: +10"
+      "StatDescription": "Damage: +60%\\nBullet Drop: +10"
     },
     "Heavy Pockets Oil": {
       "Name": "Heavy Pockets Oil",
@@ -2963,7 +2963,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -20%\nJump Power: -100%"
+      "StatDescription": "Ammo Consume Chance: -20%\\nJump Power: -100%"
     },
     "Hefty Oil": {
       "Name": "Hefty Oil",
@@ -2996,7 +2996,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +30%\nMove Speed: -25%\n \nDoes not increase durability usage"
+      "StatDescription": "Durability: +30%\\nMove Speed: -25%\\n \\nDoes not increase durability usage"
     },
     "Helium Oil": {
       "Name": "Helium Oil",
@@ -3029,7 +3029,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -40%\nBullet Speed: -40%"
+      "StatDescription": "Ammo Consume Chance: -40%\\nBullet Speed: -40%"
     },
     "High Grade Oil": {
       "Name": "High Grade Oil",
@@ -3062,7 +3062,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +25%\n \nDoes not increase durability usage"
+      "StatDescription": "Durability: +25%\\n \\nDoes not increase durability usage"
     },
     "Hip Blaster Oil": {
       "Name": "Hip Blaster Oil",
@@ -3095,7 +3095,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage +20%\nDisables aiming"
+      "StatDescription": "Damage +20%\\nDisables aiming"
     },
     "Hip Marksman Oil": {
       "Name": "Hip Marksman Oil",
@@ -3128,7 +3128,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -0.3\nDisables Aiming"
+      "StatDescription": "Spread: -0.3\\nDisables Aiming"
     },
     "Hoop Oil": {
       "Name": "Hoop Oil",
@@ -3161,7 +3161,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +4\nBullet Drop: +10"
+      "StatDescription": "Bullet Bounces: +4\\nBullet Drop: +10"
     },
     "Hunter Oil": {
       "Name": "Hunter Oil",
@@ -3194,7 +3194,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +15%\nMove Speed: -30%"
+      "StatDescription": "Crit Chance: +15%\\nMove Speed: -30%"
     },
     "Hustler Oil": {
       "Name": "Hustler Oil",
@@ -3227,7 +3227,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +25%\nDamage: -30"
+      "StatDescription": "Crit Chance: +25%\\nDamage: -30"
     },
     "Hyper Lead Oil": {
       "Name": "Hyper Lead Oil",
@@ -3260,7 +3260,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +40%\nBullet Speed: +100%\nBullet Drop: +40"
+      "StatDescription": "Damage: +40%\\nBullet Speed: +100%\\nBullet Drop: +40"
     },
     "Imperfect Oil": {
       "Name": "Imperfect Oil",
@@ -3293,7 +3293,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +2\nDurability: -15%"
+      "StatDescription": "Bullet Bounces: +2\\nDurability: -15%"
     },
     "Inconsiderate Oil": {
       "Name": "Inconsiderate Oil",
@@ -3326,7 +3326,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +1\nSpread: +2"
+      "StatDescription": "Penetrations: +1\\nSpread: +2"
     },
     "Inherited Oil": {
       "Name": "Inherited Oil",
@@ -3359,7 +3359,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +50%\nLoot Drop Chance: -100%\n \nDoes not increase durability usage"
+      "StatDescription": "Durability: +50%\\nLoot Drop Chance: -100%\\n \\nDoes not increase durability usage"
     },
     "Instant Oil": {
       "Name": "Instant Oil",
@@ -3392,7 +3392,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +200%\nDisables Aiming"
+      "StatDescription": "Bullet Speed: +200%\\nDisables Aiming"
     },
     "Judgement Oil": {
       "Name": "Judgement Oil",
@@ -3425,7 +3425,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +25\nMove Speed: -15%"
+      "StatDescription": "Damage: +25\\nMove Speed: -15%"
     },
     "Jungian Oil": {
       "Name": "Jungian Oil",
@@ -3458,7 +3458,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +1\nMove Speed: -15%"
+      "StatDescription": "Penetrations: +1\\nMove Speed: -15%"
     },
     "Keep Oil": {
       "Name": "Keep Oil",
@@ -3491,7 +3491,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -20%\nNo Organs Drop"
+      "StatDescription": "Ammo Consume Chance: -20%\\nNo Organs Drop"
     },
     "Kicker Oil": {
       "Name": "Kicker Oil",
@@ -3524,7 +3524,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +20\nRecoil: +50%"
+      "StatDescription": "Damage: +20\\nRecoil: +50%"
     },
     "Kinetic Oil": {
       "Name": "Kinetic Oil",
@@ -3557,7 +3557,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +80%\nBullet Drop: +20"
+      "StatDescription": "Bullet Speed: +80%\\nBullet Drop: +20"
     },
     "Last Drop Oil": {
       "Name": "Last Drop Oil",
@@ -3590,7 +3590,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -30%\nDurability: -25%"
+      "StatDescription": "Ammo Consume Chance: -30%\\nDurability: -25%"
     },
     "Late Boom Oil": {
       "Name": "Late Boom Oil",
@@ -3623,7 +3623,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +30\nBullet Speed: -30%"
+      "StatDescription": "Damage: +30\\nBullet Speed: -30%"
     },
     "Launcher Oil": {
       "Name": "Launcher Oil",
@@ -3656,7 +3656,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +25%\nRPM: -25%"
+      "StatDescription": "Damage: +25%\\nRPM: -25%"
     },
     "Lazy Oil": {
       "Name": "Lazy Oil",
@@ -3689,7 +3689,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +1\nReload Speed: -10%"
+      "StatDescription": "Bullet Bounces: +1\\nReload Speed: -10%"
     },
     "Less Recoil Oil": {
       "Name": "Less Recoil Oil",
@@ -3755,7 +3755,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +50%\nRecoil: +50%"
+      "StatDescription": "RPM: +50%\\nRecoil: +50%"
     },
     "Longshot Oil": {
       "Name": "Longshot Oil",
@@ -3788,7 +3788,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +3\nDisables Aiming"
+      "StatDescription": "Bullet Bounces: +3\\nDisables Aiming"
     },
     "Lost In Focus Oil": {
       "Name": "Lost In Focus Oil",
@@ -3821,7 +3821,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -0.6\nExtraAmmoUseChance: +30%"
+      "StatDescription": "Spread: -0.6\\nExtraAmmoUseChance: +30%"
     },
     "Low Roller Oil": {
       "Name": "Low Roller Oil",
@@ -3854,7 +3854,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +10%\nNo Money Drops"
+      "StatDescription": "Crit Chance: +10%\\nNo Money Drops"
     },
     "Machine Oil": {
       "Name": "Machine Oil",
@@ -3887,7 +3887,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +50%\nMove Speed: -50%"
+      "StatDescription": "RPM: +50%\\nMove Speed: -50%"
     },
     "Main Discipline Oil": {
       "Name": "Main Discipline Oil",
@@ -3920,7 +3920,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +30%\nLoot Drop Chance: -50%"
+      "StatDescription": "Reload Speed: +30%\\nLoot Drop Chance: -50%"
     },
     "Main Focus Oil": {
       "Name": "Main Focus Oil",
@@ -3953,7 +3953,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +20%\nNo Money Drops"
+      "StatDescription": "Reload Speed: +20%\\nNo Money Drops"
     },
     "Manifestation Oil": {
       "Name": "Manifestation Oil",
@@ -3986,7 +3986,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +25%\nReload Speed: -50%"
+      "StatDescription": "Crit Chance: +25%\\nReload Speed: -50%"
     },
     "Matrix Oil": {
       "Name": "Matrix Oil",
@@ -4019,7 +4019,7 @@
       "SpreadMult": 0,
       "Drag": 40,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +300%\nDamage: -30%\nBullet Speed: 90%\nSpread: +4\nDrag: +40"
+      "StatDescription": "Projectiles: +300%\\nDamage: -30%\\nBullet Speed: 90%\\nSpread: +4\\nDrag: +40"
     },
     "Micro Wing Oil": {
       "Name": "Micro Wing Oil",
@@ -4052,7 +4052,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +80%\nExtra Ammo Use Chance: +20%"
+      "StatDescription": "Bullet Speed: +80%\\nExtra Ammo Use Chance: +20%"
     },
     "Modern Technology Oil": {
       "Name": "Modern Technology Oil",
@@ -4085,7 +4085,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -25%\nExtra Ammo Use Chance: +10%"
+      "StatDescription": "Recoil: -25%\\nExtra Ammo Use Chance: +10%"
     },
     "Mosquito Oil": {
       "Name": "Mosquito Oil",
@@ -4118,7 +4118,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -70%\nDamage: -30%\nBullet Speed: -30%"
+      "StatDescription": "Ammo Consume Chance: -70%\\nDamage: -30%\\nBullet Speed: -30%"
     },
     "Multichamber Oil": {
       "Name": "Multichamber Oil",
@@ -4151,7 +4151,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +100%\nExtra Ammo Use Chance: +100%"
+      "StatDescription": "Projectiles: +100%\\nExtra Ammo Use Chance: +100%"
     },
     "Multishot Oil": {
       "Name": "Multishot Oil",
@@ -4184,7 +4184,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +200%\nDamage: -70%"
+      "StatDescription": "Projectiles: +200%\\nDamage: -70%"
     },
     "Needleye Oil": {
       "Name": "Needleye Oil",
@@ -4217,7 +4217,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +1\nRPM: -25%"
+      "StatDescription": "Penetrations: +1\\nRPM: -25%"
     },
     "Nerf Oil": {
       "Name": "Nerf Oil",
@@ -4250,7 +4250,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +50%\nDamage: -10%\nBullet Drop: +5"
+      "StatDescription": "Reload Speed: +50%\\nDamage: -10%\\nBullet Drop: +5"
     },
     "No Look Oil": {
       "Name": "No Look Oil",
@@ -4283,7 +4283,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +30%\nDisables Aiming"
+      "StatDescription": "RPM: +30%\\nDisables Aiming"
     },
     "No Need Oil": {
       "Name": "No Need Oil",
@@ -4316,7 +4316,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +15%\nLoot Drop Chance: -25%"
+      "StatDescription": "Crit Chance: +15%\\nLoot Drop Chance: -25%"
     },
     "Out of the Box Oil": {
       "Name": "Out of the Box Oil",
@@ -4349,7 +4349,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +20%\nDurability: -30%"
+      "StatDescription": "Crit Chance: +20%\\nDurability: -30%"
     },
     "Overclock Oil": {
       "Name": "Overclock Oil",
@@ -4382,7 +4382,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +40%\nExtra Ammo Use Chance: +30%"
+      "StatDescription": "Damage: +40%\\nExtra Ammo Use Chance: +30%"
     },
     "Overdose Oil": {
       "Name": "Overdose Oil",
@@ -4415,7 +4415,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +2\nDurability: -25%"
+      "StatDescription": "Penetrations: +2\\nDurability: -25%"
     },
     "Parallel Mag Oil": {
       "Name": "Parallel Mag Oil",
@@ -4448,7 +4448,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +100%\nReload Speed: -50%"
+      "StatDescription": "Projectiles: +100%\\nReload Speed: -50%"
     },
     "Peashooter Oil": {
       "Name": "Peashooter Oil",
@@ -4580,7 +4580,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +20%\nNo Organs Drop"
+      "StatDescription": "RPM: +20%\\nNo Organs Drop"
     },
     "Plinker Oil": {
       "Name": "Plinker Oil",
@@ -4613,7 +4613,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -0.9\nDamage: -20%"
+      "StatDescription": "Spread: -0.9\\nDamage: -20%"
     },
     "Plop Back Oil": {
       "Name": "Plop Back Oil",
@@ -4646,7 +4646,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -20%\nRecoil +125%"
+      "StatDescription": "Ammo Consume Chance: -20%\\nRecoil +125%"
     },
     "Pool Oil": {
       "Name": "Pool Oil",
@@ -4679,7 +4679,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +4\nMove Speed: -30%"
+      "StatDescription": "Bullet Bounces: +4\\nMove Speed: -30%"
     },
     "Potshot Oil": {
       "Name": "Potshot Oil",
@@ -4712,7 +4712,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +35\nDisables Aiming"
+      "StatDescription": "Damage: +35\\nDisables Aiming"
     },
     "Puncher Oil": {
       "Name": "Puncher Oil",
@@ -4745,7 +4745,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +30%\nRecoil: +150%"
+      "StatDescription": "Damage: +30%\\nRecoil: +150%"
     },
     "Puncture Oil": {
       "Name": "Puncture Oil",
@@ -4778,7 +4778,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +15%\nNo Organs Drops"
+      "StatDescription": "Crit Chance: +15%\\nNo Organs Drops"
     },
     "Purse Gun Oil": {
       "Name": "Purse Gun Oil",
@@ -4811,7 +4811,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -35%\nReload Speed: -30%"
+      "StatDescription": "Recoil: -35%\\nReload Speed: -30%"
     },
     "Rapid Internals Oil": {
       "Name": "Rapid Internals Oil",
@@ -4844,7 +4844,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +35%\nDamage: -20%"
+      "StatDescription": "RPM: +35%\\nDamage: -20%"
     },
     "Ready Oil": {
       "Name": "Ready Oil",
@@ -4877,7 +4877,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -45%\nRPM: -40%"
+      "StatDescription": "Recoil: -45%\\nRPM: -40%"
     },
     "Rebound Oil": {
       "Name": "Rebound Oil",
@@ -4910,7 +4910,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +2\nDamage: -15"
+      "StatDescription": "Bullet Bounces: +2\\nDamage: -15"
     },
     "Recycle Oil": {
       "Name": "Recycle Oil",
@@ -4976,7 +4976,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -50%\nBullet Speed: -20%"
+      "StatDescription": "Recoil: -50%\\nBullet Speed: -20%"
     },
     "Release Oil": {
       "Name": "Release Oil",
@@ -5009,7 +5009,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +40%\nRecoil: +150%\n \n Does not increase durability usage"
+      "StatDescription": "Durability: +40%\\nRecoil: +150%\\n \\n Does not increase durability usage"
     },
     "Reload Oil": {
       "Name": "Reload Oil",
@@ -5075,7 +5075,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +3\nDamage: -10%"
+      "StatDescription": "Bullet Bounces: +3\\nDamage: -10%"
     },
     "Rigid System Oil": {
       "Name": "Rigid System Oil",
@@ -5108,7 +5108,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +40%\nExtra Ammo Use Chance: +20%\n \nDoes not increase durability usage"
+      "StatDescription": "Durability: +40%\\nExtra Ammo Use Chance: +20%\\n \\nDoes not increase durability usage"
     },
     "Rigor Oil": {
       "Name": "Rigor Oil",
@@ -5141,7 +5141,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +1\nBullet Speed: -50%"
+      "StatDescription": "Penetrations: +1\\nBullet Speed: -50%"
     },
     "Robust Mechanics Oil": {
       "Name": "Robust Mechanics Oil",
@@ -5174,7 +5174,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +35%\nRPM: -25%\n \nDoes not increase durability usage"
+      "StatDescription": "Durability: +35%\\nRPM: -25%\\n \\nDoes not increase durability usage"
     },
     "Rookie Oil": {
       "Name": "Rookie Oil",
@@ -5207,7 +5207,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +50%\nReload Speed: -75%"
+      "StatDescription": "RPM: +50%\\nReload Speed: -75%"
     },
     "Rubber Oil": {
       "Name": "Rubber Oil",
@@ -5240,7 +5240,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +25%\nDamage: -10"
+      "StatDescription": "Durability: +25%\\nDamage: -10"
     },
     "Rush Job Oil": {
       "Name": "Rush Job Oil",
@@ -5273,7 +5273,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +50%\nExtra Ammo Use Chance: +30%"
+      "StatDescription": "Reload Speed: +50%\\nExtra Ammo Use Chance: +30%"
     },
     "Safety Oil": {
       "Name": "Safety Oil",
@@ -5306,7 +5306,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -35%\nDamage: -10%"
+      "StatDescription": "Recoil: -35%\\nDamage: -10%"
     },
     "Satiety Oil": {
       "Name": "Satiety Oil",
@@ -5339,7 +5339,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -30%\nReload Speed: -60%"
+      "StatDescription": "Ammo Consume Chance: -30%\\nReload Speed: -60%"
     },
     "Saviour Oil": {
       "Name": "Saviour Oil",
@@ -5372,7 +5372,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -40%\nLoot Drop Chance: -100%"
+      "StatDescription": "Ammo Consume Chance: -40%\\nLoot Drop Chance: -100%"
     },
     "Scatter Oil": {
       "Name": "Scatter Oil",
@@ -5405,7 +5405,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +100%\nDamage: -15%\nSpread: +1"
+      "StatDescription": "Projectiles: +100%\\nDamage: -15%\\nSpread: +1"
     },
     "Scramble Oil": {
       "Name": "Scramble Oil",
@@ -5438,7 +5438,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +1\nNo Organs Drop"
+      "StatDescription": "Bullet Bounces: +1\\nNo Organs Drop"
     },
     "Seated Fit Oil": {
       "Name": "Seated Fit Oil",
@@ -5471,7 +5471,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +70%\nBullet Drop: +10"
+      "StatDescription": "Durability: +70%\\nBullet Drop: +10"
     },
     "Seated Oil": {
       "Name": "Seated Oil",
@@ -5504,7 +5504,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +20\nJump Power: -10%"
+      "StatDescription": "Damage: +20\\nJump Power: -10%"
     },
     "Sect Oil": {
       "Name": "Sect Oil",
@@ -5537,7 +5537,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +1\nNo Money Drops"
+      "StatDescription": "Penetrations: +1\\nNo Money Drops"
     },
     "Sender Oil": {
       "Name": "Sender Oil",
@@ -5570,7 +5570,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +25\nRPM: -25%"
+      "StatDescription": "Damage: +25\\nRPM: -25%"
     },
     "Sensible Oil": {
       "Name": "Sensible Oil",
@@ -5603,7 +5603,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +20%\nNo Organs Drop"
+      "StatDescription": "Durability: +20%\\nNo Organs Drop"
     },
     "Shaved Clip Oil": {
       "Name": "Shaved Clip Oil",
@@ -5636,7 +5636,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +50%\nDurability: -30%"
+      "StatDescription": "Reload Speed: +50%\\nDurability: -30%"
     },
     "Shellman Oil": {
       "Name": "Shellman Oil",
@@ -5669,7 +5669,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -0.3\nReload Speed: -25%"
+      "StatDescription": "Spread: -0.3\\nReload Speed: -25%"
     },
     "Sherlock Oil": {
       "Name": "Sherlock Oil",
@@ -5702,7 +5702,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +4\nRPM: -50%"
+      "StatDescription": "Bullet Bounces: +4\\nRPM: -50%"
     },
     "Shower Oil": {
       "Name": "Shower Oil",
@@ -5735,7 +5735,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +40%\nBullet Drop: +10"
+      "StatDescription": "RPM: +40%\\nBullet Drop: +10"
     },
     "Shredder Oil": {
       "Name": "Shredder Oil",
@@ -5768,7 +5768,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +100%\nDamage: -20%\nSpread: +1\nNo Organs Drop"
+      "StatDescription": "Projectiles: +100%\\nDamage: -20%\\nSpread: +1\\nNo Organs Drop"
     },
     "Skip Oil": {
       "Name": "Skip Oil",
@@ -5801,7 +5801,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +1\nLoot Drop Chance: -25%"
+      "StatDescription": "Bullet Bounces: +1\\nLoot Drop Chance: -25%"
     },
     "Slick Oil": {
       "Name": "Slick Oil",
@@ -5834,7 +5834,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -0.3\nJump Power: -10%"
+      "StatDescription": "Spread: -0.3\\nJump Power: -10%"
     },
     "Slippy Coating Oil": {
       "Name": "Slippy Coating Oil",
@@ -5867,7 +5867,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +30%\nSpread: +1\n \nDoes not increase durability usage"
+      "StatDescription": "Durability: +30%\\nSpread: +1\\n \\nDoes not increase durability usage"
     },
     "Slotmachine Oil": {
       "Name": "Slotmachine Oil",
@@ -5900,7 +5900,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +25%\nExtra Ammo Use Chance: +20%"
+      "StatDescription": "Crit Chance: +25%\\nExtra Ammo Use Chance: +20%"
     },
     "Slow Punch Oil": {
       "Name": "Slow Punch Oil",
@@ -5933,7 +5933,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +50%\nBullet Speed: -50%"
+      "StatDescription": "Damage: +50%\\nBullet Speed: -50%"
     },
     "Smart Bullet Oil": {
       "Name": "Smart Bullet Oil",
@@ -5966,7 +5966,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Crit Chance: +20%\nBullet Speed: -60%"
+      "StatDescription": "Crit Chance: +20%\\nBullet Speed: -60%"
     },
     "Soft Bullet Oil": {
       "Name": "Soft Bullet Oil",
@@ -5999,7 +5999,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +25%\nBullet Speed: -30%\n \nDoes not increase durability usage"
+      "StatDescription": "Durability: +25%\\nBullet Speed: -30%\\n \\nDoes not increase durability usage"
     },
     "Solid Oil": {
       "Name": "Solid Oil",
@@ -6032,7 +6032,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +40\nBullet Drop: +10"
+      "StatDescription": "Damage: +40\\nBullet Drop: +10"
     },
     "Spartan Oil": {
       "Name": "Spartan Oil",
@@ -6065,7 +6065,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +20%\nLoot Drop Chance: -50%"
+      "StatDescription": "Damage: +20%\\nLoot Drop Chance: -50%"
     },
     "Speed Trade Oil": {
       "Name": "Speed Trade Oil",
@@ -6098,7 +6098,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +30%\nBullet Speed: -30%"
+      "StatDescription": "Reload Speed: +30%\\nBullet Speed: -30%"
     },
     "Spitter Oil": {
       "Name": "Spitter Oil",
@@ -6131,7 +6131,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +35%\nSpread: +1"
+      "StatDescription": "RPM: +35%\\nSpread: +1"
     },
     "Spread Oil": {
       "Name": "Spread Oil",
@@ -6197,7 +6197,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -35%\nDamage: -15"
+      "StatDescription": "Recoil: -35%\\nDamage: -15"
     },
     "Stable Hip Oil": {
       "Name": "Stable Hip Oil",
@@ -6230,7 +6230,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -62%\nDisables Aiming"
+      "StatDescription": "Recoil: -62%\\nDisables Aiming"
     },
     "Stationary Oil": {
       "Name": "Stationary Oil",
@@ -6263,7 +6263,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +80%\nRecoil: -85%\nMove Speed: -90%\nJump Power: -90%"
+      "StatDescription": "RPM: +80%\\nRecoil: -85%\\nMove Speed: -90%\\nJump Power: -90%"
     },
     "Stiffy Fit Oil": {
       "Name": "Stiffy Fit Oil",
@@ -6296,7 +6296,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +45%\nReload Speed: -50%\n \nDoes not increase durability usage"
+      "StatDescription": "Durability: +45%\\nReload Speed: -50%\\n \\nDoes not increase durability usage"
     },
     "Stoic Oil": {
       "Name": "Stoic Oil",
@@ -6329,7 +6329,7 @@
       "SpreadMult": -0.3,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -0.3\nNo Money Drops"
+      "StatDescription": "Spread: -0.3\\nNo Money Drops"
     },
     "Suppressive Oil": {
       "Name": "Suppressive Oil",
@@ -6362,7 +6362,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +300%\nDamage: -40%\nMove Accuracy: -200%"
+      "StatDescription": "Projectiles: +300%\\nDamage: -40%\\nMove Accuracy: -200%"
     },
     "Surgical Laser Oil": {
       "Name": "Surgical Laser Oil",
@@ -6395,7 +6395,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +3\nDamage: -30%"
+      "StatDescription": "Penetrations: +3\\nDamage: -30%"
     },
     "Synchronicity Oil": {
       "Name": "Synchronicity Oil",
@@ -6428,7 +6428,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +3\nExtra Ammo Use Chance: +30%"
+      "StatDescription": "Bullet Bounces: +3\\nExtra Ammo Use Chance: +30%"
     },
     "Tactical Oil": {
       "Name": "Tactical Oil",
@@ -6461,7 +6461,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +60%\nDamage: -25%"
+      "StatDescription": "Reload Speed: +60%\\nDamage: -25%"
     },
     "Tandem Oil": {
       "Name": "Tandem Oil",
@@ -6494,7 +6494,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +100%\nDamage: -15%"
+      "StatDescription": "Projectiles: +100%\\nDamage: -15%"
     },
     "Task Oil": {
       "Name": "Task Oil",
@@ -6527,7 +6527,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +30%\nNo Organs Drop"
+      "StatDescription": "Reload Speed: +30%\\nNo Organs Drop"
     },
     "Tech Support Oil": {
       "Name": "Tech Support Oil",
@@ -6560,7 +6560,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: +50%\nJump Power: -70%"
+      "StatDescription": "Reload Speed: +50%\\nJump Power: -70%"
     },
     "Tension Oil": {
       "Name": "Tension Oil",
@@ -6593,7 +6593,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -35%\nMove Speed: -15%"
+      "StatDescription": "Recoil: -35%\\nMove Speed: -15%"
     },
     "Terminator Oil": {
       "Name": "Terminator Oil",
@@ -6626,7 +6626,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: +25%\nMove Speed: -15%"
+      "StatDescription": "Damage: +25%\\nMove Speed: -15%"
     },
     "Thorough Oil": {
       "Name": "Thorough Oil",
@@ -6659,7 +6659,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -0.35\nMove Speed: -15%"
+      "StatDescription": "Spread: -0.35\\nMove Speed: -15%"
     },
     "Tight Barrel Oil": {
       "Name": "Tight Barrel Oil",
@@ -6692,7 +6692,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +70%\nDurability: -20%"
+      "StatDescription": "Bullet Speed: +70%\\nDurability: -20%"
     },
     "Too Much Oil": {
       "Name": "Too Much Oil",
@@ -6725,7 +6725,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +1\nNo Organs Drop"
+      "StatDescription": "Penetrations: +1\\nNo Organs Drop"
     },
     "Trusty Old Oil": {
       "Name": "Trusty Old Oil",
@@ -6758,7 +6758,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 0,
-      "StatDescription": "Durability: +20%\nNo Money Drops\n \nDoes not increase durability usage"
+      "StatDescription": "Durability: +20%\\nNo Money Drops\\n \\nDoes not increase durability usage"
     },
     "Turbulence Oil": {
       "Name": "Turbulence Oil",
@@ -6791,7 +6791,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +50%\nNo Organs Drop"
+      "StatDescription": "Bullet Speed: +50%\\nNo Organs Drop"
     },
     "Twice Oil": {
       "Name": "Twice Oil",
@@ -6824,7 +6824,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +100%\nDamage: -25%"
+      "StatDescription": "Projectiles: +100%\\nDamage: -25%"
     },
     "Two Time Oil": {
       "Name": "Two Time Oil",
@@ -6857,7 +6857,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: +200%\nDamage: -10%\nSpread: +3\nNo Money Drops"
+      "StatDescription": "Projectiles: +200%\\nDamage: -10%\\nSpread: +3\\nNo Money Drops"
     },
     "Untechnical Oil": {
       "Name": "Untechnical Oil",
@@ -6890,7 +6890,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +1\nReload Speed: -25%"
+      "StatDescription": "Penetrations: +1\\nReload Speed: -25%"
     },
     "Vasectomy Oil": {
       "Name": "Vasectomy Oil",
@@ -6923,7 +6923,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Penetrations: +1\nLoot Drop Chance: -50%"
+      "StatDescription": "Penetrations: +1\\nLoot Drop Chance: -50%"
     },
     "Vegan Oil": {
       "Name": "Vegan Oil",
@@ -6956,7 +6956,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Spread: -0.2\nNo Organs Drop"
+      "StatDescription": "Spread: -0.2\\nNo Organs Drop"
     },
     "Vegetable Oil": {
       "Name": "Vegetable Oil",
@@ -6989,7 +6989,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Recoil: -20%\nNo Organs Drop"
+      "StatDescription": "Recoil: -20%\\nNo Organs Drop"
     },
     "Velocity Oil": {
       "Name": "Velocity Oil",
@@ -7055,7 +7055,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -15%\nMove Speed: -10%"
+      "StatDescription": "Ammo Consume Chance: -15%\\nMove Speed: -10%"
     },
     "Waster Oil": {
       "Name": "Waster Oil",
@@ -7088,7 +7088,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +20%\nNo Money Drops"
+      "StatDescription": "RPM: +20%\\nNo Money Drops"
     },
     "Whim Oil": {
       "Name": "Whim Oil",
@@ -7121,7 +7121,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +50%\nLoot Drop Chance: -25%"
+      "StatDescription": "Bullet Speed: +50%\\nLoot Drop Chance: -25%"
     },
     "Whos Counting Oil": {
       "Name": "Whos Counting Oil",
@@ -7154,7 +7154,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Ammo Consume Chance: -25%\nDisables Aiming"
+      "StatDescription": "Ammo Consume Chance: -25%\\nDisables Aiming"
     },
     "Wobble Oil": {
       "Name": "Wobble Oil",
@@ -7187,7 +7187,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Bounces: +1\nSpread: +1"
+      "StatDescription": "Bullet Bounces: +1\\nSpread: +1"
     },
     "Zero Fucks Oil": {
       "Name": "Zero Fucks Oil",
@@ -7220,7 +7220,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "RPM: +50%\nLoot Drop Chance: -100%"
+      "StatDescription": "RPM: +50%\\nLoot Drop Chance: -100%"
     },
     "Zooming Oil": {
       "Name": "Zooming Oil",
@@ -7253,7 +7253,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Bullet Speed: +80%\nSpread: +1"
+      "StatDescription": "Bullet Speed: +80%\\nSpread: +1"
     }
   }
 }

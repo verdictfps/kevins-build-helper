@@ -1,4 +1,191 @@
-﻿// Global Variables
+﻿// friendly reminder to comment your shit cause you're a dumbass and won't remember what this macguyvered code does
+// also ty stackoverflow
+
+document.addEventListener("DOMContentLoaded", () => {
+    document
+        .querySelectorAll("select.custom-dropdown")
+        .forEach(createProDropdown);
+});
+
+function createProDropdown(select) {
+
+    // Convert
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "custom-select";
+
+    const selected = document.createElement("div");
+    selected.className = "custom-select-selected";
+
+    const label = document.createElement("span");
+    label.textContent =
+        select.options[select.selectedIndex]?.text || "";
+
+    const arrow = document.createElement("span");
+    arrow.className = "custom-arrow";
+    arrow.innerHTML = "🡇";
+
+    selected.append(label, arrow);
+
+    const panel = document.createElement("div");
+    panel.className = "custom-select-panel";
+
+    const search = document.createElement("input");
+    search.className = "custom-select-search";
+    search.placeholder = "Search...";
+
+    const list = document.createElement("ul");
+    list.className = "custom-select-menu";
+
+    panel.append(search, list);
+    wrapper.append(selected, panel);
+    select.after(wrapper);
+
+    // Options
+
+    const items = [];
+
+    [...select.children].forEach(node => {
+
+        if (node.tagName === "OPTGROUP") {
+
+            const g = document.createElement("li");
+            g.className = "custom-group";
+            g.textContent = node.label;
+            list.appendChild(g);
+
+            [...node.children].forEach(addOption);
+
+        } else addOption(node);
+    });
+
+    function addOption(opt) {
+
+        const li = document.createElement("li");
+        li.className = "custom-option";
+        li.textContent = opt.text;
+
+        list.appendChild(li);
+        items.push({ li, opt });
+
+        li.addEventListener("click", () => selectItem(opt));
+    }
+
+    // Select
+
+    function selectItem(opt) {
+
+        select.value = opt.value;
+        label.textContent = opt.text;
+
+        wrapper.classList.remove("open");
+
+        select.dispatchEvent(
+            new Event("change", { bubbles:true })
+        );
+    }
+
+    // Open Dropdown
+
+    selected.addEventListener("click", () => {
+        wrapper.classList.toggle("open");
+        search.focus();
+        scrollToSelected();
+    });
+
+    document.addEventListener("click", e => {
+        if (!wrapper.contains(e.target))
+            wrapper.classList.remove("open");
+    });
+
+    // Search
+
+    search.addEventListener("input", () => {
+
+        const term = search.value.toLowerCase();
+
+        items.forEach(({ li }) => {
+
+            const text = li.textContent;
+            const match = text.toLowerCase().includes(term);
+
+            li.style.display = match ? "" : "none";
+
+            if (match && term)
+                li.innerHTML =
+                    text.replace(
+                        new RegExp(`(${term})`, "ig"),
+                        "<mark>$1</mark>"
+                    );
+            else
+                li.textContent = text;
+        });
+    });
+
+    // Keyboard Shenanigans
+
+    let index = -1;
+
+    search.addEventListener("keydown", e => {
+
+        const visible = items.filter(i =>
+            i.li.style.display !== "none"
+        );
+
+        if (!visible.length) return;
+
+        if (e.key === "ArrowDown") {
+            e.preventDefault();
+            index = (index + 1) % visible.length;
+        }
+
+        if (e.key === "ArrowUp") {
+            e.preventDefault();
+            index = (index - 1 + visible.length) % visible.length;
+        }
+
+        if (e.key === "Enter" && index >= 0) {
+            selectItem(visible[index].opt);
+        }
+
+        if (e.key === "Escape")
+            wrapper.classList.remove("open");
+
+        items.forEach(i => i.li.classList.remove("active"));
+
+        if (index >= 0)
+            visible[index].li.classList.add("active");
+    });
+
+    // Jump to selection
+
+    function scrollToSelected() {
+
+        const current = items.find(
+            i => i.opt.value === select.value
+        );
+
+        if (!current) return;
+
+        current.li.scrollIntoView({
+            block:"nearest"
+        });
+    }
+
+    // api
+
+    select.proDropdown = {
+        getValue: () => select.value,
+        setValue: v => {
+            const opt = [...select.options]
+                .find(o => o.value === v);
+            if (opt) selectItem(opt);
+        }
+    };
+}
+
+
+// Global Variables
 
 let weaponsData = null;
 let oilsData = null;
@@ -40,6 +227,23 @@ function shuffle(array) {
         [array[currentIndex], array[randomIndex]] = [
             array[randomIndex], array[currentIndex]];
     }
+}
+
+function oilPreview(hovOil) {
+    let oil = getOilByName(hovOil);
+    let oilName = oil.Name;
+    let oilDesc = oil.StatDescription;
+    let oilReplace = oilDesc.replace("\\n", '<br>');
+    let infobox = document.getElementById("oil1infobox");
+    let infoboxtext = document.getElementById("oil1infoboxtext");
+    infobox.hidden = "";
+    document.getElementById("oil1infoboxname").textContent = oilName;
+    infoboxtext.innerHTML = oilReplace;
+}
+
+function oilPreviewClear() {
+    let infobox = document.getElementById("oil1infobox");
+    infobox.hidden = "hidden";
 }
 
 // Used to remove and replace oils to prevent dupes
