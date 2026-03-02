@@ -28,7 +28,8 @@
       "Drag": 0,
       "DurabilityUsage": 0,
       "BulletBounciness": 0,
-      "MovingAccuracy": 0
+      "MovingAccuracy": 0,
+      "StatDescription": "None"
     },
     "None": {
       "Name": "None",
@@ -58,7 +59,8 @@
       "Drag": 0,
       "DurabilityUsage": 0,
       "BulletBounciness": 0,
-      "MovingAccuracy": 0
+      "MovingAccuracy": 0,
+      "StatDescription": "None"
     },
     "Action Oil": {
       "Name": "Action Oil",
