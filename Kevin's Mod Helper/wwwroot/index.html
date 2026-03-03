@@ -15,7 +15,14 @@
             border-radius: 5px;
         }
 
-        
+        .containerattach {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+            .containerattach div {
+                margin: 0px;
+            }
+
         .containerweapchoose {
             display: grid;
             grid-template-columns: 15% 35% 50%;
@@ -1741,11 +1748,28 @@
                             <p style="width: 60%; border-radius: 0px 15px 0px 0px; margin-top: 5px; margin-left: -11px; margin-bottom: -20px; padding-left: 10px; padding-bottom: 4px; background-color:#FDB142; color:black; font-weight: 600;">Weapon Behavior</p>
 
                     </div>
-                    <div>
-                        <h3>image goes here</h3>
+                    <div style="border-right: 1px solid #FDB142; border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142; grid-column: 3 / span 2; height:307px; z-index: 2; background-color: #FDB142">
+                            <div style="display:flex; height: 174px; justify-content: center; align-items: center; padding: 20px; border: 1px solid #FDB142; border-bottom: 2px solid #FDB142; background-color: #2D424B; border-radius: 25px; ">
+                                <img id="weaponimage" style="max-width:431px; height: auto; max-height: 100%; margin: -100px;  " src="" alt="selected sulfur gun"> 
+                            </div>
+                            <div class="containerattach" style="border:0px; height: 92px; margin-top: 9px;">
+                                <div style="border-left:0px; ">
+                                    
+                                </div>
+                                <div>
+                                    
+                                </div>
+                                <div>
+                                    
+                                </div>
+                                <div style="border-right:0px;">
+                                    
+                                </div>
+                            </div>
                     </div>
-                    <div style="border-right: 1px solid #FDB142">
-                        <h3>and here</h3>
+                    <div style="border-right: 1px solid #FDB142; border-left: 0px; border-bottom: 0px; grid-column: 3 / span 2;">
+                        
+                        
                     </div>
                     <div style="height:194px; border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142; border-radius: 0px 0px 0px 15px;">
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bounces: <span id="cardBounces"></span><span id="cardBouncesArrow"></span><span id="cardBouncesspace"> </span><span id="cardBouncesLBrac" style="font-weight:200"></span><span id="cardBouncesComp" style="font-weight:200"></span><span id="cardBouncesRBrac" style="font-weight:200"></span></p>
@@ -1764,8 +1788,8 @@
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Can ADS: <span id="cardCanADS"></span></span><span id="cardCanADSArrow"></span><span id="cardCanADSspace"> </span><span style="font-weight:300"id="cardCanADSLBrac"></span><span style="font-weight:300" id="cardCanADSComp"></span><span style="font-weight:300" id="cardCanADSRBrac"></span></p>
 
                     </div>
-                    <div style="height:194px; border-bottom: 1px solid #FDB142;">
-                        <h3>Stat Col 3</h3>
+                    <div style="height:194px; border-bottom: 1px solid #FDB142; border-top: 0px; margin-top: -9px">
+                        <p id="cardOilName1">Barrel</p>
                     </div>
                     <div style="height:194px; border-bottom: 1px solid #FDB142; border-right: 1px solid #FDB142; border-radius: 0px 0px 15px;">
                         <h3>Stat Col 4</h3>

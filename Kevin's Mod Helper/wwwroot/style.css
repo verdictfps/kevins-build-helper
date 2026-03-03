@@ -222,6 +222,30 @@ select.custom-dropdown {
     position: relative;
 }
 
+@keyframes breatheBox {
+  from {box-shadow: inset 0px 0px 10px 0px #FDB142, inset 0px 0px 80px 70px #2D424B;}
+  to {box-shadow: inset 0px 0px 0px 0px #FDB142, inset 0px 0px 80px 70px #2D424B;}
+}
+
+@keyframes breatheGun {
+    from {-webkit-filter: drop-shadow(0px 1px #FDB142) drop-shadow(0px -1px #FDB142) drop-shadow(1px 0px #FDB142) drop-shadow(-1px 0px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 0px #fdb24270); filter: drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 0px #fdb24270);}
+    to {-webkit-filter: drop-shadow(0px 1px #FDB142) drop-shadow(0px -1px #FDB142) drop-shadow(1px 0px #FDB142) drop-shadow(-1px 0px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 10px #fdb24270); filter: drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 10px #fdb24270);}
+}
+
+@keyframes fucktest {
+    from {background-color: white;}
+    to {background-color: black;}
+}
+
+#weaponimage {
+    animation-name: fucktest;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+
 mark {
     background:#555;
     color:white;

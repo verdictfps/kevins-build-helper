@@ -794,6 +794,8 @@ function rollOnSelect(single, selector, selID, value) {
 
 function addName(name, value, type, desc, descID) {
     if (type === "weapon") {
+        let weapReplace = name.replaceAll(" ", "_");
+        document.getElementById("weaponimage").src = `.\\Images\\${weapReplace}.png`;
         document.getElementById("cardWeaponName").textContent = name;
     } else if (type === "oil") {
         let oilReplace = desc.replaceAll('\\n', '<br>');
