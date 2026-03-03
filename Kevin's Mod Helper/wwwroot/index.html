@@ -156,7 +156,7 @@
                     <h2>Select a WEAPON</h2>
                 </div>
                 <div style="margin-top: 10px; margin-right: 5px; border: 0px; padding: 0px">
-                    <select name="weaponscollection" id="weapons" data-accordion="true" data-collapsible="true" data-collapsed="true" class="custom-dropdown" onchange="attachmentFilter(this.value, this.selectedIndex)">
+                    <select name="weaponscollection" id="weapons" data-accordion="true" data-collapsible="true" data-collapsed="true" class="custom-dropdown" onchange="attachmentFilter(this.value, this.selectedIndex); rollOnSelect('true')">
                         <option value="random-all-weapons">Random - All</option>
                         <optgroup label="Pistols">
                             <option value="random-pistols">Random Pistol</option>
@@ -240,7 +240,7 @@
                     <div style="border:0px;"><h2>Enchantments</h2></div>
                     <div id="width-grid" style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" for="enchantments" style="font-size:1em;">Oil 1 OR Scroll</span>
-                        <select name="oils1selectorcollection" id="oils1selector" class="custom-dropdown" onchange="oilRemover('oils1selector', this.value)" style="font-size:0.7em; width:100%">
+                        <select name="oils1selectorcollection" id="oils1selector" class="custom-dropdown" onchange="rollOnSelect('true', 'oils1selector', 1, this.value)" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select an enchantment...</option>
                             <option value="static-no-selection">None</option>
                             <option value="static-random-all">Random Oil - All</option>
@@ -515,7 +515,7 @@
                     </div>
                     <div style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" for="enchantments" style="font-size:1em;">Oil 2</span>
-                        <select name="oils2selectorcollection" id="oils2selector" class="custom-dropdown" onchange="oilRemover('oils2selector', this.value)" style="font-size:0.7em; width:100%">
+                        <select name="oils2selectorcollection" id="oils2selector" class="custom-dropdown" onchange="rollOnSelect('true', 'oils2selector', 2, this.value)" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select an oil...</option>
                             <option value="static-no-selection">None</option>
                             <option value="static-random-all">Random Oil - All</option>
@@ -790,7 +790,7 @@
                     </div>
                     <div style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" for="enchantments" style="font-size:1em;">Oil 3</span>
-                        <select name="oils3selectorcollection" id="oils3selector" class="custom-dropdown" onchange="oilRemover('oils3selector', this.value)" style="font-size:0.7em; width:100%">
+                        <select name="oils3selectorcollection" id="oils3selector" class="custom-dropdown" onchange="rollOnSelect('true', 'oils3selector', 3, this.value)" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select an oil...</option>
                             <option value="static-no-selection">None</option>
                             <option value="static-random-all">Random Oil - All</option>
@@ -1067,7 +1067,7 @@
                     </div>
                     <div style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" for="enchantments" style="font-size:1em;">Oil 4</span>
-                        <select name="oils4selectorcollection" id="oils4selector" class="custom-dropdown" onchange="oilRemover('oils4selector', this.value)" style="font-size:0.7em; width:100%">
+                        <select name="oils4selectorcollection" id="oils4selector" class="custom-dropdown" onchange="rollOnSelect('true', 'oils4selector', 4, this.value)" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select an oil...</option>
                             <option value="static-no-selection">None</option>
                             <option value="static-random-all">Random Oil - All</option>
@@ -1342,7 +1342,7 @@
                     </div>
                     <div style="background-color: #FDB142; border:2px solid black;">
                         <span class="label oils" for="enchantments" style="font-size:1em;">Oil 5</span>
-                        <select name="oils5selectorcollection" id="oils5selector" class="custom-dropdown" onchange="oilRemover('oils5selector', this.value)" style="font-size:0.7em; width:100%">
+                        <select name="oils5selectorcollection" id="oils5selector" class="custom-dropdown" onchange="rollOnSelect('true', 'oils5selector', 5, this.value)" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select an oil...</option>
                             <option value="static-no-selection">None</option>
                             <option value="static-random-all">Random Oil - All</option>
@@ -1703,12 +1703,12 @@
                 </div>
             </div>
         </div>
-        <div style="border:0px; margin-left:-5px;">
+        <div style="border:0px; margin-left:-5px; margin-bottom: -50px;">
             <h1>Kevin's Build Helper</h1>
-            <div class="containerweapon" style="margin-bottom:20px">
+            <div class="containerweapon" style="margin-bottom:20px; border: 0px solid #FDB142; padding: 11px;">
                 <p style="text-align: left; font-weight: 500; font-size: 2em; margin: 0px; padding-bottom: 15px; padding-left: 2px; padding-top: 0px;" id="cardWeaponName">Weapon</p>
-                <div class="resultcontainer">
-                    <div style="height:325px;">
+                <div class="resultcontainer" style="border-radius: 15px; border: 0px">
+                    <div style="height:325px; border-left: 1px solid #FDB142">
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em;">Type: <span id="cardWeaponType">Gun</span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Ammo Type: <span id="cardAmmoType"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Damage: <span id="cardDamage"></span><span id="cardDamageArrow"></span><span>  </span><span id="cardDamageX"></span><span> </span><span id="cardDamageMulti"></span><span id="cardDamageMultiX"></span><span>  </span><span id="cardDamageProj"></span><span id="cardDamageProjArrow"></span><span>  </span><span style="font-weight:300" id="cardDamageLBrac"></span><span style="font-weight:300" id="cardDamageComp"></span><span> </span><span style="font-weight:300" id="cardDamageXComp"></span><span> </span><span style="font-weight:300" id="cardDamageMultiComp"></span><span style="font-weight:300" id="cardDamageMultiXComp"></span><span> </span><span style="font-weight:300" id="cardDamageProjComp"></span><span style="font-weight:300" id="cardDamageRBrac"></span></p>
@@ -1744,10 +1744,10 @@
                     <div>
                         <h3>image goes here</h3>
                     </div>
-                    <div>
+                    <div style="border-right: 1px solid #FDB142">
                         <h3>and here</h3>
                     </div>
-                    <div style="height:200px;">
+                    <div style="height:194px; border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142; border-radius: 0px 0px 0px 15px;">
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bounces: <span id="cardBounces"></span><span id="cardBouncesArrow"></span><span id="cardBouncesspace"> </span><span id="cardBouncesLBrac" style="font-weight:200"></span><span id="cardBouncesComp" style="font-weight:200"></span><span id="cardBouncesRBrac" style="font-weight:200"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Penetrations: <span id="cardPen"></span><span id="cardPenArrow"></span><span id="cardPenspace"> </span><span id="cardPenLBrac" style="font-weight:200"></span><span id="cardPenComp" style="font-weight:200"></span><span id="cardPenRBrac" style="font-weight:200"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Drag: <span id="cardDrag"></span><span id="cardDragArrow"></span><span id="cardDragspace"> </span><span id="cardDragLBrac" style="font-weight:200"></span><span id="cardDragComp" style="font-weight:200"></span><span id="cardDragRBrac" style="font-weight:200"></span></p>
@@ -1755,7 +1755,7 @@
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bullet Drop: <span id="cardDrop"></span><span id="cardDropArrow"></span><span id="cardDropspace"> </span><span id="cardDropLBrac" style="font-weight:200"></span><span id="cardDropComp" style="font-weight:200"></span><span id="cardDropRBrac" style="font-weight:200"></span></p>
 
                     </div>
-                    <div>
+                    <div style="height:194px; border-bottom: 1px solid #FDB142">
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Ammo Consume Chance: <span id="cardAmmo"></span><span id="cardAmmoArrow"></span><span id="cardAmmospace"> </span><span id="cardAmmoLBrac" style="font-weight:200"></span><span id="cardAmmoComp" style="font-weight:200"></span><span id="cardAmmoRBrac" style="font-weight:200"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Extra Ammo Use Chance: <span id="cardExtra"></span></span><span id="cardExtraArrow"></span><span id="cardExtraspace"> </span><span style="font-weight:300"id="cardExtraLBrac"></span><span style="font-weight:300" id="cardExtraComp"></span><span style="font-weight:300" id="cardExtraRBrac"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Recoil: <span id="cardRecoil"></span><span id="cardRecoilArrow"></span><span id="cardRecoilspace"> </span><span id="cardRecoilLBrac" style="font-weight:200"></span><span id="cardRecoilComp" style="font-weight:200"></span><span id="cardRecoilRBrac" style="font-weight:200"></span></p>
@@ -1764,45 +1764,45 @@
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Can ADS: <span id="cardCanADS"></span></span><span id="cardCanADSArrow"></span><span id="cardCanADSspace"> </span><span style="font-weight:300"id="cardCanADSLBrac"></span><span style="font-weight:300" id="cardCanADSComp"></span><span style="font-weight:300" id="cardCanADSRBrac"></span></p>
 
                     </div>
-                    <div>
+                    <div style="height:194px; border-bottom: 1px solid #FDB142;">
                         <h3>Stat Col 3</h3>
                     </div>
-                    <div>
+                    <div style="height:194px; border-bottom: 1px solid #FDB142; border-right: 1px solid #FDB142; border-radius: 0px 0px 15px;">
                         <h3>Stat Col 4</h3>
                     </div>
                 </div>
 
             </div>
-            <div class="oilresultcontainer">
+            <div class="oilresultcontainer" style="margin-top: -10px;">
                 <div style="margin-right:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;">
                     <p id="cardOilName1">Enchantment Card 1</p>
                 </div>
-                <div style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;"">
+                <div style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;">
                     <p id="cardOilName2">Enchantment Card 2</p>
                 </div>
-                <div style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;"">
+                <div style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;">
                     <p id="cardOilName3">Enchantment Card 3</p>
                 </div>
-                <div style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;"">
+                <div style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;">
                     <p id="cardOilName4">Enchantment Card 4</p>
                 </div>
-                <div style="margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;"">
+                <div style="margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;">
                     <p id="cardOilName5">Enchantment Card 5</p>
                 </div>
-                <div style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-right:3px; height: 100px">
-                    <p id="cardOilDesc1" style="margin: 0px; font-size: 0.85em">desc</p>
+                <div style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-right:3px; height: 90px">
+                    <p id="cardOilDesc1" style="margin: 0px; font-size: 0.75em">desc</p>
                 </div>
                 <div style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
-                    <p id="cardOilDesc2" style="margin: 0px; font-size: 0.85em">desc</p>
+                    <p id="cardOilDesc2" style="margin: 0px; padding-left: -100px; padding-right: -100px; margin-left: -10px; margin-right: -10px;font-size: 0.75em">desc</p>
                 </div>
                 <div style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
-                    <p id="cardOilDesc3" style="margin: 0px; font-size: 0.85em">desc</p>
+                    <p id="cardOilDesc3" style="margin: 0px; font-size: 0.75em">desc</p>
                 </div>
                 <div style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
-                    <p id="cardOilDesc4" style="margin: 0px; font-size: 0.85em">desc</p>
+                    <p id="cardOilDesc4" style="margin: 0px; padding-left: -10px; padding-right: -10px; font-size: 0.75em">desc</p>
                 </div>
                 <div style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px;">
-                    <p id="cardOilDesc5" style="margin: 0px; font-size: 0.85em">desc</p>
+                    <p id="cardOilDesc5" style="margin: 0px; font-size: 0.75em">desc</p>
                 </div>
             </div>
             

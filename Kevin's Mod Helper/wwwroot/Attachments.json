@@ -2,101 +2,213 @@
     "Attachment": {
         "All": {
                 "SpreadAdd": 0,
+                "SpreadMult": 0,
                 "MovementSpeedMult": 0,
                 "DamageMult": 0,
-                "MovingAccuracy": 0.0,
-                "ADSCritChance": 0.0
+                "MovingAccuracy": 0,
+                "BaseCritChance": 0,
+                "ADSCritChance": 0.0,
+                "RecoilMult": 0,
+                "BulletSpeed": 0,
+                "DurabilityMult": 0,
+                "RPM": 0,
+                "StatDescription": ""
        },
       "Barrel": {
         "None": {
           "Name": "None",
           "Type": "Barrel",
+          "DamageMult": 0,
           "SpreadAdd": 0,
-          "MovementSpeedMult": 0
+          "SpreadMult": 0,
+          "MovementSpeedMult": 0,
+          "RecoilMult": 0,
+          "BulletSpeed": 0,
+          "DurabilityMult": 0,
+          "BaseCritChance": 0,
+          "RPM": 0
         },
         "A12C Muzzle Brake": {
           "Name": "A12C Muzzle Brake",
           "Type": "Barrel",
-          "SpreadAdd": -0.75,
-          "MovementSpeedMult": 0
+          "DamageMult": 0,
+          "SpreadAdd": 0,
+          "SpreadMult": 0,
+          "MovementSpeedMult": 0,
+          "RecoilMult": -0.35,
+          "BulletSpeed": 0,
+          "DurabilityMult": 0,
+          "BaseCritChance": 0,
+          "RPM": 0
         },
         "Aftermarket Haukland Silencer": {
           "Name": "Aftermarket Haukland Silencer",
           "Type": "Barrel",
-          "SpreadAdd": -0.5,
-          "MovementSpeedMult": 0
+          "DamageMult": 0,
+          "SpreadAdd": 0,
+          "SpreadMult": 0,
+          "MovementSpeedMult": 0,
+          "RecoilMult": 0,
+          "BulletSpeed": 0,
+          "DurabilityMult": 0,
+          "BaseCritChance": 0.25,
+          "RPM": -0.15
         },
         "Barrel Extension 2in": {
           "Name": "Barrel Extension 2in",
           "Type": "Barrel",
-          "SpreadAdd": -0.5,
-          "MovementSpeedMult": -0.05
+          "DamageMult": 0,
+          "SpreadAdd": 0,
+          "SpreadMult": -0.1,
+          "MovementSpeedMult": 0,
+          "RecoilMult": 0,
+          "BulletSpeed": 0.1,
+          "DurabilityMult": 0,
+          "BaseCritChance": 0,
+          "RPM": 0
         },
         "Barrel Extension 4in": {
           "Name": "Barrel Extension 4in",
           "Type": "Barrel",
-          "SpreadAdd": -0.75,
-          "MovementSpeedMult": -0.07
+          "DamageMult": 0,
+          "SpreadAdd": 0,
+          "SpreadMult": -0.25,
+          "MovementSpeedMult": -0.1,
+          "RecoilMult": 0,
+          "BulletSpeed": 0.25,
+          "DurabilityMult": 0,
+          "BaseCritChance": 0,
+          "RPM": 0
         },
         "Barrel Extension 6in": {
           "Name": "Barrel Extension 6in",
           "Type": "Barrel",
-          "SpreadAdd": -1,
-          "MovementSpeedMult": -0.1
+          "DamageMult": 0,
+          "SpreadAdd": 0,
+          "SpreadMult": -0.5,
+          "MovementSpeedMult": -0.2,
+          "RecoilMult": 0,
+          "BulletSpeed": 0.5,
+          "DurabilityMult": 0,
+          "BaseCritChance": 0,
+          "RPM": 0
         },
         "Breznik BMD (Tactical)": {
           "Name": "Breznik BMD (Tactical)",
           "Type": "Barrel",
-          "SpreadAdd": -0.75,
-          "MovementSpeedMult": 0
+          "DamageMult": 0,
+          "SpreadAdd": 0,
+          "SpreadMult": -0.15,
+          "MovementSpeedMult": 0,
+          "RecoilMult": -0.2,
+          "BulletSpeed": 0,
+          "DurabilityMult": 0,
+          "BaseCritChance": 0,
+          "RPM": 0
         },
         "Breznik BMD": {
           "Name": "Breznik BMD",
           "Type": "Barrel",
-          "SpreadAdd": -0.75,
-          "MovementSpeedMult": 0
+          "DamageMult": 0,
+          "SpreadAdd": 0,
+          "SpreadMult": -0.15,
+          "MovementSpeedMult": 0,
+          "RecoilMult": -0.2,
+          "BulletSpeed": 0,
+          "DurabilityMult": 0,
+          "BaseCritChance": 0,
+          "RPM": 0
         },
         "Haukland Flash Hider": {
           "Name": "Haukland Flash Hider",
           "Type": "Barrel",
-          "SpreadAdd": -0.75,
-          "MovementSpeedMult": 0
+          "DamageMult": 0,
+          "SpreadAdd": -0.2,
+          "SpreadMult": 0,
+          "MovementSpeedMult": 0,
+          "RecoilMult": -0.2,
+          "BulletSpeed": 0,
+          "DurabilityMult": 0,
+          "BaseCritChance": 0,
+          "RPM": 0
         },
         "Haukland Silencer": {
           "Name": "Haukland Silencer",
           "Type": "Barrel",
-          "SpreadAdd": -0.75,
-          "MovementSpeedMult": 0
+          "DamageMult": 0,
+          "SpreadAdd": 0,
+          "SpreadMult": 0,
+          "MovementSpeedMult": 0,
+          "RecoilMult": -0.1,
+          "BulletSpeed": 0,
+          "DurabilityMult": 0,
+          "BaseCritChance": 0.2,
+          "RPM": -0.1
         },
         "Improvised Barrel Extension": {
           "Name": "Improvised Barrel Extension",
           "Type": "Barrel",
-          "SpreadAdd": -0.3,
-          "MovementSpeedMult": 0
+          "DamageMult": 0,
+          "SpreadAdd": 0.1,
+          "SpreadMult": 0,
+          "MovementSpeedMult": 0,
+          "RecoilMult": 0,
+          "BulletSpeed": 0,
+          "DurabilityMult": 0.15,
+          "BaseCritChance": 0,
+          "RPM": 0
         },
         "M87 Albatross Silencer": {
           "Name": "M87 Albatross Silencer",
           "Type": "Barrel",
-          "SpreadAdd": -0.25,
-          "MovementSpeedMult": 0
+          "DamageMult": 0.15,
+          "SpreadAdd": 0.25,
+          "SpreadMult": 0,
+          "MovementSpeedMult": 0,
+          "RecoilMult": 0,
+          "BulletSpeed": 0,
+          "DurabilityMult": -0.1,
+          "BaseCritChance": 0.15,
+          "RPM": 0
         },
         "Shrouded Barrel Extension": {
           "Name": "Shrouded Barrel Extension",
           "Type": "Barrel",
-          "SpreadAdd": -0.75,
-          "MovementSpeedMult": 0
+          "DamageMult": 0,
+          "SpreadAdd": -0.2,
+          "SpreadMult": 0,
+          "MovementSpeedMult": 0,
+          "RecoilMult": 0,
+          "BulletSpeed": 0,
+          "DurabilityMult": 0.2,
+          "BaseCritChance": 0,
+          "RPM": 0
         },
         "SR-P3 Silencer": {
           "Name": "SR-P3 Silencer",
           "Type": "Barrel",
-          "SpreadAdd": -0.75,
-          "MovementSpeedMult": 0
+          "DamageMult": 0,
+          "SpreadAdd": 0,
+          "SpreadMult": 0,
+          "MovementSpeedMult": 0,
+          "RecoilMult": -0.2,
+          "BulletSpeed": 0,
+          "DurabilityMult": 0,
+          "BaseCritChance": 0.1,
+          "RPM": -0.1
         },
         "Warmage Compensator": {
           "Name": "Warmage Compensator",
           "Type": "Barrel",
-          "SpreadAdd": -0.75,
-          "MovementSpeedMult": 0
+          "DamageMult": 0,
+          "SpreadAdd": -0.15,
+          "SpreadMult": 0,
+          "MovementSpeedMult": 0,
+          "RecoilMult": -0.25,
+          "BulletSpeed": 0,
+          "DurabilityMult": 0,
+          "BaseCritChance": 0,
+          "RPM": 0
         }
       },
     "Chamber": {
