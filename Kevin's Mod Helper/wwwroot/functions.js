@@ -1024,6 +1024,15 @@ function oilCalcs(calcOil) {
 
     if (weapon.RPM > weaponOriginal.RPM) {
 
+        /*if (weapon.Name === "Neuraxis F22") {
+            let neuraxisRPM = weapon.RPM * 5;
+            let neurRPM2 = `${weapon.RPM} to ${neuraxisRPM}`
+            weapon.RPM = neurRPM2;
+            weaponOriginal.RPM = "400 to 2000"
+        }*/
+   
+        
+
         document.getElementById("cardRPM").textContent = weapon.RPM;
         document.getElementById("cardRPM").style.color = "Lime";
         document.getElementById("cardRPMArrow").textContent = "🡅";
@@ -1034,6 +1043,13 @@ function oilCalcs(calcOil) {
     }
     if (weapon.RPM < weaponOriginal.RPM) {
 
+        /*if (weapon.Name === "Neuraxis F22") {
+            let neuraxisRPM = weapon.RPM * 5;
+            let neurRPM2 = `${weapon.RPM} to ${neuraxisRPM}`
+            weapon.RPM = neurRPM2;
+            weaponOriginal.RPM = "400 to 2000"
+        }*/
+
         document.getElementById("cardRPM").textContent = weapon.RPM;
         document.getElementById("cardRPM").style.color = "OrangeRed";
         document.getElementById("cardRPMArrow").textContent = "🡇";
@@ -1043,6 +1059,16 @@ function oilCalcs(calcOil) {
         document.getElementById("cardRPMRBrac").textContent = ")";
     }
     if (weapon.RPM === weaponOriginal.RPM) {
+
+       /* if (weapon.Name === "Neuraxis F22") {
+            let neuraxisRPM = weapon.RPM * 5;
+            let neurRPM2 = `${weapon.RPM} to ${neuraxisRPM}`
+            weapon.RPM = neurRPM2;
+            weaponOriginal.RPM = "400 to 2000"
+        }
+   
+        weapon.RPM = Math.round((weapon.RPM + Number.EPSILON)* 100) / 100;*/
+
         document.getElementById("cardRPM").textContent = weapon.RPM;
     }
     
@@ -2000,8 +2026,25 @@ function oilCalcs(calcOil) {
     if (weapon.Spread < 0) {
         weapon.Spread = 0;
     }
-   
+
     if (weapon.Spread > weaponOriginal.Spread) {
+       /* if (weapon.Name === "Neuraxis F22") {
+            let neuraxisSpread = weapon.Spread * 0.1;
+            let neurSpread2 = `${weapon.Spread} to ${neuraxisSpread}`
+            weapon.Spread = neurSpread2;
+            weaponOriginal.Spread = "2 to 20"
+            weapon.Spread = Math.round((weapon.Spread + Number.EPSILON)* 100) / 100;
+            document.getElementById("cardSpready").textContent = `${weapon.Spread} to ${neuraxisSpread}`
+        document.getElementById("cardSpready").style.color = "OrangeRed";
+        document.getElementById("cardSpreadArrow").textContent = "🡅";
+        document.getElementById("cardSpreadArrow").style.color = "OrangeRed";
+        document.getElementById("cardSpreadLBrac").textContent = "(";
+        document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
+        document.getElementById("cardSpreadRBrac").textContent = ")";
+        }
+   else {*/
+        weapon.Spread = Math.round((weapon.Spread + Number.EPSILON)* 100) / 100;
+
         document.getElementById("cardSpready").textContent = weapon.Spread;
         document.getElementById("cardSpready").style.color = "OrangeRed";
         document.getElementById("cardSpreadArrow").textContent = "🡅";
@@ -2009,8 +2052,26 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSpreadLBrac").textContent = "(";
         document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
         document.getElementById("cardSpreadRBrac").textContent = ")";
+   //}
     }
     if (weapon.Spread < weaponOriginal.Spread) {
+       /* if (weapon.Name === "Neuraxis F22") {
+            let neuraxisSpread = weapon.Spread * 0.1;
+            let neurSpread2 = `${weapon.Spread} to ${neuraxisSpread}`
+            weapon.Spread = neurSpread2;
+            weaponOriginal.Spread = "2 to 20"
+            weapon.Spread = Math.round((weapon.Spread + Number.EPSILON)* 100) / 100;
+            document.getElementById("cardSpready").textContent = `${weapon.Spread} to ${neuraxisSpread}`
+        document.getElementById("cardSpready").style.color = "Lime";
+        document.getElementById("cardSpreadArrow").textContent = "🡇";
+        document.getElementById("cardSpreadArrow").style.color = "Lime";
+        document.getElementById("cardSpreadLBrac").textContent = "(";
+        document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
+        document.getElementById("cardSpreadRBrac").textContent = ")";
+        }
+   else {*/
+        weapon.Spread = Math.round((weapon.Spread + Number.EPSILON)* 100) / 100;
+
         document.getElementById("cardSpready").textContent = weapon.Spread;
         document.getElementById("cardSpready").style.color = "Lime";
         document.getElementById("cardSpreadArrow").textContent = "🡇";
@@ -2018,8 +2079,19 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSpreadLBrac").textContent = "(";
         document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
         document.getElementById("cardSpreadRBrac").textContent = ")";
+   //}
     }
     if (weapon.Spread === weaponOriginal.Spread) {
+        /*if (weapon.Name === "Neuraxis F22") {
+            let neuraxisSpread = weapon.Spread * 0.1;
+            let neurSpread2 = `${weapon.Spread} to ${neuraxisSpread}`
+            weapon.Spread = neurSpread2;
+            weaponOriginal.Spread = "2 to 20"
+            weapon.Spread = Math.round((weapon.Spread + Number.EPSILON)* 100) / 100;
+        }*/
+   
+        
+
         document.getElementById("cardSpready").textContent = weaponOriginal.Spread;
     }
     
