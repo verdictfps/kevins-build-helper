@@ -497,7 +497,6 @@ function oilRemover(selector, selectedvalue) {
             }
             if (selector1Options[i].li.dataset.value === selectedvalue && !(selectedvalue.startsWith("static"))) {
                 selector1Options[i].li.hidden = true;
-                console.log("test1");
             }
             if (selector2Options[i].li.hidden === true) {
                 selector2Options[i].li.hidden = false;
@@ -507,7 +506,6 @@ function oilRemover(selector, selectedvalue) {
             }
             if (selector2Options[i].li.dataset.value === selectedvalue && !(selectedvalue.startsWith("static"))) {
                 selector2Options[i].li.hidden = true;
-                console.log("test2");
             }
             if (selector4Options[i].li.hidden === true) {
                 selector4Options[i].li.hidden = false;
@@ -517,7 +515,6 @@ function oilRemover(selector, selectedvalue) {
             }
             if (selector4Options[i].li.dataset.value === selectedvalue && !(selectedvalue.startsWith("static"))) {
                 selector4Options[i].li.hidden = true;
-                console.log("test3");
             }
             if (selector5Options[i].li.hidden === true) {
                 selector5Options[i].li.hidden = false;
@@ -527,7 +524,6 @@ function oilRemover(selector, selectedvalue) {
             }
             if (selector5Options[i].li.dataset.value === selectedvalue && !(selectedvalue.startsWith("static"))) {
                 selector5Options[i].li.hidden = true;
-                console.log("test4");
             }
         }
     }
@@ -613,12 +609,18 @@ function oilRemover(selector, selectedvalue) {
     }
 } 
 
-function attachmentFilter(selWepValue, selWepName) {
+function attachmentFilter(selWepValue, selWepName, single) {
 
     let name = document.getElementById("weapons");
 
-    const selectedText = name.options[selWepName].text;
-    console.log(selectedText);
+    let selectedText = null;
+
+    if (single === "true") {
+        selectedText = selectedWeapon.Name;
+    }
+    else {
+        selectedText = name.options[selWepName].text;
+    }
 
     let selectorBarrel = document.getElementById("barrelselector");
     let selectorOptic = document.getElementById("opticselector");
@@ -677,49 +679,8 @@ function attachmentFilter(selWepValue, selWepName) {
     }
 }
 
-// Unhides categories and their options when selected, and hides the previous category
-/*function oilCategory(selectorNumber, selectedvalue) {
-console.log(selectedvalue);
-    const suffixMap = {
-        "ammo-consume-chance-oils": "AmmoCat",
-        "base-crit-chance-oils": "CritCat",
-        "bullet-bounces-oils": "BounceCat",
-        "bullet-speed-oils": "SpeedCat",
-        "add-damage-oils": "AddDmgCat",
-        "percent-damage-oils": "MultDmgCat",
-        "durability-oils": "DurCat",
-        "penetration-oils": "PenCat",
-        "projectiles-oils": "ProjCat",
-        "recoil-oils": "RecoilCat",
-        "reload-speed-oils": "ReloadCat",
-        "rpm-oils": "RPMCat",
-        "spread-oils": "SpreadCat"
-    };
-
-    const allSuffixes = Object.values(suffixMap);
-
-    allSuffixes.forEach(suffix => {
-        const element = document.getElementById(`oils${selectorNumber}${suffix}`);
-        console.log(`oils${selectorNumber}${suffix}`);
-        console.log(element.value);
-        if (element) {
-            element.style.display = "none";
-        }
-    });
-
-    if (selectedvalue === "select-category") return;
-    
-    const selectedSuffix = suffixMap[selectedvalue];
-    if (!selectedSuffix) return;
-
-    const elementToShow = document.getElementById(`oils${selectorNumber}${selectedSuffix}`);
-    if (elementToShow) {
-        elementToShow.style.display = "";
-    }
-}*/
-
 // For when the button is clicked.
-function onGenerate() {
+function onGenerate(item) {
     selectedWeapon = null;
     modifiedWeapon = null;
     oil1 = null;
@@ -740,12 +701,12 @@ function onGenerate() {
     loadOrigWeapons()
     loadAttachments()
     rollWeapon();
-    rollAttachments();
+    rollAttachments('false', item);
     rollOils();
     oilCalcs(oilStatModifiers);
 }
 
-function rollOnSelectAttach(single, selector, selID) {
+function rollOnSelectAttach(single, item) {
     selectedWeapon = null;
     modifiedWeapon = null;
     oil1 = null;
@@ -766,7 +727,49 @@ function rollOnSelectAttach(single, selector, selID) {
     loadOrigWeapons()
     loadAttachments()
     rollWeapon();
-    rollAttachments();
+    rollAttachments(single, item);
+    oilCalcs(oilStatModifiers);
+}
+
+function rollOnSelectWep(single, selector, selID, value) {
+    selectedWeapon = null;
+    modifiedWeapon = null;
+    oil1 = null;
+    oil2 = null;
+    oil3 = null;
+    oil4 = null;
+    oil5 = null;
+    selectedBarrel = null;
+    selectedOptic = null;
+    selectedLaser = null;
+    selectedFiremode = null;
+    selectedChamber = null;
+    rolledOils = [];
+    selectedChamber = null;
+    loadChamber()
+    loadWeapons()
+    loadOils()
+    loadOrigWeapons()
+    loadAttachments()
+    rollWeapon(selector);
+    attachmentFilter(value, selID, single)
+    rollAttachments(single);
+    oilRemover(selector, value);
+    rollOils(single, selector, selID, value);
+    oilCalcs(oilStatModifiers);
+}
+
+async function rollOnPageLoad(single, selector, selID, value) {
+    const result = await loadOrigWeapons();
+    const result2 = await loadWeapons();
+    let selPageLoad = document.getElementById("weapons");
+    selPageLoad.proDropdown.setValue("value"); 
+    oilStatModifiers = oilsData?.Oil["Default"];
+    selectedOil = oilStatModifiers;
+    rollWeapon(selector);
+    attachmentFilter(value, selID, single)
+    rollAttachments(single);
+    oilStats(selectedOil);
     oilCalcs(oilStatModifiers);
 }
 
@@ -791,7 +794,7 @@ function rollOnSelect(single, selector, selID, value) {
     loadOrigWeapons()
     loadAttachments()
     rollWeapon();
-    rollAttachments();
+    rollAttachments(single);
     oilRemover(selector, value);
     rollOils(single, selector, selID, value);
     oilCalcs(oilStatModifiers);
@@ -1968,8 +1971,8 @@ function oilCalcs(calcOil) {
 
     //// Spread Add
 
-    document.getElementById("cardSpread").textContent = "";
-    document.getElementById("cardSpread").style.color = "";
+    document.getElementById("cardSpready").textContent = "";
+    document.getElementById("cardSpready").style.color = "";
     document.getElementById("cardSpreadArrow").textContent = "";
     document.getElementById("cardSpreadArrow").style.color = "";
     document.getElementById("cardSpreadComp").textContent = "";
@@ -1999,8 +2002,8 @@ function oilCalcs(calcOil) {
     }
    
     if (weapon.Spread > weaponOriginal.Spread) {
-        document.getElementById("cardSpread").textContent = weapon.Spread;
-        document.getElementById("cardSpread").style.color = "OrangeRed";
+        document.getElementById("cardSpready").textContent = weapon.Spread;
+        document.getElementById("cardSpready").style.color = "OrangeRed";
         document.getElementById("cardSpreadArrow").textContent = "🡅";
         document.getElementById("cardSpreadArrow").style.color = "OrangeRed";
         document.getElementById("cardSpreadLBrac").textContent = "(";
@@ -2008,8 +2011,8 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSpreadRBrac").textContent = ")";
     }
     if (weapon.Spread < weaponOriginal.Spread) {
-        document.getElementById("cardSpread").textContent = weapon.Spread;
-        document.getElementById("cardSpread").style.color = "Lime";
+        document.getElementById("cardSpready").textContent = weapon.Spread;
+        document.getElementById("cardSpready").style.color = "Lime";
         document.getElementById("cardSpreadArrow").textContent = "🡇";
         document.getElementById("cardSpreadArrow").style.color = "Lime";
         document.getElementById("cardSpreadLBrac").textContent = "(";
@@ -2017,7 +2020,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSpreadRBrac").textContent = ")";
     }
     if (weapon.Spread === weaponOriginal.Spread) {
-        document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
+        document.getElementById("cardSpready").textContent = weaponOriginal.Spread;
     }
     
     //////////////
@@ -2058,8 +2061,7 @@ function oilCalcs(calcOil) {
     document.getElementById("cardDurabilityUsageLBrac").textContent = "";
     document.getElementById("cardDurabilityUsageComp").textContent = "";
     document.getElementById("cardDurabilityUsageRBrac").textContent = "";
-
-    weapon.DurabilityUsage = calcOil.DurabilityUsage;
+    weapon.DurabilityUsage += calcOil.DurabilityUsage;
 
     document.getElementById("cardDurabilityUsage").textContent = weapon.DurabilityUsage;
 
@@ -2141,58 +2143,17 @@ function rollOils(single, selector, selID, value) {
     oilsRPM = oilsRPMMain.slice();
     oilsSpread = oilsSpreadMain.slice();
 
-    const oil1Skip = {
-        value: "skip"
-    };
-    const oil2Skip = {
-        value: "skip"
-    };
-    const oil3Skip = {
-        value: "skip"
-    };
-    const oil4Skip = {
-        value: "skip"
-    };
-    const oil5Skip = {
-        value: "skip"
-    };
-
     oilStatModifiers = oilsData?.Oil["Default"];
 
     let selectedOil = [];
 
-    /*if (single === "true") {
-
-        switch (selector) {
-            case ("oils1selector"):
-                selectedOil = [oilSingle, oil2Skip, oil3Skip, oil4Skip, oil5Skip];
-                break;
-            case ("oils2selector"):
-                selectedOil = [oil1Skip, oilSingle, oil3Skip, oil4Skip, oil5Skip];
-                break;
-            case ("oils3selector"):
-                selectedOil = [oil1Skip, oil2Skip, oilSingle, oil4Skip, oil5Skip];
-                break;
-            case ("oils4selector"):
-                selectedOil = [oil1Skip, oil2Skip, oil3Skip, oilSingle, oil5Skip];
-                break;
-            case ("oils5selector"):
-                selectedOil = [oil1Skip, oil2Skip, oil3Skip, oil4Skip, oilSingle];
-                break;
-            }
-        
-        selID -= 1;
-    }*/
-    //else {
-        selectedOil = [oil1, oil2, oil3, oil4, oil5];
-    //}
+    selectedOil = [oil1, oil2, oil3, oil4, oil5];
+ 
     let counter = 0;
     let newSelOil = null;
     for (let i = 0; i < selectedOil.length; i++) {
         counter += 1;
         switch (selectedOil[i].value) {
-            //case ("skip"):
-                //break;
             case "static-no-selection":
                 rolledOils[i] = getOilByName("None");
                 oilStats(rolledOils[i]);
@@ -3265,88 +3226,107 @@ function rollOils(single, selector, selID, value) {
     };
 }
 
-function rollWeapon() {
-    let name = document.getElementById("weapons");
-    const selectedValue = name.value;
-    switch (selectedValue) {
-        case "random-all-weapons":
-            shuffle(gunsAll);
-            name = gunsAll[0];
-            selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getOrigWeaponByName(name);
-            addName(name, selectedValue, "weapon");
-            break;
-        case "random-pistols":
-            shuffle(gunsPistols);
-            name = gunsPistols[0];
-            selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getOrigWeaponByName(name);
-            addName(name, selectedValue, "weapon");
-            break;
-        case "random-revolvers":
-            shuffle(gunsRevolvers);
-            name = gunsRevolvers[0];
-            selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getOrigWeaponByName(name);
-            addName(name, selectedValue, "weapon");
-            break;
-        case "random-shotguns":
-            shuffle(gunsShotguns);
-            name = gunsShotguns[0];
-            selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getOrigWeaponByName(name);
-            addName(name, selectedValue, "weapon");
-            break;
-        case "random-submachine-guns":
-            shuffle(gunsSMGs);
-            name = gunsSMGs[0];
-            selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getOrigWeaponByName(name);
-            addName(name, selectedValue, "weapon");
-            break;
-        case "random-assault-rifles":
-            shuffle(gunsARs);
-            name = gunsARs[0];
-            selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getOrigWeaponByName(name);
-            addName(name, selectedValue, "weapon");
-            break;
-        case "random-lmgs":
-            shuffle(gunsLMGs);
-            name = gunsLMGs[0];
-            selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getOrigWeaponByName(name);
-            addName(name, selectedValue, "weapon");
-            break;
-        case "random-rifles":
-            shuffle(gunsRifles);
-            name = gunsRifles[0];
-            selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getOrigWeaponByName(name);
-            addName(name, selectedValue, "weapon");
-            break;
-        case "random-sniper-rifles":
-            shuffle(gunsSnipers);
-            name = gunsSnipers[0];
-            selectedWeapon = getWeaponByName(name);
-            modifiedWeapon = getOrigWeaponByName(name);
-            addName(name, selectedValue, "weapon");
-            break;
-        default:
-            const selectedIndex = name.selectedIndex;
-            const selectedText = name.options[selectedIndex].text;
-            selectedWeapon = getWeaponByName(selectedText);
-            modifiedWeapon = getOrigWeaponByName(selectedText);
-            addName(selectedWeapon.Name, selectedValue, "weapon")
+function rollWeapon(selector) {
+    if (selector === "pageload") {
+        selectedWeapon = getWeaponByName("P38 Dirk");
+        modifiedWeapon = getOrigWeaponByName("P38 Dirk");
+        addName(selectedWeapon.Name, "p38-dirk", "weapon")
+    }
+    else {
+        let name = document.getElementById("weapons");
+        let hasRolled = document.getElementById("cardWeaponName").textContent;
+
+        const selectedValue = name.value;
+        switch (selectedValue) {
+            case "random-all-weapons":
+                if (selector === "weapons") {
+                    shuffle(gunsAll);
+                    name = gunsAll[0];
+                }
+                
+                selectedWeapon = getWeaponByName(name);
+                modifiedWeapon = getOrigWeaponByName(name);
+                addName(name, selectedValue, "weapon");
+                break;
+            case "random-pistols":
+                shuffle(gunsPistols);
+                name = gunsPistols[0];
+                selectedWeapon = getWeaponByName(name);
+                modifiedWeapon = getOrigWeaponByName(name);
+                addName(name, selectedValue, "weapon");
+                break;
+            case "random-revolvers":
+                shuffle(gunsRevolvers);
+                name = gunsRevolvers[0];
+                selectedWeapon = getWeaponByName(name);
+                modifiedWeapon = getOrigWeaponByName(name);
+                addName(name, selectedValue, "weapon");
+                break;
+            case "random-shotguns":
+                shuffle(gunsShotguns);
+                name = gunsShotguns[0];
+                selectedWeapon = getWeaponByName(name);
+                modifiedWeapon = getOrigWeaponByName(name);
+                addName(name, selectedValue, "weapon");
+                break;
+            case "random-submachine-guns":
+                shuffle(gunsSMGs);
+                name = gunsSMGs[0];
+                selectedWeapon = getWeaponByName(name);
+                modifiedWeapon = getOrigWeaponByName(name);
+                addName(name, selectedValue, "weapon");
+                break;
+            case "random-assault-rifles":
+                shuffle(gunsARs);
+                name = gunsARs[0];
+                selectedWeapon = getWeaponByName(name);
+                modifiedWeapon = getOrigWeaponByName(name);
+                addName(name, selectedValue, "weapon");
+                break;
+            case "random-lmgs":
+                shuffle(gunsLMGs);
+                name = gunsLMGs[0];
+                selectedWeapon = getWeaponByName(name);
+                modifiedWeapon = getOrigWeaponByName(name);
+                addName(name, selectedValue, "weapon");
+                break;
+            case "random-rifles":
+                shuffle(gunsRifles);
+                name = gunsRifles[0];
+                selectedWeapon = getWeaponByName(name);
+                modifiedWeapon = getOrigWeaponByName(name);
+                addName(name, selectedValue, "weapon");
+                break;
+            case "random-sniper-rifles":
+                shuffle(gunsSnipers);
+                name = gunsSnipers[0];
+                selectedWeapon = getWeaponByName(name);
+                modifiedWeapon = getOrigWeaponByName(name);
+                addName(name, selectedValue, "weapon");
+                break;
+            default:
+                const selectedIndex = name.selectedIndex;
+                const selectedText = name.options[selectedIndex].text;
+                selectedWeapon = getWeaponByName(selectedText);
+                modifiedWeapon = getOrigWeaponByName(selectedText);
+                console.log(getOrigWeaponByName(selectedText));
+                addName(selectedWeapon.Name, selectedValue, "weapon")
+        }
     }
 }
 
-function rollAttachments() {
+function rollAttachments(single, item) {
     let selectorBarrel = document.getElementById("barrelselector");
     let selectorOptic = document.getElementById("opticselector");
     let selectorLaser = document.getElementById("laserselector");
     let selectorFiremode = document.getElementById("firemodeselector");
     let selectorChamber = document.getElementById("chamberselector");
+
+    barrelName = document.getElementById("barrelname").textContent;
+    opticName = document.getElementById("opticname").textContent;
+    laserName = document.getElementById("lasername").textContent;
+    firemodeName = document.getElementById("firemodename").textContent;
+    chamberName = document.getElementById("cardAmmoType").textContent;
 
     let attSel = null;
 
@@ -3363,10 +3343,15 @@ function rollAttachments() {
             selectedBarrel = getBarrelByName("None");
             break;
         case "static-random-barrel":
-            shuffle(attachmentsBarrels);
-            attSel = attachmentsBarrels[0];
-            selectedBarrel = getBarrelByName(attSel);
-            console.log(getBarrelByName(attSel));
+            if (item === "barrel" || item === "button"){
+                console.log(item);
+                shuffle(attachmentsBarrels);
+                attSel = attachmentsBarrels[0];
+                selectedBarrel = getBarrelByName(attSel);
+            }
+            else {
+                selectedBarrel = getBarrelByName(barrelName);
+            }
             break;
         default:
             const selectedIndex = selectorBarrel.selectedIndex;
@@ -3395,10 +3380,15 @@ function rollAttachments() {
         case "none":
             selectedChamber = getChamberByName(`Chamber Chisel - ${selectedWeapon.AmmoType}`);
             break;
-        case "static-random-barrel":
-            shuffle(attachmentsRechamber);
-            attSel = attachmentsRechamber[0];
-            selectedChamber = getChamberByName(attSel);
+        case "static-random-chamber":
+            if (item === "chamber" || item === "button"){
+                shuffle(attachmentsRechamber);
+                attSel = attachmentsRechamber[0];
+                selectedChamber = getChamberByName(attSel);
+            }
+            else {
+                selectedChamber = getChamberByName(`Chamber Chisel - ${chamberName}`)
+            }
             break;
         default:
             const selectedIndex = selectorChamber.selectedIndex;
@@ -3437,9 +3427,14 @@ function rollAttachments() {
             selectedLaser = getLaserByName("None");
             break;
         case "static-random-laser":
-            shuffle(attachmentsLasers);
-            attSel = attachmentsLasers[0];
-            selectedLaser = getLaserByName(attSel);
+            if (item === "laser" || item === "button"){
+                shuffle(attachmentsLaser);
+                attSel = attachmentsLaser[0];
+                selectedLaser = getLaserByName(attSel);
+            }
+            else {
+                selectedLaser = getLaserByName(laserName);
+            }
             break;
         default:
             const selectedIndex = selectorLaser.selectedIndex;
@@ -3458,9 +3453,14 @@ function rollAttachments() {
             selectedOptic = getOpticByName("None");
             break;
         case "static-random-optic":
-            shuffle(attachmentsOptics);
-            attSel = attachmentsOptics[0];
-            selectedOptic = getOpticByName(attSel);
+            if (item === "optic" || item === "button"){
+                shuffle(attachmentsOptics);
+                attSel = attachmentsOptics[0];
+                selectedOptic = getOpticByName(attSel);
+            }
+            else {
+                selectedOptic = getOpticByName(opticName);
+            }
             break;
         default:
             const selectedIndex = selectorOptic.selectedIndex;
