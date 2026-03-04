@@ -1,19 +1,22 @@
 {
-  "Laser": {
-    "Green": {
-      "Name": "Green",
-      "Type": "Laser",
-      "MovingAccuracy": 0.5
-    },
-    "Red": {
-      "Name": "Red",
-      "Type": "Laser",
-      "MovingAccuracy": 0.5
-    },
-    "Yellow": {
-      "Name": "Yellow",
-      "Type": "Laser",
-      "MovingAccuracy": 0.5
+    "Laser": {
+      "Green": {
+        "Name": "Green",
+        "Type": "Laser",
+        "MovingAccuracy": 0.5,
+        "StatDescription": "Move Accuracy: +50%"
+      },
+      "Red": {
+        "Name": "Red",
+        "Type": "Laser",
+        "MovingAccuracy": 0.5,
+        "StatDescription": "Move Accuracy: +50%"
+      },
+      "Yellow": {
+        "Name": "Yellow",
+        "Type": "Laser",
+        "MovingAccuracy": 0.5,
+        "StatDescription": "Move Accuracy: +50%"
+      }
     }
-  }
 }

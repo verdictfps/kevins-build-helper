@@ -618,14 +618,19 @@ function attachmentFilter(selWepValue, selWepName) {
     let name = document.getElementById("weapons");
 
     const selectedText = name.options[selWepName].text;
+    console.log(selectedText);
 
     let selectorBarrel = document.getElementById("barrelselector");
     let selectorOptic = document.getElementById("opticselector");
     let selectorLaser = document.getElementById("laserselector");
     let selectorFiremode = document.getElementById("firemodeselector");
     let selectorChamber = document.getElementById("chamberselector");
-    
-    
+
+    let selectorBarrelOptions = items.filter(i => i.li.dataset.dropdownId === "barrelselectorcollection");
+    let selectorOpticOptions = items.filter(i => i.li.dataset.dropdownId === "opticselectorcollection");
+    let selectorLaserOptions = items.filter(i => i.li.dataset.dropdownId === "laserselectorcollection");
+    let selectorFiremodeOptions = items.filter(i => i.li.dataset.dropdownId === "firemodeselectorcollection");
+    let selectorChamberOptions = items.filter(i => i.li.dataset.dropdownId === "chamberselectorcollection");
 
     let dropdownWeapon = getWeaponByName(selectedText);
 
@@ -796,12 +801,20 @@ function addName(name, value, type, desc, descID) {
     if (type === "weapon") {
         let weapReplace = name.replaceAll(" ", "_");
         document.getElementById("weaponimage").src = `.\\Images\\${weapReplace}.png`;
+        document.getElementById("weaponimage2").src = `.\\Images\\${weapReplace}.png`;
         document.getElementById("cardWeaponName").textContent = name;
-    } else if (type === "oil") {
+    }
+    if (type === "oil") {
         let oilReplace = desc.replaceAll('\\n', '<br>');
         document.getElementById(value).textContent = name;
         document.getElementById(descID).innerHTML = oilReplace;
     }
+    if (type === "attachment") {
+        let attachReplace = desc.replaceAll('\\n', '<br>');
+        document.getElementById(value).textContent = name;
+        document.getElementById(descID).innerHTML = attachReplace;
+    }
+
 }
 
 async function loadChamber() {
@@ -3370,6 +3383,8 @@ function rollAttachments() {
     selectedAttachments.BulletSpeed += selectedBarrel.BulletSpeed;
     selectedAttachments.RecoilMult += selectedBarrel.RecoilMult;
 
+    addName(selectedBarrel.Name, "barrelname", "attachment", selectedBarrel.StatDescription, "barreldesc");
+
     switch (selectorChamber.value) {
         case "static-not-applicable":
             selectedChamber = getChamberByName(`Chamber Chisel - ${selectedWeapon.AmmoType}`);
@@ -3408,6 +3423,9 @@ function rollAttachments() {
     selectedAttachments.SpreadAdd += selectedFiremode.SpreadAdd;
     selectedAttachments.DamageMult += selectedFiremode.DamageMult;
 
+    addName(selectedFiremode.Name, "firemodename", "attachment", selectedFiremode.StatDescription, "firemodedesc");
+
+
     switch (selectorLaser.value) {
         case "static-not-applicable":
             selectedLaser = getLaserByName("None");
@@ -3430,6 +3448,8 @@ function rollAttachments() {
     }
     selectedAttachments.MovingAccuracy += selectedLaser.MovingAccuracy;
 
+    addName(selectedLaser.Name, "lasername", "attachment", selectedLaser.StatDescription, "laserdesc");
+
     switch (selectorOptic.value) {
         case "static-choose":
             selectedOptic = getOpticByName("None");
@@ -3449,7 +3469,7 @@ function rollAttachments() {
     }
     selectedAttachments.ADSCritChance += selectedOptic.ADSCritChance;
 
-    // chamber: `Chamber Chisel - ${weapon.ammotype};?
+    addName(selectedOptic.Name, "opticname", "attachment", selectedOptic.StatDescription, "opticdesc");
 }
 
 function modifyWeapon(weapon) {

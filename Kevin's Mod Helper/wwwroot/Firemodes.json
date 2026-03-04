@@ -1,18 +1,20 @@
 {
-  "Firemode": {
-    "Gun Crank": {
+"Firemode": {
+      "Gun Crank": {
         "Name": "Gun Crank",
         "Type": "Firemode",
         "DamageMult": 0,
         "SpreadAdd": 0,
-        "Firemode": "Auto"
-    },
-    "Priming Bolt": {
+        "Firemode": "Auto",
+        "StatDescription": "Firemode: Auto"
+      },
+      "Priming Bolt": {
         "Name": "Priming Bolt",
         "Type": "Firemode",
         "DamageMult": 0.1,
         "SpreadAdd": -0.1,
-        "Firemode": "Single"
+        "Firemode": "Single",
+        "StatDescription": "Damage: +10%\\nSpread: -0.1\\nFiremode: Single"
+      }
     }
-  }
 }

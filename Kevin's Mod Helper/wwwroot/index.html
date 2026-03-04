@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
     <style>
         .containerweapon {
             margin: 0px;
@@ -1669,7 +1670,7 @@
                     </div>
                     <div style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" style="font-size:1em;" for="enchantments">Laser</span>
-                        <select name="laserselector" id="laserselector" class="custom-dropdown" style="font-size:0.7em; width:100%">
+                        <select name="laserselectorcollection" id="laserselector" class="custom-dropdown" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select a laser...</option>
                             <optgroup label="Lasers" data-collapsible="false" id="laserGroup">
                                 <option value="none">None</option>
@@ -1749,21 +1750,38 @@
 
                     </div>
                     <div style="border-right: 1px solid #FDB142; border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142; grid-column: 3 / span 2; height:307px; z-index: 2; background-color: #FDB142">
-                            <div style="display:flex; height: 174px; justify-content: center; align-items: center; padding: 20px; border: 1px solid #FDB142; border-bottom: 2px solid #FDB142; background-color: #2D424B; border-radius: 25px; ">
-                                <img id="weaponimage" style="max-width:431px; height: auto; max-height: 100%; margin: -100px;  " src="" alt="selected sulfur gun"> 
+                            <div id="boxglowthing" style="display:flex; height: 174px; justify-content: center; align-items: center; padding: 20px; border: 1px solid #FDB142; border-bottom: 2px solid #FDB142; background-color: #2D424B; border-radius: 25px; box-shadow: inset 2px 2px 10px 0px #222222">
+                                <img id="weaponimage" style="position: absolute; max-width:431px; height: auto; max-height: 180px; margin-bottom: 0px; z-index: 5" src="" alt=":)">
+                                <img id="weaponimage2" style="position: absolute; max-width: 431px; height: auto; max-height: 180px; margin-bottom: 0px; z-index: 4;" src="" alt=":)">
                             </div>
                             <div class="containerattach" style="border:0px; height: 92px; margin-top: 9px;">
-                                <div style="border-left:0px; ">
-                                    
+                                <div style="border-left:0px; z-index:10">
+                                    <div style="background-color: #FDB142; margin-top: -12px; border-bottom: 2px solid black; padding: 0px">
+                                        <p style="width: 110px; text-align: center; color: black; margin-top: 5px; margin-bottom: 5px;">Barrel</p>
+                                    </div>
+                                    <p id="barrelname" style="color: white; margin-top: 10px; margin-bottom: 0px; font-size: 0.9em; width: 110px; margin-left: -10px; text-align: center;"></p>
+                                    <p id="barreldesc" style="color: white; margin-top: 0px; margin-bottom: -10px; margin-left: -5px; margin-right: -5px; font-size: 0.6em; font-weight:300; width: 100px; text-align: center;"></p>
                                 </div>
+                                <div style="z-index:10">
+                                    <div style="background-color: #FDB142; border-left: 1px solid black; margin-top: -12px; border-bottom: 2px solid black; padding: 0px">
+                                        <p style="width: 110px; text-align: center; color: black; margin-top: 5px; margin-bottom: 5px;">Optic</p>
+                                    </div>
+                                    <p id="opticname" style="color: white; margin-top: 10px; margin-bottom: 0px; font-size: 0.9em; width: 110px; margin-left: -10px; text-align: center;"></p>
+                                    <p id="opticdesc" style="color: white; margin-top: 0px; margin-bottom: 0px; margin-left: -5px; margin-right: -5px; font-size: 0.6em; font-weight:300; width: 100px; text-align: center;"></p>
+                                </div style="z-index:10">
                                 <div>
-                                    
-                                </div>
-                                <div>
-                                    
+                                    <div style="background-color: #FDB142; border-left: 1px solid black; margin-top: -12px; border-bottom: 2px solid black; padding: 0px">
+                                        <p style="width: 110px; text-align: center; color: black; margin-top: 5px; margin-bottom: 5px;">Laser</p>
+                                    </div>
+                                    <p id="lasername" style="color: white; margin-top: 10px; margin-bottom: 0px; font-size: 0.9em; width: 110px; margin-left: -10px; text-align: center;"></p>
+                                    <p id="laserdesc" style="color: white; margin-top: 0px; margin-bottom: 0px; margin-left: -5px; margin-right: -5px;font-size: 0.6em; font-weight:300; width: 100px; text-align: center;"></p>
                                 </div>
                                 <div style="border-right:0px;">
-                                    
+                                    <div style="background-color: #FDB142; border-left: 1px solid black; margin-top: -12px; border-bottom: 2px solid black; padding: 0px">
+                                        <p style="width: 130px; text-align: center; color: black; margin-top: 5px; margin-bottom: 5px;">Firemode</p>
+                                    </div>
+                                    <p id="firemodename" style="color: white; margin-top: 10px; margin-bottom: 0px; font-size: 0.9em; width: 130px; margin-left: -10px; text-align: center;"></p>
+                                    <p id="firemodedesc" style="color: white; margin-top: 0px; margin-bottom: 0px; margin-left: -5px; margin-right: -5px; font-size: 0.6em; font-weight:300; width: 120px; text-align: center;"></p>
                                 </div>
                             </div>
                     </div>
@@ -1789,7 +1807,7 @@
 
                     </div>
                     <div style="height:194px; border-bottom: 1px solid #FDB142; border-top: 0px; margin-top: -9px">
-                        <p id="cardOilName1">Barrel</p>
+                        <p>?</p>
                     </div>
                     <div style="height:194px; border-bottom: 1px solid #FDB142; border-right: 1px solid #FDB142; border-radius: 0px 0px 15px;">
                         <h3>Stat Col 4</h3>

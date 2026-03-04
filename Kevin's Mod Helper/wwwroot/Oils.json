@@ -6364,7 +6364,8 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Damage: -40%\\nProjectiles: +300%\\nSpread: +2.1"
+      "MovingAccuracy": 2,
+      "StatDescription": "Damage: -40%\\nProjectiles: +300%\\nSpread: +2.1\\nMove Accuracy: -200%"
     },
     "Surgical Laser Oil": {
       "Name": "Surgical Laser Oil",

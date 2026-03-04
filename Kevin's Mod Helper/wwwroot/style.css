@@ -1,4 +1,42 @@
-﻿body {
+﻿
+@keyframes change-color {
+  0% {
+    color: #FDB142;
+  }
+  25% {
+    color: #00A4BD;
+  }
+  50% {
+    color: #FF7A59;
+  }
+  75% {
+    color: #00BDA5;
+  }
+  100% {
+    color: #FDB142;
+  }
+}
+
+@keyframes breatheBox {
+  from {box-shadow: inset 2px 2px 5px 0px #000000, inset 0px 0px 0px 0px #FDB142, inset 0px 0px 80px 70px #2D424B;}
+  to {box-shadow: inset 2px 2px 5px 0px #000000, inset 0px 0px 10px 0px #FDB142, inset 0px 0px 80px 70px #2D424B;}
+}
+
+@keyframes breatheGun {
+    from {transform: translate(0px, 0px); -webkit-filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270); filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270);}
+    to {transform: translate(0px, -5px); -webkit-filter: drop-shadow(0px 1px #FDB142) drop-shadow(0px -1px #FDB142) drop-shadow(1px 0px #FDB142) drop-shadow(-1px 0px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6); filter: drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6);}
+}
+
+@keyframes gunShadow {
+    from {transform: translate(0px, 0px); -webkit-filter: drop-shadow(0px 10px 10px #000000); filter: drop-shadow(0px 10px 10px #000000);}
+    to {transform: translate(0px, -5px); -webkit-filter: drop-shadow(0px 50px 20px #000000be); filter: drop-shadow(0px 50px 20px #000000be);}
+}
+
+@keyframes fucktest {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+body {
     .fredoka-standard {
         font-family: "Fredoka", sans-serif;
         font-optical-sizing: auto;
@@ -222,29 +260,24 @@ select.custom-dropdown {
     position: relative;
 }
 
-@keyframes breatheBox {
-  from {box-shadow: inset 0px 0px 10px 0px #FDB142, inset 0px 0px 80px 70px #2D424B;}
-  to {box-shadow: inset 0px 0px 0px 0px #FDB142, inset 0px 0px 80px 70px #2D424B;}
-}
-
-@keyframes breatheGun {
-    from {-webkit-filter: drop-shadow(0px 1px #FDB142) drop-shadow(0px -1px #FDB142) drop-shadow(1px 0px #FDB142) drop-shadow(-1px 0px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 0px #fdb24270); filter: drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 0px #fdb24270);}
-    to {-webkit-filter: drop-shadow(0px 1px #FDB142) drop-shadow(0px -1px #FDB142) drop-shadow(1px 0px #FDB142) drop-shadow(-1px 0px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 10px #fdb24270); filter: drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 10px #fdb24270);}
-}
-
-@keyframes fucktest {
-    from {background-color: white;}
-    to {background-color: black;}
-}
-
 #weaponimage {
-    animation-name: fucktest;
-    animation-duration: 4s;
+    animation: breatheGun;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-fill-mode: both;
     animation-play-state: running;
 }
+
+#weaponimage2 {
+    animation: gunShadow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+
 
 mark {
     background:#555;
@@ -254,11 +287,10 @@ mark {
 .custom-select:hover .custom-select-selected {
     background: #ffffff;
     border-color: #000000;
-    -webkit-text-fill-color: #ffffff;
-    text-shadow: 2px 2px 10px #000000,
-    1px 1px 0 #2D424B, 1px -1px 0 #2D424B, 1px 1px 0 #2D424B, 1px 1px 0 #2D424B, 1px 0px 0 #2D424B, 0px 1px 0 #2D424B, -1px 0px 0 #2D424B, 0px -1px 0 #2D424B; 
+    -webkit-text-fill-color: #fdd142;
+    text-shadow: 20px 0px 15px #000000, 1px 1px 0 #000000, 1px -1px 0 #000000, 1px 1px 0 #000000, 1px 1px 0 #000000, 1px 0px 0 #000000, 0px 1px 0 #000000, -1px 0px 0 #000000, 0px -1px 0 #000000; 
     box-shadow: inset 2px 2px 2px #bbbbbb;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .no-arrows .custom-group::after {

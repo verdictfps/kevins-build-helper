@@ -18,7 +18,7 @@ function num(v) {
 
 function buildDescription(oil) {
     const lines = [];
-    
+//console.log(oil.oil[SpreadMult]);
     // Flat stats
     if (oil.Bounces)
         lines.push(`Bullet Bounces: ${num(oil.Bounces)}`);
@@ -49,6 +49,7 @@ function buildDescription(oil) {
         ["AmmoConsumeChance", "Ammo Consume Chance"],
         ["ExtraAmmoUseChance", "Extra Ammo Use Chance"],
         ["BaseCritChance", "Crit Chance"],
+        ["ADSCritChance", "ADS Crit Chance"],
         ["SpreadMult", "Spread"],
         ["MovingAccuracy", "Move Accuracy"],
         ["ProjectileMult", "Projectiles"]
@@ -65,7 +66,7 @@ function buildDescription(oil) {
     if (oil.SpreadAdd)
         lines.push(`Spread: ${num(oil.SpreadAdd)}`);
 
-    // Special flags
+    // bullshit oddities
     if (oil.MoneyDrops === "No")
         lines.push("No Money Drops");
 
@@ -84,15 +85,37 @@ function buildDescription(oil) {
     if (oil.Firemode === "Auto")
         lines.push("Firemode: Auto");
 
+    if (oil.Name === "None")
+        lines.push("None selected");
     return lines.join("\\n");
 }
 
 
 // UPDATE ALL OILS
-for (const oilName in oils.Oil) {
-    console.log(oils.Oil[oilName]);
-    oils.Oil[oilName].StatDescription =
-    buildDescription(oils.Oil[oilName]);
+for (const oilName in oils.Attachment.Barrel) {
+    console.log(oils.Attachment.Barrel[oilName]);
+    oils.Attachment.Barrel[oilName].StatDescription =
+    buildDescription(oils.Attachment.Barrel[oilName]);
+}
+for (const oilName in oils.Attachment.Chamber) {
+    console.log(oils.Attachment.Chamber[oilName]);
+    oils.Attachment.Chamber[oilName].StatDescription =
+    buildDescription(oils.Attachment.Chamber[oilName]);
+}
+for (const oilName in oils.Attachment.Laser) {
+    console.log(oils.Attachment.Laser[oilName]);
+    oils.Attachment.Laser[oilName].StatDescription =
+    buildDescription(oils.Attachment.Laser[oilName]);
+}
+for (const oilName in oils.Attachment.Firemode) {
+    console.log(oils.Attachment.Firemode[oilName]);
+    oils.Attachment.Firemode[oilName].StatDescription =
+    buildDescription(oils.Attachment.Firemode[oilName]);
+}
+for (const oilName in oils.Attachment.Optic) {
+    console.log(oils.Attachment.Optic[oilName]);
+    oils.Attachment.Optic[oilName].StatDescription =
+    buildDescription(oils.Attachment.Optic[oilName]);
 }
 
 // SAVE
