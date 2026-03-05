@@ -88,12 +88,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 1,
-      "ReloadSpeed": 0.4,
+      "ReloadSpeed": 0.8,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+40%</span>\nRecoil: <span style='color:red'>+100%</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+80%</span>\nRecoil: <span style='color:red'>+100%</span>"
     },
     "Add Damage Oil": {
       "Name": "Add Damage Oil",
@@ -187,12 +187,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.6,
+      "ReloadSpeed": 1.2,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 7,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+60%</span>\nDrag: <span style='color:red'>+700%</span>\nDamage: <span style='color:red'>-15</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+120%</span>\nDrag: <span style='color:red'>+700%</span>\nDamage: <span style='color:red'>-15</span>"
     },
     "Altruistic Oil": {
       "Name": "Altruistic Oil",
@@ -512,7 +512,7 @@
       "MovementSpeedMult": 0,
       "MoneyDrops": "Yes",
       "OrganDrops": "Yes",
-      "Penetrations": 1,
+      "Penetrations": 2,
       "ProjectileMult": 0,
       "RPM": 0,
       "RecoilAdd": 0,
@@ -522,7 +522,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Pentrations: <span style='color:green'>+1</span>\nJump Power: <span style='color:red'>-30%</span>"
+      "StatDescription": "Pentrations: <span style='color:green'>+2</span>\nJump Power: <span style='color:red'>-30%</span>"
     },
     "Bandit Oil": {
       "Name": "Bandit Oil",
@@ -1008,7 +1008,7 @@
       "MovementSpeedMult": 0,
       "MoneyDrops": "Yes",
       "OrganDrops": "Yes",
-      "Penetrations": 1,
+      "Penetrations": 2,
       "ProjectileMult": 0,
       "RPM": 0,
       "RecoilAdd": 0,
@@ -1018,7 +1018,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Pentrations: <span style='color:green'>+1</span>\n<span style='color:Orange'>Disables Aiming</span>"
+      "StatDescription": "Pentrations: <span style='color:green'>+2</span>\n<span style='color:Orange'>Disables Aiming</span>"
     },
     "Carefree Oil": {
       "Name": "Carefree Oil",
@@ -1310,12 +1310,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": -0.1,
-      "ReloadSpeed": 0.8,
+      "ReloadSpeed": 1.6,
       "SpreadAdd": 0,
       "SpreadMult": -0.1,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+80%</span>\nRecoil: <span style='color:green'>-10%</span>\nSpread: <span style='color:green'>-10%</span>\nMovement Speed: <span style='color:red'>-60%</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+160%</span>\nRecoil: <span style='color:green'>-10%</span>\nSpread: <span style='color:green'>-10%</span>\nMovement Speed: <span style='color:red'>-60%</span>"
     },
     "Confidence Oil": {
       "Name": "Confidence Oil",
@@ -1371,7 +1371,7 @@
       "MovementSpeedMult": 0,
       "MoneyDrops": "Yes",
       "OrganDrops": "Yes",
-      "Penetrations": 1,
+      "Penetrations": 2,
       "ProjectileMult": 0,
       "RPM": 0,
       "RecoilAdd": 0,
@@ -1381,7 +1381,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Pentrations: <span style='color:green'>+1</span>\nDamage: <span style='color:red'>-25</span>"
+      "StatDescription": "Pentrations: <span style='color:green'>+2</span>\nDamage: <span style='color:red'>-25</span>"
     },
     "Contained Force Oil": {
       "Name": "Contained Force Oil",
@@ -1475,12 +1475,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.45,
+      "ReloadSpeed": 0.9,
       "SpreadAdd": 1,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+45%</span>\nSpread: <span style='color:red'>+1</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+90%</span>\nSpread: <span style='color:red'>+1</span>"
     },
     "Damage Oil": {
       "Name": "Damage Oil",
@@ -1904,12 +1904,12 @@
       "RPM": -0.2,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.45,
+      "ReloadSpeed": 0.50,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+45%</span>\nRPM: <span style='color:red'>-20%</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+50%</span>\nRPM: <span style='color:red'>-20%</span>"
     },
     "Double Nothing Oil": {
       "Name": "Double Nothing Oil",
@@ -2003,12 +2003,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.5,
+      "ReloadSpeed": 1,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+50%</span>\nDamage: <span style='color:red'>-15</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+100%</span>\nDamage: <span style='color:red'>-15</span>"
     },
     "Easy Oil": {
       "Name": "Easy Oil",
@@ -2229,7 +2229,7 @@
       "MovementSpeedMult": 0,
       "MoneyDrops": "Yes",
       "OrganDrops": "Yes",
-      "Penetrations": 2,
+      "Penetrations": 3,
       "ProjectileMult": 0,
       "RPM": 0,
       "RecoilAdd": 0,
@@ -2239,7 +2239,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Pentrations: <span style='color:green'>+2</span>\nExtra Ammo Use Chance: <span style='color:red'>+30%</span>"
+      "StatDescription": "Pentrations: <span style='color:green'>+3</span>\nExtra Ammo Use Chance: <span style='color:red'>+30%</span>"
     },
     "Fast Bet Oil": {
       "Name": "Fast Bet Oil",
@@ -2333,12 +2333,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.8,
+      "ReloadSpeed": 1.4,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+80%</span>\nMovement Speed: <span style='color:red'>-40%</span>\nMax Durability: <span style='color:red'>-60%</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+140%</span>\nMovement Speed: <span style='color:red'>-40%</span>\nMax Durability: <span style='color:red'>-60%</span>"
     },
     "Fidget Oil": {
       "Name": "Fidget Oil",
@@ -2828,12 +2828,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.4,
+      "ReloadSpeed": 0.75,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+40%</span>\n<span style='color:Orange'>Disables Aiming</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+75%</span>\n<span style='color:Orange'>Disables Aiming</span>"
     },
     "Happy Accident Oil": {
       "Name": "Happy Accident Oil",
@@ -2889,7 +2889,7 @@
       "MovementSpeedMult": 0,
       "MoneyDrops": "Yes",
       "OrganDrops": "Yes",
-      "Penetrations": 2,
+      "Penetrations": 4,
       "ProjectileMult": 0,
       "RPM": 0,
       "RecoilAdd": 0,
@@ -2899,7 +2899,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Pentrations: <span style='color:green'>+2</span>\nBullet Drop: <span style='color:red'>+20</span>"
+      "StatDescription": "Pentrations: <span style='color:green'>+4</span>\nBullet Drop: <span style='color:red'>+20</span>"
     },
     "Heavy Oil": {
       "Name": "Heavy Oil",
@@ -3318,7 +3318,7 @@
       "MovementSpeedMult": 0,
       "MoneyDrops": "Yes",
       "OrganDrops": "Yes",
-      "Penetrations": 1,
+      "Penetrations": 2,
       "ProjectileMult": 0,
       "RPM": 0,
       "RecoilAdd": 0,
@@ -3328,7 +3328,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Pentrations: <span style='color:green'>+1</span>\nSpread: <span style='color:red'>+2</span>"
+      "StatDescription": "Pentrations: <span style='color:green'>+2</span>\nSpread: <span style='color:red'>+2</span>"
     },
     "Inherited Oil": {
       "Name": "Inherited Oil",
@@ -3450,7 +3450,7 @@
       "MovementSpeedMult": -0.15,
       "MoneyDrops": "Yes",
       "OrganDrops": "Yes",
-      "Penetrations": 1,
+      "Penetrations": 2,
       "ProjectileMult": 0,
       "RPM": 0,
       "RecoilAdd": 0,
@@ -3460,7 +3460,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Pentrations: <span style='color:green'>+1</span>\nMovement Speed: <span style='color:red'>-15%</span>"
+      "StatDescription": "Pentrations: <span style='color:green'>+2</span>\nMovement Speed: <span style='color:red'>-15%</span>"
     },
     "Keep Oil": {
       "Name": "Keep Oil",
@@ -3917,12 +3917,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.4,
+      "ReloadSpeed": 0.8,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+40%</span>\nLoot Chance: <span style='color:red'>-30%</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+80%</span>\nLoot Chance: <span style='color:red'>-30%</span>"
     },
     "Main Focus Oil": {
       "Name": "Main Focus Oil",
@@ -3950,12 +3950,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.3,
+      "ReloadSpeed": 0.5,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+30%</span>\n<span style='color:Orange'>No Money Drops</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+50%</span>\n<span style='color:Orange'>No Money Drops</span>"
     },
     "Manifestation Oil": {
       "Name": "Manifestation Oil",
@@ -4209,7 +4209,7 @@
       "MovementSpeedMult": 0,
       "MoneyDrops": "Yes",
       "OrganDrops": "Yes",
-      "Penetrations": 1,
+      "Penetrations": 2,
       "ProjectileMult": 0,
       "RPM": -0.25,
       "RecoilAdd": 0,
@@ -4219,7 +4219,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Pentrations: <span style='color:green'>+1</span>\nRPM: <span style='color:red'>-25%</span>"
+      "StatDescription": "Pentrations: <span style='color:green'>+2</span>\nRPM: <span style='color:red'>-25%</span>"
     },
     "Nerf Oil": {
       "Name": "Nerf Oil",
@@ -4247,12 +4247,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.6,
+      "ReloadSpeed": 1.2,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+60%</span>\nDamage: <span style='color:red'>-10%</span>\nBullet Drop: <span style='color:red'>+5</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+120%</span>\nDamage: <span style='color:red'>-10%</span>\nBullet Drop: <span style='color:red'>+5</span>"
     },
     "No Look Oil": {
       "Name": "No Look Oil",
@@ -4407,7 +4407,7 @@
       "MovementSpeedMult": 0,
       "MoneyDrops": "Yes",
       "OrganDrops": "Yes",
-      "Penetrations": 2,
+      "Penetrations": 3,
       "ProjectileMult": 0,
       "RPM": 0,
       "RecoilAdd": 0,
@@ -4417,7 +4417,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Pentrations: <span style='color:green'>+2</span>\nMax Durability: <span style='color:red'>-25%</span>"
+      "StatDescription": "Pentrations: <span style='color:green'>+3</span>\nMax Durability: <span style='color:red'>-25%</span>"
     },
     "Parallel Mag Oil": {
       "Name": "Parallel Mag Oil",
@@ -5039,12 +5039,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.25,
+      "ReloadSpeed": 0.4,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+25%</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+40%</span>"
     },
     "Ricochet Oil": {
       "Name": "Ricochet Oil",
@@ -5133,7 +5133,7 @@
       "MovementSpeedMult": 0,
       "MoneyDrops": "Yes",
       "OrganDrops": "Yes",
-      "Penetrations": 1,
+      "Penetrations": 2,
       "ProjectileMult": 0,
       "RPM": 0,
       "RecoilAdd": 0,
@@ -5143,7 +5143,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Pentrations: <span style='color:green'>+1</span>\nBullet Speed: <span style='color:red'>-50%</span>"
+      "StatDescription": "Pentrations: <span style='color:green'>+2</span>\nBullet Speed: <span style='color:red'>-50%</span>"
     },
     "Robust Mechanics Oil": {
       "Name": "Robust Mechanics Oil",
@@ -5270,12 +5270,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.5,
+      "ReloadSpeed": 1.3,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+50%</span>\nExtra Ammo Use Chance: <span style='color:red'>+30%</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+130%</span>\nExtra Ammo Use Chance: <span style='color:red'>+30%</span>"
     },
     "Safety Oil": {
       "Name": "Safety Oil",
@@ -5633,12 +5633,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.5,
+      "ReloadSpeed": 1,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+50%</span>\nMax Durability: <span style='color:red'>-15%</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+100%</span>\nMax Durability: <span style='color:red'>-15%</span>"
     },
     "Shellman Oil": {
       "Name": "Shellman Oil",
@@ -6095,12 +6095,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.4,
+      "ReloadSpeed": 0.8,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+40%</span>\nBullet Speed: <span style='color:red'>-30%</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+80%</span>\nBullet Speed: <span style='color:red'>-30%</span>"
     },
     "Spitter Oil": {
       "Name": "Spitter Oil",
@@ -6459,12 +6459,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.6,
+      "ReloadSpeed": 1.1,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+60%</span>\nDamage: <span style='color:red'>-10%</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+110%</span>\nDamage: <span style='color:red'>-10%</span>"
     },
     "Tandem Oil": {
       "Name": "Tandem Oil",
@@ -6525,12 +6525,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.3,
+      "ReloadSpeed": 0.6,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+30%</span>\n<span style='color:Orange'>No Organ Drops</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+60%</span>\n<span style='color:Orange'>No Organ Drops</span>"
     },
     "Tech Support Oil": {
       "Name": "Tech Support Oil",
@@ -6558,12 +6558,12 @@
       "RPM": 0,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.5,
+      "ReloadSpeed": 0.8,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+50%</span>\nJump Power: <span style='color:red'>-30%</span>"
+      "StatDescription": "Reload Speed: <span style='color:green'>+80%</span>\nJump Power: <span style='color:red'>-30%</span>"
     },
     "Tension Oil": {
       "Name": "Tension Oil",
@@ -6883,7 +6883,7 @@
       "MovementSpeedMult": 0,
       "MoneyDrops": "Yes",
       "OrganDrops": "Yes",
-      "Penetrations": 1,
+      "Penetrations": 2,
       "ProjectileMult": 0,
       "RPM": 0,
       "RecoilAdd": 0,
@@ -6893,7 +6893,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Pentrations: <span style='color:green'>+1</span>\nReload Speed: <span style='color:red'>-25%</span>"
+      "StatDescription": "Pentrations: <span style='color:green'>+2</span>\nReload Speed: <span style='color:red'>-25%</span>"
     },
     "Vasectomy Oil": {
       "Name": "Vasectomy Oil",
@@ -6916,7 +6916,7 @@
       "MovementSpeedMult": 0,
       "MoneyDrops": "Yes",
       "OrganDrops": "Yes",
-      "Penetrations": 1,
+      "Penetrations": 2,
       "ProjectileMult": 0,
       "RPM": 0,
       "RecoilAdd": 0,
@@ -6926,7 +6926,7 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Pentrations: <span style='color:green'>+1</span>\nLoot Chance: <span style='color:red'>-50%</span>"
+      "StatDescription": "Pentrations: <span style='color:green'>+2</span>\nLoot Chance: <span style='color:red'>-50%</span>"
     },
     "Vegan Oil": {
       "Name": "Vegan Oil",
