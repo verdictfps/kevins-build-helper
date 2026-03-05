@@ -23,13 +23,21 @@
 }
 
 @keyframes breatheGun {
-    from {transform: translate(0px, 0px); -webkit-filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270); filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270);}
-    to {transform: translate(0px, -5px); -webkit-filter: drop-shadow(0px 1px #FDB142) drop-shadow(0px -1px #FDB142) drop-shadow(1px 0px #FDB142) drop-shadow(-1px 0px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6); filter: drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6);}
+    from {transform: translate(0px, 0px) scale(70%); -webkit-filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270); filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270);}
+    to {transform: translate(0px, -5px) scale(100%); -webkit-filter: drop-shadow(0px 1px #FDB142) drop-shadow(0px -1px #FDB142) drop-shadow(1px 0px #FDB142) drop-shadow(-1px 0px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6); filter: drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6);}
 }
 
 @keyframes gunShadow {
-    from {transform: translate(0px, 0px); -webkit-filter: drop-shadow(0px 10px 10px #000000); filter: drop-shadow(0px 10px 10px #000000);}
-    to {transform: translate(0px, -5px); -webkit-filter: drop-shadow(0px 50px 20px #000000be); filter: drop-shadow(0px 50px 20px #000000be);}
+    from {transform: translate(0px, 0px) scale(70%);; -webkit-filter: drop-shadow(0px 10px 10px #000000); filter: drop-shadow(0px 10px 10px #000000);}
+    to {transform: translate(0px, -5px) scale(100%);; -webkit-filter: drop-shadow(0px 50px 20px #000000be); filter: drop-shadow(0px 50px 20px #000000be);}
+}
+
+@keyframes insideShadow {
+    /*from {-webkit-filter: drop-shadow(0px 0px 0px #000000be); filter: drop-shadow(0px 0px 0px #000000be);;}
+    to {-webkit-filter: drop-shadow(0px 0px 20px #000000be); filter: drop-shadow(0px 0px 20px #000000be);;}*/
+      from {box-shadow: inset 0px 0px 15px 0px #000000; z-index: 15;}
+  to {box-shadow: inset 0px 0px 80px 20px #000000; z-index: 15;}
+
 }
 
 @keyframes fucktest {
@@ -43,6 +51,16 @@ body {
         font-weight: 400;
         font-style: normal;
         font-variation-settings: "wdth" 100;
+    }
+
+    #boxglowthing {
+            animation: insideShadow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    margin-right: -0;
     }
 
     h1 {
@@ -262,20 +280,30 @@ select.custom-dropdown {
 
 #weaponimage {
     animation: breatheGun;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards;
     animation-play-state: running;
 }
 
+#otherboxthing:hover {
+    -webkit-animation:spin 0.08s linear infinite;
+    -moz-animation:spin 0.08s linear infinite;
+    animation:spin 0.08s linear infinite;
+}
+
+
+
+
 #weaponimage2 {
     animation: gunShadow;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-fill-mode: both;
     animation-play-state: running;
+    
 }
 
 
@@ -331,4 +359,21 @@ mark {
      grid-column: 1 / -1;
 }
 
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(-360deg); filter: blur(10.1px);} 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(-360deg); filter: blur(10.1px);} 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(-360deg); 
+        transform:rotate(-360deg); 
+        filter: blur(10.1px);
+    } 
+}
+@keyframes zlayer {
+    from {z-index: 1;}
+    to {z-index: 99;}
 }

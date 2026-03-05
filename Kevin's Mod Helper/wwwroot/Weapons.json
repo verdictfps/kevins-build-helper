@@ -925,7 +925,7 @@
         "Type": "Light Machine Gun",
         "AmmoType": "Energy",
         "DamageMult": 1,
-        "Damage": 0,
+        "Damage": 50,
         "Projectiles": 1,
         "RPM": 400,
         "MagSize": 100,
