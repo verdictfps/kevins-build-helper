@@ -779,6 +779,8 @@ function percentConv(stat) {
     }
 
 function oilStats(selectedOil) {
+    console.log(selectedOil);
+    console.log(oilStatModifiers);
     if (selectedOil.AmmoConsumeChance != 0.0) {
         oilStatModifiers.AmmoConsumeChance += selectedOil.AmmoConsumeChance;
     }
@@ -859,6 +861,9 @@ function oilStats(selectedOil) {
     }
     if (selectedOil.MovingAccuracy != 0.0) {
         oilStatModifiers.MovingAccuracy += selectedOil.MovingAccuracy;
+    }
+    if (selectedOil.DurLossMult != 0.0) {
+        oilStatModifiers.DurLossMult += selectedOil.DurLossMult;
     }
 }
 
@@ -2111,9 +2116,13 @@ function oilCalcs(calcOil) {
     document.getElementById("cardDurabilityUsageLBrac").textContent = "";
     document.getElementById("cardDurabilityUsageComp").textContent = "";
     document.getElementById("cardDurabilityUsageRBrac").textContent = "";
-    weapon.DurabilityUsage += calcOil.DurabilityUsage;
+    console.log(calcOil.DurLossMult)
+    let durUseCalc1 = weapon.DurabilityUsage + calcOil.DurabilityUsage;
+    console.log(durUseCalc1)
+    let durUseCalc2 = durUseCalc1 * (calcOil.DurLossMult + 1);
+    console.log(durUseCalc2)
 
-    document.getElementById("cardDurabilityUsage").textContent = weapon.DurabilityUsage;
+    document.getElementById("cardDurabilityUsage").textContent = durUseCalc2;
 
     //// Shots to break
 
