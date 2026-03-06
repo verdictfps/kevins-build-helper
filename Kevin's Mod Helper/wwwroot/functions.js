@@ -1671,12 +1671,14 @@ function oilCalcs(calcOil) {
     document.getElementById("cardDurabilityComp").textContent = "";
     document.getElementById("cardDurabilityRBrac").textContent = "";
 
+    let durMin = weaponOriginal.Durability * 0.01;
+
     let durCalc = weapon.Durability *(1 + calcOil.DurabilityMult + attachmentStats.DurabilityMult);
 
     let durRound = Math.round((durCalc + Number.EPSILON)* 100) / 100;
 
-    if (durRound < 1) {
-        durRound = 1;
+    if (durRound < durMin) {
+        durRound = durMin;
     }
 
     if (durRound < weaponOriginal.Durability) {
