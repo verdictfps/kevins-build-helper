@@ -12,6 +12,7 @@
       "BulletSpeed": 0,
       "DurabilityMult": 0,
       "RPM": 0,
+      "Firemode": "None",
       "StatDescription": ""
     },
     "Barrel": {
@@ -276,7 +277,7 @@
         "Type": "Firemode",
         "DamageMult": 0,
         "SpreadAdd": 0,
-        "Firemode": "",
+        "Firemode": "None",
         "StatDescription": "None selected"
       },
       "Gun Crank": {
