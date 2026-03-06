@@ -2126,7 +2126,7 @@ function oilCalcs(calcOil) {
 
     //// Shots to break
 
-    let shotsToBreak = weapon.Durability / weapon.DurabilityUsage;
+    let shotsToBreak = durRound / durUseCalc2;
     let shotsToBreakRounded = Math.round(shotsToBreak);
 
     document.getElementById("cardShotsToBreak").textContent = shotsToBreakRounded;
