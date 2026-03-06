@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Kevin's Build Helper</title>
-    <link rel="stylesheet" type="text/css"
-          href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="csshake.css">
     <style>
         .containerweapon {
             margin: 0px;
@@ -59,10 +59,11 @@
 
         .container {
             display: grid;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: repeat(auto-fit, minmax(42em, 1fr));
             background-color: #2D424B;
             padding: 10px;
             height: 100%;
+            width: auto;
         }
 
             .container div {
@@ -71,12 +72,27 @@
                 text-align: center;
             }
 
+        .containersingle {
+            display: grid;
+            grid-template-columns: 100%;
+            background-color: #2D424B;
+            padding: 10px;
+            height: 100%;
+            position: relative;
+        }
+
+            .containersingle div {
+                border: 1px solid #FDB142;
+                padding: 10px;
+                text-align: center;
+            }
+
         .resultcontainer {
             display: grid;
-            grid-template-columns: 28% 22% 25% 25%;
+            grid-template-columns: 28% 22% 50%;
             background-color: #2D424B;
             border: 0px;
-            margin: -11px;
+            margin: 0px;
             padding: 0px;
         }
 
@@ -85,7 +101,7 @@
                 border: 1px solid #FDB142;
                 text-align: left;
                 color: white;
-                margin: -10px;
+                margin: 0px;
             }
 
         .oilcontainer {
@@ -153,7 +169,7 @@
         }
     </style>
     
-    <div class="container" style="border:0px; margin-top: -20px; margin-bottom: -20px;">
+    <div class="container" style="border:0px; margin-top: -20px; margin-bottom: -20px; margin-right: 0px">
         <div style="margin:0px; padding:0px; border:0px solid #FDB142;">
             <div class="containerinfobox" hidden id="oil1infobox">
                 <p id="oil1infoboxname" style="color:#FDB142; font-weight: 500; font-size: 1em;">hi</p>
@@ -1712,10 +1728,10 @@
         </div>
         <div style="border:0px; margin-left:-5px; margin-bottom: -50px;">
             <h1>Kevin's Build Helper</h1>
-            <div class="containerweapon" style="margin-bottom:20px; border: 0px solid #FDB142; padding: 11px;">
-                <p style="text-align: left; font-weight: 500; font-size: 2em; margin: 0px; padding-bottom: 15px; padding-left: 2px; padding-top: 0px;" id="cardWeaponName">Weapon</p>
-                <div class="resultcontainer" style="border-radius: 15px; border: 0px;">
-                    <div style="height:325px; border-left: 1px solid #FDB142; padding-left: 5px">
+            <div class="containerweapon" style="margin-bottom:20px; border: 0px solid #FDB142; padding: 0px;">
+                <p style="text-align: left; font-weight: 500; font-size: 2em; margin: 0px; padding-bottom: 5px; padding-left: 15px; padding-top: 5px;" id="cardWeaponName">Weapon</p>
+                <div class="resultcontainer" style="border-radius: 15px; border: 0px; padding: 0px">
+                    <div style="height:325px; border-left: 1px solid #FDB142; padding-left: 5px; height: 100%; padding-top: 5px; padding-bottom: 15px">
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em;">Type: <span style="font-weight:400" id="cardWeaponType"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Ammo Type: <span style="font-weight:400" id="cardAmmoType"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Damage: <span style="font-weight:400" id="cardDamage"></span><span style="font-weight:400" id="cardDamageArrow"></span><span>  </span><span style="font-weight:400" id="cardDamageX"></span><span> </span><span style="font-weight:400" id="cardDamageProj"></span><span>  </span><span style="font-weight:400" id="cardDamageProjArrow"></span><span>  </span><span style="font-weight:400" id="cardDamageMultiX"></span><span>  </span><span style="font-weight:200" id="cardDamageMulti"></span><span style="font-weight:400" id="cardDamageLRArrow">  </span><span style="font-weight:300" id="cardDamageLBrac"></span><span style="font-weight:300" id="cardDamageComp"></span><span> </span><span style="font-weight:300" id="cardDamageXComp"></span><span> </span><span style="font-weight:300" id="cardDamageMultiComp"></span><span> </span><span style="font-weight:300" id="cardDamageMultiXComp"></span><span> </span><span style="font-weight:300" id="cardDamageProjComp"></span><span style="font-weight:300" id="cardDamageRBrac"></span></p>
@@ -1727,80 +1743,78 @@
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Durability Usage: <span style="font-weight:400" id="cardDurabilityUsage"></span></p></span><span id="cardDurabilityUsageArrow"></span><span id="cardDurabilityUsagespace"> </span><span style="font-weight:300" id="cardDurabilityUsageLBrac"></span><span style="font-weight:300" id="cardDurabilityUsageComp"></span><span style="font-weight:300" id="cardDurabilityUsageRBrac"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin-top: -15px; padding: 0em">Shots to Break: <span style="font-weight:400" id="cardShotsToBreak"></span></p>
                         
-                        <p style="width: 70%; border-radius: 0px 15px 0px 0px; margin-top: -3px; margin-left: -5px; margin-bottom: -20px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; background-color:#FDB142; color:black; font-weight: 600;">Weapon Behavior</p>
+                        <p style="width: 10em; border-radius: 0px 15px 0px 0px; margin-top: -3px; margin-left: 1px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; background-color:#FDB142; color:black; font-weight: 600; height: auto; position-anchor: --weapon-anchor; border-right: 2px solid black; border-top: 2px solid black; position: absolute; left: anchor(left); bottom: anchor(top);">Weapon Behavior</p>
 
-                        </div>
-                    <div style=" padding-left: 5px">
-                        
-                        <p style="width: 70%; border-radius: 0px 0px 15px 0px; margin-top: -10px; margin-left: -5px; margin-bottom: -1px; padding-left: 10px; padding-bottom: 2px; background-color:#FDB142; color:black; font-weight: 600;">Crits</p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Base Crit Chance: <span style="font-weight:400" id="cardCrit"></span><span style="font-weight:400" id="cardCrit%"></span><span id="cardCritArrow"></span><span id="cardCritspace"> </span><span id="cardCritLBrac" style="font-weight:200"></span><span id="cardCritComp" style="font-weight:200"></span><span id="cardCritRBrac" style="font-weight:200"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">ADS Crit Chance: <span style="font-weight:400" id="cardADSCrit"></span><span style="font-weight:400" id="cardADSCrit%"></span><span id="cardADSCritArrow"></span><span id="cardADSCritspace"> </span><span id="cardADSCritLBrac" style="font-weight:200"></span><span id="cardADSCritComp" style="font-weight:200"></span><span id="cardADSCritRBrac" style="font-weight:200"></span></p>
-                        
-                        <p style="width: 70%; border-radius: 0px 15px 0px 0px; margin-top: 5px; margin-left: -5px; margin-bottom: -30px; padding-left: 10px; padding-bottom: 2px; background-color:#FDB142; color:black; font-weight: 600;">Loot</p>
-
-                        <div style="margin-left: -5px; margin-top: 30px; height: 0px; padding: 0px; border-top: 1px;"></div>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; margin-top: 10px; padding: 0em">Money Drops: <span style="font-weight:400" id="cardMoney"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Organ Drops: <span style="font-weight:400" id="cardOrgan"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Loot Chance: <span style="font-weight:400" id="cardLoot"></span><span style="font-weight:400" id="cardLoot%"></span><span id="cardLootArrow"></span><span id="cardLootspace"> </span><span id="cardLootLBrac" style="font-weight:200"></span><span id="cardLootComp" style="font-weight:200"></span><span id="cardLootRBrac" style="font-weight:200"></span></p>
-
-                        <p style="width: 70%; border-radius: 0px 15px 0px 0px; margin-top: 5px; margin-left: -5px; margin-bottom: -30px; padding-left: 10px; padding-bottom: 2px; background-color:#FDB142; color:black; font-weight: 600;">Movement</p>
-
-                        <div style="margin-left: -5px; margin-top: 30px; height: 0px; padding: 0px; border-top: 1px;"></div>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; margin-top: 10px; padding: 0em">Weapon Weight: <span style="font-weight:400" id="cardWeight"></span><span id="cardWeightArrow"></span><span id="cardWeightspace"> </span><span id="cardWeightLBrac" style="font-weight:200"></span><span id="cardWeightComp" style="font-weight:200"></span><span id="cardWeightRBrac" style="font-weight:200"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Move Speed: <span style="font-weight:400" id="cardMove"></span><span style="font-weight:400" id="cardMove%"></span><span id="cardMoveArrow"></span><span id="cardMovespace"> </span><span id="cardMoveLBrac" style="font-weight:200"></span><span id="cardMoveComp" style="font-weight:200"></span><span id="cardMoveRBrac" style="font-weight:200"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Jump Power: <span style="font-weight:400" id="cardJump"></span><span id="cardJump%"></span><span id="cardJumpArrow"></span><span id="cardJumpspace"> </span><span id="cardJumpLBrac" style="font-weight:200"></span><span id="cardJumpComp" style="font-weight:200"></span><span id="cardJumpRBrac" style="font-weight:200"></span></p>
-                        
-                        <p style="width: 70%; border-radius: 0px 15px 0px 0px; margin-top: -1px; margin-left: -5px; margin-bottom: -1px; padding-left: 10px; padding-bottom: 4px; padding-top: 3px; background-color:#FDB142; color:black; font-weight: 600;">Bullet Behavior</p>
                     </div>
-                    <div style="border-right: 1px solid #FDB142; border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142; grid-column: 3 / span 2; height:307px; background-color: #FDB142;">
-                            <div id="boxglowthing" style="display:flex; height: 174px; justify-content: center; align-items: center; padding: 20px; border: 1px solid #FDB142; border-bottom: 2px solid #FDB142; background-color: none; border-radius: 25px; box-shadow: inset 2px 2px 10px 0px #222222; position: inherited">
-                                <div id="otherboxthing" style="border: 0px; background-color:#22222200; z-index: 98">
-                                    <img id="weaponimage" style="position: absolute; max-width:500px; height: auto; max-height: 180px; margin-bottom: 0px; z-index: 7; " src="" alt=":">
-                                    <img id="weaponimage2" style="position: relative; max-width: 500px; height: auto; max-height: 180px; margin-bottom: 0px; z-index: 6;" src="" alt=":">
-                                </div>
-                                <div style="border: 0px; border-left: 2px solid black; position: absolute; z-index: 10; height: auto; padding: 108px; padding-left: 356px; background-color: transparent; border-radius: 0px 0px 0px 15px; margin-top: 50px">
-
-                                </div>
-                                <div style="position: absolute; margin-left: -27%; margin-bottom: 8.3%; padding: 1.15%; border: 0px; border-right: 2px solid black; border-top: 2px solid black; background-color: transparent;">
-
+                    <div style=" padding-left: 0px; height: 100%; grid-template-columns: 100%; width: 100%; border-left: 0px; border-top: 2px solid black; padding-bottom: 0px;">
+                        <p style="width: 8em; border-radius: 0px 0px 15px 0px; margin-top: -12px; margin-left: 0px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; background-color:#FDB142; color:black; font-weight: 600; position-anchor: --crit-anchor; position: absolute; left: anchor(left); top: anchor(top); border-right: 2px solid black; border-bottom: 2px solid black">Crits</p>
+                        <div style="border: 0px; border-bottom: 1px solid #FDB142; margin: 0px; padding: 0px; padding-top: 25px; padding-left: 5px; padding-bottom: 40px; height: 10%; anchor-name: --crit-anchor; ">
+                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; margin-top: -4%; padding: 0em">Base Crit Chance: <span style="font-weight:400" id="cardCrit"></span><span style="font-weight:400" id="cardCrit%"></span><span id="cardCritArrow"></span><span id="cardCritspace"> </span><span id="cardCritLBrac" style="font-weight:200"></span><span id="cardCritComp" style="font-weight:200"></span><span id="cardCritRBrac" style="font-weight:200"></span></p>
+                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">ADS Crit Chance: <span style="font-weight:400" id="cardADSCrit"></span><span style="font-weight:400" id="cardADSCrit%"></span><span id="cardADSCritArrow"></span><span id="cardADSCritspace"> </span><span id="cardADSCritLBrac" style="font-weight:200"></span><span id="cardADSCritComp" style="font-weight:200"></span><span id="cardADSCritRBrac" style="font-weight:200"></span></p>                            
                         </div>
-                                
-                            </div>
+                        <div style="border: 0px; border-bottom: 1px solid #FDB142; margin: 0px; padding: 0px; padding-top: 2; padding-left: 5px; padding-bottom: 10px; height: 30%; anchor-name: --loot-anchor;">
+                            <p style="width: 8em; border-radius: 0px 15px 0px 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; margin-bottom: 1px; background-color:#FDB142; color:black; font-weight: 600; border-right: 2px solid black; border-top: 2px solid black; position-anchor: --loot-anchor; position: absolute; left: anchor(left); bottom: anchor(top);">Loot</p>
+
+                            <!--<div style="margin-left: -5px; margin-top: 30px; height: 0px; padding: 0px; border-top: 1px; "></div>-->
+                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; margin-top: 0px; padding: 0em; padding-top: 0px; ">Money Drops: <span style="font-weight:400" id="cardMoney"></span></p>
+                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">Organ Drops: <span style="font-weight:400" id="cardOrgan"></span></p>
+                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">Loot Chance: <span style="font-weight:400" id="cardLoot"></span><span style="font-weight:400" id="cardLoot%"></span><span id="cardLootArrow"></span><span id="cardLootspace"> </span><span id="cardLootLBrac" style="font-weight:200"></span><span id="cardLootComp" style="font-weight:200"></span><span id="cardLootRBrac" style="font-weight:200"></span></p>
+
+                            <p style="width: 8em; border-radius: 0px 15px 0px 0px; margin-top: 5px; margin-left: 0px; margin-bottom: 1px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; background-color:#FDB142; color:black; font-weight: 600; border-right: 2px solid black; border-top: 2px solid black; position-anchor: --movement-anchor; position: absolute; left: anchor(left); bottom: anchor(top);">Movement</p>
+                        </div>
+                        <div style="border: 0px; margin: 0px; padding: 0px; padding-top: 0px; padding-left: 5px; anchor-name: --movement-anchor; ">
+                            <!--<div style="margin-left: -5px; margin-top: 30px; height: 0px; padding: 0px; border-top: 1px; anchor-name: --movement-anchor;"></div>-->
+                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; margin-top: 0px; padding: 0em; padding-top: 0px;">Weapon Weight: <span style="font-weight:400" id="cardWeight"></span><span id="cardWeightArrow"></span><span id="cardWeightspace"> </span><span id="cardWeightLBrac" style="font-weight:200"></span><span id="cardWeightComp" style="font-weight:200"></span><span id="cardWeightRBrac" style="font-weight:200"></span></p>
+                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">Move Speed: <span style="font-weight:400" id="cardMove"></span><span style="font-weight:400" id="cardMove%"></span><span id="cardMoveArrow"></span><span id="cardMovespace"> </span><span id="cardMoveLBrac" style="font-weight:200"></span><span id="cardMoveComp" style="font-weight:200"></span><span id="cardMoveRBrac" style="font-weight:200"></span></p>
+                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">Jump Power: <span style="font-weight:400" id="cardJump"></span><span id="cardJump%"></span><span id="cardJumpArrow"></span><span id="cardJumpspace"> </span><span id="cardJumpLBrac" style="font-weight:200"></span><span id="cardJumpComp" style="font-weight:200"></span><span id="cardJumpRBrac" style="font-weight:200"></span></p>
                             
-                            <div class="containerattach" style="border:0px; height: 92px; margin-top: 9px; ">
-                                <div style="border-left:0px; z-index: 4; margin-right:10px">
-                                    <div style="background-color: #FDB142; margin-top: -12px; border-bottom: 2px solid black; border-left: 2px solid black; margin-left: -12px; box-shadow: -10px 10px 10px rgba(26, 26, 26, 0.205); padding: 0px; border-radius: 0px 0px 0px 15px">
-                                        <p style="width: 110px; text-align: center; color: black; margin-top: 5px; margin-bottom: 5px;">Barrel</p>
-                                    </div>
-                                    <p id="barrelname" style="color: white; margin-top: 10px; margin-bottom: 0px; font-size: 0.9em; width: 110px; margin-left: -10px; text-align: center;"></p>
-                                    <p id="barreldesc" style="color: white; margin-top: 0px; margin-bottom: -10px; margin-left: -5px; margin-right: -5px; font-size: 0.6em; font-weight:300; width: 100px; text-align: center;"></p>
-                                </div>
-                                <div style="z-index: 3; margin-right:10px">
-                                    <div style="background-color: #FDB142; border-left: 1px solid black; margin-top: -12px; border-bottom: 2px solid black; box-shadow: -10px 10px 10px rgba(26, 26, 26, 0.205);padding: 0px">
-                                        <p style="width: 110px; text-align: center; color: black; margin-top: 5px; margin-bottom: 5px;">Optic</p>
-                                    </div>
-                                    <p id="opticname" style="color: white; margin-top: 10px; margin-bottom: 0px; font-size: 0.9em; width: 110px; margin-left: -10px; text-align: center;"></p>
-                                    <p id="opticdesc" style="color: white; margin-top: 0px; margin-bottom: 0px; margin-left: -5px; margin-right: -5px; font-size: 0.6em; font-weight:300; width: 100px; text-align: center;"></p>
-                                </div>
-                                <div style="z-index: 2; ; margin-right:0px">
-                                    <div style="background-color: #FDB142; border-left: 1px solid black; margin-top: -12px; border-bottom: 2px solid black; box-shadow: -10px 10px 10px rgba(26, 26, 26, 0.205); padding: 0px">
-                                        <p style="width: 110px; text-align: center; color: black; margin-top: 5px; margin-bottom: 5px;">Laser</p>
-                                    </div>
-                                    <p id="lasername" style="color: white; margin-top: 10px; margin-bottom: 0px; font-size: 0.9em; width: 110px; margin-left: -10px; text-align: center;"></p>
-                                    <p id="laserdesc" style="color: white; margin-top: 0px; margin-bottom: 0px; margin-left: -5px; margin-right: -5px;font-size: 0.6em; font-weight:300; width: 100px; text-align: center;"></p>
-                                </div>
-                                <div style="border-right:0px; z-index: 1; margin-left:0px">
-                                    <div style="background-color: #FDB142; border-left: 1px solid black; margin-top: -12px; border-bottom: 2px solid black; box-shadow: -10px 10px 10px rgba(26, 26, 26, 0.205); padding: 0px; ">
-                                        <p style="width: 130px; text-align: center; color: black; margin-top: 5px; margin-bottom: 5px;">Firemode</p>
-                                    </div>
-                                    <p id="firemodename" style="color: white; margin-top: 10px; margin-bottom: 0px; font-size: 0.9em; width: 130px; margin-left: -10px; text-align: center;"></p>
-                                    <p id="firemodedesc" style="color: white; margin-top: 0px; margin-bottom: 0px; margin-left: -5px; margin-right: -5px; font-size: 0.6em; font-weight:300; width: 120px; text-align: center;"></p>
+                            <p style="width: 8em; border-radius: 0px 15px 0px 0px; margin-top: -3px; margin-left: 0px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; background-color:#FDB142; color:black; font-weight: 600; position-anchor: --bullet-anchor; border-right: 2px solid black; border-top: 2px solid black; position: absolute; left: anchor(left); bottom: anchor(top);">Bullet Behavior</p>
+                        </div>
+                    </div>
+                    <div style="border-right: 1px solid #FDB142; border-left: 2px solid black; border-bottom: 2px solid black; height:100%; background-color: #FDB142; padding-left: 3px; padding-bottom: 0px; padding-right: 3px; padding-top: 0px;  z-index: 10; margin: 0px">
+                            <div id="boxglowthing" style="display:flex; height: 154px; justify-content: center; align-items: center; padding: 20px; border: 1px solid #FDB142; border-bottom: 2px solid #FDB142; background-color: none; border-radius: 25px; box-shadow: inset 2px 2px 10px 0px #222222; position: inherited">
+                                <div id="otherboxthing" style="border: 0px; background-color:#22222200; z-index: 98">
+                                    <img id="weaponimage" style="position: relative; max-width:500px; height: auto; max-height: 180px; margin-bottom: 0px; z-index: 7; " src="" alt=":">
+                                    <!--<img id="weaponimage2" style="position: relative; max-width: 500px; height: auto; max-height: 180px; margin-bottom: 0px; z-index: 6;" src="" alt=":">-->
                                 </div>
                             </div>
-                    </div>
-                    <div style="border-right: 1px solid #FDB142; border-left: 0px; border-bottom: 0px; grid-column: 3 / span 2;">
-                    </div>
-                    <div style="height:194px; border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142; border-radius: 0px 0px 0px 15px; padding-left: 5px"">
+                            <div class="containerattach" style="border:0px; height: 35%; margin-top: 0px; padding: 0px; margin-bottom: 0px; padding-left: 0px;">
+
+                                <div style="border-left:0px; z-index: 4; margin-right: 0px; padding: 0px; height: 100%; margin-bottom: 0px; width: 100%; ">
+                                    <div style="background-color: #FDB142; border-right: 1px solid #FDB142; margin-top: 0px; border-bottom: 2px solid black; margin-left: 0px; margin-right: 0px; box-shadow: -10px 10px 10px rgba(26, 26, 26, 0.205); padding: 0px; width: 100%;">
+                                        <p style="width: auto; text-align: center; color: black; margin-top: 5px; margin-bottom: 5px; padding-right: 0px; padding-left: 0px; margin-left: 0px; margin-right: 0px;">Barrel</p>
+                                    </div>
+                                    <p id="barrelname" style="color: white; margin-top: 0px; margin-bottom: 0px; font-size: 0.9em; width: 100%; margin-left: 0px; text-align: center; padding-right: 0px; padding-left: 0px"></p>
+                                    <p id="barreldesc" style="color: white; margin-top: 0px; margin-bottom: -10px; margin-left: 0px; margin-right: 0px; font-size: 0.6em; font-weight:300; width: 100%; text-align: center; padding-right: 0px; padding-left: 0px"></p>
+                                </div>
+
+                                <div style="z-index: 3; margin-right:0px; height: 100%; padding: 0px; margin-bottom: 0px; width: 100%; border-right: 1px solid #FDB142">
+                                    <div style="background-color: #FDB142; border-left: 1px solid black; margin-top: 0px; border-bottom: 2px solid black; box-shadow: -10px 10px 10px rgba(26, 26, 26, 0.205);padding: 0px">
+                                        <p style="width: auto; text-align: center; color: black; margin-top: 5px; margin-bottom: 5px; padding-right: 0px; padding-left: 0px; margin-left: 0px; margin-right: 0px">Optic</p>
+                                    </div>
+                                    <p id="opticname" style="color: white; margin-top: 0px; margin-bottom: 0px; font-size: 0.9em; width: auto; margin-left: 0px; text-align: center; padding-right: 0px; padding-left: 0px"></p>
+                                    <p id="opticdesc" style="color: white; margin-top: 0px; margin-bottom: -10px; margin-left: 0px; margin-right: 0px; font-size: 0.6em; font-weight:300; width: auto; text-align: center; padding-right: 0px; padding-left: 0px"></p>
+                                </div>
+
+                                <div style="z-index: 2; margin-right:0px; height: 100%; padding: 0px; margin-bottom: 0px; width: 100%;">
+                                    <div style="background-color: #FDB142; border-left: 1px solid black; margin-top: 0px; border-bottom: 2px solid black; border-right: 1px solid #FDB142; box-shadow: -10px 10px 10px rgba(26, 26, 26, 0.205); padding: 0px">
+                                        <p style="width: auto; text-align: center; color: black; margin-top: 5px; margin-bottom: 5px; padding-right: 0px; padding-left: 0px; margin-left: 0px; margin-right: 0px">Laser</p>
+                                    </div>
+                                    <p id="lasername" style="color: white; margin-top: 0px; margin-bottom: 0px; font-size: 0.9em; width: auto; margin-left: 0px; text-align: center; padding-right: 0px; padding-left: 0px"></p>
+                                    <p id="laserdesc" style="color: white; margin-top: 0px; margin-bottom: -10px; margin-left: 0px; margin-right: 0px; font-size: 0.6em; font-weight:300; width: auto; text-align: center; padding-right: 0px; padding-left: 0px"></p>
+                                </div>
+
+                                <div style="border-right:0px; z-index: 1; margin-left:0px; height: 100%; padding: 0px; width: 100%;">
+                                    <div style="background-color: #FDB142; border-left: 1px solid black; margin-top: 0px; border-bottom: 2px solid black; box-shadow: -10px 10px 10px rgba(26, 26, 26, 0.205); padding: 0px; ">
+                                        <p style="width: auto; text-align: center; color: black; margin-top: 5px; margin-bottom: 5px; padding-right: 0px; padding-left: 0px; margin-left: 0px; margin-right: 0px">Firemode</p>
+                                    </div>
+                                    <p id="firemodename" style="color: white; margin-top: 0px; margin-bottom: 0px; font-size: 0.9em; width: auto; margin-left: 0px; text-align: center; padding-right: 0px; padding-left: 0px"></p>
+                                    <p id="firemodedesc" style="color: white; margin-top: 0px; margin-bottom: -10px; margin-left: 0px; margin-right: 0px; font-size: 0.6em; font-weight:300; width: auto; text-align: center; padding-right: 0px; padding-left: 0px"></p>
+                                </div>
+
+                            </div>
+                </div>
+                    <div style="height:194px; border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142; border-radius: 0px 0px 0px 15px; padding-left: 5px; margin-top: 0px; anchor-name: --weapon-anchor;">
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Ammo Consume Chance: <span style="font-weight:400" id="cardAmmo"></span><span style="font-weight:400" id="cardAmmo%"></span><span id="cardAmmoArrow"></span><span id="cardAmmospace"> </span><span id="cardAmmoLBrac" style="font-weight:200"></span><span id="cardAmmoComp" style="font-weight:200"></span><span id="cardAmmoRBrac" style="font-weight:200"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Extra Ammo Use Chance: <span style="font-weight:400" id="cardExtra"></span><span style="font-weight:400" id="cardExtra%"></span></span><span id="cardExtraArrow"></span><span id="cardExtraspace"> </span><span style="font-weight:300"id="cardExtraLBrac"></span><span style="font-weight:300" id="cardExtraComp"></span><span style="font-weight:300" id="cardExtraRBrac"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Recoil: <span style="font-weight:400" id="cardRecoil"></span><span id="cardRecoilArrow"></span><span id="cardRecoilspace"> </span><span id="cardRecoilLBrac" style="font-weight:200"></span><span id="cardRecoilComp" style="font-weight:200"></span><span id="cardRecoilRBrac" style="font-weight:200"></span></p>
@@ -1808,18 +1822,15 @@
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Reload Time: <span style="font-weight:400" id="cardReloadTime"></span><span id="cardReloadTimeArrow"></span><span id="cardReloadTimespace"> </span><span id="cardReloadTimeLBrac" style="font-weight:200"></span><span id="cardReloadTimeComp" style="font-weight:200"></span><span id="cardReloadTimeRBrac" style="font-weight:200"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Can ADS: <span style="font-weight:400" id="cardCanADS"></span></span><span id="cardCanADSArrow"></span><span id="cardCanADSspace"> </span><span style="font-weight:300"id="cardCanADSLBrac"></span><span style="font-weight:300" id="cardCanADSComp"></span><span style="font-weight:300" id="cardCanADSRBrac"></span></p>
                     </div>
-                    <div style="height:194px; border-bottom: 1px solid #FDB142; padding-left: 5px">
+                    <div style="height:194px; border-bottom: 1px solid #FDB142; padding-left: 5px; margin-top: 0px; anchor-name: --bullet-anchor; border-left: 0px;">
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bounces: <span style="font-weight:400" id="cardBounces"></span><span id="cardBouncesArrow"></span><span id="cardBouncesspace"> </span><span id="cardBouncesLBrac" style="font-weight:200"></span><span id="cardBouncesComp" style="font-weight:200"></span><span id="cardBouncesRBrac" style="font-weight:200"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Penetrations: <span style="font-weight:400" id="cardPen"></span><span id="cardPenArrow"></span><span id="cardPenspace"> </span><span id="cardPenLBrac" style="font-weight:200"></span><span id="cardPenComp" style="font-weight:200"></span><span id="cardPenRBrac" style="font-weight:200"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Drag: <span style="font-weight:400" id="cardDrag"></span><span id="cardDragArrow"></span><span id="cardDragspace"> </span><span id="cardDragLBrac" style="font-weight:200"></span><span id="cardDragComp" style="font-weight:200"></span><span id="cardDragRBrac" style="font-weight:200"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bullet Speed: <span style="font-weight:400" id="cardSpeed"></span><span style="font-weight:400" id="cardSpeed%"></span><span id="cardSpeedArrow"></span><span id="cardSpeedspace"> </span><span id="cardSpeedLBrac" style="font-weight:200"></span><span id="cardSpeedComp" style="font-weight:200"></span><span id="cardSpeedRBrac" style="font-weight:200"></span></p>
                         <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bullet Drop: <span style="font-weight:400" id="cardDrop"></span><span id="cardDropArrow"></span><span id="cardDropspace"> </span><span id="cardDropLBrac" style="font-weight:200"></span><span id="cardDropComp" style="font-weight:200"></span><span id="cardDropRBrac" style="font-weight:200"></span></p>
                     </div>
-                    <div style="height:194px; border-bottom: 1px solid #FDB142; border-top: 0px; margin-top: -9px; padding-left: 5px">
-                        <h3>Scroll Notes</h3>
-                    </div>
-                    <div style="height:194px; border-bottom: 1px solid #FDB142; border-right: 1px solid #FDB142; border-radius: 0px 0px 15px; padding-left: 5px">
-                        <h3>Equipment stats</h3>
+                    <div style="height:auto; border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: 2px solid black; padding-left: 5px; z-index: 1;">
+                        <h3>Scroll Notes & Equipment stats</h3>
                     </div>
                 </div>
 
@@ -1840,20 +1851,20 @@
                 <div style="margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;">
                     <p id="cardOilName5">Enchantment Card 5</p>
                 </div>
-                <div style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-right:3px; height: 90px">
-                    <p id="cardOilDesc1" style="margin: 0px; font-size: 0.75em">desc</p>
+                <div class="oilimages" id="cardOil1Img" style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-right:3px; height: 90px">
+                    <p id="cardOilDesc1" style="margin: 0px; font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>
                 </div>
-                <div style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
-                    <p id="cardOilDesc2" style="margin: 0px; padding-left: -100px; padding-right: -100px; margin-left: -10px; margin-right: -10px;font-size: 0.75em">desc</p>
+                <div class="oilimages" id="cardOil2Img"style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
+                    <p id="cardOilDesc2" style="margin: 0px; padding-left: -100px; padding-right: -100px; margin-left: -10px; margin-right: -10px;font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>
                 </div>
-                <div style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
-                    <p id="cardOilDesc3" style="margin: 0px; font-size: 0.75em">desc</p>
+                <div class="oilimages" id="cardOil3Img" style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
+                    <p id="cardOilDesc3" style="margin: 0px; font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>
                 </div>
-                <div style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
-                    <p id="cardOilDesc4" style="margin: 0px; padding-left: -10px; padding-right: -10px; font-size: 0.75em">desc</p>
+                <div class="oilimages" id="cardOil4Img" style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
+                    <p id="cardOilDesc4" style="margin: 0px; padding-left: -10px; padding-right: -10px; font-size: 0.75em; text-shadow: 1px 1px 1px white;;">desc</p>
                 </div>
-                <div style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px;">
-                    <p id="cardOilDesc5" style="margin: 0px; font-size: 0.75em">desc</p>
+                <div class="oilimages" id="cardOil5Img" style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px;">
+                    <p id="cardOilDesc5" style="margin: 0px; font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>
                 </div>
             </div>
             

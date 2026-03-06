@@ -725,20 +725,24 @@ function rollOnSelect(single, selector, selID, value) {
     oilCalcs(oilStatModifiers);
 }
 
-function addName(name, value, type, desc, descID) {
+function addName(name, value, type, desc, descID, i) {
     if (type === "weapon") {
         let weapReplace = name.replaceAll(" ", "_");
-        document.getElementById("weaponimage").src = `.\\Images\\${weapReplace}.png`;
-        document.getElementById("weaponimage2").src = `.\\Images\\${weapReplace}.png`;
+        document.getElementById("weaponimage").src = `.\\Images\\Weapons\\${weapReplace}.png`;
+        //document.getElementById("weaponimage2").src = `.\\Images\\Weapons\\${weapReplace}.png`;
         document.getElementById("cardWeaponName").textContent = name;
     }
     if (type === "oil") {
         let oilReplace = desc.replaceAll('\n', '<br>');
         document.getElementById(value).textContent = name;
         document.getElementById(descID).innerHTML = oilReplace;
+        
+        if (i+1) {
+            document.getElementById(`cardOil${i + 1}Img`).style.backgroundImage = `url('./Images/Enchantments/${name}.webp')`;
+        }
     }
     if (type === "attachment") {
-        let attachReplace = desc.replaceAll('\n', '<br>');
+        let attachReplace = desc.replaceAll('\\n', '<br>');
         document.getElementById(value).textContent = name;
         document.getElementById(descID).innerHTML = attachReplace;
     }
@@ -2031,7 +2035,7 @@ function oilCalcs(calcOil) {
             document.getElementById("cardSpreadComp").textContent = "20 -> 2";
         }
         else {
-            document.getElementById("cardSpready").textContent = weapon.Spread;
+            document.getElementById("cardSpready").textContent = spreadRound;
             document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
         }
 
@@ -2047,7 +2051,7 @@ function oilCalcs(calcOil) {
             document.getElementById("cardSpreadComp").textContent = "20 -> 2";
         }
         else {
-            document.getElementById("cardSpready").textContent = weapon.Spread;
+            document.getElementById("cardSpready").textContent = spreadRound;
             document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
         }
         document.getElementById("cardSpready").style.color = "Lime";
@@ -2061,7 +2065,7 @@ function oilCalcs(calcOil) {
             document.getElementById("cardSpready").textContent = "REV: 20 -> 2";
         }
         else {
-            document.getElementById("cardSpready").textContent = weapon.Spread;
+            document.getElementById("cardSpready").textContent = spreadRound;
         }
     }
     //#endregion
@@ -2379,22 +2383,22 @@ function rollOils(single, selector, selID, value) {
             case "static-no-selection":
                 rolledOils[i] = getOilByName("None");
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-choose":
                 rolledOils[i] = getOilByName("None");
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case null:
                 rolledOils[i] = getOilByName("None");
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "":
                 rolledOils[i] = getOilByName("None");
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-all":
                 if (single === "true" && counter != selID) {
@@ -2468,7 +2472,7 @@ function rollOils(single, selector, selID, value) {
                 }
                 
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-ammo-consume-chance":
                 if (single === "true" && counter != selID) {
@@ -2538,7 +2542,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread1, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-base-crit-chance":
                 if (single === "true" && counter != selID) {
@@ -2608,7 +2612,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread2, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-bullet-bounce":
                 if (single === "true" && counter != selID) {
@@ -2678,7 +2682,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread3, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-bullet-speed":
                 if (single === "true" && counter != selID) {
@@ -2748,7 +2752,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread4, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-add-damage":
                 if (single === "true" && counter != selID) {
@@ -2818,7 +2822,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread5, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-mult-damage":
                 if (single === "true" && counter != selID) {
@@ -2888,7 +2892,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread6, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-max-durability":
                 if (single === "true" && counter != selID) {
@@ -2957,7 +2961,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread7, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-penetration":
                 if (single === "true" && counter != selID) {
@@ -3027,7 +3031,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread8, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-projectiles":
                 if (single === "true" && counter != selID) {
@@ -3097,7 +3101,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread9, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-recoil":
                 if (single === "true" && counter != selID) {
@@ -3167,7 +3171,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread10, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-reload-speed":
                 if (single === "true" && counter != selID) {
@@ -3237,7 +3241,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread11, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-rpm":
                 if (single === "true" && counter != selID) {
@@ -3307,7 +3311,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread12, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             case "static-random-spread":
                 if (single === "true" && counter != selID) {
@@ -3377,7 +3381,7 @@ function rollOils(single, selector, selID, value) {
                     oilsSpread.splice(indexSpread13, 1);
                 }
                 oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                 break;
             default:
                     const selectedIndex = selectedOil[i].selectedIndex;
@@ -3442,7 +3446,7 @@ function rollOils(single, selector, selID, value) {
                     let selOil = getOilByName(selectedText);
                     rolledOils[i] = selOil;
                     oilStats(rolledOils[i]);
-                    addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`);
+                    addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
                     break;
         }
         checkNone(rolledOils[i].Name, i, selector);

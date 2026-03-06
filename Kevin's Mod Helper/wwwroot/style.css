@@ -22,14 +22,21 @@
   to {box-shadow: inset 2px 2px 5px 0px #000000, inset 0px 0px 10px 0px #FDB142, inset 0px 0px 80px 70px #2D424B;}
 }
 
+@keyframes hoverGun {
+     100% {transform: translate(0px, -5px) scale(150%);}
+}
+
 @keyframes breatheGun {
-    from {transform: translate(0px, 0px) scale(70%); -webkit-filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270); filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270);}
-    to {transform: translate(0px, -5px) scale(100%); -webkit-filter: drop-shadow(0px 1px #FDB142) drop-shadow(0px -1px #FDB142) drop-shadow(1px 0px #FDB142) drop-shadow(-1px 0px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6); filter: drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6);}
+    from {transform: translate(0px, 0px) scale(70%); -webkit-filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270) drop-shadow(0px 10px 10px #000000); filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270) drop-shadow(0px 10px 10px #000000);}
+    to {transform: translate(0px, -5px) scale(71%); -webkit-filter: drop-shadow(0px 1px #FDB142) drop-shadow(0px -1px #FDB142) drop-shadow(1px 0px #FDB142) drop-shadow(-1px 0px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6) drop-shadow(0px 50px 20px #000000be); filter: drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6) drop-shadow(0px 50px 20px #000000be);}
 }
 
 @keyframes gunShadow {
-    from {transform: translate(0px, 0px) scale(70%);; -webkit-filter: drop-shadow(0px 10px 10px #000000); filter: drop-shadow(0px 10px 10px #000000);}
-    to {transform: translate(0px, -5px) scale(100%);; -webkit-filter: drop-shadow(0px 50px 20px #000000be); filter: drop-shadow(0px 50px 20px #000000be);}
+    /*from {transform: translate(0px, 0px) scale(70%);; -webkit-filter: drop-shadow(0px 10px 10px #000000); filter: drop-shadow(0px 10px 10px #000000);}*/
+    /*100% {transform: translate(0px, -5px) scale(75%);; -webkit-filter: drop-shadow(0px 50px 20px #000000be); filter: drop-shadow(0px 50px 20px #000000be);}*/
+    0% {transform: translate(0px, 0px) scale(70%); -webkit-filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270) drop-shadow(0px 10px 10px #000000); filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270) drop-shadow(0px 10px 10px #000000);}
+    100% {transform: translate(0px, -5px) scale(72%); -webkit-filter: drop-shadow(0px 1px #FDB142) drop-shadow(0px -1px #FDB142) drop-shadow(1px 0px #FDB142) drop-shadow(-1px 0px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6) drop-shadow(0px 50px 20px #000000be); filter: drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6) drop-shadow(0px 50px 20px #000000be);}
+
 }
 
 @keyframes insideShadow {
@@ -64,7 +71,7 @@ body {
     }
 
     h1 {
-        font-size: 5em;
+        font-size: 4em;
         font-family: "Fredoka", sans-serif;
         margin-bottom: 8px;
         margin-top: -8px;
@@ -278,23 +285,43 @@ select.custom-dropdown {
     position: relative;
 }
 
+.oilimages {
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
 #weaponimage {
     animation: breatheGun;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
+    transform: scale(1);
+    transition: transform 5s ease-in-out;
+}
+
+#otherboxthing:hover #weaponimage{
+    transform: translate(0px, -5px) scale(130%);
+    
 }
 
 #otherboxthing:hover {
-    -webkit-animation:spin 0.08s linear infinite;
-    -moz-animation:spin 0.08s linear infinite;
-    animation:spin 0.08s linear infinite;
+    transform: translate(0px, -5px) scale(130%);
+    animation-fill-mode: forwards;
+}
+#otherboxthing {
+     transform: scale(1);
+     transition: transform 2s ease-in-out;
 }
 
+/*.shake-little {
+    transform: scale(1);
+     transition: transform 2s ease-in-out;
+}
 
-
+.shake-little:hover {
+    transform: translate(0px, -5px) scale(150%);
+    animation-fill-mode: forwards;
+}
 
 #weaponimage2 {
     animation: gunShadow;
@@ -304,8 +331,7 @@ select.custom-dropdown {
     animation-fill-mode: both;
     animation-play-state: running;
     
-}
-
+}*/
 
 mark {
     background:#555;
