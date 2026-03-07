@@ -58,6 +58,16 @@
 
 }
 
+@keyframes titleGlow {
+    from {text-shadow: 0px 0px 7px #FDB142;}
+    to {text-shadow: 0px 0px 11px #FDB142;}
+}
+
+@keyframes toolGlow {
+    from {text-shadow: 0px 0px 6px white;}
+    to {text-shadow: 0px 0px 8px white;}
+}
+
 .compLabel {
     color: #89a0b8
 }
@@ -75,15 +85,39 @@ body {
         font-variation-settings: "wdth" 100;
     }
 
+#infoboxText {
+    position: absolute;
+    font-family: "Doto", sans-serif;
+    color: #ffffff;
+    text-align: left;
+    margin: 0px;
+    margin-left: 10px;
+    max-height: 100%;
+    line-height: 15px;
 
+    animation: toolGlow;
+    animation-duration: 0.01s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+}
 
     h1 {
-        font-size: 4em;
-        font-family: "Fredoka", sans-serif;
-        margin-bottom: 8px;
-        margin-top: -8px;
+        font-size: 2em;
+        font-family: "Doto", sans-serif;
         font-weight: 300;
         color: #FDB142;
+        padding: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        animation: titleGlow;
+        animation-duration: 0.01s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease;
     }
 
     h2 {
@@ -92,6 +126,12 @@ body {
         color: #FDB142;
         margin-top: 5px;
         margin-bottom: 10px;
+        
+    }
+
+    i {
+        width: 100%;
+        height: 100%;
     }
 
     h3 {
@@ -135,6 +175,7 @@ body {
         width: 100%;
         height: 100%;
         color: black;
+        box-shadow: 5px 5px 5px black;
         border-radius: 5px;
     }
 
@@ -142,18 +183,23 @@ body {
             font-family: "Fredoka", sans-serif;
             font-weight: 500;
             background-color: #FDB142;
-            border: 3px solid rgb(54, 54, 54);
+            border: 3px solid rgb(253, 255, 149);
             width: 100%;
-            color: black;
+            box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+            color: rgb(253, 255, 149);
+            border-radius: 5px;
+            text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
         }
 
         button:active {
             font-family: "Fredoka", sans-serif;
             font-weight: 500;
-            background-color: darkslategray;
-            border: 3px solid black;
+            background-color: #e4a039;
+            border: 0px;
             width: 100%;
-            color: black;
+            box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+            text-shadow: 2px 2px 0px black;
+            color: transparent;
         }
 
 #weapons {

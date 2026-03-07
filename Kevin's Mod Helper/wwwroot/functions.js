@@ -378,20 +378,25 @@ function shuffle(array) {
     }
 }
 
-function oilPreview(hovOil) {
-    let oil = getOilByName(hovOil);
-    let oilName = oil.Name;
-    let oilDesc = oil.StatDescription;
-    let oilReplace = oilDesc.replace("\n", '<br>');
-    let infobox = document.getElementById("oil1infobox");
-    let infoboxtext = document.getElementById("oil1infoboxtext");
-    infobox.hidden = "";
-    document.getElementById("oil1infoboxname").textContent = oilName;
-    infoboxtext.innerHTML = oilReplace;
+function infoboxHover(elementType, value, name, data) {
+    document.getElementById("mainHeader").innerHTML = "";
+    switch (elementType) {
+        case "button":
+            document.getElementById("infoboxText").innerHTML = data;
+            break;
+        case "option":
+            break;
+        case "stat":
+            break;
+        case "dropdown":
+            break;
+        default:
+    }
 }
 
-function oilPreviewClear() {
-    let infobox = document.getElementById("oil1infobox");
+function infoboxClear() {
+    document.getElementById("infoboxText").innerHTML = "";
+    document.getElementById("mainHeader").innerHTML = "Kevin's Build Helper";
     infobox.hidden = "hidden";
 }
 

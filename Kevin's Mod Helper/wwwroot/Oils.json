@@ -261,7 +261,7 @@
       "SpreadMult": 0,
       "Drag": 7,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+120%</span>\nDrag: <span style='color:red'>+700%</span>\nDamage: <span style='color:red'>-15</span>",
+      "StatDescription": "Reload Speed: <span style='color:green'>+120%</span>\nDrag: <span style='color:red'>+7</span>\nDamage: <span style='color:red'>-15</span>",
       "DurLossMult": 0
     },
     "Altruistic Oil": {
@@ -4206,7 +4206,7 @@
       "SpreadMult": 0,
       "Drag": 40,
       "DurabilityUsage": 1,
-      "StatDescription": "Projectiles: <span style='color:green'>+300%</span>\nDamage: <span style='color:red'>-30%</span>\nBullet Speed: <span style='color:red'>-90%</span>\nDrag: <span style='color:red'>+4000%</span>\nSpread: <span style='color:red'>+4</span>",
+      "StatDescription": "Projectiles: <span style='color:green'>+300%</span>\nDamage: <span style='color:red'>-30%</span>\nBullet Speed: <span style='color:red'>-90%</span>\nDrag: <span style='color:red'>+40</span>\nSpread: <span style='color:red'>+4</span>",
       "DurLossMult": 0
     },
     "Micro Wing Oil": {
