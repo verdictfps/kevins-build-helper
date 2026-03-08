@@ -210,7 +210,7 @@
                     <h2>Select a WEAPON</h2>
                 </div>
                 <div style="margin-top: 10px; margin-right: 5px; border: 0px; padding: 0px; padding-left: 3%">
-                    <select name="weaponscollection" id="weapons" data-accordion="true" data-collapsible="true" data-collapsed="true" class="custom-dropdown" onchange="rollOnSelectWep('true', this.selectedIndex, 'weapons', this.value)">
+                    <select name="weaponscollection" id="weapons" data-accordion="true" data-collapsible="true" data-collapsed="true" class="custom-dropdown" ">
                         <option value="random-all-weapons">Random - All</option>
                         <optgroup label="Pistols">
                             <option value="random-pistols">Random Pistol</option>
@@ -228,9 +228,9 @@
                         </optgroup>
                         <optgroup label="Revolvers">
                             <option value="random-revolvers">Random Revolver</option>
-                            <option value="357-balthazar">.357 Balthazar</option>
+                            <option value=".357-balthazar">.357 Balthazar</option>
                             <option value="palehorse-topclipper">Palehorse Topclipper</option>
-                            <option value="snut-38">Snut .38</option>
+                            <option value="snut-.38">Snut .38</option>
                             <option value="wyatt-pulsar">Wyatt PULSAR</option>
                         </optgroup>
                         <optgroup label="Shotguns">
@@ -298,15 +298,16 @@
                         <div>
                             <h2 style="width: 100%;">Enchantments</h2>
                         </div>
-                        <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">
-                            <button id="buttonRandomAll" style="width: 30px; height: 30px;" onmouseover="infoboxHover('button', 0, 'buttonRandomAll', 'Randomly rolls all oils')" onmouseout="infoboxClear()" onclick="onGenerate('button')"><i class="fa-solid fa-shuffle"></i></button>
+                        <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px; ">
+                            <button id="buttonRandomAll" style="width: 30px; height: 30px; padding: 0px; margin-right: 15px;" onmouseover="infoboxHover('button', 0, 'buttonRandomAll', 'Sets all enchantment slots to Random - All and rerolls all slots')" onmouseout="infoboxClear()" onclick="randomizeAllOils()"><span class="fa-solid fa-shuffle" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
+                            <button id="buttonResetAll" style="width: 30px; height: 30px; padding: 0px;" onmouseover="infoboxHover('button', 0, 'buttonResetAll', 'Resets all enchantment slots')" onmouseout="infoboxClear()" onclick="resetAllOils()"><span class="fa-solid fa-arrow-rotate-left" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
                         </div>
                     
                 </div>
                     
                     <div id="width-grid" style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" for="enchantments" style="font-size:1em;">Oil 1 OR Scroll</span>
-                        <select name="oils1selectorcollection" id="oils1selector" class="custom-dropdown" onchange="rollOnSelect('true', 'oils1selector', 1, this.value)" style="font-size:0.7em; width:100%">
+                        <select name="oils1selectorcollection" id="oils1selector" class="custom-dropdown" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select an enchantment...</option>
                             <option value="static-no-selection">None</option>
                             <option value="static-random-all">Random Oil - All</option>
@@ -583,7 +584,7 @@
                     </div>
                     <div style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" for="enchantments" style="font-size:1em;">Oil 2</span>
-                        <select name="oils2selectorcollection" id="oils2selector" class="custom-dropdown" onchange="rollOnSelect('true', 'oils2selector', 2, this.value)" style="font-size:0.7em; width:100%">
+                        <select name="oils2selectorcollection" id="oils2selector" class="custom-dropdown" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select an oil...</option>
                             <option value="static-no-selection">None</option>
                             <option value="static-random-all">Random Oil - All</option>
@@ -860,7 +861,7 @@
                     </div>
                     <div style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" for="enchantments" style="font-size:1em;">Oil 3</span>
-                        <select name="oils3selectorcollection" id="oils3selector" class="custom-dropdown" onchange="rollOnSelect('true', 'oils3selector', 3, this.value)" style="font-size:0.7em; width:100%">
+                        <select name="oils3selectorcollection" id="oils3selector" class="custom-dropdown" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select an oil...</option>
                             <option value="static-no-selection">None</option>
                             <option value="static-random-all">Random Oil - All</option>
@@ -1137,7 +1138,7 @@
                     </div>
                     <div style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" for="enchantments" style="font-size:1em;">Oil 4</span>
-                        <select name="oils4selectorcollection" id="oils4selector" class="custom-dropdown" onchange="rollOnSelect('true', 'oils4selector', 4, this.value)" style="font-size:0.7em; width:100%">
+                        <select name="oils4selectorcollection" id="oils4selector" class="custom-dropdown" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select an oil...</option>
                             <option value="static-no-selection">None</option>
                             <option value="static-random-all">Random Oil - All</option>
@@ -1414,7 +1415,7 @@
                     </div>
                     <div style="background-color: #FDB142; border:2px solid black;">
                         <span class="label oils" for="enchantments" style="font-size:1em;">Oil 5</span>
-                        <select name="oils5selectorcollection" id="oils5selector" class="custom-dropdown" onchange="rollOnSelect('true', 'oils5selector', 5, this.value)" style="font-size:0.7em; width:100%">
+                        <select name="oils5selectorcollection" id="oils5selector" class="custom-dropdown" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select an oil...</option>
                             <option value="static-no-selection">None</option>
                             <option value="static-random-all">Random Oil - All</option>
@@ -1694,7 +1695,7 @@
                     <div style="border:0px;"><h2>Attachments</h2></div>
                     <div id="barrelselectdiv" style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" style="font-size:1em; padding-bottom: 55px;" for="enchantments">Barrel</span>
-                        <select name="barrelselectorcollection" id="barrelselector" class="custom-dropdown" style="font-size:0.7em; width:100%" onchange="rollOnSelectAttach('true', 'barrel')">
+                        <select name="barrelselectorcollection" id="barrelselector" class="custom-dropdown" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select a barrel...</option>
                             <option id="na" hidden value="static-not-applicable">Not applicable to weapon</option>
                             <optgroup label="Barrels" data-collapsible="false" id="barrelGroup">
@@ -1719,7 +1720,7 @@
                     </div>
                     <div style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" style="font-size:1em;" for="enchantments">Optic</span>
-                        <select name="opticselectorcollection" id="opticselector" class="custom-dropdown" style="font-size:0.7em; width:100%" onchange="rollOnSelectAttach('true', 'optic')">
+                        <select name="opticselectorcollection" id="opticselector" class="custom-dropdown" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select an optic...</option>
                             <optgroup label="Optics" data-collapsible="false" id="opticGroup">
                                 <option value="none">None</option>
@@ -1736,7 +1737,7 @@
                     </div>
                     <div style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" style="font-size:1em;" for="enchantments">Laser</span>
-                        <select name="laserselectorcollection" id="laserselector" class="custom-dropdown" style="font-size:0.7em; width:100%" onchange="rollOnSelectAttach('true', 'laser')">
+                        <select name="laserselectorcollection" id="laserselector" class="custom-dropdown" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select a laser...</option>
                             <optgroup label="Lasers" data-collapsible="false" id="laserGroup">
                                 <option value="none">None</option>
@@ -1749,7 +1750,7 @@
                     </div>
                     <div style="background-color: #FDB142; margin-bottom: 5px; border:2px solid black;">
                         <span class="label oils" style="font-size:1em;" for="enchantments">Firemode</span>
-                        <select name="firemodeselectorcollection" id="firemodeselector" class="custom-dropdown" style="font-size:0.7em; width:100%" onchange="rollOnSelectAttach('true', 'firemode')">
+                        <select name="firemodeselectorcollection" id="firemodeselector" class="custom-dropdown" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select a firemode...</option>
                             <option hidden value="static-not-applicable">Not applicable to weapon</option>
                             <optgroup label="Firemodes" data-collapsible="false" id="firemodeGroup">
@@ -1761,7 +1762,7 @@
                     </div>
                     <div style="background-color: #FDB142; border:2px solid black;">
                         <span class="label oils" style="font-size:1em;" for="enchantments">Rechamber</span>
-                        <select name="chamberselectorcollection" id="chamberselector" class="custom-dropdown" style="font-size:0.7em; width:100%" onchange="rollOnSelectAttach('true', 'chamber')">
+                        <select name="chamberselectorcollection" id="chamberselector" class="custom-dropdown" style="font-size:0.7em; width:100%">
                             <option selected hidden value="static-choose">Select a rechamber...</option>
                             <option hidden value="static-not-applicable">Not applicable to weapon</option>
                             <optgroup label="Rechambers" data-collapsible="false" id="rechamberGroup">
@@ -1778,14 +1779,14 @@
                 </div>
             </div>
         </div>
-        <div style="border:0px; margin-left:-5px; margin-bottom: -50px;">
+        <div  style="border:0px; margin-left:-5px; margin-bottom: -50px;">
             <div class="containerheaders" style="border: 0px; padding-bottom: 0px; height: 12%; margin-right: -4px; margin-left: -20px; padding-top: 0px;">
                 <div style="width: 50%">
                     
                 </div>
                 <div style="width: 50%; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; height: 100%;">
                     <div class="containertooltip" style="border: 3px solid #FDB142; width: 100%; height: 92%; align-items: center; padding: 0px; anchor-name: --tooltip-anchor; box-shadow: inset 2px 2px 15px rgb(216, 216, 216);">
-                        <p id="infoboxText"></p>
+                        <p style="padding-right: 40px;" id="infoboxText"></p>
                         <h1 id="mainHeader" style="position: fixed; width: auto; position-anchor: --tooltip-anchor; left: anchor(left); top: anchor(top); bottom: anchor(bottom); right: anchor(right);">Kevin's Build Helper</h1>
                         <div >
 
@@ -1804,18 +1805,18 @@
             
             <div class="containerweapon" style="margin-bottom:20px; border: 0px solid #FDB142; padding: 0px; border-radius: 15px 0px;">
                 <p style="text-align: left; font-weight: 500; font-size: 2em; margin: 0px; padding-bottom: 5px; padding-left: 15px; padding-top: 5px;" id="cardWeaponName">Weapon</p>
-                <div class="resultcontainer" style="border-radius: 15px; border: 0px; padding: 0px">
+                <div id="weaponstatcontainer" class="resultcontainer" style="border-radius: 15px; border: 0px; padding: 0px">
                     <div style="height:325px; border-left: 1px solid #FDB142; padding-left: 5px; height: 100%; padding-top: 5px; padding-bottom: 15px">
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em;">Type: <span style="font-weight:400" id="cardWeaponType"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Ammo Type: <span style="font-weight:400" id="cardAmmoType"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Damage: <span style="font-weight:400" id="cardDamage"></span><span style="font-weight:400" id="cardDamageArrow"></span><span>  </span><span style="font-weight:400" id="cardDamageX"></span><span> </span><span style="font-weight:400" id="cardDamageProj"></span><span>  </span><span style="font-weight:400" id="cardDamageProjArrow"></span><span>  </span><span style="font-weight:400" id="cardDamageMultiX"></span><span>  </span><span style="font-weight:200" id="cardDamageMulti"></span><span style="font-weight:400" id="cardDamageLRArrow">  </span><span style="font-weight:300" class="compLabel" id="cardDamageLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDamageComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageMultiComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageMultiXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageProjComp"></span><span class="compLabel" style="font-weight:300" id="cardDamageRBrac"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">⤷ Total: <span style="font-weight:400" id="cardDamageTotal"></span><span style="font-weight:400" id="cardDamageTotalArrow"></span><span> </span><span style="font-weight:400" id="cardDamageTotalLRArrow">  </span><span style="font-weight:300" class="compLabel" id="cardDamageTotalLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDamageTotalComp"></span><span style="font-weight:300" class="compLabel" id="cardDamageTotalRBrac"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">RPM: <span style="font-weight:400" id="cardRPM"></span><span id="cardRPMArrow"></span><span id="cardRPMspace"> </span><span style="font-weight:300" class="compLabel" id="cardRPMLBrac"></span><span style="font-weight:300" class="compLabel" id="cardRPMComp"></span><span style="font-weight:300" class="compLabel" id="cardRPMRBrac"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Mag Size: <span style="font-weight:400" id="cardMagSize"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Spread: <span style="font-weight:400" id="cardSpready"></span><span id="cardSpreadArrow"></span><span id="cardSpreadspace"> </span><span id="cardSpreadLBrac" class="compLabel" style="font-weight:200"></span><span id="cardSpreadComp" class="compLabel" style="font-weight:200"></span><span id="cardSpreadRBrac" class="compLabel" style="font-weight:200"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Durability: <span style="font-weight:400" id="cardDurability"></span></span><span id="cardDurabilityArrow"></span><span id="cardDurabilityspace"> </span><span style="font-weight:300" class="compLabel" id="cardDurabilityLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDurabilityComp"></span><span style="font-weight:300" class="compLabel" id="cardDurabilityRBrac"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Durability Usage: <span style="font-weight:400" id="cardDurabilityUsage"></span></p></span><span id="cardDurabilityUsageArrow"></span><span id="cardDurabilityUsagespace"> </span><span style="font-weight:300" class="compLabel" id="cardDurabilityUsageLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDurabilityUsageComp"></span><span style="font-weight:300" class="compLabel" id="cardDurabilityUsageRBrac"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin-top: -15px; padding: 0em">Shots to Break: <span style="font-weight:400" id="cardShotsToBreak"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em;">Type: <span style="font-weight:400" id="cardWeaponType"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Ammo Type: <span style="font-weight:400" id="cardAmmoType"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Damage: <span style="font-weight:400" id="cardDamage"></span><span style="font-weight:400" id="cardDamageArrow"></span><span>  </span><span style="font-weight:400" id="cardDamageX"></span><span> </span><span style="font-weight:400" id="cardDamageProj"></span><span>  </span><span style="font-weight:400" id="cardDamageProjArrow"></span><span>  </span><span style="font-weight:400" id="cardDamageMultiX"></span><span>  </span><span style="font-weight:200" id="cardDamageMulti"></span><span style="font-weight:400" id="cardDamageLRArrow">  </span><span style="font-weight:300" class="compLabel" id="cardDamageLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDamageComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageMultiComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageMultiXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageProjComp"></span><span class="compLabel" style="font-weight:300" id="cardDamageRBrac"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">⤷ Total: <span style="font-weight:400" id="cardDamageTotal"></span><span style="font-weight:400" id="cardDamageTotalArrow"></span><span> </span><span style="font-weight:400" id="cardDamageTotalLRArrow">  </span><span style="font-weight:300" class="compLabel" id="cardDamageTotalLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDamageTotalComp"></span><span style="font-weight:300" class="compLabel" id="cardDamageTotalRBrac"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">RPM: <span style="font-weight:400" id="cardRPM"></span><span id="cardRPMArrow"></span><span id="cardRPMspace"> </span><span style="font-weight:300" class="compLabel" id="cardRPMLBrac"></span><span style="font-weight:300" class="compLabel" id="cardRPMComp"></span><span style="font-weight:300" class="compLabel" id="cardRPMRBrac"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Mag Size: <span style="font-weight:400" id="cardMagSize"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Spread: <span style="font-weight:400" id="cardSpready"></span><span id="cardSpreadArrow"></span><span id="cardSpreadspace"> </span><span id="cardSpreadLBrac" class="compLabel" style="font-weight:200"></span><span id="cardSpreadComp" class="compLabel" style="font-weight:200"></span><span id="cardSpreadRBrac" class="compLabel" style="font-weight:200"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Durability: <span style="font-weight:400" id="cardDurability"></span></span><span id="cardDurabilityArrow"></span><span id="cardDurabilityspace"> </span><span style="font-weight:300" class="compLabel" id="cardDurabilityLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDurabilityComp"></span><span style="font-weight:300" class="compLabel" id="cardDurabilityRBrac"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Durability Usage: <span style="font-weight:400" id="cardDurabilityUsage"></span></p></span><span id="cardDurabilityUsageArrow"></span><span id="cardDurabilityUsagespace"> </span><span style="font-weight:300" class="compLabel" id="cardDurabilityUsageLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDurabilityUsageComp"></span><span style="font-weight:300" class="compLabel" id="cardDurabilityUsageRBrac"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin-top: -15px; padding: 0em">Shots to Break: <span style="font-weight:400" id="cardShotsToBreak"></span></p>
                         
                         <p style="width: 10em; border-radius: 0px 15px 0px 0px; margin-top: -3px; margin-left: 1px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; background-color:#FDB142; color:black; font-weight: 600; height: auto; position-anchor: --weapon-anchor; border-right: 2px solid black; border-top: 2px solid black; position: absolute; left: anchor(left); bottom: anchor(top);">Weapon Behavior</p>
 
@@ -1823,24 +1824,23 @@
                     <div style=" padding-left: 0px; height: 100%; grid-template-columns: 100%; width: 100%; border-left: 0px; border-top: 2px solid black; padding-bottom: 0px;">
                         <p style="width: 8em; border-radius: 0px 0px 15px 0px; margin-top: -12px; margin-left: 0px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; background-color:#FDB142; color:black; font-weight: 600; position-anchor: --crit-anchor; position: absolute; left: anchor(left); top: anchor(top); border-right: 2px solid black; border-bottom: 2px solid black">Crits</p>
                         <div style="border: 0px; border-bottom: 1px solid #FDB142; margin: 0px; padding: 0px; padding-top: 25px; padding-left: 5px; padding-bottom: 40px; height: 10%; anchor-name: --crit-anchor; ">
-                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; margin-top: -4%; padding: 0em">Base Crit Chance: <span style="font-weight:400" id="cardCrit"></span><span style="font-weight:400" id="cardCrit%"></span><span id="cardCritArrow"></span><span id="cardCritspace"> </span><span id="cardCritLBrac" class="compLabel" style="font-weight:200"></span><span id="cardCritComp" class="compLabel" style="font-weight:200"></span><span id="cardCritRBrac" class="compLabel" style="font-weight:200"></span></p>
-                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">ADS Crit Chance: <span style="font-weight:400" id="cardADSCrit"></span><span style="font-weight:400" id="cardADSCrit%"></span><span id="cardADSCritArrow"></span><span id="cardADSCritspace"> </span><span id="cardADSCritLBrac" class="compLabel" style="font-weight:200"></span><span id="cardADSCritComp" class="compLabel" style="font-weight:200"></span><span id="cardADSCritRBrac" class="compLabel" style="font-weight:200"></span></p>                            
+                            <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; margin-top: -4%; padding: 0em">Base Crit Chance: <span style="font-weight:400" id="cardCrit"></span><span style="font-weight:400" id="cardCrit%"></span><span id="cardCritArrow"></span><span id="cardCritspace"> </span><span id="cardCritLBrac" class="compLabel" style="font-weight:200"></span><span id="cardCritComp" class="compLabel" style="font-weight:200"></span><span id="cardCritRBrac" class="compLabel" style="font-weight:200"></span></p>
+                            <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">ADS Crit Chance: <span style="font-weight:400" id="cardADSCrit"></span><span style="font-weight:400" id="cardADSCrit%"></span><span id="cardADSCritArrow"></span><span id="cardADSCritspace"> </span><span id="cardADSCritLBrac" class="compLabel" style="font-weight:200"></span><span id="cardADSCritComp" class="compLabel" style="font-weight:200"></span><span id="cardADSCritRBrac" class="compLabel" style="font-weight:200"></span></p>                            
                         </div>
                         <div style="border: 0px; border-bottom: 1px solid #FDB142; margin: 0px; padding: 0px; padding-top: 2; padding-left: 5px; padding-bottom: 10px; height: 30%; anchor-name: --loot-anchor;">
                             <p style="width: 8em; border-radius: 0px 15px 0px 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; margin-bottom: 1px; background-color:#FDB142; color:black; font-weight: 600; border-right: 2px solid black; border-top: 2px solid black; position-anchor: --loot-anchor; position: absolute; left: anchor(left); bottom: anchor(top);">Loot</p>
 
                             <!--<div style="margin-left: -5px; margin-top: 30px; height: 0px; padding: 0px; border-top: 1px; "></div>-->
-                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; margin-top: 0px; padding: 0em; padding-top: 0px; ">Money Drops: <span style="font-weight:400" id="cardMoney"></span></p>
-                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">Organ Drops: <span style="font-weight:400" id="cardOrgan"></span></p>
-                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">Loot Chance: <span style="font-weight:400" id="cardLoot"></span><span style="font-weight:400" id="cardLoot%"></span><span id="cardLootArrow"></span><span id="cardLootspace"> </span><span id="cardLootLBrac" class="compLabel" style="font-weight:200"></span><span id="cardLootComp" class="compLabel" style="font-weight:200"></span><span id="cardLootRBrac" class="compLabel" style="font-weight:200"></span></p>
+                            <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; margin-top: 0px; padding: 0em; padding-top: 0px; ">Money Drops: <span style="font-weight:400" id="cardMoney"></span></p>
+                            <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">Organ Drops: <span style="font-weight:400" id="cardOrgan"></span></p>
+                            <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">Loot Chance: <span style="font-weight:400" id="cardLoot"></span><span style="font-weight:400" id="cardLoot%"></span><span id="cardLootArrow"></span><span id="cardLootspace"> </span><span id="cardLootLBrac" class="compLabel" style="font-weight:200"></span><span id="cardLootComp" class="compLabel" style="font-weight:200"></span><span id="cardLootRBrac" class="compLabel" style="font-weight:200"></span></p>
 
                             <p style="width: 8em; border-radius: 0px 15px 0px 0px; margin-top: 5px; margin-left: 0px; margin-bottom: 1px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; background-color:#FDB142; color:black; font-weight: 600; border-right: 2px solid black; border-top: 2px solid black; position-anchor: --movement-anchor; position: absolute; left: anchor(left); bottom: anchor(top);">Movement</p>
                         </div>
                         <div style="border: 0px; margin: 0px; padding: 0px; padding-top: 0px; padding-left: 5px; anchor-name: --movement-anchor; ">
-                            <!--<div style="margin-left: -5px; margin-top: 30px; height: 0px; padding: 0px; border-top: 1px; anchor-name: --movement-anchor;"></div>-->
-                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; margin-top: 0px; padding: 0em; padding-top: 0px;">Weapon Weight: <span style="font-weight:400" id="cardWeight"></span><span id="cardWeightArrow"></span><span id="cardWeightspace"> </span><span id="cardWeightLBrac" class="compLabel" style="font-weight:200"></span><span id="cardWeightComp" class="compLabel" style="font-weight:200"></span><span id="cardWeightRBrac" class="compLabel" style="font-weight:200"></span></p>
-                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">Move Speed: <span style="font-weight:400" id="cardMove"></span><span style="font-weight:400" id="cardMove%"></span><span id="cardMoveArrow"></span><span id="cardMovespace"> </span><span id="cardMoveLBrac" class="compLabel" style="font-weight:200"></span><span id="cardMoveComp" class="compLabel" style="font-weight:200"></span><span id="cardMoveRBrac" class="compLabel" style="font-weight:200"></span></p>
-                            <p style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">Jump Power: <span style="font-weight:400" id="cardJump"></span><span id="cardJump%"></span><span id="cardJumpArrow"></span><span id="cardJumpspace"> </span><span id="cardJumpLBrac" class="compLabel" style="font-weight:200"></span><span id="cardJumpComp" class="compLabel" style="font-weight:200"></span><span id="cardJumpRBrac" class="compLabel" style="font-weight:200"></span></p>
+                            <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; margin-top: 0px; padding: 0em; padding-top: 0px;">Weapon Weight: <span style="font-weight:400" id="cardWeight"></span><span id="cardWeightArrow"></span><span id="cardWeightspace"> </span><span id="cardWeightLBrac" class="compLabel" style="font-weight:200"></span><span id="cardWeightComp" class="compLabel" style="font-weight:200"></span><span id="cardWeightRBrac" class="compLabel" style="font-weight:200"></span></p>
+                            <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">Move Speed: <span style="font-weight:400" id="cardMove"></span><span style="font-weight:400" id="cardMove%"></span><span id="cardMoveArrow"></span><span id="cardMovespace"> </span><span id="cardMoveLBrac" class="compLabel" style="font-weight:200"></span><span id="cardMoveComp" class="compLabel" style="font-weight:200"></span><span id="cardMoveRBrac" class="compLabel" style="font-weight:200"></span></p>
+                            <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 25px; margin: 0em; padding: 0em">Jump Power: <span style="font-weight:400" id="cardJump"></span><span id="cardJump%"></span><span id="cardJumpArrow"></span><span id="cardJumpspace"> </span><span id="cardJumpLBrac" class="compLabel" style="font-weight:200"></span><span id="cardJumpComp" class="compLabel" style="font-weight:200"></span><span id="cardJumpRBrac" class="compLabel" style="font-weight:200"></span></p>
                             
                             <p style="width: 8em; border-radius: 0px 15px 0px 0px; margin-top: -3px; margin-left: 0px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; background-color:#FDB142; color:black; font-weight: 600; position-anchor: --bullet-anchor; border-right: 2px solid black; border-top: 2px solid black; position: absolute; left: anchor(left); bottom: anchor(top);">Bullet Behavior</p>
                         </div>
@@ -1849,7 +1849,6 @@
                             <div id="boxglowthing" style="display:flex; anchor-name: --glow-anchor; height: 154px; justify-content: center; align-items: center; padding: 20px; border: 1px solid #FDB142; border-bottom: 2px solid #FDB142; background-color: none; border-radius: 25px; box-shadow: inset 2px 2px 10px 0px #222222; position: inherited">
                                 <div id="otherboxthing" style="border: 0px; background-color:#22222200; z-index: 98; padding: 0px; width: inherit; position: absolute; position-anchor: --glow-anchor; top: anchor(top); bottom: anchor(bottom);align-content: center;">
                                     <img id="weaponimage" style="position: relative; max-width:500px; height: auto; max-height: 180px; margin: 0px; margin-right: -100px; margin-left: -100px; z-index: 7; padding: 0px" src="" alt=":">
-                                    <!--<img id="weaponimage2" style="position: relative; max-width: 500px; height: auto; max-height: 180px; margin-bottom: 0px; z-index: 6;" src="" alt=":">-->
                                 </div>
                             </div>
                             <div class="containerattach" style="border:0px; height: 35%; margin-top: 0px; padding: 0px; margin-bottom: 0px; padding-left: 0px;">
@@ -1889,20 +1888,20 @@
                             </div>
                 </div>
                     <div style="height:194px; border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142; border-radius: 0px 0px 0px 15px; padding-left: 5px; margin-top: 0px; anchor-name: --weapon-anchor;">
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Ammo Consume Chance: <span style="font-weight:400" id="cardAmmo"></span><span style="font-weight:400" id="cardAmmo%"></span><span id="cardAmmoArrow"></span><span id="cardAmmospace"> </span><span id="cardAmmoLBrac" class="compLabel" style="font-weight:200"></span><span class="compLabel" id="cardAmmoComp" style="font-weight:200"></span><span class="compLabel" id="cardAmmoRBrac" style="font-weight:200"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Extra Ammo Use Chance: <span style="font-weight:400" id="cardExtra"></span><span style="font-weight:400" id="cardExtra%"></span></span><span id="cardExtraArrow"></span><span id="cardExtraspace"> </span><span style="font-weight:300" class="compLabel" id="cardExtraLBrac"></span><span style="font-weight:300" class="compLabel" id="cardExtraComp"></span><span class="compLabel" style="font-weight:300" id="cardExtraRBrac"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Recoil: <span style="font-weight:400" id="cardRecoil"></span><span id="cardRecoilArrow"></span><span id="cardRecoilspace"> </span><span id="cardRecoilLBrac" style="font-weight:200" class="compLabel" "></span><span id="cardRecoilComp" style="font-weight:200" class="compLabel" ></span><span id="cardRecoilRBrac" style="font-weight:200" class="compLabel" ></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Reload Speed: <span style="font-weight:400" id="cardReloadSpeed"></span><span style="font-weight:400" id="cardReloadSpeed%"></span></span><span id="cardReloadSpeedArrow"></span><span id="cardReloadSpeedspace"> </span><span style="font-weight:300" class="compLabel" id="cardReloadSpeedLBrac"></span><span style="font-weight:300" class="compLabel"  id="cardReloadSpeedComp"></span><span style="font-weight:300" class="compLabel" id="cardReloadSpeedRBrac"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Reload Time: <span style="font-weight:400" id="cardReloadTime"></span><span id="cardReloadTimeArrow"></span><span id="cardReloadTimespace"> </span><span id="cardReloadTimeLBrac" style="font-weight:200" class="compLabel" ></span><span id="cardReloadTimeComp" style="font-weight:200" class="compLabel" ></span><span id="cardReloadTimeRBrac" style="font-weight:200" class="compLabel" ></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Can ADS: <span style="font-weight:400" id="cardCanADS"></span><span id="cardCanADSArrow"></span><span id="cardCanADSspace"> </span><span style="font-weight:300" class="compLabel" id="cardCanADSLBrac"></span><span style="font-weight:300" class="compLabel"  id="cardCanADSComp"></span><span style="font-weight:300" class="compLabel" id="cardCanADSRBrac"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Firemode: <span style="font-weight:400" id="cardFiremode"></span><span id="cardFiremodespace"> </span><span style="font-weight:300" class="compLabel" id="cardFiremodeLBrac"></span><span class="compLabel" style="font-weight:300" id="cardFiremodeComp"></span><span class="compLabel" style="font-weight:300" id="cardFiremodeRBrac"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Ammo Consume Chance: <span style="font-weight:400" id="cardAmmo"></span><span style="font-weight:400" id="cardAmmo%"></span><span id="cardAmmoArrow"></span><span id="cardAmmospace"> </span><span id="cardAmmoLBrac" class="compLabel" style="font-weight:200"></span><span class="compLabel" id="cardAmmoComp" style="font-weight:200"></span><span class="compLabel" id="cardAmmoRBrac" style="font-weight:200"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Extra Ammo Use Chance: <span style="font-weight:400" id="cardExtra"></span><span style="font-weight:400" id="cardExtra%"></span></span><span id="cardExtraArrow"></span><span id="cardExtraspace"> </span><span style="font-weight:300" class="compLabel" id="cardExtraLBrac"></span><span style="font-weight:300" class="compLabel" id="cardExtraComp"></span><span class="compLabel" style="font-weight:300" id="cardExtraRBrac"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Recoil: <span style="font-weight:400" id="cardRecoil"></span><span id="cardRecoilArrow"></span><span id="cardRecoilspace"> </span><span id="cardRecoilLBrac" style="font-weight:200" class="compLabel" "></span><span id="cardRecoilComp" style="font-weight:200" class="compLabel" ></span><span id="cardRecoilRBrac" style="font-weight:200" class="compLabel" ></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Reload Speed: <span style="font-weight:400" id="cardReloadSpeed"></span><span style="font-weight:400" id="cardReloadSpeed%"></span></span><span id="cardReloadSpeedArrow"></span><span id="cardReloadSpeedspace"> </span><span style="font-weight:300" class="compLabel" id="cardReloadSpeedLBrac"></span><span style="font-weight:300" class="compLabel"  id="cardReloadSpeedComp"></span><span style="font-weight:300" class="compLabel" id="cardReloadSpeedRBrac"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Reload Time: <span style="font-weight:400" id="cardReloadTime"></span><span id="cardReloadTimeArrow"></span><span id="cardReloadTimespace"> </span><span id="cardReloadTimeLBrac" style="font-weight:200" class="compLabel" ></span><span id="cardReloadTimeComp" style="font-weight:200" class="compLabel" ></span><span id="cardReloadTimeRBrac" style="font-weight:200" class="compLabel" ></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Can ADS: <span style="font-weight:400" id="cardCanADS"></span><span id="cardCanADSArrow"></span><span id="cardCanADSspace"> </span><span style="font-weight:300" class="compLabel" id="cardCanADSLBrac"></span><span style="font-weight:300" class="compLabel"  id="cardCanADSComp"></span><span style="font-weight:300" class="compLabel" id="cardCanADSRBrac"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Firemode: <span style="font-weight:400" id="cardFiremode"></span><span id="cardFiremodespace"> </span><span style="font-weight:300" class="compLabel" id="cardFiremodeLBrac"></span><span class="compLabel" style="font-weight:300" id="cardFiremodeComp"></span><span class="compLabel" style="font-weight:300" id="cardFiremodeRBrac"></span></p>
                     </div>
                     <div style="height:194px; border-bottom: 1px solid #FDB142; padding-left: 5px; margin-top: 0px; anchor-name: --bullet-anchor; border-left: 0px;">
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bounces: <span style="font-weight:400" id="cardBounces"></span><span id="cardBouncesArrow"></span><span id="cardBouncesspace"> </span><span id="cardBouncesLBrac" class="compLabel" style="font-weight:200"></span><span id="cardBouncesComp" class="compLabel" style="font-weight:200"></span><span id="cardBouncesRBrac" class="compLabel" style="font-weight:200"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Penetrations: <span style="font-weight:400" id="cardPen"></span><span id="cardPenArrow"></span><span id="cardPenspace"> </span><span id="cardPenLBrac" class="compLabel" style="font-weight:200"></span><span id="cardPenComp" class="compLabel" style="font-weight:200"></span><span id="cardPenRBrac" class="compLabel" style="font-weight:200"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Drag: <span style="font-weight:400" id="cardDrag"></span><span id="cardDragArrow"></span><span id="cardDragspace"> </span><span id="cardDragLBrac" class="compLabel" style="font-weight:200"></span><span id="cardDragComp" class="compLabel" style="font-weight:200"></span><span id="cardDragRBrac" class="compLabel" style="font-weight:200"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bullet Speed: <span style="font-weight:400" id="cardSpeed"></span><span style="font-weight:400" id="cardSpeed%"></span><span id="cardSpeedArrow"></span><span id="cardSpeedspace"> </span><span id="cardSpeedLBrac" class="compLabel" style="font-weight:200"></span><span id="cardSpeedComp" class="compLabel" style="font-weight:200"></span><span id="cardSpeedRBrac" class="compLabel" style="font-weight:200"></span></p>
-                        <p style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bullet Drop: <span style="font-weight:400" id="cardDrop"></span><span id="cardDropArrow"></span><span id="cardDropspace"> </span><span id="cardDropLBrac" class="compLabel" style="font-weight:200"></span><span id="cardDropComp" class="compLabel" style="font-weight:200"></span><span id="cardDropRBrac" class="compLabel" style="font-weight:200"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bounces: <span style="font-weight:400" id="cardBounces"></span><span id="cardBouncesArrow"></span><span id="cardBouncesspace"> </span><span id="cardBouncesLBrac" class="compLabel" style="font-weight:200"></span><span id="cardBouncesComp" class="compLabel" style="font-weight:200"></span><span id="cardBouncesRBrac" class="compLabel" style="font-weight:200"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Penetrations: <span style="font-weight:400" id="cardPen"></span><span id="cardPenArrow"></span><span id="cardPenspace"> </span><span id="cardPenLBrac" class="compLabel" style="font-weight:200"></span><span id="cardPenComp" class="compLabel" style="font-weight:200"></span><span id="cardPenRBrac" class="compLabel" style="font-weight:200"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Drag: <span style="font-weight:400" id="cardDrag"></span><span id="cardDragArrow"></span><span id="cardDragspace"> </span><span id="cardDragLBrac" class="compLabel" style="font-weight:200"></span><span id="cardDragComp" class="compLabel" style="font-weight:200"></span><span id="cardDragRBrac" class="compLabel" style="font-weight:200"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bullet Speed: <span style="font-weight:400" id="cardSpeed"></span><span style="font-weight:400" id="cardSpeed%"></span><span id="cardSpeedArrow"></span><span id="cardSpeedspace"> </span><span id="cardSpeedLBrac" class="compLabel" style="font-weight:200"></span><span id="cardSpeedComp" class="compLabel" style="font-weight:200"></span><span id="cardSpeedRBrac" class="compLabel" style="font-weight:200"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bullet Drop: <span style="font-weight:400" id="cardDrop"></span><span id="cardDropArrow"></span><span id="cardDropspace"> </span><span id="cardDropLBrac" class="compLabel" style="font-weight:200"></span><span id="cardDropComp" class="compLabel" style="font-weight:200"></span><span id="cardDropRBrac" class="compLabel" style="font-weight:200"></span></p>
                     </div>
                     <div style="height:auto; border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: 2px solid black; padding-left: 5px; z-index: 1;">
                         <h3>Scroll Notes & Equipment stats</h3>
@@ -1911,20 +1910,20 @@
 
             </div>
             <div class="oilresultcontainer" style="margin-top: -10px;">
-                <div style="margin-right:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;">
-                    <p id="cardOilName1">Enchantment Card 1</p>
+                <div id="oilstatcontainer1" class="animtest" style="margin-right:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset; align-items: center; justify-content: center; display: flex; ">
+                    <p id="cardOilName1" style="max-width: 150px;">Enchantment Card 1</p>
                 </div>
-                <div style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;">
-                    <p id="cardOilName2">Enchantment Card 2</p>
+                <div style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset; align-items: center; justify-content: center; display: flex; ">
+                    <p id="cardOilName2" style="max-width: 150px;">Enchantment Card 2</p>
                 </div>
-                <div style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;">
-                    <p id="cardOilName3">Enchantment Card 3</p>
+                <div style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset; align-items: center; justify-content: center; display: flex; ">
+                    <p id="cardOilName3" style="max-width: 150px;">Enchantment Card 3</p>
                 </div>
-                <div style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;">
-                    <p id="cardOilName4">Enchantment Card 4</p>
+                <div style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset; align-items: center; justify-content: center; display: flex; ">
+                    <p id="cardOilName4" style="max-width: 150px;">Enchantment Card 4</p>
                 </div>
-                <div style="margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset;">
-                    <p id="cardOilName5">Enchantment Card 5</p>
+                <div style="margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset; align-items: center; justify-content: center; display: flex; ">
+                    <p id="cardOilName5" style="max-width: 150px;">Enchantment Card 5</p>
                 </div>
                 <div class="oilimages" id="cardOil1Img" style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-right:3px; height: 90px">
                     <p id="cardOilDesc1" style="margin: 0px; font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>

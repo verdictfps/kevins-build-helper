@@ -8,8 +8,8 @@ const data = JSON.parse(fs.readFileSync(inputFile, "utf8"));
 for (const key in data.Oil) {
     const oil = data.Oil[key];
 
-    if (!("DurLossMult" in oil)) {
-        oil.DurLossMult = 0;
+    if (!("Firemode" in oil)) {
+        oil.Firemode = "None";
     }
 }
 

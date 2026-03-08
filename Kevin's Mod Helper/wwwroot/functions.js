@@ -342,6 +342,7 @@ let oil5 = null;
 let rolledOils = [];
 let weaponName = null;
 let chamberData = null;
+let oilDefault = null;
 let oilStatModifiers = null;
 let selectedBarrel = null;
 let selectedOptic = null;
@@ -363,6 +364,103 @@ let oilsRecoil = null;
 let oilsReload = null;
 let oilsRPM = null;
 let oilsSpread = null;
+
+const coreSelections = new Map();
+
+function resetCoreSelections() {
+    coreSelections.set("weapon", {Name: "P38 Dirk", Value: "p38-dirk"});
+    coreSelections.set("ench1", {Name: "None", Value: "static-no-selection"});
+    coreSelections.set("ench2", {Name: "None", Value: "static-no-selection"});
+    coreSelections.set("ench3", {Name: "None", Value: "static-no-selection"});
+    coreSelections.set("ench4", {Name: "None", Value: "static-no-selection"});
+    coreSelections.set("ench5", {Name: "None", Value: "static-no-selection"});
+    coreSelections.set("barrel", {Name: "None", Value: "static-no-selection"});
+    coreSelections.set("optic", {Name: "None", Value: "static-no-selection"});
+    coreSelections.set("laser", {Name: "None", Value: "static-no-selection"});
+    coreSelections.set("firemode", {Name: "None", Value: "static-no-selection"});
+    coreSelections.set("chamber", {Name: "None", Value: "static-no-selection"});
+}
+
+resetCoreSelections()
+
+const weaponValueIndexer = new Map();
+
+function setWeaponValueIndexer() {
+
+    weaponValueIndexer.set("beck-8", "Beck 8");
+    weaponValueIndexer.set("bronco-89", "Bronco 89");
+    weaponValueIndexer.set("cavalier", "Cavalier");
+    weaponValueIndexer.set("flicker", "Flicker");
+    weaponValueIndexer.set("gravekeeper", "Gravekeeper");
+    weaponValueIndexer.set("hell-n-back", "Hell 'N' Back");
+    weaponValueIndexer.set("p38-dirk", "P38 Dirk");
+    weaponValueIndexer.set("salamander", "Salamander");
+    weaponValueIndexer.set("socom-9", "Socom 9");
+    weaponValueIndexer.set("star-witness", "Star & Witness");
+    weaponValueIndexer.set("unknown", "Unknown");
+    weaponValueIndexer.set("random-revolvers", "Random Revolver");
+    weaponValueIndexer.set(".357-balthazar", ".357 Balthazar");
+    weaponValueIndexer.set("palehorse-topclipper", "Palehorse Topclipper");
+    weaponValueIndexer.set("snut-.38", "Snut .38");
+    weaponValueIndexer.set("wyatt-pulsar", "Wyatt PULSAR");
+    weaponValueIndexer.set("random-shotguns", "Random Shotgun");
+    weaponValueIndexer.set("1889-mario", "1889 Mario");
+    weaponValueIndexer.set("arbiter-2", "Arbiter 2");
+    weaponValueIndexer.set("augusta", "Augusta");
+    weaponValueIndexer.set("breacher-8", "Breacher 8");
+    weaponValueIndexer.set("flock-76", "Flock 76");
+    weaponValueIndexer.set("majordome", "Majordome");
+    weaponValueIndexer.set("mossman", "Mossman");
+    weaponValueIndexer.set("random-smgs", "Random SMG");
+    weaponValueIndexer.set("deathstar-pg", "Deathstar PG");
+    weaponValueIndexer.set("drifter-9", "Drifter 9");
+    weaponValueIndexer.set("ferryman", "Ferryman");
+    weaponValueIndexer.set("m3-termite", "M3 Termite");
+    weaponValueIndexer.set("ploika-compact", "Ploika Compact");
+    weaponValueIndexer.set("songbird", "Songbird");
+    weaponValueIndexer.set("valet", "Valet");
+    weaponValueIndexer.set("vrede", "Vrede");
+    weaponValueIndexer.set("random-assault-rifles", "Random Assault Rifle");
+    weaponValueIndexer.set("catacoil-rapid-x", "Catacoil Rapid X");
+    weaponValueIndexer.set("corpsemaker", "Corpsemaker");
+    weaponValueIndexer.set("m11a2-fisk", "M11A2 Fisk");
+    weaponValueIndexer.set("type-80-typhoon", "Type 80 Typhoon");
+    weaponValueIndexer.set("wingman", "Wingman");
+    weaponValueIndexer.set("random-lmgs", "Random LMG");
+    weaponValueIndexer.set("chat-pardeur-98", "Chat-Pardeur 98");
+    weaponValueIndexer.set("duhar", "Duhar");
+    weaponValueIndexer.set("neuraxis-f22", "Neuraxis F22");
+    weaponValueIndexer.set("rektor-100rd", "Rektor 100rd");
+    weaponValueIndexer.set("warpig", "Warpig");
+    weaponValueIndexer.set("random-rifles", "Random Rifle");
+    weaponValueIndexer.set("farsight", "Farsight");
+    weaponValueIndexer.set("knop-22", "Knop .22");
+    weaponValueIndexer.set("m182-pierre-fusil", "M182 Pierre-Fusil");
+    weaponValueIndexer.set("tailor-marksman-mkii", "Tailor Marksman MKII");
+    weaponValueIndexer.set("random-sniper-rifles", "Random Sniper Rifle");
+    weaponValueIndexer.set("d4rt", "D4RT");
+    weaponValueIndexer.set("dolphin-99", "Dolphin 99");
+    weaponValueIndexer.set("impala-gravita", "Impala Gravita");
+    weaponValueIndexer.set("longboy", "Longboy");
+    weaponValueIndexer.set("rokua-308", "Rokua .308");
+
+}
+
+setWeaponValueIndexer()
+
+const weaponNameIndexer = new Map();
+
+function setWeaponNameIndexer() {
+
+    function addToWNI(value, key, map) {
+        weaponNameIndexer.set(value, key);
+    }
+
+    weaponValueIndexer.forEach(addToWNI);  
+    
+}
+
+setWeaponNameIndexer()
 
 // It's time to shuffle
 function shuffle(array) {
@@ -397,21 +495,47 @@ function infoboxHover(elementType, value, name, data) {
 function infoboxClear() {
     document.getElementById("infoboxText").innerHTML = "";
     document.getElementById("mainHeader").innerHTML = "Kevin's Build Helper";
-    infobox.hidden = "hidden";
+}
+
+function randomizeAllOils() {
+    shallNotPass = true;
+    document.getElementById("oils1selector").proDropdown.setValue("static-random-all");
+    document.getElementById("oils2selector").proDropdown.setValue("static-random-all");
+    document.getElementById("oils3selector").proDropdown.setValue("static-random-all");
+    document.getElementById("oils4selector").proDropdown.setValue("static-random-all");
+    document.getElementById("oils5selector").proDropdown.setValue("static-random-all");
+    rollAggregator('ench1', 'oils1selector', 1, "static-random-all", "ench");
+    rollAggregator('ench2', 'oils2selector', 2, "static-random-all", "ench");
+    rollAggregator('ench3', 'oils3selector', 3, "static-random-all", "ench");
+    rollAggregator('ench4', 'oils4selector', 4, "static-random-all", "ench");
+    rollAggregator('ench5', 'oils5selector', 5, "static-random-all", "ench");
+    shallNotPass = false;
+}
+
+function resetAllOils() {
+
+    shallNotPass = true;
+    document.getElementById("oils1selector").proDropdown.setValue("static-no-selection");
+    document.getElementById("oils2selector").proDropdown.setValue("static-no-selection");
+    document.getElementById("oils3selector").proDropdown.setValue("static-no-selection");
+    document.getElementById("oils4selector").proDropdown.setValue("static-no-selection");
+    document.getElementById("oils5selector").proDropdown.setValue("static-no-selection");
+    
+    rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench");
+    rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench");
+    rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench");
+    rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench");
+    rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench");
+    shallNotPass = false;
 }
 
 // Used to remove and replace oils to prevent dupes
-function oilRemover(selector, selectedvalue, selID) {
-    
-    var oilSelector1 = document.getElementById("oils1selector");
+function oilRemover() {
+
     var selector1Options = items.filter(i => i.li.dataset.dropdownId === "oils1selectorcollection");
-    var oilSelector2 = document.getElementById("oils2selector");
     var selector2Options = items.filter(i => i.li.dataset.dropdownId === "oils2selectorcollection");
-    var oilSelector3 = document.getElementById("oils3selector");
     var selector3Options = items.filter(i => i.li.dataset.dropdownId === "oils3selectorcollection");
-    var oilSelector4 = document.getElementById("oils4selector");
     var selector4Options = items.filter(i => i.li.dataset.dropdownId === "oils4selectorcollection");
-    var oilSelector5 = document.getElementById("oils5selector");
     var selector5Options = items.filter(i => i.li.dataset.dropdownId === "oils5selectorcollection");
 
     function makeAllOilsVisible() {
@@ -442,126 +566,75 @@ function oilRemover(selector, selectedvalue, selID) {
         }
     }
 
-    function hideSelectedOils(selector, selectedvalue) {
-        let selectorArray = [selector1Options, selector2Options, selector3Options, selector4Options, selector5Options];
+    function hideSelectedOils(value, key, map) {
+        
+        if (key.startsWith("ench")) {
+            let compOilRep = value.Name.Name.replaceAll(" ", "-");
+            let compOilLower = compOilRep.toLowerCase();
 
-        for (var i = 0; i < selectorArray.length; i++) {
-            let j = i + 1;
-            for (const value of selectorArray[i]) {
-                if (i !== 0){
-                    let oil = oilSelector1.proDropdown.getValue();
-                    if (oil.startsWith("static") && oil !== "static-choose" ) {
-                        let compOil = rolledOils[i].Name;
-                        let compOilRep = compOil.replaceAll(" ", "-");
-                        let compOilLower = compOilRep.toLowerCase();
-                        if (value.li.dataset.value === compOilLower) {
-                            value.li.hidden = true;
-                        }
-                    }
-                    else if (value.li.dataset.value === oil) {
-                        value.li.hidden = true;
-                    }
+            for (const value of selector1Options) {
+                if (value.li.dataset.value === compOilLower) {
+                    value.li.hidden = true;
                 }
-                if (i !== 1){
-                    let oil = oilSelector2.proDropdown.getValue();
-                    if (oil.startsWith("static") && oil !== "static-choose" ) {
-                        let compOil = rolledOils[i].Name;
-                        let compOilRep = compOil.replaceAll(" ", "-");
-                        let compOilLower = compOilRep.toLowerCase();
-                        if (value.li.dataset.value === compOilLower) {
-                            value.li.hidden = true;
-                        }
-                    }
-                    else if (value.li.dataset.value === oil) {
-                        value.li.hidden = true;
-                    }
+            }
+            for (const value of selector2Options) {
+                if (value.li.dataset.value === compOilLower) {
+                    value.li.hidden = true;
                 }
-                if (i !== 2){
-                    let oil = oilSelector3.proDropdown.getValue();
-                    if (oil.startsWith("static") && oil !== "static-choose" ) {
-                        let compOil = rolledOils[i].Name;
-                        let compOilRep = compOil.replaceAll(" ", "-");
-                        let compOilLower = compOilRep.toLowerCase();
-                        if (value.li.dataset.value === compOilLower) {
-                            value.li.hidden = true;
-                        }
-                    }
-                    else if (value.li.dataset.value === oil) {
-                        value.li.hidden = true;
-                    }
+            }
+            for (const value of selector3Options) {
+                if (value.li.dataset.value === compOilLower) {
+                    value.li.hidden = true;
                 }
-                if (i !== 3){
-                    let oil = oilSelector4.proDropdown.getValue();
-                    if (oil.startsWith("static") && oil !== "static-choose" ) {
-                        let compOil = rolledOils[i].Name;
-                        let compOilRep = compOil.replaceAll(" ", "-");
-                        let compOilLower = compOilRep.toLowerCase();
-                        if (value.li.dataset.value === compOilLower) {
-                            value.li.hidden = true;
-                        }
-                    }
-                    else if (value.li.dataset.value === oil) {
-                        value.li.hidden = true;
-                    }
+            }
+            for (const value of selector4Options) {
+                if (value.li.dataset.value === compOilLower) {
+                    value.li.hidden = true;
                 }
-                if (i !== 4){
-                    let oil = oilSelector5.proDropdown.getValue();
-                    if (oil.startsWith("static") && oil !== "static-choose" ) {
-                        let compOil = rolledOils[i].Name;
-                        let compOilRep = compOil.replaceAll(" ", "-");
-                        let compOilLower = compOilRep.toLowerCase();
-                        if (value.li.dataset.value === compOilLower) {
-                            value.li.hidden = true;
-                        }
-                    }
-                    else if (value.li.dataset.value === oil) {
-                        value.li.hidden = true;
-                    }
+            }
+            for (const value of selector5Options) {
+                if (value.li.dataset.value === compOilLower) {
+                    value.li.hidden = true;
                 }
             }
         }
     }
 
     makeAllOilsVisible()
-    hideSelectedOils(selector, selectedvalue)
+
+    coreSelections.forEach(hideSelectedOils)
 
 } 
 
-function attachmentFilter(selWepValue, selWepName, single) {
-
-    let name = document.getElementById("weapons");
-
-    let selectedText = null;
-
-    if (single === "true") {
-        selectedText = selectedWeapon.Name;
-    }
-    else {
-        selectedText = name.options[selWepName].text;
-    }
+function attachmentFilter(evt) {
 
     let selectorBarrel = document.getElementById("barrelselector");
     let selectorFiremode = document.getElementById("firemodeselector");
     let selectorChamber = document.getElementById("chamberselector");
 
-    let dropdownWeapon = getWeaponByName(selectedText);
-
+    let dropdownWeapon = ((coreSelections.get("weapon")).Name); 
+    let selChamber = ((coreSelections.get("chamber")).Value);
+    let selBar = ((coreSelections.get("barrel")).Value);
+    let selFire = ((coreSelections.get("firemode")).Value);
+    
+    // Unhide everything by default
     items.filter(i => i.li.dataset.value === "priming-bolt")[0].li.hidden = false;
     items.filter(i => i.li.dataset.value === "gun-crank")[0].li.hidden = false;
     document.getElementById("chamberselector").disabled = "";
     document.getElementById("barrelselector").disabled = "";
     document.getElementById("firemodeselector").disabled = "";
-
-    if (selectorChamber.value === "static-not-applicable") {
+    // And set to N/A
+    if (selChamber === "static-not-applicable") {
         selectorChamber.proDropdown.setValue("static-choose")
     }
-    if (selectorBarrel.value === "static-not-applicable") {
+    if (selBar === "static-not-applicable") {
         selectorBarrel.proDropdown.setValue("static-choose");
     }
-    if (selectorFiremode.value === "static-not-applicable") {
+    if (selFire === "static-not-applicable") {
         selectorFiremode.proDropdown.setValue("static-choose");
     }
 
+    // Filter Firemodes
     switch (dropdownWeapon.Firemode) {
         case "Single":
             items.filter(i => i.li.dataset.value === "priming-bolt")[0].li.hidden = true;
@@ -586,7 +659,6 @@ function attachmentFilter(selWepValue, selWepName, single) {
             selectorFiremode.proDropdown.setValue("static-not-applicable");
         default:
     }
-
     if (dropdownWeapon.AmmoType === "Energy") {
         selectorChamber.value = "static-not-applicable";
         selectorBarrel.value = "static-not-applicable";
@@ -595,121 +667,157 @@ function attachmentFilter(selWepValue, selWepName, single) {
     }
 }
 
+// Events
+
+
+
 setTimeout(() => {
-  rollOnPageLoad('true', 'pageload', 7, 'p38-dirk');
+  rollOnPageLoad('weapon', 'pageload', 7, 'p38-dirk', 'weapon');
 }, 150);
 
 // For when the button is clicked.
-function onGenerate(item) {
-    selectedWeapon = null;
-    modifiedWeapon = null;
-    oil1 = null;
-    oil2 = null;
-    oil3 = null;
-    oil4 = null;
-    oil5 = null;
-    selectedBarrel = null;
-    selectedOptic = null;
-    selectedLaser = null;
-    selectedFiremode = null;
-    selectedChamber = null;
-    rolledOils = [];
-    selectedChamber = null;
-    loadChamber()
-    loadWeapons()
-    loadOils()
-    loadOrigWeapons()
-    loadAttachments()
-    rollWeapon();
-    rollAttachments('false', item);
-    rollOils();
-    oilCalcs(oilStatModifiers);
+function onGenerate() {
+    rollAggregator("weapon", "weapons", 1, weaponSelectHandler.value, "weapon");
+    rollAggregator("ench1", "oils1selector", 1, ench1SelectHandler.value, "ench");
+    rollAggregator("ench2", "oils2selector", 2, ench2SelectHandler.value, "ench");
+    rollAggregator("ench3", "oils3selector", 3, ench3SelectHandler.value, "ench");
+    rollAggregator("ench4", "oils4selector", 4, ench4SelectHandler.value, "ench");
+    rollAggregator("ench5", "oils5selector", 5, ench5SelectHandler.value, "ench");
+    rollAggregator("barrel", "barrelselector", 1, barrelSelectHandler.value, "attachment");
+    rollAggregator("optic", "opticselector", 2, opticSelectHandler.value, "attachment");
+    rollAggregator("laser", "laserselector", 3, laserSelectHandler.value, "attachment");
+    rollAggregator("firemode", "firemodeselector", 4, firemodeSelectHandler.value, "attachment");
+    rollAggregator("chamber", "chamberselector", 5, chamberSelectHandler.value, "attachment");
 }
 
-function rollOnSelectAttach(single, item) {
-    selectedWeapon = null;
-    modifiedWeapon = null;
-    oil1 = null;
-    oil2 = null;
-    oil3 = null;
-    oil4 = null;
-    oil5 = null;
-    selectedBarrel = null;
-    selectedOptic = null;
-    selectedLaser = null;
-    selectedFiremode = null;
-    selectedChamber = null;
-    rolledOils = [];
-    selectedChamber = null;
-    loadChamber()
-    loadWeapons()
-    loadOils()
-    loadOrigWeapons()
-    loadAttachments()
-    rollWeapon();
-    rollAttachments(single, item);
-    oilCalcs(oilStatModifiers);
+function addAllEventListeners() {
+
+    // Weapon onchange handler
+
+    weaponSelectHandler = document.getElementById('weapons');
+    weaponSelectHandler.addEventListener('change', rollOnSelect, true);
+    weaponSelectHandler.flag = "weapon"
+    weaponSelectHandler.selector = "weapons";
+    weaponSelectHandler.selID = 1;
+    weaponSelectHandler.selType = "weapon";
+
+    // Enchantments onchange handlers
+
+    ench1SelectHandler = document.getElementById('oils1selector');
+    ench1SelectHandler.addEventListener('change', rollOnSelect, false);
+    ench1SelectHandler.flag = "ench1"
+    ench1SelectHandler.selector = "oils1selector";
+    ench1SelectHandler.selID = 1;
+    ench1SelectHandler.selType = "ench";
+
+    ench2SelectHandler = document.getElementById('oils2selector');
+    ench2SelectHandler.addEventListener('change', rollOnSelect, false);
+    ench2SelectHandler.flag = "ench2"
+    ench2SelectHandler.selector = "oils2selector";
+    ench2SelectHandler.selID = 2;
+    ench2SelectHandler.selType = "ench";
+
+    ench3SelectHandler = document.getElementById('oils3selector');
+    ench3SelectHandler.addEventListener('change', rollOnSelect, false);
+    ench3SelectHandler.flag = "ench3"
+    ench3SelectHandler.selector = "oils3selector";
+    ench3SelectHandler.selID = 3;
+    ench3SelectHandler.selType = "ench";
+
+    ench4SelectHandler = document.getElementById('oils4selector');
+    ench4SelectHandler.addEventListener('change', rollOnSelect, false);
+    ench4SelectHandler.flag = "ench4"
+    ench4SelectHandler.selector = "oils4selector";
+    ench4SelectHandler.selID = 4;
+    ench4SelectHandler.selType = "ench";
+
+    ench5SelectHandler = document.getElementById('oils5selector');
+    ench5SelectHandler.addEventListener('change', rollOnSelect, false);
+    ench5SelectHandler.flag = "ench5"
+    ench5SelectHandler.selector = "oils5selector";
+    ench5SelectHandler.selID = 5;
+    ench5SelectHandler.selType = "ench";
+
+    // Attachments onchange handlers
+
+    barrelSelectHandler = document.getElementById('barrelselector');
+    barrelSelectHandler.addEventListener('change', rollOnSelect, false);
+    barrelSelectHandler.flag = "barrel"
+    barrelSelectHandler.selector = "barrelselector";
+    barrelSelectHandler.selID = 1;
+    barrelSelectHandler.selType = "attachment";
+
+    opticSelectHandler = document.getElementById('opticselector');
+    opticSelectHandler.addEventListener('change', rollOnSelect, false);
+    opticSelectHandler.flag = "optic"
+    opticSelectHandler.selector = "opticselector";
+    opticSelectHandler.selID = 2;
+    opticSelectHandler.selType = "attachment";
+
+    laserSelectHandler = document.getElementById('laserselector');
+    laserSelectHandler.addEventListener('change', rollOnSelect, false);
+    laserSelectHandler.flag = "laser"
+    laserSelectHandler.selector = "laserselector";
+    laserSelectHandler.selID = 3;
+    laserSelectHandler.selType = "attachment";
+
+    firemodeSelectHandler = document.getElementById('firemodeselector');
+    firemodeSelectHandler.addEventListener('change', rollOnSelect, false);
+    firemodeSelectHandler.flag = "firemode"
+    firemodeSelectHandler.selector = "firemodeselector";
+    firemodeSelectHandler.selID = 4;
+    firemodeSelectHandler.selType = "attachment";
+
+    chamberSelectHandler = document.getElementById('chamberselector');
+    chamberSelectHandler.addEventListener('change', rollOnSelect, false);
+    chamberSelectHandler.flag = "chamber"
+    chamberSelectHandler.selector = "chamberselector";
+    chamberSelectHandler.selID = 5;
+    chamberSelectHandler.selType = "attachment";
+
+    // Animations
+
+    const box = document.getElementById('oilstatcontainer1');
+    box.addEventListener('animationend', () => {
+    box.classList.remove('spinanimation');
+    }, { once: true }); 
+
 }
 
-function rollOnSelectWep(single, selector, selID, value) {
-    selectedWeapon = null;
-    modifiedWeapon = null;
-    oil1 = null;
-    oil2 = null;
-    oil3 = null;
-    oil4 = null;
-    oil5 = null;
-    selectedBarrel = null;
-    selectedOptic = null;
-    selectedLaser = null;
-    selectedFiremode = null;
-    selectedChamber = null;
-    rolledOils = [];
-    selectedChamber = null;
-    loadChamber()
-    loadWeapons()
-    loadOils()
-    loadOrigWeapons()
-    loadAttachments()
-    rollWeapon(selector);
-    attachmentFilter(value, selID, single)
-    rollAttachments(single);
-    rollOils(single, selector, selID, value);
-    oilRemover(selector, value, selID);
-    oilCalcs(oilStatModifiers);
-}
+let weaponSelectHandler = document.getElementById('weapons');
+let ench1SelectHandler = document.getElementById('oils1selector');
+let ench2SelectHandler = document.getElementById('oils2selector');
+let ench3SelectHandler = document.getElementById('oils3selector');
+let ench4SelectHandler = document.getElementById('oils4selector');
+let ench5SelectHandler = document.getElementById('oils5selector');
+let barrelSelectHandler = document.getElementById('barrelselector');
+let opticSelectHandler = document.getElementById('opticselector');
+let laserSelectHandler = document.getElementById('laserselector');
+let firemodeSelectHandler = document.getElementById('firemodeselector');
+let chamberSelectHandler = document.getElementById('chamberselector');
 
-async function rollOnPageLoad(single, selector, selID, value) {
+let flag = null;
+let selector = null;
+let selID = null;
+let selValue = null;
+let selType = null;
+
+let shallNotPass = false;
+
+async function rollOnPageLoad(flag, selector, selID, value, type) {
 
     const result = await loadOrigWeapons();
     const result2 = await loadWeapons();
     let selPageLoad = document.getElementById("weapons");
+
+    addAllEventListeners()
+
     selPageLoad.proDropdown.setValue("value"); 
-    oilStatModifiers = oilsData?.Oil["Default"];
-
-    selectedWeapon = null;
-    modifiedWeapon = null;
-    oil1 = null;
-    oil2 = null;
-    oil3 = null;
-    oil4 = null;
-    oil5 = null;
-    selectedBarrel = null;
-    selectedOptic = null;
-    selectedLaser = null;
-    selectedFiremode = null;
-    selectedChamber = null;
-    rolledOils = [];
-    selectedChamber = null;
     
-    rollWeapon(selector);
-    attachmentFilter(value, selID, single)
-    rollAttachments(single);
-    rollOils();
-    oilCalcs(oilStatModifiers);
-}
+    oilDefault = oilsData?.Oil["Default"];
+    
+    oilStatModifiers = structuredClone(oilDefault);
 
-function rollOnSelect(single, selector, selID, value) {
     selectedWeapon = null;
     modifiedWeapon = null;
     oil1 = null;
@@ -724,39 +832,149 @@ function rollOnSelect(single, selector, selID, value) {
     selectedChamber = null;
     rolledOils = [];
     selectedChamber = null;
+
     loadChamber()
     loadWeapons()
     loadOils()
     loadOrigWeapons()
     loadAttachments()
-    rollWeapon();
-    rollAttachments(single);
-    rollOils(single, selector, selID, value);
-    oilRemover(selector, value, selID);
+    
+    rollSelections(flag, selector, selID, value, type);
+    rollSelections('ench1', 'oils1selector', 1, 'static-choose', 'ench');
+    rollSelections('ench2', 'oils2selector', 2, 'static-choose', 'ench');
+    rollSelections('ench3', 'oils3selector', 3, 'static-choose', 'ench');
+    rollSelections('ench4', 'oils4selector', 4, 'static-choose', 'ench');
+    rollSelections('ench5', 'oils5selector', 5, 'static-choose', 'ench');
+    rollSelections('barrel', 'barrel', 1, 'static-choose', 'attachment');
+    rollSelections('optic', 'optic', 2, 'static-choose', 'attachment');
+    rollSelections('laser', 'laser', 3, 'static-choose', 'attachment');
+    rollSelections('firemode', 'firemode', 4, 'static-choose', 'attachment');
+    rollSelections('chamber', 'chamber', 5, 'static-choose', 'attachment');
+    oilStats();
     oilCalcs(oilStatModifiers);
+    addName()
 }
 
-function addName(name, value, type, desc, descID, i) {
-    if (type === "weapon") {
-        let weapReplace = name.replaceAll(" ", "_");
-        document.getElementById("weaponimage").src = `.\\Images\\Weapons\\${weapReplace}.png`;
-        //document.getElementById("weaponimage2").src = `.\\Images\\Weapons\\${weapReplace}.png`;
-        document.getElementById("cardWeaponName").textContent = name;
+function rollAggregator(flag, selector, selID, selValue, selType) {
+
+    document.getElementById("oilstatcontainer1").classList.add("spinanimation");
+    selectedWeapon = null;
+    modifiedWeapon = null;
+    oil1 = null;
+    oil2 = null;
+    oil3 = null;
+    oil4 = null;
+    oil5 = null;
+    selectedBarrel = null;
+    selectedOptic = null;
+    selectedLaser = null;
+    selectedFiremode = null;
+    selectedChamber = null;
+    rolledOils = [];
+    selectedChamber = null;
+
+    loadChamber()
+    loadWeapons()
+    loadOils()
+    loadOrigWeapons()
+    loadAttachments()
+
+    rollSelections(flag, selector, selID, selValue, selType);
+    attachmentFilter();
+    oilRemover();
+    oilStats();
+    oilCalcs(oilStatModifiers);
+    addName();
+    
+}
+
+function rollOnSelect(evt) {
+    if (shallNotPass === false) {
+console.log(shallNotPass)
+        shallNotPass = true;
+
+        flag = evt.currentTarget.flag;
+        selector = evt.currentTarget.selector;
+        selID = evt.currentTarget.selID;
+        selValue = evt.currentTarget.value;
+        selType = evt.currentTarget.selType;
+
+        rollAggregator(flag, selector, selID, selValue, selType);
+
+        shallNotPass = false;
     }
-    if (type === "oil") {
-        let oilReplace = desc.replaceAll('\n', '<br>');
-        document.getElementById(value).textContent = name;
-        document.getElementById(descID).innerHTML = oilReplace;
-        
-        if (i+1) {
-            document.getElementById(`cardOil${i + 1}Img`).style.backgroundImage = `url('./Images/Enchantments/${name}.webp')`;
+    if (!(evt)) {
+
+    }
+}
+
+function addName() {
+
+    function addCoreToCard(value, key, map) {
+        let coreName = value.Name.Name;
+        let coreVal = value.Value;
+        switch (key) {
+            case "weapon":
+                let weapReplace = coreName.replaceAll(" ", "_");
+                document.getElementById("weaponimage").src = `.\\Images\\Weapons\\${weapReplace}.png`;
+                document.getElementById("cardWeaponName").textContent = coreName;
+                break;
+            case "ench1":
+                let oil1 = getOilByName(coreName);
+                document.getElementById("cardOilDesc1").innerHTML = oil1.StatDescription;
+                document.getElementById("cardOilName1").textContent = coreName;
+                document.getElementById(`cardOil1Img`).style.backgroundImage = `url('./Images/Enchantments/${coreName}.webp')`;
+                break;
+            case "ench2":
+                let oil2 = getOilByName(coreName);
+                document.getElementById("cardOilDesc2").innerHTML = oil2.StatDescription;
+                document.getElementById("cardOilName2").textContent = coreName;
+                document.getElementById(`cardOil2Img`).style.backgroundImage = `url('./Images/Enchantments/${coreName}.webp')`;
+                break;
+            case "ench3":
+                let oil3 = getOilByName(coreName);
+                document.getElementById("cardOilDesc3").innerHTML = oil3.StatDescription;
+                document.getElementById("cardOilName3").textContent = coreName;
+                document.getElementById(`cardOil3Img`).style.backgroundImage = `url('./Images/Enchantments/${coreName}.webp')`;
+                break;
+            case "ench4":
+                let oil4 = getOilByName(coreName);
+                document.getElementById("cardOilDesc4").innerHTML = oil4.StatDescription;
+                document.getElementById("cardOilName4").textContent = coreName;
+                document.getElementById(`cardOil4Img`).style.backgroundImage = `url('./Images/Enchantments/${coreName}.webp')`;                break;
+            case "ench5":
+                let oil5 = getOilByName(coreName);
+                document.getElementById("cardOilDesc5").innerHTML = oil5.StatDescription;
+                document.getElementById("cardOilName5").textContent = coreName;
+                document.getElementById(`cardOil5Img`).style.backgroundImage = `url('./Images/Enchantments/${coreName}.webp')`;                break;
+            case "barrel":
+                let barrel = getBarrelByName(coreName);
+                document.getElementById("barrelname").textContent = coreName;
+                document.getElementById("barreldesc").innerHTML = barrel.StatDescription;
+                break;
+            case "optic":
+                let optic = getBarrelByName(coreName);
+                document.getElementById("opticname").textContent = coreName;
+                document.getElementById("opticdesc").innerHTML = optic.StatDescription;
+                break;
+            case "laser":
+                let laser = getBarrelByName(coreName);
+                document.getElementById("lasername").textContent = coreName;
+                document.getElementById("laserdesc").innerHTML = laser.StatDescription;
+                break;
+            case "firemode":
+                let firemode = getBarrelByName(coreName);
+                document.getElementById("firemodename").textContent = coreName;
+                document.getElementById("firemodedesc").innerHTML = firemode.StatDescription;
+                break;   
+            case "all":
+                break;
+            default:
+            
         }
     }
-    if (type === "attachment") {
-        let attachReplace = desc.replaceAll('\\n', '<br>');
-        document.getElementById(value).textContent = name;
-        document.getElementById(descID).innerHTML = attachReplace;
-    }
+
+    coreSelections.forEach(addCoreToCard);
 
 }
 
@@ -789,102 +1007,137 @@ function percentConv(stat) {
        return stat *= 100;
     }
 
-function oilStats(selectedOil) {
+function oilStats() {
+    oilStatModifiers = structuredClone(oilDefault);
 
-    if (selectedOil.AmmoConsumeChance != 0.0) {
-        oilStatModifiers.AmmoConsumeChance += selectedOil.AmmoConsumeChance;
+    function oilStatCalcs(selectedOil) {
+        if (selectedOil.AmmoConsumeChance != 0.0) {
+            oilStatModifiers.AmmoConsumeChance += selectedOil.AmmoConsumeChance;
+        }
+        if (selectedOil.Bounces != 0) {
+            oilStatModifiers.Bounces += selectedOil.Bounces;
+        }
+        if (selectedOil.BulletDrop != 0) {
+            oilStatModifiers.BulletDrop += selectedOil.BulletDrop;
+        }
+        if (selectedOil.BulletSpeed != 0.0) {
+            oilStatModifiers.BulletSpeed += selectedOil.BulletSpeed;
+        }
+        if (selectedOil.ExtraAmmoUseChance != 0.0) {
+            oilStatModifiers.ExtraAmmoUseChance += selectedOil.ExtraAmmoUseChance;
+        }
+        if (selectedOil.BaseCritChance != 0.0) {
+            oilStatModifiers.BaseCritChance += selectedOil.BaseCritChance;
+        }
+        if (selectedOil.DamageAdd != 0.0) {
+            oilStatModifiers.DamageAdd += selectedOil.DamageAdd;
+        }
+        if (selectedOil.DamageMult != 0.0) {
+            oilStatModifiers.DamageMult += selectedOil.DamageMult;
+        }
+        if (selectedOil.CanADS != "Yes") {
+            oilStatModifiers.CanADS = selectedOil.CanADS;
+        }
+        if (selectedOil.JumpPower != 0.0) {
+            oilStatModifiers.JumpPower += selectedOil.JumpPower;
+        }
+        if (selectedOil.LootDropChance != 0.0) {
+            oilStatModifiers.LootDropChance += selectedOil.LootDropChance;
+        }
+        if (selectedOil.DurabilityMult != 0.0) {
+            oilStatModifiers.DurabilityMult += selectedOil.DurabilityMult;
+        }
+        if (selectedOil.MovementSpeedMult != 0.0) {
+            oilStatModifiers.MovementSpeedMult += selectedOil.MovementSpeedMult;
+        }
+        if (selectedOil.MoneyDrops != "Yes") {
+            oilStatModifiers.MoneyDrops = selectedOil.MoneyDrops;
+        }
+        if (selectedOil.OrganDrops != "Yes") {
+            oilStatModifiers.OrganDrops = selectedOil.OrganDrops;
+        }
+        if (selectedOil.Penetrations != 0) {
+            oilStatModifiers.Penetrations += selectedOil.Penetrations;
+        }
+        if (selectedOil.ProjectileMult != 0.0) {
+            oilStatModifiers.ProjectileMult += selectedOil.ProjectileMult;
+        }
+        if (selectedOil.RPM != 0.0) {
+            oilStatModifiers.RPM += selectedOil.RPM;
+        }
+        if (selectedOil.RecoilAdd != 0.0) {
+            oilStatModifiers.RecoilAdd += selectedOil.RecoilAdd;
+        }
+        if (selectedOil.RecoilMult != 0.0) {
+            oilStatModifiers.RecoilMult += selectedOil.RecoilMult;
+        }
+        if (selectedOil.ReloadSpeed != 0.0) {
+            oilStatModifiers.ReloadSpeed += selectedOil.ReloadSpeed;
+        }
+        if (selectedOil.SpreadAdd != 0.0) {
+            oilStatModifiers.SpreadAdd += selectedOil.SpreadAdd;
+        }
+        if (selectedOil.SpreadMult != 0.0) {
+            oilStatModifiers.SpreadMult += selectedOil.SpreadMult;
+        }
+        if (selectedOil.Drag != 0.0) {
+            oilStatModifiers.Drag += selectedOil.Drag;
+        }
+        if (selectedOil.DurabilityUsage != 0.0) {
+            oilStatModifiers.DurabilityUsage += selectedOil.DurabilityUsage;
+        }
+        if (selectedOil.BulletBounciness != 0.0) {
+            oilStatModifiers.BulletBounciness += selectedOil.BulletBounciness;
+        }
+        if (selectedOil.MovingAccuracy != 0.0) {
+            oilStatModifiers.MovingAccuracy += selectedOil.MovingAccuracy;
+        }
+        if (selectedOil.DurLossMult != 0.0) {
+            oilStatModifiers.DurLossMult += selectedOil.DurLossMult;
+        }
+        if (selectedOil.ADSCritChance != 0.0) {
+            oilStatModifiers.ADSCritChance += selectedOil.ADSCritChance;
+        }
+        if (selectedOil.Firemode !== 'None') {
+            oilStatModifiers.Firemode = selectedOil.Firemode;
+        }
     }
-    if (selectedOil.Bounces != 0) {
-        oilStatModifiers.Bounces += selectedOil.Bounces;
+
+    function coreStats(value, key, map) {
+
+        let coreName = value.Name;
+        if (key !== "weapon") {
+            oilStatCalcs(coreName);
+        }
+        
     }
-    if (selectedOil.BulletDrop != 0) {
-        oilStatModifiers.BulletDrop += selectedOil.BulletDrop;
-    }
-    if (selectedOil.BulletSpeed != 0.0) {
-        oilStatModifiers.BulletSpeed += selectedOil.BulletSpeed;
-    }
-    if (selectedOil.ExtraAmmoUseChance != 0.0) {
-        oilStatModifiers.ExtraAmmoUseChance += selectedOil.ExtraAmmoUseChance;
-    }
-    if (selectedOil.BaseCritChance != 0.0) {
-        oilStatModifiers.BaseCritChance += selectedOil.BaseCritChance;
-    }
-    if (selectedOil.DamageAdd != 0.0) {
-        oilStatModifiers.DamageAdd += selectedOil.DamageAdd;
-    }
-    if (selectedOil.DamageMult != 0.0) {
-        oilStatModifiers.DamageMult += selectedOil.DamageMult;
-    }
-    if (selectedOil.CanADS != "Yes") {
-        oilStatModifiers.CanADS = selectedOil.CanADS;
-    }
-    if (selectedOil.JumpPower != 0.0) {
-        oilStatModifiers.JumpPower += selectedOil.JumpPower;
-    }
-    if (selectedOil.LootDropChance != 0.0) {
-        oilStatModifiers.LootDropChance += selectedOil.LootDropChance;
-    }
-    if (selectedOil.DurabilityMult != 0.0) {
-        oilStatModifiers.DurabilityMult += selectedOil.DurabilityMult;
-    }
-    if (selectedOil.MovementSpeedMult != 0.0) {
-        oilStatModifiers.MovementSpeedMult += selectedOil.MovementSpeedMult;
-    }
-    if (selectedOil.MoneyDrops != "Yes") {
-        oilStatModifiers.MoneyDrops = selectedOil.MoneyDrops;
-    }
-    if (selectedOil.OrganDrops != "Yes") {
-        oilStatModifiers.OrganDrops = selectedOil.OrganDrops;
-    }
-    if (selectedOil.Penetrations != 0) {
-        oilStatModifiers.Penetrations += selectedOil.Penetrations;
-    }
-    if (selectedOil.ProjectileMult != 0.0) {
-        oilStatModifiers.ProjectileMult += selectedOil.ProjectileMult;
-    }
-    if (selectedOil.RPM != 0.0) {
-        oilStatModifiers.RPM += selectedOil.RPM;
-    }
-    if (selectedOil.RecoilAdd != 0.0) {
-        oilStatModifiers.RecoilAdd += selectedOil.RecoilAdd;
-    }
-    if (selectedOil.RecoilMult != 0.0) {
-        oilStatModifiers.RecoilMult += selectedOil.RecoilMult;
-    }
-    if (selectedOil.ReloadSpeed != 0.0) {
-        oilStatModifiers.ReloadSpeed += selectedOil.ReloadSpeed;
-    }
-    if (selectedOil.SpreadAdd != 0.0) {
-        oilStatModifiers.SpreadAdd += selectedOil.SpreadAdd;
-    }
-    if (selectedOil.SpreadMult != 0.0) {
-        oilStatModifiers.SpreadMult += selectedOil.SpreadMult;
-    }
-    if (selectedOil.Drag != 0.0) {
-        oilStatModifiers.Drag += selectedOil.Drag;
-    }
-    if (selectedOil.DurabilityUsage != 0.0) {
-        oilStatModifiers.DurabilityUsage += selectedOil.DurabilityUsage;
-    }
-    if (selectedOil.BulletBounciness != 0.0) {
-        oilStatModifiers.BulletBounciness += selectedOil.BulletBounciness;
-    }
-    if (selectedOil.MovingAccuracy != 0.0) {
-        oilStatModifiers.MovingAccuracy += selectedOil.MovingAccuracy;
-    }
-    if (selectedOil.DurLossMult != 0.0) {
-        oilStatModifiers.DurLossMult += selectedOil.DurLossMult;
-    }
+
+    coreSelections.forEach(coreStats);
+    
 }
 
 function oilCalcs(calcOil) {
+    let weaponName = coreSelections.get("weapon");
+    let weaponStats = getWeaponByName(weaponName.Name.Name);
+    let weapon = structuredClone(weaponStats);
+    let weaponOriginal = structuredClone(weaponStats);
+console.log("calcoil", calcOil)
+    console.log("weapon modded", weapon);
+    console.log("weapon og", weaponOriginal);
+    let weaponOriginalChamber = getChamberByName(`Chamber Chisel - ${weaponOriginal.AmmoType}`);
 
-    let weapon = modifiedWeapon;
-    let weaponOriginal = selectedWeapon;
-    let chamber = selectedChamber;
-    let attachmentStats = selectedAttachments;
-    let weaponOriginalChamber = getChamberByName(`Chamber Chisel - ${selectedWeapon.AmmoType}`);
-console.log(modifiedWeapon);
+    let chamberStats = null;
+
+    let chamberName = coreSelections.get("chamber");
+    if (chamberName.Name === "None") {
+        chamberStats = getChamberByName(`Chamber Chisel - ${weaponOriginal.AmmoType}`);
+    }
+    else {
+        chamberStats = getChamberByName(chamberName.Name.Name);
+    }
+
+    let chamber = chamberStats;
+
     if (weapon.AmmoType != "Energy") {
         weapon.Damage = weapon.DamageMult * chamber.Damage;
         weapon.AmmoType = chamber.AmmoType;
@@ -933,7 +1186,7 @@ console.log(modifiedWeapon);
     document.getElementById("cardRPMComp").textContent = "";
     document.getElementById("cardRPMRBrac").textContent = "";
 
-    let rpmCalc = weapon.RPM * (1 + calcOil.RPM + attachmentStats.RPM);
+    let rpmCalc = weapon.RPM * (1 + calcOil.RPM);
     let rpmRound = Math.round((rpmCalc + Number.EPSILON)* 100) / 100;
     
     let neuraxisMaxRPM = rpmRound * 5;
@@ -1138,7 +1391,7 @@ console.log(modifiedWeapon);
     document.getElementById("cardSpeedComp").textContent = "";
     document.getElementById("cardSpeedRBrac").textContent = "";
 
-    let speedCalc = weapon.BulletSpeed + calcOil.BulletSpeed + attachmentStats.BulletSpeed;
+    let speedCalc = weapon.BulletSpeed + calcOil.BulletSpeed;
     let speedConv = percentConv(speedCalc);
 
     let speedRound = Math.round((speedConv + Number.EPSILON)* 100) / 100;
@@ -1189,7 +1442,7 @@ console.log(modifiedWeapon);
     document.getElementById("cardCritComp").textContent = "";
     document.getElementById("cardCritRBrac").textContent = "";
 
-    let baseCalc = calcOil.BaseCritChance + attachmentStats.BaseCritChance;
+    let baseCalc = calcOil.BaseCritChance;
     let baseConv = percentConv(baseCalc);
     let baseAdd = weapon.BaseCritChance + baseConv;
 
@@ -1226,7 +1479,7 @@ console.log(modifiedWeapon);
     document.getElementById("cardADSCritComp").textContent = "";
     document.getElementById("cardADSCritRBrac").textContent = "";
 
-    let adsConv = percentConv(attachmentStats.ADSCritChance);
+    let adsConv = percentConv(calcOil.ADSCritChance);
     let adsCalc = weapon.ADSCritChance + adsConv;
 
     let adsRound = Math.round((adsCalc + Number.EPSILON)* 100) / 100;
@@ -1307,7 +1560,7 @@ console.log(modifiedWeapon);
     weapon.Damage += calcOil.DamageAdd;
     var zeroDamage = weapon.Damage;
     //// Damage Multiplier
-    weapon.Damage *= (1 + calcOil.DamageMult + attachmentStats.DamageMult);
+    weapon.Damage *= (1 + calcOil.DamageMult);
     weapon.Damage = Math.round((weapon.Damage + Number.EPSILON)* 100) / 100;
     if (zeroDamage > 0 && weapon.Damage <= 0) {
         weapon.Damage = zeroDamage * 0.01;
@@ -1683,7 +1936,7 @@ console.log(modifiedWeapon);
 
     let durMin = weaponOriginal.Durability * 0.01;
 
-    let durCalc = weapon.Durability *(1 + calcOil.DurabilityMult + attachmentStats.DurabilityMult);
+    let durCalc = weapon.Durability *(1 + calcOil.DurabilityMult);
 
     let durRound = Math.round((durCalc + Number.EPSILON)* 100) / 100;
 
@@ -1745,7 +1998,7 @@ console.log(modifiedWeapon);
     let resultFirstMvmntStep = (1 - weapon.WeightClassFactor) * (1 + weaponWeightAdjustment);
     let resultSecondMvmntStep = 1 - resultFirstMvmntStep;
     let resultMovementSpeed = resultSecondMvmntStep * (s * 100);
-    let moveCalc = resultMovementSpeed * (1 + calcOil.MovementSpeedMult + attachmentStats.MovementSpeedMult);
+    let moveCalc = resultMovementSpeed * (1 + calcOil.MovementSpeedMult);
 
     let moveRound = Math.round((moveCalc + Number.EPSILON)* 100) / 100;
 
@@ -1880,22 +2133,24 @@ console.log(modifiedWeapon);
         weapon.RecoilBase = weapon.RecoilBase12ga;
     }
 
+    let recoilMin = weapon.RecoilBase * 0.01;
+
     //// Recoil Add
 
-    weapon.RecoilMult += calcOil.RecoilAdd;
+    let recoilAdd = weapon.RecoilMult + calcOil.RecoilAdd;
 
     //// Recoil Multiplier
 
-    weapon.RecoilBase *= (weapon.RecoilMult * (1 + calcOil.RecoilMult + attachmentStats.RecoilMult));
+    let recoilCalc = weapon.RecoilBase * (recoilAdd * (1 + calcOil.RecoilMult));
 
-    weapon.RecoilBase = Math.round((weapon.RecoilBase + Number.EPSILON)* 100) / 100;
+    let recoilRound = Math.round((recoilCalc + Number.EPSILON)* 100) / 100;
 
-    if (weapon.RecoilBase < 1 && weapon.AmmoType != "Energy") {
-        weapon.RecoilBase = 1;
+    if (recoilRound < recoilMin && weapon.AmmoType != "Energy") {
+        recoilRound = recoilMin;
     }
 
-    if (weapon.RecoilBase < weaponOriginal.RecoilBase) {
-        document.getElementById("cardRecoil").textContent = weapon.RecoilBase;
+    if (recoilRound < weaponOriginal.RecoilBase) {
+        document.getElementById("cardRecoil").textContent = recoilRound;
         document.getElementById("cardRecoil").style.color = "Lime";
         document.getElementById("cardRecoilArrow").textContent = "🡇";
         document.getElementById("cardRecoilArrow").style.color = "Lime";
@@ -1903,8 +2158,8 @@ console.log(modifiedWeapon);
         document.getElementById("cardRecoilComp").textContent = weaponOriginal.RecoilBase;
         document.getElementById("cardRecoilRBrac").textContent = ")";
     }
-    if (weapon.RecoilBase > weaponOriginal.RecoilBase) {
-        document.getElementById("cardRecoil").textContent = weapon.RecoilBase;
+    if (recoilRound > weaponOriginal.RecoilBase) {
+        document.getElementById("cardRecoil").textContent = recoilRound;
         document.getElementById("cardRecoil").style.color = "OrangeRed";
         document.getElementById("cardRecoilArrow").textContent = "🡅";
         document.getElementById("cardRecoilArrow").style.color = "OrangeRed";
@@ -1912,8 +2167,8 @@ console.log(modifiedWeapon);
         document.getElementById("cardRecoilComp").textContent = weaponOriginal.RecoilBase;
         document.getElementById("cardRecoilRBrac").textContent = ")";
     }
-    if (weapon.RecoilBase === weaponOriginal.RecoilBase) {
-        document.getElementById("cardRecoil").textContent = weapon.RecoilBase;
+    if (recoilRound === weaponOriginal.RecoilBase) {
+        document.getElementById("cardRecoil").textContent = recoilRound;
     }
     //#endregion
 
@@ -2032,11 +2287,10 @@ console.log(modifiedWeapon);
     }
 
     let spreadCalc1 = weapon.Spread + calcOil.SpreadAdd;
-    let spreadCalc2 = spreadCalc1 + attachmentStats.SpreadAdd;
 
     //// Spread Multiplier
 
-    let spreadCalc = spreadCalc2 * (1 + calcOil.SpreadMult + attachmentStats.SpreadMult);
+    let spreadCalc = spreadCalc1 * (1 + calcOil.SpreadMult);
     let spreadRound = Math.round((spreadCalc + Number.EPSILON)* 100) / 100;
 
     let neuraxisMinSpreadBase = spreadRound * 0.1;
@@ -2155,8 +2409,8 @@ console.log(modifiedWeapon);
     document.getElementById("cardFiremodeComp").textContent = "";
     document.getElementById("cardFiremodeRBrac").textContent = "";
 
-    if (attachmentStats.Firemode !== 'None') {
-        weapon.Firemode = attachmentStats.Firemode;
+    if (calcOil.Firemode !== 'None') {
+        weapon.Firemode = calcOil.Firemode;
     }
 
     if (weapon.Firemode === weaponOriginal.Firemode) {
@@ -2171,6 +2425,7 @@ console.log(modifiedWeapon);
     }
 
     //#endregion
+    
 }
 
 function getOilByName(name) {
@@ -2208,23 +2463,122 @@ function getChamberByName(name) {
     return chamberData?.Chamber[name] || null;
 }
 
-function rollOils(single, selector, selID, value) {
-    oilSingle = document.getElementById(selector);
+function convNameToVal(name) {
+    let nameConv = name.replaceAll(" ", "-");
+    return nameConv.toLowerCase();
+}
 
-    oil1 = document.getElementById("oils1selector");
-    oil2 = document.getElementById("oils2selector");
-    oil3 = document.getElementById("oils3selector");
-    oil4 = document.getElementById("oils4selector");
-    oil5 = document.getElementById("oils5selector");
+function addToCoreMap(flag, itemName, itemValue) {
+    switch (flag) {
+        case "weapon":
+            coreSelections.set("weapon", {Name: itemName, Value: itemValue});
+            break;
+        case "ench1":
+            coreSelections.set("ench1", {Name: itemName, Value: itemValue});
+            break;
+        case "ench2":
+            coreSelections.set("ench2", {Name: itemName, Value: itemValue});
+            break;
+        case "ench3":
+            coreSelections.set("ench3", {Name: itemName, Value: itemValue});
+            break;
+        case "ench4":
+            coreSelections.set("ench4", {Name: itemName, Value: itemValue});
+            break;
+        case "ench5":
+            coreSelections.set("ench5", {Name: itemName, Value: itemValue});
+            break;
+        case "barrel":
+            coreSelections.set("barrel", {Name: itemName, Value: itemValue});
+            break;
+        case "optic":
+            coreSelections.set("optic", {Name: itemName, Value: itemValue});
+            break;
+        case "laser":
+            coreSelections.set("laser", {Name: itemName, Value: itemValue});
+            break;
+        case "firemode":
+            coreSelections.set("firemode", {Name: itemName, Value: itemValue});
+            break;
+        case "chamber":
+            coreSelections.set("chamber", {Name: itemName, Value: itemValue});
+            break;   
+        case "all":
+            break;
+        default:
+    }
+}
 
-    oil1Name = document.getElementById("cardOilName1").textContent;
-    oil2Name = document.getElementById("cardOilName2").textContent;
-    oil3Name = document.getElementById("cardOilName3").textContent;
-    oil4Name = document.getElementById("cardOilName4").textContent;
-    oil5Name = document.getElementById("cardOilName5").textContent;
+function convertToUpper(item) {
+            let compItemRep = item.replaceAll("-", " ");
+            var splitStr = compItemRep.toLowerCase().split(' ');
+            for (var i = 0; i < splitStr.length; i++) {
+                splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+            }
+            return splitStr.join(' '); 
+        }
 
-    let oilNames = [oil1Name, oil2Name, oil3Name, oil4Name, oil5Name]
-    
+function poolRemover(name) {
+
+    const indexAll = oilsAll.indexOf(name);
+    if (indexAll > -1) {
+        oilsAll.splice(indexAll, 1);
+    }
+    const indexAmmo = oilsAmmo.indexOf(name);
+    if (indexAmmo > -1) {
+        oilsAmmo.splice(indexAmmo, 1);
+    }
+    const indexCrit = oilsCrit.indexOf(name);
+    if (indexCrit > -1) {
+        oilsCrit.splice(indexCrit, 1);
+    }
+    const indexBounce = oilsBounce.indexOf(name);
+    if (indexBounce > -1) {
+        oilsBounce.splice(indexBounce, 1);
+    }
+    const indexSpeed = oilsSpeed.indexOf(name);
+    if (indexSpeed > -1) {
+        oilsSpeed.splice(indexSpeed, 1);
+    }
+    const indexAddDam = oilsAddDam.indexOf(name);
+    if (indexAddDam > -1) {
+        oilsAddDam.splice(indexAddDam, 1);
+    }
+    const indexMultDam = oilsMultDam.indexOf(name);
+    if (indexMultDam > -1) {
+        oilsMultDam.splice(indexMultDam, 1);
+    }
+    const indexDur = oilsDur.indexOf(name);
+    if (indexDur > -1) {
+        oilsDur.splice(indexDur, 1);
+        }
+    const indexPen = oilsPen.indexOf(name);
+    if (indexPen > -1) {
+        oilsPen.splice(indexPen, 1);
+    }
+    const indexProj = oilsProj.indexOf(name);
+    if (indexProj > -1) {
+        oilsProj.splice(indexProj, 1);
+    }
+    const indexRecoil = oilsRecoil.indexOf(name);
+    if (indexRecoil > -1) {
+        oilsRecoil.splice(indexRecoil, 1);
+    }
+    const indexReload = oilsReload.indexOf(name);
+    if (indexReload > -1) {
+        oilsReload.splice(indexReload, 1);
+    }
+    const indexRPM = oilsRPM.indexOf(name);
+    if (indexRPM > -1) {
+        oilsRPM.splice(indexRPM, 1);
+    }
+    const indexSpread = oilsSpread.indexOf(name);
+    if (indexSpread > -1) {
+        oilsSpread.splice(indexSpread, 1);
+    }
+}
+
+function rollSelections(flag, selector, selID, value, type) {
     oilsAll = oilsAllMain.slice();
     oilsAmmo = oilsAmmoMain.slice();
     oilsCrit = oilsCritMain.slice();
@@ -2240,133 +2594,288 @@ function rollOils(single, selector, selID, value) {
     oilsRPM = oilsRPMMain.slice();
     oilsSpread = oilsSpreadMain.slice();
 
-    oilStatModifiers = oilsData?.Oil["Default"];
+    let selectedItem = null;
+    let selectedValue = null;
 
-    let selectedOil = [];
-
-    selectedOil = [oil1, oil2, oil3, oil4, oil5];
- 
-    let counter = 0;
-    let newSelOil = null;
-
-    function checkNone(oil, i, selector) {
-        let oil1Name2 = document.getElementById("cardOilName1").textContent;
-        let oil2Name2 = document.getElementById("cardOilName2").textContent;
-        let oil3Name2 = document.getElementById("cardOilName3").textContent;
-        let oil4Name2 = document.getElementById("cardOilName4").textContent;
-        let oil5Name2 = document.getElementById("cardOilName5").textContent;
-
-        let oil1Val = oil1.proDropdown.getValue();
-        let oil2Val = oil2.proDropdown.getValue();
-        let oil3Val = oil3.proDropdown.getValue();
-        let oil4Val = oil4.proDropdown.getValue();
-        let oil5Val = oil5.proDropdown.getValue();
-
-        function convertToLower(oil) {
-            let compOilRep = oil.replaceAll(" ", "-");
-            let compOilLower = compOilRep.toLowerCase();
-            return compOilLower;
+    function rollEnch(value, flag) {
+        switch (value) {
+            case "static-no-selection":
+                selectedItem = getOilByName("None");
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-choose":
+                selectedItem = getOilByName("None");
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case null:
+                selectedItem = getOilByName("None");
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "":
+                selectedItem = getOilByName("None");
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-all":
+                shuffle(oilsAll);
+                selectedItem = getOilByName(oilsAll[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-ammo-consume-chance":
+                shuffle(oilsAmmo);
+                selectedItem = getOilByName(oilsAmmo[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-base-crit-chance":
+                shuffle(oilsCrit);
+                selectedItem = getOilByName(oilsCrit[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-bullet-bounce":
+                shuffle(oilsBounce);
+                selectedItem = getOilByName(oilsBounce[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-bullet-speed":
+               shuffle(oilsSpeed);
+                selectedItem = getOilByName(oilsSpeed[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-add-damage":
+                shuffle(oilsAddDam);
+                selectedItem = getOilByName(oilsAddDam[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-mult-damage":
+                shuffle(oilsMultDam);
+                selectedItem = getOilByName(oilsMultDam[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-max-durability":
+                shuffle(oilsDur);
+                selectedItem = getOilByName(oilsDur[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-penetration":
+                shuffle(oilsPen);
+                selectedItem = getOilByName(oilsPen[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-projectiles":
+                shuffle(oilsProj);
+                selectedItem = getOilByName(oilsProj[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-recoil":
+                shuffle(oilsRecoil);
+                selectedItem = getOilByName(oilsRecoil[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-reload-speed":
+               shuffle(oilsReload);
+                selectedItem = getOilByName(oilsReload[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-rpm":
+                shuffle(oilsRPM);
+                selectedItem = getOilByName(oilsRPM[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-spread":
+                shuffle(oilsSpread);
+                selectedItem = getOilByName(oilsSpread[0]);
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-durability-loss-multiplier-+200%":
+                selectedItem = getOilByName("Durability Loss Multiplier +200%");
+                addToCoreMap(flag, selectedItem, value);
+                break;
+            case "static-durability-loss-multiplier-+350%":
+                selectedItem = getOilByName("Durability Loss Multiplier +350%");
+                addToCoreMap(flag, selectedItem, value);
+                break;
+            default:
+                let selItem = convertToUpper(value);
+                selectedItem = getOilByName(selItem);
+                addToCoreMap(flag, selectedItem, value);
         }
+        poolRemover(selectedItem.Name);
+    }
 
-        function convertToUpper(oil) {
-            let compOilRep = oil.replaceAll("-", " ");
-            var splitStr = compOilRep.toLowerCase().split(' ');
-            for (var i = 0; i < splitStr.length; i++) {
-                splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
-            }
-            return splitStr.join(' '); 
+    function rollWeapon(value, flag) {
+        switch (value) {
+            case "random-all-weapons":
+                shuffle(gunsAll);
+                selectedItem = getWeaponByName(gunsAll[0]);
+                selectedValue = weaponNameIndexer.get(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            default:
+                selectedItem = weaponValueIndexer.get(value);
+                selectedGun = getWeaponByName(selectedItem);
+                addToCoreMap(flag, selectedGun, value);
         }
+    }
 
-       let oil1Conv = convertToLower(oil1Name2);
-       let oil2Conv = convertToLower(oil2Name2);
-       let oil3Conv = convertToLower(oil3Name2);
-       let oil4Conv = convertToLower(oil4Name2);
-       let oil5Conv = convertToLower(oil5Name2);
-
-       let oil1ValConv = convertToUpper(oil1Val);
-       let oil2ValConv = convertToUpper(oil2Val);
-       let oil3ValConv = convertToUpper(oil3Val);
-       let oil4ValConv = convertToUpper(oil4Val);
-       let oil5ValConv = convertToUpper(oil5Val);
-
-        if (selector === "oils1selector") {
-            if (oil1ValConv === oil2Name2 && oil1ValConv !== "None" && oil2Val.startsWith("static")) {
-                setNone(1, "cardOilName2", "cardOilDesc2");
-            }
-            if (oil1ValConv === oil3Name2 && oil1ValConv !== "None" && oil3Val.startsWith("static")) {
-                setNone(2, "cardOilName3", "cardOilDesc3");
-            }
-            if (oil1ValConv === oil4Name2 && oil1ValConv !== "None" && oil4Val.startsWith("static")) {
-                setNone(3, "cardOilName4", "cardOilDesc4");
-            }
-            if (oil1ValConv === oil5Name2 && oil1ValConv !== "None" && oil5Val.startsWith("static")) {
-                setNone(4, "cardOilName5", "cardOilDesc5");
-            }
-        }
-        if (selector === "oils2selector") {
-            if (oil2ValConv === oil1Name2 && oil2ValConv !== "None" && oil1Val.startsWith("static")) {
-                setNone(0, "cardOilName1", "cardOilDesc1");
-            }
-            if (oil2ValConv === oil3Name2 && oil2ValConv !== "None" && oil3Val.startsWith("static")) {
-                setNone(2, "cardOilName3", "cardOilDesc3");
-            }
-            if (oil2ValConv === oil4Name2 && oil2ValConv !== "None" && oil4Val.startsWith("static")) {
-                setNone(3, "cardOilName4", "cardOilDesc4");
-            }
-            if (oil2ValConv === oil5Name2 && oil2ValConv !== "None" && oil5Val.startsWith("static")) {
-                setNone(4, "cardOilName5", "cardOilDesc5");
+    function rollAttachment(value, flag) {
+        if (flag === "barrel") {
+            switch (value) {
+                case "static-not-applicable":
+                    selectedItem = getOilByName("None");
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "static-choose":
+                    selectedItem = getOilByName("None");
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "none":
+                    selectedItem = getOilByName("None");
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "static-random-barrel":
+                    shuffle(attachmentsBarrels);
+                    selectedItem = getBarrelByName(attachmentsBarrels[0]);
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                default:
+                    selectedItem = convertToUpper(selectedValue);
+                    selectedValue = convNameToVal(selectedItem);
+                    addToCoreMap(flag, selectedItem, value);
             }
         }
-        if (selector === "oils3selector") {
-            if (oil3ValConv === oil1Name2 && oil3ValConv !== "None" && oil1Val.startsWith("static")) {
-                setNone(0, "cardOilName1", "cardOilDesc1");
-            }
-            if (oil3ValConv === oil2Name2 && oil3ValConv !== "None" && oil2Val.startsWith("static")) {
-                setNone(1, "cardOilName2", "cardOilDesc2");
-            }
-            if (oil3ValConv === oil4Name2 && oil3ValConv !== "None" && oil4Val.startsWith("static")) {
-                setNone(3, "cardOilName4", "cardOilDesc4");
-            }
-            if (oil3ValConv === oil5Name2 && oil3ValConv !== "None" && oil5Val.startsWith("static")) {
-                setNone(4, "cardOilName5", "cardOilDesc5");
-            }
-        }
-        if (selector === "oils4selector") {
-            if (oil4ValConv === oil1Name2 && oil4ValConv !== "None" && oil1Val.startsWith("static")) {
-                setNone(0, "cardOilName1", "cardOilDesc1");
-            }
-            if (oil4ValConv === oil2Name2 && oil4ValConv !== "None" && oil2Val.startsWith("static")) {
-                setNone(1, "cardOilName2", "cardOilDesc2");
-            }
-            if (oil4ValConv === oil3Name2 && oil4ValConv !== "None" && oil3Val.startsWith("static")) {
-                setNone(2, "cardOilName3", "cardOilDesc3");
-            }
-            if (oil4ValConv === oil5Name2 && oil4ValConv !== "None" && oil5Val.startsWith("static")) {
-                setNone(4, "cardOilName5", "cardOilDesc5");
+        if (flag === "optic") {
+            switch (value) {
+                case "static-choose":
+                    selectedItem = getOilByName("None");
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "none":
+                    selectedItem = getOilByName("None");
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "static-random-optic":
+                    shuffle(attachmentsOptics);
+                    selectedItem = getBarrelByName(attachmentsOptics[0]);
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                default:
+                    selectedItem = convertToUpper(selectedValue);
+                    selectedValue = convNameToVal(selectedItem);
+                    addToCoreMap(flag, selectedItem, value);
             }
         }
-        if (selector === "oils5selector") {
-            if (oil5ValConv === oil1Name2 && oil5ValConv !== "None" && oil1Val.startsWith("static")) {
-                setNone(0, "cardOilName1", "cardOilDesc1");
+        if (flag === "laser") {
+            switch (value) {
+                case "static-choose":
+                    selectedItem = getOilByName("None");
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "none":
+                    selectedItem = getOilByName("None");
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "static-random-laser":
+                    shuffle(attachmentsLasers);
+                    selectedItem = getBarrelByName(attachmentsLasers[0]);
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                default:
+                    selectedItem = convertToUpper(selectedValue);
+                    selectedValue = convNameToVal(selectedItem);
+                    addToCoreMap(flag, selectedItem, value);
             }
-            if (oil5ValConv === oil2Name2 && oil5ValConv !== "None" && oil2Val.startsWith("static")) {
-                setNone(1, "cardOilName2", "cardOilDesc2");
+        }
+        if (flag === "firemode") {
+            switch (value) {
+                case "static-not-applicable":
+                    selectedItem = getOilByName("None");
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "static-choose":
+                    selectedItem = getOilByName("None");
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "none":
+                    addToCoreMap(flag, "None", "none")
+                    break;
+                default:
+                    selectedItem = convertToUpper(selectedValue);
+                    selectedValue = convNameToVal(selectedItem);
+                    addToCoreMap(flag, selectedItem, value);
             }
-            if (oil5ValConv === oil3Name2 && oil5ValConv !== "None" && oil3Val.startsWith("static")) {
-                setNone(2, "cardOilName3", "cardOilDesc3");
-            }
-            if (oil5ValConv === oil4Name2 && oil5ValConv !== "None" && oil4Val.startsWith("static")) {
-                setNone(3, "cardOilName4", "cardOilDesc4");
+        }
+        if (flag === "chamber") {
+            let weapon = coreSelections.get("weapon");
+            let weaponName = weapon.Name.Name;
+            let weaponStats = getWeaponByName(weaponName);
+            switch (value) {
+                case "static-choose":
+                    selectedItem = getChamberByName(`Chamber Chisel - ${weaponStats.AmmoType}`);
+                    addToCoreMap(flag, selectedItem, "static-choose")
+                    break;
+                case "none":
+                    selectedItem = getChamberByName(`Chamber Chisel - ${weaponStats.AmmoType}`);
+                    addToCoreMap(flag, selectedItem, "none")
+                    break;
+                case "static-random-chamber":
+                    shuffle(attachmentsRechambers);
+                    selectedItem = getChamberByName(attachmentsChambers[0]);
+                    selectedValue = convNameToVal(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                default:
+                    selectedItem = convertToUpper(selectedValue);
+                    selectedValue = convNameToVal(selectedItem);
+                    addToCoreMap(flag, selectedItem, value);
             }
         }
     }
-    
-    function setNone(j, i, k) {
-            addName("None", i, "oil", "None selected", k);
-            selectedOil[j].proDropdown.setValue("static-choose");
-        }
 
-    for (let i = 0; i < selectedOil.length; i++) {
+    switch (type) {
+        case "ench":
+            rollEnch(value, flag);
+            break;
+        case "attachment":
+            rollAttachment(value, flag);
+            break;
+        case "weapon":
+            rollWeapon(value, flag);
+            break;
+        default:
+    }
+
+
+
+    /*for (let i = 0; i < selectedOil.length; i++) {
         counter += 1;
         switch (selectedOil[i].value) {
             case "static-no-selection":
@@ -3439,248 +3948,7 @@ function rollOils(single, selector, selID, value) {
                     break;
         }
         checkNone(rolledOils[i].Name, i, selector);
-    };
-}
-
-function rollWeapon(selector) {
-    if (selector === "pageload") {
-        modifiedWeapon = getWeaponByName("P38 Dirk");
-        selectedWeapon = getOrigWeaponByName("P38 Dirk");
-        addName(selectedWeapon.Name, "p38-dirk", "weapon")
-    }
-    else {
-        let name = document.getElementById("weapons");
-
-        const selectedValue = name.value;
-        switch (selectedValue) {
-            case "random-all-weapons":
-                    shuffle(gunsAll);
-                    name = gunsAll[0];
-                modifiedWeapon = getWeaponByName(name);
-                selectedWeapon = getOrigWeaponByName(name);
-                addName(name, selectedValue, "weapon");
-                break;
-            case "random-pistols":
-                shuffle(gunsPistols);
-                name = gunsPistols[0];
-                modifiedWeapon = getWeaponByName(name);
-                selectedWeapon = getOrigWeaponByName(name);
-                addName(name, selectedValue, "weapon");
-                break;
-            case "random-revolvers":
-                shuffle(gunsRevolvers);
-                name = gunsRevolvers[0];
-                modifiedWeapon = getWeaponByName(name);
-                selectedWeapon = getOrigWeaponByName(name);
-                addName(name, selectedValue, "weapon");
-                break;
-            case "random-shotguns":
-                shuffle(gunsShotguns);
-                name = gunsShotguns[0];
-                modifiedWeapon = getWeaponByName(name);
-                selectedWeapon = getOrigWeaponByName(name);
-                addName(name, selectedValue, "weapon");
-                break;
-            case "random-submachine-guns":
-                shuffle(gunsSMGs);
-                name = gunsSMGs[0];
-                modifiedWeapon = getWeaponByName(name);
-                selectedWeapon = getOrigWeaponByName(name);
-                addName(name, selectedValue, "weapon");
-                break;
-            case "random-assault-rifles":
-                shuffle(gunsARs);
-                name = gunsARs[0];
-                modifiedWeapon = getWeaponByName(name);
-                selectedWeapon = getOrigWeaponByName(name);
-                addName(name, selectedValue, "weapon");
-                break;
-            case "random-lmgs":
-                shuffle(gunsLMGs);
-                name = gunsLMGs[0];
-                modifiedWeapon = getWeaponByName(name);
-                selectedWeapon = getOrigWeaponByName(name);
-                addName(name, selectedValue, "weapon");
-                break;
-            case "random-rifles":
-                shuffle(gunsRifles);
-                name = gunsRifles[0];
-                modifiedWeapon = getWeaponByName(name);
-                selectedWeapon = getOrigWeaponByName(name);
-                addName(name, selectedValue, "weapon");
-                break;
-            case "random-sniper-rifles":
-                shuffle(gunsSnipers);
-                name = gunsSnipers[0];
-                modifiedWeapon = getWeaponByName(name);
-                selectedWeapon = getOrigWeaponByName(name);
-                addName(name, selectedValue, "weapon");
-                break;
-            default:
-                const selectedIndex = name.selectedIndex;
-                const selectedText = name.options[selectedIndex].text;
-                modifiedWeapon = getWeaponByName(selectedText);
-                selectedWeapon = getOrigWeaponByName(selectedText);
-                addName(selectedWeapon.Name, selectedValue, "weapon")
-        }
-    }
-}
-
-function rollAttachments(single, item) {
-    let selectorBarrel = document.getElementById("barrelselector");
-    let selectorOptic = document.getElementById("opticselector");
-    let selectorLaser = document.getElementById("laserselector");
-    let selectorFiremode = document.getElementById("firemodeselector");
-    let selectorChamber = document.getElementById("chamberselector");
-
-    barrelName = document.getElementById("barrelname").textContent;
-    opticName = document.getElementById("opticname").textContent;
-    laserName = document.getElementById("lasername").textContent;
-    firemodeName = document.getElementById("firemodename").textContent;
-    chamberName = document.getElementById("cardAmmoType").textContent;
-
-    let attSel = null;
-
-    selectedAttachments = getAttachmentByName("All");
-
-    switch (selectorBarrel.value) {
-        case "static-not-applicable":
-            selectedBarrel = getBarrelByName("None");
-            break;
-        case "static-choose":
-            selectedBarrel = getBarrelByName("None");
-            break;
-        case "none":
-            selectedBarrel = getBarrelByName("None");
-            break;
-        case "static-random-barrel":
-            if (item === "barrel" || item === "button"){
-                shuffle(attachmentsBarrels);
-                attSel = attachmentsBarrels[0];
-                selectedBarrel = getBarrelByName(attSel);
-            }
-            else {
-                selectedBarrel = getBarrelByName(barrelName);
-            }
-            break;
-        default:
-            const selectedIndex = selectorBarrel.selectedIndex;
-            const selectedText = selectorBarrel.options[selectedIndex].text;
-            selectedBarrel = getBarrelByName(selectedText);
-    }
-    selectedAttachments.SpreadAdd += selectedBarrel.SpreadAdd;
-    selectedAttachments.MovementSpeedMult += selectedBarrel.MovementSpeedMult;
-    selectedAttachments.SpreadMult += selectedBarrel.SpreadMult;
-    selectedAttachments.DamageMult += selectedBarrel.DamageMult;
-    selectedAttachments.BaseCritChance += selectedBarrel.BaseCritChance;
-    selectedAttachments.RPM += selectedBarrel.RPM;
-    selectedAttachments.DurabilityMult += selectedBarrel.DurabilityMult;
-    selectedAttachments.BulletSpeed += selectedBarrel.BulletSpeed;
-    selectedAttachments.RecoilMult += selectedBarrel.RecoilMult;
-
-    addName(selectedBarrel.Name, "barrelname", "attachment", selectedBarrel.StatDescription, "barreldesc");
-
-    switch (selectorChamber.value) {
-        case "static-not-applicable":
-            selectedChamber = getChamberByName(`Chamber Chisel - ${selectedWeapon.AmmoType}`);
-            break;
-        case "static-choose":
-            selectedChamber = getChamberByName(`Chamber Chisel - ${selectedWeapon.AmmoType}`);
-            break;
-        case "none":
-            selectedChamber = getChamberByName(`Chamber Chisel - ${selectedWeapon.AmmoType}`);
-            break;
-        case "static-random-chamber":
-            if (item === "chamber" || item === "button"){
-                shuffle(attachmentsRechamber);
-                attSel = attachmentsRechamber[0];
-                selectedChamber = getChamberByName(attSel);
-            }
-            else {
-                selectedChamber = getChamberByName(`Chamber Chisel - ${chamberName}`)
-            }
-            break;
-        default:
-            const selectedIndex = selectorChamber.selectedIndex;
-            const selectedText = selectorChamber.options[selectedIndex].text;
-            selectedChamber = getChamberByName(selectedText);
-    }
-    switch (selectorFiremode.value) {
-        case "static-not-applicable":
-            selectedFiremode = getFiremodeByName("None");
-            break;
-        case "static-choose":
-            selectedFiremode = getFiremodeByName("None");
-            break;
-        case "none":
-            selectedFiremode = getFiremodeByName("None");
-            break;
-        default:
-            const selectedIndex = selectorFiremode.selectedIndex;
-            const selectedText = selectorFiremode.options[selectedIndex].text;
-            selectedFiremode = getFiremodeByName(selectedText);
-    }
-    selectedAttachments.SpreadAdd += selectedFiremode.SpreadAdd;
-    selectedAttachments.DamageMult += selectedFiremode.DamageMult;
-    selectedAttachments.Firemode = selectedFiremode.Firemode;
-
-    addName(selectedFiremode.Name, "firemodename", "attachment", selectedFiremode.StatDescription, "firemodedesc");
-
-
-    switch (selectorLaser.value) {
-        case "static-not-applicable":
-            selectedLaser = getLaserByName("None");
-            break;
-        case "static-choose":
-            selectedLaser = getLaserByName("None");
-            break;
-        case "none":
-            selectedLaser = getLaserByName("None");
-            break;
-        case "static-random-laser":
-            if (item === "laser" || item === "button"){
-                shuffle(attachmentsLaser);
-                attSel = attachmentsLaser[0];
-                selectedLaser = getLaserByName(attSel);
-            }
-            else {
-                selectedLaser = getLaserByName(laserName);
-            }
-            break;
-        default:
-            const selectedIndex = selectorLaser.selectedIndex;
-            const selectedText = selectorLaser.options[selectedIndex].text;
-            selectedLaser = getLaserByName(selectedText);
-    }
-    selectedAttachments.MovingAccuracy += selectedLaser.MovingAccuracy;
-
-    addName(selectedLaser.Name, "lasername", "attachment", selectedLaser.StatDescription, "laserdesc");
-
-    switch (selectorOptic.value) {
-        case "static-choose":
-            selectedOptic = getOpticByName("None");
-            break;
-        case "none":
-            selectedOptic = getOpticByName("None");
-            break;
-        case "static-random-optic":
-            if (item === "optic" || item === "button"){
-                shuffle(attachmentsOptics);
-                attSel = attachmentsOptics[0];
-                selectedOptic = getOpticByName(attSel);
-            }
-            else {
-                selectedOptic = getOpticByName(opticName);
-            }
-            break;
-        default:
-            const selectedIndex = selectorOptic.selectedIndex;
-            const selectedText = selectorOptic.options[selectedIndex].text;
-            selectedOptic = getOpticByName(selectedText);
-    }
-    selectedAttachments.ADSCritChance += selectedOptic.ADSCritChance;
-
-    addName(selectedOptic.Name, "opticname", "attachment", selectedOptic.StatDescription, "opticdesc");
+    };*/
 }
 
 // Arrays; don't add functions below this
@@ -4243,18 +4511,18 @@ const attachmentsOptics = [
     "Sniper Scope"
 ];
 
-const attachmentsLaser = [
+const attachmentsLasers = [
     "Red",
     "Green",
     "Yellow"
 ];
 
-const attachmentsFiremode = [
+const attachmentsFiremodes = [
     "Gun Crank",
     "Priming Bolt"
 ];
 
-const attachmentsRechamber = [
+const attachmentsRechambers = [
     "Chamber Chisel - .50 BMG",
     "Chamber Chisel - 12Ga",
     "Chamber Chisel - 5.56mm",

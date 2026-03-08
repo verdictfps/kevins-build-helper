@@ -466,7 +466,7 @@
         "AmmoType": "9mm",
         "DamageMult": 1,
         "Damage": 0,
-        "Projectiles": ".0",
+        "Projectiles": 1,
         "RPM": 450,
         "MagSize": 7,
         "Spread": 0,
