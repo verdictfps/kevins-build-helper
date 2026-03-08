@@ -383,6 +383,21 @@ function resetCoreSelections() {
 
 resetCoreSelections()
 
+const chamberValueIndexer = new Map();
+
+function setChamberValueIndexer() {
+
+    chamberValueIndexer.set("chamber-chisel-50-bmg", "Chamber Chisel - .50 BMG");
+    chamberValueIndexer.set("chamber-chisel-12ga", "Chamber Chisel - 12Ga");
+    chamberValueIndexer.set("chamber-chisel-556mm", "Chamber Chisel - 5.56mm");
+    chamberValueIndexer.set("chamber-chisel-762mm", "Chamber Chisel - 7.62mm");
+    chamberValueIndexer.set("chamber-chisel-9mm", "Chamber Chisel - 9mm");
+
+}
+
+setChamberValueIndexer();
+
+
 const weaponValueIndexer = new Map();
 
 function setWeaponValueIndexer() {
@@ -777,10 +792,7 @@ function addAllEventListeners() {
 
     // Animations
 
-    const box = document.getElementById('oilstatcontainer1');
-    box.addEventListener('animationend', () => {
-    box.classList.remove('spinanimation');
-    }, { once: true }); 
+    
 
 }
 
@@ -856,8 +868,19 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
 }
 
 function rollAggregator(flag, selector, selID, selValue, selType) {
+    
+    document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
+    document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
+    document.getElementById("oilstatcontainer3").classList.remove("spinanimation");
+    document.getElementById("oilstatcontainer4").classList.remove("spinanimation");
+    document.getElementById("oilstatcontainer5").classList.remove("spinanimation");
 
-    document.getElementById("oilstatcontainer1").classList.add("spinanimation");
+    document.getElementById("cardOil1Img").classList.remove("otherspinanimation");
+    document.getElementById("cardOil2Img").classList.remove("otherspinanimation");
+    document.getElementById("cardOil3Img").classList.remove("otherspinanimation");
+    document.getElementById("cardOil4Img").classList.remove("otherspinanimation");
+    document.getElementById("cardOil5Img").classList.remove("otherspinanimation");
+
     selectedWeapon = null;
     modifiedWeapon = null;
     oil1 = null;
@@ -884,13 +907,38 @@ function rollAggregator(flag, selector, selID, selValue, selType) {
     oilRemover();
     oilStats();
     oilCalcs(oilStatModifiers);
+
+    setTimeout(() => {
+    document.getElementById("oilstatcontainer1").classList.add("spinanimation");
+    document.getElementById("cardOil1Img").classList.add("otherspinanimation");
+    }, 10);
+    setTimeout(() => {
+    document.getElementById("oilstatcontainer2").classList.add("spinanimation");
+    document.getElementById("cardOil2Img").classList.add("otherspinanimation");
+    }, 110);
+    setTimeout(() => {
+    document.getElementById("oilstatcontainer3").classList.add("spinanimation");
+    document.getElementById("cardOil3Img").classList.add("otherspinanimation");
+    }, 210);
+    setTimeout(() => {
+    document.getElementById("oilstatcontainer4").classList.add("spinanimation");
+    document.getElementById("cardOil4Img").classList.add("otherspinanimation");
+    }, 310);
+    setTimeout(() => {
+    document.getElementById("oilstatcontainer5").classList.add("spinanimation");
+    document.getElementById("cardOil5Img").classList.add("otherspinanimation");
+    }, 410);
+    
+    
+    setTimeout(() => {
     addName();
+    }, 430);
     
 }
 
 function rollOnSelect(evt) {
     if (shallNotPass === false) {
-console.log(shallNotPass)
+
         shallNotPass = true;
 
         flag = evt.currentTarget.flag;
@@ -1121,13 +1169,11 @@ function oilCalcs(calcOil) {
     let weaponStats = getWeaponByName(weaponName.Name.Name);
     let weapon = structuredClone(weaponStats);
     let weaponOriginal = structuredClone(weaponStats);
-console.log("calcoil", calcOil)
-    console.log("weapon modded", weapon);
-    console.log("weapon og", weaponOriginal);
+    
     let weaponOriginalChamber = getChamberByName(`Chamber Chisel - ${weaponOriginal.AmmoType}`);
 
     let chamberStats = null;
-
+console.log(coreSelections.get("chamber"))
     let chamberName = coreSelections.get("chamber");
     if (chamberName.Name === "None") {
         chamberStats = getChamberByName(`Chamber Chisel - ${weaponOriginal.AmmoType}`);
@@ -1137,7 +1183,7 @@ console.log("calcoil", calcOil)
     }
 
     let chamber = chamberStats;
-
+console.log(chamberStats)
     if (weapon.AmmoType != "Energy") {
         weapon.Damage = weapon.DamageMult * chamber.Damage;
         weapon.AmmoType = chamber.AmmoType;
@@ -2510,6 +2556,7 @@ function addToCoreMap(flag, itemName, itemValue) {
 }
 
 function convertToUpper(item) {
+    console.log(item)
             let compItemRep = item.replaceAll("-", " ");
             var splitStr = compItemRep.toLowerCase().split(' ');
             for (var i = 0; i < splitStr.length; i++) {
@@ -2732,6 +2779,9 @@ function rollSelections(flag, selector, selID, value, type) {
                 selectedGun = getWeaponByName(selectedItem);
                 addToCoreMap(flag, selectedGun, value);
         }
+        console.log("hi", selectedGun)
+        let selChamb = getChamberByName(`Chamber Chisel - ${selectedGun.AmmoType}`);
+        addToCoreMap("chamber", selChamb, "static-choose");
     }
 
     function rollAttachment(value, flag) {
@@ -2840,6 +2890,7 @@ function rollSelections(flag, selector, selID, value, type) {
             switch (value) {
                 case "static-choose":
                     selectedItem = getChamberByName(`Chamber Chisel - ${weaponStats.AmmoType}`);
+                    console.log(coreSelections.get("weapon"))
                     addToCoreMap(flag, selectedItem, "static-choose")
                     break;
                 case "none":
@@ -2848,14 +2899,14 @@ function rollSelections(flag, selector, selID, value, type) {
                     break;
                 case "static-random-chamber":
                     shuffle(attachmentsRechambers);
-                    selectedItem = getChamberByName(attachmentsChambers[0]);
+                    selectedItem = getChamberByName(attachmentsRechambers[0]);
                     selectedValue = convNameToVal(selectedItem.Name);
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 default:
-                    selectedItem = convertToUpper(selectedValue);
-                    selectedValue = convNameToVal(selectedItem);
-                    addToCoreMap(flag, selectedItem, value);
+                    selectedItem = chamberValueIndexer.get(value);
+                    selectedChamber = getChamberByName(selectedItem);
+                    addToCoreMap(flag, selectedChamber, value);
             }
         }
     }
