@@ -481,6 +481,10 @@ select.custom-dropdown {
     color: #89a0b8"
 }
 
+.show {
+  display: block;
+}
+
 .custom-select-panel {
     display:none;
     position:absolute;
