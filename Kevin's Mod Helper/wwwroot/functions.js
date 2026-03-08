@@ -743,9 +743,7 @@ function onGenerate() {
     rollAggregator("chamber", "chamberselector", 5, chamberSelectHandler.value, "attachment");
 }
 
-async function addAllEventListeners() {
-
-    const dropped = dropPromise;
+function addAllEventListeners() {
 
     // Weapon onchange handler
 
@@ -838,8 +836,7 @@ async function addAllEventListeners() {
     //   dropdownSelectHandler[i].addEventListener('click', mobileDropdownCheck, false);
     //}
 
-    
-    
+
 }
 
 
@@ -871,7 +868,7 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
     const result2 = await loadWeapons();
     let selPageLoad = document.getElementById("weapons");
 
-    addAllEventListeners()
+    
 
     selPageLoad.proDropdown.setValue("value"); 
     
@@ -3581,11 +3578,12 @@ function mobileDropdownCheck(evt) {
             customDropHandler[i].hidden = true;
         }
     }
-    return helloThere;
+    addAllEventListeners()
+    console.log(helloThere);
 }
 
 const dropPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
         mobileDropdownCheck();
-    }, 100);
+    }, 500);
 })
