@@ -1352,7 +1352,7 @@ function oilCalcs(calcOil) {
 
     let ammoCalc = weapon.AmmoConsumeChance + calcOil.AmmoConsumeChance;
     let ammoConv = percentConv(ammoCalc);
-console.log(ammoCalc, ammoConv)
+    
     let ammoRound = Math.round((ammoConv + Number.EPSILON)* 100) / 100;
 
     if (ammoRound < 0) {
@@ -2561,48 +2561,49 @@ function convNameToVal(name) {
 }
 
 function addToCoreMap(flag, itemName, itemValue) {
-    switch (flag) {
-        case "weapon":
-            coreSelections.set("weapon", {Name: itemName, Value: itemValue});
-            break;
-        case "ench1":
-            coreSelections.set("ench1", {Name: itemName, Value: itemValue});
-            break;
-        case "ench2":
-            coreSelections.set("ench2", {Name: itemName, Value: itemValue});
-            break;
-        case "ench3":
-            coreSelections.set("ench3", {Name: itemName, Value: itemValue});
-            break;
-        case "ench4":
-            coreSelections.set("ench4", {Name: itemName, Value: itemValue});
-            break;
-        case "ench5":
-            coreSelections.set("ench5", {Name: itemName, Value: itemValue});
-            break;
-        case "barrel":
-            coreSelections.set("barrel", {Name: itemName, Value: itemValue});
-            break;
-        case "optic":
-            coreSelections.set("optic", {Name: itemName, Value: itemValue});
-            break;
-        case "laser":
-            coreSelections.set("laser", {Name: itemName, Value: itemValue});
-            break;
-        case "firemode":
-            coreSelections.set("firemode", {Name: itemName, Value: itemValue});
-            break;
-        case "chamber":
-            coreSelections.set("chamber", {Name: itemName, Value: itemValue});
-            break;   
-        case "all":
-            break;
-        default:
+    if (itemName !== null) {
+        switch (flag) {
+            case "weapon":
+                coreSelections.set("weapon", {Name: itemName, Value: itemValue});
+                break;
+            case "ench1":
+                coreSelections.set("ench1", {Name: itemName, Value: itemValue});
+                break;
+            case "ench2":
+                coreSelections.set("ench2", {Name: itemName, Value: itemValue});
+                break;
+            case "ench3":
+                coreSelections.set("ench3", {Name: itemName, Value: itemValue});
+                break;
+            case "ench4":
+                coreSelections.set("ench4", {Name: itemName, Value: itemValue});
+                break;
+            case "ench5":
+                coreSelections.set("ench5", {Name: itemName, Value: itemValue});
+                break;
+            case "barrel":
+                coreSelections.set("barrel", {Name: itemName, Value: itemValue});
+                break;
+            case "optic":
+                coreSelections.set("optic", {Name: itemName, Value: itemValue});
+                break;
+            case "laser":
+                coreSelections.set("laser", {Name: itemName, Value: itemValue});
+                break;
+            case "firemode":
+                coreSelections.set("firemode", {Name: itemName, Value: itemValue});
+                break;
+            case "chamber":
+                coreSelections.set("chamber", {Name: itemName, Value: itemValue});
+                break;   
+            case "all":
+                break;
+            default:
+        }
     }
 }
 
 function convertToUpper(item) {
-    console.log(item)
             let compItemRep = item.replaceAll("-", " ");
             var splitStr = compItemRep.toLowerCase().split(' ');
             for (var i = 0; i < splitStr.length; i++) {
@@ -2689,6 +2690,11 @@ function rollSelections(flag, selector, selID, value, type) {
 
     let selectedItem = null;
     let selectedValue = null;
+    let selChamb = null;
+
+    function setDefaultChamber(gun) {
+        
+    }
 
     function rollEnch(value, flag) {
         switch (value) {
@@ -2818,16 +2824,82 @@ function rollSelections(flag, selector, selID, value, type) {
                 shuffle(gunsAll);
                 selectedItem = getWeaponByName(gunsAll[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
+                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
+                addToCoreMap("chamber", selChamb, "static-choose");
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "random-pistols":
+                shuffle(gunsPistols);
+                selectedItem = getWeaponByName(gunsPistols[0]);
+                selectedValue = weaponNameIndexer.get(selectedItem.Name);
+                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
+                addToCoreMap("chamber", selChamb, "static-choose");
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "random-revolvers":
+                shuffle(gunsRevolvers);
+                selectedItem = getWeaponByName(gunsRevolvers[0]);
+                selectedValue = weaponNameIndexer.get(selectedItem.Name);
+                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
+                addToCoreMap("chamber", selChamb, "static-choose");
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "random-shotguns":
+                shuffle(gunsShotguns);
+                selectedItem = getWeaponByName(gunsShotguns[0]);
+                selectedValue = weaponNameIndexer.get(selectedItem.Name);
+                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
+                addToCoreMap("chamber", selChamb, "static-choose");
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "random-smgs":
+                shuffle(gunsSMGs);
+                selectedItem = getWeaponByName(gunsSMGs[0]);
+                selectedValue = weaponNameIndexer.get(selectedItem.Name);
+                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
+                addToCoreMap("chamber", selChamb, "static-choose");
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "random-assault-rifles":
+                shuffle(gunsARs);
+                selectedItem = getWeaponByName(gunsARs[0]);
+                selectedValue = weaponNameIndexer.get(selectedItem.Name);
+                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
+                addToCoreMap("chamber", selChamb, "static-choose");
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "random-lmgs":
+                shuffle(gunsLMGs);
+                selectedItem = getWeaponByName(gunsLMGs[0]);
+                selectedValue = weaponNameIndexer.get(selectedItem.Name);
+                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
+                addToCoreMap("chamber", selChamb, "static-choose");
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "random-rifles":
+                shuffle(gunsRifles);
+                selectedItem = getWeaponByName(gunsRifles[0]);
+                selectedValue = weaponNameIndexer.get(selectedItem.Name);
+                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
+                addToCoreMap("chamber", selChamb, "static-choose");
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "random-sniper-rifles":
+                shuffle(gunsSnipers);
+                selectedItem = getWeaponByName(gunsSnipers[0]);
+                selectedValue = weaponNameIndexer.get(selectedItem.Name);
+                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
+                addToCoreMap("chamber", selChamb, "static-choose");
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             default:
-                selectedItem = weaponValueIndexer.get(value);
-                selectedGun = getWeaponByName(selectedItem);
-                addToCoreMap(flag, selectedGun, value);
+                let selectedGun = weaponValueIndexer.get(value);
+                selectedItem = getWeaponByName(selectedGun);
+                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
+                addToCoreMap("chamber", selChamb, "static-choose");
+                addToCoreMap(flag, selectedItem, value);
         }
-        console.log("hi", selectedGun)
-        let selChamb = getChamberByName(`Chamber Chisel - ${selectedGun.AmmoType}`);
-        addToCoreMap("chamber", selChamb, "static-choose");
+        
     }
 
     function rollAttachment(value, flag) {
@@ -2909,7 +2981,6 @@ function rollSelections(flag, selector, selID, value, type) {
             }
         }
         if (flag === "firemode") {
-            console.log(value)
             switch (value) {
                 case "static-not-applicable":
                     selectedItem = getFiremodeByName("None");
@@ -2942,7 +3013,6 @@ function rollSelections(flag, selector, selID, value, type) {
             switch (value) {
                 case "static-choose":
                     selectedItem = getChamberByName(`Chamber Chisel - ${weaponStats.AmmoType}`);
-                    console.log(coreSelections.get("weapon"))
                     addToCoreMap(flag, selectedItem, "static-choose")
                     break;
                 case "none":
@@ -3562,12 +3632,10 @@ function mobileDropdownCheck(evt) {
     if (window.mobileCheck() === true) {
 
         dropdownSelectHandler = document.getElementsByClassName('mobiledrop');
-        console.log(dropdownSelectHandler)
         customDropHandler = document.getElementsByClassName('custom-select');
 
         for (var i = 0; i < dropdownSelectHandler.length; i++) {
             if (dropdownSelectHandler[i] !== undefined) {
-                console.log(dropdownSelectHandler[i])
                 dropdownSelectHandler[i].classList.remove("custom-dropdown");
                 dropdownSelectHandler[i].classList.add("show");
             }
