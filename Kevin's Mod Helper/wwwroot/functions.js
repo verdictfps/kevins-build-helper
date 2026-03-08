@@ -839,8 +839,11 @@ function addAllEventListeners() {
 
 function mobileDropdownCheck(evt) {
     console.log("checking if mobile");
-    if (window.mobileCheck === true) {
-        evt.currentTarget.classList.add(show);
+    if (window.mobileCheck() === false) {
+        let dropName = evt.currentTarget.dataset.dropdownId;
+        let oldDrop = document.getElementById(dropName);
+        //oldDrop.classList.remove("custom-dropdown");
+        oldDrop.classList.add("show");
     }
 }
 
