@@ -506,6 +506,20 @@ select.custom-dropdown {
   display: block;
 }
 
+.mobiledrop {
+    display: flex;
+    font-size: 1em;
+    height: 30px;
+    box-shadow: 0px 0px 0px 10px #FDB142, 0px 0px 0px 12px black;
+    border: 2px solid black;
+    width: 95%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 0.01em;
+}
+
 .custom-select-panel {
     display:none;
     position:absolute;
