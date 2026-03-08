@@ -15,7 +15,8 @@
             display: flex;
             border: 3px solid #FDB142;
             background-color: #424242;
-            border-radius: 15px 15px 0px 0px;
+            border-radius: 15px 15px 15px 15px;
+            
             width: 100%;
             align-items: center;
         }
@@ -36,7 +37,7 @@
 
         .containerweapchoose {
             display: grid;
-            grid-template-columns: 15% 35% 50%;
+            grid-template-columns: 50% 50%;
             border-radius: 5px;
         }
 
@@ -205,12 +206,31 @@
                 <p id="oil1infoboxname" style="color:#FDB142; font-weight: 500; font-size: 1em;">hi</p>
                 <p id="oil1infoboxtext" style="font-size: 0.8em">hi</p>
             </div>
-            <div class="containerweapchoose" style="border: 1px solid #FDB142; border-radius: 5px; margin-bottom: -10px; margin-top: 10px; margin-right: 10px; margin-left: 10px;">
-                <div style="border: 0px;">
-                    <h2>Select a WEAPON</h2>
+            <div class="containerheaders" style="border: 0px; padding: 0px; height: 12%; margin-right: 0px; margin-left: -5px; margin-right: 10px; margin-top: 22px; justify-content: center; display: flex; align-items:center;">
+                
+                <div style="width: 470px; padding: 0px; padding-bottom: 0px; padding-left: 15px; height: 100%; margin: 0px; margin-right: 10px; justify-content: center; align-items:center; display: flex; width: 50%;">
+                    <div class="containertooltip" style="border: 3px solid #FDB142; width: 100%; height: 92%; align-items: center; justify-content: left; padding: 0px; margin-right: -5px; anchor-name: --tooltip-anchor; box-shadow: inset 2px 2px 15px rgb(216, 216, 216), 3px 3px 0px 3px black; border-radius: 5px;">
+                        <p style="padding-right: 40px; max-width: 430px; justify-content: left;" id="infoboxText"></p>
+                        <h1 id="mainHeader" style="position: fixed; width: auto; position-anchor: --tooltip-anchor; left: anchor(left); top: anchor(top); bottom: anchor(bottom); right: anchor(right);">Kevin's Build Helper</h1>
+                        <div>
+
+                            <div class="containerglass" style="position: absolute; position-anchor: --tooltip-anchor;  width: auto; height: auto; left: anchor(left); top: anchor(top); bottom: anchor(bottom); right: anchor(right); border: 0px; margin: 3px; border-radius: 5px; z-index: 2; background-image: radial-gradient(ellipse farthest-side at top right, transparent , white , #ffffff56 85%, #ffffff3b, #ffffff3a, #4b4b4b ); opacity: 100%; mix-blend-mode: overlay; ">
+                            
+                            </div>
+                            
+                        </div>
+                                            
+
+                    </div>
+                    
+                    
                 </div>
-                <div style="margin-top: 10px; margin-right: 5px; border: 0px; padding: 0px; padding-left: 3%">
-                    <select name="weaponscollection" id="weapons" data-accordion="true" data-collapsible="true" data-collapsed="true" class="custom-dropdown" ">
+                <div style="width: 50%; display: flex; justify-content: center; align-items:center; padding-left: 0px; border: 1px solid #FDB142; margin: 0px; margin-left: 10px; border-radius: 5px; padding-top: 0px; padding-bottom: 0px; margin-top: 2px; height: 100%">
+                    <div style="border: 0px; width: auto; display: flex; justify-content: center; align-items:center;">
+                        <h2>Select a WEAPON</h2>
+                    </div>
+                    <div id="weaponboxcontain" style="margin: 0px; border: 0px; padding: 0px; padding-left: 0px; width: 80%; display: flex; justify-content: center; align-items:center; margin-right: -3px">
+                        <select name="weaponscollection" id="weapons" data-accordion="true" data-collapsible="true" data-collapsed="true" class="custom-dropdown">
                         <option value="random-all-weapons">Random - All</option>
                         <optgroup label="Pistols">
                             <option value="random-pistols">Random Pistol</option>
@@ -285,10 +305,8 @@
                             <option value="longboy">Longboy</option>
                             <option value="rokua-308">Rokua .308</option>
                         </optgroup>
-                    </select>
-                </div>
-                <div class="containerbutton" style="margin-top: 0px; margin-left: 5px;">
-                    <button id="buttonGenerate" onclick="onGenerate('button')">REGEN RANDOMS</button>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="weaponstuffcontainer" style="border: 0px solid #FDB142; border-radius: 5px; margin-top:10px;">
@@ -1788,37 +1806,21 @@
                 </div>
             </div>
         </div>
-        <div  style="border:0px; margin-left:-5px; margin-bottom: -50px;">
-            <div class="containerheaders" style="border: 0px; padding-bottom: 0px; height: 12%; margin-right: -4px; margin-left: -20px; padding-top: 0px;">
-                <div style="width: 50%">
-                    
-                </div>
-                <div style="width: 50%; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; height: 100%;">
-                    <div class="containertooltip" style="border: 3px solid #FDB142; width: 100%; height: 92%; align-items: center; padding: 0px; anchor-name: --tooltip-anchor; box-shadow: inset 2px 2px 15px rgb(216, 216, 216);">
-                        <p style="padding-right: 40px;" id="infoboxText"></p>
-                        <h1 id="mainHeader" style="position: fixed; width: auto; position-anchor: --tooltip-anchor; left: anchor(left); top: anchor(top); bottom: anchor(bottom); right: anchor(right);">Kevin's Build Helper</h1>
-                        <div >
-
-                            <div class="containerglass" style="position: absolute; position-anchor: --tooltip-anchor; position: absolute; width: auto; height: auto; left: anchor(left); top: anchor(top); bottom: anchor(bottom); right: anchor(right); border: 0px; margin: 3px; border-radius: 15px 15px 0px 0px; z-index: 2; background-image: radial-gradient(ellipse farthest-side at top right, transparent , white , #ffffff56 85%, #ffffff3b, #ffffff3a, #4b4b4b ); opacity: 100%; mix-blend-mode: overlay;">
-                            
-                            </div>
-                            
-                        </div>
-                                            
-
-                    </div>
-                    
-                    
+        <div  style="border:0px; margin-left:-5px; margin-bottom: -50px; ">
+            
+            <div class="containerweapchoose" style="border: 1px solid #FDB142; border-radius: 5px; margin-bottom: 20px; margin-top: 12px; margin-right: 0px; margin-left: 0px; height: 50px; display: flex">
+                
+                <div class="containerbutton" style="margin-top: 0px; margin-left: 5px; display: flex; padding: 0px">
+                    <button style="padding: 10px; justify-content: center; display: flex; align-items:center;" id="buttonGenerate" onclick="onGenerate('button')">REGEN RANDOMS</button>
                 </div>
             </div>
-            
             <div class="containerweapon" style="margin-bottom:20px; border: 0px solid #FDB142; padding: 0px; border-radius: 15px 0px;">
                 <p style="text-align: left; font-weight: 500; font-size: 2em; margin: 0px; padding-bottom: 5px; padding-left: 15px; padding-top: 5px;" id="cardWeaponName">Weapon</p>
                 <div id="weaponstatcontainer" class="resultcontainer" style="border-radius: 15px; border: 0px; padding: 0px">
                     <div style="height:325px; border-left: 1px solid #FDB142; padding-left: 5px; height: 100%; padding-top: 5px; padding-bottom: 15px">
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em;">Type: <span style="font-weight:400" id="cardWeaponType"></span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Ammo Type: <span style="font-weight:400" id="cardAmmoType"></span></p>
-                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Damage: <span style="font-weight:400" id="cardDamage"></span><span style="font-weight:400" id="cardDamageArrow"></span><span>  </span><span style="font-weight:400" id="cardDamageX"></span><span> </span><span style="font-weight:400" id="cardDamageProj"></span><span>  </span><span style="font-weight:400" id="cardDamageProjArrow"></span><span>  </span><span style="font-weight:400" id="cardDamageMultiX"></span><span>  </span><span style="font-weight:200" id="cardDamageMulti"></span><span style="font-weight:400" id="cardDamageLRArrow">  </span><span style="font-weight:300" class="compLabel" id="cardDamageLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDamageComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageMultiComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageMultiXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageProjComp"></span><span class="compLabel" style="font-weight:300" id="cardDamageRBrac"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Damage: <span style="font-weight:400" id="cardDamage"></span><span style="font-weight:400" id="cardDamageArrow"></span><span>  </span><span style="font-weight:400" id="cardDamageX"></span><span> </span><span style="font-weight:400" id="cardDamageProj"></span><span style="font-weight:400" id="cardDamageProjArrow"></span><span>  </span><span style="font-weight:400" id="cardDamageMultiX"></span><span>  </span><span style="font-weight:200" id="cardDamageMulti"></span><span style="font-weight:400" id="cardDamageLRArrow">  </span><span style="font-weight:300" class="compLabel" id="cardDamageLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDamageComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageProjComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageMultiXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageMultiComp"></span><span class="compLabel" style="font-weight:300" id="cardDamageRBrac"></span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">⤷ Total: <span style="font-weight:400" id="cardDamageTotal"></span><span style="font-weight:400" id="cardDamageTotalArrow"></span><span> </span><span style="font-weight:400" id="cardDamageTotalLRArrow">  </span><span style="font-weight:300" class="compLabel" id="cardDamageTotalLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDamageTotalComp"></span><span style="font-weight:300" class="compLabel" id="cardDamageTotalRBrac"></span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">RPM: <span style="font-weight:400" id="cardRPM"></span><span id="cardRPMArrow"></span><span id="cardRPMspace"> </span><span style="font-weight:300" class="compLabel" id="cardRPMLBrac"></span><span style="font-weight:300" class="compLabel" id="cardRPMComp"></span><span style="font-weight:300" class="compLabel" id="cardRPMRBrac"></span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Mag Size: <span style="font-weight:400" id="cardMagSize"></span></p>
@@ -1910,6 +1912,7 @@
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Penetrations: <span style="font-weight:400" id="cardPen"></span><span id="cardPenArrow"></span><span id="cardPenspace"> </span><span id="cardPenLBrac" class="compLabel" style="font-weight:200"></span><span id="cardPenComp" class="compLabel" style="font-weight:200"></span><span id="cardPenRBrac" class="compLabel" style="font-weight:200"></span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Drag: <span style="font-weight:400" id="cardDrag"></span><span id="cardDragArrow"></span><span id="cardDragspace"> </span><span id="cardDragLBrac" class="compLabel" style="font-weight:200"></span><span id="cardDragComp" class="compLabel" style="font-weight:200"></span><span id="cardDragRBrac" class="compLabel" style="font-weight:200"></span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bullet Speed: <span style="font-weight:400" id="cardSpeed"></span><span style="font-weight:400" id="cardSpeed%"></span><span id="cardSpeedArrow"></span><span id="cardSpeedspace"> </span><span id="cardSpeedLBrac" class="compLabel" style="font-weight:200"></span><span id="cardSpeedComp" class="compLabel" style="font-weight:200"></span><span id="cardSpeedRBrac" class="compLabel" style="font-weight:200"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bullet Size: <span style="font-weight:400" id="cardSize"></span><span id="cardSizeArrow"></span><span id="cardSizespace"> </span><span id="cardSizeLBrac" class="compLabel" style="font-weight:200"></span><span id="cardSizeComp" class="compLabel" style="font-weight:200"></span><span id="cardSizeRBrac" class="compLabel" style="font-weight:200"></span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bullet Drop: <span style="font-weight:400" id="cardDrop"></span><span id="cardDropArrow"></span><span id="cardDropspace"> </span><span id="cardDropLBrac" class="compLabel" style="font-weight:200"></span><span id="cardDropComp" class="compLabel" style="font-weight:200"></span><span id="cardDropRBrac" class="compLabel" style="font-weight:200"></span></p>
                     </div>
                     <div style="height:auto; border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: 2px solid black; padding-left: 5px; z-index: 1;">
@@ -1944,7 +1947,7 @@
                     <p id="cardOilDesc3" style="margin: 0px; font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>
                 </div>
                 <div class="oilimages" id="cardOil4Img" style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
-                    <p id="cardOilDesc4" style="margin: 0px; padding-left: -10px; padding-right: -10px; font-size: 0.75em; text-shadow: 1px 1px 1px white;;">desc</p>
+                    <p id="cardOilDesc4" style="margin: 0px; padding-left: -10px; padding-right: -10px; font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>
                 </div>
                 <div class="oilimages" id="cardOil5Img" style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px;">
                     <p id="cardOilDesc5" style="margin: 0px; font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>

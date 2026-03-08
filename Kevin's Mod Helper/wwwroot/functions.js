@@ -56,7 +56,9 @@ observer.observe(select, {
 
     const arrow = document.createElement("span");
     arrow.className = "custom-arrow";
-    arrow.innerHTML = "🢗";
+    arrow.innerHTML = "<span class='fa-solid fa-sort-down'></span>";
+    arrow.style.fontSize = "16px";
+    arrow.style.marginTop = "-15px";
 
     selected.append(label, arrow);
 
@@ -1097,34 +1099,34 @@ function oilStats() {
         if (selectedOil.BulletDrop != 0) {
             oilStatModifiers.BulletDrop += selectedOil.BulletDrop;
         }
-        if (selectedOil.BulletSpeed != 0.0) {
+        if (selectedOil.BulletSpeed != 0) {
             oilStatModifiers.BulletSpeed += selectedOil.BulletSpeed;
         }
-        if (selectedOil.ExtraAmmoUseChance != 0.0) {
+        if (selectedOil.ExtraAmmoUseChance != 0) {
             oilStatModifiers.ExtraAmmoUseChance += selectedOil.ExtraAmmoUseChance;
         }
-        if (selectedOil.BaseCritChance != 0.0) {
+        if (selectedOil.BaseCritChance != 0) {
             oilStatModifiers.BaseCritChance += selectedOil.BaseCritChance;
         }
-        if (selectedOil.DamageAdd != 0.0) {
+        if (selectedOil.DamageAdd != 0) {
             oilStatModifiers.DamageAdd += selectedOil.DamageAdd;
         }
-        if (selectedOil.DamageMult != 0.0) {
+        if (selectedOil.DamageMult != 0) {
             oilStatModifiers.DamageMult += selectedOil.DamageMult;
         }
         if (selectedOil.CanADS != "Yes") {
             oilStatModifiers.CanADS = selectedOil.CanADS;
         }
-        if (selectedOil.JumpPower != 0.0) {
+        if (selectedOil.JumpPower != 0) {
             oilStatModifiers.JumpPower += selectedOil.JumpPower;
         }
-        if (selectedOil.LootDropChance != 0.0) {
+        if (selectedOil.LootDropChance != 0) {
             oilStatModifiers.LootDropChance += selectedOil.LootDropChance;
         }
-        if (selectedOil.DurabilityMult != 0.0) {
+        if (selectedOil.DurabilityMult != 0) {
             oilStatModifiers.DurabilityMult += selectedOil.DurabilityMult;
         }
-        if (selectedOil.MovementSpeedMult != 0.0) {
+        if (selectedOil.MovementSpeedMult != 0) {
             oilStatModifiers.MovementSpeedMult += selectedOil.MovementSpeedMult;
         }
         if (selectedOil.MoneyDrops != "Yes") {
@@ -1136,47 +1138,53 @@ function oilStats() {
         if (selectedOil.Penetrations != 0) {
             oilStatModifiers.Penetrations += selectedOil.Penetrations;
         }
-        if (selectedOil.ProjectileMult != 0.0) {
+        if (selectedOil.ProjectileMult != 0) {
             oilStatModifiers.ProjectileMult += selectedOil.ProjectileMult;
         }
-        if (selectedOil.RPM != 0.0) {
+        if (selectedOil.RPM != 0) {
             oilStatModifiers.RPM += selectedOil.RPM;
         }
-        if (selectedOil.RecoilAdd != 0.0) {
+        if (selectedOil.RecoilAdd != 0) {
             oilStatModifiers.RecoilAdd += selectedOil.RecoilAdd;
         }
-        if (selectedOil.RecoilMult != 0.0) {
+        if (selectedOil.RecoilMult != 0) {
             oilStatModifiers.RecoilMult += selectedOil.RecoilMult;
         }
-        if (selectedOil.ReloadSpeed != 0.0) {
+        if (selectedOil.ReloadSpeed != 0) {
             oilStatModifiers.ReloadSpeed += selectedOil.ReloadSpeed;
         }
-        if (selectedOil.SpreadAdd != 0.0) {
+        if (selectedOil.SpreadAdd != 0) {
             oilStatModifiers.SpreadAdd += selectedOil.SpreadAdd;
         }
-        if (selectedOil.SpreadMult != 0.0) {
+        if (selectedOil.SpreadMult != 0) {
             oilStatModifiers.SpreadMult += selectedOil.SpreadMult;
         }
-        if (selectedOil.Drag != 0.0) {
+        if (selectedOil.Drag != 0) {
             oilStatModifiers.Drag += selectedOil.Drag;
         }
-        if (selectedOil.DurabilityUsage != 0.0) {
+        if (selectedOil.DurabilityUsage != 0) {
             oilStatModifiers.DurabilityUsage += selectedOil.DurabilityUsage;
         }
-        if (selectedOil.BulletBounciness != 0.0) {
+        if (selectedOil.BulletBounciness != 0) {
             oilStatModifiers.BulletBounciness += selectedOil.BulletBounciness;
         }
-        if (selectedOil.MovingAccuracy != 0.0) {
+        if (selectedOil.MovingAccuracy != 0) {
             oilStatModifiers.MovingAccuracy += selectedOil.MovingAccuracy;
         }
-        if (selectedOil.DurLossMult != 0.0) {
+        if (selectedOil.DurLossMult != 0) {
             oilStatModifiers.DurLossMult += selectedOil.DurLossMult;
         }
-        if (selectedOil.ADSCritChance != 0.0) {
+        if (selectedOil.ADSCritChance != 0) {
             oilStatModifiers.ADSCritChance += selectedOil.ADSCritChance;
         }
         if (selectedOil.Firemode !== 'None') {
             oilStatModifiers.Firemode = selectedOil.Firemode;
+        }
+        if (selectedOil.BulletSize !== 0) {
+            oilStatModifiers.Firemode = selectedOil.Firemode;
+        }
+        if (selectedOil.RPMBaseShift !== 0) {
+            oilStatModifiers.RPMBaseShift = selectedOil.RPMBaseShift;
         }
     }
 
@@ -1255,13 +1263,15 @@ console.log(chamberStats)
 
     document.getElementById("cardRPM").textContent = "";
     document.getElementById("cardRPM").style.color = "";
-    document.getElementById("cardRPMArrow").textContent = "";
+    document.getElementById("cardRPMArrow").innerHTML = "";
     document.getElementById("cardRPMArrow").style.color = "";
     document.getElementById("cardRPMLBrac").textContent = "";
     document.getElementById("cardRPMComp").textContent = "";
     document.getElementById("cardRPMRBrac").textContent = "";
 
-    let rpmCalc = weapon.RPM * (1 + calcOil.RPM);
+    let rpmShift = weapon.RPM * (1 + calcOil.RPMBaseShift);
+
+    let rpmCalc = rpmShift * (1 + calcOil.RPM);
     let rpmRound = Math.round((rpmCalc + Number.EPSILON)* 100) / 100;
     
     let neuraxisMaxRPM = rpmRound * 5;
@@ -1282,7 +1292,7 @@ console.log(chamberStats)
             document.getElementById("cardRPMComp").textContent = weaponOriginal.RPM;
         }
         document.getElementById("cardRPM").style.color = "Lime";
-        document.getElementById("cardRPMArrow").textContent = "🡅";
+        document.getElementById("cardRPMArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardRPMArrow").style.color = "Lime";
         document.getElementById("cardRPMLBrac").textContent = "(";
         document.getElementById("cardRPMRBrac").textContent = ")";
@@ -1298,7 +1308,7 @@ console.log(chamberStats)
         }
 
         document.getElementById("cardRPM").style.color = "OrangeRed";
-        document.getElementById("cardRPMArrow").textContent = "🡇";
+        document.getElementById("cardRPMArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
         document.getElementById("cardRPMArrow").style.color = "OrangeRed";
         document.getElementById("cardRPMLBrac").textContent = "(";
         document.getElementById("cardRPMRBrac").textContent = ")";
@@ -1322,7 +1332,7 @@ console.log(chamberStats)
     document.getElementById("cardAmmo").style.color = "";
     document.getElementById("cardAmmo%").textContent = "";
     document.getElementById("cardAmmo%").style.color = "";
-    document.getElementById("cardAmmoArrow").textContent = "";
+    document.getElementById("cardAmmoArrow").innerHTML = "";
     document.getElementById("cardAmmoArrow").style.color = "";
     document.getElementById("cardAmmoLBrac").textContent = "";
     document.getElementById("cardAmmoComp").textContent = "";
@@ -1330,7 +1340,7 @@ console.log(chamberStats)
 
     let ammoCalc = weapon.AmmoConsumeChance + calcOil.AmmoConsumeChance;
     let ammoConv = percentConv(ammoCalc);
-
+console.log(ammoCalc, ammoConv)
     let ammoRound = Math.round((ammoConv + Number.EPSILON)* 100) / 100;
 
     if (ammoRound < 0) {
@@ -1342,7 +1352,7 @@ console.log(chamberStats)
         document.getElementById("cardAmmo").style.color = "Lime";
         document.getElementById("cardAmmo%").textContent = "%";
         document.getElementById("cardAmmo%").style.color = "Lime";
-        document.getElementById("cardAmmoArrow").textContent = "🡇";
+        document.getElementById("cardAmmoArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
         document.getElementById("cardAmmoArrow").style.color = "Lime";
         document.getElementById("cardAmmoLBrac").textContent = "(";
         document.getElementById("cardAmmoComp").textContent = "100%";
@@ -1362,7 +1372,7 @@ console.log(chamberStats)
     document.getElementById("cardExtra").style.color = "";
     document.getElementById("cardExtra%").textContent = "";
     document.getElementById("cardExtra%").style.color = "";
-    document.getElementById("cardExtraArrow").textContent = "";
+    document.getElementById("cardExtraArrow").innerHTML = "";
     document.getElementById("cardExtraArrow").style.color = "";
     document.getElementById("cardExtraLBrac").textContent = "";
     document.getElementById("cardExtraComp").textContent = "";
@@ -1382,7 +1392,7 @@ console.log(chamberStats)
         document.getElementById("cardExtra").style.color = "OrangeRed";
         document.getElementById("cardExtra%").textContent = "%";
         document.getElementById("cardExtra%").style.color = "OrangeRed";
-        document.getElementById("cardExtraArrow").textContent = "🡅";
+        document.getElementById("cardExtraArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardExtraArrow").style.color = "OrangeRed";
         document.getElementById("cardExtraLBrac").textContent = "(";
         document.getElementById("cardExtraComp").textContent = "0%";
@@ -1400,7 +1410,7 @@ console.log(chamberStats)
 
     document.getElementById("cardBounces").textContent = "";
     document.getElementById("cardBounces").style.color = "";
-    document.getElementById("cardBouncesArrow").textContent = "";
+    document.getElementById("cardBouncesArrow").innerHTML = "";
     document.getElementById("cardBouncesArrow").style.color = "";
     document.getElementById("cardBouncesLBrac").textContent = "";
     document.getElementById("cardBouncesComp").textContent = "";
@@ -1411,7 +1421,7 @@ console.log(chamberStats)
     if (weapon.Bounces > 0.0) {
         document.getElementById("cardBounces").textContent = weapon.Bounces;
         document.getElementById("cardBounces").style.color = "Lime";
-        document.getElementById("cardBouncesArrow").textContent = "🡅";
+        document.getElementById("cardBouncesArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardBouncesArrow").style.color = "Lime";
         document.getElementById("cardBouncesLBrac").textContent = "(";
         document.getElementById("cardBouncesComp").textContent = "0";
@@ -1429,7 +1439,7 @@ console.log(chamberStats)
 
     document.getElementById("cardDrop").textContent = "";
     document.getElementById("cardDrop").style.color = "";
-    document.getElementById("cardDropArrow").textContent = "";
+    document.getElementById("cardDropArrow").innerHTML = "";
     document.getElementById("cardDropArrow").style.color = "";
     document.getElementById("cardDropLBrac").textContent = "";
     document.getElementById("cardDropComp").textContent = "";
@@ -1440,7 +1450,7 @@ console.log(chamberStats)
     if (weapon.BulletDrop > 0) {
         document.getElementById("cardDrop").textContent = weapon.BulletDrop;
         document.getElementById("cardDrop").style.color = "OrangeRed";
-        document.getElementById("cardDropArrow").textContent = "🡅";
+        document.getElementById("cardDropArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardDropArrow").style.color = "OrangeRed";
         document.getElementById("cardDropLBrac").textContent = "(";
         document.getElementById("cardDropComp").textContent = "0";
@@ -1460,7 +1470,7 @@ console.log(chamberStats)
     document.getElementById("cardSpeed").style.color = "";
     document.getElementById("cardSpeed%").textContent = "";
     document.getElementById("cardSpeed%").style.color = "";
-    document.getElementById("cardSpeedArrow").textContent = "";
+    document.getElementById("cardSpeedArrow").innerHTML = "";
     document.getElementById("cardSpeedArrow").style.color = "";
     document.getElementById("cardSpeedLBrac").textContent = "";
     document.getElementById("cardSpeedComp").textContent = "";
@@ -1480,7 +1490,7 @@ console.log(chamberStats)
         document.getElementById("cardSpeed").style.color = "Lime";
         document.getElementById("cardSpeed%").textContent = "%";
         document.getElementById("cardSpeed%").style.color = "Lime";
-        document.getElementById("cardSpeedArrow").textContent = "🡅";
+        document.getElementById("cardSpeedArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardSpeedArrow").style.color = "Lime";
         document.getElementById("cardSpeedLBrac").textContent = "(";
         document.getElementById("cardSpeedComp").textContent = "100%";
@@ -1491,7 +1501,7 @@ console.log(chamberStats)
         document.getElementById("cardSpeed").style.color = "OrangeRed";
         document.getElementById("cardSpeed%").textContent = "%";
         document.getElementById("cardSpeed%").style.color = "OrangeRed";
-        document.getElementById("cardSpeedArrow").textContent = "🡇";
+        document.getElementById("cardSpeedArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
         document.getElementById("cardSpeedArrow").style.color = "OrangeRed";
         document.getElementById("cardSpeedLBrac").textContent = "(";
         document.getElementById("cardSpeedComp").textContent = "100%";
@@ -1511,7 +1521,7 @@ console.log(chamberStats)
     document.getElementById("cardCrit").style.color = "";
     document.getElementById("cardCrit%").textContent = "";
     document.getElementById("cardCrit%").style.color = "";
-    document.getElementById("cardCritArrow").textContent = "";
+    document.getElementById("cardCritArrow").innerHTML = "";
     document.getElementById("cardCritArrow").style.color = "";
     document.getElementById("cardCritLBrac").textContent = "";
     document.getElementById("cardCritComp").textContent = "";
@@ -1528,7 +1538,7 @@ console.log(chamberStats)
         document.getElementById("cardCrit").style.color = "Lime";
         document.getElementById("cardCrit%").textContent = "%";
         document.getElementById("cardCrit%").style.color = "Lime";
-        document.getElementById("cardCritArrow").textContent = "🡅";
+        document.getElementById("cardCritArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardCritArrow").style.color = "Lime";
         document.getElementById("cardCritLBrac").textContent = "(";
         document.getElementById("cardCritComp").textContent = "0%";
@@ -1548,7 +1558,7 @@ console.log(chamberStats)
     document.getElementById("cardADSCrit").style.color = "";
     document.getElementById("cardADSCrit%").textContent = "";
     document.getElementById("cardADSCrit%").style.color = "";
-    document.getElementById("cardADSCritArrow").textContent = "";
+    document.getElementById("cardADSCritArrow").innerHTML = "";
     document.getElementById("cardADSCritArrow").style.color = "";
     document.getElementById("cardADSCritLBrac").textContent = "";
     document.getElementById("cardADSCritComp").textContent = "";
@@ -1564,7 +1574,7 @@ console.log(chamberStats)
         document.getElementById("cardADSCrit").style.color = "Lime";
         document.getElementById("cardADSCrit%").textContent = "%";
         document.getElementById("cardADSCrit%").style.color = "Lime";
-        document.getElementById("cardADSCritArrow").textContent = "🡅";
+        document.getElementById("cardADSCritArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardADSCritArrow").style.color = "Lime";
         document.getElementById("cardADSCritLBrac").textContent = "(";
         document.getElementById("cardADSCritComp").textContent = "0%";
@@ -1586,7 +1596,7 @@ console.log(chamberStats)
                 Run runTCrit = new Run($"{weapon.TotalCritChance.ToString("#####0.#")}%");
         runTCrit.Foreground = Brushes.Lime;
 
-                Run runArrowUp1 = new Run("🡅");
+                Run runArrowUp1 = new Run("<span class='fa-solid fa-caret-up'></span>");
         runArrowUp1.Foreground = Brushes.Lime;
 
                 Run runNoTCrit = new Run("(0%)");
@@ -1610,24 +1620,24 @@ console.log(chamberStats)
 
     document.getElementById("cardDamage").textContent = "";
     document.getElementById("cardDamage").style.color = "";
-    document.getElementById("cardDamageArrow").textContent = "";
+    document.getElementById("cardDamageArrow").innerHTML = "";
     document.getElementById("cardDamageArrow").style.color = "";
     document.getElementById("cardDamageComp").textContent = "";
     document.getElementById("cardDamageLBrac").textContent = "";
     document.getElementById("cardDamageRBrac").textContent = "";
     document.getElementById("cardDamageProj").textContent = "";
-    document.getElementById("cardDamageLRArrow").textContent = "";
+    document.getElementById("cardDamageLRArrow").innerHTML = "";
     document.getElementById("cardDamageProj").style.color = "";
-    document.getElementById("cardDamageProjArrow").textContent = "";
+    document.getElementById("cardDamageProjArrow").innerHTML = "";
     document.getElementById("cardDamageProjArrow").style.color = "";
     document.getElementById("cardDamageProjComp").textContent = "";
-    document.getElementById("cardDamageX").textContent = "";
-    document.getElementById("cardDamageMultiX").textContent = "";
+    document.getElementById("cardDamageX").innerHTML = "";
+    document.getElementById("cardDamageMultiX").innerHTML = "";
     document.getElementById("cardDamageMulti").textContent = "";
     document.getElementById("cardDamageMulti").style.color = "";
-    document.getElementById("cardDamageMultiXComp").textContent = "";
+    document.getElementById("cardDamageMultiXComp").innerHTML = "";
     document.getElementById("cardDamageMultiComp").textContent = "";
-    document.getElementById("cardDamageXComp").textContent = "";
+    document.getElementById("cardDamageXComp").innerHTML = "";
 
     //// Projectiles
     weapon.Projectiles *= (1 + calcOil.ProjectileMult);
@@ -1655,69 +1665,66 @@ console.log(chamberStats)
         if (weapon.Projectiles < weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = weapon.Damage;
             document.getElementById("cardDamage").style.color = "OrangeRed";
-            document.getElementById("cardDamageArrow").textContent = "🡇";
+            document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
             document.getElementById("cardDamageArrow").style.color = OrangeRed;
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
-            document.getElementById("cardDamageLRArrow").textContent = " ↔ ";
+            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
             document.getElementById("cardDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardDamageProjArrow").textContent = "🡇";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
             document.getElementById("cardDamageProjArrow").style.color = OrangeRed;
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").textContent = "x";
-            document.getElementById("cardDamageXComp").textContent = "x";
+            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMulti").style.color = "OrangeRed";
-                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapon.Projectiles > weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = weapon.Damage;
             document.getElementById("cardDamage").style.color = "OrangeRed";
-            document.getElementById("cardDamageArrow").textContent = "🡇";
+            document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
             document.getElementById("cardDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
-            document.getElementById("cardDamageLRArrow").textContent = " ↔ ";
+            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
             document.getElementById("cardDamageProj").style.color = "Lime";
-            document.getElementById("cardDamageProjArrow").textContent = "🡅";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
             document.getElementById("cardDamageProjArrow").style.color = "Lime";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").textContent = "x";
-            document.getElementById("cardDamageXComp").textContent = "x";
+            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMulti").style.color = "OrangeRed";
-                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapon.Projectiles === weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = weapon.Damage;
             document.getElementById("cardDamage").style.color = "OrangeRed";
-            document.getElementById("cardDamageArrow").textContent = "🡇";
+            document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
             document.getElementById("cardDamageArrow").style.color = "OrangeRed";
-            document.getElementById("cardDamageLRArrow").textContent = " ↔ ";
+            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").textContent = "x";
-            document.getElementById("cardDamageXComp").textContent = "x";
+            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMulti").style.color = "OrangeRed";
-                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -1726,68 +1733,66 @@ console.log(chamberStats)
         if (weapon.Projectiles < weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = weapon.Damage;
             document.getElementById("cardDamage").style.color = "Lime";
-            document.getElementById("cardDamageArrow").textContent = "🡅";
+            document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
             document.getElementById("cardDamageArrow").style.color = "Lime";
-            document.getElementById("cardDamageLRArrow").textContent = " ↔ ";
+            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
             document.getElementById("cardDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardDamageProjArrow").textContent = "🡇";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
             document.getElementById("cardDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").textContent = "x";
-            document.getElementById("cardDamageXComp").textContent = "x";
+            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMulti").style.color = "Lime";
-                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapon.Projectiles > weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = weapon.Damage;
             document.getElementById("cardDamage").style.color = "Lime";
-            document.getElementById("cardDamageArrow").textContent = "🡅";
+            document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
             document.getElementById("cardDamageArrow").style.color = "Lime";
-            document.getElementById("cardDamageLRArrow").textContent = " ↔ ";
+            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
             document.getElementById("cardDamageProj").style.color = "Lime";
-            document.getElementById("cardDamageProjArrow").textContent = "🡅";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
             document.getElementById("cardDamageProjArrow").style.color = "Lime";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").textContent = "x";
-            document.getElementById("cardDamageXComp").textContent = "x";
+            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapon.Projectiles === weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = weapon.Damage;
             document.getElementById("cardDamage").style.color = "Lime";
-            document.getElementById("cardDamageArrow").textContent = "🡅";
+            document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
             document.getElementById("cardDamageArrow").style.color = "Lime";
-            document.getElementById("cardDamageLRArrow").textContent = " ↔ ";
+            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").textContent = "x";
-            document.getElementById("cardDamageXComp").textContent = "x";
+            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMulti").style.color = "OrangeRed";
-                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -1796,49 +1801,49 @@ console.log(chamberStats)
         if (weapon.Projectiles < weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = weapon.Damage;
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
-            document.getElementById("cardDamageLRArrow").textContent = " ↔ ";
+            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
             document.getElementById("cardDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardDamageProjArrow").textContent = "🡇";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
             document.getElementById("cardDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").textContent = "x";
-            document.getElementById("cardDamageXComp").textContent = "x";
+            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapon.Projectiles > weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = weapon.Damage;
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
-            document.getElementById("cardDamageLRArrow").textContent = " ↔ ";
+            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
             document.getElementById("cardDamageProj").style.color = "Lime";
-            document.getElementById("cardDamageProjArrow").textContent = "🡅";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
             document.getElementById("cardDamageProjArrow").style.color = "Lime";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").textContent = "x";
-            document.getElementById("cardDamageXComp").textContent = "x";
+            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").textContent = "x";
+                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapon.Projectiles === weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = weapon.Damage;
             document.getElementById("cardDamageProj").textContent = weapon.Projectiles;
-            document.getElementById("cardDamageX").textContent = "x";
+            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").textContent = "x";
+                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
             }
         }
@@ -1848,9 +1853,9 @@ console.log(chamberStats)
 
             document.getElementById("cardDamageTotal").textContent = "";
             document.getElementById("cardDamageTotal").style.color = "";
-            document.getElementById("cardDamageTotalArrow").textContent = "";
+            document.getElementById("cardDamageTotalArrow").innerHTML = "";
             document.getElementById("cardDamageTotalArrow").style.color = "";
-            document.getElementById("cardDamageTotalLRArrow").textContent = "";
+            document.getElementById("cardDamageTotalLRArrow").innerHTML = "";
             document.getElementById("cardDamageTotalLBrac").textContent = "";
             document.getElementById("cardDamageTotalComp").textContent = "";
             document.getElementById("cardDamageTotalRBrac").textContent = "";
@@ -1858,9 +1863,9 @@ console.log(chamberStats)
     if (weapon.TotalDamage > weaponOriginal.TotalDamage) {
             document.getElementById("cardDamageTotal").textContent = weapon.TotalDamage;
             document.getElementById("cardDamageTotal").style.color = "Lime";
-            document.getElementById("cardDamageTotalArrow").textContent = "🡅";
+            document.getElementById("cardDamageTotalArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
             document.getElementById("cardDamageTotalArrow").style.color = "Lime";
-            document.getElementById("cardDamageTotalLRArrow").textContent = " ↔ ";
+            document.getElementById("cardDamageTotalLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageTotalLBrac").textContent = "(";
             document.getElementById("cardDamageTotalComp").textContent = weaponOriginal.TotalDamage;
             document.getElementById("cardDamageTotalRBrac").textContent = ")";
@@ -1868,9 +1873,9 @@ console.log(chamberStats)
     if (weapon.TotalDamage < weaponOriginal.TotalDamage) {
             document.getElementById("cardDamageTotal").textContent = weapon.TotalDamage;
             document.getElementById("cardDamageTotal").style.color = "OrangeRed";
-            document.getElementById("cardDamageTotalArrow").textContent = "🡇";
+            document.getElementById("cardDamageTotalArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
             document.getElementById("cardDamageTotalArrow").style.color = "OrangeRed";
-            document.getElementById("cardDamageTotalLRArrow").textContent = " ↔ ";
+            document.getElementById("cardDamageTotalLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageTotalLBrac").textContent = "(";
             document.getElementById("cardDamageTotalComp").textContent = weaponOriginal.TotalDamage;
             document.getElementById("cardDamageTotalRBrac").textContent = ")";
@@ -1908,7 +1913,7 @@ console.log(chamberStats)
     document.getElementById("cardJump").style.color = "";
     document.getElementById("cardJump%").textContent = "";
     document.getElementById("cardJump%").style.color = "";
-    document.getElementById("cardJumpArrow").textContent = "";
+    document.getElementById("cardJumpArrow").innerHTML = "";
     document.getElementById("cardJumpArrow").style.color = "";
     document.getElementById("cardJumpLBrac").textContent = "";
     document.getElementById("cardJumpComp").textContent = "";
@@ -1930,7 +1935,7 @@ console.log(chamberStats)
         document.getElementById("cardJump").style.color = "OrangeRed";
         document.getElementById("cardJump%").textContent = "%";
         document.getElementById("cardJump%").style.color = "OrangeRed";
-        document.getElementById("cardJumpArrow").textContent = "🡇";
+        document.getElementById("cardJumpArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
         document.getElementById("cardJumpArrow").style.color = "OrangeRed";
         document.getElementById("cardJumpLBrac").textContent = "(";
         document.getElementById("cardJumpComp").textContent = jumpRoundOrig;
@@ -1941,7 +1946,7 @@ console.log(chamberStats)
         document.getElementById("cardJump").style.color = "Lime";
         document.getElementById("cardJump%").textContent = "%";
         document.getElementById("cardJump%").style.color = "Lime";
-        document.getElementById("cardJumpArrow").textContent = "🡅";
+        document.getElementById("cardJumpArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardJumpArrow").style.color = "Lime";
         document.getElementById("cardJumpLBrac").textContent = "(";
         document.getElementById("cardJumpComp").textContent = jumpRoundOrig;
@@ -1962,7 +1967,7 @@ console.log(chamberStats)
     document.getElementById("cardLoot").style.color = "";
     document.getElementById("cardLoot%").textContent = "";
     document.getElementById("cardLoot%").style.color = "";
-    document.getElementById("cardLootArrow").textContent = "";
+    document.getElementById("cardLootArrow").innerHTML = "";
     document.getElementById("cardLootArrow").style.color = "";
     document.getElementById("cardLootLBrac").textContent = "";
     document.getElementById("cardLootComp").textContent = "";
@@ -1982,7 +1987,7 @@ console.log(chamberStats)
     if (lootRound < lootRoundOrig) {
         document.getElementById("cardLoot").textContent = lootRound;
         document.getElementById("cardLoot").style.color = "OrangeRed";
-        document.getElementById("cardLootArrow").textContent = "🡇";
+        document.getElementById("cardLootArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
         document.getElementById("cardLoot%").textContent = "%";
         document.getElementById("cardLoot%").style.color = "OrangeRed";
         document.getElementById("cardLootArrow").style.color = "OrangeRed";
@@ -2003,7 +2008,7 @@ console.log(chamberStats)
 
     document.getElementById("cardDurability").textContent = "";
     document.getElementById("cardDurability").style.color = "";
-    document.getElementById("cardDurabilityArrow").textContent = "";
+    document.getElementById("cardDurabilityArrow").innerHTML = "";
     document.getElementById("cardDurabilityArrow").style.color = "";
     document.getElementById("cardDurabilityLBrac").textContent = "";
     document.getElementById("cardDurabilityComp").textContent = "";
@@ -2023,7 +2028,7 @@ console.log(chamberStats)
                 
         document.getElementById("cardDurability").textContent = durRound;
         document.getElementById("cardDurability").style.color = "OrangeRed";
-        document.getElementById("cardDurabilityArrow").textContent = "🡇";
+        document.getElementById("cardDurabilityArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
         document.getElementById("cardDurabilityArrow").style.color = "OrangeRed";
         document.getElementById("cardDurabilityLBrac").textContent = "(";
         document.getElementById("cardDurabilityComp").textContent = weaponOriginal.Durability;
@@ -2033,7 +2038,7 @@ console.log(chamberStats)
 
         document.getElementById("cardDurability").textContent = durRound;
         document.getElementById("cardDurability").style.color = "Lime";
-        document.getElementById("cardDurabilityArrow").textContent = "🡅";
+        document.getElementById("cardDurabilityArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardDurabilityArrow").style.color = "Lime";
         document.getElementById("cardDurabilityLBrac").textContent = "(";
         document.getElementById("cardDurabilityComp").textContent = weaponOriginal.Durability;
@@ -2053,7 +2058,7 @@ console.log(chamberStats)
     document.getElementById("cardMove").style.color = "";
     document.getElementById("cardMove%").textContent = "";
     document.getElementById("cardMove%").style.color = "";
-    document.getElementById("cardMoveArrow").textContent = "";
+    document.getElementById("cardMoveArrow").innerHTML = "";
     document.getElementById("cardMoveArrow").style.color = "";
     document.getElementById("cardMoveLBrac").textContent = "";
     document.getElementById("cardMoveComp").textContent = "";
@@ -2084,7 +2089,7 @@ console.log(chamberStats)
     if (moveRound < resultMovementSpeedComp) {
         document.getElementById("cardMove").textContent = moveRound;
         document.getElementById("cardMove").style.color = "OrangeRed";
-        document.getElementById("cardMoveArrow").textContent = "🡇";
+        document.getElementById("cardMoveArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
         document.getElementById("cardMove%").textContent = "%";
         document.getElementById("cardMove%").style.color = "OrangeRed";
         document.getElementById("cardMoveArrow").style.color = "OrangeRed";
@@ -2095,7 +2100,7 @@ console.log(chamberStats)
     if (moveRound > resultMovementSpeedComp) {
         document.getElementById("cardMove").textContent = moveRound;
         document.getElementById("cardMove").style.color = "Lime";
-        document.getElementById("cardMoveArrow").textContent = "🡅";
+        document.getElementById("cardMoveArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardMove%").textContent = "%";
         document.getElementById("cardMove%").style.color = "Lime";
         document.getElementById("cardMoveArrow").style.color = "Lime";
@@ -2154,7 +2159,7 @@ console.log(chamberStats)
 
     document.getElementById("cardPen").textContent = "";
     document.getElementById("cardPen").style.color = "";
-    document.getElementById("cardPenArrow").textContent = "";
+    document.getElementById("cardPenArrow").innerHTML = "";
     document.getElementById("cardPenArrow").style.color = "";
     document.getElementById("cardPenLBrac").textContent = "";
     document.getElementById("cardPenComp").textContent = "";
@@ -2165,7 +2170,7 @@ console.log(chamberStats)
     if (weapon.Penetrations > weaponOriginal.Penetrations) {
         document.getElementById("cardPen").textContent = weapon.Penetrations;
         document.getElementById("cardPen").style.color = "Lime";
-        document.getElementById("cardPenArrow").textContent = "🡅";
+        document.getElementById("cardPenArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardPenArrow").style.color = "Lime";
         document.getElementById("cardPenLBrac").textContent = "(";
         document.getElementById("cardPenComp").textContent = "0";
@@ -2183,7 +2188,7 @@ console.log(chamberStats)
 
     document.getElementById("cardRecoil").textContent = "";
     document.getElementById("cardRecoil").style.color = "";
-    document.getElementById("cardRecoilArrow").textContent = "";
+    document.getElementById("cardRecoilArrow").innerHTML = "";
     document.getElementById("cardRecoilArrow").style.color = "";
     document.getElementById("cardRecoilLBrac").textContent = "";
     document.getElementById("cardRecoilComp").textContent = "";
@@ -2227,7 +2232,7 @@ console.log(chamberStats)
     if (recoilRound < weaponOriginal.RecoilBase) {
         document.getElementById("cardRecoil").textContent = recoilRound;
         document.getElementById("cardRecoil").style.color = "Lime";
-        document.getElementById("cardRecoilArrow").textContent = "🡇";
+        document.getElementById("cardRecoilArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
         document.getElementById("cardRecoilArrow").style.color = "Lime";
         document.getElementById("cardRecoilLBrac").textContent = "(";
         document.getElementById("cardRecoilComp").textContent = weaponOriginal.RecoilBase;
@@ -2236,7 +2241,7 @@ console.log(chamberStats)
     if (recoilRound > weaponOriginal.RecoilBase) {
         document.getElementById("cardRecoil").textContent = recoilRound;
         document.getElementById("cardRecoil").style.color = "OrangeRed";
-        document.getElementById("cardRecoilArrow").textContent = "🡅";
+        document.getElementById("cardRecoilArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardRecoilArrow").style.color = "OrangeRed";
         document.getElementById("cardRecoilLBrac").textContent = "(";
         document.getElementById("cardRecoilComp").textContent = weaponOriginal.RecoilBase;
@@ -2256,7 +2261,7 @@ console.log(chamberStats)
     document.getElementById("cardReloadSpeed").style.color = "";
     document.getElementById("cardReloadSpeed%").textContent = "";
     document.getElementById("cardReloadSpeed%").style.color = "";
-    document.getElementById("cardReloadSpeedArrow").textContent = "";
+    document.getElementById("cardReloadSpeedArrow").innerHTML = "";
     document.getElementById("cardReloadSpeedArrow").style.color = "";
     document.getElementById("cardReloadSpeedLBrac").textContent = "";
     document.getElementById("cardReloadSpeedComp").textContent = "";
@@ -2278,7 +2283,7 @@ console.log(chamberStats)
         document.getElementById("cardReloadSpeed").style.color = "OrangeRed";
         document.getElementById("cardReloadSpeed%").textContent = "%";
         document.getElementById("cardReloadSpeed%").style.color = "OrangeRed";
-        document.getElementById("cardReloadSpeedArrow").textContent = "🡇";
+        document.getElementById("cardReloadSpeedArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
         document.getElementById("cardReloadSpeedArrow").style.color = "OrangeRed";
         document.getElementById("cardReloadSpeedLBrac").textContent = "(";
         document.getElementById("cardReloadSpeedComp").textContent = relSpdConvOrig;
@@ -2289,7 +2294,7 @@ console.log(chamberStats)
         document.getElementById("cardReloadSpeed").style.color = "Lime";
         document.getElementById("cardReloadSpeed%").textContent = "%";
         document.getElementById("cardReloadSpeed%").style.color = "Lime";
-        document.getElementById("cardReloadSpeedArrow").textContent = "🡅";
+        document.getElementById("cardReloadSpeedArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardReloadSpeedArrow").style.color = "Lime";
         document.getElementById("cardReloadSpeedLBrac").textContent = "(";
         document.getElementById("cardReloadSpeedComp").textContent = relSpdConvOrig;
@@ -2304,7 +2309,7 @@ console.log(chamberStats)
 
     document.getElementById("cardReloadTime").textContent = "";
     document.getElementById("cardReloadTime").style.color = "";
-    document.getElementById("cardReloadTimeArrow").textContent = "";
+    document.getElementById("cardReloadTimeArrow").innerHTML = "";
     document.getElementById("cardReloadTimeArrow").style.color = "";
     document.getElementById("cardReloadTimeLBrac").textContent = "";
     document.getElementById("cardReloadTimeComp").textContent = "";
@@ -2317,7 +2322,7 @@ console.log(chamberStats)
     if (reloadTimeRound > weapon.ReloadTime) {
         document.getElementById("cardReloadTime").textContent = `${reloadTimeRound}s`;
         document.getElementById("cardReloadTime").style.color = "OrangeRed";
-        document.getElementById("cardReloadTimeArrow").textContent = "🡅";
+        document.getElementById("cardReloadTimeArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardReloadTimeArrow").style.color = "OrangeRed";
         document.getElementById("cardReloadTimeLBrac").textContent = "(";
         document.getElementById("cardReloadTimeComp").textContent = `${weapon.ReloadTime}s`;
@@ -2326,7 +2331,7 @@ console.log(chamberStats)
     if (reloadTimeRound < weaponOriginal.ReloadTime) {
         document.getElementById("cardReloadTime").textContent = `${reloadTimeRound}s`;
         document.getElementById("cardReloadTime").style.color = "Lime";
-        document.getElementById("cardReloadTimeArrow").textContent = "🡇";
+        document.getElementById("cardReloadTimeArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
         document.getElementById("cardReloadTimeArrow").style.color = "Lime";
         document.getElementById("cardReloadTimeLBrac").textContent = "(";
         document.getElementById("cardReloadTimeComp").textContent = `${weapon.ReloadTime}s`;
@@ -2346,7 +2351,7 @@ console.log(chamberStats)
 
     document.getElementById("cardSpready").textContent = "";
     document.getElementById("cardSpready").style.color = "";
-    document.getElementById("cardSpreadArrow").textContent = "";
+    document.getElementById("cardSpreadArrow").innerHTML = "";
     document.getElementById("cardSpreadArrow").style.color = "";
     document.getElementById("cardSpreadComp").textContent = "";
     document.getElementById("cardSpreadLBrac").textContent = "";
@@ -2386,7 +2391,7 @@ console.log(chamberStats)
         }
 
         document.getElementById("cardSpready").style.color = "OrangeRed";
-        document.getElementById("cardSpreadArrow").textContent = "🡅";
+        document.getElementById("cardSpreadArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardSpreadArrow").style.color = "OrangeRed";
         document.getElementById("cardSpreadLBrac").textContent = "(";
         document.getElementById("cardSpreadRBrac").textContent = ")";
@@ -2401,7 +2406,7 @@ console.log(chamberStats)
             document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
         }
         document.getElementById("cardSpready").style.color = "Lime";
-        document.getElementById("cardSpreadArrow").textContent = "🡇";
+        document.getElementById("cardSpreadArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
         document.getElementById("cardSpreadArrow").style.color = "Lime";
         document.getElementById("cardSpreadLBrac").textContent = "(";
         document.getElementById("cardSpreadRBrac").textContent = ")";
@@ -2423,7 +2428,7 @@ console.log(chamberStats)
 
     document.getElementById("cardDrag").textContent = "";
     document.getElementById("cardDrag").style.color = "";
-    document.getElementById("cardDragArrow").textContent = "";
+    document.getElementById("cardDragArrow").innerHTML = "";
     document.getElementById("cardDragArrow").style.color = "";
     document.getElementById("cardDragComp").textContent = "";
     document.getElementById("cardDragLBrac").textContent = "";
@@ -2434,7 +2439,7 @@ console.log(chamberStats)
     if (weapon.Drag > 0) {
         document.getElementById("cardDrag").textContent = weapon.Drag;
         document.getElementById("cardDrag").style.color = "OrangeRed";
-        document.getElementById("cardDragArrow").textContent = "🡅";
+        document.getElementById("cardDragArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardDragArrow").style.color = "OrangeRed";
         document.getElementById("cardDragLBrac").textContent = "(";
         document.getElementById("cardDragComp").textContent = "0";
@@ -2452,7 +2457,7 @@ console.log(chamberStats)
 
     document.getElementById("cardDurabilityUsage").textContent = "";
     document.getElementById("cardDurabilityUsage").style.color = "";
-    document.getElementById("cardDurabilityUsageArrow").textContent = "";
+    document.getElementById("cardDurabilityUsageArrow").innerHTML = "";
     document.getElementById("cardDurabilityUsageArrow").style.color = "";
     document.getElementById("cardDurabilityUsageLBrac").textContent = "";
     document.getElementById("cardDurabilityUsageComp").textContent = "";

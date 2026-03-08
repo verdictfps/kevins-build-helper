@@ -35,7 +35,11 @@
       "MovingAccuracy": 0,
       "DurLossMult": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Chamber Chisel - 12Ga": {
       "Name": "Chamber Chisel - 12Ga",
@@ -72,7 +76,11 @@
       "MovingAccuracy": 0,
       "DurLossMult": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Chamber Chisel - 5.56mm": {
       "Name": "Chamber Chisel - 5.56mm",
@@ -109,7 +117,11 @@
       "MovingAccuracy": 0,
       "DurLossMult": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Chamber Chisel - 7.62mm": {
       "Name": "Chamber Chisel - 7.62mm",
@@ -146,7 +158,11 @@
       "MovingAccuracy": 0,
       "DurLossMult": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Chamber Chisel - 9mm": {
       "Name": "Chamber Chisel - 9mm",
@@ -183,7 +199,11 @@
       "MovingAccuracy": 0,
       "DurLossMult": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     }
   }
 }

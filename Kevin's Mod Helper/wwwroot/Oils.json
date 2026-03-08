@@ -32,7 +32,11 @@
       "DurLossMult": 0,
       "StatDescription": "None selected",
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "None": {
       "Name": "None",
@@ -66,7 +70,11 @@
       "DurLossMult": 0,
       "StatDescription": "None selected",
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Durability Loss Multiplier +200%": {
       "Name": "Durability Loss Multiplier +200%",
@@ -100,7 +108,11 @@
       "DurLossMult": 2,
       "StatDescription": "<span style='color:red'>Simulates +200% durability loss</span>",
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Durability Loss Multiplier +350%": {
       "Name": "Durability Loss Multiplier +350%",
@@ -134,7 +146,11 @@
       "DurLossMult": 3.5,
       "StatDescription": "<span style='color:red'>Simulates +350% durability loss</span>",
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Action Oil": {
       "Name": "Action Oil",
@@ -172,7 +188,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Add Damage Oil": {
       "Name": "Add Damage Oil",
@@ -210,7 +230,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Aimless Oil": {
       "Name": "Aimless Oil",
@@ -248,7 +272,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Airsoft Oil": {
       "Name": "Airsoft Oil",
@@ -286,7 +314,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Altruistic Oil": {
       "Name": "Altruistic Oil",
@@ -324,7 +356,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Arkanoid Oil": {
       "Name": "Arkanoid Oil",
@@ -362,7 +398,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Arrow Oil": {
       "Name": "Arrow Oil",
@@ -400,7 +440,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Artery Oil": {
       "Name": "Artery Oil",
@@ -438,7 +482,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Artillery Oil": {
       "Name": "Artillery Oil",
@@ -476,7 +524,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Ascetic Oil": {
       "Name": "Ascetic Oil",
@@ -514,7 +566,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Assassin Dart Oil": {
       "Name": "Assassin Dart Oil",
@@ -552,7 +608,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Attack Speed Oil": {
       "Name": "Attack Speed Oil",
@@ -590,7 +650,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Axe Oil": {
       "Name": "Axe Oil",
@@ -628,7 +692,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Bad Planet Oil": {
       "Name": "Bad Planet Oil",
@@ -666,7 +734,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Bandit Oil": {
       "Name": "Bandit Oil",
@@ -704,7 +776,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "BB Oil": {
       "Name": "BB Oil",
@@ -742,7 +818,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Big Oil": {
       "Name": "Big Oil",
@@ -780,7 +860,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Black Friday Oil": {
       "Name": "Black Friday Oil",
@@ -818,7 +902,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Blindfold Oil": {
       "Name": "Blindfold Oil",
@@ -856,7 +944,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Blurt Oil": {
       "Name": "Blurt Oil",
@@ -894,7 +986,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Bolt Oil": {
       "Name": "Bolt Oil",
@@ -932,7 +1028,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Bombard Oil": {
       "Name": "Bombard Oil",
@@ -970,7 +1070,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Boomstick Oil": {
       "Name": "Boomstick Oil",
@@ -1008,7 +1112,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Boulder Oil": {
       "Name": "Boulder Oil",
@@ -1046,7 +1154,11 @@
       "DurLossMult": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Bowl Oil": {
       "Name": "Bowl Oil",
@@ -1084,7 +1196,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Braced Oil": {
       "Name": "Braced Oil",
@@ -1122,7 +1238,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Brute Oil": {
       "Name": "Brute Oil",
@@ -1160,7 +1280,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Bulk Oil": {
       "Name": "Bulk Oil",
@@ -1198,7 +1322,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Bystander Oil": {
       "Name": "Bystander Oil",
@@ -1236,7 +1364,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Carefree Oil": {
       "Name": "Carefree Oil",
@@ -1274,7 +1406,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Careful Oil": {
       "Name": "Careful Oil",
@@ -1312,7 +1448,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Careless Splitter Oil": {
       "Name": "Careless Splitter Oil",
@@ -1350,7 +1490,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Cartoon Oil": {
       "Name": "Cartoon Oil",
@@ -1388,7 +1532,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Casual Oil": {
       "Name": "Casual Oil",
@@ -1426,7 +1574,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Cheap Oil": {
       "Name": "Cheap Oil",
@@ -1464,7 +1616,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Collateral Oil": {
       "Name": "Collateral Oil",
@@ -1502,7 +1658,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Complicated Oil": {
       "Name": "Complicated Oil",
@@ -1540,7 +1700,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Compo Oil": {
       "Name": "Compo Oil",
@@ -1578,7 +1742,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Confidence Oil": {
       "Name": "Confidence Oil",
@@ -1616,7 +1784,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Considerate Oil": {
       "Name": "Considerate Oil",
@@ -1654,7 +1826,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Contained Force Oil": {
       "Name": "Contained Force Oil",
@@ -1692,7 +1868,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Critical Oil": {
       "Name": "Critical Oil",
@@ -1730,7 +1910,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Cycle Oil": {
       "Name": "Cycle Oil",
@@ -1768,7 +1952,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Damage Oil": {
       "Name": "Damage Oil",
@@ -1806,7 +1994,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Dart Oil": {
       "Name": "Dart Oil",
@@ -1844,7 +2036,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Dead Center Oil": {
       "Name": "Dead Center Oil",
@@ -1882,7 +2078,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Delayed Hyper Tube Oil": {
       "Name": "Delayed Hyper Tube Oil",
@@ -1920,7 +2120,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Dense Oil": {
       "Name": "Dense Oil",
@@ -1958,7 +2162,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Detune Oil": {
       "Name": "Detune Oil",
@@ -1996,7 +2204,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Diesel Oil": {
       "Name": "Diesel Oil",
@@ -2034,7 +2246,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Discharge Oil": {
       "Name": "Discharge Oil",
@@ -2072,7 +2288,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Disposable Oil": {
       "Name": "Disposable Oil",
@@ -2110,7 +2330,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Division Oil": {
       "Name": "Division Oil",
@@ -2148,7 +2372,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Do-over Oil": {
       "Name": "Do-over Oil",
@@ -2186,7 +2414,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Double Fire Oil": {
       "Name": "Double Fire Oil",
@@ -2224,7 +2456,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Double Lock Oil": {
       "Name": "Double Lock Oil",
@@ -2262,7 +2498,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Double Nothing Oil": {
       "Name": "Double Nothing Oil",
@@ -2300,7 +2540,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Dum Dum Oil": {
       "Name": "Dum Dum Oil",
@@ -2338,7 +2582,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Dynamic Oil": {
       "Name": "Dynamic Oil",
@@ -2376,7 +2624,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Easy Oil": {
       "Name": "Easy Oil",
@@ -2414,7 +2666,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Easy Plop Oil": {
       "Name": "Easy Plop Oil",
@@ -2452,7 +2708,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Elephant Oil": {
       "Name": "Elephant Oil",
@@ -2490,7 +2750,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Exotic Barrel Oil": {
       "Name": "Exotic Barrel Oil",
@@ -2528,7 +2792,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Expander Oil": {
       "Name": "Expander Oil",
@@ -2566,7 +2834,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Extra Powder Oil": {
       "Name": "Extra Powder Oil",
@@ -2604,7 +2876,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Farsighted Oil": {
       "Name": "Farsighted Oil",
@@ -2642,7 +2918,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Fast Bet Oil": {
       "Name": "Fast Bet Oil",
@@ -2680,7 +2960,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Feature Gun Oil": {
       "Name": "Feature Gun Oil",
@@ -2718,7 +3002,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Fidget Lord Oil": {
       "Name": "Fidget Lord Oil",
@@ -2756,7 +3044,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Fidget Oil": {
       "Name": "Fidget Oil",
@@ -2794,7 +3086,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "First Blood Oil": {
       "Name": "First Blood Oil",
@@ -2832,7 +3128,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Flea Oil": {
       "Name": "Flea Oil",
@@ -2870,7 +3170,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Flow Funnel Oil": {
       "Name": "Flow Funnel Oil",
@@ -2908,7 +3212,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Food Stamp Oil": {
       "Name": "Food Stamp Oil",
@@ -2946,7 +3254,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Fragile System Oil": {
       "Name": "Fragile System Oil",
@@ -2984,7 +3296,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Franciscan Oil": {
       "Name": "Franciscan Oil",
@@ -3022,7 +3338,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Frugal Oil": {
       "Name": "Frugal Oil",
@@ -3060,7 +3380,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Gambler Oil": {
       "Name": "Gambler Oil",
@@ -3098,7 +3422,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Gemini Oil": {
       "Name": "Gemini Oil",
@@ -3136,7 +3464,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Gentle Oil": {
       "Name": "Gentle Oil",
@@ -3174,7 +3506,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Glass Cannon Oil": {
       "Name": "Glass Cannon Oil",
@@ -3212,7 +3548,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Great Oil": {
       "Name": "Great Oil",
@@ -3250,7 +3590,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Grounded Oil": {
       "Name": "Grounded Oil",
@@ -3288,7 +3632,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Gunslinger Oil": {
       "Name": "Gunslinger Oil",
@@ -3326,7 +3674,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Happy Accident Oil": {
       "Name": "Happy Accident Oil",
@@ -3364,7 +3716,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Heavy Lead Oil": {
       "Name": "Heavy Lead Oil",
@@ -3402,7 +3758,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Heavy Oil": {
       "Name": "Heavy Oil",
@@ -3440,7 +3800,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Heavy Pockets Oil": {
       "Name": "Heavy Pockets Oil",
@@ -3478,7 +3842,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Hefty Oil": {
       "Name": "Hefty Oil",
@@ -3516,7 +3884,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Helium Oil": {
       "Name": "Helium Oil",
@@ -3554,7 +3926,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "High Grade Oil": {
       "Name": "High Grade Oil",
@@ -3592,7 +3968,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Hip Blaster Oil": {
       "Name": "Hip Blaster Oil",
@@ -3630,7 +4010,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Hip Marksman Oil": {
       "Name": "Hip Marksman Oil",
@@ -3668,7 +4052,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Hoop Oil": {
       "Name": "Hoop Oil",
@@ -3706,7 +4094,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Hunter Oil": {
       "Name": "Hunter Oil",
@@ -3744,7 +4136,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Hustler Oil": {
       "Name": "Hustler Oil",
@@ -3782,7 +4178,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Hyper Lead Oil": {
       "Name": "Hyper Lead Oil",
@@ -3820,7 +4220,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Imperfect Oil": {
       "Name": "Imperfect Oil",
@@ -3858,7 +4262,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Inconsiderate Oil": {
       "Name": "Inconsiderate Oil",
@@ -3896,7 +4304,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Inherited Oil": {
       "Name": "Inherited Oil",
@@ -3934,7 +4346,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Instant Oil": {
       "Name": "Instant Oil",
@@ -3972,7 +4388,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Judgement Oil": {
       "Name": "Judgement Oil",
@@ -4010,7 +4430,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Jungian Oil": {
       "Name": "Jungian Oil",
@@ -4048,7 +4472,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Keep Oil": {
       "Name": "Keep Oil",
@@ -4086,7 +4514,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Kicker Oil": {
       "Name": "Kicker Oil",
@@ -4124,7 +4556,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Kinetic Oil": {
       "Name": "Kinetic Oil",
@@ -4162,7 +4598,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Last Drop Oil": {
       "Name": "Last Drop Oil",
@@ -4200,7 +4640,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Late Boom Oil": {
       "Name": "Late Boom Oil",
@@ -4238,7 +4682,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Launcher Oil": {
       "Name": "Launcher Oil",
@@ -4276,7 +4724,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Lazy Oil": {
       "Name": "Lazy Oil",
@@ -4314,7 +4766,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Less Recoil Oil": {
       "Name": "Less Recoil Oil",
@@ -4352,7 +4808,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Lightweight Oil": {
       "Name": "Lightweight Oil",
@@ -4390,7 +4850,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Longshot Oil": {
       "Name": "Longshot Oil",
@@ -4428,7 +4892,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Lost In Focus Oil": {
       "Name": "Lost In Focus Oil",
@@ -4466,7 +4934,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Low Roller Oil": {
       "Name": "Low Roller Oil",
@@ -4504,7 +4976,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Machine Oil": {
       "Name": "Machine Oil",
@@ -4542,7 +5018,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Main Discipline Oil": {
       "Name": "Main Discipline Oil",
@@ -4580,7 +5060,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Main Focus Oil": {
       "Name": "Main Focus Oil",
@@ -4618,7 +5102,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Manifestation Oil": {
       "Name": "Manifestation Oil",
@@ -4656,7 +5144,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Matrix Oil": {
       "Name": "Matrix Oil",
@@ -4694,7 +5186,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Micro Wing Oil": {
       "Name": "Micro Wing Oil",
@@ -4732,7 +5228,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Modern Technology Oil": {
       "Name": "Modern Technology Oil",
@@ -4770,7 +5270,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Mosquito Oil": {
       "Name": "Mosquito Oil",
@@ -4808,7 +5312,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Multichamber Oil": {
       "Name": "Multichamber Oil",
@@ -4846,7 +5354,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Multishot Oil": {
       "Name": "Multishot Oil",
@@ -4884,7 +5396,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Needleye Oil": {
       "Name": "Needleye Oil",
@@ -4922,7 +5438,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Nerf Oil": {
       "Name": "Nerf Oil",
@@ -4960,7 +5480,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "No Look Oil": {
       "Name": "No Look Oil",
@@ -4998,7 +5522,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "No Need Oil": {
       "Name": "No Need Oil",
@@ -5036,7 +5564,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Out of the Box Oil": {
       "Name": "Out of the Box Oil",
@@ -5074,7 +5606,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Overclock Oil": {
       "Name": "Overclock Oil",
@@ -5112,7 +5648,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Overdose Oil": {
       "Name": "Overdose Oil",
@@ -5150,7 +5690,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Parallel Mag Oil": {
       "Name": "Parallel Mag Oil",
@@ -5188,7 +5732,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Peashooter Oil": {
       "Name": "Peashooter Oil",
@@ -5226,7 +5774,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Penetration Oil": {
       "Name": "Penetration Oil",
@@ -5264,7 +5816,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Perfect Bounce Oil": {
       "Name": "Perfect Bounce Oil",
@@ -5302,7 +5858,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Perforate Oil": {
       "Name": "Perforate Oil",
@@ -5340,7 +5900,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Plinker Oil": {
       "Name": "Plinker Oil",
@@ -5378,7 +5942,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Plop Back Oil": {
       "Name": "Plop Back Oil",
@@ -5416,7 +5984,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Pool Oil": {
       "Name": "Pool Oil",
@@ -5454,7 +6026,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Potshot Oil": {
       "Name": "Potshot Oil",
@@ -5492,7 +6068,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Puncher Oil": {
       "Name": "Puncher Oil",
@@ -5530,7 +6110,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Puncture Oil": {
       "Name": "Puncture Oil",
@@ -5568,7 +6152,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Purse Gun Oil": {
       "Name": "Purse Gun Oil",
@@ -5606,7 +6194,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Rapid Internals Oil": {
       "Name": "Rapid Internals Oil",
@@ -5644,7 +6236,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Ready Oil": {
       "Name": "Ready Oil",
@@ -5682,7 +6278,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Rebound Oil": {
       "Name": "Rebound Oil",
@@ -5720,7 +6320,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Recycle Oil": {
       "Name": "Recycle Oil",
@@ -5758,7 +6362,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Relax Oil": {
       "Name": "Relax Oil",
@@ -5796,7 +6404,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Release Oil": {
       "Name": "Release Oil",
@@ -5834,7 +6446,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Reload Oil": {
       "Name": "Reload Oil",
@@ -5872,7 +6488,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Ricochet Oil": {
       "Name": "Ricochet Oil",
@@ -5910,7 +6530,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Rigid System Oil": {
       "Name": "Rigid System Oil",
@@ -5948,7 +6572,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Rigor Oil": {
       "Name": "Rigor Oil",
@@ -5986,7 +6614,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Robust Mechanics Oil": {
       "Name": "Robust Mechanics Oil",
@@ -6024,7 +6656,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Rookie Oil": {
       "Name": "Rookie Oil",
@@ -6062,7 +6698,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Rubber Oil": {
       "Name": "Rubber Oil",
@@ -6100,7 +6740,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Rush Job Oil": {
       "Name": "Rush Job Oil",
@@ -6138,7 +6782,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Safety Oil": {
       "Name": "Safety Oil",
@@ -6176,7 +6824,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Satiety Oil": {
       "Name": "Satiety Oil",
@@ -6214,7 +6866,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Saviour Oil": {
       "Name": "Saviour Oil",
@@ -6252,7 +6908,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Scatter Oil": {
       "Name": "Scatter Oil",
@@ -6290,7 +6950,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Scramble Oil": {
       "Name": "Scramble Oil",
@@ -6328,7 +6992,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Seated Fit Oil": {
       "Name": "Seated Fit Oil",
@@ -6366,7 +7034,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Seated Oil": {
       "Name": "Seated Oil",
@@ -6404,7 +7076,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Sect Oil": {
       "Name": "Sect Oil",
@@ -6442,7 +7118,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Sender Oil": {
       "Name": "Sender Oil",
@@ -6480,7 +7160,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Sensible Oil": {
       "Name": "Sensible Oil",
@@ -6518,7 +7202,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Shaved Clip Oil": {
       "Name": "Shaved Clip Oil",
@@ -6556,7 +7244,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Shellman Oil": {
       "Name": "Shellman Oil",
@@ -6594,7 +7286,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Sherlock Oil": {
       "Name": "Sherlock Oil",
@@ -6632,7 +7328,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Shower Oil": {
       "Name": "Shower Oil",
@@ -6670,7 +7370,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Shredder Oil": {
       "Name": "Shredder Oil",
@@ -6708,7 +7412,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Skip Oil": {
       "Name": "Skip Oil",
@@ -6746,7 +7454,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Slick Oil": {
       "Name": "Slick Oil",
@@ -6784,7 +7496,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Slippy Coating Oil": {
       "Name": "Slippy Coating Oil",
@@ -6822,7 +7538,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Slotmachine Oil": {
       "Name": "Slotmachine Oil",
@@ -6860,7 +7580,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Slow Punch Oil": {
       "Name": "Slow Punch Oil",
@@ -6898,7 +7622,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Smart Bullet Oil": {
       "Name": "Smart Bullet Oil",
@@ -6936,7 +7664,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Soft Bullet Oil": {
       "Name": "Soft Bullet Oil",
@@ -6974,7 +7706,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Solid Oil": {
       "Name": "Solid Oil",
@@ -7012,7 +7748,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Spartan Oil": {
       "Name": "Spartan Oil",
@@ -7050,7 +7790,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Speed Trade Oil": {
       "Name": "Speed Trade Oil",
@@ -7088,7 +7832,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Spitter Oil": {
       "Name": "Spitter Oil",
@@ -7126,7 +7874,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Spread Oil": {
       "Name": "Spread Oil",
@@ -7164,7 +7916,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Stability Oil": {
       "Name": "Stability Oil",
@@ -7202,7 +7958,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Stable Hip Oil": {
       "Name": "Stable Hip Oil",
@@ -7240,7 +8000,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Stationary Oil": {
       "Name": "Stationary Oil",
@@ -7278,7 +8042,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Stiffy Fit Oil": {
       "Name": "Stiffy Fit Oil",
@@ -7316,7 +8084,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Stoic Oil": {
       "Name": "Stoic Oil",
@@ -7354,7 +8126,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Suppressive Oil": {
       "Name": "Suppressive Oil",
@@ -7392,7 +8168,11 @@
       "DurLossMult": 0,
       "BulletBounciness": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Surgical Laser Oil": {
       "Name": "Surgical Laser Oil",
@@ -7430,7 +8210,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Synchronicity Oil": {
       "Name": "Synchronicity Oil",
@@ -7468,7 +8252,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Tactical Oil": {
       "Name": "Tactical Oil",
@@ -7506,7 +8294,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Tandem Oil": {
       "Name": "Tandem Oil",
@@ -7544,7 +8336,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Task Oil": {
       "Name": "Task Oil",
@@ -7582,7 +8378,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Tech Support Oil": {
       "Name": "Tech Support Oil",
@@ -7620,7 +8420,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Tension Oil": {
       "Name": "Tension Oil",
@@ -7658,7 +8462,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Terminator Oil": {
       "Name": "Terminator Oil",
@@ -7696,7 +8504,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Thorough Oil": {
       "Name": "Thorough Oil",
@@ -7734,7 +8546,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Tight Barrel Oil": {
       "Name": "Tight Barrel Oil",
@@ -7772,7 +8588,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Too Much Oil": {
       "Name": "Too Much Oil",
@@ -7810,7 +8630,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Trusty Old Oil": {
       "Name": "Trusty Old Oil",
@@ -7848,7 +8672,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Turbulence Oil": {
       "Name": "Turbulence Oil",
@@ -7886,7 +8714,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Twice Oil": {
       "Name": "Twice Oil",
@@ -7924,7 +8756,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Two Time Oil": {
       "Name": "Two Time Oil",
@@ -7962,7 +8798,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Untechnical Oil": {
       "Name": "Untechnical Oil",
@@ -8000,7 +8840,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Vasectomy Oil": {
       "Name": "Vasectomy Oil",
@@ -8038,7 +8882,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Vegan Oil": {
       "Name": "Vegan Oil",
@@ -8076,7 +8924,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Vegetable Oil": {
       "Name": "Vegetable Oil",
@@ -8114,7 +8966,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Velocity Oil": {
       "Name": "Velocity Oil",
@@ -8152,7 +9008,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Walk Easy Oil": {
       "Name": "Walk Easy Oil",
@@ -8190,7 +9050,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Waster Oil": {
       "Name": "Waster Oil",
@@ -8228,7 +9092,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Whim Oil": {
       "Name": "Whim Oil",
@@ -8266,7 +9134,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Whos Counting Oil": {
       "Name": "Whos Counting Oil",
@@ -8304,7 +9176,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Wobble Oil": {
       "Name": "Wobble Oil",
@@ -8342,7 +9218,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Zero Fucks Oil": {
       "Name": "Zero Fucks Oil",
@@ -8380,7 +9260,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     },
     "Zooming Oil": {
       "Name": "Zooming Oil",
@@ -8418,7 +9302,11 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "ADSCritChance": 0,
-      "Firemode": "None"
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "IsRailgun": "No",
+      "HeadshotDamage": 0
     }
   }
 }

@@ -76,10 +76,10 @@
 }
 
 @keyframes boxSpinY {
-    0% {transform: rotatey(0deg);}
-    25% {transform: rotatey(360deg); background-color: black; box-shadow: inset 0px 0px 10px 25px white;}
-    50% {transform: rotatey(720deg);}
-    100% {transform: rotatey(1080deg);}
+    0% {transform: rotatey(0deg); background-image: none; color: white}
+    25% {transform: rotatey(360deg); background-image: none; color: white}
+    50% {transform: rotatey(720deg); background-image: none; color: white}
+    100% {transform: rotatey(1080deg); color: white}
 }
 
 @keyframes boxIdle {
@@ -98,6 +98,11 @@
 @keyframes fucktest {
     from {opacity: 0%;}
     to {opacity: 100%;}
+}
+@keyframes boxText {
+    0% {opacity: 0%;}
+    75% {opacity: 90%;}
+    100% {opacity: 100%;}
 }
 body {
     .fredoka-standard {
@@ -133,6 +138,9 @@ body {
 
 .otherspinanimation {
     animation: boxSpinY 0.5s ease-out 1;
+}
+.otherspinanimation span {
+    animation: boxText 0.5s ease-out 1;
 }
 
     h1 {
@@ -382,6 +390,12 @@ body {
     height: 0%;
 }
 
+#weaponboxcontain div {
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
 .custom-select {
     position: relative;
     font-family: "Fredoka", sans-serif;
@@ -420,7 +434,7 @@ select.custom-dropdown {
     font-weight: 100;
     margin: -10px;
     margin-right: 0px;
-    transition:transform .15s ease;
+    transition:transform .15s ease, transform .15s ease;
     color:#000000;
 }
 
@@ -436,8 +450,35 @@ select.custom-dropdown {
 }
 
 .custom-select.open.drop-up .custom-arrow {
-    transform: translate(10px, -10px) rotate(-135deg);
+    transform: rotate(-180deg) translate(0px, 10px);
+    
     z-index:1001;
+}
+
+.fa-caret-down {
+    font-size: 12px;
+    margin: -1px;
+    padding: 0px;
+}
+.fa-caret-up {
+    font-size: 12px;
+    margin: -1px;
+    padding: 0px;
+}
+
+.fa-arrow-left {
+    font-size: 10px;
+    margin: -1px;
+    padding: 0px;
+    margin-left: 5px;
+    color: #89a0b8"
+}
+
+.fa-x {
+    font-size: 7px;
+    margin: -2px;
+    padding: 0px;
+    color: #89a0b8"
 }
 
 .custom-select-panel {
