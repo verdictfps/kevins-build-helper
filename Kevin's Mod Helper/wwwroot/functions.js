@@ -743,7 +743,9 @@ function onGenerate() {
     rollAggregator("chamber", "chamberselector", 5, chamberSelectHandler.value, "attachment");
 }
 
-function addAllEventListeners() {
+async function addAllEventListeners() {
+
+    const dropped = dropPromise;
 
     // Weapon onchange handler
 
@@ -3558,27 +3560,32 @@ const attachmentsRechambers = [
     "Chamber Chisel - 9mm"
 ];
 function mobileDropdownCheck(evt) {
-        console.log("checking if mobile");
-        if (window.mobileCheck() === true) {
+    let helloThere = "hello there";
+    console.log("checking if mobile");
+    if (window.mobileCheck() === true) {
 
-            dropdownSelectHandler = document.getElementsByClassName('mobiledrop');
-            console.log(dropdownSelectHandler)
-            customDropHandler = document.getElementsByClassName('custom-select');
+        dropdownSelectHandler = document.getElementsByClassName('mobiledrop');
+        console.log(dropdownSelectHandler)
+        customDropHandler = document.getElementsByClassName('custom-select');
 
-            for (var i = 0; i < dropdownSelectHandler.length; i++) {
-                if (dropdownSelectHandler[i] !== undefined) {
-                    console.log(dropdownSelectHandler[i])
-                    dropdownSelectHandler[i].classList.remove("custom-dropdown");
-                    dropdownSelectHandler[i].classList.add("show");
-                }
-                
+        for (var i = 0; i < dropdownSelectHandler.length; i++) {
+            if (dropdownSelectHandler[i] !== undefined) {
+                console.log(dropdownSelectHandler[i])
+                dropdownSelectHandler[i].classList.remove("custom-dropdown");
+                dropdownSelectHandler[i].classList.add("show");
             }
+            
+        }
 
-            for (var i = 0; i < customDropHandler.length; i++) {
-                customDropHandler[i].hidden = true;
-            }
+        for (var i = 0; i < customDropHandler.length; i++) {
+            customDropHandler[i].hidden = true;
         }
     }
+    return helloThere;
+}
+
+const dropPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
-    mobileDropdownCheck();
+        mobileDropdownCheck();
     }, 100);
+})
