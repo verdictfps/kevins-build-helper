@@ -831,23 +831,18 @@ function addAllEventListeners() {
     // Animations
 
     // Mobile checks
-    dropdownSelectHandler = document.getElementsByClassName('custom-select');
-    for (var i = 0; i < dropdownSelectHandler.length; i++) {
-        dropdownSelectHandler[i].addEventListener('click', mobileDropdownCheck, false);
-    }
+    //dropdownSelectHandler = document.getElementsByClassName('custom-select');
+    //for (var i = 0; i < dropdownSelectHandler.length; i++) {
+    //   dropdownSelectHandler[i].addEventListener('click', mobileDropdownCheck, false);
+    //}
+
+    
+    
 }
 
-function mobileDropdownCheck(evt) {
-    console.log("checking if mobile");
-    if (window.mobileCheck() === false) {
-        let dropName = evt.currentTarget.dataset.dropdownId;
-        let oldDrop = document.getElementById(dropName);
-        //oldDrop.classList.remove("custom-dropdown");
-        oldDrop.classList.add("show");
-    }
-}
 
-let dropdownSelectHandler = document.getElementsByClassName('custom-select');
+let dropdownSelectHandler = null;
+let customDropHandler = document.getElementsByClassName('custom-select');
 let weaponSelectHandler = document.getElementById('weapons');
 let ench1SelectHandler = document.getElementById('oils1selector');
 let ench2SelectHandler = document.getElementById('oils2selector');
@@ -3562,3 +3557,28 @@ const attachmentsRechambers = [
     "Chamber Chisel - 7.62mm",
     "Chamber Chisel - 9mm"
 ];
+function mobileDropdownCheck(evt) {
+        console.log("checking if mobile");
+        if (window.mobileCheck() === true) {
+
+            dropdownSelectHandler = document.getElementsByClassName('mobiledrop');
+            console.log(dropdownSelectHandler)
+            customDropHandler = document.getElementsByClassName('custom-select');
+
+            for (var i = 0; i < dropdownSelectHandler.length; i++) {
+                if (dropdownSelectHandler[i] !== undefined) {
+                    console.log(dropdownSelectHandler[i])
+                    dropdownSelectHandler[i].classList.remove("custom-dropdown");
+                    dropdownSelectHandler[i].classList.add("show");
+                }
+                
+            }
+
+            for (var i = 0; i < customDropHandler.length; i++) {
+                customDropHandler[i].hidden = true;
+            }
+        }
+    }
+    setTimeout(() => {
+    mobileDropdownCheck();
+    }, 100);
