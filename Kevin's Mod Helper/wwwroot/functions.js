@@ -544,6 +544,36 @@ function resetAllOils() {
     shallNotPass = false;
 }
 
+function randomizeAllAttachments() {
+    shallNotPass = true;
+    document.getElementById("barrelselector").proDropdown.setValue("static-random-barrel");
+    document.getElementById("opticselector").proDropdown.setValue("static-random-optic");
+    document.getElementById("laserselector").proDropdown.setValue("static-random-laser");
+    document.getElementById("chamberselector").proDropdown.setValue("static-random-chamber");
+    rollAggregator('barrel', 'barrelselector', 1, "static-random-barrel", "attachment");
+    rollAggregator('optic', 'opticselector', 2, "static-random-optic", "attachment");
+    rollAggregator('laser', 'laserselector', 3, "static-random-laser", "attachment");
+    rollAggregator('chamber', 'chamberselector', 5, "static-random-chamber", "attachment");
+    shallNotPass = false;
+}
+
+function resetAllAttachments() {
+
+    shallNotPass = true;
+    document.getElementById("barrelselector").proDropdown.setValue("none");
+    document.getElementById("opticselector").proDropdown.setValue("none");
+    document.getElementById("laserselector").proDropdown.setValue("none");
+    document.getElementById("firemodeselector").proDropdown.setValue("none");
+    document.getElementById("chamberselector").proDropdown.setValue("none");
+    
+    rollAggregator('barrel', 'barrelselector', 1, "none", "attachment");
+    rollAggregator('optic', 'opticselector', 2, "none", "attachment");
+    rollAggregator('laser', 'laserselector', 3, "none", "attachment");
+    rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment");
+    rollAggregator('chamber', 'chamberselector', 5, "none", "attachment");
+    shallNotPass = false;
+}
+
 // Used to remove and replace oils to prevent dupes
 function oilRemover() {
 
@@ -1001,19 +1031,18 @@ function addName() {
                 document.getElementById("barreldesc").innerHTML = barrel.StatDescription;
                 break;
             case "optic":
-                let optic = getBarrelByName(coreName);
                 document.getElementById("opticname").textContent = coreName;
-                document.getElementById("opticdesc").innerHTML = optic.StatDescription;
+                document.getElementById("opticdesc").innerHTML = value.Name.StatDescription;
                 break;
             case "laser":
                 let laser = getBarrelByName(coreName);
                 document.getElementById("lasername").textContent = coreName;
-                document.getElementById("laserdesc").innerHTML = laser.StatDescription;
+                document.getElementById("laserdesc").innerHTML = value.Name.StatDescription;
                 break;
             case "firemode":
                 let firemode = getBarrelByName(coreName);
                 document.getElementById("firemodename").textContent = coreName;
-                document.getElementById("firemodedesc").innerHTML = firemode.StatDescription;
+                document.getElementById("firemodedesc").innerHTML = value.Name.StatDescription;
                 break;   
             case "all":
                 break;
@@ -2788,17 +2817,17 @@ function rollSelections(flag, selector, selID, value, type) {
         if (flag === "barrel") {
             switch (value) {
                 case "static-not-applicable":
-                    selectedItem = getOilByName("None");
+                    selectedItem = getBarrelByName("None");
                     selectedValue = convNameToVal(selectedItem.Name);
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 case "static-choose":
-                    selectedItem = getOilByName("None");
+                    selectedItem = getBarrelByName("None");
                     selectedValue = convNameToVal(selectedItem.Name);
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 case "none":
-                    selectedItem = getOilByName("None");
+                    selectedItem = getBarrelByName("None");
                     selectedValue = convNameToVal(selectedItem.Name);
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
@@ -2809,77 +2838,83 @@ function rollSelections(flag, selector, selID, value, type) {
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 default:
-                    selectedItem = convertToUpper(selectedValue);
-                    selectedValue = convNameToVal(selectedItem);
+                    let selbar = convertToUpper(value);
+                    selectedItem = getBarrelByName(selbar);
                     addToCoreMap(flag, selectedItem, value);
             }
         }
         if (flag === "optic") {
             switch (value) {
                 case "static-choose":
-                    selectedItem = getOilByName("None");
+                    selectedItem = getOpticByName("None");
                     selectedValue = convNameToVal(selectedItem.Name);
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 case "none":
-                    selectedItem = getOilByName("None");
+                    selectedItem = getOpticByName("None");
                     selectedValue = convNameToVal(selectedItem.Name);
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 case "static-random-optic":
                     shuffle(attachmentsOptics);
-                    selectedItem = getBarrelByName(attachmentsOptics[0]);
+                    selectedItem = getOpticByName(attachmentsOptics[0]);
                     selectedValue = convNameToVal(selectedItem.Name);
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 default:
-                    selectedItem = convertToUpper(selectedValue);
-                    selectedValue = convNameToVal(selectedItem);
+                    let seloptic = convertToUpper(value);
+                    selectedItem = getOpticByName(seloptic);
                     addToCoreMap(flag, selectedItem, value);
             }
         }
         if (flag === "laser") {
             switch (value) {
                 case "static-choose":
-                    selectedItem = getOilByName("None");
-                    selectedValue = convNameToVal(selectedItem.Name);
+                    selectedItem = getLaserByName("None");
+                    selectedValue = "none";
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 case "none":
-                    selectedItem = getOilByName("None");
-                    selectedValue = convNameToVal(selectedItem.Name);
+                    selectedItem = getLaserByName("None");
+                    selectedValue = "none";
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 case "static-random-laser":
                     shuffle(attachmentsLasers);
-                    selectedItem = getBarrelByName(attachmentsLasers[0]);
+                    selectedItem = getLaserByName(attachmentsLasers[0]);
                     selectedValue = convNameToVal(selectedItem.Name);
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 default:
-                    selectedItem = convertToUpper(selectedValue);
-                    selectedValue = convNameToVal(selectedItem);
+                    let selaser = convertToUpper(value);
+                    selectedItem = getLaserByName(selaser);
                     addToCoreMap(flag, selectedItem, value);
             }
         }
         if (flag === "firemode") {
+            console.log(value)
             switch (value) {
                 case "static-not-applicable":
-                    selectedItem = getOilByName("None");
-                    selectedValue = convNameToVal(selectedItem.Name);
+                    selectedItem = getFiremodeByName("None");
+                    selectedValue = "none";
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 case "static-choose":
-                    selectedItem = getOilByName("None");
-                    selectedValue = convNameToVal(selectedItem.Name);
+                    selectedItem = getFiremodeByName("None");
+                    selectedValue = "none";
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 case "none":
-                    addToCoreMap(flag, "None", "none")
+                    selectedItem = getFiremodeByName("None");
+                    addToCoreMap(flag, selectedItem, "none")
                     break;
                 default:
-                    selectedItem = convertToUpper(selectedValue);
-                    selectedValue = convNameToVal(selectedItem);
+                    if (value === "gun-crank") {
+                        selectedItem = getFiremodeByName("Gun Crank");
+                    }
+                    else {
+                        selectedItem = getFiremodeByName("Priming Bolt");
+                    }
                     addToCoreMap(flag, selectedItem, value);
             }
         }
@@ -2924,1082 +2959,6 @@ function rollSelections(flag, selector, selID, value, type) {
         default:
     }
 
-
-
-    /*for (let i = 0; i < selectedOil.length; i++) {
-        counter += 1;
-        switch (selectedOil[i].value) {
-            case "static-no-selection":
-                rolledOils[i] = getOilByName("None");
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-choose":
-                rolledOils[i] = getOilByName("None");
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case null:
-                rolledOils[i] = getOilByName("None");
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "":
-                rolledOils[i] = getOilByName("None");
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-all":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsAll);
-                    rolledOils[i] = oilsAll[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                let selOilRep = newSelOil.replaceAll(" ", "-");
-                let selOilLower = selOilRep.toLowerCase();
-                //oilRemover(selectedOil[i].id, selOilLower)
-                const indexAll = oilsAll.indexOf(newSelOil);
-                if (indexAll > -1) {
-                    oilsAll.splice(indexAll, 1);
-                }
-                const indexAmmo = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo > -1) {
-                    oilsAmmo.splice(indexAmmo, 1);
-                }
-                const indexCrit = oilsCrit.indexOf(newSelOil);
-                if (indexCrit > -1) {
-                    oilsCrit.splice(indexCrit, 1);
-                }
-                const indexBounce = oilsBounce.indexOf(newSelOil);
-                if (indexBounce > -1) {
-                    oilsBounce.splice(indexBounce, 1);
-                }
-                const indexSpeed = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed > -1) {
-                    oilsSpeed.splice(indexSpeed, 1);
-                }
-                const indexAddDam = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam > -1) {
-                    oilsAddDam.splice(indexAddDam, 1);
-                }
-                const indexMultDam = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam > -1) {
-                    oilsMultDam.splice(indexMultDam, 1);
-                }
-                const indexDur = oilsDur.indexOf(newSelOil);
-                if (indexDur > -1) {
-                    oilsDur.splice(indexDur, 1);
-                    }
-                const indexPen = oilsPen.indexOf(newSelOil);
-                if (indexPen > -1) {
-                    oilsPen.splice(indexPen, 1);
-                }
-                const indexProj = oilsProj.indexOf(newSelOil);
-                if (indexProj > -1) {
-                    oilsProj.splice(indexProj, 1);
-                }
-                const indexRecoil = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil > -1) {
-                    oilsRecoil.splice(indexRecoil, 1);
-                }
-                const indexReload = oilsReload.indexOf(newSelOil);
-                if (indexReload > -1) {
-                    oilsReload.splice(indexReload, 1);
-                }
-                const indexRPM = oilsRPM.indexOf(newSelOil);
-                if (indexRPM > -1) {
-                    oilsRPM.splice(indexRPM, 1);
-                }
-                const indexSpread = oilsSpread.indexOf(newSelOil);
-                if (indexSpread > -1) {
-                    oilsSpread.splice(indexSpread, 1);
-                }
-                
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-ammo-consume-chance":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsAmmo);
-                    rolledOils[i] = oilsAmmo[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll1 = oilsAll.indexOf(newSelOil);
-                if (indexAll1 > -1) {
-                    oilsAll.splice(indexAll1, 1);
-                }
-                const indexAmmo1 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo1 > -1) {
-                    oilsAmmo.splice(indexAmmo1, 1);
-                }
-                const indexCrit1 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit1 > -1) {
-                    oilsCrit.splice(indexCrit1, 1);
-                }
-                const indexBounce1 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce1 > -1) {
-                    oilsBounce.splice(indexBounce1, 1);
-                }
-                const indexSpeed1 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed1 > -1) {
-                    oilsSpeed.splice(indexSpeed1, 1);
-                }
-                const indexAddDam1 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam1 > -1) {
-                    oilsAddDam.splice(indexAddDam1, 1);
-                }
-                const indexMultDam1 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam1 > -1) {
-                    oilsMultDam.splice(indexMultDam1, 1);
-                }
-                const indexDur1 = oilsDur.indexOf(newSelOil);
-                if (indexDur1 > -1) {
-                    oilsDur.splice(indexDur1, 1);
-                    }
-                const indexPen1 = oilsPen.indexOf(newSelOil);
-                if (indexPen1 > -1) {
-                    oilsPen.splice(indexPen1, 1);
-                }
-                const indexProj1 = oilsProj.indexOf(newSelOil);
-                if (indexProj1 > -1) {
-                    oilsProj.splice(indexProj1, 1);
-                }
-                const indexRecoil1 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil1 > -1) {
-                    oilsRecoil.splice(indexRecoil1, 1);
-                }
-                const indexReload1 = oilsReload.indexOf(newSelOil);
-                if (indexReload1 > -1) {
-                    oilsReload.splice(indexReload1, 1);
-                }
-                const indexRPM1 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM1 > -1) {
-                    oilsRPM.splice(indexRPM1, 1);
-                }
-                const indexSpread1 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread1 > -1) {
-                    oilsSpread.splice(indexSpread1, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-base-crit-chance":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsCrit);
-                    rolledOils[i] = oilsCrit[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll2 = oilsAll.indexOf(newSelOil);
-                if (indexAll2 > -1) {
-                    oilsAll.splice(indexAll2, 1);
-                }
-                const indexAmmo2 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo2 > -1) {
-                    oilsAmmo.splice(indexAmmo2, 1);
-                }
-                const indexCrit2 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit2 > -1) {
-                    oilsCrit.splice(indexCrit2, 1);
-                }
-                const indexBounce2 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce2 > -1) {
-                    oilsBounce.splice(indexBounce2, 1);
-                }
-                const indexSpeed2 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed2 > -1) {
-                    oilsSpeed.splice(indexSpeed2, 1);
-                }
-                const indexAddDam2 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam2 > -1) {
-                    oilsAddDam.splice(indexAddDam2, 1);
-                }
-                const indexMultDam2 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam2 > -1) {
-                    oilsMultDam.splice(indexMultDam2, 1);
-                }
-                const indexDur2 = oilsDur.indexOf(newSelOil);
-                if (indexDur2 > -1) {
-                    oilsDur.splice(indexDur2, 1);
-                    }
-                const indexPen2 = oilsPen.indexOf(newSelOil);
-                if (indexPen2 > -1) {
-                    oilsPen.splice(indexPen2, 1);
-                }
-                const indexProj2= oilsProj.indexOf(newSelOil);
-                if (indexProj2 > -1) {
-                    oilsProj.splice(indexProj2, 1);
-                }
-                const indexRecoil2 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil2 > -1) {
-                    oilsRecoil.splice(indexRecoil2, 1);
-                }
-                const indexReload2 = oilsReload.indexOf(newSelOil);
-                if (indexReload2 > -1) {
-                    oilsReload.splice(indexReload2, 1);
-                }
-                const indexRPM2 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM2 > -1) {
-                    oilsRPM.splice(indexRPM2, 1);
-                }
-                const indexSpread2 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread2 > -1) {
-                    oilsSpread.splice(indexSpread2, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-bullet-bounce":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsBounce);
-                    rolledOils[i] = oilsBounce[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll3 = oilsAll.indexOf(newSelOil);
-                if (indexAll3 > -1) {
-                    oilsAll.splice(indexAll3, 1);
-                }
-                const indexAmmo3 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo3 > -1) {
-                    oilsAmmo.splice(indexAmmo3, 1);
-                }
-                const indexCrit3 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit3 > -1) {
-                    oilsCrit.splice(indexCrit3, 1);
-                }
-                const indexBounce3 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce3 > -1) {
-                    oilsBounce.splice(indexBounce3, 1);
-                }
-                const indexSpeed3 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed3 > -1) {
-                    oilsSpeed.splice(indexSpeed3, 1);
-                }
-                const indexAddDam3 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam3 > -1) {
-                    oilsAddDam.splice(indexAddDam3, 1);
-                }
-                const indexMultDam3 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam3 > -1) {
-                    oilsMultDam.splice(indexMultDam3, 1);
-                }
-                const indexDur3 = oilsDur.indexOf(newSelOil);
-                if (indexDur3 > -1) {
-                    oilsDur.splice(indexDur3, 1);
-                    }
-                const indexPen3 = oilsPen.indexOf(newSelOil);
-                if (indexPen3 > -1) {
-                    oilsPen.splice(indexPen3, 1);
-                }
-                const indexProj3= oilsProj.indexOf(newSelOil);
-                if (indexProj3 > -1) {
-                    oilsProj.splice(indexProj3, 1);
-                }
-                const indexRecoil3 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil3 > -1) {
-                    oilsRecoil.splice(indexRecoil3, 1);
-                }
-                const indexReload3 = oilsReload.indexOf(newSelOil);
-                if (indexReload3 > -1) {
-                    oilsReload.splice(indexReload3, 1);
-                }
-                const indexRPM3 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM3 > -1) {
-                    oilsRPM.splice(indexRPM3, 1);
-                }
-                const indexSpread3 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread3 > -1) {
-                    oilsSpread.splice(indexSpread3, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-bullet-speed":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsSpeed);
-                    rolledOils[i] = oilsSpeed[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll4 = oilsAll.indexOf(newSelOil);
-                if (indexAll4 > -1) {
-                    oilsAll.splice(indexAll4, 1);
-                }
-                const indexAmmo4 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo4 > -1) {
-                    oilsAmmo.splice(indexAmmo4, 1);
-                }
-                const indexCrit4 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit4 > -1) {
-                    oilsCrit.splice(indexCrit4, 1);
-                }
-                const indexBounce4 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce4 > -1) {
-                    oilsBounce.splice(indexBounce4, 1);
-                }
-                const indexSpeed4 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed4 > -1) {
-                    oilsSpeed.splice(indexSpeed4, 1);
-                }
-                const indexAddDam4 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam4 > -1) {
-                    oilsAddDam.splice(indexAddDam4, 1);
-                }
-                const indexMultDam4 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam4 > -1) {
-                    oilsMultDam.splice(indexMultDam4, 1);
-                }
-                const indexDur4 = oilsDur.indexOf(newSelOil);
-                if (indexDur4 > -1) {
-                    oilsDur.splice(indexDur4, 1);
-                    }
-                const indexPen4 = oilsPen.indexOf(newSelOil);
-                if (indexPen4 > -1) {
-                    oilsPen.splice(indexPen4, 1);
-                }
-                const indexProj4= oilsProj.indexOf(newSelOil);
-                if (indexProj4 > -1) {
-                    oilsProj.splice(indexProj4, 1);
-                }
-                const indexRecoil4 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil4 > -1) {
-                    oilsRecoil.splice(indexRecoil4, 1);
-                }
-                const indexReload4 = oilsReload.indexOf(newSelOil);
-                if (indexReload4 > -1) {
-                    oilsReload.splice(indexReload4, 1);
-                }
-                const indexRPM4 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM4 > -1) {
-                    oilsRPM.splice(indexRPM4, 1);
-                }
-                const indexSpread4 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread4 > -1) {
-                    oilsSpread.splice(indexSpread4, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-add-damage":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsAddDam);
-                    rolledOils[i] = oilsAddDam[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll5 = oilsAll.indexOf(newSelOil);
-                if (indexAll5 > -1) {
-                    oilsAll.splice(indexAll5, 1);
-                }
-                const indexAmmo5 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo5 > -1) {
-                    oilsAmmo.splice(indexAmmo5, 1);
-                }
-                const indexCrit5 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit5 > -1) {
-                    oilsCrit.splice(indexCrit5, 1);
-                }
-                const indexBounce5 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce5 > -1) {
-                    oilsBounce.splice(indexBounce5, 1);
-                }
-                const indexSpeed5 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed5 > -1) {
-                    oilsSpeed.splice(indexSpeed5, 1);
-                }
-                const indexAddDam5 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam5 > -1) {
-                    oilsAddDam.splice(indexAddDam5, 1);
-                }
-                const indexMultDam5 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam5 > -1) {
-                    oilsMultDam.splice(indexMultDam5, 1);
-                }
-                const indexDur5 = oilsDur.indexOf(newSelOil);
-                if (indexDur5 > -1) {
-                    oilsDur.splice(indexDur5, 1);
-                    }
-                const indexPen5 = oilsPen.indexOf(newSelOil);
-                if (indexPen5 > -1) {
-                    oilsPen.splice(indexPen5, 1);
-                }
-                const indexProj5= oilsProj.indexOf(newSelOil);
-                if (indexProj5 > -1) {
-                    oilsProj.splice(indexProj5, 1);
-                }
-                const indexRecoil5 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil5 > -1) {
-                    oilsRecoil.splice(indexRecoil5, 1);
-                }
-                const indexReload5 = oilsReload.indexOf(newSelOil);
-                if (indexReload5 > -1) {
-                    oilsReload.splice(indexReload5, 1);
-                }
-                const indexRPM5 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM5 > -1) {
-                    oilsRPM.splice(indexRPM5, 1);
-                }
-                const indexSpread5 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread5 > -1) {
-                    oilsSpread.splice(indexSpread5, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-mult-damage":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsMultDam);
-                    rolledOils[i] = oilsMultDam[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll6 = oilsAll.indexOf(newSelOil);
-                if (indexAll6 > -1) {
-                    oilsAll.splice(indexAll6, 1);
-                }
-                const indexAmmo6 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo6 > -1) {
-                    oilsAmmo.splice(indexAmmo6, 1);
-                }
-                const indexCrit6 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit6 > -1) {
-                    oilsCrit.splice(indexCrit6, 1);
-                }
-                const indexBounce6 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce6 > -1) {
-                    oilsBounce.splice(indexBounce6, 1);
-                }
-                const indexSpeed6 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed6 > -1) {
-                    oilsSpeed.splice(indexSpeed6, 1);
-                }
-                const indexAddDam6 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam6 > -1) {
-                    oilsAddDam.splice(indexAddDam6, 1);
-                }
-                const indexMultDam6 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam6 > -1) {
-                    oilsMultDam.splice(indexMultDam6, 1);
-                }
-                const indexDur6 = oilsDur.indexOf(newSelOil);
-                if (indexDur6 > -1) {
-                    oilsDur.splice(indexDur6, 1);
-                    }
-                const indexPen6 = oilsPen.indexOf(newSelOil);
-                if (indexPen6 > -1) {
-                    oilsPen.splice(indexPen6, 1);
-                }
-                const indexProj6= oilsProj.indexOf(newSelOil);
-                if (indexProj6 > -1) {
-                    oilsProj.splice(indexProj6, 1);
-                }
-                const indexRecoil6 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil6 > -1) {
-                    oilsRecoil.splice(indexRecoil6, 1);
-                }
-                const indexReload6 = oilsReload.indexOf(newSelOil);
-                if (indexReload6 > -1) {
-                    oilsReload.splice(indexReload6, 1);
-                }
-                const indexRPM6 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM6 > -1) {
-                    oilsRPM.splice(indexRPM6, 1);
-                }
-                const indexSpread6 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread6 > -1) {
-                    oilsSpread.splice(indexSpread6, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-max-durability":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                } 
-                else {
-                    shuffle(oilsDur);
-                    rolledOils[i] = oilsDur[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll7 = oilsAll.indexOf(newSelOil);
-                if (indexAll7 > -1) {
-                    oilsAll.splice(indexAll7, 1);
-                }
-                const indexAmmo7 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo7 > -1) {
-                    oilsAmmo.splice(indexAmmo7, 1);
-                }
-                const indexCrit7 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit7 > -1) {
-                    oilsCrit.splice(indexCrit7, 1);
-                }
-                const indexBounce7 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce7 > -1) {
-                    oilsBounce.splice(indexBounce7, 1);
-                }
-                const indexSpeed7 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed7 > -1) {
-                    oilsSpeed.splice(indexSpeed7, 1);
-                }
-                const indexAddDam7 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam7 > -1) {
-                    oilsAddDam.splice(indexAddDam7, 1);
-                }
-                const indexMultDam7 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam7 > -1) {
-                    oilsMultDam.splice(indexMultDam7, 1);
-                }
-                const indexDur7 = oilsDur.indexOf(newSelOil);
-                if (indexDur7 > -1) {
-                    oilsDur.splice(indexDur7, 1);
-                    }
-                const indexPen7 = oilsPen.indexOf(newSelOil);
-                if (indexPen7 > -1) {
-                    oilsPen.splice(indexPen7, 1);
-                }
-                const indexProj7= oilsProj.indexOf(newSelOil);
-                if (indexProj7 > -1) {
-                    oilsProj.splice(indexProj7, 1);
-                }
-                const indexRecoil7 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil7 > -1) {
-                    oilsRecoil.splice(indexRecoil7, 1);
-                }
-                const indexReload7 = oilsReload.indexOf(newSelOil);
-                if (indexReload7 > -1) {
-                    oilsReload.splice(indexReload7, 1);
-                }
-                const indexRPM7 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM7 > -1) {
-                    oilsRPM.splice(indexRPM7, 1);
-                }
-                const indexSpread7 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread7 > -1) {
-                    oilsSpread.splice(indexSpread7, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-penetration":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsPen);
-                    rolledOils[i] = oilsPen[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll8 = oilsAll.indexOf(newSelOil);
-                if (indexAll8 > -1) {
-                    oilsAll.splice(indexAll8, 1);
-                }
-                const indexAmmo8 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo8 > -1) {
-                    oilsAmmo.splice(indexAmmo8, 1);
-                }
-                const indexCrit8 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit8 > -1) {
-                    oilsCrit.splice(indexCrit8, 1);
-                }
-                const indexBounce8 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce8 > -1) {
-                    oilsBounce.splice(indexBounce8, 1);
-                }
-                const indexSpeed8 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed8 > -1) {
-                    oilsSpeed.splice(indexSpeed8, 1);
-                }
-                const indexAddDam8 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam8 > -1) {
-                    oilsAddDam.splice(indexAddDam8, 1);
-                }
-                const indexMultDam8 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam8 > -1) {
-                    oilsMultDam.splice(indexMultDam8, 1);
-                }
-                const indexDur8 = oilsDur.indexOf(newSelOil);
-                if (indexDur8 > -1) {
-                    oilsDur.splice(indexDur8, 1);
-                    }
-                const indexPen8 = oilsPen.indexOf(newSelOil);
-                if (indexPen8 > -1) {
-                    oilsPen.splice(indexPen8, 1);
-                }
-                const indexProj8= oilsProj.indexOf(newSelOil);
-                if (indexProj8 > -1) {
-                    oilsProj.splice(indexProj8, 1);
-                }
-                const indexRecoil8 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil8 > -1) {
-                    oilsRecoil.splice(indexRecoil8, 1);
-                }
-                const indexReload8 = oilsReload.indexOf(newSelOil);
-                if (indexReload8 > -1) {
-                    oilsReload.splice(indexReload8, 1);
-                }
-                const indexRPM8 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM8 > -1) {
-                    oilsRPM.splice(indexRPM8, 1);
-                }
-                const indexSpread8 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread8 > -1) {
-                    oilsSpread.splice(indexSpread8, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-projectiles":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsProj);
-                    rolledOils[i] = oilsProj[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll9 = oilsAll.indexOf(newSelOil);
-                if (indexAll9 > -1) {
-                    oilsAll.splice(indexAll9, 1);
-                }
-                const indexAmmo9 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo9 > -1) {
-                    oilsAmmo.splice(indexAmmo9, 1);
-                }
-                const indexCrit9 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit9 > -1) {
-                    oilsCrit.splice(indexCrit9, 1);
-                }
-                const indexBounce9 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce9 > -1) {
-                    oilsBounce.splice(indexBounce9, 1);
-                }
-                const indexSpeed9 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed9 > -1) {
-                    oilsSpeed.splice(indexSpeed9, 1);
-                }
-                const indexAddDam9 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam9 > -1) {
-                    oilsAddDam.splice(indexAddDam9, 1);
-                }
-                const indexMultDam9 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam9 > -1) {
-                    oilsMultDam.splice(indexMultDam9, 1);
-                }
-                const indexDur9 = oilsDur.indexOf(newSelOil);
-                if (indexDur9 > -1) {
-                    oilsDur.splice(indexDur9, 1);
-                    }
-                const indexPen9 = oilsPen.indexOf(newSelOil);
-                if (indexPen9 > -1) {
-                    oilsPen.splice(indexPen9, 1);
-                }
-                const indexProj9= oilsProj.indexOf(newSelOil);
-                if (indexProj9 > -1) {
-                    oilsProj.splice(indexProj9, 1);
-                }
-                const indexRecoil9 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil9 > -1) {
-                    oilsRecoil.splice(indexRecoil9, 1);
-                }
-                const indexReload9 = oilsReload.indexOf(newSelOil);
-                if (indexReload9 > -1) {
-                    oilsReload.splice(indexReload9, 1);
-                }
-                const indexRPM9 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM9 > -1) {
-                    oilsRPM.splice(indexRPM9, 1);
-                }
-                const indexSpread9 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread9 > -1) {
-                    oilsSpread.splice(indexSpread9, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-recoil":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsRecoil);
-                    rolledOils[i] = oilsRecoil[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll10 = oilsAll.indexOf(newSelOil);
-                if (indexAll10 > -1) {
-                    oilsAll.splice(indexAll10, 1);
-                }
-                const indexAmmo10 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo10 > -1) {
-                    oilsAmmo.splice(indexAmmo10, 1);
-                }
-                const indexCrit10 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit10 > -1) {
-                    oilsCrit.splice(indexCrit10, 1);
-                }
-                const indexBounce10 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce10 > -1) {
-                    oilsBounce.splice(indexBounce10, 1);
-                }
-                const indexSpeed10 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed10 > -1) {
-                    oilsSpeed.splice(indexSpeed10, 1);
-                }
-                const indexAddDam10 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam10 > -1) {
-                    oilsAddDam.splice(indexAddDam10, 1);
-                }
-                const indexMultDam10 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam10 > -1) {
-                    oilsMultDam.splice(indexMultDam10, 1);
-                }
-                const indexDur10 = oilsDur.indexOf(newSelOil);
-                if (indexDur10 > -1) {
-                    oilsDur.splice(indexDur10, 1);
-                    }
-                const indexPen10 = oilsPen.indexOf(newSelOil);
-                if (indexPen10 > -1) {
-                    oilsPen.splice(indexPen10, 1);
-                }
-                const indexProj10= oilsProj.indexOf(newSelOil);
-                if (indexProj10 > -1) {
-                    oilsProj.splice(indexProj10, 1);
-                }
-                const indexRecoil10 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil10 > -1) {
-                    oilsRecoil.splice(indexRecoil10, 1);
-                }
-                const indexReload10 = oilsReload.indexOf(newSelOil);
-                if (indexReload10 > -1) {
-                    oilsReload.splice(indexReload10, 1);
-                }
-                const indexRPM10 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM10 > -1) {
-                    oilsRPM.splice(indexRPM10, 1);
-                }
-                const indexSpread10 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread10 > -1) {
-                    oilsSpread.splice(indexSpread10, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-reload-speed":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsReload);
-                    rolledOils[i] = oilsReload[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll11 = oilsAll.indexOf(newSelOil);
-                if (indexAll11 > -1) {
-                    oilsAll.splice(indexAll11, 1);
-                }
-                const indexAmmo11 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo11 > -1) {
-                    oilsAmmo.splice(indexAmmo11, 1);
-                }
-                const indexCrit11 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit11 > -1) {
-                    oilsCrit.splice(indexCrit11, 1);
-                }
-                const indexBounce11 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce11 > -1) {
-                    oilsBounce.splice(indexBounce11, 1);
-                }
-                const indexSpeed11 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed11 > -1) {
-                    oilsSpeed.splice(indexSpeed11, 1);
-                }
-                const indexAddDam11 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam11 > -1) {
-                    oilsAddDam.splice(indexAddDam11, 1);
-                }
-                const indexMultDam11 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam11 > -1) {
-                    oilsMultDam.splice(indexMultDam11, 1);
-                }
-                const indexDur11 = oilsDur.indexOf(newSelOil);
-                if (indexDur11 > -1) {
-                    oilsDur.splice(indexDur11, 1);
-                    }
-                const indexPen11 = oilsPen.indexOf(newSelOil);
-                if (indexPen11 > -1) {
-                    oilsPen.splice(indexPen11, 1);
-                }
-                const indexProj11= oilsProj.indexOf(newSelOil);
-                if (indexProj11 > -1) {
-                    oilsProj.splice(indexProj11, 1);
-                }
-                const indexRecoil11 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil11 > -1) {
-                    oilsRecoil.splice(indexRecoil11, 1);
-                }
-                const indexReload11 = oilsReload.indexOf(newSelOil);
-                if (indexReload11 > -1) {
-                    oilsReload.splice(indexReload11, 1);
-                }
-                const indexRPM11 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM11 > -1) {
-                    oilsRPM.splice(indexRPM11, 1);
-                }
-                const indexSpread11 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread11 > -1) {
-                    oilsSpread.splice(indexSpread11, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-rpm":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsRPM);
-                    rolledOils[i] = oilsRPM[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll12 = oilsAll.indexOf(newSelOil);
-                if (indexAll12 > -1) {
-                    oilsAll.splice(indexAll12, 1);
-                }
-                const indexAmmo12 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo12 > -1) {
-                    oilsAmmo.splice(indexAmmo12, 1);
-                }
-                const indexCrit12 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit12 > -1) {
-                    oilsCrit.splice(indexCrit12, 1);
-                }
-                const indexBounce12 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce12 > -1) {
-                    oilsBounce.splice(indexBounce12, 1);
-                }
-                const indexSpeed12 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed12 > -1) {
-                    oilsSpeed.splice(indexSpeed12, 1);
-                }
-                const indexAddDam12 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam12 > -1) {
-                    oilsAddDam.splice(indexAddDam12, 1);
-                }
-                const indexMultDam12 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam12 > -1) {
-                    oilsMultDam.splice(indexMultDam12, 1);
-                }
-                const indexDur12 = oilsDur.indexOf(newSelOil);
-                if (indexDur12 > -1) {
-                    oilsDur.splice(indexDur12, 1);
-                    }
-                const indexPen12 = oilsPen.indexOf(newSelOil);
-                if (indexPen12 > -1) {
-                    oilsPen.splice(indexPen12, 1);
-                }
-                const indexProj12= oilsProj.indexOf(newSelOil);
-                if (indexProj12 > -1) {
-                    oilsProj.splice(indexProj12, 1);
-                }
-                const indexRecoil12 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil12 > -1) {
-                    oilsRecoil.splice(indexRecoil12, 1);
-                }
-                const indexReload12 = oilsReload.indexOf(newSelOil);
-                if (indexReload12 > -1) {
-                    oilsReload.splice(indexReload12, 1);
-                }
-                const indexRPM12 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM12 > -1) {
-                    oilsRPM.splice(indexRPM12, 1);
-                }
-                const indexSpread12 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread12 > -1) {
-                    oilsSpread.splice(indexSpread12, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            case "static-random-spread":
-                if (single === "true" && counter != selID) {
-                    rolledOils[i] = getOilByName(oilNames[i])
-                    newSelOil = rolledOils[i].Name;
-                } 
-                else {
-                    shuffle(oilsSpread);
-                    rolledOils[i] = oilsSpread[0];
-                    newSelOil = rolledOils[i];
-                    rolledOils[i] = getOilByName(rolledOils[i]);
-                }
-                const indexAll13 = oilsAll.indexOf(newSelOil);
-                if (indexAll13 > -1) {
-                    oilsAll.splice(indexAll13, 1);
-                }
-                const indexAmmo13 = oilsAmmo.indexOf(newSelOil);
-                if (indexAmmo13 > -1) {
-                    oilsAmmo.splice(indexAmmo13, 1);
-                }
-                const indexCrit13 = oilsCrit.indexOf(newSelOil);
-                if (indexCrit13 > -1) {
-                    oilsCrit.splice(indexCrit13, 1);
-                }
-                const indexBounce13 = oilsBounce.indexOf(newSelOil);
-                if (indexBounce13 > -1) {
-                    oilsBounce.splice(indexBounce13, 1);
-                }
-                const indexSpeed13 = oilsSpeed.indexOf(newSelOil);
-                if (indexSpeed13 > -1) {
-                    oilsSpeed.splice(indexSpeed13, 1);
-                }
-                const indexAddDam13 = oilsAddDam.indexOf(newSelOil);
-                if (indexAddDam13 > -1) {
-                    oilsAddDam.splice(indexAddDam13, 1);
-                }
-                const indexMultDam13 = oilsMultDam.indexOf(newSelOil);
-                if (indexMultDam13 > -1) {
-                    oilsMultDam.splice(indexMultDam13, 1);
-                }
-                const indexDur13 = oilsDur.indexOf(newSelOil);
-                if (indexDur13 > -1) {
-                    oilsDur.splice(indexDur13, 1);
-                    }
-                const indexPen13 = oilsPen.indexOf(newSelOil);
-                if (indexPen13 > -1) {
-                    oilsPen.splice(indexPen13, 1);
-                }
-                const indexProj13= oilsProj.indexOf(newSelOil);
-                if (indexProj13 > -1) {
-                    oilsProj.splice(indexProj13, 1);
-                }
-                const indexRecoil13 = oilsRecoil.indexOf(newSelOil);
-                if (indexRecoil13 > -1) {
-                    oilsRecoil.splice(indexRecoil13, 1);
-                }
-                const indexReload13 = oilsReload.indexOf(newSelOil);
-                if (indexReload13 > -1) {
-                    oilsReload.splice(indexReload13, 1);
-                }
-                const indexRPM13 = oilsRPM.indexOf(newSelOil);
-                if (indexRPM13 > -1) {
-                    oilsRPM.splice(indexRPM13, 1);
-                }
-                const indexSpread13 = oilsSpread.indexOf(newSelOil);
-                if (indexSpread13 > -1) {
-                    oilsSpread.splice(indexSpread13, 1);
-                }
-                oilStats(rolledOils[i]);
-                addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                break;
-            default:
-                    const selectedIndex = selectedOil[i].selectedIndex;
-                    const selectedText = selectedOil[i].options[selectedIndex].text;
-                    newSelOil = selectedText;
-                    const indexAll14 = oilsAll.indexOf(newSelOil);
-                    if (indexAll14 > -1) {
-                        oilsAll.splice(indexAll14, 1);
-                    }
-                    const indexAmmo14 = oilsAmmo.indexOf(newSelOil);
-                    if (indexAmmo14 > -1) {
-                        oilsAmmo.splice(indexAmmo14, 1);
-                    }
-                    const indexCrit14 = oilsCrit.indexOf(newSelOil);
-                    if (indexCrit14 > -1) {
-                        oilsCrit.splice(indexCrit14, 1);
-                    }
-                    const indexBounce14 = oilsBounce.indexOf(newSelOil);
-                    if (indexBounce14 > -1) {
-                        oilsBounce.splice(indexBounce14, 1);
-                    }
-                    const indexSpeed14 = oilsSpeed.indexOf(newSelOil);
-                    if (indexSpeed14 > -1) {
-                        oilsSpeed.splice(indexSpeed14, 1);
-                    }
-                    const indexAddDam14 = oilsAddDam.indexOf(newSelOil);
-                    if (indexAddDam14 > -1) {
-                        oilsAddDam.splice(indexAddDam14, 1);
-                    }
-                    const indexMultDam14 = oilsMultDam.indexOf(newSelOil);
-                    if (indexMultDam14 > -1) {
-                        oilsMultDam.splice(indexMultDam14, 1);
-                    }
-                    const indexDur14 = oilsDur.indexOf(newSelOil);
-                    if (indexDur14 > -1) {
-                        oilsDur.splice(indexDur14, 1);
-                        }
-                    const indexPen14 = oilsPen.indexOf(newSelOil);
-                    if (indexPen14 > -1) {
-                        oilsPen.splice(indexPen14, 1);
-                    }
-                    const indexProj14= oilsProj.indexOf(newSelOil);
-                    if (indexProj14 > -1) {
-                        oilsProj.splice(indexProj14, 1);
-                    }
-                    const indexRecoil14 = oilsRecoil.indexOf(newSelOil);
-                    if (indexRecoil14 > -1) {
-                        oilsRecoil.splice(indexRecoil14, 1);
-                    }
-                    const indexReload14 = oilsReload.indexOf(newSelOil);
-                    if (indexReload14 > -1) {
-                        oilsReload.splice(indexReload14, 1);
-                    }
-                    const indexRPM14 = oilsRPM.indexOf(newSelOil);
-                    if (indexRPM14 > -1) {
-                        oilsRPM.splice(indexRPM14, 1);
-                    }
-                    const indexSpread14 = oilsSpread.indexOf(newSelOil);
-                    if (indexSpread14 > -1) {
-                        oilsSpread.splice(indexSpread14, 1);
-                    }
-                    let selOil = getOilByName(selectedText);
-                    rolledOils[i] = selOil;
-                    oilStats(rolledOils[i]);
-                    addName(rolledOils[i].Name, `cardOilName${i + 1}`, "oil", rolledOils[i].StatDescription,`cardOilDesc${i + 1}`, i);
-                    break;
-        }
-        checkNone(rolledOils[i].Name, i, selector);
-    };*/
 }
 
 // Arrays; don't add functions below this
