@@ -395,11 +395,11 @@ const chamberValueIndexer = new Map();
 
 function setChamberValueIndexer() {
 
-    chamberValueIndexer.set("chamber-chisel-50-bmg", "Chamber Chisel - .50 BMG");
-    chamberValueIndexer.set("chamber-chisel-12ga", "Chamber Chisel - 12Ga");
-    chamberValueIndexer.set("chamber-chisel-556mm", "Chamber Chisel - 5.56mm");
-    chamberValueIndexer.set("chamber-chisel-762mm", "Chamber Chisel - 7.62mm");
-    chamberValueIndexer.set("chamber-chisel-9mm", "Chamber Chisel - 9mm");
+    chamberValueIndexer.set("chamber-chisel---.50-bmg", "Chamber Chisel - .50 BMG");
+    chamberValueIndexer.set("chamber-chisel---12ga", "Chamber Chisel - 12Ga");
+    chamberValueIndexer.set("chamber-chisel---5.56mm", "Chamber Chisel - 5.56mm");
+    chamberValueIndexer.set("chamber-chisel---7.62mm", "Chamber Chisel - 7.62mm");
+    chamberValueIndexer.set("chamber-chisel---9mm", "Chamber Chisel - 9mm");
 
 }
 
@@ -2712,7 +2712,8 @@ function rollSelections(flag, selector, selID, value, type) {
     let selChamb = null;
 
     function setDefaultChamber(gun) {
-        
+        selChamb = getChamberByName(`Chamber Chisel - ${gun.AmmoType}`);
+        addToCoreMap("chamber", selChamb, "static-choose");
     }
 
     function rollEnch(value, flag) {
@@ -2843,79 +2844,69 @@ function rollSelections(flag, selector, selID, value, type) {
                 shuffle(gunsAll);
                 selectedItem = getWeaponByName(gunsAll[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
-                addToCoreMap("chamber", selChamb, "static-choose");
+                //setDefaultChamber(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-pistols":
                 shuffle(gunsPistols);
                 selectedItem = getWeaponByName(gunsPistols[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
-                addToCoreMap("chamber", selChamb, "static-choose");
+                //setDefaultChamber(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-revolvers":
                 shuffle(gunsRevolvers);
                 selectedItem = getWeaponByName(gunsRevolvers[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
-                addToCoreMap("chamber", selChamb, "static-choose");
+                //setDefaultChamber(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-shotguns":
                 shuffle(gunsShotguns);
                 selectedItem = getWeaponByName(gunsShotguns[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
-                addToCoreMap("chamber", selChamb, "static-choose");
+                //setDefaultChamber(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-smgs":
                 shuffle(gunsSMGs);
                 selectedItem = getWeaponByName(gunsSMGs[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
-                addToCoreMap("chamber", selChamb, "static-choose");
+                //setDefaultChamber(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-assault-rifles":
                 shuffle(gunsARs);
                 selectedItem = getWeaponByName(gunsARs[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
-                addToCoreMap("chamber", selChamb, "static-choose");
+                //setDefaultChamber(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-lmgs":
                 shuffle(gunsLMGs);
                 selectedItem = getWeaponByName(gunsLMGs[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
-                addToCoreMap("chamber", selChamb, "static-choose");
+                //setDefaultChamber(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-rifles":
                 shuffle(gunsRifles);
                 selectedItem = getWeaponByName(gunsRifles[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
-                addToCoreMap("chamber", selChamb, "static-choose");
+                //setDefaultChamber(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-sniper-rifles":
                 shuffle(gunsSnipers);
                 selectedItem = getWeaponByName(gunsSnipers[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
-                addToCoreMap("chamber", selChamb, "static-choose");
+                //setDefaultChamber(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             default:
                 let selectedGun = weaponValueIndexer.get(value);
                 selectedItem = getWeaponByName(selectedGun);
-                selChamb = getChamberByName(`Chamber Chisel - ${selectedItem.AmmoType}`);
-                addToCoreMap("chamber", selChamb, "static-choose");
+                //setDefaultChamber(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, value);
         }
         
@@ -3026,6 +3017,7 @@ function rollSelections(flag, selector, selID, value, type) {
             }
         }
         if (flag === "chamber") {
+            console.log(flag, value)
             let weapon = coreSelections.get("weapon");
             let weaponName = weapon.Name.Name;
             let weaponStats = getWeaponByName(weaponName);
