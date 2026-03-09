@@ -392,6 +392,7 @@ function resetCoreSelections() {
 resetCoreSelections()
 
 const chamberValueIndexer = new Map();
+const chamberNameIndexer = new Map();
 
 const barrelValueIndexer = new Map();
 
@@ -424,7 +425,18 @@ function setChamberValueIndexer() {
 
 }
 
+function setChamberNameIndexer() {
+
+    chamberValueIndexer.set("Chamber Chisel - .50 BMG", "chamber-chisel---.50-bmg");
+    chamberValueIndexer.set("Chamber Chisel - 12Ga", "chamber-chisel---12ga");
+    chamberValueIndexer.set("Chamber Chisel - 5.56mm", "chamber-chisel---5.56mm");
+    chamberValueIndexer.set("Chamber Chisel - 7.62mm", "chamber-chisel---7.62mm");
+    chamberValueIndexer.set("Chamber Chisel - 9mm", "chamber-chisel---9mm");
+
+}
+
 setChamberValueIndexer();
+setChamberNameIndexer();
 setBarrelValueIndexer();
 
 const weaponValueIndexer = new Map();
@@ -2731,10 +2743,12 @@ function rollSelections(flag, selector, selID, value, type) {
     let selectedItem = null;
     let selectedValue = null;
     let selChamb = null;
+    let selChambName = null;
 
     function setDefaultChamber(gun) {
         selChamb = getChamberByName(`Chamber Chisel - ${gun.AmmoType}`);
-        addToCoreMap("chamber", selChamb, "static-choose");
+        selChambName = chamberNameIndexer.get(selChamb);
+        addToCoreMap("chamber", selChamb, selChambName);
     }
 
     function rollEnch(value, flag) {
@@ -2927,7 +2941,7 @@ function rollSelections(flag, selector, selID, value, type) {
             default:
                 let selectedGun = weaponValueIndexer.get(value);
                 selectedItem = getWeaponByName(selectedGun);
-                setDefaultChamber(selectedItem.Name);
+                setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, value);
         }
         
@@ -3044,8 +3058,14 @@ function rollSelections(flag, selector, selID, value, type) {
             let weaponStats = getWeaponByName(weaponName);
             switch (value) {
                 case "static-choose":
+                    let weapCha = coreSelections.get("weapon");
+                    let weapChaObj = weapCha.Name;
+                    setDefaultChamber(weapChaObj);
                     break;
                 case "none":
+                    let weapCha1 = coreSelections.get("weapon");
+                    let weapChaObj1 = weapCha1.Name;
+                    setDefaultChamber(weapChaObj1);
                     break;
                 case "static-random-chamber":
                     shuffle(attachmentsRechambers);
