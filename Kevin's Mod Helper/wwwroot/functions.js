@@ -582,6 +582,30 @@ function resetAllAttachments() {
     shallNotPass = false;
 }
 
+function commitSelection(buttonID, dropdownID, item) {
+    shallNotPass = true;
+    let getValue = coreSelections.get(item);
+    let value = getValue.Value; 
+    document.getElementById(dropdownID).proDropdown.setValue(value);
+    shallNotPass = false;
+}
+
+function commitAllEnch() {
+    commitSelection('buttonCommitOil1', 'oils1selector', 'ench1');
+    commitSelection('buttonCommitOil2', 'oils2selector', 'ench2');
+    commitSelection('buttonCommitOil3', 'oils3selector', 'ench3');
+    commitSelection('buttonCommitOil4', 'oils4selector', 'ench4');
+    commitSelection('buttonCommitOil5', 'oils5selector', 'ench5');
+}
+
+function commitAllAtt() {
+    commitSelection('buttonCommitBarrel', 'barrelselector', 'barrel');
+    commitSelection('buttonCommitOptic', 'opticselector', 'optic');
+    commitSelection('buttonCommitLaser', 'laserselector', 'laser');
+    commitSelection('buttonCommitFiremode', 'firemodeselector', 'firemode');
+    commitSelection('buttonCommitChamber', 'chamberselector', 'chamber');
+}
+
 // Used to remove and replace oils to prevent dupes
 function oilRemover() {
 
@@ -720,10 +744,6 @@ function attachmentFilter(evt) {
     }
 }
 
-// Events
-
-
-
 setTimeout(() => {
   rollOnPageLoad('weapon', 'pageload', 7, 'p38-dirk', 'weapon');
 }, 150);
@@ -838,7 +858,6 @@ function addAllEventListeners() {
 
 
 }
-
 
 let dropdownSelectHandler = null;
 let customDropHandler = document.getElementsByClassName('custom-select');
