@@ -393,6 +393,27 @@ resetCoreSelections()
 
 const chamberValueIndexer = new Map();
 
+const barrelValueIndexer = new Map();
+
+function setBarrelValueIndexer() {
+    barrelValueIndexer.set("a12c-muzzle-brake", "A12C Muzzle Brake");
+    barrelValueIndexer.set("aftermarket-haukland-silencer", "Aftermarket Haukland Silencer");
+    barrelValueIndexer.set("barrel-extension-2in", "Barrel Extension 2in");
+    barrelValueIndexer.set("barrel-extension-4in", "Barrel Extension 4in");
+    barrelValueIndexer.set("barrel-extension-6in", "Barrel Extension 6in");
+    barrelValueIndexer.set("breznik-bmd-tactical", "Breznik BMD (Tactical)");
+    barrelValueIndexer.set("breznik-bmd", "Breznik BMD");
+    barrelValueIndexer.set("haukland-flash-hider", "Haukland Flash Hider");
+    barrelValueIndexer.set("haukland-silencer", "Haukland Silencer");
+    barrelValueIndexer.set("improvised-barrel-extension", "Improvised Barrel Extension");
+    barrelValueIndexer.set("shrouded-barrel-extension", "Shrouded Barrel Extension");
+    barrelValueIndexer.set("sr-p3-silencer", "SR-P3 Silencer");
+    barrelValueIndexer.set("warmage-compensator", "Warmage Compensator");
+    barrelValueIndexer.set("m87-albatross-silencer", "M87 Albatross Silencer");
+}
+
+
+
 function setChamberValueIndexer() {
 
     chamberValueIndexer.set("chamber-chisel---.50-bmg", "Chamber Chisel - .50 BMG");
@@ -404,7 +425,7 @@ function setChamberValueIndexer() {
 }
 
 setChamberValueIndexer();
-
+setBarrelValueIndexer();
 
 const weaponValueIndexer = new Map();
 
@@ -2914,6 +2935,7 @@ function rollSelections(flag, selector, selID, value, type) {
 
     function rollAttachment(value, flag) {
         if (flag === "barrel") {
+            console.log(flag, value)
             switch (value) {
                 case "static-not-applicable":
                     selectedItem = getBarrelByName("None");
@@ -2937,7 +2959,7 @@ function rollSelections(flag, selector, selID, value, type) {
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 default:
-                    let selbar = convertToUpper(value);
+                    let selbar = barrelValueIndexer.get(value);
                     selectedItem = getBarrelByName(selbar);
                     addToCoreMap(flag, selectedItem, value);
             }
@@ -3017,7 +3039,6 @@ function rollSelections(flag, selector, selID, value, type) {
             }
         }
         if (flag === "chamber") {
-            console.log(flag, value)
             let weapon = coreSelections.get("weapon");
             let weaponName = weapon.Name.Name;
             let weaponStats = getWeaponByName(weaponName);
