@@ -435,6 +435,44 @@ function setChamberNameIndexer() {
 
 }
 
+function encodeBuildAsUri() {
+    let buildToEncode = "build";
+    function toBuild(value, key, map) {
+        buildToEncode += value.Value;
+        buildToEncode += "+";
+    }
+    coreSelections.forEach(toBuild);
+    console.log(buildToEncode);
+    const encodedBuild = btoa(buildToEncode);
+    console.log(encodedBuild)
+   // const decodedBuild = atob(encodedBuild);
+     //   console.log(decodedBuild);
+        history.pushState(encodedBuild, "", encodedBuild);
+        //YnVpbGR
+    
+}
+
+function decodeUriAsBuild() {
+    const currentURL = window.location.href;
+    console.log(currentURL)
+    let split = currentURL.split("YnVpbGR");
+    let resplit = "YnVpbGR" + split[1];
+    console.log(split);
+    let decoded = atob(resplit);
+    console.log(decoded);
+    let finalSplit = decoded.split("+");
+console.log(finalSplit);
+let iterationSplit = 0
+if (finalSplit[0] !== "buildn\u009d×\u009f\u008aw\u009d") {
+    function rebuildBuild(value, key, map) {
+        coreSelections.set("key", finalSplit[iterationSplit]);
+        iterationSplit += 1;
+    }
+    coreSelections.forEach(rebuildBuild);
+    console.log(coreSelections)
+}
+}
+
 setChamberValueIndexer();
 setChamberNameIndexer();
 setBarrelValueIndexer();
@@ -973,7 +1011,8 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
     rollSelections('chamber', 'chamber', 5, 'static-choose', 'attachment');
     oilStats();
     oilCalcs(oilStatModifiers);
-    addName()
+    addName();
+    decodeUriAsBuild();
 }
 
 function rollAggregator(flag, selector, selID, selValue, selType) {
@@ -1044,6 +1083,7 @@ function rollAggregator(flag, selector, selID, selValue, selType) {
     addName();
     }, 430);
     
+    encodeBuildAsUri();
 }
 
 function rollOnSelect(evt) {
