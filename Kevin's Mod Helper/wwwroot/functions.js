@@ -442,9 +442,7 @@ function encodeBuildAsUri() {
         buildToEncode += "+";
     }
     coreSelections.forEach(toBuild);
-    console.log(buildToEncode);
     const encodedBuild = "#" + btoa(buildToEncode);
-    console.log(encodedBuild)
    // const decodedBuild = atob(encodedBuild);
      //   console.log(decodedBuild);
         history.pushState(encodedBuild, "", encodedBuild);
@@ -454,24 +452,100 @@ function encodeBuildAsUri() {
 
 function decodeUriAsBuild() {
     const currentURL = window.location.href;
-    console.log(currentURL)
     let split = currentURL.split("#");
-    let resplit = split[1];
-    console.log(split);
+    
+    let resplit = split[1]
     let decoded = atob(resplit);
-    console.log(decoded);
-    let finalSplit = decoded.split("+");
-console.log(finalSplit);
-let iterationSplit = 0
-if (finalSplit[0] !== "buildn\u009d×\u009f\u008aw\u009d") {
-    function rebuildBuild(value, key, map) {
-        coreSelections.set("key", finalSplit[iterationSplit]);
-        iterationSplit += 1;
+    let split2 = decoded.split("build");
+    let finalSplit = split2[1].split("+");
+    let iterationSplit = 0
+    console.log(finalSplit);
+
+    let defShantPass = false;
+    setTimeout(() => {
+    if (split[1].startsWith("YnVpbGR") === true && defShantPass === false ){
+        defShantPass = true;
+        console.log(finalSplit);
+
+        function rebuildBuild(value, key, map) {
+            coreSelections.set(key, finalSplit[iterationSplit]);
+            
+            console.log(key, finalSplit[iterationSplit]);
+            iterationSplit += 1;
+        }
+        
+        function grabOils(value, key, map) {
+            let selectedItem = null;
+            let scroll = null;
+            let selItem = null;
+            switch (key) {
+                case undefined:
+                    break;
+                default:
+                if (key.startsWith("ench")) {
+                    console.log(key, value)
+                    if (value.endsWith("oil") === true) {
+                        selItem = convertToUpper(value);
+                        selectedItem = getOilByName(selItem);
+                        addToCoreMap(key, selectedItem, value);
+                    }
+                    if (value.startsWith("scroll") === true) {
+                        scroll = scrollValueIndexer.get(value);
+                        selectedItem = getScrollByName(scroll);
+                        addToCoreMap(key, selectedItem, value);
+                    }
+                }
+                if (key === "chamber") {
+                    
+                    selectedItem = chamberValueIndexer.get(value);
+                    selectedChamber = getChamberByName(selectedItem);
+                    addToCoreMap("chamber", selectedChamber, value);
+                }
+                if (key === "barrel") {
+                    let selbar = barrelValueIndexer.get(value);
+                    selectedItem = getBarrelByName(selbar);
+                    addToCoreMap("barrel", selectedItem, value);
+                }
+                if (key === "laser") {
+                    let selaser = convertToUpper(value);
+                    selectedItem = getLaserByName(selaser);
+                    addToCoreMap("laser", selectedItem, value);
+                }
+                if (key === "optic") {
+                    let seloptic = convertToUpper(value);
+                    selectedItem = getOpticByName(seloptic);
+                    addToCoreMap("optic", selectedItem, value);
+                }
+                if (key === "firemode") {
+                    if (value === "none") {
+                        selectedItem = getFiremodeByName("None");
+                        selectedValue = "none";
+                        addToCoreMap("firemode", selectedItem, selectedValue);
+                    }
+                    else if (value === "gun-crank") {
+                        selectedItem = getFiremodeByName("Gun Crank");
+                        addToCoreMap("firemode", selectedItem, value);
+                    }
+                    else {
+                        selectedItem = getFiremodeByName("Priming Bolt");
+                        addToCoreMap("firemode", selectedItem, value);
+                    }
+                    
+                }
+            }
+                    
+        }
+        
+        coreSelections.forEach(rebuildBuild);
+        let yeeteth = coreSelections.get("weapon");
+        let gunny = weaponValueIndexer.get(yeeteth);
+        coreSelections.forEach(grabOils);
+        addToCoreMap("weapon", gunny, yeeteth);
+        console.log(coreSelections)
+        rollFromBuild();
+        defShantPass = false;
     }
-    coreSelections.forEach(rebuildBuild);
-    console.log(coreSelections)
-    rollFromBuild()
-    }
+    }, 500);
 }
 
 setChamberValueIndexer();
@@ -604,16 +678,16 @@ function infoboxClear() {
 
 function randomizeAllOils() {
     shallNotPass = true;
-    document.getElementById("oils1selector").proDropdown.setValue("static-random-all");
-    document.getElementById("oils2selector").proDropdown.setValue("static-random-all");
-    document.getElementById("oils3selector").proDropdown.setValue("static-random-all");
-    document.getElementById("oils4selector").proDropdown.setValue("static-random-all");
-    document.getElementById("oils5selector").proDropdown.setValue("static-random-all");
-    rollAggregator('ench1', 'oils1selector', 1, "static-random-all", "ench");
-    rollAggregator('ench2', 'oils2selector', 2, "static-random-all", "ench");
-    rollAggregator('ench3', 'oils3selector', 3, "static-random-all", "ench");
-    rollAggregator('ench4', 'oils4selector', 4, "static-random-all", "ench");
-    rollAggregator('ench5', 'oils5selector', 5, "static-random-all", "ench");
+    document.getElementById("oils1selector").proDropdown.setValue("static-random-all-oils");
+    document.getElementById("oils2selector").proDropdown.setValue("static-random-all-oils");
+    document.getElementById("oils3selector").proDropdown.setValue("static-random-all-oils");
+    document.getElementById("oils4selector").proDropdown.setValue("static-random-all-oils");
+    document.getElementById("oils5selector").proDropdown.setValue("static-random-all-oils");
+    rollAggregator('ench1', 'oils1selector', 1, "static-random-all-oils", "ench");
+    rollAggregator('ench2', 'oils2selector', 2, "static-random-all-oils", "ench");
+    rollAggregator('ench3', 'oils3selector', 3, "static-random-all-oils", "ench");
+    rollAggregator('ench4', 'oils4selector', 4, "static-random-all-oils", "ench");
+    rollAggregator('ench5', 'oils5selector', 5, "static-random-all-oils", "ench");
     shallNotPass = false;
 }
 
@@ -832,6 +906,7 @@ setTimeout(() => {
 
 // For when the button is clicked.
 function onGenerate() {
+    
     rollAggregator("weapon", "weapons", 1, weaponSelectHandler.value, "weapon");
     rollAggregator("ench1", "oils1selector", 1, ench1SelectHandler.value, "ench");
     rollAggregator("ench2", "oils2selector", 2, ench2SelectHandler.value, "ench");
@@ -847,17 +922,17 @@ function onGenerate() {
 
 function rollFromBuild() {
     shallNotPass = true;
+    commitSelection('buttonCommitOil1', 'oils1selector', 'ench1');
+    commitSelection('buttonCommitOil2', 'oils2selector', 'ench2');
+    commitSelection('buttonCommitOil3', 'oils3selector', 'ench3');
+    commitSelection('buttonCommitOil4', 'oils4selector', 'ench4');
+    commitSelection('buttonCommitOil5', 'oils5selector', 'ench5');
+    commitSelection('buttonCommitBarrel', 'barrelselector', 'barrel');
+    commitSelection('buttonCommitOptic', 'opticselector', 'optic');
+    commitSelection('buttonCommitLaser', 'laserselector', 'laser');
+    commitSelection('buttonCommitFiremode', 'firemodeselector', 'firemode');
+    commitSelection('buttonCommitChamber', 'chamberselector', 'chamber');
     rollAggregator("weapon", "weapons", 1, coreSelections.get("weapon").Value, "weapon");
-    rollAggregator("ench1", "oils1selector", 1, coreSelections.get("ench1").Value, "ench");
-    rollAggregator("ench2", "oils2selector", 2, coreSelections.get("ench2").Value, "ench");
-    rollAggregator("ench3", "oils3selector", 3, coreSelections.get("ench3").Value, "ench");
-    rollAggregator("ench4", "oils4selector", 4, coreSelections.get("ench4").Value.value, "ench");
-    rollAggregator("ench5", "oils5selector", 5, coreSelections.get("ench5").Value.value, "ench");
-    rollAggregator("barrel", "barrelselector", 1, coreSelections.get("barrel").Value, "attachment");
-    rollAggregator("optic", "opticselector", 2, coreSelections.get("optic").Value, "attachment");
-    rollAggregator("laser", "laserselector", 3, coreSelections.get("laser").Value, "attachment");
-    rollAggregator("firemode", "firemodeselector", 4, coreSelections.get("firemode").Value.value, "attachment");
-    rollAggregator("chamber", "chamberselector", 5, coreSelections.get("chamber").Value, "attachment");
     shallNotPass = false;
 }
 
@@ -985,51 +1060,52 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
     const result2 = await loadWeapons();
     let selPageLoad = document.getElementById("weapons");
 
-    
+    setTimeout(() => {
+        
+        selPageLoad.proDropdown.setValue("value"); 
+        
+        oilDefault = oilsData?.Oil["Default"];
+        
+        oilStatModifiers = structuredClone(oilDefault);
 
-    selPageLoad.proDropdown.setValue("value"); 
-    
-    oilDefault = oilsData?.Oil["Default"];
-    
-    oilStatModifiers = structuredClone(oilDefault);
+        selectedWeapon = null;
+        modifiedWeapon = null;
+        oil1 = null;
+        oil2 = null;
+        oil3 = null;
+        oil4 = null;
+        oil5 = null;
+        selectedBarrel = null;
+        selectedOptic = null;
+        selectedLaser = null;
+        selectedFiremode = null;
+        selectedChamber = null;
+        rolledOils = [];
+        selectedChamber = null;
 
-    selectedWeapon = null;
-    modifiedWeapon = null;
-    oil1 = null;
-    oil2 = null;
-    oil3 = null;
-    oil4 = null;
-    oil5 = null;
-    selectedBarrel = null;
-    selectedOptic = null;
-    selectedLaser = null;
-    selectedFiremode = null;
-    selectedChamber = null;
-    rolledOils = [];
-    selectedChamber = null;
-
-    loadChamber()
-    loadWeapons()
-    loadOils()
-    loadScrolls()
-    loadOrigWeapons()
-    loadAttachments()
-    
-    rollSelections(flag, selector, selID, value, type);
-    rollSelections('ench1', 'oils1selector', 1, 'static-choose', 'ench');
-    rollSelections('ench2', 'oils2selector', 2, 'static-choose', 'ench');
-    rollSelections('ench3', 'oils3selector', 3, 'static-choose', 'ench');
-    rollSelections('ench4', 'oils4selector', 4, 'static-choose', 'ench');
-    rollSelections('ench5', 'oils5selector', 5, 'static-choose', 'ench');
-    rollSelections('barrel', 'barrel', 1, 'static-choose', 'attachment');
-    rollSelections('optic', 'optic', 2, 'static-choose', 'attachment');
-    rollSelections('laser', 'laser', 3, 'static-choose', 'attachment');
-    rollSelections('firemode', 'firemode', 4, 'static-choose', 'attachment');
-    rollSelections('chamber', 'chamber', 5, 'static-choose', 'attachment');
-    oilStats();
-    oilCalcs(oilStatModifiers);
-    addName();
-    decodeUriAsBuild();
+        loadChamber()
+        loadWeapons()
+        loadOils()
+        loadScrolls()
+        loadOrigWeapons()
+        loadAttachments()
+        
+        rollSelections(flag, selector, selID, value, type);
+        rollSelections('ench1', 'oils1selector', 1, 'static-choose', 'ench');
+        rollSelections('ench2', 'oils2selector', 2, 'static-choose', 'ench');
+        rollSelections('ench3', 'oils3selector', 3, 'static-choose', 'ench');
+        rollSelections('ench4', 'oils4selector', 4, 'static-choose', 'ench');
+        rollSelections('ench5', 'oils5selector', 5, 'static-choose', 'ench');
+        rollSelections('barrel', 'barrel', 1, 'static-choose', 'attachment');
+        rollSelections('optic', 'optic', 2, 'static-choose', 'attachment');
+        rollSelections('laser', 'laser', 3, 'static-choose', 'attachment');
+        rollSelections('firemode', 'firemode', 4, 'static-choose', 'attachment');
+        rollSelections('chamber', 'chamber', 5, 'static-choose', 'attachment');
+        oilStats();
+        oilCalcs(oilStatModifiers);
+        addName();
+        decodeUriAsBuild();
+    }, 200);
 }
 
 function rollAggregator(flag, selector, selID, selValue, selType) {
@@ -1239,6 +1315,7 @@ function oilStats() {
     oilStatModifiers = structuredClone(oilDefault);
 
     function oilStatCalcs(selectedOil) {
+        console.log(selectedOil)
         if (selectedOil.AmmoConsumeChance != 0.0) {
             oilStatModifiers.AmmoConsumeChance += selectedOil.AmmoConsumeChance;
         }
@@ -3004,7 +3081,9 @@ function addToCoreMap(flag, itemName, itemValue) {
                 break;
             case "chamber":
                 coreSelections.set("chamber", {Name: itemName, Value: itemValue});
-                break;   
+                break; 
+            case undefined:
+                break;  
             case "all":
                 break;
             default:
@@ -3130,6 +3209,11 @@ function rollSelections(flag, selector, selID, value, type) {
                 selectedValue = convNameToVal(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
+            case undefined:
+                selectedItem = getOilByName("None");
+                selectedValue = convNameToVal(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
             case "static-random-all-oils":
                 shuffle(oilsAll);
                 selectedItem = getOilByName(oilsAll[0]);
@@ -3223,6 +3307,7 @@ function rollSelections(flag, selector, selID, value, type) {
                 addToCoreMap(flag, selectedItem, value);
                 break;
             default:
+                
                 if (value.endsWith("oil") === true) {
                     let selItem = convertToUpper(value);
                     selectedItem = getOilByName(selItem);
@@ -3233,7 +3318,9 @@ function rollSelections(flag, selector, selID, value, type) {
                 }
                 addToCoreMap(flag, selectedItem, value);
         }
-        poolRemover(selectedItem.Name);
+        if (selectedItem !== null) {
+            poolRemover(selectedItem.Name);
+        }
     }
 
     function rollWeapon(value, flag) {
@@ -3312,7 +3399,6 @@ function rollSelections(flag, selector, selID, value, type) {
 
     function rollAttachment(value, flag) {
         if (flag === "barrel") {
-            console.log(flag, value)
             switch (value) {
                 case "static-not-applicable":
                     selectedItem = getBarrelByName("None");
@@ -3437,7 +3523,6 @@ function rollSelections(flag, selector, selID, value, type) {
                     addToCoreMap(flag, selectedItem, selectedValue);
                     break;
                 default:
-                    console.log(value)
                     selectedItem = chamberValueIndexer.get(value);
                     selectedChamber = getChamberByName(selectedItem);
                     addToCoreMap(flag, selectedChamber, value);
@@ -4039,10 +4124,10 @@ const attachmentsRechambers = [
     "Chamber Chisel - 9mm"
 ];
 function mobileDropdownCheck(evt) {
-    let helloThere = "hello there";
+    let helloThere = "hello there, i am mobile";
     console.log("checking if mobile");
     if (window.mobileCheck() === true) {
-
+        console.log(helloThere);
         dropdownSelectHandler = document.getElementsByClassName('mobiledrop');
         customDropHandler = document.getElementsByClassName('custom-select');
 
@@ -4059,7 +4144,7 @@ function mobileDropdownCheck(evt) {
         }
     }
     addAllEventListeners()
-    console.log(helloThere);
+    
 }
 
 const dropPromise = new Promise((resolve, reject) => {
