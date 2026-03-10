@@ -450,6 +450,25 @@ function encodeBuildAsUri() {
     
 }
 
+function setBuildAsMetadata() {
+    let _desc = null;
+    let descWep = coreSelections.get("weapon").Name.Name;
+    let descEnch1 = coreSelections.get("ench1").Name.Name;
+    let descEnch2 = coreSelections.get("ench2").Name.Name;
+    let descEnch3 = coreSelections.get("ench3").Name.Name;
+    let descEnch4 = coreSelections.get("ench4").Name.Name;
+    let descEnch5 = coreSelections.get("ench5").Name.Name;
+    let descBarrel= coreSelections.get("barrel").Name.Name;
+    let descOptic = coreSelections.get("optic").Name.Name;
+    let descLaser = coreSelections.get("laser").Name.Name;
+    let descFiremode = coreSelections.get("firemode").Name.Name;
+    let descChamber = coreSelections.get("chamber").Name.Name;
+
+    _desc = "Weapon: " + descWep + "&#10;" + "Enchantment 1: " + descEnch1 + "&#10;" + "Enchantment 2: " + descEnch2 + "&#10;" + "Enchantment 3: " + descEnch3 + "&#10;" + "Enchantment 4: " + descEnch4 + "&#10;" + "Enchantment 5: " + descEnch5 + "&#10;" + "Barrel: " + descBarrel + "&#10;" + "Optic: " + descOptic + "&#10;" + "Laser: " + descLaser + "&#10;" + "Firemode: " + descFiremode + "&#10;" + "Chamber: " + descChamber; 
+
+    document.querySelector('meta[property="og:description"]').setAttribute("content", _desc);
+}
+
 function decodeUriAsBuild() {
     const currentURL = window.location.href;
     let split = currentURL.split("#");
@@ -1178,6 +1197,8 @@ function rollAggregator(flag, selector, selID, selValue, selType) {
     }, 430);
     
     encodeBuildAsUri();
+
+    setBuildAsMetadata();
 }
 
 function rollOnSelect(evt) {
