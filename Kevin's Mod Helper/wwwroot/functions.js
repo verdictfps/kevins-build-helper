@@ -1745,7 +1745,7 @@ function oilCalcs(calcOil) {
     let damAdd = weapon.Damage + calcOil.DamageAdd;
     let zeroDamage = weapon.Damage;
     //// Damage Multiplier
-    let damCalc = weapon.Damage * (1 + calcOil.DamageMult);
+    let damCalc = damAdd * (1 + calcOil.DamageMult);
     let damRound = Math.round((damCalc + Number.EPSILON)* 100) / 100;
     if (zeroDamage > 0 && damRound <= 0) {
         damRound = zeroDamage * 0.01;
