@@ -443,7 +443,7 @@ function encodeBuildAsUri() {
     }
     coreSelections.forEach(toBuild);
     console.log(buildToEncode);
-    const encodedBuild = btoa(buildToEncode);
+    const encodedBuild = "#" + btoa(buildToEncode);
     console.log(encodedBuild)
    // const decodedBuild = atob(encodedBuild);
      //   console.log(decodedBuild);
@@ -455,8 +455,8 @@ function encodeBuildAsUri() {
 function decodeUriAsBuild() {
     const currentURL = window.location.href;
     console.log(currentURL)
-    let split = currentURL.split("YnVpbGR");
-    let resplit = "YnVpbGR" + split[1];
+    let split = currentURL.split("#");
+    let resplit = split[1];
     console.log(split);
     let decoded = atob(resplit);
     console.log(decoded);
