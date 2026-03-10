@@ -1,6 +1,6 @@
 
-let newField = "AmmoConsumeChance";
-let newDefault = 0;
+let newField = "IsRailgun";
+let newDefault = false;
 
 function oilField() {
     console.log("-------------------Starting Oils-------------------");
@@ -20,6 +20,25 @@ function oilField() {
     fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));
 
     console.log("Field added to all oils in Oils.json.");
+}
+function scrollField() {
+    console.log("-------------------Starting Scrolls-------------------");
+    const fs = require("fs");
+
+    const inputFile = "./Scrolls.json";
+    const outputFile = "./Scrolls.json";
+
+    const data = JSON.parse(fs.readFileSync(inputFile, "utf8"));
+
+    for (const key in data.Scroll) {
+        const scro = data.Scroll[key];
+
+        addField(scro);
+    }
+
+    fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));
+
+    console.log("Field added to all scrolls in Scrolls.json.");
 }
 function attField() {
     console.log("-------------------Starting All Attachment file-------------------");
@@ -151,10 +170,11 @@ function addField(item) {
 
 }
 
-oilField()
-attField()
-barField()
-optField()
-chamField()
-lasField()
-fireField()
+oilField();
+scrollField();
+attField();
+barField();
+optField();
+chamField();
+lasField();
+fireField();

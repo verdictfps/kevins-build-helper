@@ -35,9 +35,19 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
       "HeadshotDamage": 0,
-      "AmmoConsumeChance": 0
+      "AmmoConsumeChance": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Red": {
       "Name": "Red",
@@ -74,9 +84,19 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
       "HeadshotDamage": 0,
-      "AmmoConsumeChance": 0
+      "AmmoConsumeChance": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Yellow": {
       "Name": "Yellow",
@@ -113,9 +133,19 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
       "HeadshotDamage": 0,
-      "AmmoConsumeChance": 0
+      "AmmoConsumeChance": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     }
   }
 }

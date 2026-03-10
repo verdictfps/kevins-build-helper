@@ -330,9 +330,18 @@
                             <select name="oils1selector" id="oils1selector" class="custom-dropdown mobiledrop">
                             <option selected hidden value="static-choose">Select an enchantment...</option>
                             <option value="static-no-selection">None</option>
-                            <option value="static-random-all">Random Oil - All</option>
+                            <option value="static-random-all-enchantments">Random Enchantment - All - not ready yet</option>
+                            <option value="static-random-all-scrolls">Random Scroll - All - not ready yet</option>
+                            <option value="static-random-all-oils">Random Oil - All</option>
                             <option value="static-durability-loss-multiplier-+200%">Durability Loss Multiplier +200%</option>
-                            <option value="static-durability-loss-multiplier-+350%">Durability Loss Multiplier +350%</option>
+                            
+                            <optgroup label="Scrolls - Tier 1" data-collapsible="true" id="oils1ScrollT1Cat">
+                                <option value="static-random-scroll-t1">Random Tier 1 Scroll - not ready yet</option>
+                            </optgroup>
+                            <optgroup label="Scrolls - Tier 2" data-collapsible="true" id="oils1ScrollT2Cat">
+                                <option value="static-random-scroll-t2">Random Tier 2 Scroll - not ready yet</option>
+                                <option value="scroll-of-toxic-lobotomy">Scroll of Toxic Lobotomy</option>
+                            </optgroup>
                             <optgroup label="Ammo Consume Chance" data-collapsible="true" id="oils1AmmoCat">
                                 <option value="static-random-ammo-consume-chance">Random Ammo Consume Chance Oil</option>
                                 <option value="bulk-oil">Bulk Oil</option>
@@ -392,7 +401,6 @@
                                 <option value="synchronicity-oil">Synchronicity Oil</option>
                                 <option value="wobble-oil">Wobble Oil</option>
                             </optgroup>
-
                             <optgroup label="Bullet Speed" id="oils1SpeedCat">
                                 <option value="static-random-bullet-speed">Random Bullet Speed Oil</option>
                                 <option value="arrow-oil">Arrow Oil</option>
@@ -411,7 +419,6 @@
                                 <option value="whim-oil">Whim Oil</option>
                                 <option value="zooming-oil">Zooming Oil</option>
                             </optgroup>
-
                             <optgroup label="Add Damage" id="oils1AddDmgCat">
                                 <option value="static-random-add-damage">Random Damage (Add) Oil</option>
                                 <option value="add-damage-oil">Add Damage Oil</option>
@@ -432,7 +439,6 @@
                                 <option value="sender-oil">Sender Oil</option>
                                 <option value="solid-oil">Solid Oil</option>
                             </optgroup>
-
                             <optgroup label="% Damage" id="oils1MultDmgCat">
                                 <option value="static-random-mult-damage">Random Damage (%) Oil</option>
                                 <option value="boulder-oil">Boulder Oil</option>
@@ -453,7 +459,6 @@
                                 <option value="spartan-oil">Spartan Oil</option>
                                 <option value="terminator-oil">Terminator Oil</option>
                             </optgroup>
-
                             <optgroup label="Max Durability" id="oils1DurCat">
                                 <option value="static-random-max-durability">Random Max Durability Oil</option>
                                 <option value="dense-oil">Dense Oil</option>
@@ -474,7 +479,6 @@
                                 <option value="stiffy-fit-oil">Stiffy Fit Oil</option>
                                 <option value="trusty-old-oil">Trusty Old Oil</option>
                             </optgroup>
-
                             <optgroup label="Penetration" id="oils1PenCat">
                                 <option value="static-random-penetration">Random Penetration Oil</option>
                                 <option value="bad-planet-oil">Bad Planet Oil</option>
@@ -495,7 +499,6 @@
                                 <option value="untechnical-oil">Untechnical Oil</option>
                                 <option value="vasectomy-oil">Vasectomy Oil</option>
                             </optgroup>
-
                             <optgroup label="Projectiles" id="oils1ProjCat">
                                 <option value="static-random-projectiles">Random Projectiles Oil</option>
                                 <option value="black-friday-oil">Black Friday Oil</option>
@@ -517,7 +520,6 @@
                                 <option value="twice-oil">Twice Oil</option>
                                 <option value="two-time-oil">Two Time Oil</option>
                             </optgroup>
-
                             <optgroup label="Recoil" id="oils1RecoilCat">
                                 <option value="static-random-recoil">Random Recoil Oil</option>
                                 <option value="braced-oil">Braced Oil</option>
@@ -538,7 +540,6 @@
                                 <option value="tension-oil">Tension Oil</option>
                                 <option value="vegetable-oil">Vegetable Oil</option>
                             </optgroup>
-
                             <optgroup label="Reload Speed" id="oils1ReloadCat">
                                 <option value="static-random-reload-speed">Random Reload Speed Oil</option>
                                 <option value="action-oil">Action Oil</option>
@@ -560,7 +561,6 @@
                                 <option value="task-oil">Task Oil</option>
                                 <option value="tech-support-oil">Tech Support Oil</option>
                             </optgroup>
-
                             <optgroup label="RPM" id="oils1RPMCat">
                                 <option value="static-random-rpm">Random RPM Oil</option>
                                 <option value="attack-speed-oil">Attack Speed Oil</option>
@@ -581,7 +581,6 @@
                                 <option value="waster-oil">Waster Oil</option>
                                 <option value="zero-fucks-oil">Zero Fucks Oil</option>
                             </optgroup>
-
                             <optgroup label="Spread" id="oils1SpreadCat">
                                 <option value="static-random-spread">Random Spread Oil</option>
                                 <option value="altruistic-oil">Altruistic Oil</option>
@@ -612,7 +611,7 @@
                             <select name="oils2selectorcollection" id="oils2selector" class="custom-dropdown mobiledrop">
                             <option selected hidden value="static-choose">Select an oil...</option>
                             <option value="static-no-selection">None</option>
-                            <option value="static-random-all">Random Oil - All</option>
+                            <option value="static-random-all-oils">Random Oil - All</option>
                             <option value="static-durability-loss-multiplier-+200%">Durability Loss Multiplier +200%</option>
                             <option value="static-durability-loss-multiplier-+350%">Durability Loss Multiplier +350%</option>
                             <optgroup label="Ammo Consume Chance" id="oils2AmmoCat">
@@ -895,7 +894,7 @@
                             <select name="oils3selectorcollection" id="oils3selector" class="custom-dropdown mobiledrop">
                             <option selected hidden value="static-choose">Select an oil...</option>
                             <option value="static-no-selection">None</option>
-                            <option value="static-random-all">Random Oil - All</option>
+                            <option value="static-random-all-oils">Random Oil - All</option>
                             <option value="static-durability-loss-multiplier-+200%">Durability Loss Multiplier +200%</option>
                             <option value="static-durability-loss-multiplier-+350%">Durability Loss Multiplier +350%</option>
                             <optgroup label="Ammo Consume Chance" id="oils3AmmoCat">
@@ -1178,7 +1177,7 @@
                             <select name="oils4selectorcollection" id="oils4selector" class="custom-dropdown mobiledrop">
                             <option selected hidden value="static-choose">Select an oil...</option>
                             <option value="static-no-selection">None</option>
-                            <option value="static-random-all">Random Oil - All</option>
+                            <option value="static-random-all-oils">Random Oil - All</option>
                             <option value="static-durability-loss-multiplier-+200%">Durability Loss Multiplier +200%</option>
                             <option value="static-durability-loss-multiplier-+350%">Durability Loss Multiplier +350%</option>
                             <optgroup label="Ammo Consume Chance" id="oils4AmmoCat">
@@ -1461,7 +1460,7 @@
                             <select name="oils5selectorcollection" id="oils5selector" class="custom-dropdown mobiledrop">
                             <option selected hidden value="static-choose">Select an oil...</option>
                             <option value="static-no-selection">None</option>
-                            <option value="static-random-all">Random Oil - All</option>
+                            <option value="static-random-all-oils">Random Oil - All</option>
                             <option value="static-durability-loss-multiplier-+200%">Durability Loss Multiplier +200%</option>
                             <option value="static-durability-loss-multiplier-+350%">Durability Loss Multiplier +350%</option>
                             <optgroup label="Ammo Consume Chance" id="oils5AmmoCat">
@@ -1973,6 +1972,8 @@
                     </div>
                     <div style="height:auto; border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: 2px solid black; padding-left: 5px; z-index: 1;">
                         <h3>Scroll Notes & Equipment stats</h3>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Headshot Damage: <span style="font-weight:400" id="cardHeadDamage"></span><span style="font-weight:400" id="cardHeadDamageArrow"></span><span>  </span><span style="font-weight:400" id="cardHeadDamageX"></span><span> </span><span style="font-weight:400" id="cardHeadDamageProj"></span><span style="font-weight:400" id="cardHeadDamageProjArrow"></span><span>  </span><span style="font-weight:400" id="cardHeadDamageMultiX"></span><span>  </span><span style="font-weight:200" id="cardHeadDamageMulti"></span><span style="font-weight:400" id="cardHeadDamageLRArrow">  </span><span style="font-weight:300" class="compLabel" id="cardHeadDamageLBrac"></span><span style="font-weight:300" class="compLabel" id="cardHeadDamageComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardHeadDamageXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardHeadDamageProjComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardHeadDamageMultiXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardHeadDamageMultiComp"></span><span class="compLabel" style="font-weight:300" id="cardHeadDamageRBrac"></span></p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">⤷ Total: <span style="font-weight:400" id="cardHeadDamageTotal"></span><span style="font-weight:400" id="cardHeadDamageTotalArrow"></span><span> </span><span style="font-weight:400" id="cardHeadDamageTotalLRArrow">  </span><span style="font-weight:300" class="compLabel" id="cardHeadDamageTotalLBrac"></span><span style="font-weight:300" class="compLabel" id="cardHeadDamageTotalComp"></span><span style="font-weight:300" class="compLabel" id="cardHeadDamageTotalRBrac"></span></p>
                     </div>
                 </div>
 
@@ -1994,7 +1995,7 @@
                     <p id="cardOilName5" style="max-width: 150px;">Enchantment Card 5</p>
                 </div>
                 <div class="oilimages" id="cardOil1Img" style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-right:3px; height: 90px">
-                    <p id="cardOilDesc1" style="margin: 0px; font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>
+                    <p id="cardOilDesc1" style="margin: 0px; font-size: 0.75em; text-shadow: 0px 0px 2px #FDB142, 0px 0px 2px #FDB142, 0px 0px 5px white, 0px 0px 5px white; color: black">desc</p>
                 </div>
                 <div class="oilimages" id="cardOil2Img"style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
                     <p id="cardOilDesc2" style="margin: 0px; padding-left: -100px; padding-right: -100px; margin-left: -10px; margin-right: -10px;font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>

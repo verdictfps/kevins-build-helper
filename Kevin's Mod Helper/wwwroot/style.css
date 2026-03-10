@@ -863,9 +863,15 @@ mark {
      grid-column: 1 / -1;
 }
 
+.railgun {
+    animation: railgun 5s infinite running;
+    -moz-animation: railgun 5s infinite running;
+    -webkit-animation: railgun 5s infinite running;
+}
+
 }
 @-moz-keyframes spin { 
-    100% { -moz-transform: rotate(-360deg); filter: blur(10.1px);} 
+    100% { -moz-transform: rotate(-360deg); filter: blur(10.1px); } 
 }
 @-webkit-keyframes spin { 
     100% { -webkit-transform: rotate(-360deg); filter: blur(10.1px);} 
@@ -877,6 +883,29 @@ mark {
         filter: blur(10.1px);
     } 
 }
+
+@-moz-keyframes railgun { 
+    0% { -moz-transform: skew(0rad); filter: blur(0px); }
+    100% { -moz-transform: skew(-0.312rad); filter: blur(10.1px); color: yellow;} 
+}
+@-webkit-keyframes railgun { 
+    0% { -webkit-transform: skew(0rad); filter: blur(0px);} 
+    100% { -webkit-transform: skew(-0.312rad); filter: blur(10.1px); color: yellow;} 
+}
+@keyframes railgun { 
+    0% { 
+        -webkit-transform: skew(0rad); 
+        transform: skew(0rad);
+        filter: blur(0px);
+        color: yellow;
+    } 
+    100% { 
+        -webkit-transform: skew(-0.312rad); 
+        transform: skew(-0.312rad);
+        filter: blur(10.1px);
+    } 
+}
+
 @keyframes zlayer {
     from {z-index: 1;}
     to {z-index: 99;}

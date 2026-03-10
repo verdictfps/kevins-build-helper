@@ -38,8 +38,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Chamber Chisel - 12Ga": {
       "Name": "Chamber Chisel - 12Ga",
@@ -79,8 +89,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Chamber Chisel - 5.56mm": {
       "Name": "Chamber Chisel - 5.56mm",
@@ -120,8 +140,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Chamber Chisel - 7.62mm": {
       "Name": "Chamber Chisel - 7.62mm",
@@ -161,8 +191,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Chamber Chisel - 9mm": {
       "Name": "Chamber Chisel - 9mm",
@@ -202,8 +242,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     }
   }
 }

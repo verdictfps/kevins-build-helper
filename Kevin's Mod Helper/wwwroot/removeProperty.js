@@ -1,5 +1,5 @@
 
-let removeField = "newField";
+let removeField = "IsRailgun";
 
 function oilField() {
     console.log("-------------------Starting Oils-------------------");
@@ -19,6 +19,25 @@ function oilField() {
     fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));
 
     console.log("Field removed from all oils in Oils.json.");
+}
+function scrollField() {
+    console.log("-------------------Starting Scrolls-------------------");
+    const fs = require("fs");
+
+    const inputFile = "./Scrolls.json";
+    const outputFile = "./Scrolls.json";
+
+    const data = JSON.parse(fs.readFileSync(inputFile, "utf8"));
+
+    for (const key in data.Scroll) {
+        const scro = data.Scroll[key];
+
+        addField(scro);
+    }
+
+    fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));
+
+    console.log("Field removed from all scrolls in Scrolls.json.");
 }
 function attField() {
     console.log("-------------------Starting All Attachment file-------------------");
@@ -151,6 +170,7 @@ function addField(item) {
 }
 
 oilField()
+scrollField() 
 attField()
 barField()
 optField()

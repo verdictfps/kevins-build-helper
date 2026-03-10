@@ -36,8 +36,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Aftermarket Haukland Silencer": {
       "Name": "Aftermarket Haukland Silencer",
@@ -75,8 +85,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Barrel Extension 2in": {
       "Name": "Barrel Extension 2in",
@@ -114,8 +134,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Barrel Extension 4in": {
       "Name": "Barrel Extension 4in",
@@ -153,8 +183,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Barrel Extension 6in": {
       "Name": "Barrel Extension 6in",
@@ -192,8 +232,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Breznik BMD (Tactical)": {
       "Name": "Breznik BMD (Tactical)",
@@ -231,8 +281,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Breznik BMD": {
       "Name": "Breznik BMD",
@@ -270,8 +330,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Haukland Flash Hider": {
       "Name": "Haukland Flash Hider",
@@ -309,8 +379,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Haukland Silencer": {
       "Name": "Haukland Silencer",
@@ -348,8 +428,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Improvised Barrel Extension": {
       "Name": "Improvised Barrel Extension",
@@ -387,8 +477,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "M87 Albatross Silencer": {
       "Name": "M87 Albatross Silencer",
@@ -426,8 +526,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Shrouded Barrel Extension": {
       "Name": "Shrouded Barrel Extension",
@@ -465,8 +575,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "SR-P3 Silencer": {
       "Name": "SR-P3 Silencer",
@@ -504,8 +624,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     },
     "Warmage Compensator": {
       "Name": "Warmage Compensator",
@@ -543,8 +673,18 @@
       "Firemode": "None",
       "BulletSize": 0,
       "RPMBaseShift": 0,
-      "IsRailgun": "No",
-      "HeadshotDamage": 0
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false
     }
   }
 }
