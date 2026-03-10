@@ -435,10 +435,10 @@ function setChamberNameIndexer() {
 
 }
 
-let buildToEncode = "build";
+let buildToEncode = null;
 
 function encodeBuildAsUri() {
-    
+    buildToEncode = "build";
     function toBuild(value, key, map) {
         buildToEncode += value.Value;
         buildToEncode += "+";
