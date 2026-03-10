@@ -922,6 +922,7 @@ function onGenerate() {
 
 function rollFromBuild() {
     shallNotPass = true;
+    commitSelection('', 'weapons', 'weapon');
     commitSelection('buttonCommitOil1', 'oils1selector', 'ench1');
     commitSelection('buttonCommitOil2', 'oils2selector', 'ench2');
     commitSelection('buttonCommitOil3', 'oils3selector', 'ench3');
