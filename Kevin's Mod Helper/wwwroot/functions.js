@@ -435,8 +435,10 @@ function setChamberNameIndexer() {
 
 }
 
+let buildToEncode = "build";
+
 function encodeBuildAsUri() {
-    let buildToEncode = "build";
+    
     function toBuild(value, key, map) {
         buildToEncode += value.Value;
         buildToEncode += "+";
@@ -451,6 +453,8 @@ function encodeBuildAsUri() {
 }
 
 function setBuildAsMetadata() {
+    const encodedBuild = "#" + btoa(buildToEncode);
+
     let _desc = null;
     let descWep = coreSelections.get("weapon").Name.Name;
     let descEnch1 = coreSelections.get("ench1").Name.Name;
@@ -467,6 +471,7 @@ function setBuildAsMetadata() {
     _desc = "Weapon: " + descWep + "&#10;" + "Enchantment 1: " + descEnch1 + "&#10;" + "Enchantment 2: " + descEnch2 + "&#10;" + "Enchantment 3: " + descEnch3 + "&#10;" + "Enchantment 4: " + descEnch4 + "&#10;" + "Enchantment 5: " + descEnch5 + "&#10;" + "Barrel: " + descBarrel + "&#10;" + "Optic: " + descOptic + "&#10;" + "Laser: " + descLaser + "&#10;" + "Firemode: " + descFiremode + "&#10;" + "Chamber: " + descChamber; 
 
     document.querySelector('meta[property="og:description"]').setAttribute("content", _desc);
+    document.querySelector('meta[property="og:image"]').setAttribute("content", `.\\${encodedBuild}`);
 }
 
 function decodeUriAsBuild() {
