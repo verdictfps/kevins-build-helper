@@ -470,7 +470,8 @@ if (finalSplit[0] !== "buildn\u009d×\u009f\u008aw\u009d") {
     }
     coreSelections.forEach(rebuildBuild);
     console.log(coreSelections)
-}
+    rollFromBuild()
+    }
 }
 
 setChamberValueIndexer();
@@ -842,6 +843,22 @@ function onGenerate() {
     rollAggregator("laser", "laserselector", 3, laserSelectHandler.value, "attachment");
     rollAggregator("firemode", "firemodeselector", 4, firemodeSelectHandler.value, "attachment");
     rollAggregator("chamber", "chamberselector", 5, chamberSelectHandler.value, "attachment");
+}
+
+function rollFromBuild() {
+    shallNotPass = true;
+    rollAggregator("weapon", "weapons", 1, coreSelections.get("weapon").Value, "weapon");
+    rollAggregator("ench1", "oils1selector", 1, coreSelections.get("ench1").Value, "ench");
+    rollAggregator("ench2", "oils2selector", 2, coreSelections.get("ench2").Value, "ench");
+    rollAggregator("ench3", "oils3selector", 3, coreSelections.get("ench3").Value, "ench");
+    rollAggregator("ench4", "oils4selector", 4, coreSelections.get("ench4").Value.value, "ench");
+    rollAggregator("ench5", "oils5selector", 5, coreSelections.get("ench5").Value.value, "ench");
+    rollAggregator("barrel", "barrelselector", 1, coreSelections.get("barrel").Value, "attachment");
+    rollAggregator("optic", "opticselector", 2, coreSelections.get("optic").Value, "attachment");
+    rollAggregator("laser", "laserselector", 3, coreSelections.get("laser").Value, "attachment");
+    rollAggregator("firemode", "firemodeselector", 4, coreSelections.get("firemode").Value.value, "attachment");
+    rollAggregator("chamber", "chamberselector", 5, coreSelections.get("chamber").Value, "attachment");
+    shallNotPass = false;
 }
 
 function addAllEventListeners() {
