@@ -1,5 +1,54 @@
 {
   "Oil": {
+    "none": {
+      "Name": "none",
+      "AmmoConsumeChance": 0,
+      "Bounces": 0,
+      "BulletDrop": 0,
+      "BulletSpeed": 0,
+      "ExtraAmmoUseChance": 0,
+      "BaseCritChance": 0,
+      "DamageAdd": 0,
+      "DamageMult": 0,
+      "CanADS": "Yes",
+      "JumpPower": 0,
+      "LootDropChance": 0,
+      "DurabilityMult": 0,
+      "MovementSpeedMult": 0,
+      "MoneyDrops": "Yes",
+      "OrganDrops": "Yes",
+      "Penetrations": 0,
+      "ProjectileMult": 0,
+      "RPM": 0,
+      "RecoilAdd": 0,
+      "RecoilMult": 0,
+      "ReloadSpeed": 0,
+      "SpreadAdd": 0,
+      "SpreadMult": 0,
+      "Drag": 0,
+      "DurabilityUsage": 0,
+      "BulletBounciness": 0,
+      "MovingAccuracy": 0,
+      "DurLossMult": 0,
+      "StatDescription": "None selected",
+      "ADSCritChance": 0,
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false,
+      "LongDescription": "None"
+    },
     "Default": {
       "Name": "Default",
       "AmmoConsumeChance": 0,
@@ -46,7 +95,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "None": {
       "Name": "None",
@@ -94,7 +144,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Durability Loss Multiplier +200%": {
       "Name": "Durability Loss Multiplier +200%",
@@ -142,7 +193,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Durability Loss Multiplier +350%": {
       "Name": "Durability Loss Multiplier +350%",
@@ -190,7 +242,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Action Oil": {
       "Name": "Action Oil",
@@ -242,7 +295,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Add Damage Oil": {
       "Name": "Add Damage Oil",
@@ -294,7 +348,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Aimless Oil": {
       "Name": "Aimless Oil",
@@ -346,7 +401,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Airsoft Oil": {
       "Name": "Airsoft Oil",
@@ -398,7 +454,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Altruistic Oil": {
       "Name": "Altruistic Oil",
@@ -450,7 +507,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Arkanoid Oil": {
       "Name": "Arkanoid Oil",
@@ -502,7 +560,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Arrow Oil": {
       "Name": "Arrow Oil",
@@ -554,7 +613,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Artery Oil": {
       "Name": "Artery Oil",
@@ -606,7 +666,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Artillery Oil": {
       "Name": "Artillery Oil",
@@ -658,7 +719,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Ascetic Oil": {
       "Name": "Ascetic Oil",
@@ -710,7 +772,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Assassin Dart Oil": {
       "Name": "Assassin Dart Oil",
@@ -762,7 +825,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Attack Speed Oil": {
       "Name": "Attack Speed Oil",
@@ -814,7 +878,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Axe Oil": {
       "Name": "Axe Oil",
@@ -866,7 +931,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Bad Planet Oil": {
       "Name": "Bad Planet Oil",
@@ -918,7 +984,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Bandit Oil": {
       "Name": "Bandit Oil",
@@ -970,7 +1037,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "BB Oil": {
       "Name": "BB Oil",
@@ -1022,7 +1090,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Big Oil": {
       "Name": "Big Oil",
@@ -1074,7 +1143,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Black Friday Oil": {
       "Name": "Black Friday Oil",
@@ -1126,7 +1196,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Blindfold Oil": {
       "Name": "Blindfold Oil",
@@ -1178,7 +1249,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Blurt Oil": {
       "Name": "Blurt Oil",
@@ -1230,7 +1302,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Bolt Oil": {
       "Name": "Bolt Oil",
@@ -1282,7 +1355,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Bombard Oil": {
       "Name": "Bombard Oil",
@@ -1334,7 +1408,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Boomstick Oil": {
       "Name": "Boomstick Oil",
@@ -1386,7 +1461,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Boulder Oil": {
       "Name": "Boulder Oil",
@@ -1438,7 +1514,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Bowl Oil": {
       "Name": "Bowl Oil",
@@ -1490,7 +1567,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Braced Oil": {
       "Name": "Braced Oil",
@@ -1542,7 +1620,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Brute Oil": {
       "Name": "Brute Oil",
@@ -1594,7 +1673,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Bulk Oil": {
       "Name": "Bulk Oil",
@@ -1646,7 +1726,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Bystander Oil": {
       "Name": "Bystander Oil",
@@ -1698,7 +1779,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Carefree Oil": {
       "Name": "Carefree Oil",
@@ -1750,7 +1832,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Careful Oil": {
       "Name": "Careful Oil",
@@ -1802,7 +1885,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Careless Splitter Oil": {
       "Name": "Careless Splitter Oil",
@@ -1854,7 +1938,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Cartoon Oil": {
       "Name": "Cartoon Oil",
@@ -1906,7 +1991,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Casual Oil": {
       "Name": "Casual Oil",
@@ -1958,7 +2044,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Cheap Oil": {
       "Name": "Cheap Oil",
@@ -2010,7 +2097,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Collateral Oil": {
       "Name": "Collateral Oil",
@@ -2062,7 +2150,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Complicated Oil": {
       "Name": "Complicated Oil",
@@ -2114,7 +2203,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Compo Oil": {
       "Name": "Compo Oil",
@@ -2166,7 +2256,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Confidence Oil": {
       "Name": "Confidence Oil",
@@ -2218,7 +2309,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Considerate Oil": {
       "Name": "Considerate Oil",
@@ -2270,7 +2362,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Contained Force Oil": {
       "Name": "Contained Force Oil",
@@ -2322,7 +2415,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Critical Oil": {
       "Name": "Critical Oil",
@@ -2374,7 +2468,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Cycle Oil": {
       "Name": "Cycle Oil",
@@ -2426,7 +2521,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Damage Oil": {
       "Name": "Damage Oil",
@@ -2478,7 +2574,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Dart Oil": {
       "Name": "Dart Oil",
@@ -2530,7 +2627,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Dead Center Oil": {
       "Name": "Dead Center Oil",
@@ -2582,7 +2680,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Delayed Hyper Tube Oil": {
       "Name": "Delayed Hyper Tube Oil",
@@ -2634,7 +2733,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Dense Oil": {
       "Name": "Dense Oil",
@@ -2686,7 +2786,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Detune Oil": {
       "Name": "Detune Oil",
@@ -2738,7 +2839,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Diesel Oil": {
       "Name": "Diesel Oil",
@@ -2790,7 +2892,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Discharge Oil": {
       "Name": "Discharge Oil",
@@ -2842,7 +2945,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Disposable Oil": {
       "Name": "Disposable Oil",
@@ -2894,7 +2998,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Division Oil": {
       "Name": "Division Oil",
@@ -2946,7 +3051,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Do-over Oil": {
       "Name": "Do-over Oil",
@@ -2998,7 +3104,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Double Fire Oil": {
       "Name": "Double Fire Oil",
@@ -3050,7 +3157,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Double Lock Oil": {
       "Name": "Double Lock Oil",
@@ -3102,7 +3210,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Double Nothing Oil": {
       "Name": "Double Nothing Oil",
@@ -3154,7 +3263,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Dum Dum Oil": {
       "Name": "Dum Dum Oil",
@@ -3206,7 +3316,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Dynamic Oil": {
       "Name": "Dynamic Oil",
@@ -3258,7 +3369,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Easy Oil": {
       "Name": "Easy Oil",
@@ -3310,7 +3422,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Easy Plop Oil": {
       "Name": "Easy Plop Oil",
@@ -3362,7 +3475,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Elephant Oil": {
       "Name": "Elephant Oil",
@@ -3414,7 +3528,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Exotic Barrel Oil": {
       "Name": "Exotic Barrel Oil",
@@ -3466,7 +3581,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Expander Oil": {
       "Name": "Expander Oil",
@@ -3518,7 +3634,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Extra Powder Oil": {
       "Name": "Extra Powder Oil",
@@ -3570,7 +3687,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Farsighted Oil": {
       "Name": "Farsighted Oil",
@@ -3622,7 +3740,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Fast Bet Oil": {
       "Name": "Fast Bet Oil",
@@ -3674,7 +3793,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Feature Gun Oil": {
       "Name": "Feature Gun Oil",
@@ -3726,7 +3846,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Fidget Lord Oil": {
       "Name": "Fidget Lord Oil",
@@ -3778,7 +3899,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Fidget Oil": {
       "Name": "Fidget Oil",
@@ -3830,7 +3952,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "First Blood Oil": {
       "Name": "First Blood Oil",
@@ -3882,7 +4005,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Flea Oil": {
       "Name": "Flea Oil",
@@ -3934,7 +4058,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Flow Funnel Oil": {
       "Name": "Flow Funnel Oil",
@@ -3986,7 +4111,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Food Stamp Oil": {
       "Name": "Food Stamp Oil",
@@ -4038,7 +4164,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Fragile System Oil": {
       "Name": "Fragile System Oil",
@@ -4090,7 +4217,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Franciscan Oil": {
       "Name": "Franciscan Oil",
@@ -4142,7 +4270,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Frugal Oil": {
       "Name": "Frugal Oil",
@@ -4194,7 +4323,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Gambler Oil": {
       "Name": "Gambler Oil",
@@ -4246,7 +4376,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Gemini Oil": {
       "Name": "Gemini Oil",
@@ -4298,7 +4429,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Gentle Oil": {
       "Name": "Gentle Oil",
@@ -4350,7 +4482,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Glass Cannon Oil": {
       "Name": "Glass Cannon Oil",
@@ -4402,7 +4535,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Great Oil": {
       "Name": "Great Oil",
@@ -4454,7 +4588,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Grounded Oil": {
       "Name": "Grounded Oil",
@@ -4506,7 +4641,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Gunslinger Oil": {
       "Name": "Gunslinger Oil",
@@ -4558,7 +4694,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Happy Accident Oil": {
       "Name": "Happy Accident Oil",
@@ -4610,7 +4747,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Heavy Lead Oil": {
       "Name": "Heavy Lead Oil",
@@ -4662,7 +4800,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Heavy Oil": {
       "Name": "Heavy Oil",
@@ -4714,7 +4853,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Heavy Pockets Oil": {
       "Name": "Heavy Pockets Oil",
@@ -4766,7 +4906,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Hefty Oil": {
       "Name": "Hefty Oil",
@@ -4818,7 +4959,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Helium Oil": {
       "Name": "Helium Oil",
@@ -4870,7 +5012,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "High Grade Oil": {
       "Name": "High Grade Oil",
@@ -4922,7 +5065,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Hip Blaster Oil": {
       "Name": "Hip Blaster Oil",
@@ -4974,7 +5118,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Hip Marksman Oil": {
       "Name": "Hip Marksman Oil",
@@ -5026,7 +5171,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Hoop Oil": {
       "Name": "Hoop Oil",
@@ -5078,7 +5224,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Hunter Oil": {
       "Name": "Hunter Oil",
@@ -5130,7 +5277,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Hustler Oil": {
       "Name": "Hustler Oil",
@@ -5182,7 +5330,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Hyper Lead Oil": {
       "Name": "Hyper Lead Oil",
@@ -5234,7 +5383,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Imperfect Oil": {
       "Name": "Imperfect Oil",
@@ -5286,7 +5436,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Inconsiderate Oil": {
       "Name": "Inconsiderate Oil",
@@ -5338,7 +5489,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Inherited Oil": {
       "Name": "Inherited Oil",
@@ -5390,7 +5542,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Instant Oil": {
       "Name": "Instant Oil",
@@ -5442,7 +5595,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Judgement Oil": {
       "Name": "Judgement Oil",
@@ -5494,7 +5648,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Jungian Oil": {
       "Name": "Jungian Oil",
@@ -5546,7 +5701,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Keep Oil": {
       "Name": "Keep Oil",
@@ -5598,7 +5754,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Kicker Oil": {
       "Name": "Kicker Oil",
@@ -5650,7 +5807,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Kinetic Oil": {
       "Name": "Kinetic Oil",
@@ -5702,7 +5860,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Last Drop Oil": {
       "Name": "Last Drop Oil",
@@ -5754,7 +5913,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Late Boom Oil": {
       "Name": "Late Boom Oil",
@@ -5806,7 +5966,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Launcher Oil": {
       "Name": "Launcher Oil",
@@ -5858,7 +6019,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Lazy Oil": {
       "Name": "Lazy Oil",
@@ -5910,7 +6072,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Less Recoil Oil": {
       "Name": "Less Recoil Oil",
@@ -5962,7 +6125,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Lightweight Oil": {
       "Name": "Lightweight Oil",
@@ -6014,7 +6178,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Longshot Oil": {
       "Name": "Longshot Oil",
@@ -6066,7 +6231,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Lost In Focus Oil": {
       "Name": "Lost In Focus Oil",
@@ -6118,7 +6284,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Low Roller Oil": {
       "Name": "Low Roller Oil",
@@ -6170,7 +6337,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Machine Oil": {
       "Name": "Machine Oil",
@@ -6222,7 +6390,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Main Discipline Oil": {
       "Name": "Main Discipline Oil",
@@ -6274,7 +6443,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Main Focus Oil": {
       "Name": "Main Focus Oil",
@@ -6326,7 +6496,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Manifestation Oil": {
       "Name": "Manifestation Oil",
@@ -6378,7 +6549,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Matrix Oil": {
       "Name": "Matrix Oil",
@@ -6430,7 +6602,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Micro Wing Oil": {
       "Name": "Micro Wing Oil",
@@ -6482,7 +6655,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Modern Technology Oil": {
       "Name": "Modern Technology Oil",
@@ -6534,7 +6708,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Mosquito Oil": {
       "Name": "Mosquito Oil",
@@ -6586,7 +6761,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Multichamber Oil": {
       "Name": "Multichamber Oil",
@@ -6638,7 +6814,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Multishot Oil": {
       "Name": "Multishot Oil",
@@ -6690,7 +6867,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Needleye Oil": {
       "Name": "Needleye Oil",
@@ -6742,7 +6920,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Nerf Oil": {
       "Name": "Nerf Oil",
@@ -6794,7 +6973,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "No Look Oil": {
       "Name": "No Look Oil",
@@ -6846,7 +7026,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "No Need Oil": {
       "Name": "No Need Oil",
@@ -6898,7 +7079,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Out of the Box Oil": {
       "Name": "Out of the Box Oil",
@@ -6950,7 +7132,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Overclock Oil": {
       "Name": "Overclock Oil",
@@ -7002,7 +7185,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Overdose Oil": {
       "Name": "Overdose Oil",
@@ -7054,7 +7238,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Parallel Mag Oil": {
       "Name": "Parallel Mag Oil",
@@ -7106,7 +7291,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Peashooter Oil": {
       "Name": "Peashooter Oil",
@@ -7158,7 +7344,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Penetration Oil": {
       "Name": "Penetration Oil",
@@ -7210,7 +7397,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Perfect Bounce Oil": {
       "Name": "Perfect Bounce Oil",
@@ -7262,7 +7450,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Perforate Oil": {
       "Name": "Perforate Oil",
@@ -7314,7 +7503,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Plinker Oil": {
       "Name": "Plinker Oil",
@@ -7366,7 +7556,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Plop Back Oil": {
       "Name": "Plop Back Oil",
@@ -7418,7 +7609,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Pool Oil": {
       "Name": "Pool Oil",
@@ -7470,7 +7662,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Potshot Oil": {
       "Name": "Potshot Oil",
@@ -7522,7 +7715,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Puncher Oil": {
       "Name": "Puncher Oil",
@@ -7574,7 +7768,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Puncture Oil": {
       "Name": "Puncture Oil",
@@ -7626,7 +7821,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Purse Gun Oil": {
       "Name": "Purse Gun Oil",
@@ -7678,7 +7874,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Rapid Internals Oil": {
       "Name": "Rapid Internals Oil",
@@ -7730,7 +7927,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Ready Oil": {
       "Name": "Ready Oil",
@@ -7782,7 +7980,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Rebound Oil": {
       "Name": "Rebound Oil",
@@ -7834,7 +8033,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Recycle Oil": {
       "Name": "Recycle Oil",
@@ -7886,7 +8086,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Relax Oil": {
       "Name": "Relax Oil",
@@ -7938,7 +8139,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Release Oil": {
       "Name": "Release Oil",
@@ -7990,7 +8192,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Reload Oil": {
       "Name": "Reload Oil",
@@ -8042,7 +8245,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Ricochet Oil": {
       "Name": "Ricochet Oil",
@@ -8094,7 +8298,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Rigid System Oil": {
       "Name": "Rigid System Oil",
@@ -8146,7 +8351,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Rigor Oil": {
       "Name": "Rigor Oil",
@@ -8198,7 +8404,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Robust Mechanics Oil": {
       "Name": "Robust Mechanics Oil",
@@ -8250,7 +8457,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Rookie Oil": {
       "Name": "Rookie Oil",
@@ -8302,7 +8510,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Rubber Oil": {
       "Name": "Rubber Oil",
@@ -8354,7 +8563,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Rush Job Oil": {
       "Name": "Rush Job Oil",
@@ -8406,7 +8616,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Safety Oil": {
       "Name": "Safety Oil",
@@ -8458,7 +8669,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Satiety Oil": {
       "Name": "Satiety Oil",
@@ -8510,7 +8722,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Saviour Oil": {
       "Name": "Saviour Oil",
@@ -8562,7 +8775,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Scatter Oil": {
       "Name": "Scatter Oil",
@@ -8614,7 +8828,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Scramble Oil": {
       "Name": "Scramble Oil",
@@ -8666,7 +8881,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Seated Fit Oil": {
       "Name": "Seated Fit Oil",
@@ -8718,7 +8934,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Seated Oil": {
       "Name": "Seated Oil",
@@ -8770,7 +8987,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Sect Oil": {
       "Name": "Sect Oil",
@@ -8822,7 +9040,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Sender Oil": {
       "Name": "Sender Oil",
@@ -8874,7 +9093,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Sensible Oil": {
       "Name": "Sensible Oil",
@@ -8926,7 +9146,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Shaved Clip Oil": {
       "Name": "Shaved Clip Oil",
@@ -8978,7 +9199,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Shellman Oil": {
       "Name": "Shellman Oil",
@@ -9030,7 +9252,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Sherlock Oil": {
       "Name": "Sherlock Oil",
@@ -9082,7 +9305,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Shower Oil": {
       "Name": "Shower Oil",
@@ -9134,7 +9358,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Shredder Oil": {
       "Name": "Shredder Oil",
@@ -9186,7 +9411,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Skip Oil": {
       "Name": "Skip Oil",
@@ -9238,7 +9464,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Slick Oil": {
       "Name": "Slick Oil",
@@ -9290,7 +9517,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Slippy Coating Oil": {
       "Name": "Slippy Coating Oil",
@@ -9342,7 +9570,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Slotmachine Oil": {
       "Name": "Slotmachine Oil",
@@ -9394,7 +9623,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Slow Punch Oil": {
       "Name": "Slow Punch Oil",
@@ -9446,7 +9676,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Smart Bullet Oil": {
       "Name": "Smart Bullet Oil",
@@ -9498,7 +9729,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Soft Bullet Oil": {
       "Name": "Soft Bullet Oil",
@@ -9550,7 +9782,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Solid Oil": {
       "Name": "Solid Oil",
@@ -9602,7 +9835,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Spartan Oil": {
       "Name": "Spartan Oil",
@@ -9654,7 +9888,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Speed Trade Oil": {
       "Name": "Speed Trade Oil",
@@ -9706,7 +9941,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Spitter Oil": {
       "Name": "Spitter Oil",
@@ -9758,7 +9994,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Spread Oil": {
       "Name": "Spread Oil",
@@ -9810,7 +10047,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Stability Oil": {
       "Name": "Stability Oil",
@@ -9862,7 +10100,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Stable Hip Oil": {
       "Name": "Stable Hip Oil",
@@ -9914,7 +10153,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Stationary Oil": {
       "Name": "Stationary Oil",
@@ -9966,7 +10206,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Stiffy Fit Oil": {
       "Name": "Stiffy Fit Oil",
@@ -10018,7 +10259,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Stoic Oil": {
       "Name": "Stoic Oil",
@@ -10070,7 +10312,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Suppressive Oil": {
       "Name": "Suppressive Oil",
@@ -10122,7 +10365,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Surgical Laser Oil": {
       "Name": "Surgical Laser Oil",
@@ -10174,7 +10418,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Synchronicity Oil": {
       "Name": "Synchronicity Oil",
@@ -10226,7 +10471,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Tactical Oil": {
       "Name": "Tactical Oil",
@@ -10278,7 +10524,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Tandem Oil": {
       "Name": "Tandem Oil",
@@ -10330,7 +10577,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Task Oil": {
       "Name": "Task Oil",
@@ -10382,7 +10630,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Tech Support Oil": {
       "Name": "Tech Support Oil",
@@ -10434,7 +10683,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Tension Oil": {
       "Name": "Tension Oil",
@@ -10486,7 +10736,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Terminator Oil": {
       "Name": "Terminator Oil",
@@ -10538,7 +10789,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Thorough Oil": {
       "Name": "Thorough Oil",
@@ -10590,7 +10842,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Tight Barrel Oil": {
       "Name": "Tight Barrel Oil",
@@ -10642,7 +10895,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Too Much Oil": {
       "Name": "Too Much Oil",
@@ -10694,7 +10948,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Trusty Old Oil": {
       "Name": "Trusty Old Oil",
@@ -10746,7 +11001,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Turbulence Oil": {
       "Name": "Turbulence Oil",
@@ -10798,7 +11054,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Twice Oil": {
       "Name": "Twice Oil",
@@ -10850,7 +11107,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Two Time Oil": {
       "Name": "Two Time Oil",
@@ -10902,7 +11160,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Untechnical Oil": {
       "Name": "Untechnical Oil",
@@ -10954,7 +11213,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Vasectomy Oil": {
       "Name": "Vasectomy Oil",
@@ -11006,7 +11266,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Vegan Oil": {
       "Name": "Vegan Oil",
@@ -11058,7 +11319,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Vegetable Oil": {
       "Name": "Vegetable Oil",
@@ -11110,7 +11372,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Velocity Oil": {
       "Name": "Velocity Oil",
@@ -11162,7 +11425,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Walk Easy Oil": {
       "Name": "Walk Easy Oil",
@@ -11214,7 +11478,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Waster Oil": {
       "Name": "Waster Oil",
@@ -11266,7 +11531,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Whim Oil": {
       "Name": "Whim Oil",
@@ -11318,7 +11584,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Whos Counting Oil": {
       "Name": "Whos Counting Oil",
@@ -11370,7 +11637,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Wobble Oil": {
       "Name": "Wobble Oil",
@@ -11422,7 +11690,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Zero Fucks Oil": {
       "Name": "Zero Fucks Oil",
@@ -11474,7 +11743,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Zooming Oil": {
       "Name": "Zooming Oil",
@@ -11526,7 +11796,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     }
   }
 }

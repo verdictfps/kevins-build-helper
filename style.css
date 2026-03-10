@@ -791,6 +791,13 @@ select.custom-dropdown {
     
 }
 
+#boxglowthing:active
+{
+    animation: spin 0.1s infinite linear;
+    -moz-animation: spin 0.1s infinite linear;
+    -webkit-animation: spin 0.1s infinite linear;
+}
+
 /*.shake-little {
     transform: scale(1);
      transition: transform 2s ease-in-out;

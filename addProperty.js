@@ -1,6 +1,6 @@
 
-let newField = "IsRailgun";
-let newDefault = false;
+let newField = "LongDescription";
+let newDefault = "None";
 
 function oilField() {
     console.log("-------------------Starting Oils-------------------");

@@ -46,10 +46,60 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       }
     },
     "Barrel": {
+      "none": {
+        "Name": "none",
+        "AmmoConsumeChance": 0,
+        "Bounces": 0,
+        "BulletDrop": 0,
+        "BulletSpeed": 0,
+        "ExtraAmmoUseChance": 0,
+        "BaseCritChance": 0,
+        "DamageAdd": 0,
+        "DamageMult": 0,
+        "CanADS": "Yes",
+        "JumpPower": 0,
+        "LootDropChance": 0,
+        "DurabilityMult": 0,
+        "MovementSpeedMult": 0,
+        "MoneyDrops": "Yes",
+        "OrganDrops": "Yes",
+        "Penetrations": 0,
+        "ProjectileMult": 0,
+        "RPM": 0,
+        "RecoilAdd": 0,
+        "RecoilMult": 0,
+        "ReloadSpeed": 0,
+        "SpreadAdd": 0,
+        "SpreadMult": 0,
+        "Drag": 0,
+        "DurabilityUsage": 0,
+        "BulletBounciness": 0,
+        "MovingAccuracy": 0,
+        "DurLossMult": 0,
+        "StatDescription": "None selected",
+        "ADSCritChance": 0,
+        "Firemode": "None",
+        "BulletSize": 0,
+        "RPMBaseShift": 0,
+        "HeadshotDamage": 0,
+        "DamageAddInd": 0,
+        "HasProc": "No",
+        "ProcType": "None",
+        "ProcChance": 0,
+        "ProcDamage": 0,
+        "ProcFreq": 0,
+        "SelfDamage": "No",
+        "SelfDamageAmount": "None",
+        "DamageType": "None",
+        "ProcChance12ga": 0,
+        "IsRailgun": false,
+        "LongDescription": "None"
+      },
       "None": {
         "Name": "None",
         "Type": "Barrel",
@@ -97,7 +147,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "A12C Muzzle Brake": {
         "Name": "A12C Muzzle Brake",
@@ -146,7 +197,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Aftermarket Haukland Silencer": {
         "Name": "Aftermarket Haukland Silencer",
@@ -195,7 +247,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Barrel Extension 2in": {
         "Name": "Barrel Extension 2in",
@@ -244,7 +297,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Barrel Extension 4in": {
         "Name": "Barrel Extension 4in",
@@ -293,7 +347,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Barrel Extension 6in": {
         "Name": "Barrel Extension 6in",
@@ -342,7 +397,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Breznik BMD (Tactical)": {
         "Name": "Breznik BMD (Tactical)",
@@ -391,7 +447,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Breznik BMD": {
         "Name": "Breznik BMD",
@@ -440,7 +497,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Haukland Flash Hider": {
         "Name": "Haukland Flash Hider",
@@ -489,7 +547,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Haukland Silencer": {
         "Name": "Haukland Silencer",
@@ -538,7 +597,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Improvised Barrel Extension": {
         "Name": "Improvised Barrel Extension",
@@ -587,7 +647,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "M87 Albatross Silencer": {
         "Name": "M87 Albatross Silencer",
@@ -636,7 +697,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Shrouded Barrel Extension": {
         "Name": "Shrouded Barrel Extension",
@@ -685,7 +747,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "SR-P3 Silencer": {
         "Name": "SR-P3 Silencer",
@@ -734,7 +797,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Warmage Compensator": {
         "Name": "Warmage Compensator",
@@ -783,10 +847,60 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       }
     },
     "Chamber": {
+      "none": {
+        "Name": "none",
+        "AmmoConsumeChance": 0,
+        "Bounces": 0,
+        "BulletDrop": 0,
+        "BulletSpeed": 0,
+        "ExtraAmmoUseChance": 0,
+        "BaseCritChance": 0,
+        "DamageAdd": 0,
+        "DamageMult": 0,
+        "CanADS": "Yes",
+        "JumpPower": 0,
+        "LootDropChance": 0,
+        "DurabilityMult": 0,
+        "MovementSpeedMult": 0,
+        "MoneyDrops": "Yes",
+        "OrganDrops": "Yes",
+        "Penetrations": 0,
+        "ProjectileMult": 0,
+        "RPM": 0,
+        "RecoilAdd": 0,
+        "RecoilMult": 0,
+        "ReloadSpeed": 0,
+        "SpreadAdd": 0,
+        "SpreadMult": 0,
+        "Drag": 0,
+        "DurabilityUsage": 0,
+        "BulletBounciness": 0,
+        "MovingAccuracy": 0,
+        "DurLossMult": 0,
+        "StatDescription": "None selected",
+        "ADSCritChance": 0,
+        "Firemode": "None",
+        "BulletSize": 0,
+        "RPMBaseShift": 0,
+        "HeadshotDamage": 0,
+        "DamageAddInd": 0,
+        "HasProc": "No",
+        "ProcType": "None",
+        "ProcChance": 0,
+        "ProcDamage": 0,
+        "ProcFreq": 0,
+        "SelfDamage": "No",
+        "SelfDamageAmount": "None",
+        "DamageType": "None",
+        "ProcChance12ga": 0,
+        "IsRailgun": false,
+        "LongDescription": "None"
+      },
       "Chamber Chisel - .50 BMG": {
         "Name": "Chamber Chisel - .50 BMG",
         "AmmoType": ".50 BMG",
@@ -836,7 +950,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Chamber Chisel - 12Ga": {
         "Name": "Chamber Chisel - 12Ga",
@@ -887,7 +1002,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Chamber Chisel - 5.56mm": {
         "Name": "Chamber Chisel - 5.56mm",
@@ -938,7 +1054,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Chamber Chisel - 7.62mm": {
         "Name": "Chamber Chisel - 7.62mm",
@@ -989,7 +1106,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Chamber Chisel - 9mm": {
         "Name": "Chamber Chisel - 9mm",
@@ -1040,7 +1158,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Energy": {
         "Name": "Energy",
@@ -1091,10 +1210,60 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       }
     },
     "Firemode": {
+      "none": {
+        "Name": "none",
+        "AmmoConsumeChance": 0,
+        "Bounces": 0,
+        "BulletDrop": 0,
+        "BulletSpeed": 0,
+        "ExtraAmmoUseChance": 0,
+        "BaseCritChance": 0,
+        "DamageAdd": 0,
+        "DamageMult": 0,
+        "CanADS": "Yes",
+        "JumpPower": 0,
+        "LootDropChance": 0,
+        "DurabilityMult": 0,
+        "MovementSpeedMult": 0,
+        "MoneyDrops": "Yes",
+        "OrganDrops": "Yes",
+        "Penetrations": 0,
+        "ProjectileMult": 0,
+        "RPM": 0,
+        "RecoilAdd": 0,
+        "RecoilMult": 0,
+        "ReloadSpeed": 0,
+        "SpreadAdd": 0,
+        "SpreadMult": 0,
+        "Drag": 0,
+        "DurabilityUsage": 0,
+        "BulletBounciness": 0,
+        "MovingAccuracy": 0,
+        "DurLossMult": 0,
+        "StatDescription": "None selected",
+        "ADSCritChance": 0,
+        "Firemode": "None",
+        "BulletSize": 0,
+        "RPMBaseShift": 0,
+        "HeadshotDamage": 0,
+        "DamageAddInd": 0,
+        "HasProc": "No",
+        "ProcType": "None",
+        "ProcChance": 0,
+        "ProcDamage": 0,
+        "ProcFreq": 0,
+        "SelfDamage": "No",
+        "SelfDamageAmount": "None",
+        "DamageType": "None",
+        "ProcChance12ga": 0,
+        "IsRailgun": false,
+        "LongDescription": "None"
+      },
       "None": {
         "Name": "None",
         "Type": "Firemode",
@@ -1142,7 +1311,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Gun Crank": {
         "Name": "Gun Crank",
@@ -1191,7 +1361,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Priming Bolt": {
         "Name": "Priming Bolt",
@@ -1240,10 +1411,60 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       }
     },
     "Laser": {
+      "none": {
+        "Name": "none",
+        "AmmoConsumeChance": 0,
+        "Bounces": 0,
+        "BulletDrop": 0,
+        "BulletSpeed": 0,
+        "ExtraAmmoUseChance": 0,
+        "BaseCritChance": 0,
+        "DamageAdd": 0,
+        "DamageMult": 0,
+        "CanADS": "Yes",
+        "JumpPower": 0,
+        "LootDropChance": 0,
+        "DurabilityMult": 0,
+        "MovementSpeedMult": 0,
+        "MoneyDrops": "Yes",
+        "OrganDrops": "Yes",
+        "Penetrations": 0,
+        "ProjectileMult": 0,
+        "RPM": 0,
+        "RecoilAdd": 0,
+        "RecoilMult": 0,
+        "ReloadSpeed": 0,
+        "SpreadAdd": 0,
+        "SpreadMult": 0,
+        "Drag": 0,
+        "DurabilityUsage": 0,
+        "BulletBounciness": 0,
+        "MovingAccuracy": 0,
+        "DurLossMult": 0,
+        "StatDescription": "None selected",
+        "ADSCritChance": 0,
+        "Firemode": "None",
+        "BulletSize": 0,
+        "RPMBaseShift": 0,
+        "HeadshotDamage": 0,
+        "DamageAddInd": 0,
+        "HasProc": "No",
+        "ProcType": "None",
+        "ProcChance": 0,
+        "ProcDamage": 0,
+        "ProcFreq": 0,
+        "SelfDamage": "No",
+        "SelfDamageAmount": "None",
+        "DamageType": "None",
+        "ProcChance12ga": 0,
+        "IsRailgun": false,
+        "LongDescription": "None"
+      },
       "None": {
         "Name": "None",
         "Type": "Laser",
@@ -1291,7 +1512,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Green": {
         "Name": "Green",
@@ -1340,7 +1562,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Red": {
         "Name": "Red",
@@ -1389,7 +1612,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Yellow": {
         "Name": "Yellow",
@@ -1438,10 +1662,60 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       }
     },
     "Optic": {
+      "none": {
+        "Name": "none",
+        "AmmoConsumeChance": 0,
+        "Bounces": 0,
+        "BulletDrop": 0,
+        "BulletSpeed": 0,
+        "ExtraAmmoUseChance": 0,
+        "BaseCritChance": 0,
+        "DamageAdd": 0,
+        "DamageMult": 0,
+        "CanADS": "Yes",
+        "JumpPower": 0,
+        "LootDropChance": 0,
+        "DurabilityMult": 0,
+        "MovementSpeedMult": 0,
+        "MoneyDrops": "Yes",
+        "OrganDrops": "Yes",
+        "Penetrations": 0,
+        "ProjectileMult": 0,
+        "RPM": 0,
+        "RecoilAdd": 0,
+        "RecoilMult": 0,
+        "ReloadSpeed": 0,
+        "SpreadAdd": 0,
+        "SpreadMult": 0,
+        "Drag": 0,
+        "DurabilityUsage": 0,
+        "BulletBounciness": 0,
+        "MovingAccuracy": 0,
+        "DurLossMult": 0,
+        "StatDescription": "None selected",
+        "ADSCritChance": 0,
+        "Firemode": "None",
+        "BulletSize": 0,
+        "RPMBaseShift": 0,
+        "HeadshotDamage": 0,
+        "DamageAddInd": 0,
+        "HasProc": "No",
+        "ProcType": "None",
+        "ProcChance": 0,
+        "ProcDamage": 0,
+        "ProcFreq": 0,
+        "SelfDamage": "No",
+        "SelfDamageAmount": "None",
+        "DamageType": "None",
+        "ProcChance12ga": 0,
+        "IsRailgun": false,
+        "LongDescription": "None"
+      },
       "None": {
         "Name": "None",
         "Type": "Optic",
@@ -1489,13 +1763,14 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Assault Scope": {
         "Name": "Assault Scope",
         "Type": "Optic",
         "ADSCritChance": 0.2,
-        "StatDescription": "ADS Crit Chance: +20%",
+        "StatDescription": "ADS Crit Chance: +20%<br>Zoom: 4x",
         "Bounces": 0,
         "BulletDrop": 0,
         "BulletSpeed": 0,
@@ -1538,13 +1813,14 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Compact Sight": {
         "Name": "Compact Sight",
         "Type": "Optic",
         "ADSCritChance": 0.2,
-        "StatDescription": "ADS Crit Chance: +20%",
+        "StatDescription": "ADS Crit Chance: +20%<br>Zoom: 2x",
         "Bounces": 0,
         "BulletDrop": 0,
         "BulletSpeed": 0,
@@ -1587,13 +1863,14 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Holographic Sight": {
         "Name": "Holographic Sight",
         "Type": "Optic",
         "ADSCritChance": 0.1,
-        "StatDescription": "ADS Crit Chance: +10%",
+        "StatDescription": "ADS Crit Chance: +10%<br>Zoom: 1x",
         "Bounces": 0,
         "BulletDrop": 0,
         "BulletSpeed": 0,
@@ -1636,13 +1913,14 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Hunting Scope": {
         "Name": "Hunting Scope",
         "Type": "Optic",
         "ADSCritChance": 0.25,
-        "StatDescription": "ADS Crit Chance: +25%",
+        "StatDescription": "ADS Crit Chance: +25%<br>Zoom: 8x",
         "Bounces": 0,
         "BulletDrop": 0,
         "BulletSpeed": 0,
@@ -1685,13 +1963,14 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Recon Scope": {
         "Name": "Recon Scope",
         "Type": "Optic",
         "ADSCritChance": 0.1,
-        "StatDescription": "ADS Crit Chance: +10%",
+        "StatDescription": "ADS Crit Chance: +10%<br>Zoom: 12x",
         "Bounces": 0,
         "BulletDrop": 0,
         "BulletSpeed": 0,
@@ -1734,13 +2013,14 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Reflex Sight": {
         "Name": "Reflex Sight",
         "Type": "Optic",
         "ADSCritChance": 0.15,
-        "StatDescription": "ADS Crit Chance: +15%",
+        "StatDescription": "ADS Crit Chance: +15%<br>Zoom: 1x",
         "Bounces": 0,
         "BulletDrop": 0,
         "BulletSpeed": 0,
@@ -1783,13 +2063,14 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       },
       "Sniper Scope": {
         "Name": "Sniper Scope",
         "Type": "Optic",
         "ADSCritChance": 0.3,
-        "StatDescription": "ADS Crit Chance: +30%",
+        "StatDescription": "ADS Crit Chance: +30%<br>Zoom: 12x",
         "Bounces": 0,
         "BulletDrop": 0,
         "BulletSpeed": 0,
@@ -1832,7 +2113,8 @@
         "SelfDamageAmount": "None",
         "DamageType": "None",
         "ProcChance12ga": 0,
-        "IsRailgun": false
+        "IsRailgun": false,
+        "LongDescription": "None"
       }
     }
   }

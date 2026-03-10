@@ -4,7 +4,7 @@
       "Name": "Assault Scope",
       "Type": "Optic",
       "ADSCritChance": 0.2,
-      "StatDescription": "ADS Crit Chance: +20%",
+      "StatDescription": "ADS Crit Chance: +20%<br>Zoom: 4x",
       "Bounces": 0,
       "BulletDrop": 0,
       "BulletSpeed": 0,
@@ -47,13 +47,14 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Compact Sight": {
       "Name": "Compact Sight",
       "Type": "Optic",
       "ADSCritChance": 0.2,
-      "StatDescription": "ADS Crit Chance: +20%",
+      "StatDescription": "ADS Crit Chance: +20%<br>Zoom: 2x",
       "Bounces": 0,
       "BulletDrop": 0,
       "BulletSpeed": 0,
@@ -96,13 +97,14 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Holographic Sight": {
       "Name": "Holographic Sight",
       "Type": "Optic",
       "ADSCritChance": 0.1,
-      "StatDescription": "ADS Crit Chance: +10%",
+      "StatDescription": "ADS Crit Chance: +10%<br>Zoom: 1x",
       "Bounces": 0,
       "BulletDrop": 0,
       "BulletSpeed": 0,
@@ -145,13 +147,14 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Hunting Scope": {
       "Name": "Hunting Scope",
       "Type": "Optic",
       "ADSCritChance": 0.25,
-      "StatDescription": "ADS Crit Chance: +25%",
+      "StatDescription": "ADS Crit Chance: +25%<br>Zoom: 8x",
       "Bounces": 0,
       "BulletDrop": 0,
       "BulletSpeed": 0,
@@ -194,13 +197,14 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Recon Scope": {
       "Name": "Recon Scope",
       "Type": "Optic",
       "ADSCritChance": 0.1,
-      "StatDescription": "ADS Crit Chance: +10%",
+      "StatDescription": "ADS Crit Chance: +10%<br>Zoom: 12x",
       "Bounces": 0,
       "BulletDrop": 0,
       "BulletSpeed": 0,
@@ -243,13 +247,14 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Reflex Sight": {
       "Name": "Reflex Sight",
       "Type": "Optic",
       "ADSCritChance": 0.15,
-      "StatDescription": "ADS Crit Chance: +15%",
+      "StatDescription": "ADS Crit Chance: +15%<br>Zoom: 1x",
       "Bounces": 0,
       "BulletDrop": 0,
       "BulletSpeed": 0,
@@ -292,13 +297,14 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     },
     "Sniper Scope": {
       "Name": "Sniper Scope",
       "Type": "Optic",
       "ADSCritChance": 0.3,
-      "StatDescription": "ADS Crit Chance: +30%",
+      "StatDescription": "ADS Crit Chance: +30%<br>Zoom: 12x",
       "Bounces": 0,
       "BulletDrop": 0,
       "BulletSpeed": 0,
@@ -341,7 +347,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "ProcChance12ga": 0,
-      "IsRailgun": false
+      "IsRailgun": false,
+      "LongDescription": "None"
     }
   }
 }
