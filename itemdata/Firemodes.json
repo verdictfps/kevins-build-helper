@@ -48,7 +48,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "None"
     },
     "Priming Bolt": {
       "Name": "Priming Bolt",
@@ -98,7 +99,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "None"
     }
   }
 }

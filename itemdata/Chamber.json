@@ -50,7 +50,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "None"
     },
     "Chamber Chisel - 12Ga": {
       "Name": "Chamber Chisel - 12Ga",
@@ -102,7 +103,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "None"
     },
     "Chamber Chisel - 5.56mm": {
       "Name": "Chamber Chisel - 5.56mm",
@@ -154,7 +156,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "None"
     },
     "Chamber Chisel - 7.62mm": {
       "Name": "Chamber Chisel - 7.62mm",
@@ -206,7 +209,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "None"
     },
     "Chamber Chisel - 9mm": {
       "Name": "Chamber Chisel - 9mm",
@@ -258,7 +262,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "None"
     }
   }
 }

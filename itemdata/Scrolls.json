@@ -47,7 +47,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "None"
     },
     "Scroll of Dark": {
       "Name": "Scroll of Dark",
@@ -96,7 +97,8 @@
       "DamageType": "Dark",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "None"
     },
     "Scroll of Earth": {
       "Name": "Scroll of Earth",
@@ -128,7 +130,7 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "DurLossMult": 0,
-      "StatDescription": "Chance to inflict <span style='text-shadow: 0px 0px 3px black'>Stun</span> on target.",
+      "StatDescription": "Chance to inflict Stun on target.",
       "ADSCritChance": 0,
       "Firemode": "None",
       "BulletSize": 0,
@@ -145,7 +147,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "None",
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "Chance to inflict <span style='text-shadow: 0px 0px 3px black'>Stun</span> on target. <span style='text-shadow: 0px 0px 3px black'>Stun</span> prevents enemies from fighting back for a period.",
+      "ScrollField": "None"
     },
     "Scroll of Embers": {
       "Name": "Scroll of Embers",
@@ -177,7 +180,7 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "DurLossMult": 0,
-      "StatDescription": "Chance to inflict <span style='text-shadow: 0px 0px 3px orange'>Burning</span> on target.",
+      "StatDescription": "Chance to inflict Burning on target.",
       "ADSCritChance": 0,
       "Firemode": "None",
       "BulletSize": 0,
@@ -194,7 +197,8 @@
       "SelfDamageAmount": "None",
       "DamageType": "Fire",
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "Chance to inflict <span style='text-shadow: 0px 0px 3px orange'>Burning</span> on target.",
+      "ScrollField": "None"
     },
     "Scroll of Frostbite": {
       "Name": "Scroll of Frostbite",
@@ -226,7 +230,7 @@
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
       "DurLossMult": 0,
-      "StatDescription": "Chance to inflict <span style='text-shadow: 0px 0px 3px blue'>Frost</span> on target. <span style='text-shadow: 0px 0px 3px lightblue'>Frost</span> has a stacking chance to <span style='text-shadow: 0px 0px 3px blue'>Freeze</span> enemies below 50% HP.",
+      "StatDescription": "Chance to inflict Frost on target.",
       "ADSCritChance": 0,
       "Firemode": "None",
       "BulletSize": 0,
@@ -243,7 +247,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "Chance to inflict <span style='text-shadow: 0px 0px 3px blue'>Frost</span> on target. <span style='text-shadow: 0px 0px 3px lightblue'>Frost</span> has a stacking chance to <span style='text-shadow: 0px 0px 3px blue'>Freeze</span> enemies below 50% HP."
+      "LongDescription": "Chance to inflict <span style='text-shadow: 0px 0px 3px blue'>Frost</span> on target. <span style='text-shadow: 0px 0px 3px lightblue'>Frost</span> has a stacking chance to <span style='text-shadow: 0px 0px 3px blue'>Freeze</span> enemies below 50% HP.",
+      "ScrollField": "None"
     },
     "Scroll of Toxic Lobotomy": {
       "Name": "Scroll of Toxic Lobotomy",
@@ -292,7 +297,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": true,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "scrollinfotoxic"
     }
   }
 }

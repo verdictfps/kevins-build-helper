@@ -1,5 +1,5 @@
 
-let newField = "LongDescription";
+let newField = "ScrollField";
 let newDefault = "None";
 
 function oilField() {

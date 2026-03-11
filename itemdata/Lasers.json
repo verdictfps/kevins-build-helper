@@ -48,7 +48,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "None"
     },
     "Red": {
       "Name": "Red",
@@ -98,7 +99,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "None"
     },
     "Yellow": {
       "Name": "Yellow",
@@ -148,7 +150,8 @@
       "DamageType": "None",
       "ProcChance12ga": 0,
       "IsRailgun": false,
-      "LongDescription": "None"
+      "LongDescription": "None",
+      "ScrollField": "None"
     }
   }
 }

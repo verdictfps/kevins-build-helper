@@ -451,7 +451,7 @@ function encodeBuildAsUri() {
         buildToEncode += "+";
     }
     coreSelections.forEach(toBuild);
-    const encodedBuild = "#" + btoa(buildToEncode);
+    const encodedBuild = "#!" + btoa(buildToEncode);
    // const decodedBuild = atob(encodedBuild);
      //   console.log(decodedBuild);
         history.pushState(encodedBuild, "", encodedBuild);
@@ -479,13 +479,15 @@ function setBuildAsMetadata() {
     _desc = "Weapon: " + descWep + "&#10;" + "Enchantment 1: " + descEnch1 + "&#10;" + "Enchantment 2: " + descEnch2 + "&#10;" + "Enchantment 3: " + descEnch3 + "&#10;" + "Enchantment 4: " + descEnch4 + "&#10;" + "Enchantment 5: " + descEnch5 + "&#10;" + "Barrel: " + descBarrel + "&#10;" + "Optic: " + descOptic + "&#10;" + "Laser: " + descLaser + "&#10;" + "Firemode: " + descFiremode + "&#10;" + "Chamber: " + descChamber; 
 
     document.querySelector('meta[property="og:description"]').setAttribute("content", _desc);
-   // document.querySelector('meta[property="og:image"]').setAttribute("content", `.\\${encodedBuild}`);
+    //document.querySelector('meta[property="og:image"]').setAttribute("content", `.\\${encodedBuild}`);
 }
 
 function decodeUriAsBuild() {
     console.info("KBH: Decoding URL to detect build");
     const currentURL = window.location.href;
-    let split = currentURL.split("#");
+    let split = currentURL.split("#!");
+    let finalSplit = null;
+    let iterationSplit = null;
     
     if (typeof split[1] === 'undefined') {
         console.info("KBH: No build found");
@@ -495,8 +497,8 @@ function decodeUriAsBuild() {
         let resplit = split[1]
         let decoded = atob(resplit);
         let split2 = decoded.split("build");
-        let finalSplit = split2[1].split("+");
-        let iterationSplit = 0
+        finalSplit = split2[1].split("+");
+        iterationSplit = 0
         console.log(finalSplit);
     }
 
@@ -1546,6 +1548,9 @@ function oilStats() {
         if (selectedOil.HeadshotDamage !== 0) {
             oilStatModifiers.HeadshotDamage = selectedOil.HeadshotDamage;
         }
+        if (selectedOil.ScrollField !== "None") {
+            oilStatModifiers.ScrollField = selectedOil.ScrollField;
+        }
     }
 
     function coreStats(value, key, map) {
@@ -1614,6 +1619,31 @@ function oilCalcs(calcOil) {
     document.getElementById("cardWeaponType").textContent = weapon.Type;
     document.getElementById("cardAmmoType").textContent = weapon.AmmoType;
     document.getElementById("cardMagSize").textContent = weapon.MagSize;
+
+    //////////////////////
+    //// Scroll Cards ////
+    //////////////////////
+
+    let scrollDefaultCard = document.getElementById("scrollinfodefault");
+
+    switch (calcOil.ScrollField) {
+        case "scrollinfotoxic":
+            document.getElementById("scrollinfotoxic").classList.remove("scrollcardanimate");
+            setTimeout(() => {
+                document.getElementById("scrollinfotoxic").classList.add("scrollcardanimate");
+            }, 50);
+            scrollDefaultCard.hidden = true;
+            document.getElementById("scrollinfotoxic").hidden = false;
+            break;
+        default:
+            scrollDefaultCard.classList.remove("scrollcardanimate");
+            setTimeout(() => {
+                scrollDefaultCard.classList.add("scrollcardanimate");
+            }, 50);
+            scrollDefaultCard.hidden = false;
+            document.getElementById("scrollinfotoxic").hidden = true;
+            break;
+    }
 
     /////////////
     //// RPM ////

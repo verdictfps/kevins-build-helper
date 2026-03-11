@@ -871,9 +871,30 @@ mark {
 }
 
 .railgun {
-    animation: railgun 5s infinite running;
-    -moz-animation: railgun 5s infinite running;
-    -webkit-animation: railgun 5s infinite running;
+    animation: railgun 0.1s infinite running;
+    -moz-animation: railgun 0.1s infinite running;
+    -webkit-animation: railgun 0.1s infinite running;
+    text-align: center;
+}
+
+.scrollcard {
+    transition: transform 2s ease;
+    transform: translateY(-220px);
+}
+
+.scrollcardanimate {
+    transform: translateY(0px);
+    transition: transform 2s ease;
+}
+
+.scrollcardfade {
+    opacity: 0%;
+    transition: transform 2s ease;
+}
+
+@keyframes slide {
+    0% {transform: translateY(-50px);}
+    100% {transform: translateY(0px);}
 }
 
 }
@@ -892,24 +913,26 @@ mark {
 }
 
 @-moz-keyframes railgun { 
-    0% { -moz-transform: skew(0rad); filter: blur(0px); }
-    100% { -moz-transform: skew(-0.312rad); filter: blur(10.1px); color: yellow;} 
+    0% { -moz-transform: skew(-0.1rad); filter: blur(0px); }
+    100% { -moz-transform: skew(-0.312rad); filter: blur(1.1px); color: yellow;} 
 }
 @-webkit-keyframes railgun { 
-    0% { -webkit-transform: skew(0rad); filter: blur(0px);} 
-    100% { -webkit-transform: skew(-0.312rad); filter: blur(10.1px); color: yellow;} 
+    0% { -webkit-transform: skew(-0.1rad); filter: blur(0px);} 
+    100% { -webkit-transform: skew(-0.312rad); filter: blur(1.1px); color: yellow;} 
 }
 @keyframes railgun { 
     0% { 
-        -webkit-transform: skew(0rad); 
-        transform: skew(0rad);
+        -webkit-transform: skew(-0.1rad); 
+        transform: skew(-0.1rad);
         filter: blur(0px);
-        color: yellow;
+        
     } 
     100% { 
         -webkit-transform: skew(-0.312rad); 
         transform: skew(-0.312rad);
-        filter: blur(10.1px);
+        filter: blur(1.1px);
+        color: yellow;
+        text-shadow: -50px 0px 30px yellow;
     } 
 }
 
