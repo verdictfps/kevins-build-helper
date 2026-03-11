@@ -444,14 +444,14 @@ console.info("KBH: Setting chamber name indexer");
 let buildToEncode = null;
 
 function encodeBuildAsUri() {
-    console.info("KBH: Encoding build as Base64 string and applying to URL");
+    console.info("KBH: Encoding build as URI string and applying to URL");
     buildToEncode = "build";
     function toBuild(value, key, map) {
         buildToEncode += value.Value;
         buildToEncode += "+";
     }
     coreSelections.forEach(toBuild);
-    const encodedBuild = "#!" + btoa(buildToEncode);
+    const encodedBuild = "#!" + encodeURIComponent(buildToEncode);
    // const decodedBuild = atob(encodedBuild);
      //   console.log(decodedBuild);
         history.pushState(encodedBuild, "", encodedBuild);
@@ -495,7 +495,7 @@ function decodeUriAsBuild() {
     else {
         console.info("KBH: Build found. Converting...");
         let resplit = split[1]
-        let decoded = atob(resplit);
+        let decoded = decodeURIComponent(resplit);
         let split2 = decoded.split("build");
         finalSplit = split2[1].split("+");
         iterationSplit = 0
@@ -504,7 +504,7 @@ function decodeUriAsBuild() {
 
     let defShantPass = false;
     setTimeout(() => {
-    if (split[1].startsWith("YnVpbGR") === true && defShantPass === false ){
+    if (split[1].startsWith("build") === true && defShantPass === false ){
         defShantPass = true;
         console.log(finalSplit);
 
