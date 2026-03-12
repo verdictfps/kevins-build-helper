@@ -3813,8 +3813,6 @@ let scrollsT1 = [
     "Scroll of Plague",
     "Scroll of Surge",
     "Scroll of Water",
-    "Scroll of Holy Fire",
-    "Scroll of Toxic Lobotomy"
 ];
 
 let oilsAllMain = [
