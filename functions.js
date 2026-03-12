@@ -680,11 +680,32 @@ console.info("KBH: Setting scroll value indexer");
     scrollValueIndexer.set("scroll-of-earth", "Scroll of Earth");
     scrollValueIndexer.set("scroll-of-embers", "Scroll of Embers");
     scrollValueIndexer.set("scroll-of-frostbite", "Scroll of Frostbite");
+    scrollValueIndexer.set("scroll-of-light", "Scroll of Light");
+    scrollValueIndexer.set("scroll-of-nature", "Scroll of Nature");
+    scrollValueIndexer.set("scroll-of-plague", "Scroll of Plague");
+    scrollValueIndexer.set("scroll-of-surge", "Scroll of Surge");
+    scrollValueIndexer.set("scroll-of-water", "Scroll of Water");
+    scrollValueIndexer.set("scroll-of-holy-fire", "Scroll of Holy Fire");
     scrollValueIndexer.set("scroll-of-toxic-lobotomy", "Scroll of Toxic Lobotomy");
 
 }
 
 setScrollValueIndexer()
+
+let scrollNameIndexer = new Map();
+
+function setScrollNameIndexer() {
+console.info("KBH: Setting scroll name indexer");
+
+    function addToWNI(value, key, map) {
+        scrollNameIndexer.set(value, key);
+    }
+
+    scrollNameIndexer.forEach(addToWNI);  
+
+}
+
+setScrollNameIndexer()
 
 // It's time to shuffle
 function shuffle(array) {
@@ -1018,6 +1039,40 @@ console.info("KBH: Filtering attachments based on weapon selection");
         document.getElementById("chamberselector").disabled = "disabled";
         document.getElementById("barrelselector").disabled = "disabled";
     }
+}
+
+function animationQueue(type, id) {
+	switch (type) {
+		case "scrollCardIn":
+            document.getElementById(id).classList.remove();
+			document.getElementById(id).classList.add();
+			break;
+        case "scrollCardOut":
+            document.getElementById(id).classList.remove();
+			document.getElementById(id).classList.add();
+            break;
+        case "oilCardSpin1":
+            document.getElementById(id).classList.remove();
+			document.getElementById(id).classList.add();
+            break;
+        case "oilCardSpin2":
+            document.getElementById(id).classList.remove();
+			document.getElementById(id).classList.add();
+            break;
+        case "oilCardSpin3":
+            document.getElementById(id).classList.remove();
+			document.getElementById(id).classList.add();
+            break;
+        case "oilCardSpin4":
+            document.getElementById(id).classList.remove();
+			document.getElementById(id).classList.add();
+            break;
+        case "oilCardSpin5":
+            document.getElementById(id).classList.remove();
+			document.getElementById(id).classList.add();
+            break;
+        default:
+	}
 }
 
 setTimeout(() => {
@@ -1626,24 +1681,36 @@ function oilCalcs(calcOil) {
 
     let scrollDefaultCard = document.getElementById("scrollinfodefault");
 
-    switch (calcOil.ScrollField) {
-        case "scrollinfotoxic":
-            document.getElementById("scrollinfotoxic").classList.remove("scrollcardanimate");
-            setTimeout(() => {
-                document.getElementById("scrollinfotoxic").classList.add("scrollcardanimate");
-            }, 50);
-            scrollDefaultCard.hidden = true;
-            document.getElementById("scrollinfotoxic").hidden = false;
-            break;
-        default:
+    document.getElementById("scrollinfoholyfire").style.display = "none";
+    document.getElementById("scrollinfotoxic").style.display = "none";
+    document.getElementById("scrollinfodark").style.display = "none";
+    document.getElementById("scrollinfoembers").style.display = "none";
+    document.getElementById("scrollinfoearth").style.display = "none";
+    document.getElementById("scrollinfofrostbite").style.display = "none";
+    document.getElementById("scrollinfolight").style.display = "none";
+    document.getElementById("scrollinfonature").style.display = "none";
+    document.getElementById("scrollinfoplague").style.display = "none";
+    document.getElementById("scrollinfosurge").style.display = "none";
+    document.getElementById("scrollinfowater").style.display = "none";
+
+    function animateScrollCard(id) {
+        if (id === "None") {
             scrollDefaultCard.classList.remove("scrollcardanimate");
             setTimeout(() => {
                 scrollDefaultCard.classList.add("scrollcardanimate");
             }, 50);
-            scrollDefaultCard.hidden = false;
-            document.getElementById("scrollinfotoxic").hidden = true;
-            break;
+            scrollDefaultCard.style.display = "flex";
+        }
+        else {
+            document.getElementById(id).classList.remove("scrollcardanimate");
+            setTimeout(() => {
+                document.getElementById(id).classList.add("scrollcardanimate");
+            }, 50);
+            scrollDefaultCard.style.display = "none";
+            document.getElementById(id).style.display = "flex";
+        }
     }
+    animateScrollCard(calcOil.ScrollField);
 
     /////////////
     //// RPM ////
@@ -2031,18 +2098,32 @@ function oilCalcs(calcOil) {
     document.getElementById("cardDamageMultiXComp").innerHTML = "";
     document.getElementById("cardDamageMultiComp").textContent = "";
     document.getElementById("cardDamageXComp").innerHTML = "";
+    document.getElementById("cardDamageScroll").textContent = "";
+
+    document.getElementById("cardDamageTotal").textContent = "";
+    document.getElementById("cardDamageTotalScroll").textContent = "";
+    document.getElementById("cardDamageTotal").style.color = "";
+    document.getElementById("cardDamageTotalArrow").innerHTML = "";
+    document.getElementById("cardDamageTotalArrow").style.color = "";
+    document.getElementById("cardDamageTotalLRArrow").innerHTML = "";
+    document.getElementById("cardDamageTotalLBrac").textContent = "";
+    document.getElementById("cardDamageTotalComp").textContent = "";
+    document.getElementById("cardDamageTotalRBrac").textContent = "";
 
     //// Projectiles
     let weapProj = weapon.Projectiles * (1 + calcOil.ProjectileMult);
+
     //// Damage Add
     let damAdd = weapon.Damage + calcOil.DamageAdd;
     let zeroDamage = weapon.Damage;
+
     //// Damage Multiplier
     let damCalc = damAdd * (1 + calcOil.DamageMult);
     let damRound = Math.round((damCalc + Number.EPSILON)* 100) / 100;
     if (zeroDamage > 0 && damRound <= 0) {
         damRound = zeroDamage * 0.01;
     }
+
     //// Total Damage Calc
     let totalCalc = damRound * weapProj * weapon.MultiShot;
     let totalRound = Math.round((totalCalc + Number.EPSILON)* 100) / 100;
@@ -2052,8 +2133,30 @@ function oilCalcs(calcOil) {
 
     document.getElementById("cardDamageTotal").textContent = totalRound;
 
+    //// Scrolls
+    let scrollDam = 0;
+    let damComp = 0;
+    let totalComp = 0;
+    let scrollMult = 0;
+
+    switch (calcOil.ScrollField) {
+        case "scrollinfoembers":
+            scrollDam = 10;
+            break;
+        default:
+    }
+
+    scrollMult = weapProj * scrollDam * weapon.MultiShot;
+    damComp = damRound + scrollDam;
+    totalComp = totalRound + scrollMult;
+
+    if (scrollDam !== 0) {
+        document.getElementById("cardDamageScroll").textContent = `(+${scrollDam})`;
+        document.getElementById("cardDamageTotalScroll").textContent = `(+${scrollMult})`;
+    }
+console.log(damComp)
     ////// Damage & Projectiles card addition
-    if (damRound < weaponOriginal.Damage) {
+    if (damComp < weaponOriginal.Damage) {
 
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
@@ -2122,7 +2225,7 @@ function oilCalcs(calcOil) {
             }
         }
     }
-    if (damRound > weaponOriginal.Damage) {
+    if (damComp > weaponOriginal.Damage) {
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "Lime";
@@ -2190,7 +2293,7 @@ function oilCalcs(calcOil) {
             }
         }
     }
-    if (damRound === weaponOriginal.Damage) {
+    if (damComp === weaponOriginal.Damage) {
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
@@ -2244,16 +2347,7 @@ function oilCalcs(calcOil) {
 
             ////// Total Damage card addition
 
-            document.getElementById("cardDamageTotal").textContent = "";
-            document.getElementById("cardDamageTotal").style.color = "";
-            document.getElementById("cardDamageTotalArrow").innerHTML = "";
-            document.getElementById("cardDamageTotalArrow").style.color = "";
-            document.getElementById("cardDamageTotalLRArrow").innerHTML = "";
-            document.getElementById("cardDamageTotalLBrac").textContent = "";
-            document.getElementById("cardDamageTotalComp").textContent = "";
-            document.getElementById("cardDamageTotalRBrac").textContent = "";
-
-    if (totalRound > weaponOriginal.TotalDamage) {
+    if (totalComp > weaponOriginal.TotalDamage) {
             document.getElementById("cardDamageTotal").textContent = totalRound;
             document.getElementById("cardDamageTotal").style.color = "Lime";
             document.getElementById("cardDamageTotalArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
@@ -2263,7 +2357,7 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageTotalComp").textContent = weaponOriginal.TotalDamage;
             document.getElementById("cardDamageTotalRBrac").textContent = ")";
     }
-    if (totalRound < weaponOriginal.TotalDamage) {
+    if (totalComp < weaponOriginal.TotalDamage) {
             document.getElementById("cardDamageTotal").textContent = totalRound;
             document.getElementById("cardDamageTotal").style.color = "OrangeRed";
             document.getElementById("cardDamageTotalArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
@@ -2273,7 +2367,7 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageTotalComp").textContent = weaponOriginal.TotalDamage;
             document.getElementById("cardDamageTotalRBrac").textContent = ")";
     }
-    if (totalRound == weaponOriginal.TotalDamage) {
+    if (totalComp == weaponOriginal.TotalDamage) {
         document.getElementById("cardDamageTotal").textContent = totalRound;
     }
     //#endregion
@@ -2305,7 +2399,7 @@ function oilCalcs(calcOil) {
     document.getElementById("cardHeadDamageXComp").innerHTML = "";
 
     let headshotDamage = damRound * (1 + calcOil.HeadshotDamage);
-
+console.log(headshotDamage)
     //// Total Damage Calc
     let totalHead = headshotDamage * weapProj * weapon.MultiShot;
     let totalHeadRound = Math.round((totalHead + Number.EPSILON)* 100) / 100;
@@ -2383,6 +2477,7 @@ function oilCalcs(calcOil) {
         }
     }
     if (headshotDamage > damRound) {
+        console.log(headshotDamage)
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "Lime";
@@ -3380,6 +3475,12 @@ function rollSelections(flag, selector, selID, value, type) {
                 selectedValue = convNameToVal(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
+            case "static-random-scroll-t1":
+                shuffle(scrollsT1);
+                selectedItem = getScrollByName(scrollsT1[0]);
+                selectedValue = scrollNameIndexer.get(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
             case "static-random-ammo-consume-chance":
                 shuffle(oilsAmmo);
                 selectedItem = getOilByName(oilsAmmo[0]);
@@ -3462,12 +3563,7 @@ function rollSelections(flag, selector, selID, value, type) {
                 selectedItem = getOilByName("Durability Loss Multiplier +200%");
                 addToCoreMap(flag, selectedItem, value);
                 break;
-            case "static-durability-loss-multiplier-+350%":
-                selectedItem = getOilByName("Durability Loss Multiplier +350%");
-                addToCoreMap(flag, selectedItem, value);
-                break;
             default:
-                
                 if (value.endsWith("oil") === true) {
                     let selItem = convertToUpper(value);
                     selectedItem = getOilByName(selItem);
@@ -3706,6 +3802,20 @@ function rollSelections(flag, selector, selID, value, type) {
 }
 
 // Arrays; don't add functions below this
+
+let scrollsT1 = [
+    "Scroll of Dark",
+    "Scroll of Earth",
+    "Scroll of Embers",
+    "Scroll of Frostbite",
+    "Scroll of Light",
+    "Scroll of Nature",
+    "Scroll of Plague",
+    "Scroll of Surge",
+    "Scroll of Water",
+    "Scroll of Holy Fire",
+    "Scroll of Toxic Lobotomy"
+];
 
 let oilsAllMain = [
     "Action Oil",
@@ -3989,6 +4099,7 @@ let oilsBounceMain = [
 let oilsSpeedMain = [
     "Arrow Oil",
     "Assassin Dart Oil",
+    "Bolt Oil",
     "Dart Oil",
     "Delayed Hyper Tube Oil",
     "Diesel Oil",
@@ -4150,7 +4261,6 @@ let oilsRPMMain = [
     "Attack Speed Oil",
     "BB Oil",
     "Blurt Oil",
-    "Bolt Oil",
     "Double Fire Oil",
     "Fragile System Oil",
     "Lightweight Oil",

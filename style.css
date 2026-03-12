@@ -879,7 +879,8 @@ mark {
 
 .scrollcard {
     transition: transform 2s ease;
-    transform: translateY(-220px);
+    transform: translateY(-250px);
+    border-top: 0px;
 }
 
 .scrollcardanimate {
