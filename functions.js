@@ -1,4 +1,6 @@
-﻿// friendly reminder to comment your shit cause you're a dumbass and won't remember what this macguyvered code does
+﻿//import html2canvas from 'html2canvas';
+
+// friendly reminder to comment your shit cause you're a dumbass and won't remember what this macguyvered code does
 // also ty stackoverflow
 
 window.mobileCheck = function() {
@@ -337,6 +339,10 @@ if (wrapper.classList.contains("disabled"))
     };
 }
 
+//html2canvas(document.querySelector("#capture")).then(canvas => {
+//    document.body.appendChild(canvas)
+//});
+
 // Global Variables
 
 let weaponsData = null;
@@ -393,6 +399,25 @@ function resetCoreSelections() {
 
 resetCoreSelections()
 
+const tempSelections = new Map();
+
+function resetTempSelections() {
+    console.info("KBH: Resetting temp selections");
+    tempSelections.set("weapon", {Name: "P38 Dirk", Value: "p38-dirk"});
+    tempSelections.set("ench1", {Name: "None", Value: "static-no-selection"});
+    tempSelections.set("ench2", {Name: "None", Value: "static-no-selection"});
+    tempSelections.set("ench3", {Name: "None", Value: "static-no-selection"});
+    tempSelections.set("ench4", {Name: "None", Value: "static-no-selection"});
+    tempSelections.set("ench5", {Name: "None", Value: "static-no-selection"});
+    tempSelections.set("barrel", {Name: "None", Value: "static-no-selection"});
+    tempSelections.set("optic", {Name: "None", Value: "static-no-selection"});
+    tempSelections.set("laser", {Name: "None", Value: "static-no-selection"});
+    tempSelections.set("firemode", {Name: "None", Value: "static-no-selection"});
+    tempSelections.set("chamber", {Name: "None", Value: "static-no-selection"});
+}
+
+resetTempSelections()
+
 const chamberValueIndexer = new Map();
 const chamberNameIndexer = new Map();
 
@@ -415,6 +440,19 @@ function setBarrelValueIndexer() {
     barrelValueIndexer.set("sr-p3-silencer", "SR-P3 Silencer");
     barrelValueIndexer.set("warmage-compensator", "Warmage Compensator");
     barrelValueIndexer.set("m87-albatross-silencer", "M87 Albatross Silencer");
+}
+
+let barrelNameIndexer = new Map();
+
+function setBarrelNameIndexer() {
+    console.info("KBH: Setting barrel name indexer");
+    function addToWNI(value, key, map) {
+        console.log("KBH: Setting barrel name indexer", value, key,)
+        barrelNameIndexer.set(value, key);
+    }
+
+    barrelValueIndexer.forEach(addToWNI);  
+    
 }
 
 
@@ -447,6 +485,7 @@ function encodeBuildAsUri() {
     console.info("KBH: Encoding build as URI string and applying to URL");
     buildToEncode = "build";
     function toBuild(value, key, map) {
+        console.log(value)
         buildToEncode += value.Value;
         buildToEncode += "+";
     }
@@ -456,6 +495,7 @@ function encodeBuildAsUri() {
      //   console.log(decodedBuild);
         history.pushState(encodedBuild, "", encodedBuild);
         //YnVpbGR
+        document.getElementById("linkbox").value = `https://verdictfps.github.io/kevins-build-helper/${encodedBuild}`;
     
 }
 
@@ -482,9 +522,24 @@ function setBuildAsMetadata() {
     //document.querySelector('meta[property="og:image"]').setAttribute("content", `.\\${encodedBuild}`);
 }
 
-function decodeUriAsBuild() {
+/*var encryptedBuild = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
+console.log(encryptedBuild);
+var decryptedBuild = CryptoJS.AES.decrypt(encryptedBuild, "Secret Passphrase");
+console.log(decryptedBuild);
+console.log(decrypted.toString(CryptoJS.enc.Utf8));*/
+
+
+function decodeUriAsBuild(source, link) {
     console.info("KBH: Decoding URL to detect build");
-    const currentURL = window.location.href;
+
+    let currentURL = null;
+    if (source === "load") {
+        currentURL = link;
+    }
+    else {
+        currentURL = window.location.href;
+    }
+    
     let split = currentURL.split("#!");
     let finalSplit = null;
     let iterationSplit = null;
@@ -493,7 +548,7 @@ function decodeUriAsBuild() {
         console.info("KBH: No build found");
     }
     else {
-        console.info("KBH: Build found. Converting...");
+        console.info("KBH: Build found. Loading...");
         let resplit = split[1]
         let decoded = decodeURIComponent(resplit);
         let split2 = decoded.split("build");
@@ -583,6 +638,26 @@ function decodeUriAsBuild() {
         let gunny = weaponValueIndexer.get(yeeteth);
         coreSelections.forEach(grabOils);
         addToCoreMap("weapon", gunny, yeeteth);
+
+        /*let confirmBuild = true;
+        
+        function checkBuild(value, key, map) {
+            let itemCheck = value.Name;
+            if (itemCheck === undefined)
+            {
+                confirmBuild = false;
+            }
+        }
+
+        tempSelections.forEach(checkBuild)
+
+        if (confirmBuild === true) {
+            function convertToCore(value, key, map) {
+                addToTempMap(key, value.Name, value.Value);
+            }
+            tempSelections.forEach(convertToCore)
+        }*/
+
         console.log(coreSelections)
         rollFromBuild();
         defShantPass = false;
@@ -722,25 +797,156 @@ function shuffle(array) {
     }
 }
 
+function copyBuildLink() {
+    let copyObj = document.getElementById("linkbox");
+    copyObj.select;
+    copyObj.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyObj.value);
+    infoboxHover('button', 0, 0, 'Link copied to clipboard')
+}
+
+function pasteBuildLink() {
+    let pasteObj = document.getElementById("linkbox");
+    let currentURL = window.location.href;
+    let reg = /https:\/\/verdictfps\.github\.io\/kevins-build-helper\/[#][!]/;
+        if (pasteObj.value !== currentURL && reg.test(pasteObj.value) == true) {
+            decodeUriAsBuild("load", pasteObj.value)
+            infoboxHover('loadsucceed')
+        }
+        else {
+            infoboxHover('loadfail')
+        }
+}
+function setAllAsRandom() {
+    document.getElementById("weapons").proDropdown.setValue("random-all-weapons");
+    rollAggregator('weapon', 'weapons', 1, "random-all-weapons", "weapon");
+    randomizeAllAttachments();
+    randomizeAllOils();
+}
+
+function commitAll() {
+    commitSelection('weapon', 'weapons', 'weapon');
+    commitAllEnch();
+    commitAllAtt();
+}
+
+function resetAll() {
+    shallNotPass = true;
+    document.getElementById("weapons").proDropdown.setValue("p38-dirk");
+
+    rollAggregator('weapon', 'weapons', 1, "p38-dirk", "weapon");
+    
+    document.getElementById("oils1selector").proDropdown.setValue("static-no-selection");
+    document.getElementById("oils2selector").proDropdown.setValue("static-no-selection");
+    document.getElementById("oils3selector").proDropdown.setValue("static-no-selection");
+    document.getElementById("oils4selector").proDropdown.setValue("static-no-selection");
+    document.getElementById("oils5selector").proDropdown.setValue("static-no-selection");
+    
+    rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench");
+    rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench");
+    rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench");
+    rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench");
+    rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench");
+
+    document.getElementById("barrelselector").proDropdown.setValue("none");
+    document.getElementById("opticselector").proDropdown.setValue("none");
+    document.getElementById("laserselector").proDropdown.setValue("none");
+    document.getElementById("firemodeselector").proDropdown.setValue("none");
+    document.getElementById("chamberselector").proDropdown.setValue("none");
+    
+    rollAggregator('barrel', 'barrelselector', 1, "none", "attachment");
+    rollAggregator('optic', 'opticselector', 2, "none", "attachment");
+    rollAggregator('laser', 'laserselector', 3, "none", "attachment");
+    rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment");
+    rollAggregator('chamber', 'chamberselector', 5, "none", "attachment");
+    shallNotPass = false;
+}
+
+function commitGun() {
+    shallNotPass = true;
+    commitSelection('weapon', 'weapons', 'weapon');
+    shallNotPass = false;
+}
+
+function resetGun() {
+    shallNotPass = true;
+    document.getElementById("weapons").proDropdown.setValue("p38-dirk");
+    rollAggregator('weapon', 'weapons', 1, "p38-dirk", "weapon");
+    shallNotPass = false;
+}
+
+function randomizeGun() {
+    shallNotPass = true;
+    document.getElementById("weapons").proDropdown.setValue("random-all-weapons");
+    rollAggregator('weapon', 'weapons', 1, "random-all-weapons", "weapon");
+    shallNotPass = false;
+}
+/*
+function zip_encode(str) {
+    const ascii = encodeURIComponent(str)
+    const array = new TextEncoder().encode(ascii)
+    const zip = fflate.deflateSync(array, {level: 9})
+    return window.btoa(String.fromCharCode(...zip))
+}
+
+function zip_decode(base64) {
+    const raw = window.atob(base64)
+    const array = Uint8Array.from(raw, c => c.charCodeAt(0))
+    const unzip = fflate.inflateSync(array)
+    const ascii = new TextDecoder().decode(unzip)
+    return decodeURIComponent(ascii)
+}
+
+let zipencode = zip_encode("P38 Dirk");
+let zipdecode = zip_decode(zipencode);
+console.log(zipencode);
+console.log(zipdecode);*/
+let infoboxBlock = false;
 function infoboxHover(elementType, value, name, data) {
-    document.getElementById("mainHeader").innerHTML = "";
-    switch (elementType) {
-        case "button":
-            document.getElementById("infoboxText").innerHTML = data;
-            break;
-        case "option":
-            break;
-        case "stat":
-            break;
-        case "dropdown":
-            break;
-        default:
+    
+    if (infoboxBlock === false) {
+        infoboxBlock = true;
+        document.getElementById("mainHeader").innerHTML = "";
+        switch (elementType) {
+            case "button":
+                document.getElementById("infoboxText").innerHTML = data;
+                infoboxBlock = false;
+                break;
+            case "option":
+                break;
+            case "stat":
+                break;
+            case "dropdown":
+                break;
+            case "loadsucceed":
+                document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: yellow; text-shadow: 0px 0px 5px white'>Build loading...</span>";
+                setTimeout(() => {
+                    document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: lightgreen; animation: goodlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px green'>Build loaded</span>";
+                    setTimeout(() => {
+                        infoboxClear();
+                        infoboxBlock = false;
+                    },2000);
+                },500);
+                break;
+            case "loadfail":
+                document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: red; animation: invalidlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px red'>Invalid link</span>";
+                setTimeout(() => {
+                    infoboxClear();
+                    infoboxBlock = false;
+                },2000);
+                break;
+            default:
+                infoboxBlock = false;
+        }
     }
+    else {}
 }
 
 function infoboxClear() {
-    document.getElementById("infoboxText").innerHTML = "";
-    document.getElementById("mainHeader").innerHTML = "Kevin's Build Helper";
+    if (infoboxBlock === false) {
+        document.getElementById("infoboxText").innerHTML = "";
+        document.getElementById("mainHeader").innerHTML = "Kevin's Build Helper";
+    }
 }
 
 function randomizeAllOils() {
@@ -1198,6 +1404,11 @@ function addAllEventListeners() {
     chamberSelectHandler.selID = 5;
     chamberSelectHandler.selType = "attachment";
 
+    // Buttons and fields
+
+    linkboxHandler = document.getElementById('buttonLoadBuildLink');
+    linkboxHandler.addEventListener('click', pasteBuildLink, false);
+
     // Animations
 
     // Mobile checks
@@ -1222,6 +1433,7 @@ let opticSelectHandler = document.getElementById('opticselector');
 let laserSelectHandler = document.getElementById('laserselector');
 let firemodeSelectHandler = document.getElementById('firemodeselector');
 let chamberSelectHandler = document.getElementById('chamberselector');
+let linkboxHandler = document.getElementById('buttonLoadBuildLink');
 
 let flag = null;
 let selector = null;
@@ -1265,6 +1477,7 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
         setChamberValueIndexer();
         setChamberNameIndexer();
         setBarrelValueIndexer();
+        setBarrelNameIndexer();
 
         loadChamber()
         loadWeapons()
@@ -1638,20 +1851,16 @@ function oilCalcs(calcOil) {
     else {
         chamberStats = getChamberByName(chamberName.Name.Name);
     }
-
+    
     let chamber = chamberStats;
-    if (weapon.AmmoType != "Energy") {
-        weapon.Damage = weapon.DamageMult * chamber.Damage;
-        weapon.AmmoType = chamber.AmmoType;
-        weapon.Projectiles = chamber.Projectiles;
-    }
 
-    if (weaponOriginal.AmmoType != "Energy") {
-        weaponOriginal.Damage = weaponOriginal.DamageMult * weaponOriginalChamber.Damage;
-        weaponOriginal.AmmoType = weaponOriginalChamber.AmmoType;
-        weaponOriginal.Projectiles = weaponOriginalChamber.Projectiles;
-    }
-
+    weapon.Damage = weapon.DamageMultiplier * chamber.Damage;
+    weapon.AmmoType = chamber.AmmoType;
+    weapon.Projectiles = chamber.Projectiles;
+    weaponOriginal.Damage = weaponOriginal.DamageMultiplier * weaponOriginalChamber.Damage;
+    weaponOriginal.AmmoType = weaponOriginalChamber.AmmoType;
+    weaponOriginal.Projectiles = weaponOriginalChamber.Projectiles;
+    
     if (weaponOriginal.AmmoType == "Energy") {
         weaponOriginal.RecoilBase = 0.0;
     }
@@ -1694,6 +1903,7 @@ function oilCalcs(calcOil) {
     document.getElementById("scrollinfowater").style.display = "none";
 
     function animateScrollCard(id) {
+        console.log(id)
         if (id === "None") {
             scrollDefaultCard.classList.remove("scrollcardanimate");
             setTimeout(() => {
@@ -2162,7 +2372,7 @@ console.log(damComp)
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "OrangeRed";
             document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
-            document.getElementById("cardDamageArrow").style.color = OrangeRed;
+            document.getElementById("cardDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageLBrac").textContent = "(";
@@ -2170,7 +2380,7 @@ console.log(damComp)
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "OrangeRed";
             document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
-            document.getElementById("cardDamageProjArrow").style.color = OrangeRed;
+            document.getElementById("cardDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
@@ -3345,6 +3555,51 @@ function addToCoreMap(flag, itemName, itemValue) {
     }
 }
 
+function addToTempMap(flag, itemName, itemValue) {
+    if (itemName !== null) {
+        switch (flag) {
+            case "weapon":
+                coreSelections.set("weapon", {Name: itemName, Value: itemValue});
+                break;
+            case "ench1":
+                coreSelections.set("ench1", {Name: itemName, Value: itemValue});
+                break;
+            case "ench2":
+                coreSelections.set("ench2", {Name: itemName, Value: itemValue});
+                break;
+            case "ench3":
+                coreSelections.set("ench3", {Name: itemName, Value: itemValue});
+                break;
+            case "ench4":
+                coreSelections.set("ench4", {Name: itemName, Value: itemValue});
+                break;
+            case "ench5":
+                coreSelections.set("ench5", {Name: itemName, Value: itemValue});
+                break;
+            case "barrel":
+                coreSelections.set("barrel", {Name: itemName, Value: itemValue});
+                break;
+            case "optic":
+                coreSelections.set("optic", {Name: itemName, Value: itemValue});
+                break;
+            case "laser":
+                coreSelections.set("laser", {Name: itemName, Value: itemValue});
+                break;
+            case "firemode":
+                coreSelections.set("firemode", {Name: itemName, Value: itemValue});
+                break;
+            case "chamber":
+                coreSelections.set("chamber", {Name: itemName, Value: itemValue});
+                break; 
+            case undefined:
+                break;  
+            case "all":
+                break;
+            default:
+        }
+    }
+}
+
 function convertToUpper(item) {
             let compItemRep = item.replaceAll("-", " ");
             var splitStr = compItemRep.toLowerCase().split(' ');
@@ -3418,7 +3673,9 @@ let selChamb = null;
 let selChambName = null;
 
 function setDefaultChamber(gun) {
+    console.log(gun.AmmoType)
     selChamb = getChamberByName(`Chamber Chisel - ${gun.AmmoType}`);
+    console.log(selChamb)
     selChambName = chamberNameIndexer.get(selChamb);
     addToCoreMap("chamber", selChamb, selChambName);
 }
@@ -3446,33 +3703,33 @@ function rollSelections(flag, selector, selID, value, type) {
         switch (value) {
             case "static-no-selection":
                 selectedItem = getOilByName("None");
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-choose":
                 selectedItem = getOilByName("None");
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case null:
                 selectedItem = getOilByName("None");
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "":
                 selectedItem = getOilByName("None");
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case undefined:
                 selectedItem = getOilByName("None");
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-all-oils":
                 shuffle(oilsAll);
                 selectedItem = getOilByName(oilsAll[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-scroll-t1":
@@ -3484,79 +3741,79 @@ function rollSelections(flag, selector, selID, value, type) {
             case "static-random-ammo-consume-chance":
                 shuffle(oilsAmmo);
                 selectedItem = getOilByName(oilsAmmo[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-base-crit-chance":
                 shuffle(oilsCrit);
                 selectedItem = getOilByName(oilsCrit[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-bullet-bounce":
                 shuffle(oilsBounce);
                 selectedItem = getOilByName(oilsBounce[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-bullet-speed":
                shuffle(oilsSpeed);
                 selectedItem = getOilByName(oilsSpeed[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-add-damage":
                 shuffle(oilsAddDam);
                 selectedItem = getOilByName(oilsAddDam[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-mult-damage":
                 shuffle(oilsMultDam);
                 selectedItem = getOilByName(oilsMultDam[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-max-durability":
                 shuffle(oilsDur);
                 selectedItem = getOilByName(oilsDur[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-penetration":
                 shuffle(oilsPen);
                 selectedItem = getOilByName(oilsPen[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-projectiles":
                 shuffle(oilsProj);
                 selectedItem = getOilByName(oilsProj[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-recoil":
                 shuffle(oilsRecoil);
                 selectedItem = getOilByName(oilsRecoil[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-reload-speed":
                shuffle(oilsReload);
                 selectedItem = getOilByName(oilsReload[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-rpm":
                 shuffle(oilsRPM);
                 selectedItem = getOilByName(oilsRPM[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-spread":
                 shuffle(oilsSpread);
                 selectedItem = getOilByName(oilsSpread[0]);
-                selectedValue = convNameToVal(selectedItem.Name);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-durability-loss-multiplier-+200%":
@@ -3565,7 +3822,7 @@ function rollSelections(flag, selector, selID, value, type) {
                 break;
             default:
                 if (value.endsWith("oil") === true) {
-                    let selItem = convertToUpper(value);
+                    let selItem = oilValueIndexer.get(value);
                     selectedItem = getOilByName(selItem);
                 }
                 if (value.startsWith("scroll") === true) {
@@ -3655,32 +3912,41 @@ function rollSelections(flag, selector, selID, value, type) {
 
     function rollAttachment(value, flag) {
         if (flag === "barrel") {
-            switch (value) {
-                case "static-not-applicable":
-                    selectedItem = getBarrelByName("None");
-                    selectedValue = convNameToVal(selectedItem.Name);
-                    addToCoreMap(flag, selectedItem, selectedValue);
-                    break;
-                case "static-choose":
-                    selectedItem = getBarrelByName("None");
-                    selectedValue = convNameToVal(selectedItem.Name);
-                    addToCoreMap(flag, selectedItem, selectedValue);
-                    break;
-                case "none":
-                    selectedItem = getBarrelByName("None");
-                    selectedValue = convNameToVal(selectedItem.Name);
-                    addToCoreMap(flag, selectedItem, selectedValue);
-                    break;
-                case "static-random-barrel":
-                    shuffle(attachmentsBarrels);
-                    selectedItem = getBarrelByName(attachmentsBarrels[0]);
-                    selectedValue = convNameToVal(selectedItem.Name);
-                    addToCoreMap(flag, selectedItem, selectedValue);
-                    break;
-                default:
-                    let selbar = barrelValueIndexer.get(value);
-                    selectedItem = getBarrelByName(selbar);
-                    addToCoreMap(flag, selectedItem, value);
+            if (coreSelections.get("weapon").Name.AmmoType === "Energy") {
+                selectedItem = getBarrelByName("None");
+                selectedValue = barrelNameIndexer.get(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                document.getElementById("barrelselector").proDropdown.setValue("static-not-applicable");
+            }
+            else {
+                switch (value) {
+                    case "static-not-applicable":
+                        selectedItem = getBarrelByName("None");
+                        selectedValue = barrelNameIndexer.get(selectedItem.Name);
+                        addToCoreMap(flag, selectedItem, selectedValue);
+                        break;
+                    case "static-choose":
+                        selectedItem = getBarrelByName("None");
+                        selectedValue = barrelNameIndexer.get(selectedItem.Name);
+                        addToCoreMap(flag, selectedItem, selectedValue);
+                        break;
+                    case "none":
+                        selectedItem = getBarrelByName("None");
+                        selectedValue = barrelNameIndexer.get(selectedItem.Name);
+                        addToCoreMap(flag, selectedItem, selectedValue);
+                        break;
+                    case "static-random-barrel":
+                        shuffle(attachmentsBarrels);
+                        selectedItem = getBarrelByName(attachmentsBarrels[0]);
+                        selectedValue = barrelNameIndexer.get(selectedItem.Name);
+                        addToCoreMap(flag, selectedItem, selectedValue);
+                        break;
+                    default:
+                        let selbar = barrelValueIndexer.get(value);
+                        selectedItem = getBarrelByName(selbar);
+                        addToCoreMap(flag, selectedItem, value);
+                        console.log(coreSelections)
+                }
             }
         }
         if (flag === "optic") {
@@ -3761,27 +4027,35 @@ function rollSelections(flag, selector, selID, value, type) {
             let weapon = coreSelections.get("weapon");
             let weaponName = weapon.Name.Name;
             let weaponStats = getWeaponByName(weaponName);
-            switch (value) {
-                case "static-choose":
-                    let weapCha = coreSelections.get("weapon");
-                    let weapChaObj = weapCha.Name;
-                    setDefaultChamber(weapChaObj);
-                    break;
-                case "none":
-                    let weapCha1 = coreSelections.get("weapon");
-                    let weapChaObj1 = weapCha1.Name;
-                    setDefaultChamber(weapChaObj1);
-                    break;
-                case "static-random-chamber":
-                    shuffle(attachmentsRechambers);
-                    selectedItem = getChamberByName(attachmentsRechambers[0]);
-                    selectedValue = convNameToVal(selectedItem.Name);
-                    addToCoreMap(flag, selectedItem, selectedValue);
-                    break;
-                default:
-                    selectedItem = chamberValueIndexer.get(value);
-                    selectedChamber = getChamberByName(selectedItem);
-                    addToCoreMap(flag, selectedChamber, value);
+            if (coreSelections.get("weapon").Name.AmmoType === "Energy") {
+                let weapCha = coreSelections.get("weapon");
+                let weapChaObj = weapCha.Name;
+                setDefaultChamber(weapChaObj);
+                document.getElementById("chamberselector").proDropdown.setValue("static-not-applicable");
+            }
+            else {
+                switch (value) {
+                    case "static-choose":
+                        let weapCha = coreSelections.get("weapon");
+                        let weapChaObj = weapCha.Name;
+                        setDefaultChamber(weapChaObj);
+                        break;
+                    case "none":
+                        let weapCha1 = coreSelections.get("weapon");
+                        let weapChaObj1 = weapCha1.Name;
+                        setDefaultChamber(weapChaObj1);
+                        break;
+                    case "static-random-chamber":
+                        shuffle(attachmentsRechambers);
+                        selectedItem = getChamberByName(attachmentsRechambers[0]);
+                        selectedValue = convNameToVal(selectedItem.Name);
+                        addToCoreMap(flag, selectedItem, selectedValue);
+                        break;
+                    default:
+                        selectedItem = chamberValueIndexer.get(value);
+                        selectedChamber = getChamberByName(selectedItem);
+                        addToCoreMap(flag, selectedChamber, value);
+                }
             }
         }
     }
@@ -3800,6 +4074,8 @@ function rollSelections(flag, selector, selID, value, type) {
     }
 
 }
+
+
 
 // Arrays; don't add functions below this
 
@@ -4034,6 +4310,34 @@ let oilsAllMain = [
     "Wobble Oil",
     "Zero Fucks Oil",
     "Zooming Oil"];
+
+const oilValueIndexer = new Map();
+
+function setOilValueIndexer() {
+    oilValueIndexer.set("none", "None");
+    console.info("KBH: Setting oil value indexer");
+    oilsAllMain.forEach(oil => {
+        const key = oil.toLowerCase().replaceAll(" ", "-");
+        oilValueIndexer.set(key, oil);
+    });
+}
+
+setOilValueIndexer();
+
+const oilNameIndexer = new Map();
+
+function setOilNameIndexer() {
+console.info("KBH: Setting oil name indexer");
+    oilNameIndexer.set("None", "none");
+    function addToWNI(value, key, map) {
+        oilNameIndexer.set(value, key);
+    }
+
+    oilValueIndexer.forEach(addToWNI);  
+    
+}
+
+setOilNameIndexer()
 
 let oilsAmmoMain = [
     "Bulk Oil",
@@ -4303,7 +4607,7 @@ const gunsAll = [
     "M11A2 Fisk", "Wingman", "Rektor 100rd", "Duhar", "Neuraxis F22",
     "Knop .22", "M182 Pierre-Fusil", "Tailor Marksman MKII",
     "Farsight", "Rokua .308", "Dolphin 99", "D4RT",
-    "Impala Gravita", "Longboy"
+    "Impala Gravita", "Longboy", "Chat-Pardeur 98", "Warpig", "Songbird"
 ];
 
 const gunsPistols = [
@@ -4324,7 +4628,7 @@ const gunsShotguns = [
 
 const gunsSMGs = [
     "Drifter 9", "Vrede", "Ploika Compact",
-    "Ferryman", "M3 Termite", "Deathstar PG", "Valet"
+    "Ferryman", "M3 Termite", "Deathstar PG", "Valet", "Songbird"
 ];
 
 const gunsARs = [
@@ -4333,7 +4637,7 @@ const gunsARs = [
 ];
 
 const gunsLMGs = [
-    "Rektor 100rd", "Duhar", "Neuraxis F22"
+    "Rektor 100rd", "Duhar", "Neuraxis F22", "Chat-Pardeur 98", "Warpig"
 ];
 
 const gunsRifles = [

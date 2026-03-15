@@ -1184,8 +1184,8 @@
         "LongDescription": "None",
         "ScrollField": "None"
       },
-      "Energy": {
-        "Name": "Energy",
+      "Chamber Chisel - Energy": {
+        "Name": "Chamber Chisel - Energy",
         "AmmoType": "Energy",
         "Damage": 50,
         "Projectiles": 1,

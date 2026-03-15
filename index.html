@@ -18,6 +18,8 @@
     <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="csshake.css">
     <style>
+        #screenshot { margin-top: 20px; }
+
         .containertooltip {
             display: flex;
             border: 3px solid #FDB142;
@@ -193,12 +195,15 @@
         }  
     </style>
     <script src="functions.js"></script>
+    <script src="https://kit.fontawesome.com/c7f5a3deaa.js" crossorigin="anonymous"></script>
+    <script src="html2canvas.min.js"></script>
     <script>window.addEventListener("DOMContentLoaded", loadOils);</script>
     <script>window.addEventListener("DOMContentLoaded", loadWeapons);</script>
     <script>window.addEventListener("DOMContentLoaded", loadChamber);</script>
     <script>window.addEventListener("DOMContentLoaded", loadOrigWeapons);</script>
     <script>window.addEventListener("DOMContentLoaded", loadAttachments);</script>
-    <script src="https://kit.fontawesome.com/c7f5a3deaa.js" crossorigin="anonymous"></script>
+    
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.min.js" integrity="sha512-UOtWWEXoMk1WLeC873Gmrkb2/dZMwvN1ViM9C1mNvNmQSeXpEr8sRzXLmUSha1X4x5V892uFmEjiZzUsYiHYiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
 </head>
 <body>
     <style>
@@ -207,7 +212,68 @@
         }
     </style>
     
-    <div class="container" style="border:0px; margin-top: -20px; margin-bottom: -20px; margin-right: 0px">
+ 
+    <script>
+        function captureElement(activated) {
+            // Get the target element
+            document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
+            document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
+            document.getElementById("oilstatcontainer3").classList.remove("spinanimation");
+            document.getElementById("oilstatcontainer4").classList.remove("spinanimation");
+            document.getElementById("oilstatcontainer5").classList.remove("spinanimation");
+
+            document.getElementById("cardOil1Img").classList.remove("otherspinanimation");
+            document.getElementById("cardOil2Img").classList.remove("otherspinanimation");
+            document.getElementById("cardOil3Img").classList.remove("otherspinanimation");
+            document.getElementById("cardOil4Img").classList.remove("otherspinanimation");
+            document.getElementById("cardOil5Img").classList.remove("otherspinanimation");
+
+            document.getElementById("boxglowthing").classList.remove("boxglowthing");
+            document.getElementById("otherboxthing").classList.remove("otherboxthing");
+            document.getElementById("weaponimage").classList.remove("weaponimage");
+            document.getElementById("weaponimage").classList.add("weaponimage2");
+
+            document.getElementById("buttonTakeScreenshot").classList.remove("buttonCommitInd");
+            document.getElementById("buttonCopyBuildLink").classList.remove("buttonCommitInd");
+            document.getElementById("buttonLoadBuildLink").classList.remove("buttonCommitInd");
+            document.getElementById("buttonTakeScreenshot").classList.add("buttonCommitInd2");
+            document.getElementById("buttonCopyBuildLink").classList.add("buttonCommitInd2");
+            document.getElementById("buttonLoadBuildLink").classList.add("buttonCommitInd2");
+
+            document.getElementById("target").style.backgroundColor = "#2D424B";
+
+            let screeny = null;
+            const target = document.getElementById('target');
+            infoboxHover("screenshot");
+            // Use html2canvas to capture the element
+            html2canvas(target, {imageTimeout: 100}).then(canvas => {
+                // Append the canvas to the page
+                canvas.toBlob((blob) => {
+                    const cbi = new ClipboardItem({ 'image/png': blob });
+                    if (activated == true ) {
+                        navigator.clipboard.write([cbi]);
+                        console.log(cbi);
+                    }
+                    screeny = blob;
+            });
+            });
+
+            setTimeout(() => {
+            document.getElementById("boxglowthing").classList.add("boxglowthing");
+            document.getElementById("otherboxthing").classList.add("otherboxthing");
+            document.getElementById("weaponimage").classList.add("weaponimage");
+            document.getElementById("weaponimage").classList.remove("weaponimage2");
+            document.getElementById("buttonTakeScreenshot").classList.remove("buttonCommitInd2");
+            document.getElementById("buttonCopyBuildLink").classList.remove("buttonCommitInd2");
+            document.getElementById("buttonLoadBuildLink").classList.remove("buttonCommitInd2");
+            document.getElementById("buttonTakeScreenshot").classList.add("buttonCommitInd");
+            document.getElementById("buttonCopyBuildLink").classList.add("buttonCommitInd");
+            document.getElementById("buttonLoadBuildLink").classList.add("buttonCommitInd");
+            }, 500);
+        }
+    </script>
+</div>
+    <div class="container" style="border:0px; margin-top: -20px; margin-bottom: 0px; margin-right: 0px">
         <div style="margin:0px; padding:0px; border:0px solid #FDB142;">
             <div class="containerinfobox" hidden id="oil1infobox">
                 <p id="oil1infoboxname" style="color:#FDB142; font-weight: 500; font-size: 1em;">hi</p>
@@ -232,9 +298,22 @@
                     
                     
                 </div>
-                <div style="width: 50%; display: flex; justify-content: center; align-items:center; padding-left: 0px; border: 1px solid #FDB142; margin: 0px; margin-left: 10px; border-radius: 5px; padding-top: 0px; padding-bottom: 0px; margin-top: 2px; height: 100%">
-                    <div style="border: 0px; width: auto; display: flex; justify-content: center; align-items:center;">
-                        <h2>Select a WEAPON</h2>
+                    <div class="containerweapchoose" style="border: 0px; border-radius: 5px; margin-bottom: 5px; margin-top: 10px; margin-right: 0px; margin-left: 10px; padding-left: 0px; height: 100px; display: flex; align-items: center;">
+                        <button class="buttonGeneral" style="padding: 10px; justify-content: center; align-items:center;" id="buttonGenerate" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Rerolls all slots labeled Random')" onmouseout="infoboxClear()" onclick="onGenerate('button')"><span class="fa-solid fa-arrows-spin" style="font-size: 50px;"></span></button>
+                        <button class="buttonGeneral" id="makeallrandom" style="padding: 10px; justify-content: center; align-items:center;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Sets all fields to Random (All, if applicable) and rerolls them')" onmouseout="infoboxClear()" onclick="setAllAsRandom()"><span class="fa-solid fa-shuffle" style="font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
+                        <button class="buttonGeneral" id="resetAllFields" style="padding: 10px; justify-content: center; align-items:center;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Sets Weapon to P38 Dirk and resets all other fields to None')" onmouseout="infoboxClear()" onclick="resetAll()"><span class="fa-solid fa-arrow-rotate-left" style="font-size: 50px;"></span></button>
+                        <button class="buttonGeneral" id="commitAllFields" style="padding: 10px; justify-content: center; align-items:center; margin-right: 0px" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Commits all randomly rolled items to build')" onmouseout="infoboxClear()" onclick="commitAll()"><span class="fa-solid fa-circle-plus" style="font-size: 50px;"></span></button>
+                    </div>
+
+            </div>
+            <div style="display: flex; justify-content: center; align-items:center; padding-left: 0px; border: 1px solid #FDB142; margin: 0px; margin-left: 10px; margin-right: 10px; border-radius: 5px; padding-top: 0px; padding-bottom: 0px; margin-top: 20px; height: 17%; flex-wrap: wrap;">
+                <div style="border: 0px; width: 30%; display: flex; justify-content: center; align-items:center; padding: 0px; flex-wrap: nowrap">
+                        <h2 style="margin: 0px; margin-bottom: -15px">Select a WEAPON</h2>
+                    </div>
+                    <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px; width: auto; flex-wrap: nowrap; border: 0px; justify-content: center; display: flex; padding-left: 10px; margin-top: 15px;">
+                            <button class="buttonCommitInd" id="buttonRandomGun" style="width: 30px; height: 30px; padding: 0px; margin-right: 15px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Sets weapon slot to Random - All and rerolls')" onmouseout="infoboxClear()" onclick="randomizeGun()"><span class="fa-solid fa-shuffle" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
+                            <button class="buttonCommitInd" id="buttonResetGun" style="width: 30px; height: 30px; padding: 0px; margin-right: 15px;" onmouseover="infoboxHover('button', 0, 'buttonResetGun', 'Resets weapon slot to P38 Dirk')" onmouseout="infoboxClear()" onclick="resetGun()"><span class="fa-solid fa-arrow-rotate-left" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
+                            <button class="buttonCommitInd" id="buttonCommitGun" style=" width: 30px; height: 30px; padding: 0px;" onmouseover="infoboxHover('button', 2, 'buttonCommitGun', 'Commits randomly rolled weapon to selection')" onmouseout="infoboxClear()" onclick="commitGun()"><span class="fa-solid fa-circle-plus" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
                     </div>
                     <div id="weaponboxcontain" style="margin: 0px; border: 0px; padding: 0px; padding-left: 0px; width: 80%; display: flex; justify-content: center; align-items:center; margin-right: -3px">
                         <select name="weaponscollection" id="weapons" data-accordion="true" data-collapsible="true" data-collapsed="true" class="custom-dropdown mobiledrop">
@@ -314,7 +393,6 @@
                         </optgroup>
                         </select>
                     </div>
-                </div>
             </div>
             <div class="weaponstuffcontainer" style="border: 0px solid #FDB142; border-radius: 5px; margin-top:10px;">
                 
@@ -1878,16 +1956,22 @@
                 </div>
             </div>
         </div>
-        <div  style="border:0px; margin-left:-5px; margin-bottom: -50px; ">
+        <div style="border:0px; margin-left:-5px; margin-bottom: 0px; margin-top: 25px; padding: 0px;">
+            <div id="target" style="border: 0px; margin: 5px; padding: 0px">
             
-            <div class="containerweapchoose" style="border: 1px solid #FDB142; border-radius: 5px; margin-bottom: 20px; margin-top: 12px; margin-right: 0px; margin-left: 0px; height: 50px; display: flex">
+            <div  class="containerweapon" style="margin-bottom:20px; border: 0px solid #FDB142; padding: 0px; border-radius: 15px 15px 0px 0px; justify-content:space-between; align-items:center;">
+                <div style="display: grid; grid-template-columns: 40% 60%; padding: 0px; margin: 0px; border: 0px">
+                    <div style="padding: 0px; margin: 0px; border: 0px">
+                         <p style="text-align: left; font-weight: 500; font-size: 2em; margin: 0px; padding-bottom: 5px; padding-left: 15px; padding-top: 5px; display: flex; width: auto; flex-wrap: nowrap; justify-content:space-between; align-items:center;" id="cardWeaponName">Weapon</p>
+                    </div>
+                    <div style="white-space: nowrap; display: flex; justify-content:space-between; border: 0px">
+                            <button class="buttonCommitInd" id="buttonTakeScreenshot" style=" width: 40%; height: 30px; padding: 0px; margin: 0px; margin-bottom: 4px; margin-right: 10px; align-items: center; justify-content: space-between;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Takes a screenshot of your build and places it directly on your clipboard')" onmouseout="infoboxClear()" onclick="captureElement(true)"><span style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto">Take Screenshot</span></button>
+                            <button class="buttonCommitInd" id="buttonCopyBuildLink" style=" width: 15%; height: 30px; padding: 0px; margin: 0px; margin-bottom: 4px; margin-right: 10px; align-items: center; justify-content: space-between;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Copies build link to your clipboard')" onmouseout="infoboxClear()" onclick="copyBuildLink()"><span style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto">Copy</span></button>
+                            <button class="buttonCommitInd" id="buttonLoadBuildLink" style=" width: 15%; height: 30px; padding: 0px; margin: 0px; margin-bottom: 4px; margin-right: 10px; align-items: center; justify-content: space-between;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Loads build from pasted link')" onmouseout="infoboxClear()"><span style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto">Load</span></button>
+                        <input id="linkbox" class="linkinputoutput" onchange="pasteBuildLink()" onfocus="this.select()"></input>
                 
-                <div class="containerbutton" style="margin-top: 0px; margin-left: 5px; display: flex; padding: 0px">
-                    <button style="padding: 10px; justify-content: center; display: flex; align-items:center;" id="buttonGenerate" onclick="onGenerate('button')">REGEN RANDOMS</button>
+                    </div>
                 </div>
-            </div>
-            <div class="containerweapon" style="margin-bottom:20px; border: 0px solid #FDB142; padding: 0px; border-radius: 15px 0px;">
-                <p style="text-align: left; font-weight: 500; font-size: 2em; margin: 0px; padding-bottom: 5px; padding-left: 15px; padding-top: 5px;" id="cardWeaponName">Weapon</p>
                 <div id="weaponstatcontainer" class="resultcontainer" style="border-radius: 15px; border: 0px; padding: 0px; anchor-name: --sliding;">
                     <div style="height:325px; border-left: 1px solid #FDB142; padding-left: 5px; height: 100%; padding-top: 5px; padding-bottom: 15px">
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em;">Type: <span style="font-weight:400" id="cardWeaponType"></span></p>
@@ -1929,9 +2013,9 @@
                         </div>
                     </div> 
                     <div style="border-right: 1px solid #FDB142; border-left: 2px solid #FDB142; border-bottom: 2px solid black; height:100%; background-color: #FDB142; padding-left: 3px; padding-bottom: 0px; padding-right: 3px; padding-top: 0px;  z-index: 10; margin: 0px; anchor-name: --sliding2;">
-                            <div id="boxglowthing" style="display:flex; anchor-name: --glow-anchor; height: 154px; justify-content: center; align-items: center; padding: 20px; border: 1px solid #FDB142; border-bottom: 2px solid #FDB142; background-color: none; border-radius: 25px; box-shadow: inset 2px 2px 10px 0px #222222; position: inherited">
-                                <div id="otherboxthing" style="border: 0px; background-color:#22222200; z-index: 98; padding: 0px; width: inherit; position: absolute; position-anchor: --glow-anchor; top: anchor(top); bottom: anchor(bottom);align-content: center;">
-                                    <img id="weaponimage" style="position: relative; max-width:500px; height: auto; max-height: 180px; margin: 0px; margin-right: -100px; margin-left: -100px; z-index: 7; padding: 0px" src="" alt=":">
+                            <div class="boxglowthing" id="boxglowthing" style="display:flex; anchor-name: --glow-anchor; height: 154px; justify-content: center; align-items: center; padding: 20px; border: 1px solid #FDB142; border-bottom: 2px solid #FDB142; background-color: none; border-radius: 25px; position: inherited">
+                                <div id="otherboxthing" class="otherboxthing" style="border: 0px; background-color:#22222200; z-index: 98; padding: 0px; width: inherit; position: absolute; position-anchor: --glow-anchor; top: anchor(top); bottom: anchor(bottom);align-content: center;">
+                                    <img class="weaponimage" id="weaponimage" style="position: relative; max-width:500px; height: auto; max-height: 180px; margin: 0px; margin-right: -100px; margin-left: -100px; z-index: 7; padding: 0px" src="" alt=":">
                                 </div>
                             </div>
                             <div class="containerattach" style="border:0px; height: 35%; margin-top: 0px; padding: 0px; margin-bottom: 0px; padding-left: 0px;">
@@ -1988,17 +2072,17 @@
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em">Bullet Drop: <span style="font-weight:400" id="cardDrop"></span><span id="cardDropArrow"></span><span id="cardDropspace"> </span><span id="cardDropLBrac" class="compLabel" style="font-weight:200"></span><span id="cardDropComp" class="compLabel" style="font-weight:200"></span><span id="cardDropRBrac" class="compLabel" style="font-weight:200"></span></p>
                     </div>
                     <!--Default blank Scroll Card-->
-                    <div id="scrollinfodefault" class="scrollcard" style="height:auto; border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: 1px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B; box-shadow: 0px 5px 0px 0px #8b662d; justify-content: center; text-align: center;">
-                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: 0px; text-align: center; background-color: #FDB142; color: black; padding: 5px; box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.425); width: 100%">Scroll Notes & Unique Stats</h3>
+                    <div id="scrollinfodefault" class="scrollcard" style="height:auto; border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: 1px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B;justify-content: center; text-align: center;">
+                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: 0px; text-align: center; background-color: #FDB142; color: black; padding: 5px;  width: 100%">Scroll Notes & Unique Stats</h3>
                     </div>
                     <!--Scroll Card transitional background-->
-                    <div id="scrollinfobackground" style="border-left: 1px solid #FDB142;; border-right: 1px solid #FDB142; border-bottom: 1px solid #FDB142; z-index: 1; position: absolute; box-shadow: inset 0px 0px 100px black; background-color: #18252b;  width: auto; height: auto; right: anchor(--sliding right); bottom: anchor(--sliding bottom); left: anchor(--bullet-anchor right); top: anchor(--sliding2 bottom); margin: 0px; z-index: 1">
+                    <div id="scrollinfobackground" style="border-left: 1px solid #FDB142;; border-right: 1px solid #FDB142; border-bottom: 1px solid #FDB142; z-index: 1; position: absolute; background-color: #18252b;  width: auto; height: auto; right: anchor(--sliding right); bottom: anchor(--sliding bottom); left: anchor(--bullet-anchor right); top: anchor(--sliding2 bottom); margin: 0px; z-index: 1">
                     </div>
                     <div id="scrollinfobackgroundoverlay" style="border: 0px; z-index: 5; position: absolute; background-color: #2D424B; width: auto; height: 5px; right: anchor(--sliding right); top: anchor(--sliding bottom); left: anchor(--bullet-anchor right); margin: 0px; min-height: 0px; padding: 0px">
                     </div>
                     <!--Toxic Lobotomy Scroll Card-->
-                    <div id="scrollinfotoxic" class="scrollcard" style="border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B; box-shadow: 0px 5px 0px 0px #8b662d; justify-content: center; text-align: center;">
-                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: 0px; text-align: center; background-color: #FDB142; color: black; padding: 5px; box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.425);  width: 100%">Scroll Notes & Unique Stats: <span style="color:lightgreen; font-weight: 500; text-shadow: 0px 0px 2px black, 0px 0px 5px black;">Toxic Lobotomy</span></h3>
+                    <div id="scrollinfotoxic" class="scrollcard" style="border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B;  justify-content: center; text-align: center;">
+                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: 0px; text-align: center; background-color: #FDB142; color: black; padding: 5px;   width: 100%">Scroll Notes & Unique Stats: <span style="color:lightgreen; font-weight: 500; text-shadow: 0px 0px 2px black, 0px 0px 5px black;">Toxic Lobotomy</span></h3>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 10px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Headshot Damage: <span style="font-weight:400; margin-left: 5px;" id="cardHeadDamage"></span><span style="font-weight:400" id="cardHeadDamageArrow"></span><span>  </span><span style="font-weight:400; margin-left: 3px; margin-right: 3px" id="cardHeadDamageX"></span><span> </span><span style="font-weight:400" id="cardHeadDamageProj"></span><span style="font-weight:400" id="cardHeadDamageProjArrow"></span><span>  </span><span style="font-weight:400" id="cardHeadDamageMultiX"></span><span>  </span><span style="font-weight:200" id="cardHeadDamageMulti"></span><span style="font-weight:400" id="cardHeadDamageLRArrow">  </span><span style="font-weight:300" class="compLabel" id="cardHeadDamageLBrac"></span><span style="font-weight:300" class="compLabel" id="cardHeadDamageComp"></span><span> </span><span style="font-weight:300; margin-left: 3px; margin-right: 3px" class="compLabel" id="cardHeadDamageXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardHeadDamageProjComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardHeadDamageMultiXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardHeadDamageMultiComp"></span><span class="compLabel" style="font-weight:300" id="cardHeadDamageRBrac"></span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: auto; margin-right: 10px; display: flex; height: 28px; width: auto; flex-wrap: nowrap"> Total Damage: <span style="font-weight:400; margin-left: 5px;" id="cardHeadDamageTotal"></span><span style="font-weight:400" id="cardHeadDamageTotalArrow"></span><span> </span><span style="font-weight:400" id="cardHeadDamageTotalLRArrow">  </span><span style="font-weight:300" class="compLabel" id="cardHeadDamageTotalLBrac"></span><span style="font-weight:300" class="compLabel" id="cardHeadDamageTotalComp"></span><span style="font-weight:300" class="compLabel" id="cardHeadDamageTotalRBrac"></span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 0px; margin-left: 10px; padding: 0em; width: 100%; flex-wrap: wrap">Headshot damage <span style="color: lightgreen; font-weight: 500; text-shadow: 0px 0px 2px black, 0px 0px 5px black;">+200%</span>, unlike the scroll's stated +300%<br>Always drops organs on hit, even on corpses<br>Durability Loss <span style="color: lightgreen; font-weight: 500; text-shadow: 0px 0px 2px black, 0px 0px 5px black;">+350%</span>. Contributes +1 Durability Usage itself</p>
@@ -2006,8 +2090,8 @@
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 5px; padding: 0em; text-align: center;flex-wrap:wrap;width: 100%">Bullet Speed: <span style="color: lightgreen; font-weight: 500; text-shadow: 0px 0px 2px black, 0px 0px 5px black;">999%</span></p>
                     </div>
                     <!--Light Scroll Card-->
-                    <div id="scrollinfolight" class="scrollcard" style="border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B; box-shadow: 0px 5px 0px 0px #8b662d; justify-content: center; text-align: center;">
-                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: 0px; text-align: center; background-color: #FDB142; color: black; padding: 5px; box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.425);  width: 100%">Scroll Notes & Unique Stats: <span style="color:rgb(252, 255, 70); font-weight: 500; text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0);">Light</span></h3>
+                    <div id="scrollinfolight" class="scrollcard" style="border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B;  justify-content: center; text-align: center;">
+                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: 0px; text-align: center; background-color: #FDB142; color: black; padding: 5px;   width: 100%">Scroll Notes & Unique Stats: <span style="color:rgb(252, 255, 70); font-weight: 500; text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0);">Light</span></h3>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 10px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Base RPM: <span style="color: white; font-weight: 500; text-shadow: 0px 0px 2px rgb(251, 255, 41), 0px 0px 5px black; margin-left: 5px"> -50%</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 10px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Penetrations: <span style="color: white; font-weight: 500; text-shadow: 0px 0px 2px rgb(251, 255, 41), 0px 0px 5px black; margin-left: 5px"> +999</span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 0px; margin-left: 10px; padding: 0em; width: 100%; flex-wrap: wrap">Projectiles lose <span style="color: rgb(255, 255, 255); font-weight: 500; text-shadow: 0px 0px 2px rgb(251, 255, 41), 0px 0px 5px black;">50%</span> damage after penetration</p>
@@ -2015,8 +2099,8 @@
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 5px; padding: 0em; text-align: center;flex-wrap:wrap;width: 100%">Bullet Speed: <span style="color: white; font-weight: 500; text-shadow: 0px 0px 2px rgb(251, 255, 41), 0px 0px 5px black;">999%</span></p>
                     </div>
                     <!--Holy Fire Scroll Card-->
-                    <div id="scrollinfoholyfire" class="scrollcard" style="border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B; box-shadow: 0px 5px 0px 0px #8b662d; justify-content: center; text-align: center;">
-                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: 0px; text-align: center; background-color: #FDB142; color: black; padding: 5px; box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.425);  width: 100%">Scroll Notes & Unique Stats: <span style="color:rgb(252, 255, 70); font-weight: 500; text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 5px rgb(255, 255, 255);">Holy Fire</span></h3>
+                    <div id="scrollinfoholyfire" class="scrollcard" style="border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B;  justify-content: center; text-align: center;">
+                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: 0px; text-align: center; background-color: #FDB142; color: black; padding: 5px;   width: 100%">Scroll Notes & Unique Stats: <span style="color:rgb(252, 255, 70); font-weight: 500; text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 5px rgb(255, 255, 255);">Holy Fire</span></h3>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 10px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Base RPM: <span style="color: white; font-weight: 500; text-shadow: 0px 0px 2px rgb(251, 255, 41), 0px 0px 5px black; margin-left: 5px"> -50%</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 10px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Penetrations: <span style="color: white; font-weight: 500; text-shadow: 0px 0px 2px rgb(251, 255, 41), 0px 0px 5px black; margin-left: 5px"> +999</span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 0px; margin-left: 10px; padding: 0em; width: 100%; flex-wrap: wrap">Projectiles gain <span style="color: rgb(255, 255, 255); font-weight: 500; text-shadow: 0px 0px 2px rgb(251, 255, 41), 0px 0px 5px black;">50%</span> damage after penetration</p>
@@ -2024,57 +2108,57 @@
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 5px; padding: 0em; text-align: center;flex-wrap:wrap;width: 100%">Bullet Speed: <span style="color: white; font-weight: 500; text-shadow: 0px 0px 2px rgb(251, 255, 41), 0px 0px 5px black;">999%</span></p>
                     </div>
                     <!--Dark Scroll Card-->
-                    <div id="scrollinfodark" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B; box-shadow: 0px 5px 0px 0px #8b662d; justify-content: center; text-align: center;">
-                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px; box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.425); width: 100%">Scroll Notes & Unique Stats: <span style="color:rgb(0, 0, 0); font-weight: 500; text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 5px black;">Dark</span></h3>
+                    <div id="scrollinfodark" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B;  justify-content: center; text-align: center;">
+                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px;  width: 100%">Scroll Notes & Unique Stats: <span style="color:rgb(0, 0, 0); font-weight: 500; text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 5px black;">Dark</span></h3>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 10px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Effect: <span style="font-weight:600; margin-left: 5px; text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0); color: black">Blind</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em;  padding: 0em; margin-left: auto; display: flex; width: auto; height: 28px; flex-wrap: nowrap">Proc Chance/Proj: <span style="font-weight:600; margin-left: 5px; text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0); color: black">100%</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: auto; margin-right: 10px; display: flex; height: 28px; width: auto; flex-wrap: nowrap">Damage: <span style="font-weight:600; margin-left: 5px; text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0); color: black">-80%</span></p>
-                        <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 0px; margin-left: 10px; padding: 0em; width: 100%; flex-wrap: wrap"><span style="font-weight:600; margin-left: 5px; text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0); color: black">100%</span> chance per projectile to blind target on hit<br><span style="font-weight:600; margin-left: 5px; text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0); color: black">50%</span>chance per projectile when chambered in 12Ga</p>
+                        <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 0px; margin-left: 10px; padding: 0em; width: 100%; flex-wrap: wrap"><span style="font-weight:600; margin-left: 5px; text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0); color: black">100%</span> chance per projectile to blind target on hit<br><span style="font-weight:600; margin-left: 5px; text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0); color: black">50% </span>chance per projectile when chambered in 12Ga</p>
                     </div>
                     <!--Embers Scroll Card-->
-                    <div id="scrollinfoembers" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B; box-shadow: 0px 5px 0px 0px #8b662d; justify-content: center; text-align: center;">
-                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px; box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.425); width: 100%">Scroll Notes & Unique Stats: <span style="color:rgb(255, 44, 44); font-weight: 500; text-shadow: 0px 0px 2px rgb(217, 255, 0), 0px 0px 5px rgb(255, 0, 0);">Embers</span></h3>
+                    <div id="scrollinfoembers" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B;  justify-content: center; text-align: center;">
+                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px;  width: 100%">Scroll Notes & Unique Stats: <span style="color:rgb(255, 44, 44); font-weight: 500; text-shadow: 0px 0px 2px rgb(217, 255, 0), 0px 0px 5px rgb(255, 0, 0);">Embers</span></h3>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 10px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Effect: <span style="font-weight:400; margin-left: 5px; color:rgb(255, 0, 0);">Burning</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em;  padding: 0em; margin-left: auto; display: flex; width: auto; height: 28px; flex-wrap: nowrap">Proc Chance/Proj: <span style="font-weight:400; margin-left: 5px; color:rgb(255, 0, 0);">20%</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: auto; margin-right: 10px; display: flex; height: 28px; width: auto; flex-wrap: nowrap">Proc: <span style="font-weight:400; margin-left: 5px; color:rgb(255, 0, 0); ">35dmg / sec for 7s</span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 0px; margin-left: 10px; padding: 0em; width: 100%; flex-wrap: wrap"><span style="font-weight:500; margin-left: 5px; color:rgb(255, 0, 0);">20%</span> chance per projectile to inflict<span style="font-weight:500; margin-left: 5px; color:rgb(255, 0, 0);">Burning</span> on target<br><span style="font-weight:500; margin-left: 5px; color:rgb(255, 0, 0);">10%</span>chance per projectile when chambered in 12Ga<br>Applying<span style="font-weight:500; margin-left: 5px; color:rgb(255, 0, 0);">Burning</span> again restarts the timer<br>Ticks faster and deals more damage at max stacks<br>Adds<span style="font-weight:500; margin-left: 5px; color:rgb(0, 0, 0);">+10</span> unmodifiable<span style="font-weight:500; margin-left: 5px; color:rgb(255, 0, 0);">Fire Damage</span> per projectile</p>
                     </div>
                     <!--Earth Scroll Card-->
-                    <div id="scrollinfoearth" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B; box-shadow: 0px 5px 0px 0px #8b662d; justify-content: center; text-align: center;">
-                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px; box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.425); width: 100%">Scroll Notes & Unique Stats: <span style="font-weight: 500; color:rgb(73, 39, 0); text-shadow: 0px 0px 2px rgb(85, 45, 0), 0px 0px 5px rgb(0, 0, 0);">Earth</span></h3>
+                    <div id="scrollinfoearth" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B;  justify-content: center; text-align: center;">
+                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px;  width: 100%">Scroll Notes & Unique Stats: <span style="font-weight: 500; color:rgb(73, 39, 0); text-shadow: 0px 0px 2px rgb(85, 45, 0), 0px 0px 5px rgb(0, 0, 0);">Earth</span></h3>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 100px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Effect: <span style="font-weight:600; margin-left: 5px; color:rgb(73, 39, 0); text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0);">Stun</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em;  padding: 0em; margin-left: auto; margin-right: 50px; display: flex; width: auto; height: 28px; flex-wrap: nowrap">Proc Chance/Proj: <span style="font-weight:600; margin-left: 5px; color:rgb(73, 39, 0); text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0);">20%</span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 0px; margin-left: 10px; padding: 0em; width: 100%; flex-wrap: wrap"><span style="font-weight:600; margin-left: 5px; color:rgb(73, 39, 0); text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0);">20%</span> chance per projectile to stun target<br><span style="font-weight:600; margin-left: 5px; color:rgb(73, 39, 0); text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 5px rgb(0, 0, 0);"">10%</span>chance per projectile when chambered in 12Ga</p>
                     </div>
                     <!--Frostbite Scroll Card-->
-                    <div id="scrollinfofrostbite" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B; box-shadow: 0px 5px 0px 0px #8b662d; justify-content: center; text-align: center;">
-                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px; box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.425); width: 100%">Scroll Notes & Unique Stats: <span style="font-weight: 500; color:rgb(255, 255, 255); text-shadow: 0px 0px 2px rgb(0, 255, 255), 0px 0px 5px rgb(0, 0, 0);">Frostbite</span></h3>
+                    <div id="scrollinfofrostbite" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B;  justify-content: center; text-align: center;">
+                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px;  width: 100%">Scroll Notes & Unique Stats: <span style="font-weight: 500; color:rgb(255, 255, 255); text-shadow: 0px 0px 2px rgb(0, 255, 255), 0px 0px 5px rgb(0, 0, 0);">Frostbite</span></h3>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 100px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Effect: <span style="font-weight:600; margin-left: 5px; color:rgb(0, 255, 242);">Frost</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em;  padding: 0em; margin-left: auto; margin-right: 50px; display: flex; width: auto; height: 28px; flex-wrap: nowrap">Effect: <span style="font-weight:600; margin-left: 5px; color:rgb(0, 255, 242);">Freeze</span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 0px; margin-left: 10px; padding: 0em; width: 100%; flex-wrap: wrap">Every projectile applies<span style="font-weight:600; margin-left: 5px; color:rgb(0, 255, 242);">Frost</span><br>Enemies below 50% HP with enough stacks of<span style="font-weight:600; margin-left: 5px; color:rgb(0, 255, 242);">Frost</span> will<span style="font-weight:600; margin-left: 5px; color:rgb(0, 255, 242);">Freeze</span></p>
                     </div>
-                    <div id="scrollinfonature" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B; box-shadow: 0px 5px 0px 0px #8b662d; justify-content: center; text-align: center;">
-                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px; box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.425); width: 100%">Scroll Notes & Unique Stats: <span style="font-weight: 500; color:rgb(10, 88, 0); text-shadow: 0px 0px 2px rgb(90, 51, 0), 0px 0px 5px rgb(0, 0, 0);">Nature</span></h3>
+                    <div id="scrollinfonature" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B;  justify-content: center; text-align: center;">
+                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px;  width: 100%">Scroll Notes & Unique Stats: <span style="font-weight: 500; color:rgb(10, 88, 0); text-shadow: 0px 0px 2px rgb(90, 51, 0), 0px 0px 5px rgb(0, 0, 0);">Nature</span></h3>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 100px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Effect: <span style="font-weight:600; margin-left: 5px; color:rgb(10, 88, 0); text-shadow: 0px 0px 1px white;">Root</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em;  padding: 0em; margin-left: auto; margin-right: 50px; display: flex; width: auto; height: 28px; flex-wrap: nowrap">Proc Chance: <span style="font-weight:600; margin-left: 5px; color:rgb(10, 88, 0); text-shadow: 0px 0px 1px white;">40%</span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 0px; margin-left: 10px; padding: 0em; width: 100%; flex-wrap: wrap"><span style="font-weight:600; margin-left: 5px; color:rgb(10, 88, 0); text-shadow: 0px 0px 1px white;">40%</span> chance per projectile to<span style="font-weight:600; margin-left: 5px; color:rgb(10, 88, 0); text-shadow: 0px 0px 1px white;">Root</span> target<br><span style="font-weight:600; margin-left: 5px; color:rgb(10, 88, 0); text-shadow: 0px 0px 1px white;">20% </span>chance per projectile when chambered in 12Ga</p>
                     </div>
-                    <div id="scrollinfoplague" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B; box-shadow: 0px 5px 0px 0px #8b662d; justify-content: center; text-align: center;">
-                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px; box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.425); width: 100%">Scroll Notes & Unique Stats: <span style="color:lightgreen; font-weight: 500; text-shadow: 0px 0px 2px black, 0px 0px 5px black;">Plague</span></h3>
+                    <div id="scrollinfoplague" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B;  justify-content: center; text-align: center;">
+                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px;  width: 100%">Scroll Notes & Unique Stats: <span style="color:lightgreen; font-weight: 500; text-shadow: 0px 0px 2px black, 0px 0px 5px black;">Plague</span></h3>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 10px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Effect: <span style="font-weight:400; margin-left: 5px; color: lightgreen;">Poison</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em;  padding: 0em; margin-left: auto; display: flex; width: auto; height: 28px; flex-wrap: nowrap">Proc Chance/Proj: <span style="font-weight:400; margin-left: 5px; color:lightgreen;">25%</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: auto; margin-right: 10px; display: flex; height: 28px; width: auto; flex-wrap: nowrap">Proc: <span style="font-weight:400; margin-left: 5px; color:lightgreen; ">40dmg / 1.5s for 5s</span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 0px; margin-left: 10px; padding: 0em; width: 100%; flex-wrap: wrap"><span style="font-weight:500; margin-left: 5px; color:lightgreen;">25%</span> chance per projectile to inflict<span style="font-weight:500; margin-left: 5px; color:lightgreen;">Poison</span> on target<br><span style="font-weight:500; margin-left: 5px; color:lightgreen;">12.5% </span>chance per projectile when chambered in 12Ga<br>Applying<span style="font-weight:500; margin-left: 5px; color:lightgreen;">Poison</span> again extends the timer, up to a max of 10 ticks<br>Ticks faster and deals more damage at max stacks</p>
                     </div>
-                    <div id="scrollinfosurge" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B; box-shadow: 0px 5px 0px 0px #8b662d; justify-content: center; text-align: center;">
-                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px; box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.425); width: 100%">Scroll Notes & Unique Stats: <span style="font-weight: 500; color:#f2ff3c; text-shadow: 0px 0px 2px rgb(238, 255, 0), 0px 0px 5px rgb(0, 0, 0);">Surge</span></h3>
+                    <div id="scrollinfosurge" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B;  justify-content: center; text-align: center;">
+                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px;  width: 100%">Scroll Notes & Unique Stats: <span style="font-weight: 500; color:#f2ff3c; text-shadow: 0px 0px 2px rgb(238, 255, 0), 0px 0px 5px rgb(0, 0, 0);">Surge</span></h3>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 10px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Effect: <span style="font-weight:600; margin-left: 5px; color:#f2ff3c;">Electrocute</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: auto; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Proc Damage: <span style="font-weight:600; margin-left: 5px; color: #f2ff3c;">60</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em;  padding: 0em; margin-left: auto; margin-right: 10px; display: flex; width: auto; height: 28px; flex-wrap: nowrap">Proc Chance: <span style="font-weight:600; margin-left: 5px; color: #f2ff3c;">15%</span></p>
                         <p class= "cardStat" style="font-size: 0.85em; font-weight:300; line-height: 21px; margin: 0em; margin-top: 0px; margin-left: 10px; padding: 0em; width: 100%; flex-wrap: wrap"><span style="font-weight:600; margin-left: 5px; color:#f2ff3c;">15%</span> chance per projectile to<span style="font-weight:600; margin-left: 5px; color:#f2ff3c;">Electrocute</span> target<br><span style="font-weight:600; margin-left: 5px; color:#f2ff3c;">7.5% </span>chance per projectile when chambered in 12Ga<br>Stacks up to<span style="font-weight:600; margin-left: 5px; color:#f2ff3c;">2x</span></p>
                     </div>
-                    <div id="scrollinfowater" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B; box-shadow: 0px 5px 0px 0px #8b662d; justify-content: center; text-align: center;">
-                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px; box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.425); width: 100%">Scroll Notes & Unique Stats: <span style="font-weight: 500; color:#007ec7; text-shadow: 0px 0px 2px rgb(90, 51, 0), 0px 0px 5px rgb(0, 0, 0);">Water</span></h3>
+                    <div id="scrollinfowater" class="scrollcard" style=" border-bottom: 1px solid #FDB142; border-top: 2px solid black; border-left: px solid #FDB142; z-index: 2; display: none; flex-wrap: wrap; padding: 0px; background-color: #2D424B;  justify-content: center; text-align: center;">
+                        <h3 style="margin-top: 0px; margin-left: -0px; height:20px; margin-right: -0px; margin-bottom: -150px; text-align: center; background-color: #FDB142; color: black; padding: 5px;  width: 100%">Scroll Notes & Unique Stats: <span style="font-weight: 500; color:#007ec7; text-shadow: 0px 0px 2px rgb(90, 51, 0), 0px 0px 5px rgb(0, 0, 0);">Water</span></h3>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: auto; margin-right: auto; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Effect: <span style="font-weight:600; margin-left: 5px; color:#007ec7;">Wet</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em; padding: 0em; margin-left: 10px; display: flex; width: auto; height: 28px; flex-wrap:nowrap;">Bullet Drop: <span style="font-weight:600; margin-left: 5px; color:#007ec7;">+5</span></p>
                         <p class= "cardStat" style="font-size: 0.9em; font-weight:600; line-height: 28px; margin: 0em;  padding: 0em; margin-left: auto; margin-right: 50px; display: flex; width: auto; height: 28px; flex-wrap: nowrap">Damage: <span style="font-weight:600; margin-left: 5px; color:#007ec7;">-99%</span></p>
@@ -2084,40 +2168,41 @@
 
             </div>
             <div class="oilresultcontainer" style="margin-top: -10px;">
-                <div id="oilstatcontainer1" class="spinanimation" style="margin-right:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset; align-items: center; justify-content: center; display: flex; ">
+                <div id="oilstatcontainer1" class="spinanimation" style="margin-right:3px; border-radius: 15px 15px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex; ">
                     <p id="cardOilName1" style="max-width: 150px;">Enchantment Card 1</p>
                 </div>
-                <div id="oilstatcontainer2" style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset; align-items: center; justify-content: center; display: flex; ">
+                <div id="oilstatcontainer2" style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex; ">
                     <p id="cardOilName2" style="max-width: 150px;">Enchantment Card 2</p>
                 </div>
-                <div id="oilstatcontainer3" style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset; align-items: center; justify-content: center; display: flex; ">
+                <div id="oilstatcontainer3" style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex; ">
                     <p id="cardOilName3" style="max-width: 150px;">Enchantment Card 3</p>
                 </div>
-                <div id="oilstatcontainer4" style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset; align-items: center; justify-content: center; display: flex; ">
+                <div id="oilstatcontainer4" style="margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex; ">
                     <p id="cardOilName4" style="max-width: 150px;">Enchantment Card 4</p>
                 </div>
-                <div id="oilstatcontainer5" style="margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; box-shadow: 0px 0px 5px inset; align-items: center; justify-content: center; display: flex; ">
+                <div id="oilstatcontainer5" style="margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex; ">
                     <p id="cardOilName5" style="max-width: 150px;">Enchantment Card 5</p>
                 </div>
-                <div class="oilimages" id="cardOil1Img" style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-right:3px; height: 90px">
+                <div class="oilimages" id="cardOil1Img" style="background-color: antiquewhite; margin-left:0px; margin-right:3px;height: 100px">
                     <p id="cardOilDesc1" style="margin: 0px; font-size: 0.75em; text-shadow:  1px 1px 1px white;">desc</p>
                 </div>
-                <div class="oilimages" id="cardOil2Img"style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
+                <div class="oilimages" id="cardOil2Img"style="background-color: antiquewhite; margin-left:3px; margin-right:3px;height: 100px">
                     <p id="cardOilDesc2" style="margin: 0px; padding-left: -100px; padding-right: -100px; margin-left: -10px; margin-right: -10px;font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>
                 </div>
-                <div class="oilimages" id="cardOil3Img" style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
+                <div class="oilimages" id="cardOil3Img" style="background-color: antiquewhite; margin-left:3px; margin-right:3px;height: 100px">
                     <p id="cardOilDesc3" style="margin: 0px; font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>
                 </div>
-                <div class="oilimages" id="cardOil4Img" style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px; margin-right:3px;">
+                <div class="oilimages" id="cardOil4Img" style="background-color: antiquewhite; margin-left:3px; margin-right:3px;height: 100px">
                     <p id="cardOilDesc4" style="margin: 0px; padding-left: -10px; padding-right: -10px; font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>
                 </div>
-                <div class="oilimages" id="cardOil5Img" style="background-color: antiquewhite; box-shadow: 0px 0px 5px inset; margin-left:3px;">
+                <div class="oilimages" id="cardOil5Img" style="background-color: antiquewhite; margin-left:3px; margin-right:0px; height: 100px">
                     <p id="cardOilDesc5" style="margin: 0px; font-size: 0.75em; text-shadow: 1px 1px 1px white;">desc</p>
                 </div>
             </div>
             
         </div>
         
+    </div>
     </div>
 </body>
 </html>

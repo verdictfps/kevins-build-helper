@@ -243,7 +243,6 @@ body {
         width: 100%;
         height: 100%;
         color: black;
-        box-shadow: 5px 5px 5px black;
         border-radius: 5px;
     }
 
@@ -268,6 +267,7 @@ body {
             box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
             text-shadow: 2px 2px 0px black;
             color: transparent;
+            transform: translate(3px, 3px);
         }
 
     #buttonRandomEnch {
@@ -304,6 +304,7 @@ body {
             box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
             text-shadow: 2px 2px 0px black;
             color: transparent;
+            transform: translate(3px, 3px);
         }
     
     #buttonCommitEnchAll {
@@ -340,6 +341,7 @@ body {
             box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
             text-shadow: 2px 2px 0px black;
             color: transparent;
+            transform: translate(3px, 3px);
         }
 
     #buttonCommitAttAll {
@@ -376,6 +378,7 @@ body {
             box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
             text-shadow: 2px 2px 0px black;
             color: transparent;
+            transform: translate(3px, 3px);
         }
     
     #buttonRandomAtt {
@@ -412,6 +415,7 @@ body {
             box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
             text-shadow: 2px 2px 0px black;
             color: transparent;
+            transform: translate(3px, 3px);
         }
 
     #buttonResetEnch {
@@ -448,6 +452,7 @@ body {
             box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
             text-shadow: 2px 2px 0px black;
             color: transparent;
+            transform: translate(3px, 3px);
         }
     #buttonResetAtt {
         font-family: "Fredoka", sans-serif;
@@ -466,7 +471,7 @@ body {
             font-family: "Fredoka", sans-serif;
             font-weight: 500;
             background-color: #FDB142;
-            border: 3px solid rgb(253, 255, 149);
+            border: 2px solid rgb(253, 255, 149);
             width: 100%;
             box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
             color: rgb(253, 255, 149);
@@ -483,6 +488,7 @@ body {
             box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
             text-shadow: 2px 2px 0px black;
             color: transparent;
+            transform: translate(3px, 3px);
        }
 
 .buttonCommitInd    {
@@ -502,12 +508,28 @@ body {
     align-items: center;
     justify-content: center;
 }
+.buttonCommitInd2    {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    background-color: #FDB142;
+    border: 2px solid black;
+    color: black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 4px;
+    align-items: center;
+    justify-content: center;
+}
 
     .buttonCommitInd:hover {
         font-family: "Fredoka", sans-serif;
         font-weight: 500;
         background-color: #FDB142;
-        border: 3px solid rgb(253, 255, 149);
+        border: 2px solid rgb(253, 255, 149);
         width: 100%;
         box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
         color: rgb(253, 255, 149);
@@ -524,6 +546,53 @@ body {
         box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
         text-shadow: 2px 2px 0px black;
         color: transparent;
+        transform: translate(3px, 3px);
+    }   
+
+.buttonGeneral    {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    background-color: #FDB142;
+    border: 2px solid black;
+    color: black;
+    box-shadow: 3px 3px 0px 0px black;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 4px;
+    margin-right: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+    .buttonGeneral:hover {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        width: 100px;
+        height: 100px;
+        background-color: #FDB142;
+        border: 2px solid rgb(253, 255, 149);
+        box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+        color: rgb(253, 255, 149);
+        border-radius: 10px;
+        text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+    }
+
+    .buttonGeneral:active {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        background-color: #e4a039;
+        border: 1px solid black;
+        box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+        text-shadow: 2px 2px 0px black;
+        color: transparent;
+        transform: translate(3px, 3px);
+        width: 100px;
+        height: 100px;
     }   
 
 #weapons {
@@ -534,6 +603,19 @@ body {
     width: 90%;
     border: 2px solid black;
     border-radius: 5px;
+}
+
+.linkinputoutput {
+    padding: 5px;
+    margin: 0px;
+    margin-right: -3px;
+    margin-left: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 70%;
+    height: 50%;
+    font-family: "Fredoka", sans-serif;
+    justify-content:left;
 }
 
 .custom-select {
@@ -600,6 +682,11 @@ select.custom-dropdown {
 
 .fa-caret-down {
     font-size: 12px;
+    margin: -1px;
+    padding: 0px;
+}
+.fa-arrows-spin {
+    font-size: 20px;
     margin: -1px;
     padding: 0px;
 }
@@ -742,7 +829,7 @@ select.custom-dropdown {
     background-position: bottom right;
 }
 
-#weaponimage {
+.weaponimage {
     animation: breatheGun;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -752,22 +839,26 @@ select.custom-dropdown {
     transition: transform 5s ease-in-out;
 }
 
-#otherboxthing:hover #weaponimage{
+.weaponimage2 {
+    transform: scale(0.7);
+}
+
+.otherboxthing:hover .weaponimage{
     transform: translate(0px, -5px) scale(130%);
     
 }
 
-#otherboxthing:hover {
+.otherboxthing:hover {
     transform: translate(0px, -5px) scale(140%);
     animation-fill-mode: forwards;
 }
-#otherboxthing {
-     transform: scale(1);
-     transition: transform 2s ease-in-out;
-     animation: shake-small 5s ease-in-out infinite;
+.otherboxthing {
+    transform: scale(1);
+    transition: transform 2s ease-in-out;
+    animation: shake-small 5s ease-in-out infinite;
 }
 
-#boxglowthing {
+.boxglowthing {
     animation: insideShadow;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -776,22 +867,23 @@ select.custom-dropdown {
     animation-play-state: running;
     animation-timing-function: ease-out;
     transition: all 2s ease-in-out;
+    box-shadow: inset 2px 2px 10px 0px #222222;
     }
 
-#boxglowthing:hover
+.boxglowthing:hover
 {
     background-color: #111111;
     transition: all 2s ease-in-out;
     animation-fill-mode: both;
 }
  
-#boxglowthing:hover #otherboxthing
+.boxglowthing:hover #otherboxthing
 {
     transform: translate(0px, -5px) scale(140%);
     
 }
 
-#boxglowthing:active
+.boxglowthing:active
 {
     animation: spin 0.1s infinite linear;
     -moz-animation: spin 0.1s infinite linear;
@@ -914,17 +1006,17 @@ mark {
 }
 
 @-moz-keyframes railgun { 
-    0% { -moz-transform: skew(-0.1rad); filter: blur(0px); }
+    0% { -moz-transform: skew(-0.2rad); filter: blur(0px); }
     100% { -moz-transform: skew(-0.312rad); filter: blur(1.1px); color: yellow;} 
 }
 @-webkit-keyframes railgun { 
-    0% { -webkit-transform: skew(-0.1rad); filter: blur(0px);} 
+    0% { -webkit-transform: skew(-0.2rad); filter: blur(0px);} 
     100% { -webkit-transform: skew(-0.312rad); filter: blur(1.1px); color: yellow;} 
 }
 @keyframes railgun { 
     0% { 
-        -webkit-transform: skew(-0.1rad); 
-        transform: skew(-0.1rad);
+        -webkit-transform: skew(-0.2rad); 
+        transform: skew(-0.2rad);
         filter: blur(0px);
         
     } 
@@ -935,6 +1027,22 @@ mark {
         color: yellow;
         text-shadow: -50px 0px 30px yellow;
     } 
+}
+
+@keyframes invalidlink {
+    0% {text-shadow: 0px 0px 20px rgb(255, 100, 100);opacity: 100%;}
+    25% {text-shadow: 0px 0px 20px rgb(255, 86, 86); opacity: 0%;}
+    50% {text-shadow: 0px 0px 50px rgb(255, 88, 88);opacity: 100%;}
+    75% {text-shadow: 0px 0px 20px rgb(255, 116, 116); opacity: 0%;}
+    100% {text-shadow: 0px 0px 20px rgb(255, 94, 94);opacity: 100%;}
+}
+
+@keyframes goodlink {
+    0% {text-shadow: 0px 0px 20px rgb(100, 255, 110);opacity: 100%;}
+    25% {text-shadow: 0px 0px 20px rgb(100, 255, 110); opacity: 0%;}
+    50% {text-shadow: 0px 0px 50px rgb(100, 255, 110);opacity: 100%;}
+    75% {text-shadow: 0px 0px 20px rgb(100, 255, 110); opacity: 0%;}
+    100% {text-shadow: 0px 0px 20px rgb(100, 255, 110);opacity: 100%;}
 }
 
 @keyframes zlayer {
