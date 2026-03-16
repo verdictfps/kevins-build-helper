@@ -1989,6 +1989,9 @@ function oilCalcs(calcOil) {
     weapon.Damage = weapon.DamageMultiplier * chamber.Damage;
     weapon.AmmoType = chamber.AmmoType;
     weapon.Projectiles = chamber.Projectiles;
+    if (weapon.Name === "Augusta") {
+        weapon.Projectiles = 3;
+    }
     weaponOriginal.Damage = weaponOriginal.DamageMultiplier * weaponOriginalChamber.Damage;
     weaponOriginal.AmmoType = weaponOriginalChamber.AmmoType;
     weaponOriginal.Projectiles = weaponOriginalChamber.Projectiles;
@@ -2266,10 +2269,17 @@ function oilCalcs(calcOil) {
     document.getElementById("cardDropLBrac").textContent = "";
     document.getElementById("cardDropComp").textContent = "";
     document.getElementById("cardDropRBrac").textContent = "";
+    document.getElementById("dropmeters").textContent = "";
 
     weapon.BulletDrop += calcOil.BulletDrop;
 
     if (weapon.BulletDrop > 0) {
+        if (calcOil.ScrollField !== "scrollinforocket") {
+            let dropMeters =  (105 / (Math.log(weapon.BulletDrop)) - 20);
+            let dropMeterRound = Math.round((dropMeters + Number.EPSILON)* 100) / 100;
+            document.getElementById("dropmeters").textContent = `~ ${dropMeterRound}m`;
+            document.getElementById("dropimage").src = "./Images/bullet_drop_pos.png";
+        }
         document.getElementById("cardDrop").textContent = weapon.BulletDrop;
         document.getElementById("cardDrop").style.color = "OrangeRed";
         document.getElementById("cardDropArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
@@ -2279,6 +2289,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardDropRBrac").textContent = ")";
     }
     if (weapon.BulletDrop == 0) {
+        document.getElementById("dropimage").src = "./Images/bullet_drop_0.png";
        document.getElementById("cardDrop").textContent = "0";
     }
     //#endregion
