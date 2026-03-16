@@ -1,6 +1,6 @@
 
-let newField = "ScrollField";
-let newDefault = "None";
+let newField = "DamageMultInd";
+let newDefault = 0;
 
 function oilField() {
     console.log("-------------------Starting Oils-------------------");

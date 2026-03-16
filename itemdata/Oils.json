@@ -48,7 +48,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Default": {
       "Name": "Default",
@@ -98,7 +99,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "None": {
       "Name": "None",
@@ -148,7 +150,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Durability Loss Multiplier +200%": {
       "Name": "Durability Loss Multiplier +200%",
@@ -198,7 +201,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Durability Loss Multiplier +350%": {
       "Name": "Durability Loss Multiplier +350%",
@@ -248,7 +252,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Action Oil": {
       "Name": "Action Oil",
@@ -302,7 +307,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Add Damage Oil": {
       "Name": "Add Damage Oil",
@@ -356,7 +362,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Aimless Oil": {
       "Name": "Aimless Oil",
@@ -410,7 +417,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Airsoft Oil": {
       "Name": "Airsoft Oil",
@@ -464,7 +472,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Altruistic Oil": {
       "Name": "Altruistic Oil",
@@ -518,7 +527,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Arkanoid Oil": {
       "Name": "Arkanoid Oil",
@@ -572,7 +582,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Arrow Oil": {
       "Name": "Arrow Oil",
@@ -626,7 +637,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Artery Oil": {
       "Name": "Artery Oil",
@@ -680,7 +692,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Artillery Oil": {
       "Name": "Artillery Oil",
@@ -734,7 +747,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Ascetic Oil": {
       "Name": "Ascetic Oil",
@@ -788,7 +802,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Assassin Dart Oil": {
       "Name": "Assassin Dart Oil",
@@ -842,7 +857,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Attack Speed Oil": {
       "Name": "Attack Speed Oil",
@@ -896,7 +912,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Axe Oil": {
       "Name": "Axe Oil",
@@ -950,7 +967,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Bad Planet Oil": {
       "Name": "Bad Planet Oil",
@@ -1004,7 +1022,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Bandit Oil": {
       "Name": "Bandit Oil",
@@ -1058,7 +1077,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "BB Oil": {
       "Name": "BB Oil",
@@ -1112,7 +1132,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Big Oil": {
       "Name": "Big Oil",
@@ -1166,7 +1187,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Black Friday Oil": {
       "Name": "Black Friday Oil",
@@ -1220,7 +1242,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Blindfold Oil": {
       "Name": "Blindfold Oil",
@@ -1274,7 +1297,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Blurt Oil": {
       "Name": "Blurt Oil",
@@ -1328,7 +1352,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Bolt Oil": {
       "Name": "Bolt Oil",
@@ -1382,7 +1407,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Bombard Oil": {
       "Name": "Bombard Oil",
@@ -1436,7 +1462,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Boomstick Oil": {
       "Name": "Boomstick Oil",
@@ -1490,7 +1517,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Boulder Oil": {
       "Name": "Boulder Oil",
@@ -1544,7 +1572,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Bowl Oil": {
       "Name": "Bowl Oil",
@@ -1598,7 +1627,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Braced Oil": {
       "Name": "Braced Oil",
@@ -1652,7 +1682,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Brute Oil": {
       "Name": "Brute Oil",
@@ -1706,7 +1737,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Bulk Oil": {
       "Name": "Bulk Oil",
@@ -1760,7 +1792,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Bystander Oil": {
       "Name": "Bystander Oil",
@@ -1814,7 +1847,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Carefree Oil": {
       "Name": "Carefree Oil",
@@ -1868,7 +1902,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Careful Oil": {
       "Name": "Careful Oil",
@@ -1922,7 +1957,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Careless Splitter Oil": {
       "Name": "Careless Splitter Oil",
@@ -1976,7 +2012,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Cartoon Oil": {
       "Name": "Cartoon Oil",
@@ -2030,7 +2067,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Casual Oil": {
       "Name": "Casual Oil",
@@ -2084,7 +2122,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Cheap Oil": {
       "Name": "Cheap Oil",
@@ -2138,7 +2177,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Collateral Oil": {
       "Name": "Collateral Oil",
@@ -2192,7 +2232,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Complicated Oil": {
       "Name": "Complicated Oil",
@@ -2246,7 +2287,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Compo Oil": {
       "Name": "Compo Oil",
@@ -2300,7 +2342,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Confidence Oil": {
       "Name": "Confidence Oil",
@@ -2354,7 +2397,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Considerate Oil": {
       "Name": "Considerate Oil",
@@ -2408,7 +2452,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Contained Force Oil": {
       "Name": "Contained Force Oil",
@@ -2462,7 +2507,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Critical Oil": {
       "Name": "Critical Oil",
@@ -2516,7 +2562,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Cycle Oil": {
       "Name": "Cycle Oil",
@@ -2570,7 +2617,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Damage Oil": {
       "Name": "Damage Oil",
@@ -2624,7 +2672,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Dart Oil": {
       "Name": "Dart Oil",
@@ -2678,7 +2727,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Dead Center Oil": {
       "Name": "Dead Center Oil",
@@ -2732,7 +2782,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Delayed Hyper Tube Oil": {
       "Name": "Delayed Hyper Tube Oil",
@@ -2786,7 +2837,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Dense Oil": {
       "Name": "Dense Oil",
@@ -2840,7 +2892,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Detune Oil": {
       "Name": "Detune Oil",
@@ -2894,7 +2947,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Diesel Oil": {
       "Name": "Diesel Oil",
@@ -2948,7 +3002,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Discharge Oil": {
       "Name": "Discharge Oil",
@@ -3002,7 +3057,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Disposable Oil": {
       "Name": "Disposable Oil",
@@ -3056,7 +3112,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Division Oil": {
       "Name": "Division Oil",
@@ -3110,7 +3167,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Do-over Oil": {
       "Name": "Do-over Oil",
@@ -3164,7 +3222,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Double Fire Oil": {
       "Name": "Double Fire Oil",
@@ -3218,7 +3277,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Double Lock Oil": {
       "Name": "Double Lock Oil",
@@ -3272,7 +3332,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Double Nothing Oil": {
       "Name": "Double Nothing Oil",
@@ -3326,7 +3387,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Dum Dum Oil": {
       "Name": "Dum Dum Oil",
@@ -3380,7 +3442,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Dynamic Oil": {
       "Name": "Dynamic Oil",
@@ -3434,7 +3497,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Easy Oil": {
       "Name": "Easy Oil",
@@ -3488,7 +3552,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Easy Plop Oil": {
       "Name": "Easy Plop Oil",
@@ -3542,7 +3607,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Elephant Oil": {
       "Name": "Elephant Oil",
@@ -3596,7 +3662,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Exotic Barrel Oil": {
       "Name": "Exotic Barrel Oil",
@@ -3650,7 +3717,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Expander Oil": {
       "Name": "Expander Oil",
@@ -3704,7 +3772,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Extra Powder Oil": {
       "Name": "Extra Powder Oil",
@@ -3758,7 +3827,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Farsighted Oil": {
       "Name": "Farsighted Oil",
@@ -3812,7 +3882,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Fast Bet Oil": {
       "Name": "Fast Bet Oil",
@@ -3866,7 +3937,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Feature Gun Oil": {
       "Name": "Feature Gun Oil",
@@ -3920,7 +3992,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Fidget Lord Oil": {
       "Name": "Fidget Lord Oil",
@@ -3974,7 +4047,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Fidget Oil": {
       "Name": "Fidget Oil",
@@ -4028,7 +4102,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "First Blood Oil": {
       "Name": "First Blood Oil",
@@ -4082,7 +4157,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Flea Oil": {
       "Name": "Flea Oil",
@@ -4136,7 +4212,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Flow Funnel Oil": {
       "Name": "Flow Funnel Oil",
@@ -4190,7 +4267,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Food Stamp Oil": {
       "Name": "Food Stamp Oil",
@@ -4244,7 +4322,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Fragile System Oil": {
       "Name": "Fragile System Oil",
@@ -4298,7 +4377,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Franciscan Oil": {
       "Name": "Franciscan Oil",
@@ -4352,7 +4432,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Frugal Oil": {
       "Name": "Frugal Oil",
@@ -4406,7 +4487,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Gambler Oil": {
       "Name": "Gambler Oil",
@@ -4460,7 +4542,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Gemini Oil": {
       "Name": "Gemini Oil",
@@ -4514,7 +4597,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Gentle Oil": {
       "Name": "Gentle Oil",
@@ -4568,7 +4652,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Glass Cannon Oil": {
       "Name": "Glass Cannon Oil",
@@ -4622,7 +4707,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Great Oil": {
       "Name": "Great Oil",
@@ -4676,7 +4762,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Grounded Oil": {
       "Name": "Grounded Oil",
@@ -4730,7 +4817,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Gunslinger Oil": {
       "Name": "Gunslinger Oil",
@@ -4784,7 +4872,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Happy Accident Oil": {
       "Name": "Happy Accident Oil",
@@ -4838,7 +4927,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Heavy Lead Oil": {
       "Name": "Heavy Lead Oil",
@@ -4892,7 +4982,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Heavy Oil": {
       "Name": "Heavy Oil",
@@ -4946,7 +5037,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Heavy Pockets Oil": {
       "Name": "Heavy Pockets Oil",
@@ -5000,7 +5092,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Hefty Oil": {
       "Name": "Hefty Oil",
@@ -5054,7 +5147,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Helium Oil": {
       "Name": "Helium Oil",
@@ -5108,7 +5202,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "High Grade Oil": {
       "Name": "High Grade Oil",
@@ -5162,7 +5257,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Hip Blaster Oil": {
       "Name": "Hip Blaster Oil",
@@ -5216,7 +5312,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Hip Marksman Oil": {
       "Name": "Hip Marksman Oil",
@@ -5270,7 +5367,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Hoop Oil": {
       "Name": "Hoop Oil",
@@ -5324,7 +5422,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Hunter Oil": {
       "Name": "Hunter Oil",
@@ -5378,7 +5477,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Hustler Oil": {
       "Name": "Hustler Oil",
@@ -5432,7 +5532,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Hyper Lead Oil": {
       "Name": "Hyper Lead Oil",
@@ -5486,7 +5587,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Imperfect Oil": {
       "Name": "Imperfect Oil",
@@ -5540,7 +5642,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Inconsiderate Oil": {
       "Name": "Inconsiderate Oil",
@@ -5594,7 +5697,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Inherited Oil": {
       "Name": "Inherited Oil",
@@ -5648,7 +5752,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Instant Oil": {
       "Name": "Instant Oil",
@@ -5702,7 +5807,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Judgement Oil": {
       "Name": "Judgement Oil",
@@ -5756,7 +5862,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Jungian Oil": {
       "Name": "Jungian Oil",
@@ -5810,7 +5917,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Keep Oil": {
       "Name": "Keep Oil",
@@ -5864,7 +5972,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Kicker Oil": {
       "Name": "Kicker Oil",
@@ -5918,7 +6027,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Kinetic Oil": {
       "Name": "Kinetic Oil",
@@ -5972,7 +6082,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Last Drop Oil": {
       "Name": "Last Drop Oil",
@@ -6026,7 +6137,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Late Boom Oil": {
       "Name": "Late Boom Oil",
@@ -6080,7 +6192,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Launcher Oil": {
       "Name": "Launcher Oil",
@@ -6134,7 +6247,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Lazy Oil": {
       "Name": "Lazy Oil",
@@ -6188,7 +6302,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Less Recoil Oil": {
       "Name": "Less Recoil Oil",
@@ -6242,7 +6357,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Lightweight Oil": {
       "Name": "Lightweight Oil",
@@ -6296,7 +6412,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Longshot Oil": {
       "Name": "Longshot Oil",
@@ -6350,7 +6467,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Lost In Focus Oil": {
       "Name": "Lost In Focus Oil",
@@ -6404,7 +6522,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Low Roller Oil": {
       "Name": "Low Roller Oil",
@@ -6458,7 +6577,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Machine Oil": {
       "Name": "Machine Oil",
@@ -6512,7 +6632,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Main Discipline Oil": {
       "Name": "Main Discipline Oil",
@@ -6566,7 +6687,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Main Focus Oil": {
       "Name": "Main Focus Oil",
@@ -6620,7 +6742,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Manifestation Oil": {
       "Name": "Manifestation Oil",
@@ -6674,7 +6797,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Matrix Oil": {
       "Name": "Matrix Oil",
@@ -6728,7 +6852,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Micro Wing Oil": {
       "Name": "Micro Wing Oil",
@@ -6782,7 +6907,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Modern Technology Oil": {
       "Name": "Modern Technology Oil",
@@ -6836,7 +6962,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Mosquito Oil": {
       "Name": "Mosquito Oil",
@@ -6890,7 +7017,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Multichamber Oil": {
       "Name": "Multichamber Oil",
@@ -6944,7 +7072,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Multishot Oil": {
       "Name": "Multishot Oil",
@@ -6998,7 +7127,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Needleye Oil": {
       "Name": "Needleye Oil",
@@ -7052,7 +7182,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Nerf Oil": {
       "Name": "Nerf Oil",
@@ -7106,7 +7237,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "No Look Oil": {
       "Name": "No Look Oil",
@@ -7160,7 +7292,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "No Need Oil": {
       "Name": "No Need Oil",
@@ -7214,7 +7347,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Out of the Box Oil": {
       "Name": "Out of the Box Oil",
@@ -7268,7 +7402,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Overclock Oil": {
       "Name": "Overclock Oil",
@@ -7322,7 +7457,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Overdose Oil": {
       "Name": "Overdose Oil",
@@ -7376,7 +7512,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Parallel Mag Oil": {
       "Name": "Parallel Mag Oil",
@@ -7430,7 +7567,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Peashooter Oil": {
       "Name": "Peashooter Oil",
@@ -7484,7 +7622,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Penetration Oil": {
       "Name": "Penetration Oil",
@@ -7538,7 +7677,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Perfect Bounce Oil": {
       "Name": "Perfect Bounce Oil",
@@ -7592,7 +7732,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Perforate Oil": {
       "Name": "Perforate Oil",
@@ -7646,7 +7787,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Plinker Oil": {
       "Name": "Plinker Oil",
@@ -7700,7 +7842,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Plop Back Oil": {
       "Name": "Plop Back Oil",
@@ -7754,7 +7897,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Pool Oil": {
       "Name": "Pool Oil",
@@ -7808,7 +7952,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Potshot Oil": {
       "Name": "Potshot Oil",
@@ -7862,7 +8007,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Puncher Oil": {
       "Name": "Puncher Oil",
@@ -7916,7 +8062,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Puncture Oil": {
       "Name": "Puncture Oil",
@@ -7970,7 +8117,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Purse Gun Oil": {
       "Name": "Purse Gun Oil",
@@ -8024,7 +8172,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Rapid Internals Oil": {
       "Name": "Rapid Internals Oil",
@@ -8078,7 +8227,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Ready Oil": {
       "Name": "Ready Oil",
@@ -8132,7 +8282,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Rebound Oil": {
       "Name": "Rebound Oil",
@@ -8186,7 +8337,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Recycle Oil": {
       "Name": "Recycle Oil",
@@ -8240,7 +8392,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Relax Oil": {
       "Name": "Relax Oil",
@@ -8294,7 +8447,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Release Oil": {
       "Name": "Release Oil",
@@ -8348,7 +8502,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Reload Oil": {
       "Name": "Reload Oil",
@@ -8402,7 +8557,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Ricochet Oil": {
       "Name": "Ricochet Oil",
@@ -8456,7 +8612,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Rigid System Oil": {
       "Name": "Rigid System Oil",
@@ -8510,7 +8667,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Rigor Oil": {
       "Name": "Rigor Oil",
@@ -8564,7 +8722,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Robust Mechanics Oil": {
       "Name": "Robust Mechanics Oil",
@@ -8618,7 +8777,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Rookie Oil": {
       "Name": "Rookie Oil",
@@ -8672,7 +8832,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Rubber Oil": {
       "Name": "Rubber Oil",
@@ -8726,7 +8887,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Rush Job Oil": {
       "Name": "Rush Job Oil",
@@ -8780,7 +8942,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Safety Oil": {
       "Name": "Safety Oil",
@@ -8834,7 +8997,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Satiety Oil": {
       "Name": "Satiety Oil",
@@ -8888,7 +9052,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Saviour Oil": {
       "Name": "Saviour Oil",
@@ -8942,7 +9107,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Scatter Oil": {
       "Name": "Scatter Oil",
@@ -8996,7 +9162,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Scramble Oil": {
       "Name": "Scramble Oil",
@@ -9050,7 +9217,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Seated Fit Oil": {
       "Name": "Seated Fit Oil",
@@ -9104,7 +9272,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Seated Oil": {
       "Name": "Seated Oil",
@@ -9158,7 +9327,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Sect Oil": {
       "Name": "Sect Oil",
@@ -9212,7 +9382,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Sender Oil": {
       "Name": "Sender Oil",
@@ -9266,7 +9437,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Sensible Oil": {
       "Name": "Sensible Oil",
@@ -9320,7 +9492,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Shaved Clip Oil": {
       "Name": "Shaved Clip Oil",
@@ -9374,7 +9547,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Shellman Oil": {
       "Name": "Shellman Oil",
@@ -9428,7 +9602,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Sherlock Oil": {
       "Name": "Sherlock Oil",
@@ -9482,7 +9657,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Shower Oil": {
       "Name": "Shower Oil",
@@ -9536,7 +9712,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Shredder Oil": {
       "Name": "Shredder Oil",
@@ -9590,7 +9767,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Skip Oil": {
       "Name": "Skip Oil",
@@ -9644,7 +9822,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Slick Oil": {
       "Name": "Slick Oil",
@@ -9698,7 +9877,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Slippy Coating Oil": {
       "Name": "Slippy Coating Oil",
@@ -9752,7 +9932,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Slotmachine Oil": {
       "Name": "Slotmachine Oil",
@@ -9806,7 +9987,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Slow Punch Oil": {
       "Name": "Slow Punch Oil",
@@ -9860,7 +10042,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Smart Bullet Oil": {
       "Name": "Smart Bullet Oil",
@@ -9914,7 +10097,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Soft Bullet Oil": {
       "Name": "Soft Bullet Oil",
@@ -9968,7 +10152,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Solid Oil": {
       "Name": "Solid Oil",
@@ -10022,7 +10207,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Spartan Oil": {
       "Name": "Spartan Oil",
@@ -10076,7 +10262,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Speed Trade Oil": {
       "Name": "Speed Trade Oil",
@@ -10130,7 +10317,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Spitter Oil": {
       "Name": "Spitter Oil",
@@ -10184,7 +10372,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Spread Oil": {
       "Name": "Spread Oil",
@@ -10238,7 +10427,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Stability Oil": {
       "Name": "Stability Oil",
@@ -10292,7 +10482,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Stable Hip Oil": {
       "Name": "Stable Hip Oil",
@@ -10346,7 +10537,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Stationary Oil": {
       "Name": "Stationary Oil",
@@ -10400,7 +10592,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Stiffy Fit Oil": {
       "Name": "Stiffy Fit Oil",
@@ -10454,7 +10647,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Stoic Oil": {
       "Name": "Stoic Oil",
@@ -10508,7 +10702,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Suppressive Oil": {
       "Name": "Suppressive Oil",
@@ -10541,8 +10736,8 @@
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "MovingAccuracy": 2,
-      "StatDescription": "Move Accuracy: <span style='color:green'>+200%</span><br>Projectiles: <span style='color:green'>+300%</span><br>Damage: <span style='color:red'>-40%</span><br>Spread: <span style='color:red'>+2.1</span>",
+      "MovingAccuracy": -2,
+      "StatDescription": "Move Accuracy: <span style='color:red'>-200%</span><br>Projectiles: <span style='color:green'>+300%</span><br>Damage: <span style='color:red'>-40%</span><br>Spread: <span style='color:red'>+2.1</span>",
       "DurLossMult": 0,
       "BulletBounciness": 0,
       "ADSCritChance": 0,
@@ -10562,7 +10757,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Surgical Laser Oil": {
       "Name": "Surgical Laser Oil",
@@ -10616,7 +10812,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Synchronicity Oil": {
       "Name": "Synchronicity Oil",
@@ -10670,7 +10867,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Tactical Oil": {
       "Name": "Tactical Oil",
@@ -10724,7 +10922,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Tandem Oil": {
       "Name": "Tandem Oil",
@@ -10778,7 +10977,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Task Oil": {
       "Name": "Task Oil",
@@ -10832,7 +11032,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Tech Support Oil": {
       "Name": "Tech Support Oil",
@@ -10886,7 +11087,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Tension Oil": {
       "Name": "Tension Oil",
@@ -10940,7 +11142,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Terminator Oil": {
       "Name": "Terminator Oil",
@@ -10994,7 +11197,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Thorough Oil": {
       "Name": "Thorough Oil",
@@ -11048,7 +11252,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Tight Barrel Oil": {
       "Name": "Tight Barrel Oil",
@@ -11102,7 +11307,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Too Much Oil": {
       "Name": "Too Much Oil",
@@ -11156,7 +11362,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Trusty Old Oil": {
       "Name": "Trusty Old Oil",
@@ -11210,7 +11417,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Turbulence Oil": {
       "Name": "Turbulence Oil",
@@ -11264,7 +11472,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Twice Oil": {
       "Name": "Twice Oil",
@@ -11318,7 +11527,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Two Time Oil": {
       "Name": "Two Time Oil",
@@ -11372,7 +11582,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Untechnical Oil": {
       "Name": "Untechnical Oil",
@@ -11426,7 +11637,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Vasectomy Oil": {
       "Name": "Vasectomy Oil",
@@ -11480,7 +11692,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Vegan Oil": {
       "Name": "Vegan Oil",
@@ -11534,7 +11747,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Vegetable Oil": {
       "Name": "Vegetable Oil",
@@ -11588,7 +11802,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Velocity Oil": {
       "Name": "Velocity Oil",
@@ -11642,7 +11857,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Walk Easy Oil": {
       "Name": "Walk Easy Oil",
@@ -11696,7 +11912,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Waster Oil": {
       "Name": "Waster Oil",
@@ -11750,7 +11967,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Whim Oil": {
       "Name": "Whim Oil",
@@ -11804,7 +12022,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Whos Counting Oil": {
       "Name": "Whos Counting Oil",
@@ -11858,7 +12077,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Wobble Oil": {
       "Name": "Wobble Oil",
@@ -11912,7 +12132,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Zero Fucks Oil": {
       "Name": "Zero Fucks Oil",
@@ -11966,7 +12187,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Zooming Oil": {
       "Name": "Zooming Oil",
@@ -12020,7 +12242,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     }
   }
 }

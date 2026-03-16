@@ -93,18 +93,26 @@ observer.observe(select, {
     if (node.tagName === "OPTGROUP") {
 
         const g = document.createElement("li");
-        g.className = "custom-group";
-        g.textContent = node.label;
+g.className = "custom-group";
+g.textContent = node.label;
 
-        g.dataset.dropdownId = dropdownId;
+g.dataset.dropdownId = dropdownId;
 
-        g.dataset.collapsible =
-        node.dataset.collapsible === "false" ? "false" : "true";
+g.dataset.collapsible =
+node.dataset.collapsible === "false" ? "false" : "true";
 
-        g.dataset.collapsed =
-            node.dataset.collapsed === "true" ? "true" : "false";
+g.dataset.collapsed =
+node.dataset.collapsed === "true" ? "true" : "false";
 
-        list.appendChild(g);
+Object.assign(g.dataset, node.dataset);
+
+if (node.id)
+    g.id = node.id;
+
+if (node.hidden)
+    g.style.display = "none";
+
+g.dataset.label = node.label;
 
         if (g.dataset.collapsible === "true" &&
             g.dataset.collapsed === "true") {
@@ -177,28 +185,34 @@ function toggleGroup(groupEl) {
     }
 }
 
+// Opening groups in dropdown
 function openGroup(groupEl) {
 
- groupEl.dataset.collapsed = "false";
+    groupEl.dataset.collapsed = "false";
 
     let next = groupEl.nextElementSibling;
 
     while (next && !next.classList.contains("custom-group")) {
+
         if (next.classList.contains("custom-option"))
-            next.style.display = "";
+            next.classList.remove("hidden-group");
+
         next = next.nextElementSibling;
     }
 }
 
+// closing groups in dropdown
 function closeGroup(groupEl) {
 
-groupEl.dataset.collapsed = "true";
+    groupEl.dataset.collapsed = "true";
 
     let next = groupEl.nextElementSibling;
 
     while (next && !next.classList.contains("custom-group")) {
+
         if (next.classList.contains("custom-option"))
-            next.style.display = "none";
+            next.classList.add("hidden-group");
+
         next = next.nextElementSibling;
     }
 }
@@ -219,7 +233,7 @@ function closeAllGroupsExcept(exception) {
     });
 }
 
-    // Select
+    // Selecting
 
     function selectItem(opt) {
 
@@ -234,8 +248,32 @@ function closeAllGroupsExcept(exception) {
     }
 
     // Open Dropdown
-if (wrapper.classList.contains("disabled"))
-    return;
+    if (wrapper.classList.contains("disabled"))
+        return;
+
+    function resetSearch() {
+
+        search.value = "";
+
+        items.forEach(({ li, opt }) => {
+
+            li.classList.remove("search-hidden");
+            li.textContent = opt.text;
+
+        });
+
+        list.querySelectorAll(".custom-group").forEach(group => {
+
+            group.classList.remove("hidden-group-header");
+
+            if (group.dataset.collapsed === "true")
+                closeGroup(group);
+            else
+                openGroup(group);
+
+        });
+
+    }
 
     selected.addEventListener("click", () => {
 
@@ -249,68 +287,136 @@ if (wrapper.classList.contains("disabled"))
     });
 
     document.addEventListener("click", e => {
-        if (!wrapper.contains(e.target))
+        if (!wrapper.contains(e.target)) {
             wrapper.classList.remove("open");
+            resetSearch();
+        }
     });
 
+    
+
     // Search
+
+    function previewOpenGroup(groupEl) {
+
+        let next = groupEl.nextElementSibling;
+
+        while (next && !next.classList.contains("custom-group")) {
+
+            if (next.classList.contains("custom-option"))
+                next.classList.remove("hidden-group");
+
+            next = next.nextElementSibling;
+        }
+    }
 
     search.addEventListener("input", () => {
 
         const term = search.value.toLowerCase();
+        const groupsWithMatches = new Set();
 
-        items.forEach(({ li }) => {
+        items.forEach(({ li, opt }) => {
 
-            const text = li.textContent;
+            const text = opt.text;
             const match = text.toLowerCase().includes(term);
 
-            li.style.display = match ? "" : "none";
+            li.textContent = text;
 
-            if (match && term)
-                li.innerHTML =
-                    text.replace(
-                        new RegExp(`(${term})`, "ig"),
-                        "<mark>$1</mark>"
-                    );
+            if (opt.hidden)
+                return;
+
+            if (term && !match)
+                li.classList.add("search-hidden");
             else
-                li.textContent = text;
+                li.classList.remove("search-hidden");
+
+            if (match && term) {
+
+                li.innerHTML = text.replace(
+                    new RegExp(`(${term})`, "ig"),
+                    "<mark>$1</mark>"
+                );
+
+                let parent = li.previousElementSibling;
+
+                while (parent && !parent.classList.contains("custom-group"))
+                    parent = parent.previousElementSibling;
+
+                if (parent)
+                    groupsWithMatches.add(parent);
+            }
+
         });
+
+        list.querySelectorAll(".custom-group").forEach(group => {
+
+    if (!term) return;
+
+    let next = group.nextElementSibling;
+    let hasVisible = false;
+
+    while (next && !next.classList.contains("custom-group")) {
+
+        if (
+            next.classList.contains("custom-option") &&
+            !next.classList.contains("search-hidden")
+        ) {
+            hasVisible = true;
+            break;
+        }
+
+        next = next.nextElementSibling;
+    }
+
+    if (hasVisible) {
+        group.classList.remove("hidden-group-header");
+        previewOpenGroup(group)
+    } else {
+        group.classList.add("hidden-group-header");
+    }
+
+});
+
     });
 
     // Keyboard Shenanigans
 
-    let index = -1;
+    let highlightedIndex = -1;
 
-    search.addEventListener("keydown", e => {
+search.addEventListener("keydown", e => {
 
-        const visible = items.filter(i =>
-            i.li.style.display !== "none"
-        );
+    const visible = items.filter(({ li }) =>
+        li.offsetParent !== null && !li.classList.contains("search-hidden")
+    );
 
-        if (!visible.length) return;
+    if (!visible.length) return;
 
-        if (e.key === "ArrowDown") {
-            e.preventDefault();
-            index = (index + 1) % visible.length;
-        }
+    if (e.key === "ArrowDown") {
+        highlightedIndex = (highlightedIndex + 1) % visible.length;
+        visible.forEach(({ li }) => li.classList.remove("highlight"));
+        visible[highlightedIndex].li.classList.add("highlight");
+        visible[highlightedIndex].li.scrollIntoView({ block: "nearest" });
+        e.preventDefault();
+    }
 
-        if (e.key === "ArrowUp") {
-            e.preventDefault();
-            index = (index - 1 + visible.length) % visible.length;
-        }
+    if (e.key === "ArrowUp") {
+        highlightedIndex = (highlightedIndex - 1 + visible.length) % visible.length;
+        visible.forEach(({ li }) => li.classList.remove("highlight"));
+        visible[highlightedIndex].li.classList.add("highlight");
+        visible[highlightedIndex].li.scrollIntoView({ block: "nearest" });
+        e.preventDefault();
+    }
 
-        if (e.key === "Enter" && index >= 0) {
-            selectItem(visible[index].opt);
-        }
+    if (e.key === "Enter" && highlightedIndex >= 0) {
+        visible[highlightedIndex].li.click();
+        highlightedIndex = -1;
+    }
 
-        if (e.key === "Escape")
-            wrapper.classList.remove("open");
-
-        items.forEach(i => i.li.classList.remove("active"));
-
-        if (index >= 0)
-            visible[index].li.classList.add("active");
-    });
+    if (e.key === "Escape") {
+        wrapper.classList.remove("open");
+        resetSearch();
+    }
+});
 
     // Jump to selection
 
@@ -418,10 +524,10 @@ function resetTempSelections() {
 
 resetTempSelections()
 
-const chamberValueIndexer = new Map();
-const chamberNameIndexer = new Map();
+let chamberValueIndexer = new Map();
+let chamberNameIndexer = new Map();
 
-const barrelValueIndexer = new Map();
+let barrelValueIndexer = new Map();
 
 function setBarrelValueIndexer() {
     console.info("KBH: Setting barrel value indexer");
@@ -459,7 +565,8 @@ function setBarrelNameIndexer() {
 
 function setChamberValueIndexer() {
 console.info("KBH: Setting chamber value indexer");
-    chamberValueIndexer.set("none", `${setDefaultChamber(coreSelections.get("weapon").Name)}`);
+
+    chamberValueIndexer.set("none", "None");
     chamberValueIndexer.set("chamber-chisel---.50-bmg", "Chamber Chisel - .50 BMG");
     chamberValueIndexer.set("chamber-chisel---12ga", "Chamber Chisel - 12Ga");
     chamberValueIndexer.set("chamber-chisel---5.56mm", "Chamber Chisel - 5.56mm");
@@ -468,16 +575,23 @@ console.info("KBH: Setting chamber value indexer");
 
 }
 
+setChamberValueIndexer();
+
 function setChamberNameIndexer() {
 console.info("KBH: Setting chamber name indexer");
-    chamberValueIndexer.set("None", "none");
-    chamberValueIndexer.set("Chamber Chisel - .50 BMG", "chamber-chisel---.50-bmg");
-    chamberValueIndexer.set("Chamber Chisel - 12Ga", "chamber-chisel---12ga");
-    chamberValueIndexer.set("Chamber Chisel - 5.56mm", "chamber-chisel---5.56mm");
-    chamberValueIndexer.set("Chamber Chisel - 7.62mm", "chamber-chisel---7.62mm");
-    chamberValueIndexer.set("Chamber Chisel - 9mm", "chamber-chisel---9mm");
+    chamberNameIndexer.set("None", "none");
+    chamberNameIndexer.set("Chamber Chisel - .50 BMG", "chamber-chisel---.50-bmg");
+    chamberNameIndexer.set("Chamber Chisel - 12Ga", "chamber-chisel---12ga");
+    chamberNameIndexer.set("Chamber Chisel - 5.56mm", "chamber-chisel---5.56mm");
+    chamberNameIndexer.set("Chamber Chisel - 7.62mm", "chamber-chisel---7.62mm");
+    chamberNameIndexer.set("Chamber Chisel - 9mm", "chamber-chisel---9mm");
 
 }
+
+
+setChamberNameIndexer();
+setBarrelValueIndexer();
+setBarrelNameIndexer();
 
 let buildToEncode = null;
 
@@ -761,7 +875,30 @@ console.info("KBH: Setting scroll value indexer");
     scrollValueIndexer.set("scroll-of-surge", "Scroll of Surge");
     scrollValueIndexer.set("scroll-of-water", "Scroll of Water");
     scrollValueIndexer.set("scroll-of-holy-fire", "Scroll of Holy Fire");
-    scrollValueIndexer.set("scroll-of-toxic-lobotomy", "Scroll of Toxic Lobotomy");
+    scrollValueIndexer.set("scroll-of-aftershock", "Scroll of Aftershock", "Scroll of Toxic Lobotomy");
+    scrollValueIndexer.set("scroll-of-chain-lightning", "Scroll of Chain Lightning");
+    scrollValueIndexer.set("scroll-of-chaos-strike", "Scroll of Chaos Strike");
+    scrollValueIndexer.set("scroll-of-charm", "Scroll of Charm");
+    scrollValueIndexer.set("scroll-of-corpse-explosion", "Scroll of Corpse Explosion");
+    scrollValueIndexer.set("scroll-of-crusader", "Scroll of Crusader");
+    scrollValueIndexer.set("scroll-of-explosions", "Scroll of Explosions");
+    scrollValueIndexer.set("scroll-of-fear", "Scroll of Fear");
+    scrollValueIndexer.set("scroll-of-flame-thrower", "Scroll of Flame Thrower");
+    scrollValueIndexer.set("scroll-of-holy-purge", "Scroll of Holy Purge");
+    scrollValueIndexer.set("scroll-of-lava", "Scroll of Lava");
+    scrollValueIndexer.set("scroll-of-least-resistance", "Scroll of Least Resistance");
+    scrollValueIndexer.set("scroll-of-noxiosa", "Scroll of Noxiosa");
+    scrollValueIndexer.set("scroll-of-pesticide", "Scroll of Pesticide");
+    scrollValueIndexer.set("scroll-of-petrification", "Scroll of Petrification");
+    scrollValueIndexer.set("scroll-of-petroleum", "Scroll of Petroleum");
+    scrollValueIndexer.set("scroll-of-poison-blood", "Scroll of Poison Blood");
+    scrollValueIndexer.set("scroll-of-prism", "Scroll of Prism");
+    scrollValueIndexer.set("scroll-of-rocket-launcher", "Scroll of Rocket Launcher");
+    scrollValueIndexer.set("scroll-of-slush", "Scroll of Slush");
+    scrollValueIndexer.set("scroll-of-sacrifice", "Scroll of Sacrifice");
+    scrollValueIndexer.set("scroll-of-storm-surge", "Scroll of Storm Surge");
+    scrollValueIndexer.set("scroll-of-thunderbolt", "Scroll of Thunderbolt");
+    scrollValueIndexer.set("scroll-of-voodoo", "Scroll of Voodoo");
 
 }
 
@@ -776,7 +913,7 @@ console.info("KBH: Setting scroll name indexer");
         scrollNameIndexer.set(value, key);
     }
 
-    scrollNameIndexer.forEach(addToWNI);  
+    scrollValueIndexer.forEach(addToWNI);  
 
 }
 
@@ -1474,11 +1611,6 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
         rolledOils = [];
         selectedChamber = null;
 
-        setChamberValueIndexer();
-        setChamberNameIndexer();
-        setBarrelValueIndexer();
-        setBarrelNameIndexer();
-
         loadChamber()
         loadWeapons()
         loadOils()
@@ -1901,6 +2033,30 @@ function oilCalcs(calcOil) {
     document.getElementById("scrollinfoplague").style.display = "none";
     document.getElementById("scrollinfosurge").style.display = "none";
     document.getElementById("scrollinfowater").style.display = "none";
+    document.getElementById("scrollinfoaftershock").style.display = "none";
+    document.getElementById("scrollinfochain").style.display = "none";
+    document.getElementById("scrollinfochaos").style.display = "none";
+    document.getElementById("scrollinfocharm").style.display = "none";
+    document.getElementById("scrollinfocorpse").style.display = "none";
+    document.getElementById("scrollinfocrusader").style.display = "none";
+    document.getElementById("scrollinfoexplosions").style.display = "none";
+    document.getElementById("scrollinfofear").style.display = "none";
+    document.getElementById("scrollinfoflamethrower").style.display = "none";
+    document.getElementById("scrollinfopesticide").style.display = "none";
+    document.getElementById("scrollinfoholypurge").style.display = "none";
+    document.getElementById("scrollinfolava").style.display = "none";
+    document.getElementById("scrollinfoleast").style.display = "none";
+    document.getElementById("scrollinfonoxiosa").style.display = "none";
+    document.getElementById("scrollinfopetrification").style.display = "none";
+    document.getElementById("scrollinfopetroleum").style.display = "none";
+    document.getElementById("scrollinfopoisonblood").style.display = "none";
+    document.getElementById("scrollinfoprism").style.display = "none";
+    document.getElementById("scrollinforocket").style.display = "none";
+    document.getElementById("scrollinfoslush").style.display = "none";
+    document.getElementById("scrollinfosacrifice").style.display = "none";
+    document.getElementById("scrollinfostormsurge").style.display = "none";
+    document.getElementById("scrollinfothunderbolt").style.display = "none";
+    document.getElementById("scrollinfovoodoo").style.display = "none";
 
     function animateScrollCard(id) {
         console.log(id)
@@ -2353,6 +2509,14 @@ function oilCalcs(calcOil) {
         case "scrollinfoembers":
             scrollDam = 10;
             break;
+        case "scrollinfoexplosions":
+            scrollDam = 25;
+            break;
+        case "scrollinforocket":
+            scrollDam = 50;
+        case "scrollinfochaos":
+            scrollDam = 50 / weapProj;
+            break;
         default:
     }
 
@@ -2361,8 +2525,8 @@ function oilCalcs(calcOil) {
     totalComp = totalRound + scrollMult;
 
     if (scrollDam !== 0) {
-        document.getElementById("cardDamageScroll").textContent = `(+${scrollDam})`;
-        document.getElementById("cardDamageTotalScroll").textContent = `(+${scrollMult})`;
+        document.getElementById("cardDamageScroll").textContent = ` (+${scrollDam})`;
+        document.getElementById("cardDamageTotalScroll").textContent = ` (+${scrollMult})`;
     }
 console.log(damComp)
     ////// Damage & Projectiles card addition
@@ -3676,11 +3840,15 @@ function setDefaultChamber(gun) {
     console.log(gun.AmmoType)
     selChamb = getChamberByName(`Chamber Chisel - ${gun.AmmoType}`);
     console.log(selChamb)
-    selChambName = chamberNameIndexer.get(selChamb);
+    selChambName = chamberNameIndexer.get(selChamb.Name);
     addToCoreMap("chamber", selChamb, selChambName);
 }
 
 function rollSelections(flag, selector, selID, value, type) {
+    enchAll = enchAllMain.slice();
+    scrollsAll = scrollsAllMain.slice();
+    scrollsT1 = scrollsT1Main.slice();
+    scrollsT2 = scrollsT2Main.slice();
     oilsAll = oilsAllMain.slice();
     oilsAmmo = oilsAmmoMain.slice();
     oilsCrit = oilsCritMain.slice();
@@ -3737,6 +3905,34 @@ function rollSelections(flag, selector, selID, value, type) {
                 selectedItem = getScrollByName(scrollsT1[0]);
                 selectedValue = scrollNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-all-scrolls":
+                shuffle(scrollsAll);
+                selectedItem = getScrollByName(scrollsAll[0]);
+                selectedValue = scrollNameIndexer.get(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-scroll-t2":
+                shuffle(scrollsT2);
+                selectedItem = getScrollByName(scrollsT2[0]);
+                selectedValue = scrollNameIndexer.get(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-all-enchantments":
+                shuffle(enchAll);
+                console.log(enchAll[0])
+                if (enchAll[0].endsWith("Oil") === true) {
+                    selectedItem = getOilByName(enchAll[0]);
+                    selectedValue = oilNameIndexer.get(selectedItem.Name);
+                    console.log(selectedItem, selectedValue)
+                }
+                if (enchAll[0].startsWith("Scroll") === true) {
+                    selectedItem = getScrollByName(enchAll[0]);
+                    selectedValue = scrollNameIndexer.get(selectedItem.Name);
+                    console.log(selectedItem, selectedValue)
+                }
+                addToCoreMap(flag, selectedItem, selectedValue);
+                console.log(flag, selectedItem, selectedValue);
                 break;
             case "static-random-ammo-consume-chance":
                 shuffle(oilsAmmo);
@@ -4040,6 +4236,11 @@ function rollSelections(flag, selector, selID, value, type) {
                         let weapChaObj = weapCha.Name;
                         setDefaultChamber(weapChaObj);
                         break;
+                    case undefined:
+                        let weapCha2 = coreSelections.get("weapon");
+                        let weapChaObj2 = weapCha2.Name;
+                        setDefaultChamber(weapChaObj2);
+                        break;
                     case "none":
                         let weapCha1 = coreSelections.get("weapon");
                         let weapChaObj1 = weapCha1.Name;
@@ -4079,7 +4280,48 @@ function rollSelections(flag, selector, selID, value, type) {
 
 // Arrays; don't add functions below this
 
-let scrollsT1 = [
+let scrollsT1Main = [
+    "Scroll of Dark",
+    "Scroll of Earth",
+    "Scroll of Embers",
+    "Scroll of Frostbite",
+    "Scroll of Light",
+    "Scroll of Nature",
+    "Scroll of Plague",
+    "Scroll of Surge",
+    "Scroll of Water"
+];
+
+let scrollsT2Main = [
+    "Scroll of Holy Fire",
+    "Scroll of Aftershock",
+    "Scroll of Toxic Lobotomy",
+    "Scroll of Chain Lightning",
+    "Scroll of Chaos Strike",
+    "Scroll of Charm",
+    "Scroll of Corpse Explosion",
+    "Scroll of Crusader",
+    "Scroll of Explosions",
+    "Scroll of Fear",
+    "Scroll of Flame Thrower",
+    "Scroll of Holy Purge",
+    "Scroll of Lava",
+    "Scroll of Least Resistance",
+    "Scroll of Noxiosa",
+    "Scroll of Pesticide",
+    "Scroll of Petrification",
+    "Scroll of Petroleum",
+    "Scroll of Poison Blood",
+    "Scroll of Prism",
+    "Scroll of Rocket Launcher",
+    "Scroll of Slush",
+    "Scroll of Sacrifice",
+    "Scroll of Storm Surge",
+    "Scroll of Thunderbolt",
+    "Scroll of Voodoo"
+];
+
+let scrollsAllMain = [
     "Scroll of Dark",
     "Scroll of Earth",
     "Scroll of Embers",
@@ -4089,7 +4331,288 @@ let scrollsT1 = [
     "Scroll of Plague",
     "Scroll of Surge",
     "Scroll of Water",
+    "Scroll of Holy Fire",
+    "Scroll of Aftershock",
+    "Scroll of Toxic Lobotomy",
+    "Scroll of Chain Lightning",
+    "Scroll of Chaos Strike",
+    "Scroll of Charm",
+    "Scroll of Corpse Explosion",
+    "Scroll of Crusader",
+    "Scroll of Explosions",
+    "Scroll of Fear",
+    "Scroll of Flame Thrower",
+    "Scroll of Holy Purge",
+    "Scroll of Lava",
+    "Scroll of Least Resistance",
+    "Scroll of Noxiosa",
+    "Scroll of Pesticide",
+    "Scroll of Petrification",
+    "Scroll of Petroleum",
+    "Scroll of Poison Blood",
+    "Scroll of Prism",
+    "Scroll of Rocket Launcher",
+    "Scroll of Slush",
+    "Scroll of Sacrifice",
+    "Scroll of Storm Surge",
+    "Scroll of Thunderbolt",
+    "Scroll of Voodoo"
 ];
+
+let enchAllMain = [
+     "Scroll of Dark",
+    "Scroll of Earth",
+    "Scroll of Embers",
+    "Scroll of Frostbite",
+    "Scroll of Light",
+    "Scroll of Nature",
+    "Scroll of Plague",
+    "Scroll of Surge",
+    "Scroll of Water",
+    "Scroll of Holy Fire",
+    "Scroll of Aftershock",
+    "Scroll of Toxic Lobotomy",
+    "Scroll of Chain Lightning",
+    "Scroll of Chaos Strike",
+    "Scroll of Charm",
+    "Scroll of Corpse Explosion",
+    "Scroll of Crusader",
+    "Scroll of Explosions",
+    "Scroll of Fear",
+    "Scroll of Flame Thrower",
+    "Scroll of Holy Purge",
+    "Scroll of Lava",
+    "Scroll of Least Resistance",
+    "Scroll of Noxiosa",
+    "Scroll of Pesticide",
+    "Scroll of Petrification",
+    "Scroll of Petroleum",
+    "Scroll of Poison Blood",
+    "Scroll of Prism",
+    "Scroll of Rocket Launcher",
+    "Scroll of Slush",
+    "Scroll of Sacrifice",
+    "Scroll of Storm Surge",
+    "Scroll of Thunderbolt",
+    "Scroll of Voodoo",
+    "Action Oil",
+    "Add Damage Oil",
+    "Aimless Oil",
+    "Airsoft Oil",
+    "Altruistic Oil",
+    "Arkanoid Oil",
+    "Arrow Oil",
+    "Artery Oil",
+    "Artillery Oil",
+    "Ascetic Oil",
+    "Assassin Dart Oil",
+    "Attack Speed Oil",
+    "Axe Oil",
+    "BB Oil",
+    "Bad Planet Oil",
+    "Bandit Oil",
+    "Big Oil",
+    "Black Friday Oil",
+    "Blindfold Oil",
+    "Blurt Oil",
+    "Bolt Oil",
+    "Bombard Oil",
+    "Boomstick Oil",
+    "Boulder Oil",
+    "Bowl Oil",
+    "Braced Oil",
+    "Brute Oil",
+    "Bulk Oil",
+    "Bystander Oil",
+    "Carefree Oil",
+    "Careful Oil",
+    "Careless Splitter Oil",
+    "Cartoon Oil",
+    "Casual Oil",
+    "Cheap Oil",
+    "Collateral Oil",
+    "Complicated Oil",
+    "Compo Oil",
+    "Confidence Oil",
+    "Considerate Oil",
+    "Contained Force Oil",
+    "Critical Oil",
+    "Cycle Oil",
+    "Damage Oil",
+    "Dart Oil",
+    "Dead Center Oil",
+    "Delayed Hyper Tube Oil",
+    "Dense Oil",
+    "Detune Oil",
+    "Diesel Oil",
+    "Discharge Oil",
+    "Disposable Oil",
+    "Division Oil",
+    "Do-over Oil",
+    "Double Fire Oil",
+    "Double Lock Oil",
+    "Double Nothing Oil",
+    "Dum Dum Oil",
+    "Dynamic Oil",
+    "Easy Oil",
+    "Easy Plop Oil",
+    "Elephant Oil",
+    "Exotic Barrel Oil",
+    "Expander Oil",
+    "Extra Powder Oil",
+    "Farsighted Oil",
+    "Fast Bet Oil",
+    "Feature Gun Oil",
+    "Fidget Lord Oil",
+    "Fidget Oil",
+    "First Blood Oil",
+    "Flea Oil",
+    "Flow Funnel Oil",
+    "Food Stamp Oil",
+    "Fragile System Oil",
+    "Franciscan Oil",
+    "Frugal Oil",
+    "Gambler Oil",
+    "Gemini Oil",
+    "Gentle Oil",
+    "Glass Cannon Oil",
+    "Great Oil",
+    "Grounded Oil",
+    "Gunslinger Oil",
+    "Happy Accident Oil",
+    "Heavy Lead Oil",
+    "Heavy Oil",
+    "Heavy Pockets Oil",
+    "Hefty Oil",
+    "Helium Oil",
+    "High Grade Oil",
+    "Hip Blaster Oil",
+    "Hip Marksman Oil",
+    "Hoop Oil",
+    "Hunter Oil",
+    "Hustler Oil",
+    "Hyper Lead Oil",
+    "Imperfect Oil",
+    "Inconsiderate Oil",
+    "Inherited Oil",
+    "Instant Oil",
+    "Judgement Oil",
+    "Jungian Oil",
+    "Keep Oil",
+    "Kicker Oil",
+    "Kinetic Oil",
+    "Last Drop Oil",
+    "Late Boom Oil",
+    "Launcher Oil",
+    "Lazy Oil",
+    "Less Recoil Oil",
+    "Lightweight Oil",
+    "Longshot Oil",
+    "Lost In Focus Oil",
+    "Low Roller Oil",
+    "Machine Oil",
+    "Main Discipline Oil",
+    "Main Focus Oil",
+    "Manifestation Oil",
+    "Matrix Oil",
+    "Micro Wing Oil",
+    "Modern Technology Oil",
+    "Mosquito Oil",
+    "Multichamber Oil",
+    "Multishot Oil",
+    "Needleye Oil",
+    "Nerf Oil",
+    "No Look Oil",
+    "No Need Oil",
+    "Out of the Box Oil",
+    "Overclock Oil",
+    "Overdose Oil",
+    "Parallel Mag Oil",
+    "Peashooter Oil",
+    "Penetration Oil",
+    "Perfect Bounce Oil",
+    "Perforate Oil",
+    "Plinker Oil",
+    "Plop Back Oil",
+    "Pool Oil",
+    "Potshot Oil",
+    "Puncher Oil",
+    "Puncture Oil",
+    "Purse Gun Oil",
+    "Rapid Internals Oil",
+    "Ready Oil",
+    "Rebound Oil",
+    "Recycle Oil",
+    "Relax Oil",
+    "Release Oil",
+    "Reload Oil",
+    "Ricochet Oil",
+    "Rigid System Oil",
+    "Rigor Oil",
+    "Robust Mechanics Oil",
+    "Rookie Oil",
+    "Rubber Oil",
+    "Rush Job Oil",
+    "Safety Oil",
+    "Satiety Oil",
+    "Saviour Oil",
+    "Scatter Oil",
+    "Scramble Oil",
+    "Seated Fit Oil",
+    "Seated Oil",
+    "Sect Oil",
+    "Sender Oil",
+    "Sensible Oil",
+    "Shaved Clip Oil",
+    "Shellman Oil",
+    "Sherlock Oil",
+    "Shower Oil",
+    "Shredder Oil",
+    "Skip Oil",
+    "Slick Oil",
+    "Slippy Coating Oil",
+    "Slotmachine Oil",
+    "Slow Punch Oil",
+    "Smart Bullet Oil",
+    "Soft Bullet Oil",
+    "Solid Oil",
+    "Spartan Oil",
+    "Speed Trade Oil",
+    "Spitter Oil",
+    "Spread Oil",
+    "Stability Oil",
+    "Stable Hip Oil",
+    "Stationary Oil",
+    "Stiffy Fit Oil",
+    "Stoic Oil",
+    "Suppressive Oil",
+    "Surgical Laser Oil",
+    "Synchronicity Oil",
+    "Tactical Oil",
+    "Tandem Oil",
+    "Task Oil",
+    "Tech Support Oil",
+    "Tension Oil",
+    "Terminator Oil",
+    "Thorough Oil",
+    "Tight Barrel Oil",
+    "Too Much Oil",
+    "Trusty Old Oil",
+    "Turbulence Oil",
+    "Twice Oil",
+    "Two Time Oil",
+    "Untechnical Oil",
+    "Vasectomy Oil",
+    "Vegan Oil",
+    "Vegetable Oil",
+    "Velocity Oil",
+    "Walk Easy Oil",
+    "Waster Oil",
+    "Whim Oil",
+    "Whos Counting Oil",
+    "Wobble Oil",
+    "Zero Fucks Oil",
+    "Zooming Oil"];
 
 let oilsAllMain = [
     "Action Oil",
@@ -4427,7 +4950,6 @@ let oilsAddDamMain = [
     "Expander Oil",
     "Fidget Oil",
     "Frugal Oil",
-    "Great Oil",
     "Judgement Oil",
     "Kicker Oil",
     "Late Boom Oil",
@@ -4445,6 +4967,7 @@ let oilsMultDamMain = [
     "First Blood Oil",
     "Franciscan Oil",
     "Glass Cannon Oil",
+    "Great Oil",
     "Grounded Oil",
     "Heavy Oil",
     "Hip Blaster Oil",

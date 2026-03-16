@@ -49,7 +49,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Aftermarket Haukland Silencer": {
       "Name": "Aftermarket Haukland Silencer",
@@ -100,7 +101,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Barrel Extension 2in": {
       "Name": "Barrel Extension 2in",
@@ -151,7 +153,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Barrel Extension 4in": {
       "Name": "Barrel Extension 4in",
@@ -202,7 +205,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Barrel Extension 6in": {
       "Name": "Barrel Extension 6in",
@@ -253,7 +257,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Breznik BMD (Tactical)": {
       "Name": "Breznik BMD (Tactical)",
@@ -304,7 +309,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Breznik BMD": {
       "Name": "Breznik BMD",
@@ -355,7 +361,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Haukland Flash Hider": {
       "Name": "Haukland Flash Hider",
@@ -406,7 +413,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Haukland Silencer": {
       "Name": "Haukland Silencer",
@@ -457,7 +465,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Improvised Barrel Extension": {
       "Name": "Improvised Barrel Extension",
@@ -508,7 +517,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "M87 Albatross Silencer": {
       "Name": "M87 Albatross Silencer",
@@ -559,7 +569,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Shrouded Barrel Extension": {
       "Name": "Shrouded Barrel Extension",
@@ -610,7 +621,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "SR-P3 Silencer": {
       "Name": "SR-P3 Silencer",
@@ -661,7 +673,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     },
     "Warmage Compensator": {
       "Name": "Warmage Compensator",
@@ -712,7 +725,8 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "None"
+      "ScrollField": "None",
+      "DamageMultInd": 0
     }
   }
 }
