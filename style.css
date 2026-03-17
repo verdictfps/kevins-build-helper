@@ -988,6 +988,7 @@ mark {
     text-align: center;
 }
 
+
 .scrollcard {
     transition: transform 1s ease;
     transform: translateY(-250px);

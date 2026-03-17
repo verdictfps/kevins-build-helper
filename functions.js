@@ -572,6 +572,7 @@ console.info("KBH: Setting chamber value indexer");
     chamberValueIndexer.set("chamber-chisel---5.56mm", "Chamber Chisel - 5.56mm");
     chamberValueIndexer.set("chamber-chisel---7.62mm", "Chamber Chisel - 7.62mm");
     chamberValueIndexer.set("chamber-chisel---9mm", "Chamber Chisel - 9mm");
+    chamberValueIndexer.set("chamber-chisel---energy", "Energy");
 
 }
 
@@ -585,6 +586,7 @@ console.info("KBH: Setting chamber name indexer");
     chamberNameIndexer.set("Chamber Chisel - 5.56mm", "chamber-chisel---5.56mm");
     chamberNameIndexer.set("Chamber Chisel - 7.62mm", "chamber-chisel---7.62mm");
     chamberNameIndexer.set("Chamber Chisel - 9mm", "chamber-chisel---9mm");
+    chamberNameIndexer.set("Chamber Chisel - Energy", "chamber-chisel---energy");
 
 }
 
@@ -875,7 +877,7 @@ console.info("KBH: Setting scroll value indexer");
     scrollValueIndexer.set("scroll-of-surge", "Scroll of Surge");
     scrollValueIndexer.set("scroll-of-water", "Scroll of Water");
     scrollValueIndexer.set("scroll-of-holy-fire", "Scroll of Holy Fire");
-    scrollValueIndexer.set("scroll-of-aftershock", "Scroll of Aftershock", "Scroll of Toxic Lobotomy");
+    scrollValueIndexer.set("scroll-of-aftershock", "Scroll of Aftershock");
     scrollValueIndexer.set("scroll-of-chain-lightning", "Scroll of Chain Lightning");
     scrollValueIndexer.set("scroll-of-chaos-strike", "Scroll of Chaos Strike");
     scrollValueIndexer.set("scroll-of-charm", "Scroll of Charm");
@@ -898,6 +900,7 @@ console.info("KBH: Setting scroll value indexer");
     scrollValueIndexer.set("scroll-of-sacrifice", "Scroll of Sacrifice");
     scrollValueIndexer.set("scroll-of-storm-surge", "Scroll of Storm Surge");
     scrollValueIndexer.set("scroll-of-thunderbolt", "Scroll of Thunderbolt");
+    scrollValueIndexer.set("scroll-of-toxic-lobotomy", "Scroll of Toxic Lobotomy");
     scrollValueIndexer.set("scroll-of-voodoo", "Scroll of Voodoo");
 
 }
@@ -2017,7 +2020,6 @@ function oilCalcs(calcOil) {
 
     document.getElementById("cardWeaponType").textContent = weapon.Type;
     document.getElementById("cardAmmoType").textContent = weapon.AmmoType;
-    document.getElementById("cardMagSize").textContent = weapon.MagSize;
 
     //////////////////////
     //// Scroll Cards ////
@@ -2228,6 +2230,36 @@ function oilCalcs(calcOil) {
     }
     //#endregion
 
+    //////////////////
+    //// Mag Size ////
+    //////////////////
+
+    document.getElementById("cardMagSize").textContent = weapon.MagSize;
+
+    let ammoEff = null;
+    let extraEff = null;
+
+    if (ammoCalc < 0) {
+        ammoEff = 0;
+    }
+    else
+    {
+        ammoEff = ammoCalc;
+    }
+
+    if (extraCalc > 1) {
+        extraEff = 1;
+    }
+    else {
+        extraEff = extraCalc;
+    }
+
+    let effMagSize = weapon.MagSize / (ammoEff * (1 + extraEff));
+
+    let effRound = Math.round((effMagSize + Number.EPSILON)* 100) / 100;
+
+    document.getElementById("cardEffMagSize").textContent = effRound;
+
     /////////////////
     //// Bounces ////
     /////////////////
@@ -2360,9 +2392,6 @@ function oilCalcs(calcOil) {
     document.getElementById("cardCrit%").style.color = "";
     document.getElementById("cardCritArrow").innerHTML = "";
     document.getElementById("cardCritArrow").style.color = "";
-    document.getElementById("cardCritLBrac").textContent = "";
-    document.getElementById("cardCritComp").textContent = "";
-    document.getElementById("cardCritRBrac").textContent = "";
 
     let baseCalc = calcOil.BaseCritChance;
     let baseConv = percentConv(baseCalc);
@@ -2377,9 +2406,6 @@ function oilCalcs(calcOil) {
         document.getElementById("cardCrit%").style.color = "Lime";
         document.getElementById("cardCritArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardCritArrow").style.color = "Lime";
-        document.getElementById("cardCritLBrac").textContent = "(";
-        document.getElementById("cardCritComp").textContent = "0%";
-        document.getElementById("cardCritRBrac").textContent = ")";
     }
     else {
         document.getElementById("cardCrit").textContent = "0%";
@@ -2397,9 +2423,6 @@ function oilCalcs(calcOil) {
     document.getElementById("cardADSCrit%").style.color = "";
     document.getElementById("cardADSCritArrow").innerHTML = "";
     document.getElementById("cardADSCritArrow").style.color = "";
-    document.getElementById("cardADSCritLBrac").textContent = "";
-    document.getElementById("cardADSCritComp").textContent = "";
-    document.getElementById("cardADSCritRBrac").textContent = "";
 
     let adsConv = percentConv(calcOil.ADSCritChance);
     let adsCalc = weapon.ADSCritChance + adsConv;
@@ -2413,9 +2436,6 @@ function oilCalcs(calcOil) {
         document.getElementById("cardADSCrit%").style.color = "Lime";
         document.getElementById("cardADSCritArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardADSCritArrow").style.color = "Lime";
-        document.getElementById("cardADSCritLBrac").textContent = "(";
-        document.getElementById("cardADSCritComp").textContent = "0%";
-        document.getElementById("cardADSCritRBrac").textContent = ")";
     }
     else {
         document.getElementById("cardADSCrit").textContent = "0%";
@@ -2539,7 +2559,6 @@ function oilCalcs(calcOil) {
         document.getElementById("cardDamageScroll").textContent = ` (+${scrollDam})`;
         document.getElementById("cardDamageTotalScroll").textContent = ` (+${scrollMult})`;
     }
-console.log(damComp)
     ////// Damage & Projectiles card addition
     if (damComp < weaponOriginal.Damage) {
 
@@ -2756,6 +2775,17 @@ console.log(damComp)
         document.getElementById("cardDamageTotal").textContent = totalRound;
     }
     //#endregion
+
+    document.getElementById("cardDamagePerMag").textContent = "";
+    let damageMagazine = totalComp * effRound;
+    dMagRound = Math.round((damageMagazine + Number.EPSILON)* 100) / 100;
+    document.getElementById("cardDamagePerMag").textContent = dMagRound;
+
+    document.getElementById("cardDPMCrit").textContent = "";
+    let dpmCrit = damageMagazine * (1 + baseCalc);
+    console.log(dpmCrit)
+    dCritRound = Math.round((dpmCrit + Number.EPSILON)* 100) / 100;
+    document.getElementById("cardDPMCrit").textContent = dCritRound;
 
     //////////////////////////////
     //// Headshot Damage ////
@@ -3848,7 +3878,7 @@ let selChamb = null;
 let selChambName = null;
 
 function setDefaultChamber(gun) {
-    console.log(gun.AmmoType)
+    console.log(gun)
     selChamb = getChamberByName(`Chamber Chisel - ${gun.AmmoType}`);
     console.log(selChamb)
     selChambName = chamberNameIndexer.get(selChamb.Name);
@@ -4049,63 +4079,63 @@ function rollSelections(flag, selector, selID, value, type) {
                 shuffle(gunsAll);
                 selectedItem = getWeaponByName(gunsAll[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                setDefaultChamber(selectedItem.Name);
+                setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-pistols":
                 shuffle(gunsPistols);
                 selectedItem = getWeaponByName(gunsPistols[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                setDefaultChamber(selectedItem.Name);
+                setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-revolvers":
                 shuffle(gunsRevolvers);
                 selectedItem = getWeaponByName(gunsRevolvers[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                setDefaultChamber(selectedItem.Name);
+                setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-shotguns":
                 shuffle(gunsShotguns);
                 selectedItem = getWeaponByName(gunsShotguns[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                setDefaultChamber(selectedItem.Name);
+                setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-smgs":
                 shuffle(gunsSMGs);
                 selectedItem = getWeaponByName(gunsSMGs[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                setDefaultChamber(selectedItem.Name);
+                setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-assault-rifles":
                 shuffle(gunsARs);
                 selectedItem = getWeaponByName(gunsARs[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                setDefaultChamber(selectedItem.Name);
+                setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-lmgs":
                 shuffle(gunsLMGs);
                 selectedItem = getWeaponByName(gunsLMGs[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                setDefaultChamber(selectedItem.Name);
+                setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-rifles":
                 shuffle(gunsRifles);
                 selectedItem = getWeaponByName(gunsRifles[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                setDefaultChamber(selectedItem.Name);
+                setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "random-sniper-rifles":
                 shuffle(gunsSnipers);
                 selectedItem = getWeaponByName(gunsSnipers[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
-                setDefaultChamber(selectedItem.Name);
+                setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             default:
@@ -4245,6 +4275,7 @@ function rollSelections(flag, selector, selID, value, type) {
                     case "static-choose":
                         let weapCha = coreSelections.get("weapon");
                         let weapChaObj = weapCha.Name;
+                        console.log(weapChaObj)
                         setDefaultChamber(weapChaObj);
                         break;
                     case undefined:
