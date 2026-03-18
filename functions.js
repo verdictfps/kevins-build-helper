@@ -2077,12 +2077,15 @@ function oilCalcs(calcOil) {
     weapon.Damage = weapon.DamageMultiplier * chamber.Damage;
     weapon.AmmoType = chamber.AmmoType;
     weapon.Projectiles = chamber.Projectiles;
-    if (weapon.Name === "Augusta") {
-        weapon.Projectiles = 3;
-    }
+   
     weaponOriginal.Damage = weaponOriginal.DamageMultiplier * weaponOriginalChamber.Damage;
     weaponOriginal.AmmoType = weaponOriginalChamber.AmmoType;
     weaponOriginal.Projectiles = weaponOriginalChamber.Projectiles;
+
+    if (weapon.Name === "Augusta") {
+        weapon.Projectiles = 3;
+        weaponOriginal.Projectiles = 3;
+    }
     
     if (weaponOriginal.AmmoType == "Energy") {
         weaponOriginal.RecoilBase = 0.0;
