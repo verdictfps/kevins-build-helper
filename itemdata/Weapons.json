@@ -89,7 +89,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.65,
         "Firemode": "Single"
     },
     "Arbiter 2": {
@@ -135,7 +135,7 @@
         "BulletSpeed": 1,
         "MultiShot": 3,
         "SpreadOther": 2,
-        "ReloadTime": 1,
+        "ReloadTime": 3.12,
         "Firemode": "Single"
     },
     "Beck 8": {
@@ -181,7 +181,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 3,
-        "ReloadTime": 1,
+        "ReloadTime": 2.37,
         "Firemode": "Single"
     },
     "Bronco 89": {
@@ -227,7 +227,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 2,
-        "ReloadTime": 1,
+        "ReloadTime": 7.93,
         "Firemode": "Single"
     },
     "Cavalier": {
@@ -273,7 +273,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 3,
-        "ReloadTime": 1,
+        "ReloadTime": 2.3,
         "Firemode": "3-Round Burst"
     },
     "Flicker": {
@@ -319,7 +319,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 3,
-        "ReloadTime": 1,
+        "ReloadTime": 2.75,
         "Firemode": "Single"
     },
     "Gravekeeper": {
@@ -365,7 +365,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 2,
-        "ReloadTime": 1,
+        "ReloadTime": 2,
         "Firemode": "Single"
     },
     "Hell 'N' Back": {
@@ -411,7 +411,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 2.5,
-        "ReloadTime": 1,
+        "ReloadTime": 2.95,
         "Firemode": "Single"
     },
     "M182 Pierre-Fusil": {
@@ -457,7 +457,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.05,
         "Firemode": "Single"
     },
     "P38 Dirk": {
@@ -549,7 +549,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 2,
-        "ReloadTime": 1,
+        "ReloadTime": 2.37,
         "Firemode": "Single"
     },
     "Salamander": {
@@ -595,7 +595,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 1.5,
-        "ReloadTime": 1,
+        "ReloadTime": 2.88,
         "Firemode": "Single"
     },
     "Snut .38": {
@@ -641,7 +641,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 2.5,
-        "ReloadTime": 1,
+        "ReloadTime": 3.05,
         "Firemode": "Single"
     },
     "Socom 9": {
@@ -687,7 +687,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 2,
-        "ReloadTime": 1,
+        "ReloadTime": 1.87,
         "Firemode": "Single"
     },
     "Star & Witness": {
@@ -733,7 +733,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 2.5,
-        "ReloadTime": 1,
+        "ReloadTime": 3.3,
         "Firemode": "Single"
     },
     "Unknown": {
@@ -779,7 +779,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.9,
         "Firemode": "Static Single"
     },
     "Wyatt PULSAR": {
@@ -825,7 +825,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 1.5,
-        "ReloadTime": 1,
+        "ReloadTime": 2.28,
         "Firemode": "Single"
     },
         "Augusta": {
@@ -871,7 +871,7 @@
         "BulletSpeed": 1,
         "MultiShot": 3,
         "SpreadOther": 4,
-        "ReloadTime": 1,
+        "ReloadTime": 3.17,
         "Firemode": "Single"
     },
     "Breacher 8": {
@@ -922,7 +922,7 @@
     },
     "Neuraxis F22": {
         "Name": "Neuraxis F22",
-        "Type": "Light Machine Gun",
+        "Type": "LMG",
         "AmmoType": "Energy",
         "DamageMultiplier": 1,
         "Damage": 0,
@@ -1009,7 +1009,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime":3,
         "Firemode": "Auto"
     },
     "Majordome": {
@@ -1055,7 +1055,7 @@
         "BulletSpeed": 1,
         "MultiShot": 1,
         "SpreadOther": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 5.33,
         "Firemode": "Single"
     },
     "Mossman": {
@@ -1101,7 +1101,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 5.3,
         "Firemode": "Single"
     },
     "Deathstar PG": {
@@ -1147,7 +1147,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 3.32,
         "Firemode": "Single"
     },
     "Drifter 9": {
@@ -1193,7 +1193,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.23,
         "Firemode": "Auto"
     },
     "Ferryman": {
@@ -1239,7 +1239,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 4.35,
         "Firemode": "Auto"
     },
     "M3 Termite": {
@@ -1285,7 +1285,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 9.07,
         "Firemode": "3-Round Burst"
     },
     "Ploika Compact": {
@@ -1331,7 +1331,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.65,
         "Firemode": "Auto"
     },
     "Songbird": {
@@ -1377,7 +1377,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 3.17,
         "Firemode": "Auto"
     },
     "Valet": {
@@ -1423,7 +1423,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.4,
         "Firemode": "Auto"
     },
     "Vrede": {
@@ -1469,12 +1469,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.57,
         "Firemode": "Auto"
     },
     "Catacoil Rapid X": {
         "Name": "Catacoil Rapid X",
-        "Type": "Assault Rifle",
+        "Type": "AR",
         "AmmoType": "Energy",
         "DamageMultiplier": 1.2,
         "Damage": 0,
@@ -1515,12 +1515,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.53,
         "Firemode": "Auto"
     },
     "Corpsemaker": {
         "Name": "Corpsemaker",
-        "Type": "Assault Rifle",
+        "Type": "AR",
         "AmmoType": "5.56mm",
         "DamageMultiplier": 1.2,
         "Damage": 0,
@@ -1561,12 +1561,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 3,
         "Firemode": "Auto"
     },
     "M11A2 Fisk": {
         "Name": "M11A2 Fisk",
-        "Type": "Assault Rifle",
+        "Type": "AR",
         "AmmoType": "5.56mm",
         "DamageMultiplier": 1.2,
         "Damage": 0,
@@ -1607,12 +1607,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.37,
         "Firemode": "Auto"
     },
     "Type 80 Typhoon": {
         "Name": "Type 80 Typhoon",
-        "Type": "Assault Rifle",
+        "Type": "AR",
         "AmmoType": "7.62mm",
         "DamageMultiplier": 1.2,
         "Damage": 0,
@@ -1653,12 +1653,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.9,
         "Firemode": "Auto"
     },
     "Wingman": {
         "Name": "Wingman",
-        "Type": "Assault Rifle",
+        "Type": "AR",
         "AmmoType": "7.62mm",
         "DamageMultiplier": 1.2,
         "Damage": 0,
@@ -1699,12 +1699,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 3.93,
         "Firemode": "Auto"
     },
     "Chat-Pardeur 98": {
         "Name": "Chat-Pardeur 98",
-        "Type": "Light Machine Gun",
+        "Type": "LMG",
         "AmmoType": "7.62mm",
         "DamageMultiplier": 1.2,
         "Damage": 0,
@@ -1745,12 +1745,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 4.4,
         "Firemode": "Auto"
     },
     "Duhar": {
         "Name": "Duhar",
-        "Type": "Light Machine Gun",
+        "Type": "LMG",
         "AmmoType": "7.62mm",
         "DamageMultiplier": 1,
         "Damage": 0,
@@ -1791,12 +1791,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.6,
         "Firemode": "Auto"
     },
     "Rektor 100rd": {
         "Name": "Rektor 100rd",
-        "Type": "Light Machine Gun",
+        "Type": "LMG",
         "AmmoType": "7.62mm",
         "DamageMultiplier": 1,
         "Damage": 0,
@@ -1837,12 +1837,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 5.57,
         "Firemode": "Auto"
     },
     "Warpig": {
         "Name": "Warpig",
-        "Type": "Light Machine Gun",
+        "Type": "LMG",
         "AmmoType": "5.56mm",
         "DamageMultiplier": 1,
         "Damage": 0,
@@ -1883,7 +1883,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 3.93,
         "Firemode": "Auto"
     },
     "Farsight": {
@@ -1929,7 +1929,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 3.25,
         "Firemode": "Single"
     },
     "Knop .22": {
@@ -1975,7 +1975,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 1.05,
         "Firemode": "Single"
     },
     "Tailor Marksman MKII": {
@@ -2021,12 +2021,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 4.3,
         "Firemode": "Single"
     },
     "D4RT": {
         "Name": "D4RT",
-        "Type": "Sniper Rifle",
+        "Type": "Sniper",
         "AmmoType": "Energy",
         "DamageMultiplier": 10,
         "Damage": 0,
@@ -2067,12 +2067,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.17,
         "Firemode": "Static Single"
     },
     "Dolphin 99": {
         "Name": "Dolphin 99",
-        "Type": "Sniper Rifle",
+        "Type": "Sniper",
         "AmmoType": ".50 BMG",
         "DamageMultiplier": 2.5,
         "Damage": 0,
@@ -2113,12 +2113,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 3.93,
         "Firemode": "Single"
     },
     "Impala Gravita": {
         "Name": "Impala Gravita",
-        "Type": "Sniper Rifle",
+        "Type": "Sniper",
         "AmmoType": "7.62mm",
         "DamageMultiplier": 4,
         "Damage": 0,
@@ -2159,12 +2159,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 2.9,
         "Firemode": "Static Single"
     },
     "Longboy": {
         "Name": "Longboy",
-        "Type": "Sniper Rifle",
+        "Type": "Sniper",
         "AmmoType": ".50 BMG",
         "DamageMultiplier": 2,
         "Damage": 0,
@@ -2205,12 +2205,12 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 3.28,
         "Firemode": "Single"
     },
     "Rokua .308": {
         "Name": "Rokua .308",
-        "Type": "Sniper Rifle",
+        "Type": "Sniper",
         "AmmoType": "7.62mm",
         "DamageMultiplier": 2,
         "Damage": 0,
@@ -2251,7 +2251,7 @@
         "TotalCritChance": 0,
         "BulletSpeed": 1,
         "MultiShot": 1,
-        "ReloadTime": 1,
+        "ReloadTime": 3.3,
         "Firemode": "Single"
     }
   }

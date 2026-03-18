@@ -449,6 +449,74 @@ search.addEventListener("keydown", e => {
 //    document.body.appendChild(canvas)
 //});
 
+function captureElement(activated) {
+    document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
+    document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
+    document.getElementById("oilstatcontainer3").classList.remove("spinanimation");
+    document.getElementById("oilstatcontainer4").classList.remove("spinanimation");
+    document.getElementById("oilstatcontainer5").classList.remove("spinanimation");
+
+    document.getElementById("cardOil1Img").classList.remove("otherspinanimation");
+    document.getElementById("cardOil2Img").classList.remove("otherspinanimation");
+    document.getElementById("cardOil3Img").classList.remove("otherspinanimation");
+    document.getElementById("cardOil4Img").classList.remove("otherspinanimation");
+    document.getElementById("cardOil5Img").classList.remove("otherspinanimation");
+
+    document.getElementById("boxglowthing").classList.remove("boxglowthing");
+    document.getElementById("otherboxthing").classList.remove("otherboxthing");
+    document.getElementById("weaponimage").classList.remove("weaponimage");
+    document.getElementById("weaponimage").classList.add("weaponimage2");
+
+    document.getElementById("buttonTakeScreenshot").classList.remove("buttonCommitInd");
+    document.getElementById("buttonCopyBuildLink").classList.remove("buttonCommitInd");
+    document.getElementById("buttonLoadBuildLink").classList.remove("buttonCommitInd");
+    document.getElementById("buttonTakeScreenshot").classList.add("buttonCommitInd2");
+    document.getElementById("buttonCopyBuildLink").classList.add("buttonCommitInd2");
+    document.getElementById("buttonLoadBuildLink").classList.add("buttonCommitInd2");
+
+    document.getElementById("target").style.backgroundColor = "#2D424B";
+
+    let linkText = "Kevin's Build Helper";
+
+    const linkHtml = `<a href="${window.location.href}">${linkText}</a>`;
+
+    const linkTextBlob = new Blob([`${linkText} (${window.location.href})`], { type: 'text/plain' });
+
+    let screeny = null;
+    const target = document.getElementById('target');
+    infoboxHover("screenshot");
+    // Use html2canvas to capture the element
+    html2canvas(target, {imageTimeout: 100}).then(canvas => {
+        // Append the canvas to the page
+        canvas.toBlob((blob) => {
+            ///const cbi = new ClipboardItem({ 'image/png': blob });
+            
+            const cbi2 = new window.ClipboardItem({ 
+                'image/png': blob,
+                'text/plain': linkTextBlob
+            });
+            if (activated == true ) {
+                //navigator.clipboard.write([cbi]);
+                navigator.clipboard.write([cbi2]);
+            }
+            screeny = blob;
+        });
+    });
+
+    setTimeout(() => {
+    document.getElementById("boxglowthing").classList.add("boxglowthing");
+    document.getElementById("otherboxthing").classList.add("otherboxthing");
+    document.getElementById("weaponimage").classList.add("weaponimage");
+    document.getElementById("weaponimage").classList.remove("weaponimage2");
+    document.getElementById("buttonTakeScreenshot").classList.remove("buttonCommitInd2");
+    document.getElementById("buttonCopyBuildLink").classList.remove("buttonCommitInd2");
+    document.getElementById("buttonLoadBuildLink").classList.remove("buttonCommitInd2");
+    document.getElementById("buttonTakeScreenshot").classList.add("buttonCommitInd");
+    document.getElementById("buttonCopyBuildLink").classList.add("buttonCommitInd");
+    document.getElementById("buttonLoadBuildLink").classList.add("buttonCommitInd");
+    }, 500);
+}
+
 // Global Variables
 
 let weaponsData = null;
@@ -1087,6 +1155,13 @@ function infoboxClear() {
         document.getElementById("infoboxText").innerHTML = "";
         document.getElementById("mainHeader").innerHTML = "Kevin's Build Helper";
     }
+}
+
+function setSlot(key, selector, index, value, type) {
+    shallNotPass = true;
+    document.getElementById(selector).proDropdown.setValue(value);
+    rollAggregator(key, selector, index, value, type);
+    shallNotPass = false;
 }
 
 function randomizeAllOils() {
@@ -1739,9 +1814,19 @@ function addName() {
         let coreVal = value.Value;
         switch (key) {
             case "weapon":
-                let weapReplace = coreName.replaceAll(" ", "_");
-                document.getElementById("weaponimage").src = `.\\Images\\Weapons\\${weapReplace}.png`;
-                document.getElementById("cardWeaponName").textContent = coreName;
+                let test = Math.floor(Math.random() * 200);
+                document.getElementById("bydonk").hidden = true;
+                if (test > 198) {
+                    let weapReplace = coreName.replaceAll(" ", "_");
+                    document.getElementById("weaponimage").src = `.\\Images\\Dead_Skrip.png`;
+                    document.getElementById("cardWeaponName").textContent = coreName;
+                    document.getElementById("bydonk").hidden = false;
+                }
+                else {
+                    let weapReplace = coreName.replaceAll(" ", "_");
+                    document.getElementById("weaponimage").src = `.\\Images\\Weapons\\${weapReplace}.png`;
+                    document.getElementById("cardWeaponName").textContent = coreName;
+                }
                 break;
             case "ench1":
                 let oil1 = null;
@@ -2309,7 +2394,7 @@ function oilCalcs(calcOil) {
         if (calcOil.ScrollField !== "scrollinforocket") {
             let dropMeters =  (105 / (Math.log(weapon.BulletDrop)) - 20);
             let dropMeterRound = Math.round((dropMeters + Number.EPSILON)* 100) / 100;
-            document.getElementById("dropmeters").textContent = `~ ${dropMeterRound}m`;
+            document.getElementById("dropmeters").textContent = `approx. ${dropMeterRound}m`;
             document.getElementById("dropimage").src = "./Images/bullet_drop_pos.png";
         }
         document.getElementById("cardDrop").textContent = weapon.BulletDrop;
@@ -2323,6 +2408,7 @@ function oilCalcs(calcOil) {
     if (weapon.BulletDrop == 0) {
         document.getElementById("dropimage").src = "./Images/bullet_drop_0.png";
        document.getElementById("cardDrop").textContent = "0";
+       document.getElementById("dropmeters").textContent = "-";
     }
     //#endregion
 
@@ -3638,6 +3724,10 @@ console.log(headshotDamage)
     let shotsToBreak = durRound / durUseCalc2;
     let shotsToBreakRounded = Math.round(shotsToBreak);
 
+    if (shotsToBreakRounded < 1) {
+        shotsToBreakRounded = 1;
+    }
+
     document.getElementById("cardShotsToBreak").textContent = shotsToBreakRounded;
     //#endregion
 
@@ -3667,6 +3757,38 @@ console.log(headshotDamage)
         document.getElementById("cardFiremodeRBrac").textContent = ")";
     }
 
+    //#endregion
+
+    /////////////
+    //// DPS ////
+    /////////////
+    //#region
+
+    document.getElementById("cardTotDam60").textContent = "";
+    document.getElementById("cardDPS60").textContent = ""; 
+
+    let secPerRound = 60 / rpmRound;
+    let test = 0;
+    let dps30Mag = 0;
+    do {
+        let magSizeCalc = 0;
+        do {
+            test += secPerRound;
+            dps30Mag += totalComp;
+            magSizeCalc += 1;
+        }
+        while (magSizeCalc < effMagSize && test < 60);
+        test += reloadTime
+    }
+    while (test < 60);
+    let dps60 = dps30Mag / 60;
+
+    let dps60Round = Math.round((dps60 + Number.EPSILON)* 100) / 100;
+    let dmgTotRound = Math.round((dps30Mag + Number.EPSILON)* 100) / 100;
+
+    document.getElementById("cardTotDam60").textContent = dmgTotRound;
+    document.getElementById("cardDPS60").textContent = dps60Round; 
+    
     //#endregion
     
 }

@@ -376,7 +376,7 @@
       "DurabilityMult": 0,
       "BaseCritChance": 0,
       "RPM": 0,
-      "StatDescription": "Recoil: -20%<br>Spread: -0.2",
+      "StatDescription": "Recoil: -20%<br>Spread: -0.2<br>Reduces muzzle flash",
       "AmmoConsumeChance": 0,
       "Bounces": 0,
       "BulletDrop": 0,
