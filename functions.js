@@ -3526,15 +3526,25 @@ console.log(headshotDamage)
     document.getElementById("cardReloadSpeedRBrac").textContent = "";
 
     let reloadTimeModifier = (weapon.ReloadSpeed * (1 + calcOil.ReloadSpeed));
+    if (reloadTimeModifier < 0.01) {
+        reloadTimeModifier = 0.01;
+    }
     let relSpdCalc = weapon.ReloadSpeed * ((1 + calcOil.ReloadSpeed));
     let relSpdConv = percentConv(relSpdCalc);
     let relSpdConvOrig = percentConv(weaponOriginal.ReloadSpeed);
 
     let relSpdRound = Math.round((relSpdConv + Number.EPSILON)* 100) / 100;
-
+        console.log(relSpdRound);
     if (relSpdRound < 1) {
         relSpdRound = 1;
+        console.log(relSpdRound);
     }
+    else {
+        console.log("fuck")
+    }
+        
+    
+    console.log(relSpdRound)
 
     if (relSpdRound < relSpdConvOrig) {
         document.getElementById("cardReloadSpeed").textContent = relSpdRound;
@@ -3576,6 +3586,9 @@ console.log(headshotDamage)
     let reloadTime = weapon.ReloadTime / reloadTimeModifier;
 
     let reloadTimeRound = Math.round((reloadTime + Number.EPSILON)* 100) / 100;
+    if (reloadTimeRound === Infinity) {
+        reloadTimeRound = 9999999999;
+    }
 
     if (reloadTimeRound > weapon.ReloadTime) {
         document.getElementById("cardReloadTime").textContent = `${reloadTimeRound}s`;
@@ -3793,11 +3806,14 @@ console.log(headshotDamage)
     let durWinDamUnmod = 0;
     let durWinTime = 0;
     let durWinShots = shotsToBreakRounded;
+console.log(secPerRound)
+    console.log(dpsTime)
 
     do {
         let magSizeCalc = 0;
         do {
             dpsTime += secPerRound;
+            console.log(dpsTime)
 
             // Base Damage
             dps60Dam += totalRound;
