@@ -93,33 +93,17 @@ observer.observe(select, {
     if (node.tagName === "OPTGROUP") {
 
         const g = document.createElement("li");
-g.className = "custom-group";
-g.textContent = node.label;
+        g.className = "custom-group";
+        g.textContent = node.label;
 
-g.dataset.dropdownId = dropdownId;
+        g.dataset.dropdownId = dropdownId;
 
-g.dataset.collapsible =
-node.dataset.collapsible === "false" ? "false" : "true";
+        g.dataset.collapsible =
+        node.dataset.collapsible === "false" ? "false" : "true";
 
-g.dataset.collapsed =
-node.dataset.collapsed === "true" ? "true" : "false";
+        g.dataset.collapsed =
+        node.dataset.collapsed === "true" ? "true" : "false";
 
-Object.assign(g.dataset, node.dataset);
-
-if (node.id)
-    g.id = node.id;
-
-if (node.hidden)
-    g.style.display = "none";
-
-g.dataset.label = node.label;
-
-        if (g.dataset.collapsible === "true" &&
-            g.dataset.collapsed === "true") {
-            closeGroup(g);
-        }
-
-g.addEventListener("click", () => toggleGroup(g));;
         Object.assign(g.dataset, node.dataset);
 
         if (node.id)
@@ -130,21 +114,36 @@ g.addEventListener("click", () => toggleGroup(g));;
 
         g.dataset.label = node.label;
 
-        list.appendChild(g);
+                if (g.dataset.collapsible === "true" &&
+                    g.dataset.collapsed === "true") {
+                    closeGroup(g);
+                }
 
-        [...node.children].forEach(opt => addOption(opt, g));
-        if (g.id !== "barrelGroup" && g.id !== "opticGroup" && g.id !== "firemodeGroup" && g.id !== "rechamberGroup" && g.id !== "laserGroup") {
-        closeGroup(g);
-        }
+        g.addEventListener("click", () => toggleGroup(g));;
+                Object.assign(g.dataset, node.dataset);
+
+                if (node.id)
+                    g.id = node.id;
+
+                if (node.hidden)
+                    g.style.display = "none";
+
+                g.dataset.label = node.label;
+
+                list.appendChild(g);
+
+                [...node.children].forEach(opt => addOption(opt, g));
+                if (g.id !== "barrelGroup" && g.id !== "opticGroup" && g.id !== "firemodeGroup" && g.id !== "rechamberGroup" && g.id !== "laserGroup") {
+                closeGroup(g);
+                }
     } else addOption(node);
 });
 
     function addOption(opt, groupEl = null) {
-
+console.log(opt)
     const isHidden = opt.hidden || opt.style.display === "none";
     const li = document.createElement("li");
     li.className = "custom-option";
-
     li.textContent = opt.text;
 
     li.dataset.dropdownId = dropdownId;
@@ -1123,6 +1122,8 @@ function infoboxHover(elementType, value, name, data) {
             case "option":
                 break;
             case "stat":
+                document.getElementById("infoboxText").innerHTML = data;
+                infoboxBlock = false;
                 break;
             case "dropdown":
                 break;
@@ -2252,15 +2253,14 @@ function oilCalcs(calcOil) {
     document.getElementById("cardAmmoLBrac").textContent = "";
     document.getElementById("cardAmmoComp").textContent = "";
     document.getElementById("cardAmmoRBrac").textContent = "";
-
+console.log(calcOil.AmmoConsumeChance)
     let ammoCalc = weapon.AmmoConsumeChance + calcOil.AmmoConsumeChance;
+    if (ammoCalc < 0.01) {
+        ammoCalc = 0;
+    }
     let ammoConv = percentConv(ammoCalc);
     
     let ammoRound = Math.round((ammoConv + Number.EPSILON)* 100) / 100;
-
-    if (ammoRound < 0) {
-        ammoRound = 0;
-    }
 
     if (ammoRound < 100) {
         document.getElementById("cardAmmo").textContent = ammoRound;
@@ -2326,9 +2326,11 @@ function oilCalcs(calcOil) {
 
     let ammoEff = null;
     let extraEff = null;
+    console.log(ammoCalc)
 
-    if (ammoCalc < 0) {
+    if (ammoCalc < 0.01) {
         ammoEff = 0;
+        console.log(ammoEff)
     }
     else
     {
@@ -2344,6 +2346,11 @@ function oilCalcs(calcOil) {
 
     let effMagSize = weapon.MagSize / (ammoEff * (1 + extraEff));
 
+    if (ammoEff === 0) {
+        effMagSize = Infinity;
+    }
+    
+console.log(effMagSize)
     let effRound = Math.round((effMagSize + Number.EPSILON)* 100) / 100;
 
     document.getElementById("cardEffMagSize").textContent = effRound;
@@ -2635,7 +2642,7 @@ function oilCalcs(calcOil) {
         case "scrollinforocket":
             scrollDam = 50;
         case "scrollinfochaos":
-            scrollDam = 50 / weapProj;
+            scrollDam = 125 / weapProj;
             break;
         default:
     }
@@ -2867,13 +2874,12 @@ function oilCalcs(calcOil) {
 
     document.getElementById("cardDamagePerMag").textContent = "";
     let damageMagazine = totalComp * effRound;
-    dMagRound = Math.round((damageMagazine + Number.EPSILON)* 100) / 100;
+    let dMagRound = Math.round((damageMagazine + Number.EPSILON)* 100) / 100;
     document.getElementById("cardDamagePerMag").textContent = dMagRound;
 
     document.getElementById("cardDPMCrit").textContent = "";
-    let dpmCrit = damageMagazine * (1 + baseCalc);
-    console.log(dpmCrit)
-    dCritRound = Math.round((dpmCrit + Number.EPSILON)* 100) / 100;
+    let dpmCrit =  ((totalRound * effRound) * (1 + baseCalc)) + (scrollMult * effRound);
+    let dCritRound = Math.round((dpmCrit + Number.EPSILON)* 100) / 100;
     document.getElementById("cardDPMCrit").textContent = dCritRound;
 
     //////////////////////////////
@@ -3232,7 +3238,7 @@ console.log(headshotDamage)
     let lootRound = Math.round((lootConv + Number.EPSILON)* 100) / 100;
     let lootRoundOrig = Math.round((lootConvOrig + Number.EPSILON)* 100) / 100;
 
-    if (lootRound < 0) {
+    if (lootRound < 0.01) {
         lootRound = 0;
     }
 
@@ -3628,7 +3634,7 @@ console.log(headshotDamage)
     let neuraxisMinSpreadBase = spreadRound * 0.1;
     let neuraxisMinSpread = Math.round((neuraxisMinSpreadBase + Number.EPSILON)* 100) / 100;
 
-    if (spreadRound < 0) {
+    if (spreadRound < 0.01) {
         spreadRound = 0;
     }
 
@@ -3770,27 +3776,82 @@ console.log(headshotDamage)
     document.getElementById("cardTotDam60").textContent = "";
     document.getElementById("cardDPS60").textContent = ""; 
 
-    let secPerRound = 60 / rpmRound;
-    let test = 0;
-    let dps30Mag = 0;
+    let dpsRPM = 0;
+    
+    if (weapon.Name === "Neuraxis F22") {
+        dpsRPM = neuraxisMaxRPMRound;
+    }
+    else {
+        dpsRPM = rpmRound
+    }
+
+    let secPerRound = 60 / dpsRPM;
+    let dpsTime = 0;
+    let dps60Dam = 0;
+    let dps60DamUnmod = 0;
+    let durWinDam = 0;
+    let durWinDamUnmod = 0;
+    let durWinTime = 0;
+    let durWinShots = shotsToBreakRounded;
+
     do {
         let magSizeCalc = 0;
         do {
-            test += secPerRound;
-            dps30Mag += totalComp;
+            dpsTime += secPerRound;
+
+            // Base Damage
+            dps60Dam += totalRound;
+
+            // Unmodifiable Damage
+            dps60DamUnmod += scrollMult;
+
             magSizeCalc += 1;
         }
-        while (magSizeCalc < effMagSize && test < 60);
-        test += reloadTime
+        while (magSizeCalc < effMagSize && dpsTime < 60);
+
+        dpsTime += reloadTime;
+
     }
-    while (test < 60);
-    let dps60 = dps30Mag / 60;
+    while (dpsTime < 60);
+
+    do {
+        let magSizeCalc = 0;
+        do {
+            // Durability Window
+            durWinTime += secPerRound;
+            durWinDam += totalRound;
+            durWinDamUnmod += scrollMult;
+            durWinShots -= 1;
+
+            magSizeCalc += 1;
+        }
+        while (magSizeCalc < effMagSize && durWinShots > 0);
+
+        durWinTime += reloadTime;
+
+    }
+    while (durWinShots > 0);
+
+    let dps60 = dps60Dam / 60;
+    let dps60Unmod = dps60DamUnmod / 60;
+    let dps60Crit = (dps60Dam * (1 + baseCalc)) / 60;
+    let dps60CritUnmod = ((dps60Dam * (1 + baseCalc)) + dps60Unmod) / 60;
+    let dps60TotDamUnmod = (dps60Dam * (1 + baseCalc)) + dps60DamUnmod;
+
+    let durWinTot = (durWinDam * (1 + baseCalc)) + durWinDamUnmod;
 
     let dps60Round = Math.round((dps60 + Number.EPSILON)* 100) / 100;
-    let dmgTotRound = Math.round((dps30Mag + Number.EPSILON)* 100) / 100;
+    let dps60UnmodRound = Math.round((dps60CritUnmod + Number.EPSILON)* 100) / 100;
+    let dmgTotRound = Math.round(((dps60TotDamUnmod) + Number.EPSILON)* 100) / 100;
+
+    let durWinTimeRound = Math.round((durWinTime + Number.EPSILON)* 100) / 100;
+    let durWinDamRound = Math.round(((durWinTot) + Number.EPSILON)* 100) / 100;
 
     document.getElementById("cardTotDam60").textContent = dmgTotRound;
-    document.getElementById("cardDPS60").textContent = dps60Round; 
+    document.getElementById("cardDPS60").textContent = dps60UnmodRound; 
+
+    document.getElementById("cardBreakDam").textContent = durWinDamRound;
+    document.getElementById("cardBreakTime").textContent = `${durWinTimeRound} seconds`; 
     
     //#endregion
     
@@ -4721,7 +4782,7 @@ let enchAllMain = [
     "Rubber Oil",
     "Rush Job Oil",
     "Safety Oil",
-    "Satiety Oil",
+    "Tetrus Oil",
     "Saviour Oil",
     "Scatter Oil",
     "Scramble Oil",
@@ -4941,7 +5002,7 @@ let oilsAllMain = [
     "Rubber Oil",
     "Rush Job Oil",
     "Safety Oil",
-    "Satiety Oil",
+    "Tetrus Oil",
     "Saviour Oil",
     "Scatter Oil",
     "Scramble Oil",
@@ -5042,7 +5103,7 @@ let oilsAmmoMain = [
     "Mosquito Oil",
     "Plop Back Oil",
     "Recycle Oil",
-    "Satiety Oil",
+    "Tetrus Oil",
     "Saviour Oil",
     "Walk Easy Oil",
     "Whos Counting Oil",
