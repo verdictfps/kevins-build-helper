@@ -149,7 +149,7 @@ function buildSelectFromTypes(data, select) {
     sortedOils.forEach(oil => {
       optgroup.appendChild(createOption({
         value: oil.id,
-        text: `| ${oil.name} | — [${stripHtml(oil.desc)}]`
+        text: `${oil.name} — [${stripHtml(oil.desc)}]`
       }));
     });
 

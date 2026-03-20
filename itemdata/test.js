@@ -4,7 +4,7 @@ const fs = require("fs");
 let text = fs.readFileSync("Oils.json", "utf8");
 
 const abbreviations = {
-  "Ammo Consume Chance": "AmmoCC",
+  "Ammo Consume Chance": "AmCC",
   "Bullet Drop": "BD",
   "Recoil": "RCL",
   "Reload Speed": "RLD",
@@ -21,10 +21,11 @@ const abbreviations = {
   "Bullet Bounciness": "BNCE",
   "Move Accuracy": "MVACC",
   "Bullet Bounces": "Bounces",
-  "Crit Chance": "Crit",
+  "Crit Chance": "CRIT",
   "Penetrations": "PEN",
   "Projectiles": "PROJ",
-  "Does not increase durability usage": "No Dur Use"
+  "Does not increase durability usage": "No Dur Use",
+  "Spread": "SPRD"
 };
 
 text = text.replace(
