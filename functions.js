@@ -10,16 +10,321 @@ window.mobileCheck = function() {
   return check;
 };
 
+// Global Variables
+
+let weaponsData = null;
+let oilsData = null;
+let selectedWeapon = null;
+let modifiedWeapon = null;
+let oil1 = null;
+let oil2 = null;
+let oil3 = null;
+let oil4 = null;
+let oil5 = null;
+let rolledOils = [];
+let weaponName = null;
+let chamberData = null;
+let oilDefault = null;
+let oilStatModifiers = null;
+let selectedBarrel = null;
+let selectedOptic = null;
+let selectedLaser = null;
+let selectedFiremode = null;
+let selectedChamber = null;
+let selectedAttachments = null;
+let oilsAll = null;
+let oilsAmmo = null;
+let oilsCrit = null;
+let oilsBounce = null;
+let oilsSpeed = null;
+let oilsAddDam = null;
+let oilsMultDam = null;
+let oilsDur = null;
+let oilsPen = null;
+let oilsProj = null;
+let oilsRecoil = null;
+let oilsReload = null;
+let oilsRPM = null;
+let oilsSpread = null;
+
+// Initiate item data
+
+
+async function loadChamber() {
+    const response = await fetch("./itemdata/Chamber.json");
+    chamberData = await response.json();
+}
+
+async function loadWeapons() {
+    const response = await fetch("./itemdata/Weapons.json");
+    weaponsData = await response.json();
+}
+
+async function loadOrigWeapons() {
+    const response = await fetch("./itemdata/OrigWeapons.json");
+    weaponsOrigData = await response.json();
+}
+
+async function loadAttachments() {
+    const response = await fetch("./itemdata/Attachments.json");
+    attachmentsData = await response.json();
+}
+
+async function loadOils() {
+    const response = await fetch("./itemdata//Oils.json");
+    oilsData = await response.json();
+    buildSelectFromTypes(oilsData, document.querySelector("#oils1selector"));
+    buildSelectFromTypes(oilsData, document.querySelector("#oils2selector"));
+    buildSelectFromTypes(oilsData, document.querySelector("#oils3selector"));
+    buildSelectFromTypes(oilsData, document.querySelector("#oils4selector"));
+    buildSelectFromTypes(oilsData, document.querySelector("#oils5selector"));
+    return "Loaded";
+}
+
+async function loadScrolls() {
+    const response = await fetch("./itemdata/Scrolls.json");
+    scrollsData = await response.json();
+}
+
+loadChamber();
+loadWeapons();
+loadOils();
+loadScrolls();
+loadOrigWeapons();
+loadAttachments();
+
+// Oils to dropdowns
+//// By positive (default)
+function normalizeOils(data) {
+  return Object.entries(data.Oil)
+    .filter(([key]) => !["none", "None", "Default"].includes(key))
+    .map(([key, oil]) => ({
+      id: key.toLowerCase().replace(/\s+/g, "-"),
+      name: oil.Name,
+      desc: oil.DropdownDescription || "",
+      type: oil.TypePositive1
+    }));
+}
+
+function groupByType(oils) {
+  const groups = {};
+
+  oils.forEach(oil => {
+    const type = oil.type;
+
+    if (!groups[type]) {
+      groups[type] = [];
+    }
+
+    groups[type].push(oil);
+  });
+
+  return groups;
+}
+
+function buildSelectFromTypes(data, select) {
+  const oils = normalizeOils(data);
+  const groups = groupByType(oils);
+
+  clearGenerated(select);
+
+  const sortedGroups = Object.entries(groups)
+    .sort(([a], [b]) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+
+  sortedGroups.forEach(([type, oils], i) => {
+    const optgroup = document.createElement("optgroup");
+    optgroup.label = type;
+    optgroup.dataset.collapsible = "true";
+    optgroup.dataset.generated = "true";
+
+    const sortedOils = oils.sort((a, b) =>
+      a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+    );
+
+    optgroup.appendChild(createOption({
+      value: `static-random-${slug(type)}`,
+      text: `Random ${type} Oil`
+    }));
+
+    sortedOils.forEach(oil => {
+      optgroup.appendChild(createOption({
+        value: oil.id,
+        text: `| ${oil.name} | — [${stripHtml(oil.desc)}]`
+      }));
+    });
+
+    select.appendChild(optgroup);
+  });
+}
+
+function sortOptionsWithPinnedRandom(options) {
+  return options.sort((a, b) => {
+    const aIsRandom = a.name?.startsWith("Random");
+    const bIsRandom = b.name?.startsWith("Random");
+
+    if (aIsRandom && !bIsRandom) return -1;
+    if (!aIsRandom && bIsRandom) return 1;
+
+    return a.name.localeCompare(b.name, undefined, { sensitivity: "base" });
+  });
+}
+
+function sortOils(oils) {
+  return oils.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+function clearGenerated(select) {
+  select.querySelectorAll('[data-generated="true"]').forEach(el => el.remove());
+}
+
+function createOption(opt) {
+  const option = document.createElement("option");
+  option.value = opt.value;
+  option.textContent = opt.text;
+
+  if (opt.attrs) {
+    Object.entries(opt.attrs).forEach(([k, v]) => {
+      if (v === true) option.setAttribute(k, "");
+      else option.setAttribute(k, v);
+    });
+  }
+
+  return option;
+}
+
+function stripHtml(html) {
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  return div.textContent || "";
+}
+
+function slug(str) {
+  return str.toLowerCase().replace(/\s+/g, "-");
+}
+
+function negativeOilDropdown() {
+    function normalizeOils2(data) {
+        return Object.entries(data.Oil)
+            .filter(([key]) => !["none", "None", "Default"].includes(key))
+            .map(([key, oil]) => ({
+            id: key.toLowerCase().replace(/\s+/g, "-"),
+            name: oil.Name,
+            desc: oil.DropdownDescription || "",
+            type: oil.TypeNegative1
+            }));
+        }
+
+        function groupByType2(oils) {
+        const groups = {};
+
+        oils.forEach(oil => {
+            const type = oil.type;
+
+            if (!groups[type]) {
+            groups[type] = [];
+            }
+
+            groups[type].push(oil);
+        });
+
+        return groups;
+        }
+
+        function buildSelectFromTypesNeg(data, select) {
+        const oils = normalizeOils2(data);
+        const groups = groupByType2(oils);
+
+        clearGenerated2(select);
+
+        const sortedGroups = Object.entries(groups)
+            .sort(([a], [b]) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+
+        sortedGroups.forEach(([type, oils], i) => {
+            const optgroup = document.createElement("optgroup");
+            optgroup.label = type;
+            optgroup.dataset.collapsible = "true";
+            optgroup.dataset.generated = "true";
+
+            const sortedOils = oils.sort((a, b) =>
+            a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+            );
+
+            optgroup.appendChild(createOption2({
+            value: `static-random-${slug2(type)}`,
+            text: `Random ${type} Oil`
+            }));
+
+            sortedOils.forEach(oil => {
+            optgroup.appendChild(createOption2({
+                value: oil.id,
+                text: `${oil.name} —[ ${stripHtml2(oil.desc)} ]—`
+            }));
+            });
+
+            select.appendChild(optgroup);
+        });
+        }
+
+        function sortOptionsWithPinnedRandom(options) {
+        return options.sort((a, b) => {
+            const aIsRandom = a.name?.startsWith("Random");
+            const bIsRandom = b.name?.startsWith("Random");
+
+            if (aIsRandom && !bIsRandom) return -1;
+            if (!aIsRandom && bIsRandom) return 1;
+
+            return a.name.localeCompare(b.name, undefined, { sensitivity: "base" });
+        });
+        }
+
+        function clearGenerated2(select) {
+        select.querySelectorAll('[data-generated="true"]').forEach(el => el.remove());
+        }
+
+        function createOption2(opt) {
+        const option = document.createElement("option");
+        option.value = opt.value;
+        option.textContent = opt.text;
+
+        if (opt.attrs) {
+            Object.entries(opt.attrs).forEach(([k, v]) => {
+            if (v === true) option.setAttribute(k, "");
+            else option.setAttribute(k, v);
+            });
+        }
+
+        return option;
+        }
+
+        function stripHtml2(html) {
+        const div = document.createElement("div");
+        div.innerHTML = html;
+        return div.textContent || "";
+        }
+
+        function slug2(str) {
+        return str.toLowerCase().replace(/\s+/g, "-");
+        }
+
+        buildSelectFromTypesNeg(oilsData, document.querySelector("#oils1selector"));
+        document
+        .querySelectorAll("select.custom-dropdown")
+        .forEach(createProDropdown);
+}
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     document
         .querySelectorAll("select.custom-dropdown")
         .forEach(createProDropdown);
 });
 
+const items = [];
 
-    const items = [];
+async function createProDropdown(select) {
 
-function createProDropdown(select) {
+    let response = await loadOils();
 
     window.addEventListener("resize", () => {
     if (wrapper.classList.contains("open"))
@@ -444,10 +749,15 @@ search.addEventListener("keydown", e => {
     };
 }
 
-//html2canvas(document.querySelector("#capture")).then(canvas => {
-//    document.body.appendChild(canvas)
-//});
+function isPositive(oil) {
+  return oil.TypePositive1 && oil.TypePositive1 !== "None";
+}
 
+function isNegative(oil) {
+  return oil.TypeNegative1 && oil.TypeNegative1 !== "None";
+}
+
+// Screenshots
 function captureElement(activated) {
     document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
     document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
@@ -475,12 +785,6 @@ function captureElement(activated) {
 
     document.getElementById("target").style.backgroundColor = "#2D424B";
 
-    let linkText = "Kevin's Build Helper";
-
-    const linkHtml = `<a href="${window.location.href}">${linkText}</a>`;
-
-    const linkTextBlob = new Blob([`${linkText} (${window.location.href})`], { type: 'text/plain' });
-
     let screeny = null;
     const target = document.getElementById('target');
     infoboxHover("screenshot");
@@ -492,7 +796,6 @@ function captureElement(activated) {
             
             const cbi2 = new window.ClipboardItem({ 
                 'image/png': blob,
-                'text/plain': linkTextBlob
             });
             if (activated == true ) {
                 //navigator.clipboard.write([cbi]);
@@ -515,43 +818,6 @@ function captureElement(activated) {
     document.getElementById("buttonLoadBuildLink").classList.add("buttonCommitInd");
     }, 500);
 }
-
-// Global Variables
-
-let weaponsData = null;
-let oilsData = null;
-let selectedWeapon = null;
-let modifiedWeapon = null;
-let oil1 = null;
-let oil2 = null;
-let oil3 = null;
-let oil4 = null;
-let oil5 = null;
-let rolledOils = [];
-let weaponName = null;
-let chamberData = null;
-let oilDefault = null;
-let oilStatModifiers = null;
-let selectedBarrel = null;
-let selectedOptic = null;
-let selectedLaser = null;
-let selectedFiremode = null;
-let selectedChamber = null;
-let selectedAttachments = null;
-let oilsAll = null;
-let oilsAmmo = null;
-let oilsCrit = null;
-let oilsBounce = null;
-let oilsSpeed = null;
-let oilsAddDam = null;
-let oilsMultDam = null;
-let oilsDur = null;
-let oilsPen = null;
-let oilsProj = null;
-let oilsRecoil = null;
-let oilsReload = null;
-let oilsRPM = null;
-let oilsSpread = null;
 
 const coreSelections = new Map();
 
@@ -1503,18 +1769,39 @@ setTimeout(() => {
 
 // For when the button is clicked.
 function onGenerate() {
-    
-    rollAggregator("weapon", "weapons", 1, weaponSelectHandler.value, "weapon");
-    rollAggregator("ench1", "oils1selector", 1, ench1SelectHandler.value, "ench");
-    rollAggregator("ench2", "oils2selector", 2, ench2SelectHandler.value, "ench");
-    rollAggregator("ench3", "oils3selector", 3, ench3SelectHandler.value, "ench");
-    rollAggregator("ench4", "oils4selector", 4, ench4SelectHandler.value, "ench");
-    rollAggregator("ench5", "oils5selector", 5, ench5SelectHandler.value, "ench");
-    rollAggregator("barrel", "barrelselector", 1, barrelSelectHandler.value, "attachment");
-    rollAggregator("optic", "opticselector", 2, opticSelectHandler.value, "attachment");
-    rollAggregator("laser", "laserselector", 3, laserSelectHandler.value, "attachment");
-    rollAggregator("firemode", "firemodeselector", 4, firemodeSelectHandler.value, "attachment");
-    rollAggregator("chamber", "chamberselector", 5, chamberSelectHandler.value, "attachment");
+    console.log(document.getElementById("oils1selector").proDropdown.getValue())
+    rollAggregator("weapon", "weapons", 1, document.getElementById("weapons").proDropdown.getValue(), "weapon");
+    rollAggregator("ench1", "oils1selector", 1, document.getElementById("oils1selector").proDropdown.getValue(), "ench");
+    rollAggregator("ench2", "oils2selector", 2, document.getElementById("oils2selector").proDropdown.getValue(), "ench");
+    rollAggregator("ench3", "oils3selector", 3, document.getElementById("oils3selector").proDropdown.getValue(), "ench");
+    rollAggregator("ench4", "oils4selector", 4, document.getElementById("oils4selector").proDropdown.getValue(), "ench");
+    rollAggregator("ench5", "oils5selector", 5, document.getElementById("oils5selector").proDropdown.getValue(), "ench");
+    rollAggregator("barrel", "barrelselector", 1, document.getElementById("barrelselector").proDropdown.getValue(), "attachment");
+    rollAggregator("optic", "opticselector", 2, document.getElementById("opticselector").proDropdown.getValue(), "attachment");
+    rollAggregator("laser", "laserselector", 3, document.getElementById("laserselector").proDropdown.getValue(), "attachment");
+    rollAggregator("firemode", "firemodeselector", 4, document.getElementById("firemodeselector").proDropdown.getValue(), "attachment");
+    rollAggregator("chamber", "chamberselector", 5, document.getElementById("chamberselector").proDropdown.getValue(), "attachment");
+}
+
+function rerollRandomEnch(opt) {
+    switch (opt) {
+        case "ench1":
+            rollAggregator("ench1", "oils1selector", 1, document.getElementById("oils1selector").proDropdown.getValue(), "ench");
+            break;
+        case "ench2":
+            rollAggregator("ench2", "oils2selector", 2, document.getElementById("oils2selector").proDropdown.getValue(), "ench");
+            break;
+        case "ench3":
+            rollAggregator("ench3", "oils3selector", 3, document.getElementById("oils3selector").proDropdown.getValue(), "ench");
+            break;
+        case "ench4":
+            rollAggregator("ench4", "oils4selector", 4, document.getElementById("oils4selector").proDropdown.getValue(), "ench");
+            break;
+        case "ench5":
+            rollAggregator("ench5", "oils5selector", 5, document.getElementById("oils5selector").proDropdown.ggetValueet(), "ench");
+            break;
+        default:
+    }
 }
 
 function rollFromBuild() {
@@ -1689,13 +1976,6 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
         selectedChamber = null;
         rolledOils = [];
         selectedChamber = null;
-
-        loadChamber()
-        loadWeapons()
-        loadOils()
-        loadScrolls()
-        loadOrigWeapons()
-        loadAttachments()
         
         rollSelections(flag, selector, selID, value, type);
         rollSelections('ench1', 'oils1selector', 1, 'static-choose', 'ench');
@@ -1896,35 +2176,6 @@ function addName() {
 
 }
 
-async function loadChamber() {
-    const response = await fetch("./itemdata/Chamber.json");
-    chamberData = await response.json();
-}
-
-async function loadWeapons() {
-    const response = await fetch("./itemdata/Weapons.json");
-    weaponsData = await response.json();
-}
-
-async function loadOrigWeapons() {
-    const response = await fetch("./itemdata/OrigWeapons.json");
-    weaponsOrigData = await response.json();
-}
-
-async function loadAttachments() {
-    const response = await fetch("./itemdata/Attachments.json");
-    attachmentsData = await response.json();
-}
-
-async function loadOils() {
-    const response = await fetch("./itemdata//Oils.json");
-    oilsData = await response.json();
-}
-
-async function loadScrolls() {
-    const response = await fetch("./itemdata/Scrolls.json");
-    scrollsData = await response.json();
-}
 
 function percentConv(stat) {
        return stat *= 100;
@@ -3806,14 +4057,11 @@ console.log(headshotDamage)
     let durWinDamUnmod = 0;
     let durWinTime = 0;
     let durWinShots = shotsToBreakRounded;
-console.log(secPerRound)
-    console.log(dpsTime)
 
     do {
         let magSizeCalc = 0;
         do {
             dpsTime += secPerRound;
-            console.log(dpsTime)
 
             // Base Damage
             dps60Dam += totalRound;
@@ -4189,7 +4437,7 @@ function rollSelections(flag, selector, selID, value, type) {
                 selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
-            case "static-random-bullet-bounce":
+            case "static-random-bullet-bounces":
                 shuffle(oilsBounce);
                 selectedItem = getOilByName(oilsBounce[0]);
                 selectedValue = oilNameIndexer.get(selectedItem.Name);
@@ -4201,13 +4449,13 @@ function rollSelections(flag, selector, selID, value, type) {
                 selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
-            case "static-random-add-damage":
+            case "static-random-damage---flat":
                 shuffle(oilsAddDam);
                 selectedItem = getOilByName(oilsAddDam[0]);
                 selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
-            case "static-random-mult-damage":
+            case "static-random-damage---mult":
                 shuffle(oilsMultDam);
                 selectedItem = getOilByName(oilsMultDam[0]);
                 selectedValue = oilNameIndexer.get(selectedItem.Name);
@@ -5491,3 +5739,4 @@ const dropPromise = new Promise((resolve, reject) => {
         mobileDropdownCheck();
     }, 500);
 })
+
