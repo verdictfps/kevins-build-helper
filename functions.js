@@ -1951,7 +1951,7 @@ function scrollExtendedStats() {
 }
 
 function scrollToTop() {
-    document.getElementById("mainbuildcontainer").scrollIntoView(({ behavior: 'smooth' }));
+    window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 // Screenshots

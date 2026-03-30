@@ -563,8 +563,8 @@ body {
     color: black;
     box-shadow: 3px 3px 0px 0px black;
     border-radius: 10px;
-    width: 100px;
-    height: 100px;
+    height: 11vh;
+    width: 11vh;
     padding: 0px;
     margin: 0px;
     margin-bottom: 4px;
@@ -577,8 +577,8 @@ body {
     .buttonGeneral:hover {
         font-family: "Fredoka", sans-serif;
         font-weight: 500;
-        width: 100px;
-        height: 100px;
+        height: 11vh;
+        width: 11vh;
         background-color: #FDB142;
         border: 2px solid rgb(253, 255, 149);
         box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
@@ -596,8 +596,8 @@ body {
         text-shadow: 2px 2px 0px black;
         color: transparent;
         transform: translate(3px, 3px);
-        width: 100px;
-        height: 100px;
+        height: 11vh;
+        width: 11vh;
     }   
 
 #weapons {

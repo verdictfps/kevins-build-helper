@@ -82,7 +82,7 @@
             grid-template-columns: repeat(auto-fit, minmax(42em, 1fr));
             background-color: #2D424B;
             padding: 10px;
-            height: 100%;
+            height: 95vh;
             width: auto;
         }
 
@@ -216,17 +216,13 @@
     <script>
         
     </script>
-    <div id="mainbuildcontainer" class="container" style="border:0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px; padding-top: 0px">
+    <div id="mainbuildcontainer" class="container" style="border:0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px; padding-top: 0px; padding-bottom: 0px; height: 93vh;">
         <div style="margin:0px; padding:0px; border:0px solid #FDB142;">
-            <div class="containerinfobox" hidden id="oil1infobox">
-                <p id="oil1infoboxname" style="color:#FDB142; font-weight: 500; font-size: 1em;">hi</p>
-                <p id="oil1infoboxtext" style="font-size: 0.8em">hi</p>
-            </div>
-            <div class="containerheaders" style="border: 0px; padding: 0px; height: 12%; margin-bottom: 0px; margin-left: 0px; margin-right: 10px; margin-top: 5px; justify-content: center; display: flex; align-items:center;">
+            <div class="containerheaders" style="border: 0px; padding: 0px; margin-bottom: 0px; gap: 5px; margin-left: 0px; margin-right: 10px; margin-top: 5px; display: flex; align-items:center; height: 12vh;">
                 
-                <div style="width: 470px; padding: 0px; padding-bottom: 0px; padding-left: 0px; height: 100%; margin: 0px; margin-right: 10px; justify-content: center; align-items:center; display: flex; width: 50%;">
-                    <div class="containertooltip" style="border: 3px solid #FDB142; width: 100%; height: 92%; align-items: center; justify-content: left; padding: 0px; margin-right: -5px; anchor-name: --tooltip-anchor; box-shadow: inset 2px 2px 15px rgb(216, 216, 216), 3px 3px 0px 3px black; border-radius: 5px;">
-                        <p style="padding-right: 40px; max-width: 20%; justify-content: left;" id="infoboxText"></p>
+                <div style="width: 50vh; padding: 0px; padding: 0px; height: 11vh; margin: 0px; justify-content: left; align-items:center; display: flex; position: fixed; z-index: 15;">
+                    <div class="containertooltip" style="border: 3px solid #FDB142; width: 50vh; height: 92%; align-items: center; justify-content: left; padding: 0px; margin-right: -5px; anchor-name: --tooltip-anchor; box-shadow: inset 2px 2px 15px rgb(216, 216, 216), 3px 3px 0px 3px black; border-radius: 5px;">
+                        <p style="padding-right: 40px; max-width: 90%; justify-content: left;" id="infoboxText"></p>
                         <h1 id="mainHeader" style="position: fixed; width: auto; position-anchor: --tooltip-anchor; left: anchor(left); top: anchor(top); bottom: anchor(bottom); right: anchor(right);">Kevin's Build Helper</h1>
                         <div>
 
@@ -241,7 +237,10 @@
                     
                     
                 </div>
-                <div class="containerweapchoose" style="border: 0px; border-radius: 5px; margin-bottom: 5px; margin-top: 10px; margin-right: 0px; margin-left: 10px; padding-left: 0px; height: 100px; display: flex; align-items: center;">
+                <div style="width: 50vh; padding: 0px; height: 100%; margin: 0px; justify-content: space-evenly; align-items:center; display: flex;">
+
+                </div>
+                <div class="containerweapchoose" style="border: 0px; border-radius: 5px; margin-bottom: 5px; margin-top: 10px; margin-right: 0px; margin-left: 10px; padding-left: 0px; padding-right: 0px; height: 100px; display: flex; align-items: center; justify-content: space-evenly;">
                     <button class="buttonGeneral" style="padding: 10px; justify-content: center; align-items:center;" id="buttonGenerate" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Rerolls all slots labeled Random')" onmouseout="infoboxClear()" onclick="onGenerate('button')"><span class="fa-solid fa-arrows-spin" style="font-size: 50px;"></span></button>
                     <button class="buttonGeneral" id="makeallrandom" style="padding: 10px; justify-content: center; align-items:center;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Sets all fields to Random (All, if applicable) and rerolls them')" onmouseout="infoboxClear()" onclick="setAllAsRandom()"><span class="fa-solid fa-shuffle" style="font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
                     <button class="buttonGeneral" id="resetAllFields" style="padding: 10px; justify-content: center; align-items:center;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Sets Weapon to P38 Dirk and resets all other fields to None')" onmouseout="infoboxClear()" onclick="resetAll()"><span class="fa-solid fa-arrow-rotate-left" style="font-size: 50px;"></span></button>
@@ -249,7 +248,7 @@
                 </div>
 
             </div>
-            <div style="display: flex; justify-content: center; align-items:center; padding-left: 0px; border: 1px solid #FDB142; margin: 0px; margin-left: 0px; margin-right: 10px; border-radius: 5px; padding-top: 0px; padding-bottom: 0px; margin-top: 10px; height: 17%; flex-wrap: wrap;">
+            <div style="display: flex; justify-content: center; align-items:center; padding-left: 0px; border: 1px solid #FDB142; margin: 0px; margin-left: 0px; margin-right: 10px; border-radius: 5px; padding-top: 0px; padding-bottom: 0px; margin-top: 10px; height: 15vh; flex-wrap: wrap;">
                 <div style="border: 0px; width: 30%; display: flex; justify-content: center; align-items:center; padding: 0px; flex-wrap: nowrap; margin-top: 0px; margin-bottom: 0px; height: 10px;">
                         <h2 style="margin: 0px; height: 10px; align-items:center;">Select a Weapon</h2>
                 </div>
@@ -337,7 +336,7 @@
                     </select>
                 </div>
             </div>
-            <div class="weaponstuffcontainer" style="border: 0px solid #FDB142; border-radius: 5px; margin-top:0px; padding-left: 0px; padding-bottom: 0px;">
+            <div class="weaponstuffcontainer" style="border: 0px solid #FDB142; border-radius: 5px; margin-top:0px; padding-left: 0px; padding-bottom: 0px; height: 63vh;">
                 
                 <div class="oilcontainer" style="margin-right: 5px; height: 100%; display: flex; flex-wrap: wrap; padding: 0px; padding-left: 5px; padding-right: 5px;">
                     <div class="containerheaders" style="border:0px; width: 100%; height: auto">
@@ -549,7 +548,7 @@
                     </div>
                 </div>
                 <div id="weaponstatcontainer" class="resultcontainer" style="border-radius: 5px; border: 0px; padding: 0px; anchor-name: --sliding;">
-                    <div style="height:100%; border-left: 1px solid #FDB142; padding-left: 0px; padding-top:5px; padding-bottom: 35px; padding-right: 0px; border-bottom: 1px solid #FDB142;">
+                    <div style="height:100%; border-left: 1px solid #FDB142; padding-left: 0px; padding-top:5px; padding-bottom: 0px; padding-right: 0px; border-bottom: 1px solid #FDB142; min-height: 300px;">
                         <div class="statbox" style="display: flex; justify-content:space-between; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; gap: 5px;">
                             <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
                                 <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Base Weapon Type. This is unmodifiable')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600; margin: 0em; padding: 0em; width: 100%; white-space: nowrap">Type: <span style="font-weight:400" class="compLabel" id="cardWeaponType"></span></p>
@@ -560,7 +559,7 @@
                             <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px;border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px; white-space: wrap;">    
                                 <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Weapon Damage, alongside Projectiles, and (if applicable) Multishots')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600; margin: 0em; padding: 0em; width: 100%;  white-space: wrap;">Damage: <span style="font-weight:400" class="compLabel" id="cardDamage"></span><span class="compLabel" style="font-weight:400" id="cardDamageScroll"></span><span style="font-weight:400" id="cardDamageArrow"></span><span>  </span><span style="font-weight:400" class="compLabel" id="cardDamageX"></span><span> </span><span style="font-weight:400" class="compLabel" id="cardDamageProj"></span><span style="font-weight:400" id="cardDamageProjArrow"></span><span>  </span><span style="font-weight:400" class="compLabel" id="cardDamageMultiX"></span><span>  </span><span style="font-weight:200" class="compLabel" id="cardDamageMulti"></span><span style="font-weight:400" id="cardDamageLRArrow"></span><span style="font-weight:300" class="compLabel" id="cardDamageLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDamageComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageProjComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageMultiXComp"></span><span> </span><span style="font-weight:300" class="compLabel" id="cardDamageMultiComp"></span><span class="compLabel" style="font-weight:300" id="cardDamageRBrac"></span></p>
                             </div>
-                            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px;border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
+                            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px;border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px; width: 90%;">    
                                 <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Total weapon damage, calculated from Damage, Projectiles, and Multishot')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600; margin: 0em; padding: 0em; width: 100%; white-space: nowrap">Dmg Total: <span style="font-weight:400" class="compLabel" id="cardDamageTotal"></span><span style="font-weight:400" class="compLabel" id="cardDamageTotalScroll"></span><span style="font-weight:400" id="cardDamageTotalArrow"></span><span> </span><span style="font-weight:400" id="cardDamageTotalLRArrow">  </span><span style="font-weight:300" class="compLabel" id="cardDamageTotalLBrac"></span><span style="font-weight:300" class="compLabel" id="cardDamageTotalComp"></span><span style="font-weight:300" class="compLabel" id="cardDamageTotalRBrac"></span></p>
                             </div>
                             <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px;border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
@@ -568,12 +567,6 @@
                             </div>
                             <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
                                 <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Effective Magazine Size, calculated based on Ammo Consume Chance, Extra Ammo Use Chance, and base Mag Size. Can be Infinity')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600; margin: 0em; padding: 0em; width: 100%; white-space: nowrap;">Eff. Mag Size: <span style="font-weight:400" class="compLabel" id="cardEffMagSize"></span></p>
-                            </div>
-                            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
-                                <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Damage-per-Magazine. Will be Infinity if Eff Mag Size is Infinity')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600; margin: 0em; padding: 0em; width: 100%; white-space: nowrap;">Dmg/Mag: <span style="font-weight:400" class="compLabel" id="cardDamagePerMag"></span></p>
-                            </div>
-                            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
-                                <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Damage-per-Magazine, with Base Crits included (ADS Crits excluded). Will be Infinity if Eff Mag Size is Infinity')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600;  margin: 0em; padding: 0em; width: 100%; white-space: nowrap;">Base Crit DPMag: <span style="font-weight:400" class="compLabel" id="cardDPMCrit"></span></p>
                             </div>
                             <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">
                                 <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Rounds-per-minute of the weapon. Bottoms out at 1% of base. Not accurate between weapons. Best used as reference for weapon itself')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600; margin: 0em; padding: 0em; width: 100%; white-space: nowrap">RPM: <span style="font-weight:400" class="compLabel" id="cardRPM"></span><span id="cardRPMArrow"></span><span id="cardRPMspace"> </span><span style="font-weight:300" class="compLabel" id="cardRPMLBrac"></span><span style="font-weight:300" class="compLabel" id="cardRPMComp"></span><span style="font-weight:300" class="compLabel" id="cardRPMRBrac"></span></p>
@@ -590,18 +583,7 @@
                             <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">
                                 <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'How many shots it takes to render the weapon unusable')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600; margin: 0em; padding: 0em; width: 100%; white-space: nowrap">Shots to Break: <span style="font-weight:400" class="compLabel" id="cardShotsToBreak"></span></p>
                             </div>
-                            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
-                                <p class="cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Damage-per-second over 60 seconds, based on Effective Mag Size, and calculating for reloads. Assumes no durability loss, so should be used as a reference point')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600;  margin: 0em; padding: 0em; width: 100%; white-space: nowrap;">DPS w/Reload - 60s: <span style="font-weight:400" class="compLabel" id="cardDPS60"></span></p>
-                            </div>
-                            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
-                                <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Total damage output over 60 seconds, including reloads. Assumes no durability loss, so should be used as a reference point')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600;  margin: 0em; padding: 0em; width: 100%; white-space: wrap;">Total Dmg w/Reload - 60s: <span style="font-weight:400" class="compLabel" id="cardTotDam60"></span></p>
-                            </div>
-                            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
-                                <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'How much damage the weapon can output before it runs out of durability')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600;  margin: 0em; padding: 0em; width: 100%; white-space: wrap;">Dmg before breaking: <span style="font-weight:400" class="compLabel" id="cardBreakDam"></span></p>
-                            </div>
-                            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
-                                <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'How long the gun can be used before it runs out of durability, assuming it\'s fired and reloaded as fast as possible')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600;  margin: 0em; padding: 0em; width: 100%; white-space: wrap;">Time to break: <span style="font-weight:400" class="compLabel" id="cardBreakTime"></span></p>
-                            </div>
+                            
                         </div>     
                         <p style="width: 10em; border-radius: 0px 15px 0px 0px; margin-top: -3px; margin-left: 1px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; background-color:#FDB142; color:black; font-weight: 600; height: auto; position-anchor: --weapon-anchor; border-right: 2px solid black; border-top: 2px solid black; position: absolute; left: anchor(left); bottom: anchor(top);">Weapon Behavior</p>
 
@@ -657,7 +639,7 @@
                             <div hidden id="bydonk" style="position: absolute; padding: 5px; margin: 0; line-height: 0; background-color: #FDB142; color: black; font-size: 0.9em; border-radius: 5px 0px; z-index: 15; position-anchor: --glow-anchor; bottom: anchor(bottom); right: anchor(right);">
                                     <p>Image by donkquad</p>
                             </div>
-                            <div class="containerattach" style="border:0px; height: 50%; margin-top: 0px; padding: 0px; margin-bottom: 0px; padding-left: 0px; bottom: anchor(--sliding2 bottom); position-anchor: --sliding2;">
+                            <div class="containerattach" style="border:0px; border-left: 1px solid #FDB142; border-right: 1px solid #FDB142; height: auto; width: auto; margin-top: 0px; padding: 0px; padding-right: 1px; margin-bottom: 0px; padding-left: 0px; padding-bottom: 4px; position: absolute; bottom: anchor(--sliding2 bottom); top: anchor(--glow-anchor bottom); right: anchor(--sliding right); left: anchor(--movement-anchor right);">
 
                                 <div style="border-left:0px; z-index: 4; margin-right: 0px; padding: 0px; height: 100%; margin-bottom: 0px; width: 100%; ">
                                     <div style="background-color: #FDB142; border-right: 1px solid #FDB142; margin-top: 0px; border-bottom: 2px solid black; margin-left: 0px; margin-right: 0px;  padding: 0px; width: 100%;">
@@ -1021,14 +1003,37 @@
         
     </div>
     </div>
-    <div style="margin: 10px; margin-left: 5px; margin-right: 5px; margin-top: 10px; padding: 5px; border: 0px; border-radius: 5px;">
+    <div style="margin: 10px; margin-left: 5px; margin-right: 5px; margin-top: 0px; padding: 5px; border: 0px; border-radius: 5px;">
         <div id="extendoverlay" style="pointer-events: none; margin: 0px; padding: 0px; display: flex; background-image: linear-gradient(to bottom right, transparent 40%, white 50%, transparent 60%); background-size: 500% 500%; animation: extendedStats ease 3s infinite; z-index: 5; width: auto; height: auto; position: absolute; border-radius: 5px; position-anchor: --extend-anchor; top: anchor(top); right: anchor(right); left: anchor(left); bottom: anchor(bottom); mix-blend-mode: overlay;">
         </div>
-        <button id="extendstatsbutton" style="height: 2em; justify-content: space-between; display: flex; align-items: center; padding-left: 2em; padding-right: 2em; padding-bottom: 0; padding-top: 0; border: 2px solid white; z-index: 1; anchor-name: --extend-anchor;" onclick="scrollExtendedStats()"><span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span> Extended Stats <span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span></button>
+        <button id="extendstatsbutton" style="height: 1.5em; justify-content: space-between; display: flex; align-items: center; padding-left: 2em; padding-right: 2em; padding-bottom: 0; padding-top: 0; border: 2px solid white; z-index: 1; anchor-name: --extend-anchor;" onclick="scrollExtendedStats()"><span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span> Extended Stats <span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span></button>
     </div>
-    <div id="extendedstatscontainer" class="container" style="border:0px; margin: 10px; height: 500px; padding: 0px">
-        <div style="margin:0px; padding:0px; border:1px solid #FDB142; margin-right: 5px; border-radius: 5px;">
+    <div style="height: 20vh">
 
+    </div>
+    <div>
+        
+    </div>
+    <div id="extendedstatscontainer" class="container" style="border:0px; margin: 10px; height: 72vh; padding: 0px; display: flex">
+        <div style="margin:0px; padding:0px; border:1px solid #FDB142; margin-right: 5px; border-radius: 5px; ">
+            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
+                <p class="cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Damage-per-second over 60 seconds, based on Effective Mag Size, and calculating for reloads. Assumes no durability loss, so should be used as a reference point')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600;  margin: 0em; padding: 0em; width: 100%; white-space: nowrap;">DPS w/Reload - 60s: <span style="font-weight:400" class="compLabel" id="cardDPS60"></span></p>
+            </div>
+            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
+                <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Total damage output over 60 seconds, including reloads. Assumes no durability loss, so should be used as a reference point')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600;  margin: 0em; padding: 0em; width: 100%; white-space: wrap;">Total Dmg w/Reload - 60s: <span style="font-weight:400" class="compLabel" id="cardTotDam60"></span></p>
+            </div>
+            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
+                <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'How much damage the weapon can output before it runs out of durability')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600;  margin: 0em; padding: 0em; width: 100%; white-space: wrap;">Dmg before breaking: <span style="font-weight:400" class="compLabel" id="cardBreakDam"></span></p>
+            </div>
+            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
+                <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'How long the gun can be used before it runs out of durability, assuming it\'s fired and reloaded as fast as possible')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600;  margin: 0em; padding: 0em; width: 100%; white-space: wrap;">Time to break: <span style="font-weight:400" class="compLabel" id="cardBreakTime"></span></p>
+            </div>
+            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
+                <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Damage-per-Magazine. Will be Infinity if Eff Mag Size is Infinity')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600; margin: 0em; padding: 0em; width: 100%; white-space: nowrap;">Dmg/Mag: <span style="font-weight:400" class="compLabel" id="cardDamagePerMag"></span></p>
+            </div>
+            <div style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; padding-left: 5px; border-bottom: 1px solid #FDB142; padding-right: 5px; padding-bottom: 5px">    
+                <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Damage-per-Magazine, with Base Crits included (ADS Crits excluded). Will be Infinity if Eff Mag Size is Infinity')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600;  margin: 0em; padding: 0em; width: 100%; white-space: nowrap;">Base Crit DPMag: <span style="font-weight:400" class="compLabel" id="cardDPMCrit"></span></p>
+            </div>
         </div>
         <div style="margin:0px; padding:0px; border:1px solid #FDB142; margin-left: 5px; border-radius: 5px;">
 
@@ -1036,7 +1041,7 @@
 
     </div>
     <div style="margin: 10px; margin-left: 5px; margin-right: 5px; margin-top: 10px; padding: 5px; border: 0px; border-radius: 5px;">
-        <button id="extendstatsbutton" style="height: 2em; justify-content: space-between; display: flex; align-items: center; padding-left: 2em; padding-right: 2em; padding-bottom: 0; padding-top: 0; border: 2px solid white; z-index: 1;" onclick="scrollToTop()"><span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span> Back to Build <span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span></button>
+        <button id="totopbutton" style="height: 10vh; justify-content: space-between; display: flex; align-items: center; padding-left: 2em; padding-right: 2em; padding-bottom: 0; padding-top: 0; border: 2px solid white; z-index: 1;" onclick="scrollToTop()"><span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span> Back to Build <span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span></button>
     </div>
 </body>
 </html>
