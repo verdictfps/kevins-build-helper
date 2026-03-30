@@ -1,5 +1,115 @@
 {
   "Barrel": {
+    "None": {
+      "Name": "None",
+      "Type": "Barrel",
+      "DamageMult": 0,
+      "SpreadAdd": 0,
+      "SpreadMult": 0,
+      "MovementSpeedMult": 0,
+      "RecoilMult": 0,
+      "BulletSpeed": 0,
+      "DurabilityMult": 0,
+      "BaseCritChance": 0,
+      "RPM": 0,
+      "StatDescription": "None selected",
+      "AmmoConsumeChance": 0,
+      "Bounces": 0,
+      "BulletDrop": 0,
+      "ExtraAmmoUseChance": 0,
+      "DamageAdd": 0,
+      "CanADS": "Yes",
+      "JumpPower": 0,
+      "LootDropChance": 0,
+      "MoneyDrops": "Yes",
+      "OrganDrops": "Yes",
+      "Penetrations": 0,
+      "ProjectileMult": 0,
+      "RecoilAdd": 0,
+      "ReloadSpeed": 0,
+      "Drag": 0,
+      "DurabilityUsage": 0,
+      "BulletBounciness": 0,
+      "MovingAccuracy": 0,
+      "DurLossMult": 0,
+      "ADSCritChance": 0,
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false,
+      "LongDescription": "None",
+      "ScrollField": "None",
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
+    },
+    "Random Barrel": {
+      "Name": "Random Barrel",
+      "Type": "Barrel",
+      "DamageMult": 0,
+      "SpreadAdd": 0,
+      "SpreadMult": 0,
+      "MovementSpeedMult": 0,
+      "RecoilMult": 0,
+      "BulletSpeed": 0,
+      "DurabilityMult": 0,
+      "BaseCritChance": 0,
+      "RPM": 0,
+      "StatDescription": "None selected",
+      "AmmoConsumeChance": 0,
+      "Bounces": 0,
+      "BulletDrop": 0,
+      "ExtraAmmoUseChance": 0,
+      "DamageAdd": 0,
+      "CanADS": "Yes",
+      "JumpPower": 0,
+      "LootDropChance": 0,
+      "MoneyDrops": "Yes",
+      "OrganDrops": "Yes",
+      "Penetrations": 0,
+      "ProjectileMult": 0,
+      "RecoilAdd": 0,
+      "ReloadSpeed": 0,
+      "Drag": 0,
+      "DurabilityUsage": 0,
+      "BulletBounciness": 0,
+      "MovingAccuracy": 0,
+      "DurLossMult": 0,
+      "ADSCritChance": 0,
+      "Firemode": "None",
+      "BulletSize": 0,
+      "RPMBaseShift": 0,
+      "HeadshotDamage": 0,
+      "DamageAddInd": 0,
+      "HasProc": "No",
+      "ProcType": "None",
+      "ProcChance": 0,
+      "ProcDamage": 0,
+      "ProcFreq": 0,
+      "SelfDamage": "No",
+      "SelfDamageAmount": "None",
+      "DamageType": "None",
+      "ProcChance12ga": 0,
+      "IsRailgun": false,
+      "LongDescription": "None",
+      "ScrollField": "None",
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
+    },
     "A12C Muzzle Brake": {
       "Name": "A12C Muzzle Brake",
       "Type": "Barrel",
@@ -50,7 +160,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Recoil: <span style='color:green'>-35%</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "Aftermarket Haukland Silencer": {
       "Name": "Aftermarket Haukland Silencer",
@@ -64,7 +177,7 @@
       "DurabilityMult": 0,
       "BaseCritChance": 0.25,
       "RPM": -0.15,
-      "StatDescription": "Attack Speed: -15%<br>Crit Chance: +25%",
+      "StatDescription": "RPM: -15%<br>Crit Chance: +25%",
       "AmmoConsumeChance": 0,
       "Bounces": 0,
       "BulletDrop": 0,
@@ -102,7 +215,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Crit Chance: <span style='color:green'>+25%</span> • RPM: <span style='color:red'>-15%</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "Barrel Extension 2in": {
       "Name": "Barrel Extension 2in",
@@ -154,7 +270,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Bullet Speed: <span style='color:green'>+10%</span> • Spread: <span style='color:green'>-10%</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "Barrel Extension 4in": {
       "Name": "Barrel Extension 4in",
@@ -206,7 +325,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Bullet Speed: <span style='color:green'>+25%</span> • Spread: <span style='color:green'>-25%</span> • Movement Speed: <span style='color:red'>-10%</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "Barrel Extension 6in": {
       "Name": "Barrel Extension 6in",
@@ -258,7 +380,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Bullet Speed: <span style='color:green'>+50%</span> • Spread: <span style='color:green'>-50%</span> • Movement Speed: <span style='color:red'>-20%</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "Breznik BMD (Tactical)": {
       "Name": "Breznik BMD (Tactical)",
@@ -310,7 +435,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Recoil: <span style='color:green'>-20%</span> • Spread: <span style='color:green'>-15%</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "Breznik BMD": {
       "Name": "Breznik BMD",
@@ -362,7 +490,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Recoil: <span style='color:green'>-20%</span> • Spread: <span style='color:green'>-15%</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "Haukland Flash Hider": {
       "Name": "Haukland Flash Hider",
@@ -414,7 +545,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Recoil: <span style='color:green'>-20%</span> • Spread: <span style='color:green'>-0.2</span> • Reduces muzzle flash",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "Haukland Silencer": {
       "Name": "Haukland Silencer",
@@ -428,7 +562,7 @@
       "DurabilityMult": 0,
       "BaseCritChance": 0.2,
       "RPM": -0.1,
-      "StatDescription": "Attack Speed: -10%<br>Recoil: -10%<br>Crit Chance: +20%",
+      "StatDescription": "RPM: -10%<br>Recoil: -10%<br>Crit Chance: +20%",
       "AmmoConsumeChance": 0,
       "Bounces": 0,
       "BulletDrop": 0,
@@ -466,7 +600,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Recoil: <span style='color:green'>-10%</span> • Crit Chance: <span style='color:green'>+20%</span> • RPM: <span style='color:red'>-10%</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "Improvised Barrel Extension": {
       "Name": "Improvised Barrel Extension",
@@ -518,7 +655,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Max Durability: <span style='color:green'>+15%</span> • Spread: <span style='color:red'>+0.1</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "M87 Albatross Silencer": {
       "Name": "M87 Albatross Silencer",
@@ -570,7 +710,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Damage: <span style='color:green'>+15%</span> • Crit Chance: <span style='color:green'>+15%</span> • Max Durability: <span style='color:red'>-10%</span> • Spread: <span style='color:red'>+0.25</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "Shrouded Barrel Extension": {
       "Name": "Shrouded Barrel Extension",
@@ -622,7 +765,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Max Durability: <span style='color:green'>+20%</span> • Spread: <span style='color:green'>-0.2</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "SR-P3 Silencer": {
       "Name": "SR-P3 Silencer",
@@ -636,7 +782,7 @@
       "DurabilityMult": 0,
       "BaseCritChance": 0.1,
       "RPM": -0.1,
-      "StatDescription": "Attack Speed: -10%<br>Recoil: -20%<br>Crit Chance: +10%",
+      "StatDescription": "RPM: -10%<br>Recoil: -20%<br>Crit Chance: +10%",
       "AmmoConsumeChance": 0,
       "Bounces": 0,
       "BulletDrop": 0,
@@ -674,7 +820,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Recoil: <span style='color:green'>-20%</span> • Crit Chance: <span style='color:green'>+10%</span> • RPM: <span style='color:red'>-10%</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     },
     "Warmage Compensator": {
       "Name": "Warmage Compensator",
@@ -726,7 +875,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "Recoil: <span style='color:green'>-25%</span> • Spread: <span style='color:green'>-0.15</span>",
+      "TypePositive1": "Barrel",
+      "TypeNegative1": "None"
     }
   }
 }

@@ -209,6 +209,7 @@ body {
     .commitgrid {
         background-color: #FDB142;
         margin-bottom: 5px;
+        padding-bottom: 0px;
         border:2px solid black;
         display: flex;
         flex-wrap: wrap;
@@ -623,6 +624,7 @@ body {
 }
 
 .custom-select {
+    display: flex;
     position: relative;
     font-family: "Fredoka", sans-serif;
     font-size: 0.8em;
@@ -630,13 +632,14 @@ body {
     background:#FDB142;
     border:1px solid #444;
     border-radius: 15px;
-    padding: 10px;
+    padding: 5px;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    width: auto;
     width: 100%;
+    height: 38px;
+    align-items: center;
 }
 
 select.custom-dropdown {
@@ -646,8 +649,10 @@ select.custom-dropdown {
 .custom-select-selected {
     background:#1e1e1e;
     color:black;
-    padding:10px;
+    padding:5px;
+    padding-top: 20px;
     margin: 0.1em;
+    margin-top: 0px;
     border:1px solid #444;
     cursor:pointer;
     display:flex;
@@ -655,7 +660,8 @@ select.custom-dropdown {
     align-items:center;
     background:#f0f0f0;
     z-index: 5;
-    width: auto;
+    width: 100%;
+    height: 22px;
 }
 
 .custom-arrow {
@@ -761,7 +767,7 @@ select.custom-dropdown {
     border:1px solid #444;
     z-index:1000;
     width: 100%;
-    left: 100px;
+    top: 50px;
 }
 
 .custom-select.open .custom-select-panel {
@@ -806,7 +812,24 @@ select.custom-dropdown {
     cursor:pointer;
     color:#ddd;
     margin-right: 5px;
+    margin-top: 1px;
+    margin-bottom: 1px;
     transition: opacity .15s ease, height .15s ease;
+    border: 1px solid black !important; 
+}
+
+.custom-option div {
+    border: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+.custom-option .name {
+    font-weight: 500;
+}
+
+.custom-option .desc {
+    font-size: 0.8em;
 }
 
 .custom-option.active,
@@ -815,11 +838,11 @@ select.custom-dropdown {
 }
 
 .custom-group {
-    padding: 6px 10px;
+    padding: 2px 2px;
     margin-bottom: 1px;
     margin-top: 1px;
     margin-right: 5px;
-    font-size:12px;
+    font-size:11px;
     color:#888;
     background:#111;
     text-transform:uppercase;
@@ -925,9 +948,8 @@ mark {
     background: #ffffff;
     border-color: #000000;
     -webkit-text-fill-color: #fdd142;
-    text-shadow: 20px 0px 15px #000000, 1px 1px 0 #000000, 1px -1px 0 #000000, 1px 1px 0 #000000, 1px 1px 0 #000000, 1px 0px 0 #000000, 0px 1px 0 #000000, -1px 0px 0 #000000, 0px -1px 0 #000000; 
+    text-shadow: 20px 0px 15px #00000046, 1px 1px 0 #000000, 1px -1px 0 #000000, 1px 1px 0 #000000, 1px 1px 0 #000000, 1px 0px 0 #000000, 0px 1px 0 #000000, -1px 0px 0 #000000, 0px -1px 0 #000000; 
     box-shadow: inset 2px 2px 2px #bbbbbb;
-    font-weight: 600;
 }
 
 .no-arrows .custom-group::after {
@@ -998,6 +1020,49 @@ mark {
     transform: translateY(-250px);
     border-top: 0px;
 }
+
+
+#extendoverlay button    {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    background-color: #FDB142;
+    border: 2px solid black;
+    color: black;
+    box-shadow: 3px 3px 0px 0px black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+    #extendoverlay:hover button {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        background-color: #FDB142;
+        border: 2px solid rgb(253, 255, 149);
+        width: 100%;
+        box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+        color: rgb(253, 255, 149);
+        border-radius: 5px;
+        text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+    }
+
+    #extendoverlay:active #extendstatsbutton {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        background-color: #e4a039;
+        border: 1px solid black;
+        width: 100%;
+        box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+        text-shadow: 2px 2px 0px black;
+        color: transparent;
+        transform: translate(3px, 3px);
+    }   
 
 .scrollcardanimate {
     transform: translateY(0px);
@@ -1072,4 +1137,10 @@ mark {
 @keyframes zlayer {
     from {z-index: 1;}
     to {z-index: 99;}
+}
+
+@keyframes extendedStats {
+    0% {background-position: 100% 50%;}
+    80% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }

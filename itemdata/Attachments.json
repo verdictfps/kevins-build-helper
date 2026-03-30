@@ -49,7 +49,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       }
     },
     "Barrel": {
@@ -102,7 +105,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "None": {
         "Name": "None",
@@ -154,7 +160,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "A12C Muzzle Brake": {
         "Name": "A12C Muzzle Brake",
@@ -206,7 +215,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Aftermarket Haukland Silencer": {
         "Name": "Aftermarket Haukland Silencer",
@@ -220,7 +232,7 @@
         "DurabilityMult": 0,
         "BaseCritChance": 0.25,
         "RPM": -0.15,
-        "StatDescription": "Attack Speed: -15%<br>Crit Chance: +25%",
+        "StatDescription": "RPM: -15%<br>Crit Chance: +25%",
         "AmmoConsumeChance": 0,
         "Bounces": 0,
         "BulletDrop": 0,
@@ -258,7 +270,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Barrel Extension 2in": {
         "Name": "Barrel Extension 2in",
@@ -310,7 +325,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Barrel Extension 4in": {
         "Name": "Barrel Extension 4in",
@@ -362,7 +380,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Barrel Extension 6in": {
         "Name": "Barrel Extension 6in",
@@ -414,7 +435,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Breznik BMD (Tactical)": {
         "Name": "Breznik BMD (Tactical)",
@@ -466,7 +490,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Breznik BMD": {
         "Name": "Breznik BMD",
@@ -518,7 +545,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Haukland Flash Hider": {
         "Name": "Haukland Flash Hider",
@@ -570,7 +600,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Haukland Silencer": {
         "Name": "Haukland Silencer",
@@ -584,7 +617,7 @@
         "DurabilityMult": 0,
         "BaseCritChance": 0.2,
         "RPM": -0.1,
-        "StatDescription": "Attack Speed: -10%<br>Recoil: -10%<br>Crit Chance: +20%",
+        "StatDescription": "RPM: -10%<br>Recoil: -10%<br>Crit Chance: +20%",
         "AmmoConsumeChance": 0,
         "Bounces": 0,
         "BulletDrop": 0,
@@ -622,7 +655,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Improvised Barrel Extension": {
         "Name": "Improvised Barrel Extension",
@@ -674,7 +710,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "M87 Albatross Silencer": {
         "Name": "M87 Albatross Silencer",
@@ -726,7 +765,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Shrouded Barrel Extension": {
         "Name": "Shrouded Barrel Extension",
@@ -778,7 +820,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "SR-P3 Silencer": {
         "Name": "SR-P3 Silencer",
@@ -792,7 +837,7 @@
         "DurabilityMult": 0,
         "BaseCritChance": 0.1,
         "RPM": -0.1,
-        "StatDescription": "Attack Speed: -10%<br>Recoil: -20%<br>Crit Chance: +10%",
+        "StatDescription": "RPM: -10%<br>Recoil: -20%<br>Crit Chance: +10%",
         "AmmoConsumeChance": 0,
         "Bounces": 0,
         "BulletDrop": 0,
@@ -830,7 +875,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Warmage Compensator": {
         "Name": "Warmage Compensator",
@@ -882,7 +930,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       }
     },
     "Chamber": {
@@ -935,7 +986,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Chamber Chisel - .50 BMG": {
         "Name": "Chamber Chisel - .50 BMG",
@@ -989,7 +1043,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Chamber Chisel - 12Ga": {
         "Name": "Chamber Chisel - 12Ga",
@@ -1043,7 +1100,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Chamber Chisel - 5.56mm": {
         "Name": "Chamber Chisel - 5.56mm",
@@ -1097,7 +1157,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Chamber Chisel - 7.62mm": {
         "Name": "Chamber Chisel - 7.62mm",
@@ -1151,7 +1214,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Chamber Chisel - 9mm": {
         "Name": "Chamber Chisel - 9mm",
@@ -1205,7 +1271,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Chamber Chisel - Energy": {
         "Name": "Chamber Chisel - Energy",
@@ -1259,7 +1328,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       }
     },
     "Firemode": {
@@ -1312,7 +1384,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "None": {
         "Name": "None",
@@ -1364,7 +1439,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Gun Crank": {
         "Name": "Gun Crank",
@@ -1416,7 +1494,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Priming Bolt": {
         "Name": "Priming Bolt",
@@ -1468,7 +1549,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       }
     },
     "Laser": {
@@ -1521,7 +1605,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "None": {
         "Name": "None",
@@ -1573,7 +1660,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Green": {
         "Name": "Green",
@@ -1625,7 +1715,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Red": {
         "Name": "Red",
@@ -1677,7 +1770,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Yellow": {
         "Name": "Yellow",
@@ -1729,7 +1825,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       }
     },
     "Optic": {
@@ -1782,7 +1881,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "None": {
         "Name": "None",
@@ -1834,7 +1936,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Assault Scope": {
         "Name": "Assault Scope",
@@ -1886,7 +1991,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Compact Sight": {
         "Name": "Compact Sight",
@@ -1938,7 +2046,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Holographic Sight": {
         "Name": "Holographic Sight",
@@ -1990,7 +2101,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Hunting Scope": {
         "Name": "Hunting Scope",
@@ -2042,7 +2156,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Recon Scope": {
         "Name": "Recon Scope",
@@ -2094,7 +2211,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Reflex Sight": {
         "Name": "Reflex Sight",
@@ -2146,7 +2266,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       },
       "Sniper Scope": {
         "Name": "Sniper Scope",
@@ -2198,7 +2321,10 @@
         "IsRailgun": false,
         "LongDescription": "None",
         "ScrollField": "None",
-        "DamageMultInd": 0
+        "DamageMultInd": 0,
+        "DropdownDescription": "",
+        "TypePositive1": "None",
+        "TypeNegative1": "None"
       }
     }
   }

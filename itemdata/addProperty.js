@@ -1,6 +1,6 @@
 
-let newField = "DamageMultInd";
-let newDefault = 0;
+let newField = "TypeNegative1";
+let newDefault = "None";
 
 function oilField() {
     console.log("-------------------Starting Oils-------------------");
@@ -158,6 +158,25 @@ function fireField() {
 
     console.log("Field added to all firemodes in Firemodes.json.");
 }
+function weapField() {
+    console.log("-------------------Starting Weapons-------------------");
+    const fs = require("fs");
+
+    const inputFile = "./Weapons.json";
+    const outputFile = "./Weapons.json";
+
+    const data = JSON.parse(fs.readFileSync(inputFile, "utf8"));
+
+    for (const key in data.Weapon) {
+        const weap = data.Weapon[key];
+
+            addField(weap);
+    }
+
+    fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));
+
+    console.log("Field added to all weapons in Weapons.json.");
+}
 function addField(item) {
 
     if (!(newField in item)) {
@@ -178,3 +197,4 @@ optField();
 chamField();
 lasField();
 fireField();
+weapField();

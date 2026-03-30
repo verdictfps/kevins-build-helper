@@ -16,6 +16,23 @@ function num(v) {
     return `${sign}${v}`;
 }
 
+function wrap(value, type) {
+
+    if (type === "positive")
+        return `<span style='color:green'>${value}</span>`;
+
+    if (type === "negative")
+        return `<span style='color:red'>${value}</span>`;
+
+    if (type === "neutral")
+        return `<span style='color:yellow'>${value}</span>`;
+
+    if (type === "durability")
+        return `<span style='color:purple'>${value}</span>`;
+
+    return value;
+}
+
 function buildDescription(oil) {
     const lines = [];
 //console.log(oil.oil[SpreadMult]);

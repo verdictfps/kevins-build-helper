@@ -49,7 +49,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "None",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "None",
+      "TypeNegative1": "None"
     },
     "Scroll of Dark": {
       "Name": "Scroll of Dark",
@@ -100,7 +103,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfodark",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 1",
+      "TypeNegative1": "None"
     },
     "Scroll of Earth": {
       "Name": "Scroll of Earth",
@@ -151,7 +157,10 @@
       "IsRailgun": false,
       "LongDescription": "Chance to inflict <span style='text-shadow: 0px 0px 3px black'>Stun</span> on target. <span style='text-shadow: 0px 0px 3px black'>Stun</span> prevents enemies from fighting back for a period.",
       "ScrollField": "scrollinfoearth",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 1",
+      "TypeNegative1": "None"
     },
     "Scroll of Embers": {
       "Name": "Scroll of Embers",
@@ -202,7 +211,10 @@
       "IsRailgun": false,
       "LongDescription": "Chance to inflict <span style='text-shadow: 0px 0px 3px orange'>Burning</span> on target.",
       "ScrollField": "scrollinfoembers",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 1",
+      "TypeNegative1": "None"
     },
     "Scroll of Frostbite": {
       "Name": "Scroll of Frostbite",
@@ -253,7 +265,10 @@
       "IsRailgun": false,
       "LongDescription": "Chance to inflict <span style='text-shadow: 0px 0px 3px blue'>Frost</span> on target. <span style='text-shadow: 0px 0px 3px lightblue'>Frost</span> has a stacking chance to <span style='text-shadow: 0px 0px 3px blue'>Freeze</span> enemies below 50% HP.",
       "ScrollField": "scrollinfofrostbite",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 1",
+      "TypeNegative1": "None"
     },
     "Scroll of Toxic Lobotomy": {
       "Name": "Scroll of Toxic Lobotomy",
@@ -304,7 +319,10 @@
       "IsRailgun": true,
       "LongDescription": "None",
       "ScrollField": "scrollinfotoxic",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Light": {
       "Name": "Scroll of Light",
@@ -355,7 +373,10 @@
       "IsRailgun": true,
       "LongDescription": "None",
       "ScrollField": "scrollinfolight",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 1",
+      "TypeNegative1": "None"
     },
     "Scroll of Holy Fire": {
       "Name": "Scroll of Holy Fire",
@@ -406,7 +427,10 @@
       "IsRailgun": true,
       "LongDescription": "None",
       "ScrollField": "scrollinfoholyfire",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Nature": {
       "Name": "Scroll of Nature",
@@ -457,7 +481,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfonature",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 1",
+      "TypeNegative1": "None"
     },
     "Scroll of Plague": {
       "Name": "Scroll of Plague",
@@ -508,7 +535,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfoplague",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 1",
+      "TypeNegative1": "None"
     },
     "Scroll of Surge": {
       "Name": "Scroll of Surge",
@@ -559,7 +589,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfosurge",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 1",
+      "TypeNegative1": "None"
     },
     "Scroll of Water": {
       "Name": "Scroll of Water",
@@ -610,7 +643,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfowater",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 1",
+      "TypeNegative1": "None"
     },
     "Scroll of Aftershock": {
       "Name": "Scroll of Aftershock",
@@ -661,7 +697,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfoaftershock",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Chain Lightning": {
       "Name": "Scroll of Chain Lightning",
@@ -712,7 +751,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfochain",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Chaos Strike": {
       "Name": "Scroll of Chaos Strike",
@@ -763,7 +805,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfochaos",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Charm": {
       "Name": "Scroll of Charm",
@@ -814,7 +859,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfocharm",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Corpse Explosion": {
       "Name": "Scroll of Corpse Explosion",
@@ -865,7 +913,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfocorpse",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Crusader": {
       "Name": "Scroll of Crusader",
@@ -916,7 +967,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfocrusader",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Explosions": {
       "Name": "Scroll of Explosions",
@@ -967,7 +1021,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfoexplosions",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Fear": {
       "Name": "Scroll of Fear",
@@ -1018,7 +1075,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfofear",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Flame Thrower": {
       "Name": "Scroll of Flame Thrower",
@@ -1069,7 +1129,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfoflamethrower",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Pesticide": {
       "Name": "Scroll of Pesticide",
@@ -1120,7 +1183,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfopesticide",
-      "DamageMultInd": 0
+      "DamageMultInd": 0,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Holy Purge": {
       "Name": "Scroll of Holy Purge",
@@ -1171,7 +1237,10 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfoholypurge",
-      "DamageMultInd": -0.9
+      "DamageMultInd": -0.9,
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Lava": {
       "Name": "Scroll of Lava",
@@ -1221,7 +1290,10 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "scrollinfolava"
+      "ScrollField": "scrollinfolava",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Least Resistance": {
       "Name": "Scroll of Least Resistance",
@@ -1271,7 +1343,10 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "scrollinfoleast"
+      "ScrollField": "scrollinfoleast",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Noxiosa": {
       "Name": "Scroll of Noxiosa",
@@ -1321,7 +1396,10 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "scrollinfonoxiosa"
+      "ScrollField": "scrollinfonoxiosa",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Petrification": {
       "Name": "Scroll of Petrification",
@@ -1371,7 +1449,10 @@
       "ProcChance12ga": 0.025,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "scrollinfopetrification"
+      "ScrollField": "scrollinfopetrification",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Petroleum": {
       "Name": "Scroll of Petroleum",
@@ -1421,7 +1502,10 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "scrollinfopetroleum"
+      "ScrollField": "scrollinfopetroleum",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Poison Blood": {
       "Name": "Scroll of Poison Blood",
@@ -1471,7 +1555,10 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "scrollinfopoisonblood"
+      "ScrollField": "scrollinfopoisonblood",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Prism": {
       "Name": "Scroll of Prism",
@@ -1521,7 +1608,10 @@
       "ProcChance12ga": 1,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "scrollinfoprism"
+      "ScrollField": "scrollinfoprism",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Rocket Launcher": {
       "Name": "Scroll of Rocket Launcher",
@@ -1571,7 +1661,10 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "scrollinforocket"
+      "ScrollField": "scrollinforocket",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Slush": {
       "Name": "Scroll of Slush",
@@ -1621,7 +1714,10 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "scrollinfoslush"
+      "ScrollField": "scrollinfoslush",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Sacrifice": {
       "Name": "Scroll of Sacrifice",
@@ -1671,7 +1767,10 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "scrollinfosacrifice"
+      "ScrollField": "scrollinfosacrifice",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Storm Surge": {
       "Name": "Scroll of Storm Surge",
@@ -1721,7 +1820,10 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "scrollinfostormsurge"
+      "ScrollField": "scrollinfostormsurge",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Thunderbolt": {
       "Name": "Scroll of Thunderbolt",
@@ -1771,7 +1873,10 @@
       "ProcChance12ga": 0.5,
       "IsRailgun": true,
       "LongDescription": "None",
-      "ScrollField": "scrollinfothunderbolt"
+      "ScrollField": "scrollinfothunderbolt",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     },
     "Scroll of Voodoo": {
       "Name": "Scroll of Voodoo",
@@ -1821,7 +1926,10 @@
       "ProcChance12ga": 0,
       "IsRailgun": false,
       "LongDescription": "None",
-      "ScrollField": "scrollinfovoodoo"
+      "ScrollField": "scrollinfovoodoo",
+      "DropdownDescription": "",
+      "TypePositive1": "Scrolls - Tier 2",
+      "TypeNegative1": "None"
     }
   }
 }

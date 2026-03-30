@@ -49,50 +49,78 @@ let oilsSpread = null;
 
 // Initiate item data
 
+let dropdownReadyResolve;
+
+const dropdownsReady = new Promise(res => {
+    dropdownReadyResolve = res;
+});
 
 async function loadChamber() {
     const response = await fetch("./itemdata/Chamber.json");
     chamberData = await response.json();
+    const response2 = await fetch("./itemdata/ChamberNoEn.json");
+    chamberData2 = await response2.json();
+    return chamberData2;
 }
 
 async function loadWeapons() {
     const response = await fetch("./itemdata/Weapons.json");
     weaponsData = await response.json();
+    return weaponsData;
 }
 
 async function loadOrigWeapons() {
     const response = await fetch("./itemdata/OrigWeapons.json");
     weaponsOrigData = await response.json();
+    return weaponsOrigData;
 }
 
 async function loadAttachments() {
     const response = await fetch("./itemdata/Attachments.json");
     attachmentsData = await response.json();
+    return attachmentsData;
+
+}
+async function loadBarrels() {
+    const response = await fetch("./itemdata/Barrels.json");
+    barrelsData = await response.json();
+    return barrelsData;
+}
+async function loadOptics() {
+    const response = await fetch("./itemdata/Optics.json");
+    opticsData = await response.json();
+    return opticsData;
+}
+async function loadLasers() {
+    const response = await fetch("./itemdata/Lasers.json");
+    lasersData = await response.json();
+    return lasersData;
+}
+async function loadFiremodes() {
+    const response = await fetch("./itemdata/Firemodes.json");
+    firemodesData = await response.json();
+    return firemodesData;
 }
 
 async function loadOils() {
     const response = await fetch("./itemdata//Oils.json");
     oilsData = await response.json();
-    buildSelectFromTypes(oilsData, document.querySelector("#oils1selector"));
-    buildSelectFromTypes(oilsData, document.querySelector("#oils2selector"));
-    buildSelectFromTypes(oilsData, document.querySelector("#oils3selector"));
-    buildSelectFromTypes(oilsData, document.querySelector("#oils4selector"));
-    buildSelectFromTypes(oilsData, document.querySelector("#oils5selector"));
-    return "Loaded";
+    
+    return oilsData;
 }
 
 async function loadScrolls() {
     const response = await fetch("./itemdata/Scrolls.json");
     scrollsData = await response.json();
+    return scrollsData;
 }
 
-loadChamber();
-loadWeapons();
-loadOils();
-loadScrolls();
-loadOrigWeapons();
-loadAttachments();
-
+async function loadOilsScrolls() {
+    const response = await fetch("./itemdata/OilsScrolls.json");
+    oilsScrollsData = await response.json();
+    return oilsScrollsData;
+}
+/*
 // Oils to dropdowns
 //// By positive (default)
 function normalizeOils(data) {
@@ -102,8 +130,110 @@ function normalizeOils(data) {
       id: key.toLowerCase().replace(/\s+/g, "-"),
       name: oil.Name,
       desc: oil.DropdownDescription || "",
-      type: oil.TypePositive1
+
+      positive: oil.TypePositive1,
+      negative: oil.TypeNegative1,
+
+      raw: oil
     }));
+}
+
+function filterOils(oils, mode) {
+  if (mode === "positive") {
+    return oils.filter(o => o.positive && o.positive !== "None");
+  }
+
+  if (mode === "negative") {
+    return oils.filter(o => o.negative && o.negative !== "None");
+  }
+
+  return oils;
+}
+
+function scoreOil(oil) {
+  const o = oil.raw;
+  let score = 0;
+
+  // When positive is better
+  if (o.DamageAdd) score += o.DamageAdd;
+  if (o.DamageMult) score += o.DamageMult;
+  if (o.RPM) score += o.RPM;
+  if (o.ReloadSpeed) score += o.ReloadSpeed;
+  if (o.Bounces) score += o.Bounces;
+  if (o.BulletSpeed) score += o.BulletSpeed;
+  if (o.BaseCritChance) score += o.BaseCritChance;
+  if (o.JumpPower) score += o.JumpPower;
+  if (o.LootDropChance) score += o.LootDropChance;
+  if (o.MovementSpeedMult) score += o.MovementSpeedMult;
+  if (o.Penetrations) score += o.Penetrations;
+  if (o.ProjectileMult) score += o.ProjectileMult;
+  if (o.BulletBounciness) score += o.BulletBounciness;
+  if (o.MovingAccuracy) score += o.MovingAccuracy;
+  if (o.BulletSize) score += o.BulletSize;
+  if (o.RecoilAdd) score -= o.RecoilAdd;
+  if (o.RecoilMult) score -= o.RecoilMult;
+  if (o.SpreadAdd) score -= o.SpreadAdd;
+  if (o.SpreadMult) score -= o.SpreadMult;
+  if (o.AmmoConsumeChance) score -= o.AmmoConsumeChance;
+  if (o.BulletDrop) score -= o.BulletDrop;
+  if (o.ExtraAmmoUseChance) score -= o.ExtraAmmoUseChance;
+  if (o.DurabilityMult) score -= o.DurabilityMult;
+  if (o.Drag) score -= o.Drag;
+
+  return score;
+}
+
+/*function scoreOil(oil) {
+  const o = oil.raw;
+  let score = 0;
+
+  // GOOD when higher
+  if (o.DamageAdd) score += o.DamageAdd * 2;
+  if (o.DamageMult) score += o.DamageMult * 2;
+  if (o.RPM) scorescore += o.RPM * 1.5;
+  if (o.ReloadSpeed) score += o.ReloadSpeed * 1.2;
+  if (o.MovementSpeedMult) score += o.MovementSpeedMult;
+  if (o.BulletSpeed) score += o.BulletSpeed;
+  if (o.BaseCritChance) score += o.BaseCritChance * 1.5;
+  if (o.Bounces) score += o.Bounces;
+
+  // GOOD when LOWER (so invert)
+  if (o.RecoilAdd) score -= o.RecoilAdd * 2;
+  if (o.RecoilMult) score -= o.RecoilMult * 2;
+  if (o.SpreadAdd) score -= o.SpreadAdd * 2;
+  if (o.SpreadMult) score -= o.SpreadMult * 2;
+  if (o.BulletDrop) score -= o.BulletDrop;
+  if (o.Drag) score -= o.Drag;
+  if (o.ExtraAmmoUseChance) score -= o.ExtraAmmoUseChance;
+  if (o.DurabilityMult) score -= o.DurabilityMult;
+
+  // BAD stats (penalties)
+  if (o.AmmoConsumeChance) score -= o.AmmoConsumeChance * 2;
+  if (o.ExtraAmmoUseChance) score -= o.ExtraAmmoUseChance * 2;
+  if (o.DurabilityMult) score -= o.DurabilityMult;
+
+  return score;
+}*/
+/*
+function sortOilsAdvanced(oils, sortMode) {
+  switch (sortMode) {
+
+    case "best":
+      return oils.sort((a, b) => scoreOil(b) - scoreOil(a));
+
+    case "alpha":
+      return oils.sort((a, b) =>
+        a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+      );
+
+    case "type":
+      return oils.sort((a, b) =>
+        (a.positive || "").localeCompare(b.positive || "")
+      );
+
+    default:
+      return oils;
+  }
 }
 
 function groupByType(oils) {
@@ -122,39 +252,64 @@ function groupByType(oils) {
   return groups;
 }
 
-function buildSelectFromTypes(data, select) {
-  const oils = normalizeOils(data);
-  const groups = groupByType(oils);
+function buildSelectFromTypes(data, select, {
+  filter = "positive" | "negative",
+  sort = "best" | "alpha"
+} = {}) {
+
+  let oils = normalizeOils(data);
+
+  oils = filterOils(oils, filter);
+
+  oils = sortOilsAdvanced(oils, sort);
+
+  const groups = groupByType(
+    oils.map(o => ({
+      ...o,
+      type: filter === "negative" ? o.negative : o.positive
+    }))
+  );
 
   clearGenerated(select);
 
-  const sortedGroups = Object.entries(groups)
-    .sort(([a], [b]) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+  Object.entries(groups).forEach(([type, oils]) => {
 
-  sortedGroups.forEach(([type, oils], i) => {
     const optgroup = document.createElement("optgroup");
     optgroup.label = type;
-    optgroup.dataset.collapsible = "true";
     optgroup.dataset.generated = "true";
-
-    const sortedOils = oils.sort((a, b) =>
-      a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
-    );
 
     optgroup.appendChild(createOption({
       value: `static-random-${slug(type)}`,
       text: `Random ${type} Oil`
     }));
 
-    sortedOils.forEach(oil => {
+    oils.forEach(oil => {
       optgroup.appendChild(createOption({
         value: oil.id,
-        text: `${oil.name} — [${stripHtml(oil.desc)}]`
-      }));
+        text: `${oil.name} — [${stripHtml(oil.desc)}]`,
+        attrs: {
+            "data-positive": oil.positive || "",
+            "data-negative": oil.negative || "",
+            "data-score": scoreOil(oil)
+        }
+        }));
     });
 
     select.appendChild(optgroup);
   });
+}
+
+let currentFilter = "positive";
+let currentSort = "best";
+
+function rebuildDropdown(select, data) {
+  buildSelectFromTypes(data, select, {
+    filter: currentFilter,
+    sort: currentSort
+  });
+
+  select.nextElementSibling?.remove();
+  createProDropdown(select);
 }
 
 function sortOptionsWithPinnedRandom(options) {
@@ -201,130 +356,35 @@ function stripHtml(html) {
 function slug(str) {
   return str.toLowerCase().replace(/\s+/g, "-");
 }
-
-function negativeOilDropdown() {
-    function normalizeOils2(data) {
-        return Object.entries(data.Oil)
-            .filter(([key]) => !["none", "None", "Default"].includes(key))
-            .map(([key, oil]) => ({
-            id: key.toLowerCase().replace(/\s+/g, "-"),
-            name: oil.Name,
-            desc: oil.DropdownDescription || "",
-            type: oil.TypeNegative1
-            }));
-        }
-
-        function groupByType2(oils) {
-        const groups = {};
-
-        oils.forEach(oil => {
-            const type = oil.type;
-
-            if (!groups[type]) {
-            groups[type] = [];
-            }
-
-            groups[type].push(oil);
-        });
-
-        return groups;
-        }
-
-        function buildSelectFromTypesNeg(data, select) {
-        const oils = normalizeOils2(data);
-        const groups = groupByType2(oils);
-
-        clearGenerated2(select);
-
-        const sortedGroups = Object.entries(groups)
-            .sort(([a], [b]) => a.localeCompare(b, undefined, { sensitivity: "base" }));
-
-        sortedGroups.forEach(([type, oils], i) => {
-            const optgroup = document.createElement("optgroup");
-            optgroup.label = type;
-            optgroup.dataset.collapsible = "true";
-            optgroup.dataset.generated = "true";
-
-            const sortedOils = oils.sort((a, b) =>
-            a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
-            );
-
-            optgroup.appendChild(createOption2({
-            value: `static-random-${slug2(type)}`,
-            text: `Random ${type} Oil`
-            }));
-
-            sortedOils.forEach(oil => {
-            optgroup.appendChild(createOption2({
-                value: oil.id,
-                text: `${oil.name} —[ ${stripHtml2(oil.desc)} ]—`
-            }));
-            });
-
-            select.appendChild(optgroup);
-        });
-        }
-
-        function sortOptionsWithPinnedRandom(options) {
-        return options.sort((a, b) => {
-            const aIsRandom = a.name?.startsWith("Random");
-            const bIsRandom = b.name?.startsWith("Random");
-
-            if (aIsRandom && !bIsRandom) return -1;
-            if (!aIsRandom && bIsRandom) return 1;
-
-            return a.name.localeCompare(b.name, undefined, { sensitivity: "base" });
-        });
-        }
-
-        function clearGenerated2(select) {
-        select.querySelectorAll('[data-generated="true"]').forEach(el => el.remove());
-        }
-
-        function createOption2(opt) {
-        const option = document.createElement("option");
-        option.value = opt.value;
-        option.textContent = opt.text;
-
-        if (opt.attrs) {
-            Object.entries(opt.attrs).forEach(([k, v]) => {
-            if (v === true) option.setAttribute(k, "");
-            else option.setAttribute(k, v);
-            });
-        }
-
-        return option;
-        }
-
-        function stripHtml2(html) {
-        const div = document.createElement("div");
-        div.innerHTML = html;
-        return div.textContent || "";
-        }
-
-        function slug2(str) {
-        return str.toLowerCase().replace(/\s+/g, "-");
-        }
-
-        buildSelectFromTypesNeg(oilsData, document.querySelector("#oils1selector"));
-        document
-        .querySelectorAll("select.custom-dropdown")
-        .forEach(createProDropdown);
-}
-
-
-
+/*
 document.addEventListener("DOMContentLoaded", () => {
     document
         .querySelectorAll("select.custom-dropdown")
         .forEach(createProDropdown);
+});*/
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    
+    
+    document
+        .querySelectorAll("select.custom-dropdown")
+        .forEach(select => {
+            if (!select.nextElementSibling?.classList.contains("custom-select")) {
+                createProDropdown(select);
+            }
+        });
+
+    
+    dropdownReadyResolve()
+    rollOnPageLoad('weapon', 'pageload', 7, 'p38-dirk', 'weapon')
 });
-
-const items = [];
-
+/*
 async function createProDropdown(select) {
+    const items = [];
 
-    let response = await loadOils();
+    if (select.dataset.proInitialized) return;
+select.dataset.proInitialized = "true";
 
     window.addEventListener("resize", () => {
     if (wrapper.classList.contains("open"))
@@ -355,6 +415,80 @@ async function createProDropdown(select) {
     const observer = new MutationObserver(() => {
     wrapper.classList.toggle("disabled", select.disabled);
 });
+
+function applyFilter() {
+    search.dispatchEvent(new Event("input"));
+}
+
+function applySort() {
+
+    const groups = list.querySelectorAll(".custom-group");
+
+    groups.forEach(group => {
+
+        // collect items in THIS group only
+        let next = group.nextElementSibling;
+        const groupItems = [];
+
+        while (next && !next.classList.contains("custom-group")) {
+            if (next.classList.contains("custom-option")) {
+                groupItems.push(next);
+            }
+            next = next.nextElementSibling;
+        }
+
+        // sort items
+        groupItems.sort((a, b) => {
+
+            if (currentSort === "alpha") {
+                return a.textContent.localeCompare(b.textContent);
+            }
+
+            if (currentSort === "best") {
+                return (parseFloat(b.dataset.score) || 0) - (parseFloat(a.dataset.score) || 0);
+            }
+
+            return 0;
+        });
+
+        // reinsert AFTER the group header, in order
+        groupItems.forEach(li => {
+            group.parentNode.insertBefore(li, group.nextElementSibling);
+        });
+
+    });
+}
+
+function updateGroupVisibility() {
+
+    list.querySelectorAll(".custom-group").forEach(group => {
+
+        let next = group.nextElementSibling;
+        let hasVisible = false;
+
+        while (next && !next.classList.contains("custom-group")) {
+
+            if (
+                next.classList.contains("custom-option") &&
+                !next.classList.contains("filter-hidden") &&
+                !next.classList.contains("search-hidden")
+            ) {
+                hasVisible = true;
+                break;
+            }
+
+            next = next.nextElementSibling;
+        }
+
+        group.classList.toggle("hidden-group-header", !hasVisible);
+    });
+}
+function updateDropdownLive() {
+    
+    applyFilter();
+    applySort();
+    updateGroupVisibility();
+}
 
 observer.observe(select, {
     attributes: true,
@@ -445,34 +579,35 @@ observer.observe(select, {
 });
 
     function addOption(opt, groupEl = null) {
-console.log(opt)
-    const isHidden = opt.hidden || opt.style.display === "none";
-    const li = document.createElement("li");
-    li.className = "custom-option";
-    li.textContent = opt.text;
 
-    li.dataset.dropdownId = dropdownId;
+        const li = document.createElement("li");
+        li.className = "custom-option";
+        li.textContent = opt.text;
 
-    li.dataset.value = opt.value;
+        li.dataset.dropdownId = dropdownId;
+        li.dataset.value = opt.value;
 
-    Object.assign(li.dataset, opt.dataset);
+        Object.assign(li.dataset, opt.dataset);
 
-    if (groupEl)
-        li.dataset.groupId =
-            groupEl.dataset.categoryId ||
-            groupEl.id ||
-            groupEl.dataset.label;
+        if (opt.dataset.negative) li.dataset.negative = opt.dataset.negative;
+        if (opt.dataset.score) li.dataset.score = opt.dataset.score;
 
-    if (opt.hidden || opt.style.display === "none") {
+        if (groupEl)
+            li.dataset.groupId =
+                groupEl.dataset.categoryId ||
+                groupEl.id ||
+                groupEl.dataset.label;
+
+        if (opt.hidden || opt.style.display === "none") {
             li.style.display = "none";
         }
 
-    list.appendChild(li);
+        list.appendChild(li);
 
-    items.push({ li, opt });
+        items.push({ li, opt });
 
-    li.addEventListener("click", () => selectItem(opt));
-}
+        li.addEventListener("click", () => selectItem(opt));
+    }
 
 function toggleGroup(groupEl) {
 
@@ -552,8 +687,6 @@ function closeAllGroupsExcept(exception) {
     }
 
     // Open Dropdown
-    if (wrapper.classList.contains("disabled"))
-        return;
 
     function resetSearch() {
 
@@ -581,6 +714,8 @@ function closeAllGroupsExcept(exception) {
 
     selected.addEventListener("click", () => {
 
+    if (wrapper.classList.contains("disabled")) return;
+
     wrapper.classList.toggle("open");
 
     if (wrapper.classList.contains("open")) {
@@ -588,7 +723,7 @@ function closeAllGroupsExcept(exception) {
         search.focus();
         scrollToSelected();
     }
-    });
+});
 
     document.addEventListener("click", e => {
         if (!wrapper.contains(e.target)) {
@@ -622,34 +757,29 @@ function closeAllGroupsExcept(exception) {
         items.forEach(({ li, opt }) => {
 
             const text = opt.text;
-            const match = text.toLowerCase().includes(term);
 
-            li.textContent = text;
+            const matchesSearch = !term || text.toLowerCase().includes(term);
 
-            if (opt.hidden)
-                return;
+            const isPositive = li.dataset.positive && li.dataset.positive !== "None";
+            const isNegative = li.dataset.negative && li.dataset.negative !== "None";
 
-            if (term && !match)
-                li.classList.add("search-hidden");
-            else
-                li.classList.remove("search-hidden");
+            let passesFilter = true;
 
-            if (match && term) {
+            if (currentFilter === "positive") passesFilter = isPositive;
+            if (currentFilter === "negative") passesFilter = isNegative;
 
+            const visible = matchesSearch && passesFilter;
+
+            li.classList.toggle("search-hidden", !visible);
+
+            if (visible && term) {
                 li.innerHTML = text.replace(
                     new RegExp(`(${term})`, "ig"),
                     "<mark>$1</mark>"
                 );
-
-                let parent = li.previousElementSibling;
-
-                while (parent && !parent.classList.contains("custom-group"))
-                    parent = parent.previousElementSibling;
-
-                if (parent)
-                    groupsWithMatches.add(parent);
+            } else {
+                li.textContent = text;
             }
-
         });
 
         list.querySelectorAll(".custom-group").forEach(group => {
@@ -747,6 +877,33 @@ search.addEventListener("keydown", e => {
             if (opt) selectItem(opt);
         }
     };
+
+    wrapper.api = {
+        getItems: () => items,
+        refresh: () => search.dispatchEvent(new Event("input")),
+        update: updateDropdownLive
+    };
+
+    // use:
+    /* const dropdown = document.querySelector(".custom-select");
+    document.querySelectorAll(".custom-select")
+    .forEach(w => {
+        const items = w.api.getItems();
+    }); *//*
+    updateDropdownLive();
+    wrapper.updateDropdownLive = updateDropdownLive;
+    wrapper._items = items;
+}
+
+
+
+function updateAllDropdowns() {
+    
+    
+    document.querySelectorAll(".custom-select").forEach(w => {
+        
+        w.updateDropdownLive?.();
+    });
 }
 
 function isPositive(oil) {
@@ -755,6 +912,1046 @@ function isPositive(oil) {
 
 function isNegative(oil) {
   return oil.TypeNegative1 && oil.TypeNegative1 !== "None";
+}
+*/
+
+const coreSelections = new Map();
+
+function resetCoreSelections() {
+    console.info("KBH: Resetting core selections");
+    coreSelections.set("weapon", {Name: "P38 Dirk", Value: "p38-dirk"});
+    coreSelections.set("ench1", {Name: "None", Value: "none"});
+    coreSelections.set("ench2", {Name: "None", Value: "none"});
+    coreSelections.set("ench3", {Name: "None", Value: "none"});
+    coreSelections.set("ench4", {Name: "None", Value: "none"});
+    coreSelections.set("ench5", {Name: "None", Value: "none"});
+    coreSelections.set("barrel", {Name: "None", Value: "none"});
+    coreSelections.set("optic", {Name: "None", Value: "none"});
+    coreSelections.set("laser", {Name: "None", Value: "none"});
+    coreSelections.set("firemode", {Name: "None", Value: "none"});
+    coreSelections.set("chamber", {Name: "None", Value: "none"});
+
+    return;
+}
+
+const tempSelections = new Map();
+
+function resetTempSelections() {
+    console.info("KBH: Resetting temp selections");
+    tempSelections.set("weapon", {Name: "P38 Dirk", Value: "p38-dirk"});
+    tempSelections.set("ench1", {Name: "None", Value: "none"});
+    tempSelections.set("ench2", {Name: "None", Value: "none"});
+    tempSelections.set("ench3", {Name: "None", Value: "none"});
+    tempSelections.set("ench4", {Name: "None", Value: "none"});
+    tempSelections.set("ench5", {Name: "None", Value: "none"});
+    tempSelections.set("barrel", {Name: "None", Value: "none"});
+    tempSelections.set("optic", {Name: "None", Value: "none"});
+    tempSelections.set("laser", {Name: "None", Value: "none"});
+    tempSelections.set("firemode", {Name: "None", Value: "none"});
+    tempSelections.set("chamber", {Name: "None", Value: "none"});
+}
+
+// Indexers //
+//#region
+
+// Optic Indexer
+
+let barrelValueIndexer = new Map();
+
+function setBarrelValueIndexer() {
+    console.info("KBH: Setting barrel value indexer");
+    barrelValueIndexer.set("none", "None");
+    barrelValueIndexer.set("static-random-barrel", "Random Barrel");
+    barrelValueIndexer.set("a12c-muzzle-brake", "A12C Muzzle Brake");
+    barrelValueIndexer.set("aftermarket-haukland-silencer", "Aftermarket Haukland Silencer");
+    barrelValueIndexer.set("barrel-extension-2in", "Barrel Extension 2in");
+    barrelValueIndexer.set("barrel-extension-4in", "Barrel Extension 4in");
+    barrelValueIndexer.set("barrel-extension-6in", "Barrel Extension 6in");
+    barrelValueIndexer.set("breznik-bmd-tactical", "Breznik BMD (Tactical)");
+    barrelValueIndexer.set("breznik-bmd", "Breznik BMD");
+    barrelValueIndexer.set("haukland-flash-hider", "Haukland Flash Hider");
+    barrelValueIndexer.set("haukland-silencer", "Haukland Silencer");
+    barrelValueIndexer.set("improvised-barrel-extension", "Improvised Barrel Extension");
+    barrelValueIndexer.set("shrouded-barrel-extension", "Shrouded Barrel Extension");
+    barrelValueIndexer.set("sr-p3-silencer", "SR-P3 Silencer");
+    barrelValueIndexer.set("warmage-compensator", "Warmage Compensator");
+    barrelValueIndexer.set("m87-albatross-silencer", "M87 Albatross Silencer");
+}
+
+let barrelNameIndexer = new Map();
+
+function setBarrelNameIndexer() {
+    console.info("KBH: Setting barrel name indexer");
+    function addToWNI(value, key, map) {
+        barrelNameIndexer.set(value, key);
+    }
+
+    barrelValueIndexer.forEach(addToWNI);  
+    
+}
+
+// Optic Indexer
+let opticValueIndexer = new Map();
+
+function setOpticValueIndexer() {
+    console.info("KBH: Setting optic value indexer");
+    opticValueIndexer.set("none", "None");
+    opticValueIndexer.set("static-random-optic", "Random Optic");
+    opticValueIndexer.set("assault-scope", "Assault Scope");
+    opticValueIndexer.set("compact-sight", "Compact Sight");
+    opticValueIndexer.set("holographic-sight", "Holographic Sight");
+    opticValueIndexer.set("hunting-scope", "Hunting Scope");
+    opticValueIndexer.set("recon-scope", "Recon Scope");
+    opticValueIndexer.set("reflex-sight", "Reflex Sight");
+    opticValueIndexer.set("sniper-scope", "Sniper Scope");
+}
+
+let opticNameIndexer = new Map();
+
+function setOpticNameIndexer() {
+    console.info("KBH: Setting optic name indexer");
+    function addToWNI(value, key, map) {
+        opticNameIndexer.set(value, key);
+    }
+
+    opticValueIndexer.forEach(addToWNI);  
+    
+}
+
+// Laser Indexer
+let laserValueIndexer = new Map();
+
+function setLaserValueIndexer() {
+    console.info("KBH: Setting laser value indexer");
+    laserValueIndexer.set("none", "None");
+    laserValueIndexer.set("static-random-laser", "Random Laser");
+    laserValueIndexer.set("red", "Red");
+    laserValueIndexer.set("yellow", "Yellow");
+    laserValueIndexer.set("green", "Green");
+}
+
+let laserNameIndexer = new Map();
+
+function setLaserNameIndexer() {
+    console.info("KBH: Setting laser name indexer");
+    function addToWNI(value, key, map) {
+        laserNameIndexer.set(value, key);
+    }
+
+    laserValueIndexer.forEach(addToWNI);  
+    
+}
+
+// Firemode Indexer
+let firemodeValueIndexer = new Map();
+
+function setFiremodeValueIndexer() {
+    console.info("KBH: Setting firemode value indexer");
+    firemodeValueIndexer.set("none", "None");
+    firemodeValueIndexer.set("gun-crank", "Gun Crank");
+    firemodeValueIndexer.set("priming-bolt", "Priming Bolt");
+}
+
+let firemodeNameIndexer = new Map();
+
+function setFiremodeNameIndexer() {
+    console.info("KBH: Setting firemode name indexer");
+    function addToWNI(value, key, map) {
+        firemodeNameIndexer.set(value, key);
+    }
+
+    firemodeValueIndexer.forEach(addToWNI);  
+    
+}
+
+// Chamber Indexer
+
+let chamberValueIndexer = new Map();
+let chamberNameIndexer = new Map();
+
+function setChamberValueIndexer() {
+console.info("KBH: Setting chamber value indexer");
+
+    chamberValueIndexer.set("none", "None");
+    chamberValueIndexer.set("static-random-chamber", "Random Chamber");
+    chamberValueIndexer.set("chamber-chisel---.50-bmg", "Chamber Chisel - .50 BMG");
+    chamberValueIndexer.set("chamber-chisel---12ga", "Chamber Chisel - 12Ga");
+    chamberValueIndexer.set("chamber-chisel---5.56mm", "Chamber Chisel - 5.56mm");
+    chamberValueIndexer.set("chamber-chisel---7.62mm", "Chamber Chisel - 7.62mm");
+    chamberValueIndexer.set("chamber-chisel---9mm", "Chamber Chisel - 9mm");
+    chamberValueIndexer.set("chamber-chisel---energy", "Chamber Chisel - Energy");
+
+}
+
+function setChamberNameIndexer() {
+console.info("KBH: Setting chamber name indexer");
+    chamberNameIndexer.set("None", "none");
+    chamberNameIndexer.set("Random Chamber", "static-random-chamber");
+    chamberNameIndexer.set("Chamber Chisel - .50 BMG", "chamber-chisel---.50-bmg");
+    chamberNameIndexer.set("Chamber Chisel - 12Ga", "chamber-chisel---12ga");
+    chamberNameIndexer.set("Chamber Chisel - 5.56mm", "chamber-chisel---5.56mm");
+    chamberNameIndexer.set("Chamber Chisel - 7.62mm", "chamber-chisel---7.62mm");
+    chamberNameIndexer.set("Chamber Chisel - 9mm", "chamber-chisel---9mm");
+    chamberNameIndexer.set("Chamber Chisel - Energy", "chamber-chisel---energy");
+
+}
+
+// Weapon Indexer
+
+const weaponValueIndexer = new Map();
+
+function setWeaponValueIndexer() {
+console.info("KBH: Setting weapon value indexer");
+    weaponValueIndexer.set("none", "None");
+    weaponValueIndexer.set("random-all-weapons", "Random Weapon");
+    weaponValueIndexer.set("random-pistols", "Random Pistol");
+    weaponValueIndexer.set("beck-8", "Beck 8");
+    weaponValueIndexer.set("bronco-89", "Bronco 89");
+    weaponValueIndexer.set("cavalier", "Cavalier");
+    weaponValueIndexer.set("flicker", "Flicker");
+    weaponValueIndexer.set("gravekeeper", "Gravekeeper");
+    weaponValueIndexer.set("hell-n-back", "Hell 'N' Back");
+    weaponValueIndexer.set("p38-dirk", "P38 Dirk");
+    weaponValueIndexer.set("salamander", "Salamander");
+    weaponValueIndexer.set("socom-9", "Socom 9");
+    weaponValueIndexer.set("star-witness", "Star & Witness");
+    weaponValueIndexer.set("unknown", "Unknown");
+    weaponValueIndexer.set("random-revolvers", "Random Revolver");
+    weaponValueIndexer.set(".357-balthazar", ".357 Balthazar");
+    weaponValueIndexer.set("palehorse-topclipper", "Palehorse Topclipper");
+    weaponValueIndexer.set("snut-.38", "Snut .38");
+    weaponValueIndexer.set("wyatt-pulsar", "Wyatt PULSAR");
+    weaponValueIndexer.set("random-shotguns", "Random Shotgun");
+    weaponValueIndexer.set("1889-mario", "1889 Mario");
+    weaponValueIndexer.set("arbiter-2", "Arbiter 2");
+    weaponValueIndexer.set("augusta", "Augusta");
+    weaponValueIndexer.set("breacher-8", "Breacher 8");
+    weaponValueIndexer.set("flock-76", "Flock 76");
+    weaponValueIndexer.set("majordome", "Majordome");
+    weaponValueIndexer.set("mossman", "Mossman");
+    weaponValueIndexer.set("random-smgs", "Random SMG");
+    weaponValueIndexer.set("deathstar-pg", "Deathstar PG");
+    weaponValueIndexer.set("drifter-9", "Drifter 9");
+    weaponValueIndexer.set("ferryman", "Ferryman");
+    weaponValueIndexer.set("m3-termite", "M3 Termite");
+    weaponValueIndexer.set("ploika-compact", "Ploika Compact");
+    weaponValueIndexer.set("songbird", "Songbird");
+    weaponValueIndexer.set("valet", "Valet");
+    weaponValueIndexer.set("vrede", "Vrede");
+    weaponValueIndexer.set("random-assault-rifles", "Random AR");
+    weaponValueIndexer.set("catacoil-rapid-x", "Catacoil Rapid X");
+    weaponValueIndexer.set("corpsemaker", "Corpsemaker");
+    weaponValueIndexer.set("m11a2-fisk", "M11A2 Fisk");
+    weaponValueIndexer.set("type-80-typhoon", "Type 80 Typhoon");
+    weaponValueIndexer.set("wingman", "Wingman");
+    weaponValueIndexer.set("random-lmgs", "Random LMG");
+    weaponValueIndexer.set("chat-pardeur-98", "Chat-Pardeur 98");
+    weaponValueIndexer.set("duhar", "Duhar");
+    weaponValueIndexer.set("neuraxis-f22", "Neuraxis F22");
+    weaponValueIndexer.set("rektor-100rd", "Rektor 100rd");
+    weaponValueIndexer.set("warpig", "Warpig");
+    weaponValueIndexer.set("random-rifles", "Random Rifle");
+    weaponValueIndexer.set("farsight", "Farsight");
+    weaponValueIndexer.set("knop-22", "Knop .22");
+    weaponValueIndexer.set("m182-pierre-fusil", "M182 Pierre-Fusil");
+    weaponValueIndexer.set("tailor-marksman-mkii", "Tailor Marksman MKII");
+    weaponValueIndexer.set("random-sniper-rifles", "Random Sniper");
+    weaponValueIndexer.set("d4rt", "D4RT");
+    weaponValueIndexer.set("dolphin-99", "Dolphin 99");
+    weaponValueIndexer.set("impala-gravita", "Impala Gravita");
+    weaponValueIndexer.set("longboy", "Longboy");
+    weaponValueIndexer.set("rokua-308", "Rokua .308");
+
+}
+
+const weaponNameIndexer = new Map();
+
+function setWeaponNameIndexer() {
+console.info("KBH: Setting weapon name indexer");
+    function addToWNI(value, key, map) {
+        weaponNameIndexer.set(value, key);
+    }
+
+    weaponValueIndexer.forEach(addToWNI);  
+    
+}
+
+// Scroll Indexer
+
+let scrollValueIndexer = new Map();
+
+function setScrollValueIndexer() {
+console.info("KBH: Setting scroll value indexer");
+
+    scrollValueIndexer.set("none", "None");
+    scrollValueIndexer.set("static-random-all-enchantments", "Random Enchantment");
+    scrollValueIndexer.set("static-random-all-scrolls", "Random Scroll");
+    scrollValueIndexer.set("static-random-scroll-t1", "Random T1 Scroll");
+    scrollValueIndexer.set("static-random-scroll-t2", "Random T2 Scroll");
+    scrollValueIndexer.set("scroll-of-dark", "Scroll of Dark");
+    scrollValueIndexer.set("scroll-of-earth", "Scroll of Earth");
+    scrollValueIndexer.set("scroll-of-embers", "Scroll of Embers");
+    scrollValueIndexer.set("scroll-of-frostbite", "Scroll of Frostbite");
+    scrollValueIndexer.set("scroll-of-light", "Scroll of Light");
+    scrollValueIndexer.set("scroll-of-nature", "Scroll of Nature");
+    scrollValueIndexer.set("scroll-of-plague", "Scroll of Plague");
+    scrollValueIndexer.set("scroll-of-surge", "Scroll of Surge");
+    scrollValueIndexer.set("scroll-of-water", "Scroll of Water");
+    scrollValueIndexer.set("scroll-of-holy-fire", "Scroll of Holy Fire");
+    scrollValueIndexer.set("scroll-of-aftershock", "Scroll of Aftershock");
+    scrollValueIndexer.set("scroll-of-chain-lightning", "Scroll of Chain Lightning");
+    scrollValueIndexer.set("scroll-of-chaos-strike", "Scroll of Chaos Strike");
+    scrollValueIndexer.set("scroll-of-charm", "Scroll of Charm");
+    scrollValueIndexer.set("scroll-of-corpse-explosion", "Scroll of Corpse Explosion");
+    scrollValueIndexer.set("scroll-of-crusader", "Scroll of Crusader");
+    scrollValueIndexer.set("scroll-of-explosions", "Scroll of Explosions");
+    scrollValueIndexer.set("scroll-of-fear", "Scroll of Fear");
+    scrollValueIndexer.set("scroll-of-flame-thrower", "Scroll of Flame Thrower");
+    scrollValueIndexer.set("scroll-of-holy-purge", "Scroll of Holy Purge");
+    scrollValueIndexer.set("scroll-of-lava", "Scroll of Lava");
+    scrollValueIndexer.set("scroll-of-least-resistance", "Scroll of Least Resistance");
+    scrollValueIndexer.set("scroll-of-noxiosa", "Scroll of Noxiosa");
+    scrollValueIndexer.set("scroll-of-pesticide", "Scroll of Pesticide");
+    scrollValueIndexer.set("scroll-of-petrification", "Scroll of Petrification");
+    scrollValueIndexer.set("scroll-of-petroleum", "Scroll of Petroleum");
+    scrollValueIndexer.set("scroll-of-poison-blood", "Scroll of Poison Blood");
+    scrollValueIndexer.set("scroll-of-prism", "Scroll of Prism");
+    scrollValueIndexer.set("scroll-of-rocket-launcher", "Scroll of Rocket Launcher");
+    scrollValueIndexer.set("scroll-of-slush", "Scroll of Slush");
+    scrollValueIndexer.set("scroll-of-sacrifice", "Scroll of Sacrifice");
+    scrollValueIndexer.set("scroll-of-storm-surge", "Scroll of Storm Surge");
+    scrollValueIndexer.set("scroll-of-thunderbolt", "Scroll of Thunderbolt");
+    scrollValueIndexer.set("scroll-of-toxic-lobotomy", "Scroll of Toxic Lobotomy");
+    scrollValueIndexer.set("scroll-of-voodoo", "Scroll of Voodoo");
+
+}
+
+let scrollNameIndexer = new Map();
+
+function setScrollNameIndexer() {
+console.info("KBH: Setting scroll name indexer");
+
+    function addToWNI(value, key, map) {
+        scrollNameIndexer.set(value, key);
+    }
+
+    scrollValueIndexer.forEach(addToWNI);  
+
+}
+
+//#endregion
+
+resetCoreSelections();
+resetTempSelections();
+setChamberValueIndexer();
+setChamberNameIndexer();
+setBarrelValueIndexer();
+setBarrelNameIndexer();
+setOpticValueIndexer();
+setOpticNameIndexer();
+setLaserValueIndexer();
+setLaserNameIndexer();
+setFiremodeValueIndexer();
+setFiremodeNameIndexer();
+setWeaponValueIndexer();
+setWeaponNameIndexer();
+setScrollValueIndexer();
+setScrollNameIndexer();
+
+function fuzzyMatch(text, query) {
+    text = text.toLowerCase();
+    query = query.toLowerCase();
+
+    let ti = 0, qi = 0;
+
+    while (ti < text.length && qi < query.length) {
+        if (text[ti] === query[qi]) qi++;
+        ti++;
+    }
+
+    return qi === query.length;
+}
+
+async function createProDropdown(select) {
+
+    const state = {
+        open: false,
+        value: select.value || null,
+        search: "",
+        options: [],
+        filtered: [],
+        sortMode: "default",
+        groupMode: "positive"
+    };
+
+   
+
+    // ===== LOAD DATA =====
+    if (select.classList.contains("scroll-dropdown")) {
+        const data = await loadOilsScrolls();
+        loadScrolls();
+        state.options = normalizeOptions(data);
+    }
+    if (select.classList.contains("oil-dropdown")) {
+        const data = await loadOils();
+        state.options = normalizeOptions(data);
+    }
+    if (select.classList.contains("weapon-dropdown")) {
+        const data = await loadWeapons();
+        loadOrigWeapons();
+        state.options = normalizeOptions(data);
+    }
+    if (select.classList.contains("barrel-dropdown")) {
+        const data = await loadBarrels();
+        state.options = normalizeOptions(data);
+    }
+    if (select.classList.contains("optic-dropdown")) {
+        const data = await loadOptics();
+        state.options = normalizeOptions(data);
+    }
+    if (select.classList.contains("laser-dropdown")) {
+        const data = await loadLasers();
+        state.options = normalizeOptions(data);
+    }
+    if (select.classList.contains("firemode-dropdown")) {
+        const data = await loadFiremodes();
+        state.options = normalizeOptions(data);
+    }
+    if (select.classList.contains("chamber-dropdown")) {
+        const data = await loadChamber();
+        state.options = normalizeOptions(data);
+    }
+    
+    // ===== BUILD DOM =====
+    const wrapper = document.createElement("div");
+    wrapper.className = "custom-select";
+    wrapper.id = (`${select.id}-custom`)
+
+    let sortMode = select.dataset.sort || "default";
+
+    const control = document.createElement("div");
+    control.className = "custom-select-selected";
+
+    const display = document.createElement("span");
+
+    const arrow = document.createElement("span");
+    arrow.className = "custom-arrow";
+    arrow.textContent = "▾";
+
+    control.append(display, arrow);
+
+    const panel = document.createElement("div");
+    panel.className = "custom-select-panel";
+
+    const searchInput = document.createElement("input");
+    searchInput.className = "custom-select-search";
+    searchInput.placeholder = "Search...";
+
+    const list = document.createElement("div");
+    list.className = "custom-select-menu";
+    list.id = `${select.id}2`;
+
+    panel.append(searchInput, list);
+    wrapper.append(control, panel);
+
+    searchInput.addEventListener("focus", () => {
+    if (wrapper.classList.contains("open"))
+        decideDirection();
+    });
+
+    // Up or down
+    function decideDirection() {
+    console.log(wrapper)
+        wrapper.classList.remove("drop-up");
+
+        const rect = panel.getBoundingClientRect();
+        const panelHeight = panel.offsetHeight || 320;
+
+        const spaceBelow = window.innerHeight - rect.bottom;
+        const spaceAbove = rect.top;
+
+        if (spaceBelow < panelHeight && spaceAbove > panelHeight) {
+            wrapper.classList.add("drop-up");
+        }
+    }
+
+    select.style.position = "absolute";
+    select.style.opacity = "0";
+    select.style.pointerevents = "none";
+    select.style.height = "0";
+    select.insertAdjacentElement("afterend", wrapper);
+
+    select.addEventListener("change", () => {
+        state.value = select.value;
+        render();
+    });
+
+    // ===== NORMALIZATION =====
+    function normalizeOptions(data) {
+        const results = [];
+
+        if (data.OilScroll){
+            const oilscrolls = data.OilScroll;
+
+            function getName(item) {
+                let value = null;
+                if (item.startsWith("Scroll") || item.endsWith("Scroll")) {
+                    value = scrollNameIndexer.get(item)
+                }
+                else if (item.endsWith("Oil")) {
+                    value = oilNameIndexer.get(item)
+                }
+                else {
+                    value = oilNameIndexer.get(item)
+                }
+                return value;
+            }
+
+            Object.entries(oilscrolls).forEach(([key, oilscroll]) => {
+
+                if (!oilscroll.Name || ["none", "Default"].includes(oilscroll.Name)) return;
+
+                let group = "Other";
+
+                results.push({
+                    label: oilscroll.Name,
+                    value: getName(oilscroll.Name),
+                    group: group,
+                    meta: oilscroll
+                });
+            });
+        }
+        if (data.Oil){
+            const oils = data.Oil;
+
+            Object.entries(oils).forEach(([key, oil]) => {
+
+                if (!oil.Name || ["none", "Default"].includes(oil.Name)) return;
+
+                let group = "Other";
+
+                results.push({
+                    label: oil.Name,
+                    value: oilNameIndexer.get(oil.Name),
+                    group: group,
+                    meta: oil
+                });
+            });
+        }
+        if (data.Weapon){
+            const weapons = data.Weapon;
+
+            Object.entries(weapons).forEach(([key, weapon]) => {
+
+                if (!weapon.Name || ["Default"].includes(weapon.Name)) return;
+
+                let group = weapon.Type || "Other";
+
+                if (group === "None") group = "Other";
+
+                results.push({
+                    label: weapon.Name,
+                    value: weaponNameIndexer.get(weapon.Name),
+                    group: group,
+                    meta: weapon
+                });
+            });
+        }
+        if (data.Barrel) {
+            const barrels = data.Barrel;
+
+            Object.entries(barrels).forEach(([key, barrel]) => {
+
+                if (!barrel.Name || ["Default"].includes(barrel.Name)) return;
+
+                let group = barrel.Type || "Other";
+
+                if (group === "None") group = "Other";
+
+                results.push({
+                    label: barrel.Name,
+                    value: barrelNameIndexer.get(barrel.Name),
+                    group: group,
+                    meta: barrel
+                });
+            });
+        }
+        if (data.Optic) {
+            const optics = data.Optic;
+
+            Object.entries(optics).forEach(([key, optic]) => {
+
+                if (!optic.Name || ["Default"].includes(optic.Name)) return;
+
+                let group = optic.Type || "Other";
+
+                if (group === "None") group = "Other";
+
+                results.push({
+                    label: optic.Name,
+                    value: opticNameIndexer.get(optic.Name),
+                    group: group,
+                    meta: optic
+                });
+            });
+        }
+        if (data.Laser) {
+            const lasers = data.Laser;
+
+            Object.entries(lasers).forEach(([key, laser]) => {
+
+                if (!laser.Name || ["Default"].includes(laser.Name)) return;
+
+                let group = laser.Type || "Other";
+
+                if (group === "None") group = "Other";
+
+                results.push({
+                    label: laser.Name,
+                    value: laserNameIndexer.get(laser.Name),
+                    group: group,
+                    meta: laser
+                });
+            });
+        }
+        if (data.Firemode) {
+            const firemodes = data.Firemode;
+
+            Object.entries(firemodes).forEach(([key, firemode]) => {
+
+                if (!firemode.Name || ["Default"].includes(firemode.Name)) return;
+
+                let group = firemode.Type || "Other";
+
+                if (group === "None") group = "Other";
+
+                results.push({
+                    label: firemode.Name,
+                    value: firemodeNameIndexer.get(firemode.Name),
+                    group: group,
+                    meta: firemode
+                });
+            });
+        }
+        if (data.Chamber) {
+            const chambers = data.Chamber;
+
+            Object.entries(chambers).forEach(([key, chamber]) => {
+
+                if (!chamber.Name || ["Default"].includes(chamber.Name)) return;
+
+                let group = chamber.Type || "Other";
+
+                if (group === "None") group = "Other";
+
+                results.push({
+                    label: chamber.Name,
+                    value: chamberNameIndexer.get(chamber.Name),
+                    group: group,
+                    meta: chamber
+                });
+            });
+        }
+    
+        return results;
+    }
+
+    if (select.value) {
+        state.value = select.value;
+    } else if (state.options.length) {
+        state.value = state.options[0].value;
+    }
+
+    const priorityGroups = [
+        "General",
+        "Scrolls - Tier 1",
+        "Scrolls - Tier 2"
+    ];
+
+    const priorityOptions = new Set([
+        "Random Weapon",
+        "Random Pistol",
+        "Random Revolver",
+        "Random Shotgun",
+        "Random SMG",
+        "Random AR",
+        "Random LMG",
+        "Random Rifle",
+        "Random Sniper",
+        "Random Enchantment",
+        "Random Oil",
+        "Random Scroll",
+        "Random T1 Scroll",
+        "Random T2 Scroll",
+        "Random Ammo Consume Chance Oil",
+        "Random Base Crit Chance Oil",
+        "Random Bullet Bounce Oil",
+        "Random Bullet Speed Oil",
+        "Random Damage - Flat Oil",
+        "Random Damage - Mult Oil",
+        "Random Max Durability Oil",
+        "Random Penetration Oil",
+        "Random Projectiles Oil",
+        "Random Recoil Oil",
+        "Random Reload Speed Oil",
+        "Random RPM Oil",
+        "Random Spread Oil",
+        "Random Barrel",
+        "Random Optic",
+        "Random Laser",
+        "Random Chamber",
+        "None"
+    ]);
+
+    // ===== SORTING (EXTENSIBLE) =====
+    const sorters = {
+        default: (a, b) => a.label.localeCompare(b.label),
+        scorepos: (a,b) => a.meta.ScorePos - b.meta.ScorePos,
+        scoreneg: (a,b) => a.meta.ScoreNeg - b.meta.ScoreNeg
+    };
+
+    function applySort(options, sortMode) {
+        const sorter = sorters[sortMode];
+
+        return [...options].sort((a, b) => {
+            const aPriority = priorityOptions.has(a.label);
+            const bPriority = priorityOptions.has(b.label);
+
+            if (aPriority && !bPriority) return -1;
+            if (!aPriority && bPriority) return 1;
+
+            return sorter ? sorter(a, b) : 0;
+        });
+    }
+
+    // ===== FILTERING =====
+    function applyFilter(options) {
+        if (!state.search) return options;
+
+        const s = state.search.toLowerCase();
+        return options.filter(o =>
+            o.label.toLowerCase().includes(s)
+        );
+    }
+
+    // ===== GROUPING =====
+    function groupOptions(options) {
+        const groups = {};
+        options.forEach(o => {
+            let g;
+            if (state.groupMode === "positive") {
+                g = o.meta.TypePositive1;
+            } else if (state.groupMode === "negative") {
+                g = o.meta.TypeNegative1;
+            } else {
+                g = o.group; // fallback
+            }
+
+            if (!g || g === "None") g = "Other";
+            if (!groups[g]) groups[g] = [];
+            groups[g].push(o);
+        });
+        let groups2 = Object.fromEntries(Object.entries(groups).sort());
+        return groups2;
+    }
+
+    function sortGroups(groups) {
+        return Object.entries(groups).sort(([a], [b]) => {
+            const aPriority = priorityGroups.includes(a);
+            const bPriority = priorityGroups.includes(b);
+
+            if (aPriority && !bPriority) return -1;
+            if (!aPriority && bPriority) return 1;
+
+            return a.localeCompare(b);
+        });
+    }
+
+function toggleGroup(groupEl) {
+
+    if (groupEl.dataset.collapsible !== "true")
+        return;
+
+    const collapsed = groupEl.dataset.collapsed === "true";
+
+    if (collapsed) {
+        closeAllGroupsExcept(groupEl);
+        openGroup(groupEl);
+    } else {
+        closeGroup(groupEl);
+    }
+}
+
+// Opening groups in dropdown
+function openGroup(groupEl) {
+
+    groupEl.dataset.collapsed = "false";
+
+    let next = groupEl.nextElementSibling;
+
+    while (next && !next.classList.contains("custom-group")) {
+
+        if (next.classList.contains("custom-option"))
+            next.classList.remove("hidden-group");
+
+        next = next.nextElementSibling;
+    }
+}
+
+// closing groups in dropdown
+function closeGroup(groupEl) {
+
+    groupEl.dataset.collapsed = "true";
+
+    let next = groupEl.nextElementSibling;
+
+    while (next && !next.classList.contains("custom-group")) {
+
+        if (next.classList.contains("custom-option"))
+            next.classList.add("hidden-group");
+
+        next = next.nextElementSibling;
+    }
+}
+
+function closeAllGroupsExcept(exception) {
+  
+    const dropdown = exception.closest(".custom-dropdown");
+
+    if (dropdown?.dataset.accordion !== "true")
+        return;
+
+    dropdown.querySelectorAll(".custom-group").forEach(group => {
+
+        if (group === exception) return;
+        if (group.dataset.collapsible !== "true") return;
+
+        closeGroup(group);
+    });
+}
+
+
+    // ===== RENDER =====
+    function render() {
+        list.innerHTML = '';
+
+        let opts = applySort(state.options, sortMode);
+        opts = applyFilter(opts);
+        state.filtered = opts;
+
+        const groups = groupOptions(opts);
+
+        sortGroups(groups).forEach(([groupName, items]) => {
+            if (groupName !== "_") {
+                const header = document.createElement("div");
+                header.className = "custom-group";
+                header.addEventListener("click", () => toggleGroup(header));;
+                header.dataset.collapsible = select.dataset.collapsible === "false" ? "false" : "true";
+
+                header.dataset.collapsed = select.dataset.collapsed ?? "true";
+
+                Object.assign(header.dataset, select.dataset);
+
+                if (header.dataset.collapsible === "true") {
+                    if (header.dataset.collapsed === "true") {
+                        closeGroup(header);
+                    } else {
+                        openGroup(header);
+                    }
+                }
+
+                header.textContent = groupName;
+                list.appendChild(header);
+            }
+            items.forEach(opt => {
+                const el = document.createElement("div");
+                el.className = "custom-option";
+                el.dataset.value = opt.value;
+                el.innerHTML = `
+                    <div class="name">${opt.label}</div>
+                    <div class="desc">${opt.meta.DropdownDescription}</div>
+                `;
+
+                if (opt.value === state.value) {
+                    el.classList.add("selected");
+                }
+
+                list.appendChild(el);
+            });
+        });
+
+        updateDisplay();
+        list.querySelectorAll(".custom-group").forEach(header => {
+    if (header.dataset.collapsible === "true" && header.textContent !== "Barrel" && header.textContent !== "Optic" && header.textContent !== "Laser" && header.textContent !== "Firemode" && header.textContent !== "Chamber" && header.textContent !== "General") {
+        closeGroup(header);
+    }
+});
+    }
+
+    function populateNativeSelect() {
+        select.innerHTML = '';
+
+        const groups = {};
+
+        state.options.forEach(o => {
+            if (!groups[o.group]) groups[o.group] = [];
+            groups[o.group].push(o);
+        });
+
+        sortGroups(groups).forEach(([group, items]) => {
+            const optgroup = document.createElement("optgroup");
+            optgroup.label = group;
+
+            items.forEach(o => {
+                const opt = document.createElement("option");
+                opt.value = o.value;
+                opt.textContent = o.label;
+
+                if (o.value === state.value) {
+                    opt.selected = true;
+                }
+
+                optgroup.appendChild(opt);
+            });
+
+            select.appendChild(optgroup);
+        });
+    }
+
+    populateNativeSelect();
+
+    function updateDisplay() {
+        const selected = state.options.find(o => o.value === state.value);
+        display.textContent = selected ? selected.label : "Select...";
+    }
+
+    // ===== OPEN / CLOSE =====
+    function open() {
+        if (state.open) return;
+        state.open = true;
+        wrapper.classList.add("open");
+        searchInput.focus();
+        render();
+    }
+
+    function close() {
+        if (!state.open) return;
+        state.open = false;
+        wrapper.classList.remove("open");
+
+        // reset search
+        state.search = "";
+        searchInput.value = "";
+    }
+
+    function closeOutside(drop) {
+        if (!state.open) return;
+        state.open = false;
+        wrapper.classList.remove("open");
+
+        // reset search
+        state.search = "";
+        searchInput.value = "";
+    }
+
+    function toggle() {
+        state.open ? close() : open();
+    }
+
+    // ===== VALUE API =====
+    function setValue(val, silent = false) {
+        state.value = val;
+        select.value = val;
+        
+
+        if (true) {
+            select.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+
+        render();
+    }
+
+    function getValue() {
+        return state.value;
+    }
+
+    // expose API
+    select.getValue = getValue;
+    select.setValue = setValue;
+    select.updateDisplay = updateDisplay;
+    select.render = render;
+    select.setSortMode = setSortMode;
+    select.setGroupMode = setGroupMode;
+    
+    function setSortMode(mode) {
+        sortMode = mode;
+        render();
+    }
+
+    function setGroupMode(mode) {
+        state.groupMode = mode;
+        render();
+    }
+
+    // ===== EVENTS =====
+
+    // toggle
+    control.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggle();
+    });
+
+    // click outside
+    document.addEventListener("click", () => close());
+
+    // prevent panel clicks from closing
+    panel.addEventListener("click", (e) => e.stopPropagation());
+
+    // search
+    searchInput.addEventListener("input", (e) => {
+        state.search = e.target.value;
+        render();
+    });
+
+    // OPTION CLICK (delegated)
+    list.addEventListener("click", (e) => {
+        const option = e.target.closest(".custom-option");
+        if (!option) return;
+
+        setValue(option.dataset.value);
+        close();
+    });
+
+    // keyboard support (basic)
+    control.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") toggle();
+        if (e.key === "Escape") close();
+    });
+
+    // ===== INIT =====
+    render();
+
+    return {
+        getValue,
+        setValue,
+        updateDisplay,
+        open,
+        close,
+        render,
+        setSortMode: (mode) => {
+            sortMode = mode;
+            render();
+        },
+        setGroupMode
+    };
+}
+
+function scrollExtendedStats() {
+    document.getElementById("extendedstatscontainer").scrollIntoView(({ behavior: 'smooth' }));
+}
+
+function scrollToTop() {
+    document.getElementById("mainbuildcontainer").scrollIntoView(({ behavior: 'smooth' }));
 }
 
 // Screenshots
@@ -819,133 +2016,38 @@ function captureElement(activated) {
     }, 500);
 }
 
-const coreSelections = new Map();
+const favoriteOils = new Set(
+    JSON.parse(localStorage.getItem("favoriteOils") || "[]")
+);
 
-function resetCoreSelections() {
-    console.info("KBH: Resetting core selections");
-    coreSelections.set("weapon", {Name: "P38 Dirk", Value: "p38-dirk"});
-    coreSelections.set("ench1", {Name: "None", Value: "static-no-selection"});
-    coreSelections.set("ench2", {Name: "None", Value: "static-no-selection"});
-    coreSelections.set("ench3", {Name: "None", Value: "static-no-selection"});
-    coreSelections.set("ench4", {Name: "None", Value: "static-no-selection"});
-    coreSelections.set("ench5", {Name: "None", Value: "static-no-selection"});
-    coreSelections.set("barrel", {Name: "None", Value: "static-no-selection"});
-    coreSelections.set("optic", {Name: "None", Value: "static-no-selection"});
-    coreSelections.set("laser", {Name: "None", Value: "static-no-selection"});
-    coreSelections.set("firemode", {Name: "None", Value: "static-no-selection"});
-    coreSelections.set("chamber", {Name: "None", Value: "static-no-selection"});
+function saveFavorites() {
+    localStorage.setItem("favoriteOils", JSON.stringify([...favoriteOils]));
 }
-
-resetCoreSelections()
-
-const tempSelections = new Map();
-
-function resetTempSelections() {
-    console.info("KBH: Resetting temp selections");
-    tempSelections.set("weapon", {Name: "P38 Dirk", Value: "p38-dirk"});
-    tempSelections.set("ench1", {Name: "None", Value: "static-no-selection"});
-    tempSelections.set("ench2", {Name: "None", Value: "static-no-selection"});
-    tempSelections.set("ench3", {Name: "None", Value: "static-no-selection"});
-    tempSelections.set("ench4", {Name: "None", Value: "static-no-selection"});
-    tempSelections.set("ench5", {Name: "None", Value: "static-no-selection"});
-    tempSelections.set("barrel", {Name: "None", Value: "static-no-selection"});
-    tempSelections.set("optic", {Name: "None", Value: "static-no-selection"});
-    tempSelections.set("laser", {Name: "None", Value: "static-no-selection"});
-    tempSelections.set("firemode", {Name: "None", Value: "static-no-selection"});
-    tempSelections.set("chamber", {Name: "None", Value: "static-no-selection"});
-}
-
-resetTempSelections()
-
-let chamberValueIndexer = new Map();
-let chamberNameIndexer = new Map();
-
-let barrelValueIndexer = new Map();
-
-function setBarrelValueIndexer() {
-    console.info("KBH: Setting barrel value indexer");
-    barrelValueIndexer.set("none", "None");
-    barrelValueIndexer.set("a12c-muzzle-brake", "A12C Muzzle Brake");
-    barrelValueIndexer.set("aftermarket-haukland-silencer", "Aftermarket Haukland Silencer");
-    barrelValueIndexer.set("barrel-extension-2in", "Barrel Extension 2in");
-    barrelValueIndexer.set("barrel-extension-4in", "Barrel Extension 4in");
-    barrelValueIndexer.set("barrel-extension-6in", "Barrel Extension 6in");
-    barrelValueIndexer.set("breznik-bmd-tactical", "Breznik BMD (Tactical)");
-    barrelValueIndexer.set("breznik-bmd", "Breznik BMD");
-    barrelValueIndexer.set("haukland-flash-hider", "Haukland Flash Hider");
-    barrelValueIndexer.set("haukland-silencer", "Haukland Silencer");
-    barrelValueIndexer.set("improvised-barrel-extension", "Improvised Barrel Extension");
-    barrelValueIndexer.set("shrouded-barrel-extension", "Shrouded Barrel Extension");
-    barrelValueIndexer.set("sr-p3-silencer", "SR-P3 Silencer");
-    barrelValueIndexer.set("warmage-compensator", "Warmage Compensator");
-    barrelValueIndexer.set("m87-albatross-silencer", "M87 Albatross Silencer");
-}
-
-let barrelNameIndexer = new Map();
-
-function setBarrelNameIndexer() {
-    console.info("KBH: Setting barrel name indexer");
-    function addToWNI(value, key, map) {
-        console.log("KBH: Setting barrel name indexer", value, key,)
-        barrelNameIndexer.set(value, key);
-    }
-
-    barrelValueIndexer.forEach(addToWNI);  
-    
-}
-
-
-
-function setChamberValueIndexer() {
-console.info("KBH: Setting chamber value indexer");
-
-    chamberValueIndexer.set("none", "None");
-    chamberValueIndexer.set("chamber-chisel---.50-bmg", "Chamber Chisel - .50 BMG");
-    chamberValueIndexer.set("chamber-chisel---12ga", "Chamber Chisel - 12Ga");
-    chamberValueIndexer.set("chamber-chisel---5.56mm", "Chamber Chisel - 5.56mm");
-    chamberValueIndexer.set("chamber-chisel---7.62mm", "Chamber Chisel - 7.62mm");
-    chamberValueIndexer.set("chamber-chisel---9mm", "Chamber Chisel - 9mm");
-    chamberValueIndexer.set("chamber-chisel---energy", "Energy");
-
-}
-
-setChamberValueIndexer();
-
-function setChamberNameIndexer() {
-console.info("KBH: Setting chamber name indexer");
-    chamberNameIndexer.set("None", "none");
-    chamberNameIndexer.set("Chamber Chisel - .50 BMG", "chamber-chisel---.50-bmg");
-    chamberNameIndexer.set("Chamber Chisel - 12Ga", "chamber-chisel---12ga");
-    chamberNameIndexer.set("Chamber Chisel - 5.56mm", "chamber-chisel---5.56mm");
-    chamberNameIndexer.set("Chamber Chisel - 7.62mm", "chamber-chisel---7.62mm");
-    chamberNameIndexer.set("Chamber Chisel - 9mm", "chamber-chisel---9mm");
-    chamberNameIndexer.set("Chamber Chisel - Energy", "chamber-chisel---energy");
-
-}
-
-
-setChamberNameIndexer();
-setBarrelValueIndexer();
-setBarrelNameIndexer();
 
 let buildToEncode = null;
 
+let buildBlocker = false;
+
 function encodeBuildAsUri() {
     console.info("KBH: Encoding build as URI string and applying to URL");
-    buildToEncode = "build";
-    function toBuild(value, key, map) {
-        console.log(value)
-        buildToEncode += value.Value;
-        buildToEncode += "+";
+    if (buildBlocker === true) {
+        return;
     }
-    coreSelections.forEach(toBuild);
-    const encodedBuild = "#!" + encodeURIComponent(buildToEncode);
-   // const decodedBuild = atob(encodedBuild);
-     //   console.log(decodedBuild);
-        history.pushState(encodedBuild, "", encodedBuild);
-        //YnVpbGR
-        document.getElementById("linkbox").value = `https://verdictfps.github.io/kevins-build-helper/${encodedBuild}`;
-    
+    else {
+        buildToEncode = "build";
+        function toBuild(value, key, map) {
+            
+            buildToEncode += value.Value;
+            buildToEncode += "+";
+        }
+        coreSelections.forEach(toBuild);
+        const encodedBuild = "#!" + encodeURIComponent(buildToEncode);
+    // const decodedBuild = atob(encodedBuild);
+        //   
+            history.pushState(encodedBuild, "", encodedBuild);
+            //YnVpbGR
+            document.getElementById("linkbox").value = `https://verdictfps.github.io/kevins-build-helper/${encodedBuild}`;
+    }
 }
 
 function setBuildAsMetadata() {
@@ -972,14 +2074,15 @@ function setBuildAsMetadata() {
 }
 
 /*var encryptedBuild = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
-console.log(encryptedBuild);
+
 var decryptedBuild = CryptoJS.AES.decrypt(encryptedBuild, "Secret Passphrase");
-console.log(decryptedBuild);
-console.log(decrypted.toString(CryptoJS.enc.Utf8));*/
+
+*/
 
 
 function decodeUriAsBuild(source, link) {
     console.info("KBH: Decoding URL to detect build");
+    buildBlocker = true;
 
     let currentURL = null;
     if (source === "load") {
@@ -1003,32 +2106,36 @@ function decodeUriAsBuild(source, link) {
         let split2 = decoded.split("build");
         finalSplit = split2[1].split("+");
         iterationSplit = 0
-        console.log(finalSplit);
+        
     }
 
     let defShantPass = false;
     setTimeout(() => {
     if (split[1].startsWith("build") === true && defShantPass === false ){
         defShantPass = true;
-        console.log(finalSplit);
+        
 
         function rebuildBuild(value, key, map) {
-            coreSelections.set(key, finalSplit[iterationSplit]);
+            tempSelections.set(key, finalSplit[iterationSplit]);
             
-            console.log(key, finalSplit[iterationSplit]);
+            
             iterationSplit += 1;
         }
         
         function grabOils(value, key, map) {
+
             let selectedItem = null;
             let scroll = null;
             let selItem = null;
+            let select = null;
+
             switch (key) {
                 case undefined:
                     break;
                 default:
+                    
+
                 if (key.startsWith("ench")) {
-                    console.log(key, value)
                     if (value.endsWith("oil") === true || value === "none") {
                         selItem = convertToUpper(value);
                         selectedItem = getOilByName(selItem);
@@ -1037,30 +2144,66 @@ function decodeUriAsBuild(source, link) {
                     if (value.startsWith("scroll") === true) {
                         scroll = scrollValueIndexer.get(value);
                         selectedItem = getScrollByName(scroll);
+                        
                         addToCoreMap(key, selectedItem, value);
+                    }
+                    switch (key) {
+                        case "ench1":
+                            select = document.getElementById("oils1selector");
+                            select.setValue(value);
+                            break;
+                        case "ench2":
+                            select = document.getElementById("oils2selector");
+                            select.setValue(value);
+                            break;
+                        case "ench3":
+                            select = document.getElementById("oils3selector");
+                            select.setValue(value);
+                            break;
+                        case "ench4":
+                            select = document.getElementById("oils4selector");
+                            select.setValue(value);
+                            break;
+                        case "ench5":
+                            select = document.getElementById("oils5selector");
+                            select.setValue(value);
+                            break;
+                        default:
                     }
                 }
                 if (key === "chamber") {
                     
+                    if (value === undefined || value === "static-no-selection") {
+                        value = "none";
+                    }
                     selectedItem = chamberValueIndexer.get(value);
+                    
                     selectedChamber = getChamberByName(selectedItem);
+                    
                     addToCoreMap("chamber", selectedChamber, value);
+                    select = document.getElementById("chamberselector");
+                    select.setValue(value);
                 }
                 if (key === "barrel") {
                     let selbar = barrelValueIndexer.get(value);
-                    console.log("sthitc", value);
                     selectedItem = getBarrelByName(selbar);
                     addToCoreMap("barrel", selectedItem, value);
+                    select = document.getElementById("barrelselector");
+                    select.setValue(value);
                 }
                 if (key === "laser") {
                     let selaser = convertToUpper(value);
                     selectedItem = getLaserByName(selaser);
                     addToCoreMap("laser", selectedItem, value);
+                    select = document.getElementById("laserselector");
+                    select.setValue(value);
                 }
                 if (key === "optic") {
                     let seloptic = convertToUpper(value);
                     selectedItem = getOpticByName(seloptic);
                     addToCoreMap("optic", selectedItem, value);
+                    select = document.getElementById("opticselector");
+                    select.setValue(value);
                 }
                 if (key === "firemode") {
                     if (value === "none") {
@@ -1076,17 +2219,23 @@ function decodeUriAsBuild(source, link) {
                         selectedItem = getFiremodeByName("Priming Bolt");
                         addToCoreMap("firemode", selectedItem, value);
                     }
+                    select = document.getElementById("firemodeselector");
+                    select.setValue(value);
                     
                 }
             }
                     
         }
         
+        
         coreSelections.forEach(rebuildBuild);
         let yeeteth = coreSelections.get("weapon");
+        
         let gunny = weaponValueIndexer.get(yeeteth);
-        coreSelections.forEach(grabOils);
-        addToCoreMap("weapon", gunny, yeeteth);
+        let gunboog = getWeaponByName(gunny);
+        
+        addToCoreMap("weapon", gunboog, yeeteth);
+        tempSelections.forEach(grabOils);
 
         /*let confirmBuild = true;
         
@@ -1107,153 +2256,15 @@ function decodeUriAsBuild(source, link) {
             tempSelections.forEach(convertToCore)
         }*/
 
-        console.log(coreSelections)
+        
         rollFromBuild();
         defShantPass = false;
     }
     }, 500);
+    setTimeout(() => {
+        buildBlocker = false;
+    }, 1000);
 }
-
-const weaponValueIndexer = new Map();
-
-function setWeaponValueIndexer() {
-console.info("KBH: Setting weapon value indexer");
-    weaponValueIndexer.set("none", "None");
-    weaponValueIndexer.set("beck-8", "Beck 8");
-    weaponValueIndexer.set("bronco-89", "Bronco 89");
-    weaponValueIndexer.set("cavalier", "Cavalier");
-    weaponValueIndexer.set("flicker", "Flicker");
-    weaponValueIndexer.set("gravekeeper", "Gravekeeper");
-    weaponValueIndexer.set("hell-n-back", "Hell 'N' Back");
-    weaponValueIndexer.set("p38-dirk", "P38 Dirk");
-    weaponValueIndexer.set("salamander", "Salamander");
-    weaponValueIndexer.set("socom-9", "Socom 9");
-    weaponValueIndexer.set("star-witness", "Star & Witness");
-    weaponValueIndexer.set("unknown", "Unknown");
-    weaponValueIndexer.set("random-revolvers", "Random Revolver");
-    weaponValueIndexer.set(".357-balthazar", ".357 Balthazar");
-    weaponValueIndexer.set("palehorse-topclipper", "Palehorse Topclipper");
-    weaponValueIndexer.set("snut-.38", "Snut .38");
-    weaponValueIndexer.set("wyatt-pulsar", "Wyatt PULSAR");
-    weaponValueIndexer.set("random-shotguns", "Random Shotgun");
-    weaponValueIndexer.set("1889-mario", "1889 Mario");
-    weaponValueIndexer.set("arbiter-2", "Arbiter 2");
-    weaponValueIndexer.set("augusta", "Augusta");
-    weaponValueIndexer.set("breacher-8", "Breacher 8");
-    weaponValueIndexer.set("flock-76", "Flock 76");
-    weaponValueIndexer.set("majordome", "Majordome");
-    weaponValueIndexer.set("mossman", "Mossman");
-    weaponValueIndexer.set("random-smgs", "Random SMG");
-    weaponValueIndexer.set("deathstar-pg", "Deathstar PG");
-    weaponValueIndexer.set("drifter-9", "Drifter 9");
-    weaponValueIndexer.set("ferryman", "Ferryman");
-    weaponValueIndexer.set("m3-termite", "M3 Termite");
-    weaponValueIndexer.set("ploika-compact", "Ploika Compact");
-    weaponValueIndexer.set("songbird", "Songbird");
-    weaponValueIndexer.set("valet", "Valet");
-    weaponValueIndexer.set("vrede", "Vrede");
-    weaponValueIndexer.set("random-assault-rifles", "Random Assault Rifle");
-    weaponValueIndexer.set("catacoil-rapid-x", "Catacoil Rapid X");
-    weaponValueIndexer.set("corpsemaker", "Corpsemaker");
-    weaponValueIndexer.set("m11a2-fisk", "M11A2 Fisk");
-    weaponValueIndexer.set("type-80-typhoon", "Type 80 Typhoon");
-    weaponValueIndexer.set("wingman", "Wingman");
-    weaponValueIndexer.set("random-lmgs", "Random LMG");
-    weaponValueIndexer.set("chat-pardeur-98", "Chat-Pardeur 98");
-    weaponValueIndexer.set("duhar", "Duhar");
-    weaponValueIndexer.set("neuraxis-f22", "Neuraxis F22");
-    weaponValueIndexer.set("rektor-100rd", "Rektor 100rd");
-    weaponValueIndexer.set("warpig", "Warpig");
-    weaponValueIndexer.set("random-rifles", "Random Rifle");
-    weaponValueIndexer.set("farsight", "Farsight");
-    weaponValueIndexer.set("knop-22", "Knop .22");
-    weaponValueIndexer.set("m182-pierre-fusil", "M182 Pierre-Fusil");
-    weaponValueIndexer.set("tailor-marksman-mkii", "Tailor Marksman MKII");
-    weaponValueIndexer.set("random-sniper-rifles", "Random Sniper Rifle");
-    weaponValueIndexer.set("d4rt", "D4RT");
-    weaponValueIndexer.set("dolphin-99", "Dolphin 99");
-    weaponValueIndexer.set("impala-gravita", "Impala Gravita");
-    weaponValueIndexer.set("longboy", "Longboy");
-    weaponValueIndexer.set("rokua-308", "Rokua .308");
-
-}
-
-setWeaponValueIndexer()
-
-const weaponNameIndexer = new Map();
-
-function setWeaponNameIndexer() {
-console.info("KBH: Setting weapon name indexer");
-    function addToWNI(value, key, map) {
-        weaponNameIndexer.set(value, key);
-    }
-
-    weaponValueIndexer.forEach(addToWNI);  
-    
-}
-
-setWeaponNameIndexer()
-
-let scrollValueIndexer = new Map();
-
-function setScrollValueIndexer() {
-console.info("KBH: Setting scroll value indexer");
-
-    scrollValueIndexer.set("none", "None");
-    scrollValueIndexer.set("scroll-of-dark", "Scroll of Dark");
-    scrollValueIndexer.set("scroll-of-earth", "Scroll of Earth");
-    scrollValueIndexer.set("scroll-of-embers", "Scroll of Embers");
-    scrollValueIndexer.set("scroll-of-frostbite", "Scroll of Frostbite");
-    scrollValueIndexer.set("scroll-of-light", "Scroll of Light");
-    scrollValueIndexer.set("scroll-of-nature", "Scroll of Nature");
-    scrollValueIndexer.set("scroll-of-plague", "Scroll of Plague");
-    scrollValueIndexer.set("scroll-of-surge", "Scroll of Surge");
-    scrollValueIndexer.set("scroll-of-water", "Scroll of Water");
-    scrollValueIndexer.set("scroll-of-holy-fire", "Scroll of Holy Fire");
-    scrollValueIndexer.set("scroll-of-aftershock", "Scroll of Aftershock");
-    scrollValueIndexer.set("scroll-of-chain-lightning", "Scroll of Chain Lightning");
-    scrollValueIndexer.set("scroll-of-chaos-strike", "Scroll of Chaos Strike");
-    scrollValueIndexer.set("scroll-of-charm", "Scroll of Charm");
-    scrollValueIndexer.set("scroll-of-corpse-explosion", "Scroll of Corpse Explosion");
-    scrollValueIndexer.set("scroll-of-crusader", "Scroll of Crusader");
-    scrollValueIndexer.set("scroll-of-explosions", "Scroll of Explosions");
-    scrollValueIndexer.set("scroll-of-fear", "Scroll of Fear");
-    scrollValueIndexer.set("scroll-of-flame-thrower", "Scroll of Flame Thrower");
-    scrollValueIndexer.set("scroll-of-holy-purge", "Scroll of Holy Purge");
-    scrollValueIndexer.set("scroll-of-lava", "Scroll of Lava");
-    scrollValueIndexer.set("scroll-of-least-resistance", "Scroll of Least Resistance");
-    scrollValueIndexer.set("scroll-of-noxiosa", "Scroll of Noxiosa");
-    scrollValueIndexer.set("scroll-of-pesticide", "Scroll of Pesticide");
-    scrollValueIndexer.set("scroll-of-petrification", "Scroll of Petrification");
-    scrollValueIndexer.set("scroll-of-petroleum", "Scroll of Petroleum");
-    scrollValueIndexer.set("scroll-of-poison-blood", "Scroll of Poison Blood");
-    scrollValueIndexer.set("scroll-of-prism", "Scroll of Prism");
-    scrollValueIndexer.set("scroll-of-rocket-launcher", "Scroll of Rocket Launcher");
-    scrollValueIndexer.set("scroll-of-slush", "Scroll of Slush");
-    scrollValueIndexer.set("scroll-of-sacrifice", "Scroll of Sacrifice");
-    scrollValueIndexer.set("scroll-of-storm-surge", "Scroll of Storm Surge");
-    scrollValueIndexer.set("scroll-of-thunderbolt", "Scroll of Thunderbolt");
-    scrollValueIndexer.set("scroll-of-toxic-lobotomy", "Scroll of Toxic Lobotomy");
-    scrollValueIndexer.set("scroll-of-voodoo", "Scroll of Voodoo");
-
-}
-
-setScrollValueIndexer()
-
-let scrollNameIndexer = new Map();
-
-function setScrollNameIndexer() {
-console.info("KBH: Setting scroll name indexer");
-
-    function addToWNI(value, key, map) {
-        scrollNameIndexer.set(value, key);
-    }
-
-    scrollValueIndexer.forEach(addToWNI);  
-
-}
-
-setScrollNameIndexer()
 
 // It's time to shuffle
 function shuffle(array) {
@@ -1290,8 +2301,9 @@ function pasteBuildLink() {
             infoboxHover('loadfail')
         }
 }
+
 function setAllAsRandom() {
-    document.getElementById("weapons").proDropdown.setValue("random-all-weapons");
+    document.getElementById("weapons").setValue("random-all-weapons");
     rollAggregator('weapon', 'weapons', 1, "random-all-weapons", "weapon");
     randomizeAllAttachments();
     randomizeAllOils();
@@ -1304,55 +2316,63 @@ function commitAll() {
 }
 
 function resetAll() {
-    shallNotPass = true;
-    document.getElementById("weapons").proDropdown.setValue("p38-dirk");
+    if (shallNotPass === false) {
+        shallNotPass = true;
+        document.getElementById("weapons").setValue("p38-dirk");
 
-    rollAggregator('weapon', 'weapons', 1, "p38-dirk", "weapon");
-    
-    document.getElementById("oils1selector").proDropdown.setValue("static-no-selection");
-    document.getElementById("oils2selector").proDropdown.setValue("static-no-selection");
-    document.getElementById("oils3selector").proDropdown.setValue("static-no-selection");
-    document.getElementById("oils4selector").proDropdown.setValue("static-no-selection");
-    document.getElementById("oils5selector").proDropdown.setValue("static-no-selection");
-    
-    rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench");
-    rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench");
-    rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench");
-    rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench");
-    rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench");
+        rollAggregator('weapon', 'weapons', 1, "p38-dirk", "weapon");
+        
+        document.getElementById("oils1selector").setValue("static-no-selection");
+        document.getElementById("oils2selector").setValue("static-no-selection");
+        document.getElementById("oils3selector").setValue("static-no-selection");
+        document.getElementById("oils4selector").setValue("static-no-selection");
+        document.getElementById("oils5selector").setValue("static-no-selection");
+        
+        rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench");
+        rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench");
+        rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench");
+        rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench");
+        rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench");
 
-    document.getElementById("barrelselector").proDropdown.setValue("none");
-    document.getElementById("opticselector").proDropdown.setValue("none");
-    document.getElementById("laserselector").proDropdown.setValue("none");
-    document.getElementById("firemodeselector").proDropdown.setValue("none");
-    document.getElementById("chamberselector").proDropdown.setValue("none");
-    
-    rollAggregator('barrel', 'barrelselector', 1, "none", "attachment");
-    rollAggregator('optic', 'opticselector', 2, "none", "attachment");
-    rollAggregator('laser', 'laserselector', 3, "none", "attachment");
-    rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment");
-    rollAggregator('chamber', 'chamberselector', 5, "none", "attachment");
-    shallNotPass = false;
+        document.getElementById("barrelselector").setValue("none");
+        document.getElementById("opticselector").setValue("none");
+        document.getElementById("laserselector").setValue("none");
+        document.getElementById("firemodeselector").setValue("none");
+        document.getElementById("chamberselector").setValue("none");
+        
+        rollAggregator('barrel', 'barrelselector', 1, "none", "attachment");
+        rollAggregator('optic', 'opticselector', 2, "none", "attachment");
+        rollAggregator('laser', 'laserselector', 3, "none", "attachment");
+        rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment");
+        rollAggregator('chamber', 'chamberselector', 5, "none", "attachment");
+        shallNotPass = false;
+    }
 }
 
 function commitGun() {
-    shallNotPass = true;
-    commitSelection('weapon', 'weapons', 'weapon');
-    shallNotPass = false;
+    if (shallNotPass === false) {
+        shallNotPass = true;
+        commitSelection('weapon', 'weapons', 'weapon');
+        shallNotPass = false;
+    }
 }
 
 function resetGun() {
-    shallNotPass = true;
-    document.getElementById("weapons").proDropdown.setValue("p38-dirk");
-    rollAggregator('weapon', 'weapons', 1, "p38-dirk", "weapon");
-    shallNotPass = false;
+    if (shallNotPass === false) {
+        shallNotPass = true;
+        document.getElementById("weapons").setValue("p38-dirk");
+        rollAggregator('weapon', 'weapons', 1, "p38-dirk", "weapon");
+        shallNotPass = false;
+    }
 }
 
 function randomizeGun() {
-    shallNotPass = true;
-    document.getElementById("weapons").proDropdown.setValue("random-all-weapons");
-    rollAggregator('weapon', 'weapons', 1, "random-all-weapons", "weapon");
-    shallNotPass = false;
+    if (shallNotPass === false) {
+        shallNotPass = true;
+        document.getElementById("weapons").setValue("random-all-weapons");
+        rollAggregator('weapon', 'weapons', 1, "random-all-weapons", "weapon");
+        shallNotPass = false;
+    }
 }
 /*
 function zip_encode(str) {
@@ -1372,8 +2392,8 @@ function zip_decode(base64) {
 
 let zipencode = zip_encode("P38 Dirk");
 let zipdecode = zip_decode(zipencode);
-console.log(zipencode);
-console.log(zipdecode);*/
+
+*/
 let infoboxBlock = false;
 function infoboxHover(elementType, value, name, data) {
     
@@ -1425,83 +2445,106 @@ function infoboxClear() {
 }
 
 function setSlot(key, selector, index, value, type) {
-    shallNotPass = true;
-    document.getElementById(selector).proDropdown.setValue(value);
-    rollAggregator(key, selector, index, value, type);
-    shallNotPass = false;
+    
+    if (shallNotPass === false) {
+        shallNotPass = true;
+        document.getElementById(selector).setValue(value);
+        rollAggregator(key, selector, index, value, type);
+        shallNotPass = false;
+    }
 }
 
 function randomizeAllOils() {
     console.info("KBH: Randomizing all enchantment slots");
-    shallNotPass = true;
-    document.getElementById("oils1selector").proDropdown.setValue("static-random-all-oils");
-    document.getElementById("oils2selector").proDropdown.setValue("static-random-all-oils");
-    document.getElementById("oils3selector").proDropdown.setValue("static-random-all-oils");
-    document.getElementById("oils4selector").proDropdown.setValue("static-random-all-oils");
-    document.getElementById("oils5selector").proDropdown.setValue("static-random-all-oils");
-    rollAggregator('ench1', 'oils1selector', 1, "static-random-all-oils", "ench");
-    rollAggregator('ench2', 'oils2selector', 2, "static-random-all-oils", "ench");
-    rollAggregator('ench3', 'oils3selector', 3, "static-random-all-oils", "ench");
-    rollAggregator('ench4', 'oils4selector', 4, "static-random-all-oils", "ench");
-    rollAggregator('ench5', 'oils5selector', 5, "static-random-all-oils", "ench");
-    shallNotPass = false;
+    if (shallNotPass === false) {
+        shallNotPass = true;
+
+        document.getElementById("oils1selector").setValue("static-random-all-enchantments");
+        document.getElementById("oils2selector").setValue("static-random-all-oils");
+        document.getElementById("oils3selector").setValue("static-random-all-oils");
+        document.getElementById("oils4selector").setValue("static-random-all-oils");
+        document.getElementById("oils5selector").setValue("static-random-all-oils");
+        rollAggregator('ench1', 'oils1selector', 1, "static-random-all-enchantments", "ench");
+        rollAggregator('ench2', 'oils2selector', 2, "static-random-all-oils", "ench");
+        rollAggregator('ench3', 'oils3selector', 3, "static-random-all-oils", "ench");
+        rollAggregator('ench4', 'oils4selector', 4, "static-random-all-oils", "ench");
+        rollAggregator('ench5', 'oils5selector', 5, "static-random-all-oils", "ench");
+        shallNotPass = false;
+
+    }
 }
 
 function resetAllOils() {
-console.info("KBH: Resetting all enchantment slots");
-    shallNotPass = true;
-    document.getElementById("oils1selector").proDropdown.setValue("static-no-selection");
-    document.getElementById("oils2selector").proDropdown.setValue("static-no-selection");
-    document.getElementById("oils3selector").proDropdown.setValue("static-no-selection");
-    document.getElementById("oils4selector").proDropdown.setValue("static-no-selection");
-    document.getElementById("oils5selector").proDropdown.setValue("static-no-selection");
-    
-    rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench");
-    rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench");
-    rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench");
-    rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench");
-    rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench");
-    shallNotPass = false;
+    console.info("KBH: Resetting all enchantment slots");
+    if (shallNotPass === false) {
+        shallNotPass = true;
+
+        document.getElementById("oils1selector").setValue("static-no-selection");
+        document.getElementById("oils2selector").setValue("static-no-selection");
+        document.getElementById("oils3selector").setValue("static-no-selection");
+        document.getElementById("oils4selector").setValue("static-no-selection");
+        document.getElementById("oils5selector").setValue("static-no-selection");
+        
+        rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench");
+        rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench");
+        rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench");
+        rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench");
+        rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench");
+        shallNotPass = false;
+
+    }
 }
 
 function randomizeAllAttachments() {
     console.info("KBH: Randomizing all attachment slots");
-    shallNotPass = true;
-    document.getElementById("barrelselector").proDropdown.setValue("static-random-barrel");
-    document.getElementById("opticselector").proDropdown.setValue("static-random-optic");
-    document.getElementById("laserselector").proDropdown.setValue("static-random-laser");
-    document.getElementById("chamberselector").proDropdown.setValue("static-random-chamber");
-    rollAggregator('barrel', 'barrelselector', 1, "static-random-barrel", "attachment");
-    rollAggregator('optic', 'opticselector', 2, "static-random-optic", "attachment");
-    rollAggregator('laser', 'laserselector', 3, "static-random-laser", "attachment");
-    rollAggregator('chamber', 'chamberselector', 5, "static-random-chamber", "attachment");
-    shallNotPass = false;
+    if (shallNotPass === false) {
+        shallNotPass = true;
+
+        document.getElementById("barrelselector").setValue("static-random-barrel");
+        document.getElementById("opticselector").setValue("static-random-optic");
+        document.getElementById("laserselector").setValue("static-random-laser");
+        document.getElementById("chamberselector").setValue("static-random-chamber");
+        rollAggregator('barrel', 'barrelselector', 1, "static-random-barrel", "attachment");
+        rollAggregator('optic', 'opticselector', 2, "static-random-optic", "attachment");
+        rollAggregator('laser', 'laserselector', 3, "static-random-laser", "attachment");
+        rollAggregator('chamber', 'chamberselector', 5, "static-random-chamber", "attachment");
+        shallNotPass = false;
+
+    }
 }
 
 function resetAllAttachments() {
 console.info("KBH: Resetting all attachment slots");
-    shallNotPass = true;
-    document.getElementById("barrelselector").proDropdown.setValue("none");
-    document.getElementById("opticselector").proDropdown.setValue("none");
-    document.getElementById("laserselector").proDropdown.setValue("none");
-    document.getElementById("firemodeselector").proDropdown.setValue("none");
-    document.getElementById("chamberselector").proDropdown.setValue("none");
-    
-    rollAggregator('barrel', 'barrelselector', 1, "none", "attachment");
-    rollAggregator('optic', 'opticselector', 2, "none", "attachment");
-    rollAggregator('laser', 'laserselector', 3, "none", "attachment");
-    rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment");
-    rollAggregator('chamber', 'chamberselector', 5, "none", "attachment");
-    shallNotPass = false;
+    if (shallNotPass === false) {
+        shallNotPass = true;
+
+        document.getElementById("barrelselector").setValue("none");
+        document.getElementById("opticselector").setValue("none");
+        document.getElementById("laserselector").setValue("none");
+        document.getElementById("firemodeselector").setValue("none");
+        document.getElementById("chamberselector").setValue("none");
+        
+        rollAggregator('barrel', 'barrelselector', 1, "none", "attachment");
+        rollAggregator('optic', 'opticselector', 2, "none", "attachment");
+        rollAggregator('laser', 'laserselector', 3, "none", "attachment");
+        rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment");
+        rollAggregator('chamber', 'chamberselector', 5, "none", "attachment");
+        shallNotPass = false;
+
+    }   
 }
 
 function commitSelection(buttonID, dropdownID, item) {
     console.info("KBH: Committing", item, "to", dropdownID);
-    shallNotPass = true;
-    let getValue = coreSelections.get(item);
-    let value = getValue.Value; 
-    document.getElementById(dropdownID).proDropdown.setValue(value);
-    shallNotPass = false;
+    if (shallNotPass === false) {
+        shallNotPass = true;
+
+        let getValue = coreSelections.get(item);
+        let value = getValue.Value; 
+        document.getElementById(dropdownID).setValue(value);
+        shallNotPass = false;
+
+    }
 }
 
 function commitAllEnch() {
@@ -1525,21 +2568,22 @@ function commitAllAtt() {
 // Used to remove and replace oils to prevent dupes
 function oilRemover() {
 console.info("KBH: Beginning oil filtering process");
-    var selector1Options = items.filter(i => i.li.dataset.dropdownId === "oils1selectorcollection");
-    var selector2Options = items.filter(i => i.li.dataset.dropdownId === "oils2selectorcollection");
-    var selector3Options = items.filter(i => i.li.dataset.dropdownId === "oils3selectorcollection");
-    var selector4Options = items.filter(i => i.li.dataset.dropdownId === "oils4selectorcollection");
-    var selector5Options = items.filter(i => i.li.dataset.dropdownId === "oils5selectorcollection");
 
-    let altSelector1Options = document.getElementById("oils1selector");
-    let altSelector2Options = document.getElementById("oils2selector");
-    let altSelector3Options = document.getElementById("oils3selector");
-    let altSelector4Options = document.getElementById("oils4selector");
-    let altSelector5Options = document.getElementById("oils5selector");
+    let altSelector1Options = document.getElementById("oils1selector").options;
+    let altSelector2Options = document.getElementById("oils2selector").options;
+    let altSelector3Options = document.getElementById("oils3selector").options;
+    let altSelector4Options = document.getElementById("oils4selector").options;
+    let altSelector5Options = document.getElementById("oils5selector").options;
+
+    let oilsel1 = document.getElementById("oils1selector");
+    let oilsel2 = document.getElementById("oils2selector");
+    let oilsel3 = document.getElementById("oils3selector");
+    let oilsel4 = document.getElementById("oils4selector");
+    let oilsel5 = document.getElementById("oils5selector");
 
     function makeAllOilsVisible() {
         console.info("KBH: Making all oils visible");
-        if (window.mobileCheck === false) {
+        /*if (window.mobileCheck === false) {
             for (var i = 0; i < selector1Options.length; i++) {
                 if (selector1Options[i].li.hidden === true) {
                     selector1Options[i].li.hidden = false;
@@ -1566,7 +2610,7 @@ console.info("KBH: Beginning oil filtering process");
                 }
             }
         }
-        if (window.mobileCheck === true) {
+        if (window.mobileCheck === true) {*/
             for (var i = 0; i < altSelector1Options.length; i++) {
                 if (altSelector1Options[i].hidden === true) {
                     altSelector1Options[i].hidden = false;
@@ -1592,12 +2636,12 @@ console.info("KBH: Beginning oil filtering process");
                     altSelector5Options[i].hidden = false;
                 }
             }
-        }
+        //}
     }
 
     function hideSelectedOils(value, key, map) {
         console.info("KBH: Hiding ", key, value);
-        if (window.mobileCheck === false) {
+        /*if (window.mobileCheck === false) {
             if (key.startsWith("ench")) {
                 let compOilRep = value.Name.Name.replaceAll(" ", "-");
                 let compOilLower = compOilRep.toLowerCase();
@@ -1629,7 +2673,7 @@ console.info("KBH: Beginning oil filtering process");
                 }
             }
         }
-        if (window.mobileCheck === true) {
+        if (window.mobileCheck === true) {*/
             if (key.startsWith("ench")) {
                 let compOilRep = value.Value;
 
@@ -1659,12 +2703,18 @@ console.info("KBH: Beginning oil filtering process");
                     }
                 }
             }
-        }
+        //}
     }
 
     makeAllOilsVisible()
 
     coreSelections.forEach(hideSelectedOils)
+
+    /*oilsel1.updateDisplay();
+    oilsel2.updateDisplay();
+    oilsel3.updateDisplay();
+    oilsel4.updateDisplay();
+    oilsel5.updateDisplay();*/
 
 } 
 
@@ -1675,57 +2725,64 @@ console.info("KBH: Filtering attachments based on weapon selection");
     let selectorChamber = document.getElementById("chamberselector");
 
     let dropdownWeapon = ((coreSelections.get("weapon")).Name); 
-    let selChamber = ((coreSelections.get("chamber")).Value);
-    let selBar = ((coreSelections.get("barrel")).Value);
-    let selFire = ((coreSelections.get("firemode")).Value);
     
-    // Unhide everything by default
-    items.filter(i => i.li.dataset.value === "priming-bolt")[0].li.hidden = false;
-    items.filter(i => i.li.dataset.value === "gun-crank")[0].li.hidden = false;
-    document.getElementById("chamberselector").disabled = "";
-    document.getElementById("barrelselector").disabled = "";
-    document.getElementById("firemodeselector").disabled = "";
-    // And set to N/A
-    if (selChamber === "static-not-applicable") {
-        selectorChamber.proDropdown.setValue("static-choose")
-    }
-    if (selBar === "static-not-applicable") {
-        selectorBarrel.proDropdown.setValue("static-choose");
-    }
-    if (selFire === "static-not-applicable") {
-        selectorFiremode.proDropdown.setValue("static-choose");
+    document.getElementById("chamberselector-custom").classList.remove("disabled");
+    document.getElementById("barrelselector-custom").classList.remove("disabled");
+    document.getElementById("firemodeselector-custom").classList.remove("disabled");
+    // Filter Firemodes
+
+    let sFire = selectorFiremode.options;
+
+    for (let i = 0; i < sFire.length; i++) {
+        sFire[i].hidden = false;
     }
 
-    // Filter Firemodes
     switch (dropdownWeapon.Firemode) {
         case "Single":
-            items.filter(i => i.li.dataset.value === "priming-bolt")[0].li.hidden = true;
-            if (selectorFiremode.value === "priming-bolt") {
-                selectorFiremode.proDropdown.setValue("static-choose");     
+            sFire[2].hidden = true;
+            if (selectorFiremode.getValue() === "priming-bolt") {
+                selectorFiremode.setValue("none");     
             };
             break;
         case "Auto":
-            items.filter(i => i.li.dataset.value === "gun-crank")[0].li.hidden = true;
-            if (selectorFiremode.value === "gun-crank") {
-                selectorFiremode.proDropdown.setValue("static-choose")
+            sFire[1].hidden = true;
+            if (selectorFiremode.getValue() === "gun-crank") {
+                selectorFiremode.setValue("none")
             }
             break;
         case "3-Round Burst":
-            items.filter(i => i.li.dataset.value === "priming-bolt")[0].li.hidden = true;
-            if (selectorFiremode.value === "priming-bolt") {
-                selectorFiremode.proDropdown.setValue("static-choose");     
+            sFire[2].hidden = true;
+            if (selectorFiremode.getValue() === "priming-bolt") {
+                selectorFiremode.setValue("none");     
             };
             break;
         case "Static Single":
-            document.getElementById("firemodeselector").disabled = "disabled";
-            selectorFiremode.proDropdown.setValue("static-not-applicable");
+            document.getElementById("firemodeselector-custom").classList.add("disabled");
+            selectorFiremode.setValue("static-not-applicable");
         default:
     }
+    
     if (dropdownWeapon.AmmoType === "Energy") {
-        selectorChamber.value = "static-not-applicable";
-        selectorBarrel.value = "static-not-applicable";
-        document.getElementById("chamberselector").disabled = "disabled";
-        document.getElementById("barrelselector").disabled = "disabled";
+        selectorChamber.setValue("static-not-applicable");
+        selectorBarrel.setValue("static-not-applicable");
+        document.getElementById("chamberselector-custom").classList.add("disabled");
+        document.getElementById("barrelselector-custom").classList.add("disabled");
+    }
+
+    if (document.getElementById("chamberselector-custom").classList.contains("disabled")) {
+        selectorChamber.setValue("none");
+        let cham = getChamberByName("Chamber Chisel - Energy");
+        addToCoreMap("chamber", cham, "chamber-chisel---energy");
+    }
+    if (document.getElementById("barrelselector-custom").classList.contains("disabled")) {
+        selectorBarrel.setValue("none");
+        let bar = getBarrelByName("None");
+        addToCoreMap("barrel", bar, "none");
+    }
+    if (document.getElementById("firemodeselector-custom").classList.contains("disabled")) {
+        selectorFiremode.setValue("none");
+        let fire = getFiremodeByName("None");
+        addToCoreMap("firemode", fire, "none");
     }
 }
 
@@ -1763,63 +2820,66 @@ function animationQueue(type, id) {
 	}
 }
 
-setTimeout(() => {
-  rollOnPageLoad('weapon', 'pageload', 7, 'p38-dirk', 'weapon');
-}, 150);
+//setTimeout(() => {
+//  rollOnPageLoad('weapon', 'pageload', 7, 'p38-dirk', 'weapon');
+//}, 150);
 
 // For when the button is clicked.
 function onGenerate() {
-    console.log(document.getElementById("oils1selector").proDropdown.getValue())
-    rollAggregator("weapon", "weapons", 1, document.getElementById("weapons").proDropdown.getValue(), "weapon");
-    rollAggregator("ench1", "oils1selector", 1, document.getElementById("oils1selector").proDropdown.getValue(), "ench");
-    rollAggregator("ench2", "oils2selector", 2, document.getElementById("oils2selector").proDropdown.getValue(), "ench");
-    rollAggregator("ench3", "oils3selector", 3, document.getElementById("oils3selector").proDropdown.getValue(), "ench");
-    rollAggregator("ench4", "oils4selector", 4, document.getElementById("oils4selector").proDropdown.getValue(), "ench");
-    rollAggregator("ench5", "oils5selector", 5, document.getElementById("oils5selector").proDropdown.getValue(), "ench");
-    rollAggregator("barrel", "barrelselector", 1, document.getElementById("barrelselector").proDropdown.getValue(), "attachment");
-    rollAggregator("optic", "opticselector", 2, document.getElementById("opticselector").proDropdown.getValue(), "attachment");
-    rollAggregator("laser", "laserselector", 3, document.getElementById("laserselector").proDropdown.getValue(), "attachment");
-    rollAggregator("firemode", "firemodeselector", 4, document.getElementById("firemodeselector").proDropdown.getValue(), "attachment");
-    rollAggregator("chamber", "chamberselector", 5, document.getElementById("chamberselector").proDropdown.getValue(), "attachment");
+    rollAggregator("weapon", "weapons", 1, document.getElementById("weapons").getValue(), "weapon");
+    rollAggregator("ench1", "oils1selector", 1, document.getElementById("oils1selector").getValue(), "ench");
+    rollAggregator("ench2", "oils2selector", 2, document.getElementById("oils2selector").getValue(), "ench");
+    rollAggregator("ench3", "oils3selector", 3, document.getElementById("oils3selector").getValue(), "ench");
+    rollAggregator("ench4", "oils4selector", 4, document.getElementById("oils4selector").getValue(), "ench");
+    rollAggregator("ench5", "oils5selector", 5, document.getElementById("oils5selector").getValue(), "ench");
+    rollAggregator("barrel", "barrelselector", 1, document.getElementById("barrelselector").getValue(), "attachment");
+    rollAggregator("optic", "opticselector", 2, document.getElementById("opticselector").getValue(), "attachment");
+    rollAggregator("laser", "laserselector", 3, document.getElementById("laserselector").getValue(), "attachment");
+    rollAggregator("firemode", "firemodeselector", 4, document.getElementById("firemodeselector").getValue(), "attachment");
+    rollAggregator("chamber", "chamberselector", 5, document.getElementById("chamberselector").getValue(), "attachment");
 }
 
 function rerollRandomEnch(opt) {
     switch (opt) {
         case "ench1":
-            rollAggregator("ench1", "oils1selector", 1, document.getElementById("oils1selector").proDropdown.getValue(), "ench");
+            rollAggregator("ench1", "oils1selector", 1, document.getElementById("oils1selector").getValue(), "ench");
             break;
         case "ench2":
-            rollAggregator("ench2", "oils2selector", 2, document.getElementById("oils2selector").proDropdown.getValue(), "ench");
+            rollAggregator("ench2", "oils2selector", 2, document.getElementById("oils2selector").getValue(), "ench");
             break;
         case "ench3":
-            rollAggregator("ench3", "oils3selector", 3, document.getElementById("oils3selector").proDropdown.getValue(), "ench");
+            rollAggregator("ench3", "oils3selector", 3, document.getElementById("oils3selector").getValue(), "ench");
             break;
         case "ench4":
-            rollAggregator("ench4", "oils4selector", 4, document.getElementById("oils4selector").proDropdown.getValue(), "ench");
+            rollAggregator("ench4", "oils4selector", 4, document.getElementById("oils4selector").getValue(), "ench");
             break;
         case "ench5":
-            rollAggregator("ench5", "oils5selector", 5, document.getElementById("oils5selector").proDropdown.ggetValueet(), "ench");
+            rollAggregator("ench5", "oils5selector", 5, document.getElementById("oils5selector").getValue(), "ench");
             break;
         default:
     }
 }
 
 function rollFromBuild() {
-    shallNotPass = true;
-    commitSelection('', 'weapons', 'weapon');
-    commitSelection('buttonCommitOil1', 'oils1selector', 'ench1');
-    commitSelection('buttonCommitOil2', 'oils2selector', 'ench2');
-    commitSelection('buttonCommitOil3', 'oils3selector', 'ench3');
-    commitSelection('buttonCommitOil4', 'oils4selector', 'ench4');
-    commitSelection('buttonCommitOil5', 'oils5selector', 'ench5');
-    commitSelection('buttonCommitBarrel', 'barrelselector', 'barrel');
-    commitSelection('buttonCommitOptic', 'opticselector', 'optic');
-    commitSelection('buttonCommitLaser', 'laserselector', 'laser');
-    commitSelection('buttonCommitFiremode', 'firemodeselector', 'firemode');
-    commitSelection('buttonCommitChamber', 'chamberselector', 'chamber');
-    rollAggregator("weapon", "weapons", 1, coreSelections.get("weapon").Value, "weapon");
-    onGenerate()
-    shallNotPass = false;
+    if (shallNotPass === false) {
+        shallNotPass = true;
+
+        commitSelection('', 'weapons', 'weapon');
+        commitSelection('buttonCommitOil1', 'oils1selector', 'ench1');
+        commitSelection('buttonCommitOil2', 'oils2selector', 'ench2');
+        commitSelection('buttonCommitOil3', 'oils3selector', 'ench3');
+        commitSelection('buttonCommitOil4', 'oils4selector', 'ench4');
+        commitSelection('buttonCommitOil5', 'oils5selector', 'ench5');
+        commitSelection('buttonCommitBarrel', 'barrelselector', 'barrel');
+        commitSelection('buttonCommitOptic', 'opticselector', 'optic');
+        commitSelection('buttonCommitLaser', 'laserselector', 'laser');
+        commitSelection('buttonCommitFiremode', 'firemodeselector', 'firemode');
+        commitSelection('buttonCommitChamber', 'chamberselector', 'chamber');
+        rollAggregator("weapon", "weapons", 1, coreSelections.get("weapon").Value, "weapon");
+        onGenerate()
+        shallNotPass = false;
+
+    }
 }
 
 function addAllEventListeners() {
@@ -1827,44 +2887,45 @@ function addAllEventListeners() {
     // Weapon onchange handler
 
     weaponSelectHandler = document.getElementById('weapons');
-    weaponSelectHandler.addEventListener('change', rollOnSelect, true);
+    weaponSelectHandler.addEventListener('change', rollOnSelect);
     weaponSelectHandler.flag = "weapon"
     weaponSelectHandler.selector = "weapons";
     weaponSelectHandler.selID = 1;
     weaponSelectHandler.selType = "weapon";
+    
 
     // Enchantments onchange handlers
 
     ench1SelectHandler = document.getElementById('oils1selector');
-    ench1SelectHandler.addEventListener('change', rollOnSelect, false);
+    ench1SelectHandler.addEventListener('change', rollOnSelect);
     ench1SelectHandler.flag = "ench1"
     ench1SelectHandler.selector = "oils1selector";
     ench1SelectHandler.selID = 1;
     ench1SelectHandler.selType = "ench";
 
     ench2SelectHandler = document.getElementById('oils2selector');
-    ench2SelectHandler.addEventListener('change', rollOnSelect, false);
+    ench2SelectHandler.addEventListener('change', rollOnSelect);
     ench2SelectHandler.flag = "ench2"
     ench2SelectHandler.selector = "oils2selector";
     ench2SelectHandler.selID = 2;
     ench2SelectHandler.selType = "ench";
 
     ench3SelectHandler = document.getElementById('oils3selector');
-    ench3SelectHandler.addEventListener('change', rollOnSelect, false);
+    ench3SelectHandler.addEventListener('change', rollOnSelect);
     ench3SelectHandler.flag = "ench3"
     ench3SelectHandler.selector = "oils3selector";
     ench3SelectHandler.selID = 3;
     ench3SelectHandler.selType = "ench";
 
     ench4SelectHandler = document.getElementById('oils4selector');
-    ench4SelectHandler.addEventListener('change', rollOnSelect, false);
+    ench4SelectHandler.addEventListener('change', rollOnSelect);
     ench4SelectHandler.flag = "ench4"
     ench4SelectHandler.selector = "oils4selector";
     ench4SelectHandler.selID = 4;
     ench4SelectHandler.selType = "ench";
 
     ench5SelectHandler = document.getElementById('oils5selector');
-    ench5SelectHandler.addEventListener('change', rollOnSelect, false);
+    ench5SelectHandler.addEventListener('change', rollOnSelect);
     ench5SelectHandler.flag = "ench5"
     ench5SelectHandler.selector = "oils5selector";
     ench5SelectHandler.selID = 5;
@@ -1873,35 +2934,35 @@ function addAllEventListeners() {
     // Attachments onchange handlers
 
     barrelSelectHandler = document.getElementById('barrelselector');
-    barrelSelectHandler.addEventListener('change', rollOnSelect, false);
+    barrelSelectHandler.addEventListener('change', rollOnSelect);
     barrelSelectHandler.flag = "barrel"
     barrelSelectHandler.selector = "barrelselector";
     barrelSelectHandler.selID = 1;
     barrelSelectHandler.selType = "attachment";
 
     opticSelectHandler = document.getElementById('opticselector');
-    opticSelectHandler.addEventListener('change', rollOnSelect, false);
+    opticSelectHandler.addEventListener('change', rollOnSelect);
     opticSelectHandler.flag = "optic"
     opticSelectHandler.selector = "opticselector";
     opticSelectHandler.selID = 2;
     opticSelectHandler.selType = "attachment";
 
     laserSelectHandler = document.getElementById('laserselector');
-    laserSelectHandler.addEventListener('change', rollOnSelect, false);
+    laserSelectHandler.addEventListener('change', rollOnSelect);
     laserSelectHandler.flag = "laser"
     laserSelectHandler.selector = "laserselector";
     laserSelectHandler.selID = 3;
     laserSelectHandler.selType = "attachment";
 
     firemodeSelectHandler = document.getElementById('firemodeselector');
-    firemodeSelectHandler.addEventListener('change', rollOnSelect, false);
+    firemodeSelectHandler.addEventListener('change', rollOnSelect);
     firemodeSelectHandler.flag = "firemode"
     firemodeSelectHandler.selector = "firemodeselector";
     firemodeSelectHandler.selID = 4;
     firemodeSelectHandler.selType = "attachment";
 
     chamberSelectHandler = document.getElementById('chamberselector');
-    chamberSelectHandler.addEventListener('change', rollOnSelect, false);
+    chamberSelectHandler.addEventListener('change', rollOnSelect);
     chamberSelectHandler.flag = "chamber"
     chamberSelectHandler.selector = "chamberselector";
     chamberSelectHandler.selID = 5;
@@ -1912,6 +2973,9 @@ function addAllEventListeners() {
     linkboxHandler = document.getElementById('buttonLoadBuildLink');
     linkboxHandler.addEventListener('click', pasteBuildLink, false);
 
+
+
+
     // Animations
 
     // Mobile checks
@@ -1921,6 +2985,25 @@ function addAllEventListeners() {
     //}
 
 
+}
+
+function filterChanger(mode, selector) {
+    let select = null;
+    switch (mode) {
+        case "positive":
+            select = document.getElementById(selector);
+            select.setSortMode("scorepos");
+            select.setGroupMode("positive")
+            select.render();
+            break;
+        case "negative":
+            select = document.getElementById(selector);
+            select.setSortMode("scoreneg");
+            select.setGroupMode("negative")
+            select.render();
+            break;
+    }
+    
 }
 
 let dropdownSelectHandler = null;
@@ -1946,20 +3029,17 @@ let selType = null;
 
 let shallNotPass = false;
 
+
 async function rollOnPageLoad(flag, selector, selID, value, type) {
     console.info("KBH: Beginning initial load");
-    const result = await loadOrigWeapons();
-    const result2 = await loadWeapons();
-    
-    
-
+    await dropdownsReady;
     setTimeout(() => {
         addAllEventListeners()
         let selPageLoad = document.getElementById("weapons");
-        selPageLoad.proDropdown.setValue("value"); 
-        
+        selPageLoad.setValue("value"); 
+
         oilDefault = oilsData?.Oil["Default"];
-        
+
         oilStatModifiers = structuredClone(oilDefault);
 
         selectedWeapon = null;
@@ -1976,7 +3056,7 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
         selectedChamber = null;
         rolledOils = [];
         selectedChamber = null;
-        
+
         rollSelections(flag, selector, selID, value, type);
         rollSelections('ench1', 'oils1selector', 1, 'static-choose', 'ench');
         rollSelections('ench2', 'oils2selector', 2, 'static-choose', 'ench');
@@ -1992,7 +3072,7 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
         oilCalcs(oilStatModifiers);
         addName();
         decodeUriAsBuild();
-    }, 200);
+    }, 500);
 }
 
 function rollAggregator(flag, selector, selID, selValue, selType) {
@@ -2009,6 +3089,59 @@ function rollAggregator(flag, selector, selID, selValue, selType) {
     document.getElementById("cardOil4Img").classList.remove("otherspinanimation");
     document.getElementById("cardOil5Img").classList.remove("otherspinanimation");
 
+    let select = null;
+    if (flag.startsWith("ench")) {
+        console.log(flag, selValue)
+        switch (flag) {
+            case "ench1":
+                select = document.getElementById("oils1selector");
+                select.setValue(selValue);
+                break;
+            case "ench2":
+                select = document.getElementById("oils2selector");
+                select.setValue(selValue);
+                break;
+            case "ench3":
+                select = document.getElementById("oils3selector");
+                select.setValue(selValue);
+                break;
+            case "ench4":
+                select = document.getElementById("oils4selector");
+                select.setValue(selValue);
+                break;
+            case "ench5":
+                select = document.getElementById("oils5selector");
+                select.setValue(selValue);
+                break;
+            default:
+        }
+    }
+    if (flag === "chamber") {
+        
+        if (selValue === undefined || selValue === "static-no-selection") {
+            selValue = "none";
+        }
+        select = document.getElementById("chamberselector");
+        select.setValue(selValue);
+    }
+    if (flag === "barrel") {
+        select = document.getElementById("barrelselector");
+        select.setValue(selValue);
+    }
+    if (flag === "laser") {
+        select = document.getElementById("laserselector");
+        select.setValue(selValue);
+    }
+    if (flag === "optic") {
+        select = document.getElementById("opticselector");
+        select.setValue(selValue);
+    }
+    if (flag === "firemode") {
+        select = document.getElementById("firemodeselector");
+        select.setValue(selValue);
+    }
+            
+
     selectedWeapon = null;
     modifiedWeapon = null;
     oil1 = null;
@@ -2023,13 +3156,6 @@ function rollAggregator(flag, selector, selID, selValue, selType) {
     selectedChamber = null;
     rolledOils = [];
     selectedChamber = null;
-
-    loadChamber()
-    loadWeapons()
-    loadOils()
-    loadScrolls()
-    loadOrigWeapons()
-    loadAttachments()
 
     rollSelections(flag, selector, selID, selValue, selType);
     attachmentFilter();
@@ -2063,29 +3189,37 @@ function rollAggregator(flag, selector, selID, selValue, selType) {
     addName();
     }, 430);
     
+    setTimeout(() => {
     encodeBuildAsUri();
-
     setBuildAsMetadata();
+    }, 730);
 }
 
 function rollOnSelect(evt) {
-    if (shallNotPass === false) {
-
-        shallNotPass = true;
-
-        flag = evt.currentTarget.flag;
-        selector = evt.currentTarget.selector;
-        selID = evt.currentTarget.selID;
-        selValue = evt.currentTarget.value;
-        selType = evt.currentTarget.selType;
-
-        rollAggregator(flag, selector, selID, selValue, selType);
-
-        shallNotPass = false;
+    if (evt.currentTarget.getValue() === "") {
+        return;
     }
-    if (!(evt)) {
+    else {
+        if (shallNotPass === false) {
+                shallNotPass = true;
+        
+        
+                flag = evt.currentTarget.flag;
+                selector = evt.currentTarget.selector;
+                selID = evt.currentTarget.selID;
+                selValue = evt.currentTarget.getValue()
+                selType = evt.currentTarget.selType;
 
+                rollAggregator(flag, selector, selID, selValue, selType);
+
+                shallNotPass = false;
+        
+            }
+            if (!(evt)) {
+
+            }
     }
+    
 }
 
 function addName() {
@@ -2178,126 +3312,129 @@ function addName() {
 
 
 function percentConv(stat) {
-       return stat *= 100;
-    }
+    return stat *= 100;
+}
 
 function oilStats() {
     oilStatModifiers = structuredClone(oilDefault);
 
     function oilStatCalcs(selectedOil) {
-        console.log(selectedOil)
-        if (selectedOil.AmmoConsumeChance != 0.0) {
+        
+        if (selectedOil === undefined) {
+            return;
+        }
+        if (selectedOil.AmmoConsumeChance != 0.0 && selectedOil.AmmoConsumeChance !== undefined) {
             oilStatModifiers.AmmoConsumeChance += selectedOil.AmmoConsumeChance;
         }
-        if (selectedOil.Bounces != 0) {
+        if (selectedOil.Bounces != 0 && selectedOil.Bounces !== undefined) {
             oilStatModifiers.Bounces += selectedOil.Bounces;
         }
-        if (selectedOil.BulletDrop != 0) {
+        if (selectedOil.BulletDrop != 0 && selectedOil.BulletDrop !== undefined) {
             oilStatModifiers.BulletDrop += selectedOil.BulletDrop;
         }
-        if (selectedOil.BulletSpeed != 0) {
+        if (selectedOil.BulletSpeed != 0 && selectedOil.BulletSpeed !== undefined) {
             oilStatModifiers.BulletSpeed += selectedOil.BulletSpeed;
         }
-        if (selectedOil.ExtraAmmoUseChance != 0) {
+        if (selectedOil.ExtraAmmoUseChance != 0 && selectedOil.ExtraAmmoUseChance !== undefined) {
             oilStatModifiers.ExtraAmmoUseChance += selectedOil.ExtraAmmoUseChance;
         }
-        if (selectedOil.BaseCritChance != 0) {
+        if (selectedOil.BaseCritChance != 0 && selectedOil.BaseCritChance !== undefined) {
             oilStatModifiers.BaseCritChance += selectedOil.BaseCritChance;
         }
-        if (selectedOil.DamageAdd != 0) {
+        if (selectedOil.DamageAdd != 0 && selectedOil.DamageAdd !== undefined) {
             oilStatModifiers.DamageAdd += selectedOil.DamageAdd;
         }
-        if (selectedOil.DamageMult != 0) {
+        if (selectedOil.DamageMult != 0 && selectedOil.DamageMult !== undefined) {
             oilStatModifiers.DamageMult += selectedOil.DamageMult;
         }
-        if (selectedOil.CanADS != "Yes") {
+        if (selectedOil.CanADS != "Yes" && selectedOil.CanADS !== undefined) {
             oilStatModifiers.CanADS = selectedOil.CanADS;
         }
-        if (selectedOil.JumpPower != 0) {
+        if (selectedOil.JumpPower != 0 && selectedOil.JumpPower !== undefined) {
             oilStatModifiers.JumpPower += selectedOil.JumpPower;
         }
-        if (selectedOil.LootDropChance != 0) {
+        if (selectedOil.LootDropChance != 0 && selectedOil.LootDropChance !== undefined) {
             oilStatModifiers.LootDropChance += selectedOil.LootDropChance;
         }
-        if (selectedOil.DurabilityMult != 0) {
+        if (selectedOil.DurabilityMult != 0 && selectedOil.DurabilityMult !== undefined) {
             oilStatModifiers.DurabilityMult += selectedOil.DurabilityMult;
         }
-        if (selectedOil.MovementSpeedMult != 0) {
+        if (selectedOil.MovementSpeedMult != 0 && selectedOil.MovementSpeedMult !== undefined) {
             oilStatModifiers.MovementSpeedMult += selectedOil.MovementSpeedMult;
         }
-        if (selectedOil.MoneyDrops != "Yes") {
+        if (selectedOil.MoneyDrops != "Yes" && selectedOil.MoneyDrops !== undefined) {
             oilStatModifiers.MoneyDrops = selectedOil.MoneyDrops;
         }
-        if (selectedOil.OrganDrops != "Yes") {
+        if (selectedOil.OrganDrops != "Yes" && selectedOil.OrganDrops !== undefined) {
             oilStatModifiers.OrganDrops = selectedOil.OrganDrops;
         }
-        if (selectedOil.Penetrations != 0) {
+        if (selectedOil.Penetrations != 0 && selectedOil.Penetrations !== undefined) {
             oilStatModifiers.Penetrations += selectedOil.Penetrations;
         }
-        if (selectedOil.ProjectileMult != 0) {
+        if (selectedOil.ProjectileMult != 0 && selectedOil.ProjectileMult !== undefined) {
             oilStatModifiers.ProjectileMult += selectedOil.ProjectileMult;
         }
-        if (selectedOil.RPM != 0) {
+        if (selectedOil.RPM != 0 && selectedOil.RPM !== undefined) {
             oilStatModifiers.RPM += selectedOil.RPM;
         }
-        if (selectedOil.RecoilAdd != 0) {
+        if (selectedOil.RecoilAdd != 0 && selectedOil.RecoilAdd !== undefined) {
             oilStatModifiers.RecoilAdd += selectedOil.RecoilAdd;
         }
-        if (selectedOil.RecoilMult != 0) {
+        if (selectedOil.RecoilMult != 0 && selectedOil.RecoilMult !== undefined) {
             oilStatModifiers.RecoilMult += selectedOil.RecoilMult;
         }
-        if (selectedOil.ReloadSpeed != 0) {
+        if (selectedOil.ReloadSpeed != 0 && selectedOil.ReloadSpeed !== undefined) {
             oilStatModifiers.ReloadSpeed += selectedOil.ReloadSpeed;
         }
-        if (selectedOil.SpreadAdd != 0) {
+        if (selectedOil.SpreadAdd != 0 && selectedOil.SpreadAdd !== undefined) {
             oilStatModifiers.SpreadAdd += selectedOil.SpreadAdd;
         }
-        if (selectedOil.SpreadMult != 0) {
+        if (selectedOil.SpreadMult != 0 && selectedOil.SpreadMult !== undefined) {
             oilStatModifiers.SpreadMult += selectedOil.SpreadMult;
         }
-        if (selectedOil.Drag != 0) {
+        if (selectedOil.Drag != 0 && selectedOil.Drag !== undefined) {
             oilStatModifiers.Drag += selectedOil.Drag;
         }
-        if (selectedOil.DurabilityUsage != 0) {
+        if (selectedOil.DurabilityUsage != 0 && selectedOil.DurabilityUsage !== undefined) {
             oilStatModifiers.DurabilityUsage += selectedOil.DurabilityUsage;
         }
-        if (selectedOil.BulletBounciness != 0) {
+        if (selectedOil.BulletBounciness != 0 && selectedOil.BulletBounciness !== undefined) {
             oilStatModifiers.BulletBounciness += selectedOil.BulletBounciness;
         }
-        if (selectedOil.MovingAccuracy != 0) {
+        if (selectedOil.MovingAccuracy != 0 && selectedOil.MovingAccuracy !== undefined) {
             oilStatModifiers.MovingAccuracy += selectedOil.MovingAccuracy;
         }
-        if (selectedOil.DurLossMult != 0) {
+        if (selectedOil.DurLossMult != 0 && selectedOil.DurLossMult !== undefined) {
             oilStatModifiers.DurLossMult += selectedOil.DurLossMult;
         }
-        if (selectedOil.ADSCritChance != 0) {
+        if (selectedOil.ADSCritChance != 0 && selectedOil.ADSCritChance !== undefined) {
             oilStatModifiers.ADSCritChance += selectedOil.ADSCritChance;
         }
-        if (selectedOil.Firemode !== 'None') {
+        if (selectedOil.Firemode !== 'None' && selectedOil.Firemode !== undefined) {
             oilStatModifiers.Firemode = selectedOil.Firemode;
         }
-        if (selectedOil.BulletSize !== 0) {
+        if (selectedOil.BulletSize !== 0 && selectedOil.Firemode !== undefined) {
             oilStatModifiers.Firemode = selectedOil.Firemode;
         }
-        if (selectedOil.RPMBaseShift !== 0) {
+        if (selectedOil.RPMBaseShift !== 0 && selectedOil.RPMBaseShift !== undefined) {
             oilStatModifiers.RPMBaseShift = selectedOil.RPMBaseShift;
         }
-        if (selectedOil.IsRailgun !== false) {
+        if (selectedOil.IsRailgun !== false && selectedOil.IsRailgun !== undefined) {
             oilStatModifiers.IsRailgun = selectedOil.IsRailgun;
         }
-        if (selectedOil.HeadshotDamage !== 0) {
+        if (selectedOil.HeadshotDamage !== 0 && selectedOil.HeadshotDamage !== undefined) {
             oilStatModifiers.HeadshotDamage = selectedOil.HeadshotDamage;
         }
-        if (selectedOil.ScrollField !== "None") {
+        if (selectedOil.ScrollField !== "None" && selectedOil.ScrollField !== undefined) {
+            
             oilStatModifiers.ScrollField = selectedOil.ScrollField;
         }
     }
 
     function coreStats(value, key, map) {
-
+        
         let coreName = value.Name;
         if (key !== "weapon") {
-            console.log(key)
             oilStatCalcs(coreName);
         }
         
@@ -2404,8 +3541,15 @@ function oilCalcs(calcOil) {
     document.getElementById("scrollinfovoodoo").style.display = "none";
 
     function animateScrollCard(id) {
-        console.log(id)
-        if (id === "None") {
+        
+        if (id === undefined) {
+            scrollDefaultCard.classList.remove("scrollcardanimate");
+            setTimeout(() => {
+                scrollDefaultCard.classList.add("scrollcardanimate");
+            }, 50);
+            scrollDefaultCard.style.display = "flex";
+        }
+        else if (id === "None") {
             scrollDefaultCard.classList.remove("scrollcardanimate");
             setTimeout(() => {
                 scrollDefaultCard.classList.add("scrollcardanimate");
@@ -2421,6 +3565,7 @@ function oilCalcs(calcOil) {
             document.getElementById(id).style.display = "flex";
         }
     }
+    
     animateScrollCard(calcOil.ScrollField);
 
     /////////////
@@ -2504,7 +3649,7 @@ function oilCalcs(calcOil) {
     document.getElementById("cardAmmoLBrac").textContent = "";
     document.getElementById("cardAmmoComp").textContent = "";
     document.getElementById("cardAmmoRBrac").textContent = "";
-console.log(calcOil.AmmoConsumeChance)
+
     let ammoCalc = weapon.AmmoConsumeChance + calcOil.AmmoConsumeChance;
     if (ammoCalc < 0.01) {
         ammoCalc = 0;
@@ -2577,11 +3722,11 @@ console.log(calcOil.AmmoConsumeChance)
 
     let ammoEff = null;
     let extraEff = null;
-    console.log(ammoCalc)
+    
 
     if (ammoCalc < 0.01) {
         ammoEff = 0;
-        console.log(ammoEff)
+        
     }
     else
     {
@@ -2601,7 +3746,7 @@ console.log(calcOil.AmmoConsumeChance)
         effMagSize = Infinity;
     }
     
-console.log(effMagSize)
+
     let effRound = Math.round((effMagSize + Number.EPSILON)* 100) / 100;
 
     document.getElementById("cardEffMagSize").textContent = effRound;
@@ -3160,7 +4305,7 @@ console.log(effMagSize)
     document.getElementById("cardHeadDamageXComp").innerHTML = "";
 
     let headshotDamage = damRound * (1 + calcOil.HeadshotDamage);
-console.log(headshotDamage)
+
     //// Total Damage Calc
     let totalHead = headshotDamage * weapProj * weapon.MultiShot;
     let totalHeadRound = Math.round((totalHead + Number.EPSILON)* 100) / 100;
@@ -3238,7 +4383,7 @@ console.log(headshotDamage)
         }
     }
     if (headshotDamage > damRound) {
-        console.log(headshotDamage)
+        
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "Lime";
@@ -3785,17 +4930,17 @@ console.log(headshotDamage)
     let relSpdConvOrig = percentConv(weaponOriginal.ReloadSpeed);
 
     let relSpdRound = Math.round((relSpdConv + Number.EPSILON)* 100) / 100;
-        console.log(relSpdRound);
+        
     if (relSpdRound < 1) {
         relSpdRound = 1;
-        console.log(relSpdRound);
+        
     }
     else {
-        console.log("fuck")
+        
     }
         
     
-    console.log(relSpdRound)
+    
 
     if (relSpdRound < relSpdConvOrig) {
         document.getElementById("cardReloadSpeed").textContent = relSpdRound;
@@ -4166,7 +5311,8 @@ function convNameToVal(name) {
 }
 
 function addToCoreMap(flag, itemName, itemValue) {
-    if (itemName !== null) {
+    if (itemName !== null && itemValue !== null && itemValue !== "") {
+        
         switch (flag) {
             case "weapon":
                 coreSelections.set("weapon", {Name: itemName, Value: itemValue});
@@ -4208,43 +5354,44 @@ function addToCoreMap(flag, itemName, itemValue) {
             default:
         }
     }
+    
 }
 
 function addToTempMap(flag, itemName, itemValue) {
-    if (itemName !== null) {
+    if (itemName !== null && itemValue !== null && itemValue !== "") {
         switch (flag) {
             case "weapon":
-                coreSelections.set("weapon", {Name: itemName, Value: itemValue});
+                tempSelections.set("weapon", {Name: itemName, Value: itemValue});
                 break;
             case "ench1":
-                coreSelections.set("ench1", {Name: itemName, Value: itemValue});
+                tempSelections.set("ench1", {Name: itemName, Value: itemValue});
                 break;
             case "ench2":
-                coreSelections.set("ench2", {Name: itemName, Value: itemValue});
+                tempSelections.set("ench2", {Name: itemName, Value: itemValue});
                 break;
             case "ench3":
-                coreSelections.set("ench3", {Name: itemName, Value: itemValue});
+                tempSelections.set("ench3", {Name: itemName, Value: itemValue});
                 break;
             case "ench4":
-                coreSelections.set("ench4", {Name: itemName, Value: itemValue});
+                tempSelections.set("ench4", {Name: itemName, Value: itemValue});
                 break;
             case "ench5":
-                coreSelections.set("ench5", {Name: itemName, Value: itemValue});
+                tempSelections.set("ench5", {Name: itemName, Value: itemValue});
                 break;
             case "barrel":
-                coreSelections.set("barrel", {Name: itemName, Value: itemValue});
+                tempSelections.set("barrel", {Name: itemName, Value: itemValue});
                 break;
             case "optic":
-                coreSelections.set("optic", {Name: itemName, Value: itemValue});
+                tempSelections.set("optic", {Name: itemName, Value: itemValue});
                 break;
             case "laser":
-                coreSelections.set("laser", {Name: itemName, Value: itemValue});
+                tempSelections.set("laser", {Name: itemName, Value: itemValue});
                 break;
             case "firemode":
-                coreSelections.set("firemode", {Name: itemName, Value: itemValue});
+                tempSelections.set("firemode", {Name: itemName, Value: itemValue});
                 break;
             case "chamber":
-                coreSelections.set("chamber", {Name: itemName, Value: itemValue});
+                tempSelections.set("chamber", {Name: itemName, Value: itemValue});
                 break; 
             case undefined:
                 break;  
@@ -4328,11 +5475,18 @@ let selChamb = null;
 let selChambName = null;
 
 function setDefaultChamber(gun) {
-    console.log(gun)
-    selChamb = getChamberByName(`Chamber Chisel - ${gun.AmmoType}`);
-    console.log(selChamb)
-    selChambName = chamberNameIndexer.get(selChamb.Name);
-    addToCoreMap("chamber", selChamb, selChambName);
+    
+    if (gun === null) {
+        return;
+    }
+    else {
+        selChamb = getChamberByName(`Chamber Chisel - ${gun.AmmoType}`);
+        
+        selChambName = chamberNameIndexer.get(selChamb.Name);
+        if (document.getElementById("chamberselector").getValue() === "none" || document.getElementById("chamberselector").getValue() === undefined || gun.AmmoType === "Energy") {
+            addToCoreMap("chamber", selChamb, selChambName);
+        }
+    }
 }
 
 function rollSelections(flag, selector, selID, value, type) {
@@ -4359,6 +5513,8 @@ function rollSelections(flag, selector, selID, value, type) {
     let selectedValue = null;
 
     function rollEnch(value, flag) {
+        
+            
         switch (value) {
             case "static-no-selection":
                 selectedItem = getOilByName("None");
@@ -4371,6 +5527,11 @@ function rollSelections(flag, selector, selID, value, type) {
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case null:
+                selectedItem = getOilByName("None");
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "none":
                 selectedItem = getOilByName("None");
                 selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
@@ -4411,19 +5572,17 @@ function rollSelections(flag, selector, selID, value, type) {
                 break;
             case "static-random-all-enchantments":
                 shuffle(enchAll);
-                console.log(enchAll[0])
+                
                 if (enchAll[0].endsWith("Oil") === true) {
                     selectedItem = getOilByName(enchAll[0]);
                     selectedValue = oilNameIndexer.get(selectedItem.Name);
-                    console.log(selectedItem, selectedValue)
                 }
                 if (enchAll[0].startsWith("Scroll") === true) {
                     selectedItem = getScrollByName(enchAll[0]);
                     selectedValue = scrollNameIndexer.get(selectedItem.Name);
-                    console.log(selectedItem, selectedValue)
                 }
                 addToCoreMap(flag, selectedItem, selectedValue);
-                console.log(flag, selectedItem, selectedValue);
+                
                 break;
             case "static-random-ammo-consume-chance":
                 shuffle(oilsAmmo);
@@ -4503,11 +5662,8 @@ function rollSelections(flag, selector, selID, value, type) {
                 selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
-            case "static-durability-loss-multiplier-+200%":
-                selectedItem = getOilByName("Durability Loss Multiplier +200%");
-                addToCoreMap(flag, selectedItem, value);
-                break;
             default:
+                
                 if (value.endsWith("oil") === true) {
                     let selItem = oilValueIndexer.get(value);
                     selectedItem = getOilByName(selItem);
@@ -4524,6 +5680,7 @@ function rollSelections(flag, selector, selID, value, type) {
     }
 
     function rollWeapon(value, flag) {
+        
         switch (value) {
             case "random-all-weapons":
                 shuffle(gunsAll);
@@ -4588,10 +5745,33 @@ function rollSelections(flag, selector, selID, value, type) {
                 setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
+            case undefined:
+                
+                let selectedGun2 = weaponValueIndexer.get("p38-dirk");
+                selectedItem = getWeaponByName(selectedGun2);
+                
+                setDefaultChamber(selectedItem);
+                addToCoreMap(flag, selectedItem, value);
+            case "":
+                
+                let selectedGun4 = weaponValueIndexer.get("p38-dirk");
+                selectedItem = getWeaponByName(selectedGun4);
+                
+                setDefaultChamber(selectedItem);
+                addToCoreMap(flag, selectedItem, value);
+            case null:
+                
+                let selectedGun3 = weaponValueIndexer.get("p38-dirk");
+                selectedItem = getWeaponByName(selectedGun3);
+                
+                setDefaultChamber(selectedItem);
+                addToCoreMap(flag, selectedItem, value);
             default:
+                
                 let selectedGun = weaponValueIndexer.get(value);
                 selectedItem = getWeaponByName(selectedGun);
                 setDefaultChamber(selectedItem);
+                
                 addToCoreMap(flag, selectedItem, value);
         }
         
@@ -4603,7 +5783,7 @@ function rollSelections(flag, selector, selID, value, type) {
                 selectedItem = getBarrelByName("None");
                 selectedValue = barrelNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
-                document.getElementById("barrelselector").proDropdown.setValue("static-not-applicable");
+                document.getElementById("barrelselector").setValue("static-not-applicable");
             }
             else {
                 switch (value) {
@@ -4632,7 +5812,7 @@ function rollSelections(flag, selector, selID, value, type) {
                         let selbar = barrelValueIndexer.get(value);
                         selectedItem = getBarrelByName(selbar);
                         addToCoreMap(flag, selectedItem, value);
-                        console.log(coreSelections)
+                        
                 }
             }
         }
@@ -4711,6 +5891,8 @@ function rollSelections(flag, selector, selID, value, type) {
             }
         }
         if (flag === "chamber") {
+            
+            let weapCha = null;
             let weapon = coreSelections.get("weapon");
             let weaponName = weapon.Name.Name;
             let weaponStats = getWeaponByName(weaponName);
@@ -4718,25 +5900,22 @@ function rollSelections(flag, selector, selID, value, type) {
                 let weapCha = coreSelections.get("weapon");
                 let weapChaObj = weapCha.Name;
                 setDefaultChamber(weapChaObj);
-                document.getElementById("chamberselector").proDropdown.setValue("static-not-applicable");
+                document.getElementById("chamberselector").setValue("static-not-applicable");
             }
             else {
                 switch (value) {
                     case "static-choose":
-                        let weapCha = coreSelections.get("weapon");
-                        let weapChaObj = weapCha.Name;
-                        console.log(weapChaObj)
-                        setDefaultChamber(weapChaObj);
+                        weapCha = coreSelections.get("weapon");
+                        
+                        setDefaultChamber(weapCha.Name);
                         break;
                     case undefined:
-                        let weapCha2 = coreSelections.get("weapon");
-                        let weapChaObj2 = weapCha2.Name;
-                        setDefaultChamber(weapChaObj2);
+                        weapCha = coreSelections.get("weapon");
+                        setDefaultChamber(weapCha.Name);
                         break;
                     case "none":
-                        let weapCha1 = coreSelections.get("weapon");
-                        let weapChaObj1 = weapCha1.Name;
-                        setDefaultChamber(weapChaObj1);
+                        weapCha = coreSelections.get("weapon");
+                        setDefaultChamber(weapCha.Name);
                         break;
                     case "static-random-chamber":
                         shuffle(attachmentsRechambers);
@@ -5329,8 +6508,23 @@ let oilsAllMain = [
 const oilValueIndexer = new Map();
 
 function setOilValueIndexer() {
-    oilValueIndexer.set("none", "None");
     console.info("KBH: Setting oil value indexer");
+    oilValueIndexer.set("none", "None");
+    oilValueIndexer.set("static-random-all-enchantments", "Random Enchantment");
+    oilValueIndexer.set("static-random-all-oils", "Random Oil");
+    oilValueIndexer.set("static-random-ammo-consume-chance", "Random Ammo Consume Chance Oil");
+    oilValueIndexer.set("static-random-base-crit-chance", "Random Base Crit Chance Oil");
+    oilValueIndexer.set("static-random-bullet-bounces", "Random Bullet Bounce Oil");
+    oilValueIndexer.set("static-random-bullet-speed", "Random Bullet Speed Oil");
+    oilValueIndexer.set("static-random-damage---flat", "Random Damage - Flat Oil");
+    oilValueIndexer.set("static-random-damage---mult", "Random Damage - Mult Oil");
+    oilValueIndexer.set("static-random-max-durability", "Random Max Durability Oil");
+    oilValueIndexer.set("static-random-penetration", "Random Penetration Oil");
+    oilValueIndexer.set("static-random-projectiles", "Random Projectiles Oil");
+    oilValueIndexer.set("static-random-recoil", "Random Recoil Oil");
+    oilValueIndexer.set("static-random-reload-speed", "Random Reload Speed Oil");
+    oilValueIndexer.set("static-random-rpm", "Random RPM Oil");
+    oilValueIndexer.set("static-random-spread", "Random Spread Oil");
     oilsAllMain.forEach(oil => {
         const key = oil.toLowerCase().replaceAll(" ", "-");
         oilValueIndexer.set(key, oil);
@@ -5712,9 +6906,9 @@ const attachmentsRechambers = [
 ];
 function mobileDropdownCheck(evt) {
     let helloThere = "hello there, i am mobile";
-    console.log("checking if mobile");
+    
     if (window.mobileCheck() === true) {
-        console.log(helloThere);
+        
         dropdownSelectHandler = document.getElementsByClassName('mobiledrop');
         customDropHandler = document.getElementsByClassName('custom-select');
 
