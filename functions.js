@@ -1989,7 +1989,12 @@ function captureElement(activated) {
     const target = document.getElementById('targetme');
     infoboxHover("screenshot");
     // Use html2canvas to capture the element
-    html2canvas(target, {imageTimeout: 100}).then(canvas => {
+    html2canvas(target, {
+        imageTimeout: 100,
+        useCORS: true,
+                        scrollX: -window.scrollX,
+                        scrollY: -window.scrollY
+    }).then(canvas => {
         // Append the canvas to the page
         canvas.toBlob((blob) => {
             ///const cbi = new ClipboardItem({ 'image/png': blob });
