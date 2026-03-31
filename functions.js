@@ -1983,7 +1983,7 @@ function captureElement(activated) {
     document.getElementById("buttonCopyBuildLink").classList.add("buttonCommitInd2");
     document.getElementById("buttonLoadBuildLink").classList.add("buttonCommitInd2");
 
-    document.getElementById("target").style.backgroundColor = "#2D424B";
+    document.getElementById("targetme").style.backgroundColor = "#2D424B";
 
     let screeny = null;
     const target = document.getElementById('targetme');
