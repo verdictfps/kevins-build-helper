@@ -1356,7 +1356,7 @@
       "BulletBounciness": 0.2,
       "MovingAccuracy": 0,
       "DurLossMult": 0,
-      "StatDescription": "Increases damage on target for every bullet hit.<br>Spread +150%<br>Bullet speed -70%<br>More drag<br>Less force speed<br>Damage -86%<br>Converts into Flamethrower<br>More life time<br>Bullets bounce +1",
+      "StatDescription": "Spread +150%<br>Bullet speed -70%<br>More drag<br>Less force speed<br>Damage -86%<br>Converts into Flamethrower<br>More life time<br>Bullets bounce +1",
       "ADSCritChance": 0,
       "Firemode": "None",
       "BulletSize": 0,

@@ -1950,11 +1950,11 @@ function closeAllGroupsExcept(exception) {
 }
 
 function scrollExtendedStats() {
-    document.getElementById("extendedstatscontainer").scrollIntoView(({ behavior: 'smooth' }));
+    window.scrollTo({ top: 9999999, behavior: 'smooth' });
 }
 
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Screenshots
