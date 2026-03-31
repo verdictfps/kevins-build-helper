@@ -1331,6 +1331,7 @@ async function createProDropdown(select) {
 
     const control = document.createElement("div");
     control.className = "custom-select-selected";
+    control.id = (`${select.id}-custom-selected`)
 
     const display = document.createElement("span");
 
@@ -1342,14 +1343,16 @@ async function createProDropdown(select) {
 
     const panel = document.createElement("div");
     panel.className = "custom-select-panel";
+    panel.id = (`${select.id}-custom-panel`)
 
     const searchInput = document.createElement("input");
     searchInput.className = "custom-select-search";
     searchInput.placeholder = "Search...";
+    searchInput.id = (`${select.id}-custom-search`)
 
     const list = document.createElement("div");
     list.className = "custom-select-menu";
-    list.id = `${select.id}2`;
+    list.id = `${select.id}-custom-menu`;
 
     panel.append(searchInput, list);
     wrapper.append(control, panel);
