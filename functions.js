@@ -1991,6 +1991,7 @@ function captureElement(activated) {
     // Use html2canvas to capture the element
     html2canvas(target, {
         imageTimeout: 100,
+        allowTaint: true,
         useCORS: true,
                         scrollX: -window.scrollX,
                         scrollY: -window.scrollY
