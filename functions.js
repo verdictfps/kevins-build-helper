@@ -1990,8 +1990,10 @@ function captureElement(activated) {
     infoboxHover("screenshot");
     // Use html2canvas to capture the element
     html2canvas(target, {
-        imageTimeout: 100,
+        imageTimeout: 200,
         allowTaint: true,
+        windowWidth: target.scrollWidth,
+        windowHeight: target.scrollHeight,
         useCORS: true,
                         scrollX: -window.scrollX,
                         scrollY: -window.scrollY
