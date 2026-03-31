@@ -1986,7 +1986,7 @@ function captureElement(activated) {
     document.getElementById("target").style.backgroundColor = "#2D424B";
 
     let screeny = null;
-    const target = document.getElementById('target');
+    const target = document.getElementById('targetme');
     infoboxHover("screenshot");
     // Use html2canvas to capture the element
     html2canvas(target, {imageTimeout: 100}).then(canvas => {
