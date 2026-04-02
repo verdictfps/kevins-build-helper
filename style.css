@@ -782,17 +782,24 @@ select.custom-dropdown {
 
 .custom-select-panel-mobile {
     display:none;
-    position:absolute;
+    position:fixed;
     background:#1b1b1b;
     border:1px solid #444;
     z-index:1000;
-    width: 100vw;
-    height: 100vh;
+    width: 98vw;
+    height: 97vh;
+    top: 0;
+    left: 0;
 }
 
 .custom-select.open .custom-select-panel-mobile {
     display:block;
     background:#1b1b1b;
+}
+
+.custom-panel-name {
+    color: white;
+    font-size: 15;;
 }
 
 .custom-select.disabled {
@@ -978,6 +985,15 @@ select.custom-dropdown {
     margin:0;
     padding:0;
     max-height:380px;
+    overflow-y:auto;
+    text-align: left;
+}
+
+.custom-select-menu-mobile {
+    list-style:none;
+    margin:0;
+    padding:0;
+    height: 100%;
     overflow-y:auto;
     text-align: left;
 }

@@ -1343,7 +1343,7 @@ async function createProDropdown(select) {
 
     // dropdown panel
     const panel = document.createElement("div");
-    if (window.mobileCheck === true) {
+    if (window.mobileCheck() === true) {
         panel.className = "custom-select-panel-mobile";
     }
     else {
@@ -1373,7 +1373,12 @@ async function createProDropdown(select) {
 
     // option list
     const list = document.createElement("div");
-    list.className = "custom-select-menu";
+    if (window.mobileCheck() === true) {
+        list.className = "custom-select-menu-mobile";
+    }
+    else {
+        list.className = "custom-select-menu";
+    }
     list.id = `${select.id}-custom-menu`;
 
     // top row buttons  
@@ -1443,7 +1448,15 @@ async function createProDropdown(select) {
     });
 
     topRowSort.append(buttonAlph, buttonPos, buttonNeg);
-    topRowClose.append(buttonClose);
+    if (window.mobileCheck() === true) {
+        const dropname = document.createElement("span");
+        dropname.className = "custom-panel-name";
+        dropname.innerHTML = `${select.id} `;
+        topRowClose.append(dropname, buttonClose);
+    }
+    else {
+        topRowClose.append(buttonClose);
+    }
     topRow.append(topRowSort, topRowClose)
     panel.append(topRow, searchContainer, list);
     
