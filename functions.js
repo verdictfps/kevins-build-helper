@@ -1341,20 +1341,112 @@ async function createProDropdown(select) {
 
     control.append(display, arrow);
 
+    // dropdown panel
     const panel = document.createElement("div");
-    panel.className = "custom-select-panel";
-    panel.id = (`${select.id}-custom-panel`)
+    if (window.mobileCheck === true) {
+        panel.className = "custom-select-panel-mobile";
+    }
+    else {
+        panel.className = "custom-select-panel";
+    }
+    panel.id = (`${select.id}-custom-panel`);
 
+    // build search stuff
     const searchInput = document.createElement("input");
     searchInput.className = "custom-select-search";
     searchInput.placeholder = "Search...";
     searchInput.id = (`${select.id}-custom-search`)
 
+    const searchX = document.createElement("button");
+    searchX.className = "custom-select-search-x";
+    searchX.innerHTML = "<span style='font-size: 12px; display: flex' class='fa-solid fa-x'></span>";
+    searchX.addEventListener("click", () => {
+        state.search = "";
+        searchInput.value = "";
+        render();
+    });
+
+    const searchContainer = document.createElement("div");
+    searchContainer.className = "custom-select-search-container";
+
+    searchContainer.append(searchInput, searchX)
+
+    // option list
     const list = document.createElement("div");
     list.className = "custom-select-menu";
     list.id = `${select.id}-custom-menu`;
 
-    panel.append(searchInput, list);
+    // top row buttons  
+    const topRow = document.createElement("div");
+    topRow.className = "custom-select-top-row";
+
+    const topRowSort = document.createElement("div");
+    topRowSort.className = "custom-select-top-row-sort";
+
+    const topRowClose = document.createElement("div");
+    topRowClose.className = "custom-select-top-row-close";
+
+    // alphabetical button
+    const buttonAlph = document.createElement("button");
+    buttonAlph.className = "custom-select-panel-button";
+    buttonAlph.innerHTML = "<span class='fa-solid fa-arrow-down-a-z' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>"
+    buttonAlph.addEventListener("click", () => {
+        filterChanger('default', select.id);
+    });
+    buttonAlph.addEventListener("mouseover", () => {
+        infoboxHover('button', 0, '', 'Sorts alphabetically');
+    });
+    buttonAlph.addEventListener("mouseout", () => {
+        infoboxClear();
+    });
+
+    // positive sort button
+    const buttonPos = document.createElement("button");
+    buttonPos.className = "custom-select-panel-button";
+    buttonPos.innerHTML = "<span class='fa-solid fa-arrow-down-9-1' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>"
+    buttonPos.addEventListener("click", () => {
+        filterChanger('positive', select.id);
+    });
+    buttonPos.addEventListener("mouseover", () => {
+        infoboxHover('button', 0, '', 'Sorts by positive stat amount');
+    });
+    buttonPos.addEventListener("mouseout", () => {
+        infoboxClear();
+    });
+
+    // negative sort button
+    const buttonNeg = document.createElement("button");
+    buttonNeg.className = "custom-select-panel-button";
+    buttonNeg.innerHTML = "<span class='fa-solid fa-arrow-down-1-9' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>"
+    buttonNeg.addEventListener("click", () => {
+        filterChanger('negative', select.id);
+    });
+    buttonNeg.addEventListener("mouseover", () => {
+        infoboxHover('button', 0, '', 'Sorts by negative stat amount');
+    });
+    buttonNeg.addEventListener("mouseout", () => {
+        infoboxClear();
+    });
+
+    // close dropdown button
+    const buttonClose = document.createElement("button");
+    buttonClose.className = "custom-select-panel-close";
+    buttonClose.innerHTML = "<span style='font-size: 20px; display: flex' class='fa-solid fa-xmark'></span>"
+    buttonClose.addEventListener("click", () => {
+        close();
+    });
+    buttonClose.addEventListener("mouseover", () => {
+        infoboxHover('button', 0, '', 'Close dropdown');
+    });
+    buttonClose.addEventListener("mouseout", () => {
+        infoboxClear();
+    });
+
+    topRowSort.append(buttonAlph, buttonPos, buttonNeg);
+    topRowClose.append(buttonClose);
+    topRow.append(topRowSort, topRowClose)
+    panel.append(topRow, searchContainer, list);
+    
     wrapper.append(control, panel);
 
     searchInput.addEventListener("focus", () => {
@@ -1784,9 +1876,10 @@ function closeAllGroupsExcept(exception) {
         });
 
         updateDisplay();
+
         list.querySelectorAll(".custom-group").forEach(header => {
-    if (header.dataset.collapsible === "true" && header.textContent !== "Barrel" && header.textContent !== "Optic" && header.textContent !== "Laser" && header.textContent !== "Firemode" && header.textContent !== "Chamber" && header.textContent !== "General") {
-        closeGroup(header);
+            if (header.dataset.collapsible === "true" && header.textContent !== "Barrel" && header.textContent !== "Optic" && header.textContent !== "Laser" && header.textContent !== "Firemode" && header.textContent !== "Chamber" && header.textContent !== "General") {
+                closeGroup(header);
     }
 });
     }
@@ -1847,16 +1940,6 @@ function closeAllGroupsExcept(exception) {
         searchInput.value = "";
     }
 
-    function closeOutside(drop) {
-        if (!state.open) return;
-        state.open = false;
-        wrapper.classList.remove("open");
-
-        // reset search
-        state.search = "";
-        searchInput.value = "";
-    }
-
     function toggle() {
         state.open ? close() : open();
     }
@@ -1905,7 +1988,11 @@ function closeAllGroupsExcept(exception) {
     });
 
     // click outside
-    document.addEventListener("click", () => close());
+    document.addEventListener("click", (e) => {
+        if (!wrapper.contains(e.target)) {
+            close();
+        }
+    }, true);
 
     // prevent panel clicks from closing
     panel.addEventListener("click", (e) => e.stopPropagation());
@@ -1913,7 +2000,19 @@ function closeAllGroupsExcept(exception) {
     // search
     searchInput.addEventListener("input", (e) => {
         state.search = e.target.value;
+        console.log(e.target);
         render();
+        list.querySelectorAll(".custom-group").forEach(header => {
+            if (header.dataset.collapsible === "true" && header.textContent !== "Barrel" && header.textContent !== "Optic" && header.textContent !== "Laser" && header.textContent !== "Firemode" && header.textContent !== "Chamber" && header.textContent !== "General") {
+                if (!state.search) {
+                    closeGroup(header);
+                }
+                else {
+                    openGroup(header);
+                }
+            }
+            
+        });
     });
 
     // OPTION CLICK (delegated)
@@ -3001,6 +3100,11 @@ function addAllEventListeners() {
 function filterChanger(mode, selector) {
     let select = null;
     switch (mode) {
+        case "default":
+            select = document.getElementById(selector);
+            select.setSortMode("default");
+            select.render();
+            break;
         case "positive":
             select = document.getElementById(selector);
             select.setSortMode("scorepos");

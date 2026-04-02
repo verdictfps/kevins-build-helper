@@ -780,6 +780,21 @@ select.custom-dropdown {
     background:#1b1b1b;
 }
 
+.custom-select-panel-mobile {
+    display:none;
+    position:absolute;
+    background:#1b1b1b;
+    border:1px solid #444;
+    z-index:1000;
+    width: 100vw;
+    height: 100vh;
+}
+
+.custom-select.open .custom-select-panel-mobile {
+    display:block;
+    background:#1b1b1b;
+}
+
 .custom-select.disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -793,15 +808,170 @@ select.custom-dropdown {
     background: #eee;
 }
 
+.custom-select-top-row {
+    display: flex !important;
+    margin: 0px !important;
+    margin-bottom: 5px !important;
+    padding: 0px !important;
+    border: 0px !important;
+    flex-wrap: nowrap !important;
+    width: 100%;
+}
+
+.custom-select-top-row-sort {
+    display: flex !important;
+    margin: 0px !important;
+    margin-bottom: 5px !important;
+    padding: 0px !important;
+    border: 0px !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: left !important;
+    width: 50%;
+}
+
+.custom-select-top-row-close {
+    display: flex !important;
+    margin: 0px !important;
+    margin-bottom: 5px !important;
+    padding: 0px !important;
+    border: 0px !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: right !important;
+    width: 50%;
+}
+
+.custom-select-panel-button {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 0px;
+    background-color: transparent;
+    border: 0px;
+    color: #f0f0f0;
+    justify-content: left !important;
+    align-items: center !important;
+}
+
+    .custom-select-panel-button:hover {
+        display: flex;
+        width: 32px;
+        height: 32px;
+        border: 0px;
+        border-radius: 0px;
+        background-color: transparent;
+        box-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 3px white;
+        color: #FDB142;
+    }
+
+    .custom-select-panel-button:active {
+        display: flex;
+        width: 32px;
+        height: 32px;
+        border: 0px;
+        border-radius: 0px;
+        background-color: transparent;
+        box-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 3px white;
+        color: black;
+        transform: translate(0px);
+    }
+
+.custom-select-panel-close {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 0px;
+    background-color: transparent;
+    border: 0px;
+    color: #f0f0f0;
+    justify-content: right !important;
+    align-items: center !important;
+}
+
+    .custom-select-panel-close:hover {
+        display: flex;
+        width: 32px;
+        height: 32px;
+        border: 0px;
+        border-radius: 0px;
+        background-color: transparent;
+        box-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 3px white;
+        color: #FDB142;
+    }
+
+    .custom-select-panel-close:active {
+        display: flex;
+        width: 32px;
+        height: 32px;
+        border: 0px;
+        border-radius: 0px;
+        background-color: transparent;
+        box-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 3px white;
+        color: black;
+        transform: translate(0px);
+    }
+
+.custom-select-search-container {
+    display: flex !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    border: 0px !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
 .custom-select-search {
-    width:95%;
+    width:90%;
     padding:8px;
-    margin-bottom: 10px;
     background:#f0f0f0;
     color:black;
     border:none;
     outline:none;
+    display: flex;
 }
+
+.custom-select-search-x {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 0px;
+    background-color: #f0f0f0;
+    border: 0px;
+    color: black;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+    .custom-select-search-x:hover {
+        display: flex;
+        width: 32px;
+        height: 32px;
+        border: 0px;
+        border-radius: 0px;
+        background-color: #f0f0f0;
+        box-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 3px black;
+        color: black;
+    }
+
+    .custom-select-search-x:active {
+        display: flex;
+        width: 32px;
+        height: 32px;
+        border: 0px;
+        border-radius: 0px;
+        background-color: #f0f0f0;
+        box-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 3px black;
+        color: #f0f0f0;
+        transform: translate(0px);
+    }
 
 .custom-select-menu {
     list-style:none;
