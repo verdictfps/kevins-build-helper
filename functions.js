@@ -10,6 +10,54 @@ window.mobileCheck = function() {
   return check;
 };
 
+function mobileCSS() {
+    if (window.mobileCheck() === true) {
+        console.log("mobile classes")
+        document.getElementById("mainbuildcontainer").classList.remove("container");
+        document.getElementById("mainbuildcontainer").classList.add("container-mobile");
+
+        document.getElementById("targetme").classList.remove("build-card");
+        document.getElementById("targetme").classList.add("build-card-mobile");
+
+        document.getElementById("targetcontainer").classList.remove("target-container");
+        document.getElementById("targetcontainer").classList.add("target-container-mobile");
+
+        document.getElementById("bigbuttondiv1").classList.remove("bigbuttondiv");
+        document.getElementById("bigbuttondiv1").classList.add("bigbuttondiv-mobile");
+
+        document.getElementById("bigbuttondiv2").classList.remove("bigbuttondiv");
+        document.getElementById("bigbuttondiv2").classList.add("bigbuttondiv-mobile");
+
+        document.getElementById("containerweapon").classList.remove("containerweapon");
+        document.getElementById("containerweapon").classList.add("containerweapon-mobile");
+
+        document.getElementById("containerheaders").classList.remove("containerheaders");
+        document.getElementById("containerheaders").classList.add("containerheaders-mobile");
+
+        document.getElementById("targetsub").classList.remove("targetsub");
+        document.getElementById("targetsub").classList.add("targetsub-mobile");
+        
+        document.getElementById("weaponstuffcontainer").classList.remove("weaponstuffcontainer");
+        document.getElementById("weaponstuffcontainer").classList.add("weaponstuffcontainer-mobile");
+
+        document.getElementById("extendedstatscontainer1").classList.remove("extendedstatscontainer");
+        document.getElementById("extendedstatscontainer1").classList.add("extendedstatscontainer-mobile");
+
+        document.getElementById("extendedstatscontainer2").classList.remove("extendedstatscontainer");
+        document.getElementById("extendedstatscontainer2").classList.add("extendedstatscontainer-mobile");
+        
+        document.getElementById("extendstatgrid").classList.remove("extend-stat-grid");
+        document.getElementById("extendstatgrid").classList.add("extend-stat-grid-mobile");
+
+        document.getElementById("weapondiv").classList.remove("weapondiv");
+        document.getElementById("weapondiv").classList.add("weapondiv-mobile");
+        
+        document.getElementById("tooltipboxdiv").classList.remove("tooltipboxdiv");
+        document.getElementById("tooltipboxdiv").classList.add("tooltipboxdiv-mobile");
+
+    }
+}
+
 // Global Variables
 
 let weaponsData = null;
@@ -3200,6 +3248,7 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
         oilCalcs(oilStatModifiers);
         addName();
         decodeUriAsBuild();
+        mobileCSS();
     }, 500);
 }
 

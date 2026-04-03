@@ -36,6 +36,14 @@
             border-radius: 5px;
         }
 
+        .containerweapon-mobile {
+            margin: 0px !important;
+            margin-top: 20px !important;
+            padding: 0px !important;
+            border-radius: 5px !important;
+            background: #FDB142;
+        }
+
         .containerattach {
             display: grid;
             grid-template-columns: 25% 25% 25% 25%;
@@ -85,6 +93,7 @@
             height: auto;
             width: auto;
             grid-auto-flow: dense;
+            max-width: 100%;
         }
 
             .container div {
@@ -94,11 +103,25 @@
                 margin: 5px;
             }
 
-        .bigbuttondiv {
-             grid-column: span 2;
+        .container-mobile {
+            background-color: #2D424B;
+            height: auto;
+            width: 100%;
+            max-width: 100%;
+            margin: 0px !important;
+            padding: 0px !important;
         }
+
+            .container-mobile div {
+                border: 1px solid #FDB142;
+                padding: 10px;
+                text-align: center;
+                margin: 5px;
+            }
+
         
-        @media (max-width: 84em) {
+        
+        @media (max-width: 70em) {
             .bigbuttondiv {
                 grid-column: span 1;
             }
@@ -107,6 +130,7 @@
         @media (max-width: 84em) {
             .container {
                 grid-template-columns: repeat(1, 1fr);
+                float: center;
             }
         }
 
@@ -188,8 +212,27 @@
         .weaponstuffcontainer {
             display: grid;
             grid-template-columns: 50% 50%;
+            border: 0px solid #FDB142 !important;
+            border-radius: 5px !important;
+            margin: 0px !important;
+            margin-bottom: 5px !important;
+            padding-left: 0px !important;
+            padding-bottom: 0px !important;
         }
             .weaponstuffcontainer div {
+                text-align: center;
+            }
+
+        .weaponstuffcontainer-mobile {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            border: 0px solid #FDB142 !important;
+            border-radius: 5px !important;
+            margin: 0px !important;
+            margin-bottom: 5px !important;
+            padding: 0px !important;
+        }
+            .weaponstuffcontainer-mobile div {
                 text-align: center;
             }
         
@@ -206,6 +249,24 @@
                 border: 0px;
                 
             }
+
+        .containerheaders-mobile {
+            display: flex;
+            align-items: center;
+            border: 0px;
+            margin-right: 0px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            font-size: 10px !important;  
+        }
+            .containerheaders-mobile div {
+                text-align: center;
+                margin: 0px;
+                width: 50%;
+                border: 0px;
+                font-size: 10px !important;
+            }
+
           .containerglass {
             display: flex;
             align-items: center;
@@ -237,37 +298,7 @@
     </script>
     <div id="mainbuildcontainer" class="container" style="border:0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px; padding-top: 0px; padding-bottom: 0px; padding-right: 10px;">
         <div style="margin:0px; padding:0px; border:0px solid #FDB142;">
-            <div class="containerheaders" style="border: 0px; padding: 0px; margin-bottom: 0px; gap: 5px; margin-left: 0px; margin-right: 10px; margin-top: 5px; display: flex; align-items:center; height: 12vh;">
-                
-                <div style="width: 50vh; padding: 0px; padding: 0px; height: 11vh; margin: 0px; justify-content: left; align-items:center; display: flex; position: fixed; z-index: 15;">
-                    <div class="containertooltip" style="border: 3px solid #FDB142; width: 50vh; height: 92%; align-items: center; justify-content: left; padding: 0px; margin-right: -5px; anchor-name: --tooltip-anchor; box-shadow: inset 2px 2px 15px rgb(216, 216, 216), 3px 3px 0px 3px black; border-radius: 5px;">
-                        <p style="padding-right: 40px; max-width: 90%; justify-content: left;" id="infoboxText"></p>
-                        <h1 id="mainHeader" style="position: fixed; width: auto; position-anchor: --tooltip-anchor; left: anchor(left); top: anchor(top); bottom: anchor(bottom); right: anchor(right);">Kevin's Build Helper</h1>
-                        <div>
-
-                            <div class="containerglass" style="position: absolute; position-anchor: --tooltip-anchor;  width: auto; height: auto; left: anchor(left); top: anchor(top); bottom: anchor(bottom); right: anchor(right); border: 0px; margin: 3px; border-radius: 5px; z-index: 2; background-image: radial-gradient(ellipse farthest-side at top right, transparent , white , #ffffff56 85%, #ffffff3b, #ffffff3a, #4b4b4b ); opacity: 100%; mix-blend-mode: overlay; ">
-                            
-                            </div>
-                            
-                        </div>
-                                            
-
-                    </div>
-                    
-                    
-                </div>
-                <div style="width: 50vh; padding: 0px; height: 100%; margin: 0px; justify-content: space-evenly; align-items:center; display: flex;">
-
-                </div>
-                <div class="containerweapchoose" style="border: 0px; border-radius: 5px; margin-bottom: 5px; margin-top: 10px; margin-right: 0px; margin-left: 10px; padding-left: 10px; padding-right: 0px; height: 100px; display: flex; align-items: center; justify-content: space-evenly;">
-                    <button class="buttonGeneral" style="padding: 10px; justify-content: center; align-items:center;" id="buttonGenerate" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Rerolls all slots labeled Random')" onmouseout="infoboxClear()" onclick="onGenerate('button')"><span class="fa-solid fa-arrows-spin" style="font-size: 50px;"></span></button>
-                    <button class="buttonGeneral" id="makeallrandom" style="padding: 10px; justify-content: center; align-items:center;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Sets all fields to Random (All, if applicable) and rerolls them')" onmouseout="infoboxClear()" onclick="setAllAsRandom()"><span class="fa-solid fa-shuffle" style="font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
-                    <button class="buttonGeneral" id="resetAllFields" style="padding: 10px; justify-content: center; align-items:center;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Sets Weapon to P38 Dirk and resets all other fields to None')" onmouseout="infoboxClear()" onclick="resetAll()"><span class="fa-solid fa-arrow-rotate-left" style="font-size: 50px;"></span></button>
-                    <button class="buttonGeneral" id="commitAllFields" style="padding: 10px; justify-content: center; align-items:center; margin-right: 0px" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Commits all randomly rolled items to build')" onmouseout="infoboxClear()" onclick="commitAll()"><span class="fa-solid fa-circle-plus" style="font-size: 50px;"></span></button>
-                </div>
-
-            </div>
-            <div style="display: flex; justify-content: center; align-items:center; padding-left: 0px; border: 1px solid #FDB142; margin: 0px; margin-left: 0px; margin-right: 10px; border-radius: 5px; padding-top: 0px; padding-bottom: 0px; margin-top: 10px; height: auto; flex-wrap: wrap;">
+            <div id="weapondiv" class="weapondiv">
                 <div style="border: 0px; width: 30%; display: flex; justify-content: center; align-items:center; padding: 0px; flex-wrap: nowrap; margin-top: 0px; margin-bottom: 20px; height: 10px;">
                         <h2 style="margin: 0px; height: 10px; align-items:center;">Select a Weapon</h2>
                 </div>
@@ -355,7 +386,7 @@
                     </select>
                 </div>
             </div>
-            <div class="weaponstuffcontainer" style="border: 0px solid #FDB142; border-radius: 5px; margin: 0px; margin-bottom: 5px; padding-left: 0px; padding-bottom: 0px;">
+            <div class="weaponstuffcontainer" id="weaponstuffcontainer">
                 
                 <div class="oilcontainer" style="margin-right: 5px; margin-left: 0px; height: 100%; display: flex; flex-wrap: wrap; padding: 0px; padding-left: 5px; padding-right: 5px;">
                     <div class="containerheaders" style="border:0px; width: 100%; height: auto">
@@ -550,11 +581,40 @@
                 </div>
             </div>
         </div>
-        <div style="margin: 0px; padding: 0px; border: 0px; width: 100%; float: right; padding-right: 10px; ">
-            <div id="targetme" style="border:0px; margin-left:0px; margin-right: 0px; margin-bottom: 0px; margin-top: 0px; padding: 0px; position: fixed; width: 49%;min-height: 84vh; ">
-                <div  style="border: 0px; margin: 5px; margin-top: 10px; padding: 0px; margin-right: 0px">
+        <div id="targetcontainer" class="target-container">
+            <div class="containerheaders" id="containerheaders" style="border: 0px; padding: 0px; margin-bottom: 0px; gap: 5px; margin-left: 0px; margin-right: 10px; margin-top: 5px; display: flex; align-items:center; height: 12vh; padding-left: 10px;">
+                <div id="tooltipboxdiv" class="tooltipboxdiv">
+                        <div class="containertooltip" style="border: 3px solid #FDB142; width: 50vh; height: 92%; align-items: center; justify-content: left; padding: 0px; margin-right: -5px; anchor-name: --tooltip-anchor; box-shadow: inset 2px 2px 15px rgb(216, 216, 216), 3px 3px 0px 3px black; border-radius: 5px; ">
+                            <p style="padding-right: 40px; max-width: 90%; justify-content: left;" id="infoboxText"></p>
+                            <h1 id="mainHeader" style="position: fixed; width: auto; position-anchor: --tooltip-anchor; left: anchor(left); top: anchor(top); bottom: anchor(bottom); right: anchor(right);">Kevin's Build Helper</h1>
+                            <div>
+
+                                <div class="containerglass" style="position: absolute; position-anchor: --tooltip-anchor;  width: auto; height: auto; left: anchor(left); top: anchor(top); bottom: anchor(bottom); right: anchor(right); border: 0px; margin: 3px; border-radius: 5px; z-index: 2; background-image: radial-gradient(ellipse farthest-side at top right, transparent , white , #ffffff56 85%, #ffffff3b, #ffffff3a, #4b4b4b ); opacity: 100%; mix-blend-mode: overlay; ">
+                                
+                                </div>
+                                
+                            </div>
+                                                
+
+                        </div>
+                        
+                        
+                    </div>
+                    <div style="width: 50vh; padding: 0px; height: 100%; margin: 0px; justify-content: space-evenly; align-items:center; display: flex;">
+
+                </div>
+                <div class="containerweapchoose" style="border: 0px; border-radius: 5px; margin-bottom: 5px; margin-top: 10px; margin-right: 0px; margin-left: 10px; padding-left: 10px; padding-right: 0px; height: 100px; display: flex; align-items: center; justify-content: space-evenly;">
+                    <button class="buttonGeneral" style="padding: 10px; justify-content: center; align-items:center;" id="buttonGenerate" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Rerolls all slots labeled Random')" onmouseout="infoboxClear()" onclick="onGenerate('button')"><span class="fa-solid fa-arrows-spin" style="font-size: 50px;"></span></button>
+                    <button class="buttonGeneral" id="makeallrandom" style="padding: 10px; justify-content: center; align-items:center;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Sets all fields to Random (All, if applicable) and rerolls them')" onmouseout="infoboxClear()" onclick="setAllAsRandom()"><span class="fa-solid fa-shuffle" style="font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
+                    <button class="buttonGeneral" id="resetAllFields" style="padding: 10px; justify-content: center; align-items:center;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Sets Weapon to P38 Dirk and resets all other fields to None')" onmouseout="infoboxClear()" onclick="resetAll()"><span class="fa-solid fa-arrow-rotate-left" style="font-size: 50px;"></span></button>
+                    <button class="buttonGeneral" id="commitAllFields" style="padding: 10px; justify-content: center; align-items:center; margin-right: 0px" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Commits all randomly rolled items to build')" onmouseout="infoboxClear()" onclick="commitAll()"><span class="fa-solid fa-circle-plus" style="font-size: 50px;"></span></button>
+                </div>
+
+            </div>
+            <div id="targetme" class="build-card">
+                <div id="targetsub" class="targetsub">
                 
-                    <div  class="containerweapon" style="margin-bottom:10px; border: 0px solid #FDB142; padding: 0px; border-radius: 15px 15px 5px 5px; justify-content:space-between; align-items:center; height: auto; margin-right: 0px">
+                    <div class="containerweapon" id="containerweapon" style="margin-bottom:10px; border: 0px solid #FDB142; padding: 0px; border-radius: 15px 15px 5px 5px; justify-content:space-between; align-items:center; height: auto; margin-right: 0px; ">
                         <div style="display: grid; grid-template-columns: 40% 60%; padding: 0px; margin: 0px; border: 0px">
                             <div style="padding: 0px; margin: 0px; border: 0px">
                                 <p style="text-align: left; font-weight: 500; font-size: 2em; margin: 0px; padding-bottom: 5px; padding-left: 15px; padding-top: 5px; display: flex; width: auto; flex-wrap: nowrap; justify-content:space-between; align-items:center;" id="cardWeaponName">Weapon</p>
@@ -1024,15 +1084,18 @@
             </div>
         </div>
     
-        <div class="bigbuttondiv" style="margin: 10px; margin-left: 0px; margin-right: 0px; margin-top: 10px; padding: 0px; border: 0px; border-radius: 5px; height: 10%">
+        <div class="bigbuttondiv" id="bigbuttondiv1" style="margin: 10px; margin-left: 0px; margin-right: 0px; margin-top: 10px; padding: 0px; border: 0px; border-radius: 5px; height: 10%">
             <div id="extendoverlay" style="pointer-events: none; margin: 0px; padding: 0px; display: flex; background-image: linear-gradient(to bottom right, transparent 40%, white 50%, transparent 60%); background-size: 500% 500%; animation: extendedStats ease 3s infinite; z-index: 5; width: auto; height: auto; position: absolute; border-radius: 5px; position-anchor: --extend-anchor; top: anchor(top); right: anchor(right); left: anchor(left); bottom: anchor(bottom); mix-blend-mode: overlay;">
             </div>
             <button id="extendstatsbutton" style="height: 2.5em; justify-content: space-between; display: flex; align-items: center; padding-left: 2em; padding-right: 2em; padding-bottom: 0; padding-top: 0; border: 2px solid white; z-index: 1; anchor-name: --extend-anchor;" onclick="scrollExtendedStats()"><span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span> Extended Stats <span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span></button>
         </div>
-        <div id="extendedstatscontainer" style="height: 10vh; border: 0px">
+        <div style="border: 0px; margin: 0px; padding: 0px">
 
         </div>
-        <div style="height: 10vh; border: 0px">
+        <div id="extendedstatscontainer1" class="extendedstatscontainer">
+
+        </div>
+        <div id="extendedstatscontainer2" class="extendedstatscontainer">
             
         </div>
         <div style="margin:0px; padding:0px; border:1px solid #FDB142; margin-right: 5px; border-radius: 5px; height: 74vh">
@@ -1055,12 +1118,12 @@
                 <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Damage-per-Magazine, with Base Crits included (ADS Crits excluded). Will be Infinity if Eff Mag Size is Infinity')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600;  margin: 0em; padding: 0em; width: 100%; white-space: nowrap;">Base Crit DPMag: <span style="font-weight:400" class="compLabel" id="cardDPMCrit"></span></p>
             </div>
         </div>
-        <div style="margin:0px; padding:0px; border:0px; margin-left: 5px; border-radius: 5px; height: 74vh">
+        <div id="extendstatgrid" class="extend-stat-grid">
 
         </div>
 
-        <div class="bigbuttondiv" style="margin: 10px; margin-left: 0px; margin-right: 0px; margin-top: 10px; padding: 0px; border: 0px; border-radius: 5px; margin-bottom: 0px;">
-            <button id="totopbutton" style="height: 10vh; justify-content: space-between; display: flex; align-items: center; padding-left: 2em; padding-right: 2em; padding-bottom: 0; padding-top: 0; border: 2px solid white; z-index: 1;" onclick="scrollToTop()"><span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span> Back to Build <span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span></button>
+        <div class="bigbuttondiv" id="bigbuttondiv2" style="margin: 10px; margin-left: 0px; margin-right: 0px; margin-top: 10px; padding: 0px; border: 0px; border-radius: 5px; margin-bottom: 0px;">
+            <button id="totopbutton" id="bigbuttondiv2" style="height: 10vh; justify-content: space-between; display: flex; align-items: center; padding-left: 2em; padding-right: 2em; padding-bottom: 0; padding-top: 0; border: 2px solid white; z-index: 1;" onclick="scrollToTop()"><span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span> Back to Build <span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span></button>
         </div>
     </div>
 </body>

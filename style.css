@@ -751,6 +751,155 @@ select.custom-dropdown {
   display: block;
 }
 
+.tooltipboxdiv {
+    width: 50vh !important;
+    padding: 0px !important;
+    padding: 0px !important;
+    height: 11vh !important;
+    margin: 0px !important;
+    justify-content: left !important;
+    align-items:center !important;
+    display: flex !important;
+    position: fixed !important;
+    z-index: 15 !important;
+}
+
+.tooltipboxdiv-mobile {
+    width: 50vh !important;
+    padding: 0px !important;
+    padding: 0px !important;
+    height: 11vh !important;
+    margin: 0px !important;
+    justify-content: left !important;
+    align-items:center !important;
+    display: flex !important;
+    position: absolute !important;
+    z-index: 15 !important;
+    font-size: 10px !important;
+}
+
+.weapondiv {
+    display: flex !important;
+    justify-content: center !important;
+    align-items:center !important;
+    padding-left: 0px !important;
+    border: 1px solid #FDB142 !important;
+    margin: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 10px !important;
+    border-radius: 5px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 15px !important;
+    height: auto !important;
+    flex-wrap: wrap !important;
+}
+
+.weapondiv-mobile {
+    display: flex !important;
+    justify-content: center !important;
+    align-items:center !important;
+    padding-left: 0px !important;
+    border: 1px solid #FDB142 !important;
+    margin: 0px !important;
+    border-radius: 5px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 10px !important;
+    height: auto !important;
+    flex-wrap: wrap !important;
+}
+
+.extend-stat-grid {
+    margin:0px !important;
+    padding:0px !important;
+    border:0px !important;
+    margin-left: 5px !important;
+    border-radius: 5px !important;
+    height: 74vh !important;
+}
+
+.extend-stat-grid-mobile {
+    margin: 0px !important;
+    padding: 0px !important;
+    border: 0px !important;
+    height: 0 !important;
+}
+
+.extendedstatscontainer {
+    height: 10vh !important;
+    border: 0px !important;
+}
+
+.extendedstatscontainer-mobile {
+    height: 0 !important;
+    border: 0px !important;
+    margin: 0PX !important;
+    padding: 0px !important;
+}
+
+.targetsub {
+    border: 0px !important;
+    margin: 5px !important;
+    margin-top: 10px !important;
+    padding: 0px !important;
+    margin-right: 0px !important;
+}
+
+.targetsub-mobile {
+    border: 0px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.build-card {
+    border:0px !important;
+    margin-left:0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    padding: 0px !important;
+    position: fixed !important;
+    width: 49% !important;
+    min-height: 84vh !important;
+}
+
+.build-card-mobile {
+    border:0px !important;
+    margin-left:0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    padding: 0px !important;
+    width: 100% !important;
+    min-height: 84vh !important;
+}
+
+.target-container {
+    margin: 0px !important;
+    padding: 0px !important;
+    border: 0px !important;
+    width: 100% !important;
+    float: right !important;
+    padding-right: 0px !important; 
+}
+
+.target-container-mobile {
+    margin: 0px !important;
+    padding: 0px !important;
+    border: 0px !important;
+    width: 100% !important;
+}
+
+.bigbuttondiv {
+    grid-column: span 1 !important;
+    padding-right: 10px !important;
+}
+
+.bigbuttondiv-mobile {
+    grid-column: span 1 !important;
+}
+
 .mobiledrop {
     display: flex;
     font-size: 1em;
