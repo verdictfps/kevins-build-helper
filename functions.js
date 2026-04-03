@@ -75,6 +75,7 @@ function mobileCSS() {
         document.querySelectorAll("h2").forEach(e => {e.style.fontSize = "2em"});
         document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "40px", e.style.width = "40px"});
 
+        document.querySelectorAll(".cardStat").forEach(e => {e.style.fontSize = "1.2em"});
     }
 }
 
@@ -3476,6 +3477,7 @@ function rollAggregator(flag, selector, selID, selValue, selType) {
     
     setTimeout(() => {
     addName();
+    scrollToTop();
     }, 430);
     
     setTimeout(() => {

@@ -623,7 +623,7 @@ body {
         font-family: "Fredoka", sans-serif;
         font-weight: 500;
         aspect-ratio: 1/1;
-        width: 10%;
+        width: 100%;
         background-color: #FDB142;
         border: 2px solid rgb(253, 255, 149);
         box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
@@ -642,7 +642,7 @@ body {
         color: transparent;
         transform: translate(3px, 3px);
         aspect-ratio: 1/1;
-        width: 10%;
+        width: 100%;
     }   
 
 #weapons {
