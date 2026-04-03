@@ -599,6 +599,52 @@ body {
         width: 11vh;
     }   
 
+.buttonGeneral-mobile    {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    background-color: #FDB142;
+    border: 2px solid black;
+    color: black;
+    box-shadow: 3px 3px 0px 0px black;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 4px;
+    margin-right: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+    .buttonGeneral-mobile:hover {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        aspect-ratio: 1/1;
+        width: 10%;
+        background-color: #FDB142;
+        border: 2px solid rgb(253, 255, 149);
+        box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+        color: rgb(253, 255, 149);
+        border-radius: 10px;
+        text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+    }
+
+    .buttonGeneral-mobile:active {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        background-color: #e4a039;
+        border: 1px solid black;
+        box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+        text-shadow: 2px 2px 0px black;
+        color: transparent;
+        transform: translate(3px, 3px);
+        aspect-ratio: 1/1;
+        width: 10%;
+    }   
+
 #weapons {
     height: 0%;
 }
@@ -765,15 +811,16 @@ select.custom-dropdown {
 }
 
 .tooltipboxdiv-mobile {
-    width: 50vh !important;
+    width: 100% !important;
+    max-width: 45% !important;
     padding: 0px !important;
     padding: 0px !important;
-    height: 11vh !important;
+    height: 100px !important;
     margin: 0px !important;
     justify-content: left !important;
     align-items:center !important;
     display: flex !important;
-    position: absolute !important;
+    position: block !important;
     z-index: 15 !important;
     font-size: 10px !important;
 }
@@ -872,7 +919,6 @@ select.custom-dropdown {
     margin-top: 0px !important;
     padding: 0px !important;
     width: 100% !important;
-    min-height: 84vh !important;
 }
 
 .target-container {
@@ -924,6 +970,10 @@ select.custom-dropdown {
     top: 50px;
 }
 
+.group-font-size {
+    font-size: 50px !important;
+}
+
 .custom-select.open .custom-select-panel {
     display:block;
     background:#1b1b1b;
@@ -935,20 +985,30 @@ select.custom-dropdown {
     background:#1b1b1b;
     border:1px solid #444;
     z-index:1000;
-    width: 98vw;
-    height: 97vh;
+    width: 98vw !important;
+    height: 97vh !important;
     top: 0;
     left: 0;
+    margin: 0 !important;
+    padding: 0;
+    overflow-y:auto;
+}
+
+.select-mobile {
+    height: 50px;
+    font-size: 2em;
 }
 
 .custom-select.open .custom-select-panel-mobile {
-    display:block;
+    display:initial;
     background:#1b1b1b;
 }
 
 .custom-panel-name {
     color: white;
-    font-size: 15;;
+    font-size: 3em;
+    text-align: left !important;
+    justify-content: left;
 }
 
 .custom-select.disabled {
@@ -972,6 +1032,7 @@ select.custom-dropdown {
     border: 0px !important;
     flex-wrap: nowrap !important;
     width: 100%;
+    justify-content: space-between !important;
 }
 
 .custom-select-top-row-sort {
@@ -994,7 +1055,7 @@ select.custom-dropdown {
     border: 0px !important;
     flex-wrap: nowrap !important;
     align-items: center !important;
-    justify-content: right !important;
+    justify-content: space-between !important;
     width: 50%;
 }
 
@@ -1026,6 +1087,43 @@ select.custom-dropdown {
         display: flex;
         width: 32px;
         height: 32px;
+        border: 0px;
+        border-radius: 0px;
+        background-color: transparent;
+        box-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 3px white;
+        color: black;
+        transform: translate(0px);
+    }
+
+.custom-select-panel-button-mobile {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 0px;
+    background-color: transparent;
+    border: 0px;
+    color: #f0f0f0;
+    justify-content: left !important;
+    align-items: center !important;
+}
+
+    .custom-select-panel-button-mobile:hover {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        border: 0px;
+        border-radius: 0px;
+        background-color: transparent;
+        box-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 3px white;
+        color: #FDB142;
+    }
+
+    .custom-select-panel-button-mobile:active {
+        display: flex;
+        width: 50px;
+        height: 50px;
         border: 0px;
         border-radius: 0px;
         background-color: transparent;
@@ -1071,6 +1169,42 @@ select.custom-dropdown {
         color: black;
         transform: translate(0px);
     }
+.custom-select-panel-close-mobile {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 0px;
+    background-color: transparent;
+    border: 0px;
+    color: #f0f0f0;
+    justify-content: right !important;
+    align-items: center !important;
+}
+
+    .custom-select-panel-close-mobile:hover {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        border: 0px;
+        border-radius: 0px;
+        background-color: transparent;
+        box-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 3px white;
+        color: #FDB142;
+    }
+
+    .custom-select-panel-close-mobile:active {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        border: 0px;
+        border-radius: 0px;
+        background-color: transparent;
+        box-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 3px white;
+        color: black;
+        transform: translate(0px);
+    }
 
 .custom-select-search-container {
     display: flex !important;
@@ -1083,8 +1217,11 @@ select.custom-dropdown {
 }
 
 .custom-select-search {
-    width:90%;
+    width:100%;
     padding:8px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background:#f0f0f0;
     color:black;
     border:none;
@@ -1100,6 +1237,7 @@ select.custom-dropdown {
     background-color: #f0f0f0;
     border: 0px;
     color: black;
+    margin-right: 5px;
     justify-content: center !important;
     align-items: center !important;
 }
@@ -1111,6 +1249,7 @@ select.custom-dropdown {
         border: 0px;
         border-radius: 0px;
         background-color: #f0f0f0;
+        margin-right: 5px;
         box-shadow: 0px 0px 0px white;
         text-shadow: 0px 0px 3px black;
         color: black;
@@ -1122,6 +1261,46 @@ select.custom-dropdown {
         height: 32px;
         border: 0px;
         border-radius: 0px;
+        margin-right: 5px;
+        background-color: #f0f0f0;
+        box-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 3px black;
+        color: #f0f0f0;
+        transform: translate(0px);
+    }
+.custom-select-search-x-mobile {
+    display: flex;
+    width: 66px;
+    height: 66px;
+    border-radius: 0px;
+    background-color: #f0f0f0;
+    border: 0px;
+    color: black;
+    margin-right: 5px;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+    .custom-select-search-x-mobile:hover {
+        display: flex;
+        width: 66px;
+        height: 66px;
+        border: 0px;
+        border-radius: 0px;
+        background-color: #f0f0f0;
+        margin-right: 5px;
+        box-shadow: 0px 0px 0px white;
+        text-shadow: 0px 0px 3px black;
+        color: black;
+    }
+
+    .custom-select-search-x-mobile:active {
+        display: flex;
+        width: 66px;
+        height: 66px;
+        border: 0px;
+        border-radius: 0px;
+        margin-right: 5px;
         background-color: #f0f0f0;
         box-shadow: 0px 0px 0px white;
         text-shadow: 0px 0px 3px black;
@@ -1142,7 +1321,7 @@ select.custom-dropdown {
     list-style:none;
     margin:0;
     padding:0;
-    height: 100%;
+    height: 1fr;
     overflow-y:auto;
     text-align: left;
 }
@@ -1175,6 +1354,19 @@ select.custom-dropdown {
     border: 0px !important;
 }
 
+.custom-option .name-mobile {
+    padding: 5px;
+    font-size: 3em;
+    font-weight: 500;
+    border: 0px !important; 
+}
+
+.custom-option .desc-mobile {
+    padding: 5px;
+    font-size: 2.5em;
+    border: 0px !important;
+}
+
 .custom-option.active,
 .custom-option:hover {
     background:#333;
@@ -1185,7 +1377,7 @@ select.custom-dropdown {
     margin-bottom: 2px !important;
     margin-top: 2px !important;
     margin-right: 5px !important;
-    font-size:11px !important;
+    font-size: 11px;
     color:#888 !important;
     background:#111 !important;
     text-transform:uppercase !important;

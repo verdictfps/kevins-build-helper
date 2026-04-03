@@ -34,6 +34,12 @@ function mobileCSS() {
         document.getElementById("containerheaders").classList.remove("containerheaders");
         document.getElementById("containerheaders").classList.add("containerheaders-mobile");
 
+        document.getElementById("containheadatt").classList.remove("containerheaders");
+        document.getElementById("containheadatt").classList.add("containerheaders2-mobile");
+
+        document.getElementById("containheadench").classList.remove("containerheaders");
+        document.getElementById("containheadench").classList.add("containerheaders2-mobile");
+
         document.getElementById("targetsub").classList.remove("targetsub");
         document.getElementById("targetsub").classList.add("targetsub-mobile");
         
@@ -54,6 +60,20 @@ function mobileCSS() {
         
         document.getElementById("tooltipboxdiv").classList.remove("tooltipboxdiv");
         document.getElementById("tooltipboxdiv").classList.add("tooltipboxdiv-mobile");
+
+        document.getElementById("containerweapchoose").classList.remove("containerweapchoose");
+        document.getElementById("containerweapchoose").classList.add("containerweapchoose-mobile");
+        
+        document.querySelectorAll(".buttonGeneral").forEach(e => {e.classList.add("buttonGeneral-mobile")});
+        document.querySelectorAll(".buttonGeneral").forEach(e => {e.classList.remove("buttonGeneral")});
+
+        document.getElementById("spacer").style.display = "none";
+
+        document.querySelectorAll(".custom-select-selected").forEach(e => {e.style.height = "40px", e.style.fontSize = "2em", e.style.border = "0.1em solid black"});
+        document.querySelectorAll(".custom-select").forEach(e => {e.style.height = "60px"});
+        document.querySelectorAll(".oils").forEach(e => {e.style.fontSize = "1.5em"});
+        document.querySelectorAll("h2").forEach(e => {e.style.fontSize = "2em"});
+        document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "40px", e.style.width = "40px"});
 
     }
 }
@@ -1401,13 +1421,26 @@ async function createProDropdown(select) {
 
     // build search stuff
     const searchInput = document.createElement("input");
-    searchInput.className = "custom-select-search";
+    if (window.mobileCheck() === true) {
+        searchInput.className = "select-mobile custom-select-search";
+    }
+    else {
+        searchInput.className = "custom-select-search";
+    }
+    
     searchInput.placeholder = "Search...";
     searchInput.id = (`${select.id}-custom-search`)
 
     const searchX = document.createElement("button");
-    searchX.className = "custom-select-search-x";
-    searchX.innerHTML = "<span style='font-size: 12px; display: flex' class='fa-solid fa-x'></span>";
+    if (window.mobileCheck() === true) {
+        searchX.className = "custom-select-search-x-mobile";
+        searchX.innerHTML = "<span style='font-size: 18px; display: flex' class='fa-solid fa-x'></span>";
+    }
+    else {
+        searchX.className = "custom-select-search-x";
+        searchX.innerHTML = "<span style='font-size: 12px; display: flex' class='fa-solid fa-x'></span>";
+    }
+    
     searchX.addEventListener("click", () => {
         state.search = "";
         searchInput.value = "";
@@ -1441,8 +1474,15 @@ async function createProDropdown(select) {
 
     // alphabetical button
     const buttonAlph = document.createElement("button");
-    buttonAlph.className = "custom-select-panel-button";
-    buttonAlph.innerHTML = "<span class='fa-solid fa-arrow-down-a-z' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>"
+    if (window.mobileCheck() === true) {
+        buttonAlph.className = "custom-select-panel-button-mobile";
+        buttonAlph.innerHTML = "<span class='fa-solid fa-arrow-down-a-z' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin-right: 20px; margin-left: 30px'></span>"; 
+    }
+    else {
+        buttonAlph.className = "custom-select-panel-button";
+        buttonAlph.innerHTML = "<span class='fa-solid fa-arrow-down-a-z' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>";
+    }
+    
     buttonAlph.addEventListener("click", () => {
         filterChanger('default', select.id);
     });
@@ -1455,8 +1495,15 @@ async function createProDropdown(select) {
 
     // positive sort button
     const buttonPos = document.createElement("button");
-    buttonPos.className = "custom-select-panel-button";
-    buttonPos.innerHTML = "<span class='fa-solid fa-arrow-down-9-1' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>"
+    if (window.mobileCheck() === true) {
+        buttonPos.className = "custom-select-panel-button-mobile";
+        buttonPos.innerHTML = "<span class='fa-solid fa-arrow-down-9-1' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin-right: 20px; margin-left: 50px'></span>";
+    }
+    else {
+        buttonPos.className = "custom-select-panel-button";
+        buttonPos.innerHTML = "<span class='fa-solid fa-arrow-down-9-1' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>";
+    }
+    
     buttonPos.addEventListener("click", () => {
         filterChanger('positive', select.id);
     });
@@ -1469,8 +1516,15 @@ async function createProDropdown(select) {
 
     // negative sort button
     const buttonNeg = document.createElement("button");
-    buttonNeg.className = "custom-select-panel-button";
-    buttonNeg.innerHTML = "<span class='fa-solid fa-arrow-down-1-9' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>"
+    
+    if (window.mobileCheck() === true) {
+        buttonNeg.className = "custom-select-panel-button-mobile";
+        buttonNeg.innerHTML = "<span class='fa-solid fa-arrow-down-1-9' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin-right: 20px; margin-left: 70px'></span>";
+    }
+    else {
+        buttonNeg.className = "custom-select-panel-button";
+        buttonNeg.innerHTML = "<span class='fa-solid fa-arrow-down-1-9' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>";
+    }
     buttonNeg.addEventListener("click", () => {
         filterChanger('negative', select.id);
     });
@@ -1483,8 +1537,15 @@ async function createProDropdown(select) {
 
     // close dropdown button
     const buttonClose = document.createElement("button");
-    buttonClose.className = "custom-select-panel-close";
-    buttonClose.innerHTML = "<span style='font-size: 20px; display: flex' class='fa-solid fa-xmark'></span>"
+    if (window.mobileCheck() === true) {
+        buttonClose.className = "custom-select-panel-close-mobile";
+        buttonClose.innerHTML = "<span style='font-size: 50px; display: flex; margin-right: 30px;' class='fa-solid fa-xmark'></span>"
+    }
+    else {
+        buttonClose.className = "custom-select-panel-close";
+        buttonClose.innerHTML = "<span style='font-size: 20px; display: flex' class='fa-solid fa-xmark'></span>"
+    }
+    
     buttonClose.addEventListener("click", () => {
         close();
     });
@@ -1499,7 +1560,44 @@ async function createProDropdown(select) {
     if (window.mobileCheck() === true) {
         const dropname = document.createElement("span");
         dropname.className = "custom-panel-name";
-        dropname.innerHTML = `${select.id} `;
+        let dropnamecheck = null;
+        switch (select.id) {
+            case "weapons":
+                dropnamecheck = "Weapon";
+                break;
+            case "oils1selector":
+                dropnamecheck = "Enchantment 1";
+                break;
+            case "oils2selector":
+                dropnamecheck = "Enchantment 2";
+                break;
+            case "oils3selector":
+                dropnamecheck = "Enchantment 3";
+                break;
+            case "oils4selector":
+                dropnamecheck = "Enchantment 4";
+                break;
+            case "oils5selector":
+                dropnamecheck = "Enchantment 5";
+                break;
+            case "barrelselector":
+                dropnamecheck = "Barrel"
+                break;
+            case "opticselector":
+                dropnamecheck = "Optic"
+                break;
+            case "laserselector":
+                dropnamecheck = "Laser"
+                break;
+            case "firemodeselector":
+                dropnamecheck = "Firemode"
+                break;
+            case "chamberselector":
+                dropnamecheck = "Chamber"
+                break;
+            default:
+        }
+        dropname.innerHTML = dropnamecheck;
         topRowClose.append(dropname, buttonClose);
     }
     else {
@@ -1900,7 +1998,13 @@ function closeAllGroupsExcept(exception) {
         sortGroups(groups).forEach(([groupName, items]) => {
             if (groupName !== "_") {
                 const header = document.createElement("div");
-                header.className = "custom-group";
+                if (window.mobileCheck() === true) {
+                    header.className = "group-font-size custom-group";
+                }
+                else {
+                    header.className = "custom-group";
+                }
+                
                 header.addEventListener("click", () => toggleGroup(header));;
                 header.dataset.collapsible = select.dataset.collapsible === "false" ? "false" : "true";
 
@@ -1923,10 +2027,18 @@ function closeAllGroupsExcept(exception) {
                 const el = document.createElement("div");
                 el.className = "custom-option";
                 el.dataset.value = opt.value;
-                el.innerHTML = `
+                if (window.mobileCheck() === true) {
+                    el.innerHTML = `
+                    <div class="name-mobile">${opt.label}</div>
+                    <div class="desc-mobile">${opt.meta.DropdownDescription}</div>
+                    `;
+                }
+                else {
+                    el.innerHTML = `
                     <div class="name">${opt.label}</div>
                     <div class="desc">${opt.meta.DropdownDescription}</div>
-                `;
+                    `;
+                }
 
                 if (opt.value === state.value) {
                     el.classList.add("selected");
@@ -7082,7 +7194,7 @@ const attachmentsRechambers = [
     "Chamber Chisel - 9mm"
 ];
 function mobileDropdownCheck(evt) {
-    let helloThere = "hello there, i am mobile";
+    /*let helloThere = "hello there, i am mobile";
     
     if (window.mobileCheck() === true) {
         
@@ -7102,7 +7214,7 @@ function mobileDropdownCheck(evt) {
         }
     }
    
-    
+    */
 }
 
 const dropPromise = new Promise((resolve, reject) => {
