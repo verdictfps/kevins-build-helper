@@ -2392,6 +2392,7 @@ function rollFromBuild() {
         commitSelection('buttonCommitChamber', 'chamberselector', 'chamber');
         rollAggregator("weapon", "weapons", 1, coreSelections.get("weapon").Value, "weapon");
         onGenerate()
+        shallNotPass = false;
 }
 
 function addAllEventListeners() {
