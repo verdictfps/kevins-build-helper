@@ -341,7 +341,13 @@
         
     </script>
     <div id="mainbuildcontainer" class="container" style="border:0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px; padding-top: 0px; padding-bottom: 0px; padding-right: 10px;">
+        
         <div style="margin:0px; padding:0px; border:0px solid #FDB142;">
+            <div style="margin:0px; padding:0px; border:0px solid #FDB142; display: flex">
+                <button class="buttonCommitInd" id="buttonDiscord" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to the Kevin\'s Build Helper Discord server')" onmouseout="infoboxClear()" onclick="clickLink('discord')"><span class="fa-brands fa-discord" style="font-size: 20px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
+                <button class="buttonCommitInd" id="buttonVern" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to Vern Carson\'s website for music and other projects')" onmouseout="infoboxClear()" onclick="clickLink('vern')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\vern_final_new_logo_whitte.png" style="height: 40px; width: 40px; margin: 0px"></img></span></button>
+                <button class="buttonCommitInd" id="buttonVern" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to the SULFUR wiki')" onmouseout="infoboxClear()" onclick="clickLink('wiki')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\90px-Website_icon.webp" style="height: 40px; width: 40px; margin: 0px; mix-blend-mode: color-burn;"></img></span></button>
+            </div>
             <div id="weapondiv" class="weapondiv">
                 <div style="border: 0px; width: 30%; display: flex; justify-content: center; align-items:center; padding: 0px; flex-wrap: nowrap; margin-top: 0px; margin-bottom: 20px; height: 10px;">
                         <h2 style="margin: 0px; height: 10px; align-items:center;">Select a Weapon</h2>
@@ -351,6 +357,7 @@
                         <button class="buttonCommitInd" id="buttonResetGun" style="width: 30px; height: 30px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonResetGun', 'Resets weapon slot to P38 Dirk')" onmouseout="infoboxClear()" onclick="resetGun()"><span class="fa-solid fa-arrow-rotate-left" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
                         <button class="buttonCommitInd" id="buttonCommitGun" style=" width: 30px; height: 30px; padding: 0px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 2, 'buttonCommitGun', 'Commits randomly rolled weapon to selection')" onmouseout="infoboxClear()" onclick="commitGun()"><span class="fa-solid fa-circle-plus" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
                 </div>
+                
                 <div id="weaponboxcontain" style="margin: 0px; border: 0px; padding: 0px; padding-left: 0px; width: 80%; display: flex; justify-content: center; align-items:center; margin-right: -3px;">
                     <select name="weaponscollection" id="weapons" data-accordion="true" data-collapsible="true" data-collapsed="true" class="custom-dropdown mobiledrop weapon-dropdown">
                     <option value="random-all-weapons">Random - All</option>
