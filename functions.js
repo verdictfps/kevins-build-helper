@@ -3,15 +3,15 @@
 // friendly reminder to comment your shit cause you're a dumbass and won't remember what this macguyvered code does
 // also ty stackoverflow
 
-window.mobileCheck = function() {
-    console.info("KBH: Checking for mobile device");
-  let check = false;
-  (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+const isMobile = (() => {
+    console.info("KBH: Checking for mobile device (once)");
+    let check = false;
+    (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
   return check;
-};
+})();
 
 function mobileCSS() {
-    if (window.mobileCheck() === true) {
+    if (isMobile === true) {
         console.log("mobile classes")
         document.getElementById("mainbuildcontainer").classList.remove("container");
         document.getElementById("mainbuildcontainer").classList.add("container-mobile");
@@ -200,10 +200,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 createProDropdown(select);
             }
         });
-
     
-    dropdownReadyResolve()
+    
+    
+    dropdownReadyResolve();
     rollOnPageLoad('weapon', 'pageload', 7, 'p38-dirk', 'weapon')
+    
 });
 
 const coreSelections = new Map();
@@ -634,7 +636,7 @@ async function createProDropdown(select) {
 
     // dropdown panel
     const panel = document.createElement("div");
-    if (window.mobileCheck() === true) {
+    if (isMobile === true) {
         panel.className = "custom-select-panel-mobile";
     }
     else {
@@ -644,7 +646,7 @@ async function createProDropdown(select) {
 
     // build search stuff
     const searchInput = document.createElement("input");
-    if (window.mobileCheck() === true) {
+    if (isMobile === true) {
         searchInput.className = "select-mobile custom-select-search";
     }
     else {
@@ -655,7 +657,7 @@ async function createProDropdown(select) {
     searchInput.id = (`${select.id}-custom-search`)
 
     const searchX = document.createElement("button");
-    if (window.mobileCheck() === true) {
+    if (isMobile === true) {
         searchX.className = "custom-select-search-x-mobile";
         searchX.innerHTML = "<span style='font-size: 18px; display: flex' class='fa-solid fa-x'></span>";
     }
@@ -677,7 +679,7 @@ async function createProDropdown(select) {
 
     // option list
     const list = document.createElement("div");
-    if (window.mobileCheck() === true) {
+    if (isMobile === true) {
         list.className = "custom-select-menu-mobile";
     }
     else {
@@ -697,7 +699,7 @@ async function createProDropdown(select) {
 
     // alphabetical button
     const buttonAlph = document.createElement("button");
-    if (window.mobileCheck() === true) {
+    if (isMobile === true) {
         buttonAlph.className = "custom-select-panel-button-mobile";
         buttonAlph.innerHTML = "<span class='fa-solid fa-arrow-down-a-z' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin-right: 20px; margin-left: 30px'></span>"; 
     }
@@ -718,7 +720,7 @@ async function createProDropdown(select) {
 
     // positive sort button
     const buttonPos = document.createElement("button");
-    if (window.mobileCheck() === true) {
+    if (isMobile === true) {
         buttonPos.className = "custom-select-panel-button-mobile";
         buttonPos.innerHTML = "<span class='fa-solid fa-arrow-down-9-1' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin-right: 20px; margin-left: 50px'></span>";
     }
@@ -740,7 +742,7 @@ async function createProDropdown(select) {
     // negative sort button
     const buttonNeg = document.createElement("button");
     
-    if (window.mobileCheck() === true) {
+    if (isMobile === true) {
         buttonNeg.className = "custom-select-panel-button-mobile";
         buttonNeg.innerHTML = "<span class='fa-solid fa-arrow-down-1-9' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin-right: 20px; margin-left: 70px'></span>";
     }
@@ -760,7 +762,7 @@ async function createProDropdown(select) {
 
     // close dropdown button
     const buttonClose = document.createElement("button");
-    if (window.mobileCheck() === true) {
+    if (isMobile === true) {
         buttonClose.className = "custom-select-panel-close-mobile";
         buttonClose.innerHTML = "<span style='font-size: 50px; display: flex; margin-right: 30px;' class='fa-solid fa-xmark'></span>"
     }
@@ -780,7 +782,7 @@ async function createProDropdown(select) {
     });
 
     topRowSort.append(buttonAlph, buttonPos, buttonNeg);
-    if (window.mobileCheck() === true) {
+    if (isMobile === true) {
         const dropname = document.createElement("span");
         dropname.className = "custom-panel-name";
         let dropnamecheck = null;
@@ -1221,7 +1223,7 @@ function closeAllGroupsExcept(exception) {
         sortGroups(groups).forEach(([groupName, items]) => {
             if (groupName !== "_") {
                 const header = document.createElement("div");
-                if (window.mobileCheck() === true) {
+                if (isMobile === true) {
                     header.className = "group-font-size custom-group";
                 }
                 else {
@@ -1250,7 +1252,7 @@ function closeAllGroupsExcept(exception) {
                 const el = document.createElement("div");
                 el.className = "custom-option";
                 el.dataset.value = opt.value;
-                if (window.mobileCheck() === true) {
+                if (isMobile === true) {
                     el.innerHTML = `
                     <div class="name-mobile">${opt.label}</div>
                     <div class="desc-mobile">${opt.meta.DropdownDescription}</div>
@@ -1596,7 +1598,6 @@ function setBuildAsMetadata() {
 
 function decodeUriAsBuild(source, link) {
     console.info("KBH: Decoding URL to detect build");
-    buildBlocker = true;
 
     let currentURL = null;
     if (source === "load") {
@@ -1612,6 +1613,7 @@ function decodeUriAsBuild(source, link) {
     
     if (typeof split[1] === 'undefined') {
         console.info("KBH: No build found");
+        return false;
     }
     else {
         console.info("KBH: Build found. Loading...");
@@ -1620,7 +1622,7 @@ function decodeUriAsBuild(source, link) {
         let split2 = decoded.split("build");
         finalSplit = split2[1].split("+");
         iterationSplit = 0
-        
+        console.log(finalSplit)
     }
 
     let defShantPass = false;
@@ -1642,7 +1644,7 @@ function decodeUriAsBuild(source, link) {
             let scroll = null;
             let selItem = null;
             let select = null;
-
+console.log(key, value)
             switch (key) {
                 case undefined:
                     break;
@@ -1743,10 +1745,13 @@ function decodeUriAsBuild(source, link) {
         
         
         coreSelections.forEach(rebuildBuild);
-        let yeeteth = coreSelections.get("weapon");
+        let yeeteth = tempSelections.get("weapon");
         
+        console.log(yeeteth)
         let gunny = weaponValueIndexer.get(yeeteth);
+        console.log(gunny)
         let gunboog = getWeaponByName(gunny);
+        console.log("weapon", gunboog, yeeteth);
         
         addToCoreMap("weapon", gunboog, yeeteth);
         tempSelections.forEach(grabOils);
@@ -1770,14 +1775,12 @@ function decodeUriAsBuild(source, link) {
             tempSelections.forEach(convertToCore)
         }*/
 
-        
+        console.log(coreSelections)
         rollFromBuild();
         defShantPass = false;
     }
     }, 500);
-    setTimeout(() => {
-        buildBlocker = false;
-    }, 1000);
+    return true;
 }
 
 // It's time to shuffle
@@ -2375,9 +2378,7 @@ function rerollRandomEnch(opt) {
 }
 
 function rollFromBuild() {
-    if (shallNotPass === false) {
-        shallNotPass = true;
-
+        document.getElementById("weapons").setValue(coreSelections.get("weapon").Value);
         commitSelection('', 'weapons', 'weapon');
         commitSelection('buttonCommitOil1', 'oils1selector', 'ench1');
         commitSelection('buttonCommitOil2', 'oils2selector', 'ench2');
@@ -2391,9 +2392,6 @@ function rollFromBuild() {
         commitSelection('buttonCommitChamber', 'chamberselector', 'chamber');
         rollAggregator("weapon", "weapons", 1, coreSelections.get("weapon").Value, "weapon");
         onGenerate()
-        shallNotPass = false;
-
-    }
 }
 
 function addAllEventListeners() {
@@ -2546,7 +2544,7 @@ let selID = null;
 let selValue = null;
 let selType = null;
 
-let shallNotPass = false;
+let shallNotPass = true;
 
 
 async function rollOnPageLoad(flag, selector, selID, value, type) {
@@ -2575,7 +2573,6 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
         selectedChamber = null;
         rolledOils = [];
         selectedChamber = null;
-
         rollSelections(flag, selector, selID, value, type);
         rollSelections('ench1', 'oils1selector', 1, 'static-choose', 'ench');
         rollSelections('ench2', 'oils2selector', 2, 'static-choose', 'ench');
@@ -2592,6 +2589,7 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
         addName();
         decodeUriAsBuild();
         mobileCSS();
+        let shallNotPass = false;
     }, 500);
 }
 
@@ -6428,7 +6426,7 @@ const attachmentsRechambers = [
 function mobileDropdownCheck(evt) {
     /*let helloThere = "hello there, i am mobile";
     
-    if (window.mobileCheck() === true) {
+    if (isMobile === true) {
         
         dropdownSelectHandler = document.getElementsByClassName('mobiledrop');
         customDropHandler = document.getElementsByClassName('custom-select');
