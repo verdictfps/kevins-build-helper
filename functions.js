@@ -91,6 +91,8 @@ function mobileCSS() {
     }
 }
 
+//document.addEventListener(resize, =>)
+
 // Global Variables
 
 let weaponsData = null;
