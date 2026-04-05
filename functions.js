@@ -2602,7 +2602,7 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
         addName();
         decodeUriAsBuild();
         mobileCSS();
-        let shallNotPass = false;
+        shallNotPass = false;
     }, 500);
 }
 
