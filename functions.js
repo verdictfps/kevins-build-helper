@@ -190,9 +190,20 @@ async function loadOilsScrolls() {
     return oilsScrollsData;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    
-    
+async function dropdownBuilder() {
+    const selects = document.querySelectorAll("select.custom-dropdown");
+
+    await Promise.all(
+        [...selects].map(select => {
+            if (!select.nextElementSibling?.classList.contains("custom-select")) {
+                return createProDropdown(select);
+            }
+        })
+    );
+    return true;
+}
+/*
+async function dropdownBuilder() {
     document
         .querySelectorAll("select.custom-dropdown")
         .forEach(select => {
@@ -200,12 +211,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 createProDropdown(select);
             }
         });
-    
-    
-    
+    return true;
+}*/
+
+document.addEventListener("DOMContentLoaded", async () => {
+    await dropdownBuilder();
     dropdownReadyResolve();
     rollOnPageLoad('weapon', 'pageload', 7, 'p38-dirk', 'weapon')
-    
 });
 
 const coreSelections = new Map();
