@@ -57,6 +57,9 @@ function mobileCSS() {
 
         document.getElementById("weapondiv").classList.remove("weapondiv");
         document.getElementById("weapondiv").classList.add("weapondiv-mobile");
+
+        document.getElementById("externalbuttondiv").classList.remove("external-button-cont");
+        document.getElementById("externalbuttondiv").classList.add("external-button-cont-mobile");
         
         document.getElementById("tooltipboxdiv").classList.remove("tooltipboxdiv");
         document.getElementById("tooltipboxdiv").classList.add("tooltipboxdiv-mobile");
@@ -67,11 +70,9 @@ function mobileCSS() {
         document.querySelectorAll(".buttonGeneral").forEach(e => {e.classList.add("buttonGeneral-mobile")});
         document.querySelectorAll(".buttonGeneral").forEach(e => {e.classList.remove("buttonGeneral")});
 
-        document.getElementById("spacer").style.display = "none";
-
         document.querySelectorAll(".custom-select-selected").forEach(e => {e.style.height = "40px", e.style.fontSize = "2em", e.style.border = "0.1em solid black"});
         document.querySelectorAll(".custom-select").forEach(e => {e.style.height = "60px"});
-        document.querySelectorAll(".oils").forEach(e => {e.style.fontSize = "1.5em"});
+        document.querySelectorAll(".oils").forEach(e => {e.style.fontSize = "1.5em", e.style.width = "100%", e.style.flexWrap = "wrap"});
         document.querySelectorAll("h2").forEach(e => {e.style.fontSize = "2em"});
         document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "40px", e.style.width = "40px"});
 
@@ -3332,7 +3333,7 @@ function oilCalcs(calcOil) {
         if (calcOil.ScrollField !== "scrollinforocket") {
             let dropMeters =  (105 / (Math.log(weapon.BulletDrop)) - 20);
             let dropMeterRound = Math.round((dropMeters + Number.EPSILON)* 100) / 100;
-            document.getElementById("dropmeters").textContent = `approx. ${dropMeterRound}m`;
+            document.getElementById("dropmeters").textContent = `~${dropMeterRound}m`;
             document.getElementById("dropimage").src = "./Images/bullet_drop_pos.png";
         }
         document.getElementById("cardDrop").textContent = weapon.BulletDrop;
