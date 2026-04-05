@@ -1507,7 +1507,7 @@ function captureElement(activated) {
     document.getElementById("buttonCopyBuildLink").classList.add("buttonCommitInd2");
     document.getElementById("buttonLoadBuildLink").classList.add("buttonCommitInd2");
 
-    document.getElementById("targetme").style.backgroundColor = "#2D424B";
+    document.getElementById("targetsub").style.backgroundColor = "#2D424B";
 
     let screeny = null;
     const target = document.getElementById('targetsub');

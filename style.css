@@ -93,6 +93,7 @@
 
 .cardStat {
     font-family: "Fredoka", sans-serif;
+    color: white;
 }
 
 .cardStat:hover {
@@ -969,6 +970,7 @@ select.custom-dropdown {
     float: right !important;
     padding-right: 0px !important;
     height: auto;
+    max-height: 1vh;
 }
 
 .target-container-mobile {

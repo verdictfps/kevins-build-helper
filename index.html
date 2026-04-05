@@ -228,6 +228,7 @@
             margin-bottom: 5px !important;
             padding-left: 0px !important;
             padding-bottom: 0px !important;
+            height: 60vh;
         }
             .weaponstuffcontainer div {
                 text-align: center;
@@ -340,7 +341,7 @@
     </script>
     <div id="mainbuildcontainer" class="container" style="border:0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px; padding-top: 0px; padding-bottom: 0px; padding-right: 10px;">
         
-        <div style="margin:0px; padding:0px; border:0px solid #FDB142;">
+        <div style="margin:0px; padding:0px; border:0px solid #FDB142; height: 88vh">
             <div style="margin:0px; padding:0px; border:0px solid #FDB142; display: flex; padding-right: 10px;">
                     <button class="buttonGeneral" style="padding: 10px; justify-content: center; align-items:center;" id="buttonGenerate" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Rerolls all slots labeled Random')" onmouseout="infoboxClear()" onclick="onGenerate('button')"><span class="fa-solid fa-arrows-spin" style="font-size: 50px;"></span></button>
                     <button class="buttonGeneral" id="makeallrandom" style="padding: 10px; justify-content: center; align-items:center;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Sets all fields to Random (All, if applicable) and rerolls them')" onmouseout="infoboxClear()" onclick="setAllAsRandom()"><span class="fa-solid fa-shuffle" style="font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
@@ -1078,20 +1079,20 @@
                         </div>
 
                     </div>
-                    <div class="oilresultcontainer" style="margin-top: 10px; border-radius: 15px 0px 5px 5px; padding: 5px; margin-right: 0px;">
-                        <div id="oilstatcontainer1" class="spinanimation" style="margin: 0px; margin-right:3px; border-radius: 15px 15px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex; padding: 0px">
+                    <div class="oilresultcontainer" style="margin-top: 10px; border-radius: 5px; padding: 5px; margin-right: 0px;">
+                        <div id="oilstatcontainer1" class="spinanimation" style="margin: 0px; margin-right:3px; border-radius: 5px 5px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex; padding: 0px">
                             <p id="cardOilName1" style="max-width: 150px; margin: 0px">Enchantment Card 1</p>
                         </div>
-                        <div id="oilstatcontainer2" style="margin: 0px; margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex;  padding: 0px">
+                        <div id="oilstatcontainer2" style="margin: 0px; margin-right:3px; margin-left:3px; border-radius: 5px 5px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex;  padding: 0px">
                             <p id="cardOilName2" style="max-width: 150px; margin: 0px;">Enchantment Card 2</p>
                         </div>
-                        <div id="oilstatcontainer3" style="margin: 0px; margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex;  padding: 0px">
+                        <div id="oilstatcontainer3" style="margin: 0px; margin-right:3px; margin-left:3px; border-radius: 5px 5px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex;  padding: 0px">
                             <p id="cardOilName3" style="max-width: 150px; margin: 0px;">Enchantment Card 3</p>
                         </div>
-                        <div id="oilstatcontainer4" style="margin: 0px; margin-right:3px; margin-left:3px; border-radius: 15px 15px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex;  padding: 0px">
+                        <div id="oilstatcontainer4" style="margin: 0px; margin-right:3px; margin-left:3px; border-radius: 5px 5px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex;  padding: 0px">
                             <p id="cardOilName4" style="max-width: 150px; margin: 0px;">Enchantment Card 4</p>
                         </div>
-                        <div id="oilstatcontainer5" style="margin: 0px; margin-left:3px; border-radius: 15px 0px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex;  padding: 0px">
+                        <div id="oilstatcontainer5" style="margin: 0px; margin-left:3px; border-radius: 5px 5px 0px 0px; height: 50px; align-items: center; justify-content: center; display: flex;  padding: 0px">
                             <p id="cardOilName5" style="max-width: 150px; margin: 0px;">Enchantment Card 5</p>
                         </div>
                         <div class="oilimages" id="cardOil1Img" style="background-color: antiquewhite; margin: 0px; margin-right:3px;height: 115px; border-radius: 0px 0px 0px 5px;">
@@ -1116,7 +1117,7 @@
             </div>
         </div>
     
-        <div class="bigbuttondiv" id="bigbuttondiv1" style="margin: 10px; margin-left: 0px; margin-right: 0px; margin-top: 10px; padding: 0px; border: 0px; border-radius: 5px; height: 10%">
+        <div class="bigbuttondiv" id="bigbuttondiv1" style="margin: 10px; margin-left: 0px; margin-right: 0px; margin-top: 10px; padding: 0px; border: 0px; border-radius: 5px; height: 10vh">
             <div id="extendoverlay" style="pointer-events: none; margin: 0px; padding: 0px; display: flex; background-image: linear-gradient(to bottom right, transparent 40%, white 50%, transparent 60%); background-size: 500% 500%; animation: extendedStats ease 3s infinite; z-index: 5; width: auto; height: auto; position: absolute; border-radius: 5px; position-anchor: --extend-anchor; top: anchor(top); right: anchor(right); left: anchor(left); bottom: anchor(bottom); mix-blend-mode: overlay;">
             </div>
             <button id="extendstatsbutton" style="height: 2.5em; justify-content: space-between; display: flex; align-items: center; padding-left: 2em; padding-right: 2em; padding-bottom: 0; padding-top: 0; border: 2px solid white; z-index: 1; anchor-name: --extend-anchor;" onclick="scrollExtendedStats()"><span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span> Extended Stats <span class="fa-solid fa-angles-down"></span> <span class="fa-solid fa-angles-down"></span></button>
