@@ -74,9 +74,20 @@ function mobileCSS() {
         document.querySelectorAll(".custom-select").forEach(e => {e.style.height = "60px"});
         document.querySelectorAll(".oils").forEach(e => {e.style.fontSize = "1.5em", e.style.width = "100%", e.style.flexWrap = "wrap"});
         document.querySelectorAll("h2").forEach(e => {e.style.fontSize = "2em"});
-        document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "40px", e.style.width = "40px"});
+        document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "70px", e.style.width = "100%"});
 
         document.querySelectorAll(".cardStat").forEach(e => {e.style.fontSize = "1.2em"});
+
+        document.getElementById("weapsubdiv").style.height = "70px";
+        document.getElementById("buttonRandomGun").style.width = "70px";
+        document.getElementById("buttonResetGun").style.width = "70px";
+        document.getElementById("buttonCommitGun").style.width = "70px";
+
+        document.getElementById("bigboxdeals").style.height = "auto";
+
+        //document.getElementById("containerheaders2").style.display = "";
+ 
+        document.querySelectorAll(".stuffbutton").forEach(e => {e.classList.add("stuffbutton-mobile")});
     }
 }
 
@@ -2719,7 +2730,11 @@ function rollAggregator(flag, selector, selID, selValue, selType) {
     
     setTimeout(() => {
     addName();
-    scrollToTop();
+
+    if (isMobile === false) {
+        scrollToTop();
+    }
+
     }, 430);
     
     setTimeout(() => {

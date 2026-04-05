@@ -609,11 +609,11 @@ body {
     color: black;
     box-shadow: 3px 3px 0px 0px black;
     border-radius: 10px;
-    aspect-ratio: 1/1;
-    width: 100%;
+    height: 80px;
+    width: 25%;
     padding: 0px;
     margin: 0px;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
     margin-right: 15px;
     align-items: center;
     justify-content: center;
@@ -623,8 +623,8 @@ body {
     .buttonGeneral-mobile:hover {
         font-family: "Fredoka", sans-serif;
         font-weight: 500;
-        aspect-ratio: 1/1;
-        width: 100%;
+        height: 80px;
+        width: 25%;
         background-color: #FDB142;
         border: 2px solid rgb(253, 255, 149);
         box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
@@ -642,9 +642,14 @@ body {
         text-shadow: 2px 2px 0px black;
         color: transparent;
         transform: translate(3px, 3px);
-        aspect-ratio: 1/1;
-        width: 100%;
+        height: 80px;
+        width: 25%;
     }   
+
+.stuffbutton-mobile {
+    height: 50px !important;
+    width: 50px !important;
+}
 
 #weapons {
     height: 0%;
@@ -987,6 +992,7 @@ select.custom-dropdown {
 
 .bigbuttondiv-mobile {
     grid-column: span 1 !important;
+    height: auto !important;
 }
 
 .mobiledrop {

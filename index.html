@@ -340,8 +340,33 @@
         
     </script>
     <div id="mainbuildcontainer" class="container" style="border:0px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px; padding-top: 0px; padding-bottom: 0px; padding-right: 10px;">
-        
-        <div style="margin:0px; padding:0px; border:0px solid #FDB142; height: 88vh">
+        <div class="containerheaders2" id="containerheaders2" style="display: none">
+                <div id="spacer2" style="width: 50vh; padding: 0px; height: 100%; margin: 0px; justify-content: space-evenly; align-items:center; display: flex; width: 100vh">
+                    <div id="tooltipboxdiv2" class="tooltipboxdiv">
+                        <div class="containertooltip" style="border: 3px solid #FDB142; width: 50vh; height: 92%; align-items: center; justify-content: left; padding: 0px; margin-right: -5px; anchor-name: --tooltip-anchor; box-shadow: inset 2px 2px 15px rgb(216, 216, 216), 3px 3px 0px 3px black; border-radius: 5px; max-width: 100%">
+                            <p style="padding-right: 40px; max-width: 90%; justify-content: left;" id="infoboxText"></p>
+                            <h1 id="mainHeader2" style="position: fixed; width: auto; position-anchor: --tooltip-anchor; left: anchor(left); top: anchor(top); bottom: anchor(bottom); right: anchor(right);">Kevin's Build Helper</h1>
+                            <div>
+
+                                <div class="containerglass" style="position: absolute; position-anchor: --tooltip-anchor;  width: auto; height: auto; left: anchor(left); top: anchor(top); bottom: anchor(bottom); right: anchor(right); border: 0px; margin: 3px; border-radius: 5px; z-index: 2; background-image: radial-gradient(ellipse farthest-side at top right, transparent , white , #ffffff56 85%, #ffffff3b, #ffffff3a, #4b4b4b ); opacity: 100%; mix-blend-mode: overlay; ">
+                                
+                                </div>
+                                
+                            </div>
+                                                
+
+                        </div>
+                    </div>
+                </div>
+                <div class="containerweapchoose" id="containerweapchoose2" style="border: 0px; border-radius: 5px; margin-bottom: 5px; margin-top: 10px; margin-right: 0px; margin-left: 10px; padding-left: 10px; padding-right: 0px; height: 100px; display: flex; align-items: center; justify-content: center; width: 100%;">
+                    <div class="external-button-cont" id="externalbuttondiv2">
+                        <button class="buttonCommitInd" id="buttonDiscord2" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to the Kevin\'s Build Helper Discord server')" onmouseout="infoboxClear()" onclick="clickLink('discord')"><span class="fa-brands fa-discord" style="font-size: 20px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
+                        <button class="buttonCommitInd" id="buttonVern2" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to Vern Carson\'s website for music and other projects')" onmouseout="infoboxClear()" onclick="clickLink('vern')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\vern_final_new_logo_whitte.png" style="height: 40px; width: 40px; margin: 0px"></img></span></button>
+                        <button class="buttonCommitInd" id="buttonWiki2" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to the SULFUR wiki')" onmouseout="infoboxClear()" onclick="clickLink('wiki')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\90px-Website_icon.webp" style="height: 40px; width: 40px; margin: 0px; mix-blend-mode: color-burn;"></img></span></button>
+                    </div>
+                </div>
+            </div>
+        <div id="bigboxdeals" style="margin:0px; padding:0px; border:0px solid #FDB142; height: 88vh">
             <div style="margin:0px; padding:0px; border:0px solid #FDB142; display: flex; padding-right: 10px;">
                     <button class="buttonGeneral" style="padding: 10px; justify-content: center; align-items:center;" id="buttonGenerate" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Rerolls all slots labeled Random')" onmouseout="infoboxClear()" onclick="onGenerate('button')"><span class="fa-solid fa-arrows-spin" style="font-size: 50px;"></span></button>
                     <button class="buttonGeneral" id="makeallrandom" style="padding: 10px; justify-content: center; align-items:center;" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Sets all fields to Random (All, if applicable) and rerolls them')" onmouseout="infoboxClear()" onclick="setAllAsRandom()"><span class="fa-solid fa-shuffle" style="font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
@@ -349,7 +374,7 @@
                     <button class="buttonGeneral" id="commitAllFields" style="padding: 10px; justify-content: center; align-items:center; margin-right: 0px" onmouseover="infoboxHover('button', 3, 'buttonCommitFiremode', 'Commits all randomly rolled items to build')" onmouseout="infoboxClear()" onclick="commitAll()"><span class="fa-solid fa-circle-plus" style="font-size: 50px;"></span></button>
                 </div>
             <div id="weapondiv" class="weapondiv">
-                <div style="border: 0px; width: 30%; display: flex; justify-content: center; align-items:center; padding: 0px; flex-wrap: nowrap; margin-top: 0px; margin-bottom: 20px; height: 10px;">
+                <div id="weapsubdiv" style="border: 0px; width: 30%; display: flex; justify-content: center; align-items:center; padding: 0px; flex-wrap: nowrap; margin-top: 0px; margin-bottom: 20px; height: 10px;">
                         <h2 style="margin: 0px; height: 10px; align-items:center;">Select a Weapon</h2>
                 </div>
                 <div style="margin-top: 15px; margin-bottom: 15px; padding: 0px; width: auto; flex-wrap: nowrap; border: 0px; justify-content: center; display: flex; padding-left: 10px; height: 10px; align-items:center;">
@@ -445,9 +470,9 @@
                             <h2 style="width: 100%;">Enchantments</h2>
                         </div>
                         <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px;">
-                            <button id="buttonRandomEnch" style="width: 30px; height: 30px; padding: 0px; margin-right: 15px;" onmouseover="infoboxHover('button', 0, 'buttonRandomEnch', 'Sets all enchantment slots to \'Random - All\' and rerolls all slots')" onmouseout="infoboxClear()" onclick="randomizeAllOils()"><span class="fa-solid fa-shuffle" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
-                            <button id="buttonResetEnch" style="width: 30px; height: 30px; padding: 0px; margin-right: 15px;" onmouseover="infoboxHover('button', 0, 'buttonResetEnch', 'Resets all enchantment slots')" onmouseout="infoboxClear()" onclick="resetAllOils()"><span class="fa-solid fa-arrow-rotate-left" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
-                            <button id="buttonCommitEnchAll" style=" width: 30px; height: 30px; padding: 0px;" onmouseover="infoboxHover('button', 2, 'buttonCommitEnchAll', 'Commits all currently rolled enchantments to selection')" onmouseout="infoboxClear()" onclick="commitAllEnch()"><span class="fa-solid fa-circle-plus" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
+                            <button id="buttonRandomEnch" class="stuffbutton" style="width: 30px; height: 30px; padding: 0px; margin-right: 15px;" onmouseover="infoboxHover('button', 0, 'buttonRandomEnch', 'Sets all enchantment slots to \'Random - All\' and rerolls all slots')" onmouseout="infoboxClear()" onclick="randomizeAllOils()"><span class="fa-solid fa-shuffle" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
+                            <button id="buttonResetEnch" class="stuffbutton" style="width: 30px; height: 30px; padding: 0px; margin-right: 15px;" onmouseover="infoboxHover('button', 0, 'buttonResetEnch', 'Resets all enchantment slots')" onmouseout="infoboxClear()" onclick="resetAllOils()"><span class="fa-solid fa-arrow-rotate-left" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
+                            <button id="buttonCommitEnchAll" class="stuffbutton" style=" width: 30px; height: 30px; padding: 0px;" onmouseover="infoboxHover('button', 2, 'buttonCommitEnchAll', 'Commits all currently rolled enchantments to selection')" onmouseout="infoboxClear()" onclick="commitAllEnch()"><span class="fa-solid fa-circle-plus" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
                         </div>
                     
                     </div>
@@ -540,9 +565,9 @@
                             <h2 style="width: 100%;">Attachments</h2>
                         </div>
                         <div style="margin-top: 0px; margin-bottom: 0px; padding: 0px; ">
-                            <button id="buttonRandomAtt" style="width: 30px; height: 30px; padding: 0px; margin-right: 15px;" onmouseover="infoboxHover('button', 0, 'buttonRandomAtt', 'Sets all attachment slots but Firemode to \'Random\' and rerolls all slots')" onmouseout="infoboxClear()" onclick="randomizeAllAttachments()"><span class="fa-solid fa-shuffle" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
-                            <button id="buttonResetAtt" style="width: 30px; height: 30px; padding: 0px; margin-right: 15px;" onmouseover="infoboxHover('button', 0, 'buttonResetAtt', 'Resets all attachment slots')" onmouseout="infoboxClear()" onclick="resetAllAttachments()"><span class="fa-solid fa-arrow-rotate-left" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
-                            <button id="buttonCommitAttAll" style=" width: 30px; height: 30px; padding: 0px;" onmouseover="infoboxHover('button', 2, 'buttonCommitAttAll', 'Commits all currently rolled attachments to selection')" onmouseout="infoboxClear()" onclick="commitAllAtt()"><span class="fa-solid fa-circle-plus" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>                        
+                            <button id="buttonRandomAtt" class="stuffbutton" style="width: 30px; height: 30px; padding: 0px; margin-right: 15px;" onmouseover="infoboxHover('button', 0, 'buttonRandomAtt', 'Sets all attachment slots but Firemode to \'Random\' and rerolls all slots')" onmouseout="infoboxClear()" onclick="randomizeAllAttachments()"><span class="fa-solid fa-shuffle" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
+                            <button id="buttonResetAtt" class="stuffbutton" style="width: 30px; height: 30px; padding: 0px; margin-right: 15px;" onmouseover="infoboxHover('button', 0, 'buttonResetAtt', 'Resets all attachment slots')" onmouseout="infoboxClear()" onclick="resetAllAttachments()"><span class="fa-solid fa-arrow-rotate-left" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
+                            <button id="buttonCommitAttAll" class="stuffbutton" style=" width: 30px; height: 30px; padding: 0px;" onmouseover="infoboxHover('button', 2, 'buttonCommitAttAll', 'Commits all currently rolled attachments to selection')" onmouseout="infoboxClear()" onclick="commitAllAtt()"><span class="fa-solid fa-circle-plus" style="font-size: 16px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>                        
                         </div>
                     </div>
                     
@@ -640,7 +665,7 @@
                     <div class="external-button-cont" id="externalbuttondiv">
                         <button class="buttonCommitInd" id="buttonDiscord" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to the Kevin\'s Build Helper Discord server')" onmouseout="infoboxClear()" onclick="clickLink('discord')"><span class="fa-brands fa-discord" style="font-size: 20px; display: flex; text-align: center; justify-content: center; width: auto; height: auto"></span></button>
                         <button class="buttonCommitInd" id="buttonVern" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to Vern Carson\'s website for music and other projects')" onmouseout="infoboxClear()" onclick="clickLink('vern')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\vern_final_new_logo_whitte.png" style="height: 40px; width: 40px; margin: 0px"></img></span></button>
-                        <button class="buttonCommitInd" id="buttonVern" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to the SULFUR wiki')" onmouseout="infoboxClear()" onclick="clickLink('wiki')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\90px-Website_icon.webp" style="height: 40px; width: 40px; margin: 0px; mix-blend-mode: color-burn;"></img></span></button>
+                        <button class="buttonCommitInd" id="buttonWiki" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to the SULFUR wiki')" onmouseout="infoboxClear()" onclick="clickLink('wiki')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\90px-Website_icon.webp" style="height: 40px; width: 40px; margin: 0px; mix-blend-mode: color-burn;"></img></span></button>
                     </div>
                 </div>
             </div>
