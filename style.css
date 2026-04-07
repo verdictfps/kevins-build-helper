@@ -94,9 +94,37 @@
 .cardStat {
     font-family: "Fredoka", sans-serif;
     color: white;
+    font-size: 0.65vw !important;
+    padding: 5px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+
+.cardDiv {
+    padding: 0px !important;
+}
+
+.cardDiv:after {
+    content: "";
+    display: block;
+    margin: -1px;
+    width: 100%;
+    border-bottom: 1px solid #FDB142;
+    border-right: 1px solid #FDB142;
+    border-left: 1px solid #FDB142;
+    height: 2px;
 }
 
 .cardStat:hover {
+    text-shadow: 0px 0px 15px #FDB142, 0px 0px 15px #FDB142;
+}
+.cardStat-mobile {
+    font-family: "Fredoka", sans-serif;
+    color: white;
+    font-size: 2vw !important;
+}
+
+.cardStat-mobile:hover {
     text-shadow: 0px 0px 15px #FDB142, 0px 0px 15px #FDB142;
 }
 
@@ -120,6 +148,22 @@ body {
 
 
 #infoboxText {
+    position: absolute;
+    font-family: "Doto", sans-serif;
+    color: #ffffff;
+    text-align: left;
+    margin: 0px;
+    margin-left: 10px;
+    max-height: 100%;
+    line-height: 15px;
+
+    animation: toolGlow;
+    animation-duration: 0.01s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+}
+#infoboxText2 {
     position: absolute;
     font-family: "Doto", sans-serif;
     color: #ffffff;
@@ -172,7 +216,7 @@ body {
         color: #FDB142;
         margin-top: 5px;
         margin-bottom: 10px;
-        
+        font-size: 1.2vw;
     }
 
     i {
@@ -496,6 +540,64 @@ body {
             transform: translate(3px, 3px);
        }
 
+.buttonSaveLoad    {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    background-color: #FDB142;
+    border: 2px solid black;
+    color: black;
+    box-shadow: 3px 3px 0px 0px black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 4px;
+    align-items: center;
+    justify-content: center;
+}
+.buttonSaveLoadScreen    {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    background-color: #FDB142;
+    border: 2px solid black;
+    color: black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+    .buttonSaveLoad:hover {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        background-color: #FDB142;
+        border: 2px solid rgb(253, 255, 149);
+        width: 100%;
+        box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+        color: rgb(253, 255, 149);
+        border-radius: 5px;
+        text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+    }
+
+    .buttonSaveLoad:active {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        background-color: #e4a039;
+        border: 1px solid black;
+        width: 100%;
+        box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+        text-shadow: 2px 2px 0px black;
+        color: transparent;
+        transform: translate(3px, 3px);
+    }   
+
 .buttonCommitInd    {
     font-family: "Fredoka", sans-serif;
     font-weight: 500;
@@ -543,6 +645,48 @@ body {
     }
 
     .buttonCommitInd:active {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        background-color: #e4a039;
+        border: 1px solid black;
+        width: 100%;
+        box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+        text-shadow: 2px 2px 0px black;
+        color: transparent;
+        transform: translate(3px, 3px);
+    }   
+
+.buttonMedia    {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    background-color: #FDB142;
+    border: 2px solid black;
+    color: black;
+    box-shadow: 3px 3px 0px 0px black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+    .buttonMedia:hover {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        background-color: #FDB142;
+        border: 2px solid rgb(253, 255, 149);
+        width: 100%;
+        box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+        color: rgb(253, 255, 149);
+        border-radius: 5px;
+        text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+    }
+
+    .buttonMedia:active {
         font-family: "Fredoka", sans-serif;
         font-weight: 500;
         background-color: #e4a039;
@@ -807,10 +951,10 @@ select.custom-dropdown {
     margin: 0px;
     padding: 0px;
     border: 0px;
-    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    height: 10vh;
 }
 .external-button-cont-mobile {
     margin: 0px;
@@ -822,15 +966,14 @@ select.custom-dropdown {
 }
 
 .tooltipboxdiv {
-    width: 50vh !important;
+    width: 50% !important;
     padding: 0px !important;
     padding: 0px !important;
-    height: 11vh !important;
+    height: 10vh !important;
     margin: 0px !important;
     justify-content: left !important;
     align-items:center !important;
     display: flex !important;
-    position: fixed !important;
     z-index: 15 !important;
 }
 
@@ -934,27 +1077,19 @@ select.custom-dropdown {
     padding: 0px !important;
     position: fixed !important;
     min-height: 84vh !important;
-    max-height: 84vh !important;
+    max-height: 100vh !important;
+    overflow-y: auto;
 }
 
- @media (max-width: 100em) {
-    .build-card {
-        position: relative !important;
-    }
-    .tooltipboxdiv {
-        position: relative !important;
-    }
-}
-
-@media (min-width: 2200px) {
-  .cardStat {
-    font-size: 1.1em !important;
-  }
-}
 @media (max-width: 1700px) {
   .cardStat {
-    font-size: 0.85em !important;
+    font-size: 0.6vw !important;
   }
+}
+
+.card-cat-header {
+    margin: 0px;
+    font-size: 0.8vw;
 }
 
 .build-card-mobile {

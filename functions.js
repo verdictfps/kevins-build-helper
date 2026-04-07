@@ -3,7 +3,7 @@
 // friendly reminder to comment your shit cause you're a dumbass and won't remember what this macguyvered code does
 // also ty stackoverflow
 
-const isMobile = (() => {
+let isMobile = (() => {
     console.info("KBH: Checking for mobile device (once)");
     let check = false;
     (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
@@ -31,14 +31,19 @@ function mobileCSS() {
         document.getElementById("containerweapon").classList.remove("containerweapon");
         document.getElementById("containerweapon").classList.add("containerweapon-mobile");
 
+        document.getElementById("containerheaders").classList.add("containerheadershidden");
         document.getElementById("containerheaders").classList.remove("containerheaders");
-        document.getElementById("containerheaders").classList.add("containerheaders-mobile");
+        document.getElementById("containerheaders2").classList.add("containerheaders3");
+        document.getElementById("containerheaders2").classList.remove("containerheaders2");
 
         document.getElementById("containheadatt").classList.remove("containerheaders");
         document.getElementById("containheadatt").classList.add("containerheaders2-mobile");
 
         document.getElementById("containheadench").classList.remove("containerheaders");
         document.getElementById("containheadench").classList.add("containerheaders2-mobile");
+
+        document.getElementById("oilresultcontainer").classList.remove("oilresultcontainer");
+        document.getElementById("oilresultcontainer").classList.add("oilresultcontainer-mobile");
 
         document.getElementById("targetsub").classList.remove("targetsub");
         document.getElementById("targetsub").classList.add("targetsub-mobile");
@@ -61,8 +66,8 @@ function mobileCSS() {
         document.getElementById("externalbuttondiv").classList.remove("external-button-cont");
         document.getElementById("externalbuttondiv").classList.add("external-button-cont-mobile");
         
-        document.getElementById("tooltipboxdiv").classList.remove("tooltipboxdiv");
-        document.getElementById("tooltipboxdiv").classList.add("tooltipboxdiv-mobile");
+        document.getElementById("tooltipboxdiv2").classList.remove("tooltipboxdiv");
+        document.getElementById("tooltipboxdiv2").classList.add("tooltipboxdiv-mobile");
 
         document.getElementById("containerweapchoose").classList.remove("containerweapchoose");
         document.getElementById("containerweapchoose").classList.add("containerweapchoose-mobile");
@@ -74,9 +79,10 @@ function mobileCSS() {
         document.querySelectorAll(".custom-select").forEach(e => {e.style.height = "60px"});
         document.querySelectorAll(".oils").forEach(e => {e.style.fontSize = "1.5em", e.style.width = "100%", e.style.flexWrap = "wrap"});
         document.querySelectorAll("h2").forEach(e => {e.style.fontSize = "2em"});
-        document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "70px", e.style.width = "100%"});
+        document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "50px", e.style.width = "100px"});
 
-        document.querySelectorAll(".cardStat").forEach(e => {e.style.fontSize = "1.2em"});
+        document.querySelectorAll(".cardStat").forEach(e => {e.classList.add("cardStat-mobile")});
+        document.querySelectorAll(".cardStat").forEach(e => {e.classList.remove("cardStat")});
 
         document.getElementById("weapsubdiv").style.height = "70px";
         document.getElementById("buttonRandomGun").style.width = "70px";
@@ -85,13 +91,102 @@ function mobileCSS() {
 
         document.getElementById("bigboxdeals").style.height = "auto";
 
+        document.getElementById("extendstatbox").style.marginRight = "0px";
+
         //document.getElementById("containerheaders2").style.display = "";
  
         document.querySelectorAll(".stuffbutton").forEach(e => {e.classList.add("stuffbutton-mobile")});
     }
 }
+function revertMobileCSS() {
+        console.log("mobile classes")
+        document.getElementById("mainbuildcontainer").classList.add("container");
+        document.getElementById("mainbuildcontainer").classList.remove("container-mobile");
 
-//document.addEventListener(resize, =>)
+        document.getElementById("targetme").classList.add("build-card");
+        document.getElementById("targetme").classList.remove("build-card-mobile");
+
+        document.getElementById("targetcontainer").classList.add("target-container");
+        document.getElementById("targetcontainer").classList.remove("target-container-mobile");
+
+        document.getElementById("bigbuttondiv1").classList.add("bigbuttondiv");
+        document.getElementById("bigbuttondiv1").classList.remove("bigbuttondiv-mobile");
+
+        document.getElementById("bigbuttondiv2").classList.add("bigbuttondiv");
+        document.getElementById("bigbuttondiv2").classList.remove("bigbuttondiv-mobile");
+
+        document.getElementById("containerweapon").classList.add("containerweapon");
+        document.getElementById("containerweapon").classList.remove("containerweapon-mobile");
+
+        document.getElementById("containerheaders").classList.add("containerheaders");
+        document.getElementById("containerheaders").classList.remove("containerheaders-mobile");
+
+        document.getElementById("containheadatt").classList.add("containerheaders");
+        document.getElementById("containheadatt").classList.remove("containerheaders2-mobile");
+
+        document.getElementById("containheadench").classList.add("containerheaders");
+        document.getElementById("containheadench").classList.remove("containerheaders2-mobile");
+
+        document.getElementById("targetsub").classList.add("targetsub");
+        document.getElementById("targetsub").classList.remove("targetsub-mobile");
+        
+        document.getElementById("weaponstuffcontainer").classList.add("weaponstuffcontainer");
+        document.getElementById("weaponstuffcontainer").classList.remove("weaponstuffcontainer-mobile");
+
+        document.getElementById("extendedstatscontainer1").classList.add("extendedstatscontainer");
+        document.getElementById("extendedstatscontainer1").classList.remove("extendedstatscontainer-mobile");
+
+        document.getElementById("extendedstatscontainer2").classList.add("extendedstatscontainer");
+        document.getElementById("extendedstatscontainer2").classList.remove("extendedstatscontainer-mobile");
+        
+        document.getElementById("extendstatgrid").classList.add("extend-stat-grid");
+        document.getElementById("extendstatgrid").classList.remove("extend-stat-grid-mobile");
+
+        document.getElementById("weapondiv").classList.add("weapondiv");
+        document.getElementById("weapondiv").classList.remove("weapondiv-mobile");
+
+        document.getElementById("externalbuttondiv").classList.add("external-button-cont");
+        document.getElementById("externalbuttondiv").classList.remove("external-button-cont-mobile");
+        
+        document.getElementById("tooltipboxdiv").classList.add("tooltipboxdiv");
+        document.getElementById("tooltipboxdiv").classList.remove("tooltipboxdiv-mobile");
+
+        document.getElementById("containerweapchoose").classList.add("containerweapchoose");
+        document.getElementById("containerweapchoose").classList.remove("containerweapchoose-mobile");
+
+        document.querySelectorAll(".buttonGeneral-mobile").forEach(e => {e.classList.add("buttonGeneral")});
+        document.querySelectorAll(".buttonGeneral").forEach(e => {e.classList.remove("buttonGeneral-mobile")});
+
+        document.querySelectorAll(".custom-select-selected").forEach(e => {e.style.height = "", e.style.fontSize = "", e.style.border = ""});
+        document.querySelectorAll(".custom-select").forEach(e => {e.style.height = ""});
+        document.querySelectorAll(".oils").forEach(e => {e.style.fontSize = "1em", e.style.width = "50%", e.style.flexWrap = "nowrap"});
+        document.querySelectorAll("h2").forEach(e => {e.style.fontSize = ""});
+        document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "20px", e.style.width = "20px"});
+
+        document.querySelectorAll(".cardStat").forEach(e => {e.style.fontSize = "0.85em"});
+
+        document.getElementById("weapsubdiv").style.height = "10px";
+        document.getElementById("buttonRandomGun").style.width = "30px";
+        document.getElementById("buttonResetGun").style.width = "30px";
+        document.getElementById("buttonCommitGun").style.width = "30px";
+
+        document.getElementById("bigboxdeals").style.height = "88vh";
+
+        //document.getElementById("containerheaders2").style.display = "";
+ 
+        document.querySelectorAll(".stuffbutton").forEach(e => {e.classList.remove("stuffbutton-mobile")});
+}/*
+window.addEventListener("resize", (e) => {
+    if (window.innerWidth <= 1700 && isMobile === false) {
+        isMobile = true;
+        mobileCSS();
+    }
+    else if (window.innerWidth > 1700 && isMobile === true){ 
+        isMobile = false;
+        revertMobileCSS();
+    }
+});
+*/
 
 // Global Variables
 
@@ -1513,12 +1608,12 @@ function captureElement(activated) {
     document.getElementById("weaponimage").classList.remove("weaponimage");
     document.getElementById("weaponimage").classList.add("weaponimage2");
 
-    document.getElementById("buttonTakeScreenshot").classList.remove("buttonCommitInd");
-    document.getElementById("buttonCopyBuildLink").classList.remove("buttonCommitInd");
-    document.getElementById("buttonLoadBuildLink").classList.remove("buttonCommitInd");
-    document.getElementById("buttonTakeScreenshot").classList.add("buttonCommitInd2");
-    document.getElementById("buttonCopyBuildLink").classList.add("buttonCommitInd2");
-    document.getElementById("buttonLoadBuildLink").classList.add("buttonCommitInd2");
+    document.getElementById("buttonTakeScreenshot").classList.remove("buttonSaveLoad");
+    document.getElementById("buttonCopyBuildLink").classList.remove("buttonSaveLoad");
+    document.getElementById("buttonLoadBuildLink").classList.remove("buttonSaveLoad");
+    document.getElementById("buttonTakeScreenshot").classList.add("buttonSaveLoadScreen");
+    document.getElementById("buttonCopyBuildLink").classList.add("buttonSaveLoadScreen");
+    document.getElementById("buttonLoadBuildLink").classList.add("buttonSaveLoadScreen");
 
     document.getElementById("targetsub").style.backgroundColor = "#2D424B";
 
@@ -1529,11 +1624,7 @@ function captureElement(activated) {
     html2canvas(target, {
         imageTimeout: 200,
         allowTaint: true,
-        windowWidth: target.scrollWidth,
-        windowHeight: target.scrollHeight,
-        useCORS: true,
-                        scrollX: -window.scrollX,
-                        scrollY: -window.scrollY
+        
     }).then(canvas => {
         // Append the canvas to the page
         canvas.toBlob((blob) => {
@@ -1942,39 +2033,77 @@ function infoboxHover(elementType, value, name, data) {
     
     if (infoboxBlock === false) {
         infoboxBlock = true;
-        document.getElementById("mainHeader").innerHTML = "";
-        switch (elementType) {
-            case "button":
-                document.getElementById("infoboxText").innerHTML = data;
-                infoboxBlock = false;
-                break;
-            case "option":
-                break;
-            case "stat":
-                document.getElementById("infoboxText").innerHTML = data;
-                infoboxBlock = false;
-                break;
-            case "dropdown":
-                break;
-            case "loadsucceed":
-                document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: yellow; text-shadow: 0px 0px 5px white'>Build loading...</span>";
-                setTimeout(() => {
-                    document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: lightgreen; animation: goodlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px green'>Build loaded</span>";
+        if (isMobile === false) {
+            document.getElementById("mainHeader").innerHTML = "";
+            switch (elementType) {
+                case "button":
+                    document.getElementById("infoboxText").innerHTML = data;
+                    infoboxBlock = false;
+                    break;
+                case "option":
+                    break;
+                case "stat":
+                    document.getElementById("infoboxText").innerHTML = data;
+                    infoboxBlock = false;
+                    break;
+                case "dropdown":
+                    break;
+                case "loadsucceed":
+                    document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: yellow; text-shadow: 0px 0px 5px white'>Build loading...</span>";
+                    setTimeout(() => {
+                        document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: lightgreen; animation: goodlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px green'>Build loaded</span>";
+                        setTimeout(() => {
+                            infoboxClear();
+                            infoboxBlock = false;
+                        },2000);
+                    },500);
+                    break;
+                case "loadfail":
+                    document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: red; animation: invalidlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px red'>Invalid link</span>";
                     setTimeout(() => {
                         infoboxClear();
                         infoboxBlock = false;
                     },2000);
-                },500);
-                break;
-            case "loadfail":
-                document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: red; animation: invalidlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px red'>Invalid link</span>";
-                setTimeout(() => {
-                    infoboxClear();
+                    break;
+                default:
                     infoboxBlock = false;
-                },2000);
-                break;
-            default:
-                infoboxBlock = false;
+            }
+        }
+        else if (isMobile === true) {
+            document.getElementById("mainHeader2").innerHTML = "";
+            switch (elementType) {
+                case "button":
+                    document.getElementById("infoboxText2").innerHTML = data;
+                    infoboxBlock = false;
+                    break;
+                case "option":
+                    break;
+                case "stat":
+                    document.getElementById("infoboxText2").innerHTML = data;
+                    infoboxBlock = false;
+                    break;
+                case "dropdown":
+                    break;
+                case "loadsucceed":
+                    document.getElementById("infoboxText2").innerHTML = "<span style='font-size: 20px; color: yellow; text-shadow: 0px 0px 5px white'>Build loading...</span>";
+                    setTimeout(() => {
+                        document.getElementById("infoboxText2").innerHTML = "<span style='font-size: 20px; color: lightgreen; animation: goodlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px green'>Build loaded</span>";
+                        setTimeout(() => {
+                            infoboxClear();
+                            infoboxBlock = false;
+                        },2000);
+                    },500);
+                    break;
+                case "loadfail":
+                    document.getElementById("infoboxText2").innerHTML = "<span style='font-size: 20px; color: red; animation: invalidlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px red'>Invalid link</span>";
+                    setTimeout(() => {
+                        infoboxClear();
+                        infoboxBlock = false;
+                    },2000);
+                    break;
+                default:
+                    infoboxBlock = false;
+            }
         }
     }
     else {}
@@ -1982,8 +2111,14 @@ function infoboxHover(elementType, value, name, data) {
 
 function infoboxClear() {
     if (infoboxBlock === false) {
-        document.getElementById("infoboxText").innerHTML = "";
-        document.getElementById("mainHeader").innerHTML = "Kevin's Build Helper";
+        if (isMobile === false) {
+            document.getElementById("infoboxText").innerHTML = "";
+            document.getElementById("mainHeader").innerHTML = "Kevin's Build Helper";
+        }
+        else if (isMobile === true) {
+            document.getElementById("infoboxText2").innerHTML = "";
+            document.getElementById("mainHeader2").innerHTML = "Kevin's Build Helper";
+        }
     }
 }
 
@@ -3525,7 +3660,6 @@ function oilCalcs(calcOil) {
     document.getElementById("cardDamageLBrac").textContent = "";
     document.getElementById("cardDamageRBrac").textContent = "";
     document.getElementById("cardDamageProj").textContent = "";
-    document.getElementById("cardDamageLRArrow").innerHTML = "";
     document.getElementById("cardDamageProj").style.color = "";
     document.getElementById("cardDamageProjArrow").innerHTML = "";
     document.getElementById("cardDamageProjArrow").style.color = "";
@@ -3544,7 +3678,6 @@ function oilCalcs(calcOil) {
     document.getElementById("cardDamageTotal").style.color = "";
     document.getElementById("cardDamageTotalArrow").innerHTML = "";
     document.getElementById("cardDamageTotalArrow").style.color = "";
-    document.getElementById("cardDamageTotalLRArrow").innerHTML = "";
     document.getElementById("cardDamageTotalLBrac").textContent = "";
     document.getElementById("cardDamageTotalComp").textContent = "";
     document.getElementById("cardDamageTotalRBrac").textContent = "";
@@ -3610,7 +3743,6 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
             document.getElementById("cardDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
-            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
@@ -3633,7 +3765,6 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
             document.getElementById("cardDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
-            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
@@ -3655,7 +3786,6 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamage").style.color = "OrangeRed";
             document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
             document.getElementById("cardDamageArrow").style.color = "OrangeRed";
-            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
@@ -3677,7 +3807,6 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamage").style.color = "Lime";
             document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
             document.getElementById("cardDamageArrow").style.color = "Lime";
-            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
@@ -3700,7 +3829,6 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamage").style.color = "Lime";
             document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
             document.getElementById("cardDamageArrow").style.color = "Lime";
-            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
@@ -3723,7 +3851,6 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamage").style.color = "Lime";
             document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
             document.getElementById("cardDamageArrow").style.color = "Lime";
-            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
@@ -3743,7 +3870,6 @@ function oilCalcs(calcOil) {
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
-            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
@@ -3763,7 +3889,6 @@ function oilCalcs(calcOil) {
         if (weapProj > weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
-            document.getElementById("cardDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
@@ -3798,7 +3923,6 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageTotal").style.color = "Lime";
             document.getElementById("cardDamageTotalArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
             document.getElementById("cardDamageTotalArrow").style.color = "Lime";
-            document.getElementById("cardDamageTotalLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageTotalLBrac").textContent = "(";
             document.getElementById("cardDamageTotalComp").textContent = weaponOriginal.TotalDamage;
             document.getElementById("cardDamageTotalRBrac").textContent = ")";
@@ -3808,7 +3932,6 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageTotal").style.color = "OrangeRed";
             document.getElementById("cardDamageTotalArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
             document.getElementById("cardDamageTotalArrow").style.color = "OrangeRed";
-            document.getElementById("cardDamageTotalLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
             document.getElementById("cardDamageTotalLBrac").textContent = "(";
             document.getElementById("cardDamageTotalComp").textContent = weaponOriginal.TotalDamage;
             document.getElementById("cardDamageTotalRBrac").textContent = ")";
@@ -4142,7 +4265,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardJumpArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
         document.getElementById("cardJumpArrow").style.color = "OrangeRed";
         document.getElementById("cardJumpLBrac").textContent = "(";
-        document.getElementById("cardJumpComp").textContent = jumpRoundOrig;
+        document.getElementById("cardJumpComp").textContent = "100%";
         document.getElementById("cardJumpRBrac").textContent = ")";
     }
     if (jumpRound > jumpRoundOrig) {
@@ -4153,7 +4276,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardJumpArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
         document.getElementById("cardJumpArrow").style.color = "Lime";
         document.getElementById("cardJumpLBrac").textContent = "(";
-        document.getElementById("cardJumpComp").textContent = jumpRoundOrig;
+        document.getElementById("cardJumpComp").textContent = "100%";
         document.getElementById("cardJumpRBrac").textContent = ")";
     }
     if (jumpRound === jumpRoundOrig) {
@@ -4173,9 +4296,6 @@ function oilCalcs(calcOil) {
     document.getElementById("cardLoot%").style.color = "";
     document.getElementById("cardLootArrow").innerHTML = "";
     document.getElementById("cardLootArrow").style.color = "";
-    document.getElementById("cardLootLBrac").textContent = "";
-    document.getElementById("cardLootComp").textContent = "";
-    document.getElementById("cardLootRBrac").textContent = "";
 
     let lootCalc = weapon.LootDropChance + calcOil.LootDropChance;
     let lootConv = percentConv(lootCalc);
@@ -4195,9 +4315,6 @@ function oilCalcs(calcOil) {
         document.getElementById("cardLoot%").textContent = "%";
         document.getElementById("cardLoot%").style.color = "OrangeRed";
         document.getElementById("cardLootArrow").style.color = "OrangeRed";
-        document.getElementById("cardLootLBrac").textContent = "(";
-        document.getElementById("cardLootComp").textContent = lootRoundOrig;
-        document.getElementById("cardLootRBrac").textContent = "%)";
     }
     if (lootRound === lootRoundOrig) {
         document.getElementById("cardLoot").textContent = lootRound;
