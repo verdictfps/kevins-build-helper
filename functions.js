@@ -1645,6 +1645,10 @@ function captureElement(activated, save) {
     document.getElementById("buttonTakeScreenshot").style.height = "30px";
     document.getElementById("buttonSaveScreenshot").style.height = "30px";
     document.getElementById("buttonCopyBuildLink").style.height = "30px";
+    document.getElementById("buttonTakeScreenshot").style.marginBottom = "0px";
+    document.getElementById("buttonSaveScreenshot").style.marginBottom = "0px";
+    document.getElementById("buttonSaveScreenshot").style.marginRight = "0px";
+    document.getElementById("buttonCopyBuildLink").style.marginBottom = "0px";
 
     document.getElementById("targetsub").style.backgroundColor = "#2D424B";
 
@@ -1689,6 +1693,10 @@ function captureElement(activated, save) {
     document.getElementById("buttonTakeScreenshot").style.height = "27px";
     document.getElementById("buttonSaveScreenshot").style.height = "27px";
     document.getElementById("buttonCopyBuildLink").style.height = "27px";
+    document.getElementById("buttonTakeScreenshot").style.marginBottom = "4px";
+    document.getElementById("buttonSaveScreenshot").style.marginBottom = "4px";
+    document.getElementById("buttonSaveScreenshot").style.marginRight = "4px";
+    document.getElementById("buttonCopyBuildLink").style.marginBottom = "4px";
     }, 500);
 }
 
@@ -3768,7 +3776,7 @@ function oilCalcs(calcOil) {
 
     //// Damage Add
     let damAdd = weapon.Damage + calcOil.DamageAdd;
-    let zeroDamage = weapon.Damage;
+    let zeroDamage = damAdd;
 
     //// Damage Multiplier
     let damCalc = damAdd * (1 + calcOil.DamageMult);
@@ -3791,7 +3799,7 @@ function oilCalcs(calcOil) {
     let damComp = 0;
     let totalComp = 0;
     let scrollMult = 0;
-
+console.log(calcOil.ScrollField)
     switch (calcOil.ScrollField) {
         case "scrollinfoembers":
             scrollDam = 10;
@@ -3801,12 +3809,13 @@ function oilCalcs(calcOil) {
             break;
         case "scrollinforocket":
             scrollDam = 50;
+            break;
         case "scrollinfochaos":
             scrollDam = 125 / weapProj;
             break;
         default:
     }
-
+console.log(scrollDam)
     scrollMult = weapProj * scrollDam * weapon.MultiShot;
     damComp = damRound + scrollDam;
     totalComp = totalRound + scrollMult;
