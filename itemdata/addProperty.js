@@ -1,6 +1,6 @@
 
-let newField = "TypeNegative1";
-let newDefault = "None";
+let newField = "ScoreNeg";
+let newDefault = 0;
 
 function oilField() {
     console.log("-------------------Starting Oils-------------------");
@@ -39,6 +39,25 @@ function scrollField() {
     fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));
 
     console.log("Field added to all scrolls in Scrolls.json.");
+}
+function oilScrollField() {
+    console.log("-------------------Starting Oils & Scrolls Combo-------------------");
+    const fs = require("fs");
+
+    const inputFile = "./OilsScrolls.json";
+    const outputFile = "./OilsScrolls.json";
+
+    const data = JSON.parse(fs.readFileSync(inputFile, "utf8"));
+
+    for (const key in data.OilScroll) {
+        const scro = data.OilScroll[key];
+
+        addField(scro);
+    }
+
+    fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));
+
+    console.log("Field added to all oilscrolls in OilsScrolls.json.");
 }
 function attField() {
     console.log("-------------------Starting All Attachment file-------------------");
@@ -191,6 +210,7 @@ function addField(item) {
 
 oilField();
 scrollField();
+oilScrollField();
 attField();
 barField();
 optField();

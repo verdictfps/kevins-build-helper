@@ -53,7 +53,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Random Barrel": {
       "Name": "Random Barrel",
@@ -108,7 +110,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "A12C Muzzle Brake": {
       "Name": "A12C Muzzle Brake",
@@ -163,7 +167,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Recoil: <span style='color:green'>-35%</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Aftermarket Haukland Silencer": {
       "Name": "Aftermarket Haukland Silencer",
@@ -218,7 +224,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Crit Chance: <span style='color:green'>+25%</span> • RPM: <span style='color:red'>-15%</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Barrel Extension 2in": {
       "Name": "Barrel Extension 2in",
@@ -273,7 +281,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Bullet Speed: <span style='color:green'>+10%</span> • Spread: <span style='color:green'>-10%</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Barrel Extension 4in": {
       "Name": "Barrel Extension 4in",
@@ -328,7 +338,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Bullet Speed: <span style='color:green'>+25%</span> • Spread: <span style='color:green'>-25%</span> • Movement Speed: <span style='color:red'>-10%</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Barrel Extension 6in": {
       "Name": "Barrel Extension 6in",
@@ -383,7 +395,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Bullet Speed: <span style='color:green'>+50%</span> • Spread: <span style='color:green'>-50%</span> • Movement Speed: <span style='color:red'>-20%</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Breznik BMD (Tactical)": {
       "Name": "Breznik BMD (Tactical)",
@@ -438,7 +452,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Recoil: <span style='color:green'>-20%</span> • Spread: <span style='color:green'>-15%</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Breznik BMD": {
       "Name": "Breznik BMD",
@@ -493,7 +509,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Recoil: <span style='color:green'>-20%</span> • Spread: <span style='color:green'>-15%</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Haukland Flash Hider": {
       "Name": "Haukland Flash Hider",
@@ -548,7 +566,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Recoil: <span style='color:green'>-20%</span> • Spread: <span style='color:green'>-0.2</span> • Reduces muzzle flash",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Haukland Silencer": {
       "Name": "Haukland Silencer",
@@ -603,7 +623,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Recoil: <span style='color:green'>-10%</span> • Crit Chance: <span style='color:green'>+20%</span> • RPM: <span style='color:red'>-10%</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Improvised Barrel Extension": {
       "Name": "Improvised Barrel Extension",
@@ -658,7 +680,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Max Durability: <span style='color:green'>+15%</span> • Spread: <span style='color:red'>+0.1</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "M87 Albatross Silencer": {
       "Name": "M87 Albatross Silencer",
@@ -713,7 +737,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Damage: <span style='color:green'>+15%</span> • Crit Chance: <span style='color:green'>+15%</span> • Max Durability: <span style='color:red'>-10%</span> • Spread: <span style='color:red'>+0.25</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Shrouded Barrel Extension": {
       "Name": "Shrouded Barrel Extension",
@@ -768,7 +794,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Max Durability: <span style='color:green'>+20%</span> • Spread: <span style='color:green'>-0.2</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "SR-P3 Silencer": {
       "Name": "SR-P3 Silencer",
@@ -823,7 +851,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Recoil: <span style='color:green'>-20%</span> • Crit Chance: <span style='color:green'>+10%</span> • RPM: <span style='color:red'>-10%</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Warmage Compensator": {
       "Name": "Warmage Compensator",
@@ -878,7 +908,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Recoil: <span style='color:green'>-25%</span> • Spread: <span style='color:green'>-0.15</span>",
       "TypePositive1": "Barrel",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     }
   }
 }

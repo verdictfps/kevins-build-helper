@@ -559,8 +559,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.7,
-      "ScoreNeg": -0.3
+      "ScorePos": 0.7,
+      "ScoreNeg": 0.3
     },
     "Arkanoid Oil": {
       "Name": "Arkanoid Oil",
@@ -618,7 +618,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 10,
-      "ScoreNeg": -0.8
+      "ScoreNeg": 0.8
     },
     "Arrow Oil": {
       "Name": "Arrow Oil",
@@ -676,7 +676,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.8,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Artery Oil": {
       "Name": "Artery Oil",
@@ -791,7 +791,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -2,
+      "ScorePos": 2,
       "ScoreNeg": 15
     },
     "Ascetic Oil": {
@@ -908,7 +908,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.7,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Attack Speed Oil": {
       "Name": "Attack Speed Oil",
@@ -1082,7 +1082,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.3
+      "ScoreNeg": 0.3
     },
     "Bandit Oil": {
       "Name": "Bandit Oil",
@@ -1314,7 +1314,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.3
+      "ScoreNeg": 0.3
     },
     "Blindfold Oil": {
       "Name": "Blindfold Oil",
@@ -1430,7 +1430,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.4,
-      "ScoreNeg": -0.2
+      "ScoreNeg": 0.2
     },
     "Bolt Oil": {
       "Name": "Bolt Oil",
@@ -1488,7 +1488,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.6,
-      "ScoreNeg": -15
+      "ScoreNeg": 15
     },
     "Bombard Oil": {
       "Name": "Bombard Oil",
@@ -1546,7 +1546,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.1
+      "ScoreNeg": 0.1
     },
     "Boomstick Oil": {
       "Name": "Boomstick Oil",
@@ -1604,7 +1604,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Boulder Oil": {
       "Name": "Boulder Oil",
@@ -1719,8 +1719,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.75,
-      "ScoreNeg": -0.2
+      "ScorePos": 0.75,
+      "ScoreNeg": 0.2
     },
     "Braced Oil": {
       "Name": "Braced Oil",
@@ -1777,8 +1777,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.3,
-      "ScoreNeg": -0.2
+      "ScorePos": 0.3,
+      "ScoreNeg": 0.2
     },
     "Brute Oil": {
       "Name": "Brute Oil",
@@ -1893,7 +1893,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.4,
+      "ScorePos": 0.4,
       "ScoreNeg": 15
     },
     "Bystander Oil": {
@@ -2009,7 +2009,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.2,
+      "ScorePos": 0.2,
       "ScoreNeg": 1
     },
     "Careful Oil": {
@@ -2067,8 +2067,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.7,
-      "ScoreNeg": -0.25
+      "ScorePos": 0.7,
+      "ScoreNeg": 0.25
     },
     "Careless Splitter Oil": {
       "Name": "Careless Splitter Oil",
@@ -2126,7 +2126,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 3,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Cartoon Oil": {
       "Name": "Cartoon Oil",
@@ -2241,8 +2241,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.3,
-      "ScoreNeg": -0.2
+      "ScorePos": 0.3,
+      "ScoreNeg": 0.2
     },
     "Cheap Oil": {
       "Name": "Cheap Oil",
@@ -2299,8 +2299,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.3,
-      "ScoreNeg": -0.2
+      "ScorePos": 0.3,
+      "ScoreNeg": 0.2
     },
     "Collateral Oil": {
       "Name": "Collateral Oil",
@@ -2416,7 +2416,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.3,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Compo Oil": {
       "Name": "Compo Oil",
@@ -2474,7 +2474,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1.6,
-      "ScoreNeg": -0.6
+      "ScoreNeg": 0.6
     },
     "Confidence Oil": {
       "Name": "Confidence Oil",
@@ -2532,7 +2532,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.2,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Considerate Oil": {
       "Name": "Considerate Oil",
@@ -2590,7 +2590,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -25
+      "ScoreNeg": 25
     },
     "Contained Force Oil": {
       "Name": "Contained Force Oil",
@@ -2647,8 +2647,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.45,
-      "ScoreNeg": -0.1
+      "ScorePos": 0.45,
+      "ScoreNeg": 0.1
     },
     "Critical Oil": {
       "Name": "Critical Oil",
@@ -2880,7 +2880,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": -0.2
+      "ScoreNeg": 0.2
     },
     "Dead Center Oil": {
       "Name": "Dead Center Oil",
@@ -2937,7 +2937,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -2,
+      "ScorePos": 2,
       "ScoreNeg": 1
     },
     "Delayed Hyper Tube Oil": {
@@ -2996,7 +2996,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1,
-      "ScoreNeg": -0.5
+      "ScoreNeg": 0.5
     },
     "Dense Oil": {
       "Name": "Dense Oil",
@@ -3054,7 +3054,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.3,
-      "ScoreNeg": -0.2
+      "ScoreNeg": 0.2
     },
     "Detune Oil": {
       "Name": "Detune Oil",
@@ -3112,7 +3112,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Diesel Oil": {
       "Name": "Diesel Oil",
@@ -3228,7 +3228,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 30,
-      "ScoreNeg": 0
+      "ScoreNeg": 0.3
     },
     "Disposable Oil": {
       "Name": "Disposable Oil",
@@ -3286,7 +3286,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 50,
-      "ScoreNeg": -0.75
+      "ScoreNeg": 0.75
     },
     "Division Oil": {
       "Name": "Division Oil",
@@ -3344,7 +3344,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1,
-      "ScoreNeg": -0.2
+      "ScoreNeg": 0.2
     },
     "Do-over Oil": {
       "Name": "Do-over Oil",
@@ -3401,8 +3401,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.2,
-      "ScoreNeg": -0.25
+      "ScorePos": 0.2,
+      "ScoreNeg": 0.25
     },
     "Double Fire Oil": {
       "Name": "Double Fire Oil",
@@ -3460,7 +3460,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": 0
+      "ScoreNeg": 0.25
     },
     "Double Lock Oil": {
       "Name": "Double Lock Oil",
@@ -3518,7 +3518,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": -0.2
+      "ScoreNeg": 0.2
     },
     "Double Nothing Oil": {
       "Name": "Double Nothing Oil",
@@ -3576,7 +3576,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Dum Dum Oil": {
       "Name": "Dum Dum Oil",
@@ -3692,7 +3692,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1,
-      "ScoreNeg": -15
+      "ScoreNeg": 15
     },
     "Easy Oil": {
       "Name": "Easy Oil",
@@ -3749,7 +3749,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.2,
+      "ScorePos": 0.2,
       "ScoreNeg": 0
     },
     "Easy Plop Oil": {
@@ -3807,7 +3807,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.65,
+      "ScorePos": 0.65,
       "ScoreNeg": 5
     },
     "Elephant Oil": {
@@ -3866,7 +3866,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Exotic Barrel Oil": {
       "Name": "Exotic Barrel Oil",
@@ -3923,8 +3923,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -2,
-      "ScoreNeg": -0.25
+      "ScorePos": 2,
+      "ScoreNeg": 0.25
     },
     "Expander Oil": {
       "Name": "Expander Oil",
@@ -4040,7 +4040,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Farsighted Oil": {
       "Name": "Farsighted Oil",
@@ -4098,7 +4098,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 3,
-      "ScoreNeg": 0
+      "ScoreNeg": 0.3
     },
     "Fast Bet Oil": {
       "Name": "Fast Bet Oil",
@@ -4272,7 +4272,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1.4,
-      "ScoreNeg": -0.4
+      "ScoreNeg": 0.4
     },
     "Fidget Oil": {
       "Name": "Fidget Oil",
@@ -4330,7 +4330,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 20,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "First Blood Oil": {
       "Name": "First Blood Oil",
@@ -4446,7 +4446,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 4,
-      "ScoreNeg": -0.5
+      "ScoreNeg": 0.5
     },
     "Flow Funnel Oil": {
       "Name": "Flow Funnel Oil",
@@ -4503,7 +4503,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.65,
+      "ScorePos": 0.65,
       "ScoreNeg": 3
     },
     "Food Stamp Oil": {
@@ -4561,7 +4561,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.2,
+      "ScorePos": 0.2,
       "ScoreNeg": 0
     },
     "Fragile System Oil": {
@@ -4620,7 +4620,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Franciscan Oil": {
       "Name": "Franciscan Oil",
@@ -4736,7 +4736,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 25,
-      "ScoreNeg": -0.5
+      "ScoreNeg": 0.5
     },
     "Gambler Oil": {
       "Name": "Gambler Oil",
@@ -4794,7 +4794,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.2,
-      "ScoreNeg": -0.1
+      "ScoreNeg": 0.1
     },
     "Gemini Oil": {
       "Name": "Gemini Oil",
@@ -4968,7 +4968,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Great Oil": {
       "Name": "Great Oil",
@@ -5026,7 +5026,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.6,
-      "ScoreNeg": -0.2
+      "ScoreNeg": 0.2
     },
     "Grounded Oil": {
       "Name": "Grounded Oil",
@@ -5084,7 +5084,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.25,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Gunslinger Oil": {
       "Name": "Gunslinger Oil",
@@ -5373,8 +5373,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.2,
-      "ScoreNeg": -1
+      "ScorePos": 0.2,
+      "ScoreNeg": 1
     },
     "Hefty Oil": {
       "Name": "Hefty Oil",
@@ -5432,7 +5432,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.45,
-      "ScoreNeg": -0.2
+      "ScoreNeg": 0.2
     },
     "Helium Oil": {
       "Name": "Helium Oil",
@@ -5489,8 +5489,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.4,
-      "ScoreNeg": -0.4
+      "ScorePos": 0.4,
+      "ScoreNeg": 0.4
     },
     "High Grade Oil": {
       "Name": "High Grade Oil",
@@ -5663,7 +5663,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.8,
+      "ScorePos": 0.8,
       "ScoreNeg": 0
     },
     "Hoop Oil": {
@@ -5780,7 +5780,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.15,
-      "ScoreNeg": -0.3
+      "ScoreNeg": 0.3
     },
     "Hustler Oil": {
       "Name": "Hustler Oil",
@@ -5838,7 +5838,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.25,
-      "ScoreNeg": -30
+      "ScoreNeg": 30
     },
     "Hyper Lead Oil": {
       "Name": "Hyper Lead Oil",
@@ -5954,7 +5954,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 3,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Inconsiderate Oil": {
       "Name": "Inconsiderate Oil",
@@ -6070,7 +6070,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": -1
+      "ScoreNeg": 1
     },
     "Instant Oil": {
       "Name": "Instant Oil",
@@ -6186,7 +6186,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 25,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Jungian Oil": {
       "Name": "Jungian Oil",
@@ -6244,7 +6244,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Keep Oil": {
       "Name": "Keep Oil",
@@ -6301,7 +6301,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.2,
+      "ScorePos": 0.2,
       "ScoreNeg": 0
     },
     "Kicker Oil": {
@@ -6475,8 +6475,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.3,
-      "ScoreNeg": -0.3
+      "ScorePos": 0.3,
+      "ScoreNeg": 0.3
     },
     "Late Boom Oil": {
       "Name": "Late Boom Oil",
@@ -6534,7 +6534,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 30,
-      "ScoreNeg": -0.3
+      "ScoreNeg": 0.3
     },
     "Launcher Oil": {
       "Name": "Launcher Oil",
@@ -6592,7 +6592,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.25,
-      "ScoreNeg": -0.2
+      "ScoreNeg": 0.2
     },
     "Lazy Oil": {
       "Name": "Lazy Oil",
@@ -6650,7 +6650,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Less Recoil Oil": {
       "Name": "Less Recoil Oil",
@@ -6707,7 +6707,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.2,
+      "ScorePos": 0.2,
       "ScoreNeg": 0
     },
     "Lightweight Oil": {
@@ -6881,8 +6881,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -2,
-      "ScoreNeg": 0
+      "ScorePos": 2,
+      "ScoreNeg": 0.3
     },
     "Low Roller Oil": {
       "Name": "Low Roller Oil",
@@ -6998,7 +6998,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.6,
-      "ScoreNeg": -0.3
+      "ScoreNeg": 0.3
     },
     "Main Discipline Oil": {
       "Name": "Main Discipline Oil",
@@ -7056,7 +7056,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.8,
-      "ScoreNeg": -0.3
+      "ScoreNeg": 0.3
     },
     "Main Focus Oil": {
       "Name": "Main Focus Oil",
@@ -7172,7 +7172,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.25,
-      "ScoreNeg": -0.5
+      "ScoreNeg": 0.5
     },
     "Matrix Oil": {
       "Name": "Matrix Oil",
@@ -7230,7 +7230,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 3,
-      "ScoreNeg": -0.3
+      "ScoreNeg": 0.3
     },
     "Micro Wing Oil": {
       "Name": "Micro Wing Oil",
@@ -7288,7 +7288,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.8,
-      "ScoreNeg": 0
+      "ScoreNeg": 0.2
     },
     "Modern Technology Oil": {
       "Name": "Modern Technology Oil",
@@ -7345,8 +7345,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.35,
-      "ScoreNeg": 0
+      "ScorePos": 0.35,
+      "ScoreNeg": 0.1
     },
     "Mosquito Oil": {
       "Name": "Mosquito Oil",
@@ -7403,8 +7403,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.4,
-      "ScoreNeg": -0.15
+      "ScorePos": 0.4,
+      "ScoreNeg": 0.15
     },
     "Multichamber Oil": {
       "Name": "Multichamber Oil",
@@ -7462,7 +7462,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1,
-      "ScoreNeg": 0
+      "ScoreNeg": 1
     },
     "Multishot Oil": {
       "Name": "Multishot Oil",
@@ -7520,7 +7520,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.7
+      "ScoreNeg": 0.7
     },
     "Needleye Oil": {
       "Name": "Needleye Oil",
@@ -7578,7 +7578,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Nerf Oil": {
       "Name": "Nerf Oil",
@@ -7636,7 +7636,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1.2,
-      "ScoreNeg": -0.1
+      "ScoreNeg": 0.1
     },
     "No Look Oil": {
       "Name": "No Look Oil",
@@ -7752,7 +7752,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.15,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Out of the Box Oil": {
       "Name": "Out of the Box Oil",
@@ -7810,7 +7810,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.2,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Overclock Oil": {
       "Name": "Overclock Oil",
@@ -7868,7 +7868,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.4,
-      "ScoreNeg": 0
+      "ScoreNeg": 0.3
     },
     "Overdose Oil": {
       "Name": "Overdose Oil",
@@ -7926,7 +7926,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 3,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Parallel Mag Oil": {
       "Name": "Parallel Mag Oil",
@@ -7984,7 +7984,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1,
-      "ScoreNeg": -0.5
+      "ScoreNeg": 0.5
     },
     "Peashooter Oil": {
       "Name": "Peashooter Oil",
@@ -8041,7 +8041,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.25,
+      "ScorePos": 0.25,
       "ScoreNeg": 0
     },
     "Penetration Oil": {
@@ -8273,8 +8273,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.9,
-      "ScoreNeg": -0.2
+      "ScorePos": 0.9,
+      "ScoreNeg": 0.2
     },
     "Plop Back Oil": {
       "Name": "Plop Back Oil",
@@ -8331,7 +8331,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.2,
+      "ScorePos": 0.2,
       "ScoreNeg": 1.25
     },
     "Pool Oil": {
@@ -8390,7 +8390,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 5,
-      "ScoreNeg": -0.3
+      "ScoreNeg": 0.3
     },
     "Potshot Oil": {
       "Name": "Potshot Oil",
@@ -8621,8 +8621,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.35,
-      "ScoreNeg": -0.3
+      "ScorePos": 0.35,
+      "ScoreNeg": 0.3
     },
     "Rapid Internals Oil": {
       "Name": "Rapid Internals Oil",
@@ -8680,7 +8680,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Ready Oil": {
       "Name": "Ready Oil",
@@ -8737,8 +8737,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.45,
-      "ScoreNeg": -0.3
+      "ScorePos": 0.45,
+      "ScoreNeg": 0.3
     },
     "Rebound Oil": {
       "Name": "Rebound Oil",
@@ -8796,7 +8796,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 3,
-      "ScoreNeg": -15
+      "ScoreNeg": 15
     },
     "Recycle Oil": {
       "Name": "Recycle Oil",
@@ -8853,7 +8853,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.15,
+      "ScorePos": 0.15,
       "ScoreNeg": 0
     },
     "Relax Oil": {
@@ -8911,8 +8911,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.5,
-      "ScoreNeg": -0.2
+      "ScorePos": 0.5,
+      "ScoreNeg": 0.2
     },
     "Release Oil": {
       "Name": "Release Oil",
@@ -9086,7 +9086,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 3,
-      "ScoreNeg": -0.1
+      "ScoreNeg": 0.1
     },
     "Rigid System Oil": {
       "Name": "Rigid System Oil",
@@ -9144,7 +9144,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.4,
-      "ScoreNeg": 0
+      "ScoreNeg": 0.2
     },
     "Rigor Oil": {
       "Name": "Rigor Oil",
@@ -9202,7 +9202,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.5
+      "ScoreNeg": 0.5
     },
     "Robust Mechanics Oil": {
       "Name": "Robust Mechanics Oil",
@@ -9260,7 +9260,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.35,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Rookie Oil": {
       "Name": "Rookie Oil",
@@ -9318,7 +9318,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": -0.75
+      "ScoreNeg": 0.75
     },
     "Rubber Oil": {
       "Name": "Rubber Oil",
@@ -9376,7 +9376,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.3,
-      "ScoreNeg": -10
+      "ScoreNeg": 10
     },
     "Rush Job Oil": {
       "Name": "Rush Job Oil",
@@ -9434,7 +9434,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1.3,
-      "ScoreNeg": 0
+      "ScoreNeg": 0.3
     },
     "Safety Oil": {
       "Name": "Safety Oil",
@@ -9491,8 +9491,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.45,
-      "ScoreNeg": -0.08
+      "ScorePos": 0.45,
+      "ScoreNeg": 0.08
     },
     "Tetrus Oil": {
       "Name": "Tetrus Oil",
@@ -9549,8 +9549,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.2,
-      "ScoreNeg": -0.4
+      "ScorePos": 0.2,
+      "ScoreNeg": 0.4
     },
     "Saviour Oil": {
       "Name": "Saviour Oil",
@@ -9607,8 +9607,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.3,
-      "ScoreNeg": -1
+      "ScorePos": 0.3,
+      "ScoreNeg": 1
     },
     "Scatter Oil": {
       "Name": "Scatter Oil",
@@ -9666,7 +9666,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Scramble Oil": {
       "Name": "Scramble Oil",
@@ -9840,7 +9840,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 30,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Sect Oil": {
       "Name": "Sect Oil",
@@ -9956,7 +9956,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 25,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Sensible Oil": {
       "Name": "Sensible Oil",
@@ -10072,7 +10072,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Shellman Oil": {
       "Name": "Shellman Oil",
@@ -10129,8 +10129,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.7,
-      "ScoreNeg": -0.25
+      "ScorePos": 0.7,
+      "ScoreNeg": 0.25
     },
     "Sherlock Oil": {
       "Name": "Sherlock Oil",
@@ -10188,7 +10188,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 5,
-      "ScoreNeg": -0.5
+      "ScoreNeg": 0.5
     },
     "Shower Oil": {
       "Name": "Shower Oil",
@@ -10304,7 +10304,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1,
-      "ScoreNeg": -0.2
+      "ScoreNeg": 0.2
     },
     "Skip Oil": {
       "Name": "Skip Oil",
@@ -10362,7 +10362,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Slick Oil": {
       "Name": "Slick Oil",
@@ -10419,8 +10419,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.6,
-      "ScoreNeg": -0.1
+      "ScorePos": 0.6,
+      "ScoreNeg": 0.1
     },
     "Slippy Coating Oil": {
       "Name": "Slippy Coating Oil",
@@ -10536,7 +10536,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.25,
-      "ScoreNeg": 0
+      "ScoreNeg": 0.2
     },
     "Slow Punch Oil": {
       "Name": "Slow Punch Oil",
@@ -10594,7 +10594,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": -0.5
+      "ScoreNeg": 0.5
     },
     "Smart Bullet Oil": {
       "Name": "Smart Bullet Oil",
@@ -10652,7 +10652,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.2,
-      "ScoreNeg": -0.6
+      "ScoreNeg": 0.6
     },
     "Soft Bullet Oil": {
       "Name": "Soft Bullet Oil",
@@ -10710,7 +10710,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.3,
-      "ScoreNeg": -0.3
+      "ScoreNeg": 0.3
     },
     "Solid Oil": {
       "Name": "Solid Oil",
@@ -10826,7 +10826,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.2,
-      "ScoreNeg": -0.5
+      "ScoreNeg": 0.5
     },
     "Speed Trade Oil": {
       "Name": "Speed Trade Oil",
@@ -10884,7 +10884,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.8,
-      "ScoreNeg": -0.3
+      "ScoreNeg": 0.3
     },
     "Spitter Oil": {
       "Name": "Spitter Oil",
@@ -10999,7 +10999,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.5,
+      "ScorePos": 0.5,
       "ScoreNeg": 0
     },
     "Stability Oil": {
@@ -11057,8 +11057,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.45,
-      "ScoreNeg": -10
+      "ScorePos": 0.45,
+      "ScoreNeg": 10
     },
     "Stable Hip Oil": {
       "Name": "Stable Hip Oil",
@@ -11115,7 +11115,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.62,
+      "ScorePos": 0.62,
       "ScoreNeg": 0
     },
     "Stationary Oil": {
@@ -11174,7 +11174,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.8,
-      "ScoreNeg": -0.9
+      "ScoreNeg": 0.9
     },
     "Stiffy Fit Oil": {
       "Name": "Stiffy Fit Oil",
@@ -11232,7 +11232,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.45,
-      "ScoreNeg": -0.5
+      "ScoreNeg": 0.5
     },
     "Stoic Oil": {
       "Name": "Stoic Oil",
@@ -11289,7 +11289,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.6,
+      "ScorePos": 0.6,
       "ScoreNeg": 0
     },
     "Suppressive Oil": {
@@ -11348,7 +11348,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 3,
-      "ScoreNeg": -2
+      "ScoreNeg": 2
     },
     "Surgical Laser Oil": {
       "Name": "Surgical Laser Oil",
@@ -11406,7 +11406,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 3,
-      "ScoreNeg": -0.3
+      "ScoreNeg": 0.3
     },
     "Synchronicity Oil": {
       "Name": "Synchronicity Oil",
@@ -11464,7 +11464,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 4,
-      "ScoreNeg": 0
+      "ScoreNeg": 0.25
     },
     "Tactical Oil": {
       "Name": "Tactical Oil",
@@ -11522,7 +11522,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1.1,
-      "ScoreNeg": -0.1
+      "ScoreNeg": 0.1
     },
     "Tandem Oil": {
       "Name": "Tandem Oil",
@@ -11580,7 +11580,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Task Oil": {
       "Name": "Task Oil",
@@ -11696,7 +11696,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.8,
-      "ScoreNeg": -0.3
+      "ScoreNeg": 0.3
     },
     "Tension Oil": {
       "Name": "Tension Oil",
@@ -11753,8 +11753,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.35,
-      "ScoreNeg": -0.15
+      "ScorePos": 0.35,
+      "ScoreNeg": 0.15
     },
     "Terminator Oil": {
       "Name": "Terminator Oil",
@@ -11812,7 +11812,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.3,
-      "ScoreNeg": -0.15
+      "ScoreNeg": 0.15
     },
     "Thorough Oil": {
       "Name": "Thorough Oil",
@@ -11869,8 +11869,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.8,
-      "ScoreNeg": -0.15
+      "ScorePos": 0.8,
+      "ScoreNeg": 0.15
     },
     "Tight Barrel Oil": {
       "Name": "Tight Barrel Oil",
@@ -11928,7 +11928,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.7,
-      "ScoreNeg": -0.1
+      "ScoreNeg": 0.1
     },
     "Too Much Oil": {
       "Name": "Too Much Oil",
@@ -12160,7 +12160,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 1,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Two Time Oil": {
       "Name": "Two Time Oil",
@@ -12218,7 +12218,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.1
+      "ScoreNeg": 0.1
     },
     "Untechnical Oil": {
       "Name": "Untechnical Oil",
@@ -12276,7 +12276,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Vasectomy Oil": {
       "Name": "Vasectomy Oil",
@@ -12334,7 +12334,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 2,
-      "ScoreNeg": -0.5
+      "ScoreNeg": 0.5
     },
     "Vegan Oil": {
       "Name": "Vegan Oil",
@@ -12391,7 +12391,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.6,
+      "ScorePos": 0.6,
       "ScoreNeg": 0
     },
     "Vegetable Oil": {
@@ -12449,7 +12449,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.3,
+      "ScorePos": 0.3,
       "ScoreNeg": 0
     },
     "Velocity Oil": {
@@ -12565,8 +12565,8 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.15,
-      "ScoreNeg": -0.1
+      "ScorePos": 0.15,
+      "ScoreNeg": 0.1
     },
     "Waster Oil": {
       "Name": "Waster Oil",
@@ -12682,7 +12682,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": -0.25
+      "ScoreNeg": 0.25
     },
     "Whos Counting Oil": {
       "Name": "Whos Counting Oil",
@@ -12739,7 +12739,7 @@
       "LongDescription": "None",
       "ScrollField": "None",
       "DamageMultInd": 0,
-      "ScorePos": -0.25,
+      "ScorePos": 0.25,
       "ScoreNeg": 0
     },
     "Wobble Oil": {
@@ -12856,7 +12856,7 @@
       "ScrollField": "None",
       "DamageMultInd": 0,
       "ScorePos": 0.5,
-      "ScoreNeg": -1
+      "ScoreNeg": 1
     },
     "Zooming Oil": {
       "Name": "Zooming Oil",

@@ -102,6 +102,7 @@
 
 .cardDiv {
     padding: 0px !important;
+    min-height: 0px !important;
 }
 
 .cardDiv:after {
@@ -144,8 +145,79 @@ body {
         font-weight: 400;
         font-style: normal;
         font-variation-settings: "wdth" 100;
+        
     }
 
+.containerattach {
+    border:0px !important;
+    height: 55% !important;
+    width: 100% !important;
+    margin-top: 0px !important;
+    padding: 0px !important;
+    padding-right: 0px !important;
+    margin-bottom: 0px !important;
+    padding-left: 0px !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    min-height: 0 !important;
+}  
+
+.containerattachdiv {
+    border-left:0px !important;
+    z-index: 4 !important;
+    padding: 0px !important;
+    height: 100% !important;
+    width: 25% !important;
+    border-bottom: 0px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin: 0px !important;
+}
+
+.containerattachdivheader {
+    background-color: #FDB142 !important;
+    border-right: 1px solid #FDB142 !important;
+    margin-top: 0px !important;
+    border-bottom: 2px inset black !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding: 0px !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    text-align: center !important;
+    justify-content: center !important;
+    min-height: 0 !important;
+}
+
+.containerattachdiv .name {
+    color: white !important;
+    margin-top: 2px !important;
+    margin-bottom: 0px !important;
+    font-size: 0.7vw !important;
+    width: 100% !important;
+    margin-left: 0px !important;
+    text-align: center !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    min-height: 0 !important;
+}
+
+.containerattachdiv .desc {
+    color: white !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    font-size: 0.6vw !important;
+    font-weight:300 !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    height: 100% !important;
+    min-height: 0 !important;
+}
 
 #infoboxText {
     position: absolute;
@@ -260,6 +332,7 @@ body {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        min-width: 0;
     }
 
     .commitsubdiv {
@@ -543,7 +616,7 @@ body {
 .buttonSaveLoad    {
     font-family: "Fredoka", sans-serif;
     font-weight: 500;
-    font-size: 2em;
+    font-size: 1vw;
     background-color: #FDB142;
     border: 2px solid black;
     color: black;
@@ -560,7 +633,7 @@ body {
 .buttonSaveLoadScreen    {
     font-family: "Fredoka", sans-serif;
     font-weight: 500;
-    font-size: 2em;
+    font-size: 1vw;
     background-color: #FDB142;
     border: 2px solid black;
     color: black;
@@ -707,11 +780,10 @@ body {
     color: black;
     box-shadow: 3px 3px 0px 0px black;
     border-radius: 10px;
-    height: 60px;
+    height: 100%;
     width: 25%;
     padding: 0px;
     margin: 0px;
-    margin-bottom: 4px;
     margin-right: 15px;
     align-items: center;
     justify-content: center;
@@ -721,7 +793,7 @@ body {
     .buttonGeneral:hover {
         font-family: "Fredoka", sans-serif;
         font-weight: 500;
-        height: 60px;
+        height: 100%;
         width: 25%;
         background-color: #FDB142;
         border: 2px solid rgb(253, 255, 149);
@@ -740,7 +812,7 @@ body {
         text-shadow: 2px 2px 0px black;
         color: transparent;
         transform: translate(3px, 3px);
-        height: 60px;
+        height: 100%;
         width: 25%;
     }   
 
@@ -810,14 +882,28 @@ body {
     border-radius: 5px;
 }
 
+.bigboxdeals {
+    margin: 0px !important;
+    padding: 0px !important;
+    border: 0px solid #FDB142 !important;
+    height: auto !important;
+    min-height: 100vh !important;
+}
+
+.bigboxdeals-mobile {
+    margin: 0px !important;
+    padding: 0px !important;
+    border: 0px solid #FDB142 !important;
+    height: auto !important;
+}
+
 .linkinputoutput {
     padding: 5px;
     margin: 0px;
-    margin-right: -3px;
     margin-left: auto;
     border: 2px solid black;
     border-radius: 5px;
-    width: 70%;
+    width: 80%;
     height: 50%;
     font-family: "Fredoka", sans-serif;
     justify-content:left;
@@ -833,9 +919,10 @@ body {
     border:1px solid #444;
     border-radius: 15px;
     padding: 0px !important;
-    width: 100%;
+    width: 100% !important;
     height: 38px;
     align-items: center;
+    margin: 1% !important;
 }
 
 select.custom-dropdown {
@@ -855,7 +942,7 @@ select.custom-dropdown {
     align-items:center;
     background:#f0f0f0;
     z-index: 5;
-    width: 100%;
+    width: 100% !important;
     height: 15px;
     transition: background 0.15s ease,
                 border-color 0.15s ease,
@@ -968,7 +1055,6 @@ select.custom-dropdown {
 .tooltipboxdiv {
     width: 50% !important;
     padding: 0px !important;
-    padding: 0px !important;
     height: 10vh !important;
     margin: 0px !important;
     justify-content: left !important;
@@ -979,15 +1065,14 @@ select.custom-dropdown {
 
 .tooltipboxdiv-mobile {
     width: 100% !important;
-    max-width: 45% !important;
+    max-width: 50% !important;
     padding: 0px !important;
-    padding: 0px !important;
-    height: 100px !important;
+    height: 150px !important;
     margin: 0px !important;
     justify-content: left !important;
     align-items:center !important;
     display: flex !important;
-    position: block !important;
+    position: inherit !important;
     z-index: 15 !important;
     font-size: 10px !important;
 }
@@ -1004,8 +1089,9 @@ select.custom-dropdown {
     border-radius: 5px !important;
     padding-top: 0px !important;
     padding-bottom: 0px !important;
-    margin-top: 15px !important;
+    margin-top: 0 !important;
     height: auto !important;
+    min-height: 10vh;
     flex-wrap: wrap !important;
 }
 
@@ -1022,6 +1108,27 @@ select.custom-dropdown {
     margin-top: 10px !important;
     height: auto !important;
     flex-wrap: wrap !important;
+}
+
+.bigboxbuttons {
+    margin:0px !important;
+    padding:0px !important;
+    border:0px solid #FDB142 !important;
+    display: flex !important;
+    padding-right: 10px !important;
+    min-height: 5vh !important;
+    align-items: top !important;
+    margin-bottom: 1.5vh !important;
+}
+
+.bigboxbuttons-mobile {
+    margin:0px !important;
+    padding:0px !important;
+    border:0px solid #FDB142 !important;
+    display: flex !important;
+    align-items: top !important;
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
 }
 
 .extend-stat-grid {
@@ -1057,15 +1164,17 @@ select.custom-dropdown {
 .targetsub {
     border: 0px !important;
     margin: 5px !important;
-    margin-top: 10px !important;
+    margin-top: 0px !important;
     padding: 0px !important;
     margin-right: 0px !important;
+    max-height: 100% !important;
 }
 
 .targetsub-mobile {
     border: 0px !important;
     margin: 0px !important;
     padding: 0px !important;
+    max-height: 100% !important;
 }
 
 .build-card {
@@ -1076,14 +1185,25 @@ select.custom-dropdown {
     margin-top: 0px !important;
     padding: 0px !important;
     position: fixed !important;
-    min-height: 84vh !important;
+    min-height: 70vh !important;
     max-height: 100vh !important;
-    overflow-y: auto;
 }
 
 @media (max-width: 1700px) {
   .cardStat {
-    font-size: 0.6vw !important;
+    font-size: 0.7vw !important;
+  }
+  #screenbutton1 {
+    font-size: 12px !important;
+  }
+  #screenbutton2 {
+    font-size: 12px !important;
+  }
+  #screenbutton3 {
+    font-size: 12px !important;
+  }
+  .oils {
+    font-size: 0.8vw !important;
   }
 }
 
@@ -1110,7 +1230,7 @@ select.custom-dropdown {
     float: right !important;
     padding-right: 0px !important;
     height: auto;
-    max-height: 1vh;
+    max-height: 100vh;
 }
 
 .target-container-mobile {
@@ -1128,6 +1248,8 @@ select.custom-dropdown {
 .bigbuttondiv-mobile {
     grid-column: span 1 !important;
     height: auto !important;
+    min-height: 0 !important;
+    margin-top: 15px !important;
 }
 
 .mobiledrop {
@@ -1150,7 +1272,7 @@ select.custom-dropdown {
     background:#1b1b1b;
     border:1px solid #444;
     z-index:1000;
-    width: 100%;
+    width: 100% !important;
     top: 50px;
 }
 
@@ -1179,8 +1301,8 @@ select.custom-dropdown {
 }
 
 .select-mobile {
-    height: 50px;
-    font-size: 2em;
+    height: 60px;
+    font-size: 2.5em;
 }
 
 .custom-select.open .custom-select-panel-mobile {
@@ -1191,8 +1313,8 @@ select.custom-dropdown {
 .custom-panel-name {
     color: white;
     font-size: 3em;
-    text-align: left !important;
-    justify-content: left;
+    text-align: center !important;
+    justify-content: center;
 }
 
 .custom-select.disabled {
@@ -1215,7 +1337,7 @@ select.custom-dropdown {
     padding: 0px !important;
     border: 0px !important;
     flex-wrap: nowrap !important;
-    width: 100%;
+    width: 100% !important;
     justify-content: space-between !important;
 }
 
@@ -1227,7 +1349,7 @@ select.custom-dropdown {
     border: 0px !important;
     flex-wrap: nowrap !important;
     align-items: center !important;
-    justify-content: left !important;
+    justify-content: space-evenly !important;
     width: 50%;
 }
 
@@ -1398,11 +1520,12 @@ select.custom-dropdown {
     flex-wrap: nowrap !important;
     justify-content: center !important;
     align-items: center !important;
+    width: initial !important;
 }
 
 .custom-select-search {
-    width:100%;
-    padding:8px;
+    width: 100% !important;
+    padding: 8px;
     margin-left: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1454,8 +1577,8 @@ select.custom-dropdown {
     }
 .custom-select-search-x-mobile {
     display: flex;
-    width: 66px;
-    height: 66px;
+    width: 76px;
+    height: 76px;
     border-radius: 0px;
     background-color: #f0f0f0;
     border: 0px;
@@ -1496,9 +1619,10 @@ select.custom-dropdown {
     list-style:none;
     margin:0;
     padding:0;
-    max-height:380px;
+    max-height:380px !important;
     overflow-y:auto;
     text-align: left;
+    width: initial !important;
 }
 
 .custom-select-menu-mobile {
@@ -1519,7 +1643,7 @@ select.custom-dropdown {
     margin-bottom: 1px !important;
     transition: opacity .15s ease, height .15s ease !important;
     border: 1px solid black !important;
-    width: auto !important;
+    width: initial !important;
 }
 
 .custom-option div {
@@ -1716,6 +1840,7 @@ mark {
 
 #width-grid {
      grid-column: 1 / -1;
+     min-width: 0;
 }
 
 .railgun {
@@ -1728,8 +1853,10 @@ mark {
 
 .scrollcard {
     transition: transform 1s ease;
-    transform: translateY(-250px);
-    border-top: 0px;
+    transform: translateY(-200px);
+    border-top: 0px !important;
+    width: 50%;
+    height: 100% !important;
 }
 
 

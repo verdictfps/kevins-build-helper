@@ -53,7 +53,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "",
       "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Random Chamber": {
       "Name": "Random Chamber",
@@ -108,7 +110,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "",
       "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Chamber Chisel - .50 BMG": {
       "Name": "Chamber Chisel - .50 BMG",
@@ -166,7 +170,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Base Damage: 200",
       "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Chamber Chisel - 12Ga": {
       "Name": "Chamber Chisel - 12Ga",
@@ -224,7 +230,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Base Damage: 20 x 8",
       "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Chamber Chisel - 5.56mm": {
       "Name": "Chamber Chisel - 5.56mm",
@@ -282,7 +290,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Base Damage: 80",
       "TypePositive1": "None",
-      "TypeNegative1": "Chamber"
+      "TypeNegative1": "Chamber",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Chamber Chisel - 7.62mm": {
       "Name": "Chamber Chisel - 7.62mm",
@@ -340,7 +350,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Base Damage: 100",
       "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Chamber Chisel - 9mm": {
       "Name": "Chamber Chisel - 9mm",
@@ -398,7 +410,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Base Damage: 60",
       "TypePositive1": "None",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Chamber Chisel - Energy": {
       "Name": "Chamber Chisel - Energy",
@@ -456,7 +470,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Base Damage: 50",
       "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     }
   }
 }

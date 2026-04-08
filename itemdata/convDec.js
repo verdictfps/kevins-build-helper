@@ -43,9 +43,9 @@ try {
         "utf8"
     );
 
-    console.log("✅ All numeric strings converted to numbers.");
+    console.log("All numeric strings converted to numbers.");
     console.log("Output file:", outputPath);
 
 } catch (err) {
-    console.error("❌ Error:", err.message);
+    console.error("Error:", err.message);
 }

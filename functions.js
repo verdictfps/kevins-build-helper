@@ -15,6 +15,24 @@ function mobileCSS() {
         console.log("mobile classes")
         document.getElementById("mainbuildcontainer").classList.remove("container");
         document.getElementById("mainbuildcontainer").classList.add("container-mobile");
+        
+        document.getElementById("tooltipboxdiv2").classList.remove("tooltipboxdiv");
+        document.getElementById("tooltipboxdiv2").classList.add("tooltipboxdiv-mobile");
+
+        document.getElementById("weapondiv").classList.remove("weapondiv");
+        document.getElementById("weapondiv").classList.add("weapondiv-mobile");
+
+        document.getElementById("bigboxbuttons").classList.remove("bigboxbuttons");
+        document.getElementById("bigboxbuttons").classList.add("bigboxbuttons-mobile");
+
+        document.getElementById("oilcontainer").classList.remove("oilcontainer");
+        document.getElementById("oilcontainer").classList.add("oilcontainer-mobile");
+
+        document.getElementById("bigboxdeals").classList.remove("bigboxdeals");
+        document.getElementById("bigboxdeals").classList.add("bigboxdeals-mobile");
+
+        document.getElementById("attachmentcontainer").classList.remove("attachmentcontainer");
+        document.getElementById("attachmentcontainer").classList.add("attachmentcontainer-mobile");
 
         document.getElementById("targetme").classList.remove("build-card");
         document.getElementById("targetme").classList.add("build-card-mobile");
@@ -51,23 +69,11 @@ function mobileCSS() {
         document.getElementById("weaponstuffcontainer").classList.remove("weaponstuffcontainer");
         document.getElementById("weaponstuffcontainer").classList.add("weaponstuffcontainer-mobile");
 
-        document.getElementById("extendedstatscontainer1").classList.remove("extendedstatscontainer");
-        document.getElementById("extendedstatscontainer1").classList.add("extendedstatscontainer-mobile");
-
         document.getElementById("extendedstatscontainer2").classList.remove("extendedstatscontainer");
         document.getElementById("extendedstatscontainer2").classList.add("extendedstatscontainer-mobile");
-        
-        document.getElementById("extendstatgrid").classList.remove("extend-stat-grid");
-        document.getElementById("extendstatgrid").classList.add("extend-stat-grid-mobile");
-
-        document.getElementById("weapondiv").classList.remove("weapondiv");
-        document.getElementById("weapondiv").classList.add("weapondiv-mobile");
 
         document.getElementById("externalbuttondiv").classList.remove("external-button-cont");
         document.getElementById("externalbuttondiv").classList.add("external-button-cont-mobile");
-        
-        document.getElementById("tooltipboxdiv2").classList.remove("tooltipboxdiv");
-        document.getElementById("tooltipboxdiv2").classList.add("tooltipboxdiv-mobile");
 
         document.getElementById("containerweapchoose").classList.remove("containerweapchoose");
         document.getElementById("containerweapchoose").classList.add("containerweapchoose-mobile");
@@ -92,6 +98,25 @@ function mobileCSS() {
         document.getElementById("bigboxdeals").style.height = "auto";
 
         document.getElementById("extendstatbox").style.marginRight = "0px";
+
+        document.getElementById("extendstatsbutton").style.minHeight = "0px";
+
+        document.getElementById("guncardgrid1").style.minHeight = "0px";
+        document.getElementById("guncardgrid2").style.minHeight = "0px";
+        document.getElementById("guncardgrid3").style.minHeight = "0px";
+        document.getElementById("guncardgrid4").style.minHeight = "0px";
+        document.getElementById("guncardgrid5").style.minHeight = "0px";
+
+        document.getElementById("extendstatbox").style.minHeight = "0px";
+        document.getElementById("extendstatbox").style.height = "auto";
+        document.getElementById("extendstatbox").style.marginTop = "10px";
+
+        document.getElementById("bigbuttondiv2").style.marginTop = "10px";
+        document.getElementById("bigbuttondiv2").style.padding = "0px";
+
+        document.getElementById("boxglowthing").style.height = "125px";
+
+        document.body.style.margin = "5px"
 
         //document.getElementById("containerheaders2").style.display = "";
  
@@ -822,7 +847,7 @@ async function createProDropdown(select) {
     const buttonAlph = document.createElement("button");
     if (isMobile === true) {
         buttonAlph.className = "custom-select-panel-button-mobile";
-        buttonAlph.innerHTML = "<span class='fa-solid fa-arrow-down-a-z' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin-right: 20px; margin-left: 30px'></span>"; 
+        buttonAlph.innerHTML = "<span class='fa-solid fa-arrow-down-a-z' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto;'></span>"; 
     }
     else {
         buttonAlph.className = "custom-select-panel-button";
@@ -843,7 +868,7 @@ async function createProDropdown(select) {
     const buttonPos = document.createElement("button");
     if (isMobile === true) {
         buttonPos.className = "custom-select-panel-button-mobile";
-        buttonPos.innerHTML = "<span class='fa-solid fa-arrow-down-9-1' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin-right: 20px; margin-left: 50px'></span>";
+        buttonPos.innerHTML = "<span class='fa-solid fa-arrow-down-9-1' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto;'></span>";
     }
     else {
         buttonPos.className = "custom-select-panel-button";
@@ -865,7 +890,7 @@ async function createProDropdown(select) {
     
     if (isMobile === true) {
         buttonNeg.className = "custom-select-panel-button-mobile";
-        buttonNeg.innerHTML = "<span class='fa-solid fa-arrow-down-1-9' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin-right: 20px; margin-left: 70px'></span>";
+        buttonNeg.innerHTML = "<span class='fa-solid fa-arrow-down-1-9' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto;'></span>";
     }
     else {
         buttonNeg.className = "custom-select-panel-button";
@@ -1207,7 +1232,9 @@ async function createProDropdown(select) {
     const sorters = {
         default: (a, b) => a.label.localeCompare(b.label),
         scorepos: (a,b) => a.meta.ScorePos - b.meta.ScorePos,
-        scoreneg: (a,b) => a.meta.ScoreNeg - b.meta.ScoreNeg
+        scoreposdec: (b,a) => a.meta.ScorePos - b.meta.ScorePos,
+        scoreneg: (a,b) => a.meta.ScoreNeg - b.meta.ScoreNeg,
+        scorenegdec: (b,a) => a.meta.ScoreNeg - b.meta.ScoreNeg
     };
 
     function applySort(options, sortMode) {
@@ -1590,7 +1617,7 @@ function scrollToTop() {
 }
 
 // Screenshots
-function captureElement(activated) {
+function captureElement(activated, save) {
     document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
     document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
     document.getElementById("oilstatcontainer3").classList.remove("spinanimation");
@@ -1609,11 +1636,14 @@ function captureElement(activated) {
     document.getElementById("weaponimage").classList.add("weaponimage2");
 
     document.getElementById("buttonTakeScreenshot").classList.remove("buttonSaveLoad");
+    document.getElementById("buttonSaveScreenshot").classList.remove("buttonSaveLoad");
     document.getElementById("buttonCopyBuildLink").classList.remove("buttonSaveLoad");
-    document.getElementById("buttonLoadBuildLink").classList.remove("buttonSaveLoad");
     document.getElementById("buttonTakeScreenshot").classList.add("buttonSaveLoadScreen");
+    document.getElementById("buttonSaveScreenshot").classList.add("buttonSaveLoadScreen");
     document.getElementById("buttonCopyBuildLink").classList.add("buttonSaveLoadScreen");
-    document.getElementById("buttonLoadBuildLink").classList.add("buttonSaveLoadScreen");
+    document.getElementById("buttonTakeScreenshot").style.height = "30px";
+    document.getElementById("buttonSaveScreenshot").style.height = "30px";
+    document.getElementById("buttonCopyBuildLink").style.height = "30px";
 
     document.getElementById("targetsub").style.backgroundColor = "#2D424B";
 
@@ -1633,7 +1663,10 @@ function captureElement(activated) {
             const cbi2 = new window.ClipboardItem({ 
                 'image/png': blob,
             });
-            if (activated == true ) {
+            if (save === true) {
+                getNewFileHandle(blob);
+            }
+            else if (activated === true ) {
                 //navigator.clipboard.write([cbi]);
                 navigator.clipboard.write([cbi2]);
             }
@@ -1647,12 +1680,36 @@ function captureElement(activated) {
     document.getElementById("weaponimage").classList.add("weaponimage");
     document.getElementById("weaponimage").classList.remove("weaponimage2");
     document.getElementById("buttonTakeScreenshot").classList.remove("buttonCommitInd2");
+    document.getElementById("buttonSaveScreenshot").classList.remove("buttonCommitInd2");
     document.getElementById("buttonCopyBuildLink").classList.remove("buttonCommitInd2");
-    document.getElementById("buttonLoadBuildLink").classList.remove("buttonCommitInd2");
     document.getElementById("buttonTakeScreenshot").classList.add("buttonCommitInd");
+    document.getElementById("buttonSaveScreenshot").classList.add("buttonCommitInd");
     document.getElementById("buttonCopyBuildLink").classList.add("buttonCommitInd");
-    document.getElementById("buttonLoadBuildLink").classList.add("buttonCommitInd");
+    document.getElementById("buttonTakeScreenshot").style.height = "27px";
+    document.getElementById("buttonSaveScreenshot").style.height = "27px";
+    document.getElementById("buttonCopyBuildLink").style.height = "27px";
     }, 500);
+}
+
+function getNewFileHandle(blob) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+
+    let currentURL = window.location.hash;
+    let split = currentURL.split("#!");
+    let resplit = split[1]
+    let decoded = decodeURIComponent(resplit);
+    let split2 = decoded.split("build");
+
+    a.href = url;
+    a.download = `${split2[1]}.png`;
+    a.style.hidden = "true";
+
+    document.body.appendChild(a);
+    a.click();
+
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
 }
 
 const favoriteOils = new Set(
@@ -1912,6 +1969,24 @@ function shuffle(array) {
 
         [array[currentIndex], array[randomIndex]] = [
             array[randomIndex], array[currentIndex]];
+    }
+}
+
+function buildLink() {
+    if (document.getElementById("buttonCopyBuildLink").textContent === "Copy") {
+        copyBuildLink();
+    }
+    else {
+        pasteBuildLink();
+    }
+}
+
+function copyLoadButton() {
+    if (window.location.href === document.getElementById("linkbox").value) {
+        document.getElementById("buttonCopyBuildLink").textContent = "Copy";
+    }
+    else {
+        document.getElementById("buttonCopyBuildLink").textContent = "Load"
     }
 }
 
@@ -2644,8 +2719,6 @@ function addAllEventListeners() {
 
     // Buttons and fields
 
-    linkboxHandler = document.getElementById('buttonLoadBuildLink');
-    linkboxHandler.addEventListener('click', pasteBuildLink, false);
 
 
 
@@ -2658,6 +2731,14 @@ function addAllEventListeners() {
     //   dropdownSelectHandler[i].addEventListener('click', mobileDropdownCheck, false);
     //}
 
+
+}
+
+/*function togglePos(select) {
+    ? close() : open();
+}*/
+
+function toggleNeg(select) {
 
 }
 
@@ -2698,7 +2779,6 @@ let opticSelectHandler = document.getElementById('opticselector');
 let laserSelectHandler = document.getElementById('laserselector');
 let firemodeSelectHandler = document.getElementById('firemodeselector');
 let chamberSelectHandler = document.getElementById('chamberselector');
-let linkboxHandler = document.getElementById('buttonLoadBuildLink');
 
 let flag = null;
 let selector = null;

@@ -53,7 +53,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "",
       "TypePositive1": "Optic",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Random Optic": {
       "Name": "Random Optic",
@@ -108,7 +110,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "",
       "TypePositive1": "Optic",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Assault Scope": {
       "Name": "Assault Scope",
@@ -163,7 +167,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "ADS Crit Chance: +20% • Zoom: 4x",
       "TypePositive1": "Optic",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Compact Sight": {
       "Name": "Compact Sight",
@@ -218,7 +224,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "ADS Crit Chance: +20% • Zoom: 2x",
       "TypePositive1": "Optic",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Holographic Sight": {
       "Name": "Holographic Sight",
@@ -273,7 +281,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "ADS Crit Chance: +10% • Zoom: 1x",
       "TypePositive1": "Optic",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Hunting Scope": {
       "Name": "Hunting Scope",
@@ -328,7 +338,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "ADS Crit Chance: +25% • Zoom: 8x",
       "TypePositive1": "Optic",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Recon Scope": {
       "Name": "Recon Scope",
@@ -383,7 +395,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "ADS Crit Chance: +25% • Zoom: 8x",
       "TypePositive1": "Optic",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Reflex Sight": {
       "Name": "Reflex Sight",
@@ -438,7 +452,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "ADS Crit Chance: +15% • Zoom: 1x",
       "TypePositive1": "Optic",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Sniper Scope": {
       "Name": "Sniper Scope",
@@ -493,7 +509,9 @@
       "DamageMultInd": 0,
       "DropdownDescription": "ADS Crit Chance: +30% • Zoom: 12x",
       "TypePositive1": "Optic",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     }
   }
 }

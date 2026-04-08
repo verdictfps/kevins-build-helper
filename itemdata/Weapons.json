@@ -47,7 +47,9 @@
       "ReloadTime": 0,
       "Firemode": "",
       "DropdownDescription": "",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Random Pistol": {
       "Name": "Random Pistol",
@@ -96,7 +98,9 @@
       "ReloadTime": 0,
       "Firemode": "",
       "DropdownDescription": "",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Random Revolver": {
       "Name": "Random Revolver",
@@ -145,7 +149,9 @@
       "ReloadTime": 0,
       "Firemode": "",
       "DropdownDescription": "",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Random Shotgun": {
       "Name": "Random Shotgun",
@@ -194,7 +200,9 @@
       "ReloadTime": 0,
       "Firemode": "",
       "DropdownDescription": "",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Random SMG": {
       "Name": "Random SMG",
@@ -243,7 +251,9 @@
       "ReloadTime": 0,
       "Firemode": "",
       "DropdownDescription": "",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Random AR": {
       "Name": "Random AR",
@@ -292,7 +302,9 @@
       "ReloadTime": 0,
       "Firemode": "",
       "DropdownDescription": "",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Random LMG": {
       "Name": "Random LMG",
@@ -341,7 +353,9 @@
       "ReloadTime": 0,
       "Firemode": "",
       "DropdownDescription": "",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Random Rifle": {
       "Name": "Random Rifle",
@@ -390,7 +404,9 @@
       "ReloadTime": 0,
       "Firemode": "",
       "DropdownDescription": "",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Random Sniper": {
       "Name": "Random Sniper",
@@ -439,12 +455,14 @@
       "ReloadTime": 0,
       "Firemode": "",
       "DropdownDescription": "",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     ".357 Balthazar": {
       "Name": ".357 Balthazar",
       "Type": "Revolver",
-"TypePositive1": "Revolver",
+      "TypePositive1": "Revolver",
       "AmmoType": "7.62mm",
       "DamageMultiplier": 1.6,
       "Damage": 0,
@@ -488,13 +506,14 @@
       "ReloadTime": 3.3,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 7.62mm • DMG Mult: 1.6x • DMG: 160",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "1889 Mario": {
       "Name": "1889 Mario",
       "Type": "Shotgun",
-"TypePositive1": "Shotgun",
+      "TypePositive1": "Shotgun",
       "AmmoType": "12Ga",
       "DamageMultiplier": 2,
       "Damage": 0,
@@ -538,13 +557,14 @@
       "ReloadTime": 2.65,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Arbiter 2": {
       "Name": "Arbiter 2",
       "Type": "Shotgun",
-"TypePositive1": "Shotgun",
+      "TypePositive1": "Shotgun",
       "AmmoType": "12Ga",
       "DamageMultiplier": 2,
       "Damage": 0,
@@ -588,13 +608,14 @@
       "ReloadTime": 3.12,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Beck 8": {
       "Name": "Beck 8",
       "Type": "Pistol",
-"TypePositive1": "Pistol",
+      "TypePositive1": "Pistol",
       "AmmoType": "9mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -638,13 +659,14 @@
       "ReloadTime": 2.37,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1x • DMG: 60",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Bronco 89": {
       "Name": "Bronco 89",
       "Type": "Pistol",
-"TypePositive1": "Pistol",
+      "TypePositive1": "Pistol",
       "AmmoType": "9mm",
       "DamageMultiplier": 1.5,
       "Damage": 0,
@@ -688,13 +710,14 @@
       "ReloadTime": 7.93,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1.5x • DMG: 90",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Cavalier": {
       "Name": "Cavalier",
       "Type": "Pistol",
-"TypePositive1": "Pistol",
+      "TypePositive1": "Pistol",
       "AmmoType": "9mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -738,13 +761,14 @@
       "ReloadTime": 2.3,
       "Firemode": "3-Round Burst",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1x • DMG: 60",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Flicker": {
       "Name": "Flicker",
       "Type": "Pistol",
-"TypePositive1": "Pistol",
+      "TypePositive1": "Pistol",
       "AmmoType": "9mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -788,13 +812,14 @@
       "ReloadTime": 2.75,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1x • DMG: 60",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Gravekeeper": {
       "Name": "Gravekeeper",
       "Type": "Pistol",
-"TypePositive1": "Pistol",
+      "TypePositive1": "Pistol",
       "AmmoType": "5.56mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -838,13 +863,14 @@
       "ReloadTime": 2,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 5.56mm • DMG Mult: 1x • DMG: 80",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Hell 'N' Back": {
       "Name": "Hell 'N' Back",
       "Type": "Pistol",
-"TypePositive1": "Pistol",
+      "TypePositive1": "Pistol",
       "AmmoType": "7.62mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -888,13 +914,14 @@
       "ReloadTime": 2.95,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 7.62mm • DMG Mult: 1x • DMG: 100",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "M182 Pierre-Fusil": {
       "Name": "M182 Pierre-Fusil",
       "Type": "Rifle",
-"TypePositive1": "Rifle",
+      "TypePositive1": "Rifle",
       "AmmoType": "7.62mm",
       "DamageMultiplier": 2,
       "Damage": 0,
@@ -938,13 +965,14 @@
       "ReloadTime": 2.05,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 7.62mm • DMG Mult: 2x • DMG: 200",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "P38 Dirk": {
       "Name": "P38 Dirk",
       "Type": "Pistol",
-"TypePositive1": "Pistol",
+      "TypePositive1": "Pistol",
       "AmmoType": "9mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -988,13 +1016,14 @@
       "ReloadTime": 2.88,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1x • DMG: 60",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Palehorse Topclipper": {
       "Name": "Palehorse Topclipper",
       "Type": "Revolver",
-"TypePositive1": "Revolver",
+      "TypePositive1": "Revolver",
       "AmmoType": "5.56mm",
       "DamageMultiplier": 1.6,
       "Damage": 0,
@@ -1038,13 +1067,14 @@
       "ReloadTime": 2.37,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 5.56mm • DMG Mult: 1.6x • DMG: 128",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Salamander": {
       "Name": "Salamander",
       "Type": "Pistol",
-"TypePositive1": "Pistol",
+      "TypePositive1": "Pistol",
       "AmmoType": "7.62mm",
       "DamageMultiplier": 1.2,
       "Damage": 0,
@@ -1088,13 +1118,14 @@
       "ReloadTime": 2.88,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Snut .38": {
       "Name": "Snut .38",
       "Type": "Revolver",
-"TypePositive1": "Revolver",
+      "TypePositive1": "Revolver",
       "AmmoType": "9mm",
       "DamageMultiplier": 1.6,
       "Damage": 0,
@@ -1138,13 +1169,14 @@
       "ReloadTime": 3.05,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1.6x • DMG: 96",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Socom 9": {
       "Name": "Socom 9",
       "Type": "Pistol",
-"TypePositive1": "Pistol",
+      "TypePositive1": "Pistol",
       "AmmoType": "9mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -1188,13 +1220,14 @@
       "ReloadTime": 1.87,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1x • DMG: 60",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Star & Witness": {
       "Name": "Star & Witness",
       "Type": "Pistol",
-"TypePositive1": "Pistol",
+      "TypePositive1": "Pistol",
       "AmmoType": "9mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -1238,13 +1271,14 @@
       "ReloadTime": 3.3,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1x • DMG: 60",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Unknown": {
       "Name": "Unknown",
       "Type": "Pistol",
-"TypePositive1": "Pistol",
+      "TypePositive1": "Pistol",
       "AmmoType": "Energy",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -1288,13 +1322,14 @@
       "ReloadTime": 2.9,
       "Firemode": "Static Single",
       "DropdownDescription": "Ammo: Energy • DMG Mult: 1x • DMG: 50",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Wyatt PULSAR": {
       "Name": "Wyatt PULSAR",
       "Type": "Revolver",
-"TypePositive1": "Revolver",
+      "TypePositive1": "Revolver",
       "AmmoType": "Energy",
       "DamageMultiplier": 1.6,
       "Damage": 0,
@@ -1338,13 +1373,14 @@
       "ReloadTime": 2.28,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: Energy • DMG Mult: 1.6x • DMG: 80",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Augusta": {
       "Name": "Augusta",
       "Type": "Shotgun",
-"TypePositive1": "Shotgun",
+      "TypePositive1": "Shotgun",
       "AmmoType": "Energy",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -1388,13 +1424,14 @@
       "ReloadTime": 3.17,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: Energy • DMG Mult: 1x • DMG: 50",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Breacher 8": {
       "Name": "Breacher 8",
       "Type": "Shotgun",
-"TypePositive1": "Shotgun",
+      "TypePositive1": "Shotgun",
       "AmmoType": "12Ga",
       "DamageMultiplier": 2,
       "Damage": 0,
@@ -1438,13 +1475,14 @@
       "ReloadTime": 1,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Neuraxis F22": {
       "Name": "Neuraxis F22",
       "Type": "LMG",
-"TypePositive1": "LMG",
+      "TypePositive1": "LMG",
       "AmmoType": "Energy",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -1488,13 +1526,14 @@
       "ReloadTime": 1,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: Energy • DMG Mult: 1x • DMG: 50",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Flock 76": {
       "Name": "Flock 76",
       "Type": "Shotgun",
-"TypePositive1": "Shotgun",
+      "TypePositive1": "Shotgun",
       "AmmoType": "12Ga",
       "DamageMultiplier": 2,
       "Damage": 0,
@@ -1538,13 +1577,14 @@
       "ReloadTime": 3,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Majordome": {
       "Name": "Majordome",
       "Type": "Shotgun",
-"TypePositive1": "Shotgun",
+      "TypePositive1": "Shotgun",
       "AmmoType": "12Ga",
       "DamageMultiplier": 2,
       "Damage": 0,
@@ -1588,13 +1628,14 @@
       "ReloadTime": 5.33,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Mossman": {
       "Name": "Mossman",
       "Type": "Shotgun",
-"TypePositive1": "Shotgun",
+      "TypePositive1": "Shotgun",
       "AmmoType": "12Ga",
       "DamageMultiplier": 2,
       "Damage": 0,
@@ -1638,13 +1679,14 @@
       "ReloadTime": 5.3,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Deathstar PG": {
       "Name": "Deathstar PG",
       "Type": "SMG",
-"TypePositive1": "SMG",
+      "TypePositive1": "SMG",
       "AmmoType": "5.56mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -1688,13 +1730,14 @@
       "ReloadTime": 3.32,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 5.56mm • DMG Mult: 1x • DMG: 80",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Drifter 9": {
       "Name": "Drifter 9",
       "Type": "SMG",
-"TypePositive1": "SMG",
+      "TypePositive1": "SMG",
       "AmmoType": "9mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -1738,13 +1781,14 @@
       "ReloadTime": 2.23,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1x • DMG: 60",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Ferryman": {
       "Name": "Ferryman",
       "Type": "SMG",
-"TypePositive1": "SMG",
+      "TypePositive1": "SMG",
       "AmmoType": ".50 BMG",
       "DamageMultiplier": 1.5,
       "Damage": 0,
@@ -1788,13 +1832,14 @@
       "ReloadTime": 4.35,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: .50 BMG • DMG Mult: 1.5x • DMG: 300",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "M3 Termite": {
       "Name": "M3 Termite",
       "Type": "SMG",
-"TypePositive1": "SMG",
+      "TypePositive1": "SMG",
       "AmmoType": "9mm",
       "DamageMultiplier": 1.1,
       "Damage": 0,
@@ -1838,13 +1883,14 @@
       "ReloadTime": 9.07,
       "Firemode": "3-Round Burst",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1.1x • DMG: 66",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Ploika Compact": {
       "Name": "Ploika Compact",
       "Type": "SMG",
-"TypePositive1": "SMG",
+      "TypePositive1": "SMG",
       "AmmoType": "9mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -1888,13 +1934,14 @@
       "ReloadTime": 2.65,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1x • DMG: 60",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Songbird": {
       "Name": "Songbird",
       "Type": "SMG",
-"TypePositive1": "SMG",
+      "TypePositive1": "SMG",
       "AmmoType": "9mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -1938,13 +1985,14 @@
       "ReloadTime": 3.17,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1x • DMG: 60",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Valet": {
       "Name": "Valet",
       "Type": "SMG",
-"TypePositive1": "SMG",
+      "TypePositive1": "SMG",
       "AmmoType": "9mm",
       "DamageMultiplier": 1.2,
       "Damage": 0,
@@ -1988,13 +2036,14 @@
       "ReloadTime": 2.4,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1.2x • DMG: 72",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Vrede": {
       "Name": "Vrede",
       "Type": "SMG",
-"TypePositive1": "SMG",
+      "TypePositive1": "SMG",
       "AmmoType": "9mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -2038,13 +2087,14 @@
       "ReloadTime": 2.57,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 1x • DMG: 60",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Catacoil Rapid X": {
       "Name": "Catacoil Rapid X",
       "Type": "AR",
-"TypePositive1": "AR",
+      "TypePositive1": "AR",
       "AmmoType": "Energy",
       "DamageMultiplier": 1.2,
       "Damage": 0,
@@ -2088,13 +2138,14 @@
       "ReloadTime": 2.53,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: Energy • DMG Mult: 1.2x • DMG: 60",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Corpsemaker": {
       "Name": "Corpsemaker",
       "Type": "AR",
-"TypePositive1": "AR",
+      "TypePositive1": "AR",
       "AmmoType": "5.56mm",
       "DamageMultiplier": 1.2,
       "Damage": 0,
@@ -2138,13 +2189,14 @@
       "ReloadTime": 3,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 5.56mm • DMG Mult: 1.2x • DMG: 96",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "M11A2 Fisk": {
       "Name": "M11A2 Fisk",
       "Type": "AR",
-"TypePositive1": "AR",
+      "TypePositive1": "AR",
       "AmmoType": "5.56mm",
       "DamageMultiplier": 1.2,
       "Damage": 0,
@@ -2188,13 +2240,14 @@
       "ReloadTime": 2.37,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 5.56mm • DMG Mult: 1.2x • DMG: 96",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Type 80 Typhoon": {
       "Name": "Type 80 Typhoon",
       "Type": "AR",
-"TypePositive1": "AR",
+      "TypePositive1": "AR",
       "AmmoType": "7.62mm",
       "DamageMultiplier": 1.2,
       "Damage": 0,
@@ -2238,13 +2291,14 @@
       "ReloadTime": 2.9,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Wingman": {
       "Name": "Wingman",
       "Type": "AR",
-"TypePositive1": "AR",
+      "TypePositive1": "AR",
       "AmmoType": "7.62mm",
       "DamageMultiplier": 1.2,
       "Damage": 0,
@@ -2288,13 +2342,14 @@
       "ReloadTime": 3.93,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Chat-Pardeur 98": {
       "Name": "Chat-Pardeur 98",
       "Type": "LMG",
-"TypePositive1": "LMG",
+      "TypePositive1": "LMG",
       "AmmoType": "7.62mm",
       "DamageMultiplier": 1.2,
       "Damage": 0,
@@ -2338,13 +2393,14 @@
       "ReloadTime": 4.4,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Duhar": {
       "Name": "Duhar",
       "Type": "LMG",
-"TypePositive1": "LMG",
+      "TypePositive1": "LMG",
       "AmmoType": "7.62mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -2388,13 +2444,14 @@
       "ReloadTime": 2.6,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 7.62mm • DMG Mult: 1x • DMG: 100",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Rektor 100rd": {
       "Name": "Rektor 100rd",
       "Type": "LMG",
-"TypePositive1": "LMG",
+      "TypePositive1": "LMG",
       "AmmoType": "7.62mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -2438,13 +2495,14 @@
       "ReloadTime": 5.57,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 7.62mm • DMG Mult: 1x • DMG: 100",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Warpig": {
       "Name": "Warpig",
       "Type": "LMG",
-"TypePositive1": "LMG",
+      "TypePositive1": "LMG",
       "AmmoType": "5.56mm",
       "DamageMultiplier": 1,
       "Damage": 0,
@@ -2488,13 +2546,14 @@
       "ReloadTime": 3.93,
       "Firemode": "Auto",
       "DropdownDescription": "Ammo: 5.56mm • DMG Mult: 1x • DMG: 80",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Farsight": {
       "Name": "Farsight",
       "Type": "Rifle",
-"TypePositive1": "Rifle",
+      "TypePositive1": "Rifle",
       "AmmoType": "5.56mm",
       "DamageMultiplier": 2.2,
       "Damage": 0,
@@ -2538,13 +2597,14 @@
       "ReloadTime": 3.25,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 5.56mm • DMG Mult: 2.2x • DMG: 176",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Knop .22": {
       "Name": "Knop .22",
       "Type": "Rifle",
-"TypePositive1": "Rifle",
+      "TypePositive1": "Rifle",
       "AmmoType": "9mm",
       "DamageMultiplier": 2,
       "Damage": 0,
@@ -2588,13 +2648,14 @@
       "ReloadTime": 1.05,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 9mm • DMG Mult: 2x • DMG: 120",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Tailor Marksman MKII": {
       "Name": "Tailor Marksman MKII",
       "Type": "Rifle",
-"TypePositive1": "Rifle",
+      "TypePositive1": "Rifle",
       "AmmoType": "5.56mm",
       "DamageMultiplier": 2,
       "Damage": 0,
@@ -2638,13 +2699,14 @@
       "ReloadTime": 4.3,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 5.56mm • DMG Mult: 2x • DMG: 160",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "D4RT": {
       "Name": "D4RT",
       "Type": "Sniper",
-"TypePositive1": "Sniper",
+      "TypePositive1": "Sniper",
       "AmmoType": "Energy",
       "DamageMultiplier": 10,
       "Damage": 0,
@@ -2688,13 +2750,14 @@
       "ReloadTime": 2.17,
       "Firemode": "Static Single",
       "DropdownDescription": "Ammo: Energy • DMG Mult: 10x • DMG: 500",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Dolphin 99": {
       "Name": "Dolphin 99",
       "Type": "Sniper",
-"TypePositive1": "Sniper",
+      "TypePositive1": "Sniper",
       "AmmoType": ".50 BMG",
       "DamageMultiplier": 2.5,
       "Damage": 0,
@@ -2738,13 +2801,14 @@
       "ReloadTime": 3.93,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: .50 BMG • DMG Mult: 2.5x • DMG: 500",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Impala Gravita": {
       "Name": "Impala Gravita",
       "Type": "Sniper",
-"TypePositive1": "Sniper",
+      "TypePositive1": "Sniper",
       "AmmoType": "7.62mm",
       "DamageMultiplier": 4,
       "Damage": 0,
@@ -2788,13 +2852,14 @@
       "ReloadTime": 2.9,
       "Firemode": "Static Single",
       "DropdownDescription": "Ammo: 7.62mm • DMG Mult: 4x • DMG: 400",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Longboy": {
       "Name": "Longboy",
       "Type": "Sniper",
-"TypePositive1": "Sniper",
+      "TypePositive1": "Sniper",
       "AmmoType": ".50 BMG",
       "DamageMultiplier": 2,
       "Damage": 0,
@@ -2838,13 +2903,14 @@
       "ReloadTime": 3.28,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: .50 BMG • DMG Mult: 2x • DMG: 400",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     },
     "Rokua .308": {
       "Name": "Rokua .308",
       "Type": "Sniper",
-"TypePositive1": "Sniper",
+      "TypePositive1": "Sniper",
       "AmmoType": "7.62mm",
       "DamageMultiplier": 2,
       "Damage": 0,
@@ -2888,8 +2954,9 @@
       "ReloadTime": 3.3,
       "Firemode": "Single",
       "DropdownDescription": "Ammo: 7.62mm • DMG Mult: 2x • DMG: 200",
-      
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0
     }
   }
 }

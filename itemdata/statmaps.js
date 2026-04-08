@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const INPUT_FILE = "./Oils.json";
+const INPUT_FILE = "./OilsScrolls.json";
 const OUTPUT_FILE = "./output.json";
 
 const data = JSON.parse(fs.readFileSync(INPUT_FILE, "utf8"));
@@ -40,7 +40,8 @@ function getStatValue(obj, statName) {
 
     for (const field of fields) {
         if (obj[field] !== undefined && obj[field] !== 0) {
-            return obj[field];
+
+            return Math.abs(obj[field]);
         }
     }
 
@@ -60,8 +61,9 @@ function parseFromDescription(desc, statName) {
 
     const match = desc.match(regex);
     if (!match) return 0;
-
-    return parseInt(match[1]) / 100;
+    
+    const sub = parseInt(match[1]) / 100;
+    return Math.abs(sub);
 }
 
 /**
@@ -73,7 +75,7 @@ function resolveScore(obj, typeField) {
     if (val === null) {
         val = parseFromDescription(obj.StatDescription, typeField);
     }
-
+console.log(val)
     return val || 0;
 }
 

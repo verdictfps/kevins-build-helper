@@ -52,7 +52,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       }
     },
     "Barrel": {
@@ -108,7 +110,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "None": {
         "Name": "None",
@@ -163,7 +167,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "A12C Muzzle Brake": {
         "Name": "A12C Muzzle Brake",
@@ -218,7 +224,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Aftermarket Haukland Silencer": {
         "Name": "Aftermarket Haukland Silencer",
@@ -273,7 +281,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Barrel Extension 2in": {
         "Name": "Barrel Extension 2in",
@@ -328,7 +338,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Barrel Extension 4in": {
         "Name": "Barrel Extension 4in",
@@ -383,7 +395,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Barrel Extension 6in": {
         "Name": "Barrel Extension 6in",
@@ -438,7 +452,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Breznik BMD (Tactical)": {
         "Name": "Breznik BMD (Tactical)",
@@ -493,7 +509,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Breznik BMD": {
         "Name": "Breznik BMD",
@@ -548,7 +566,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Haukland Flash Hider": {
         "Name": "Haukland Flash Hider",
@@ -603,7 +623,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Haukland Silencer": {
         "Name": "Haukland Silencer",
@@ -658,7 +680,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Improvised Barrel Extension": {
         "Name": "Improvised Barrel Extension",
@@ -713,7 +737,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "M87 Albatross Silencer": {
         "Name": "M87 Albatross Silencer",
@@ -768,7 +794,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Shrouded Barrel Extension": {
         "Name": "Shrouded Barrel Extension",
@@ -823,7 +851,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "SR-P3 Silencer": {
         "Name": "SR-P3 Silencer",
@@ -878,7 +908,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Warmage Compensator": {
         "Name": "Warmage Compensator",
@@ -933,7 +965,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       }
     },
     "Chamber": {
@@ -989,7 +1023,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Chamber Chisel - .50 BMG": {
         "Name": "Chamber Chisel - .50 BMG",
@@ -1046,7 +1082,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Chamber Chisel - 12Ga": {
         "Name": "Chamber Chisel - 12Ga",
@@ -1103,7 +1141,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Chamber Chisel - 5.56mm": {
         "Name": "Chamber Chisel - 5.56mm",
@@ -1160,7 +1200,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Chamber Chisel - 7.62mm": {
         "Name": "Chamber Chisel - 7.62mm",
@@ -1217,7 +1259,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Chamber Chisel - 9mm": {
         "Name": "Chamber Chisel - 9mm",
@@ -1274,7 +1318,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Chamber Chisel - Energy": {
         "Name": "Chamber Chisel - Energy",
@@ -1331,7 +1377,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       }
     },
     "Firemode": {
@@ -1387,7 +1435,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "None": {
         "Name": "None",
@@ -1442,7 +1492,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Gun Crank": {
         "Name": "Gun Crank",
@@ -1497,7 +1549,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Priming Bolt": {
         "Name": "Priming Bolt",
@@ -1552,7 +1606,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       }
     },
     "Laser": {
@@ -1608,7 +1664,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "None": {
         "Name": "None",
@@ -1663,7 +1721,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Green": {
         "Name": "Green",
@@ -1718,7 +1778,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Red": {
         "Name": "Red",
@@ -1773,7 +1835,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Yellow": {
         "Name": "Yellow",
@@ -1828,7 +1892,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       }
     },
     "Optic": {
@@ -1884,7 +1950,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "None": {
         "Name": "None",
@@ -1939,7 +2007,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Assault Scope": {
         "Name": "Assault Scope",
@@ -1994,7 +2064,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Compact Sight": {
         "Name": "Compact Sight",
@@ -2049,7 +2121,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Holographic Sight": {
         "Name": "Holographic Sight",
@@ -2104,7 +2178,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Hunting Scope": {
         "Name": "Hunting Scope",
@@ -2159,7 +2235,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Recon Scope": {
         "Name": "Recon Scope",
@@ -2214,7 +2292,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Reflex Sight": {
         "Name": "Reflex Sight",
@@ -2269,7 +2349,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       },
       "Sniper Scope": {
         "Name": "Sniper Scope",
@@ -2324,7 +2406,9 @@
         "DamageMultInd": 0,
         "DropdownDescription": "",
         "TypePositive1": "None",
-        "TypeNegative1": "None"
+        "TypeNegative1": "None",
+        "ScorePos": 0,
+        "ScoreNeg": 0
       }
     }
   }
