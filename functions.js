@@ -44,7 +44,7 @@ function mobileCSS() {
         document.getElementById("bigbuttondiv1").classList.add("bigbuttondiv-mobile");
 
         document.getElementById("bigbuttondiv2").classList.remove("bigbuttondiv");
-        document.getElementById("bigbuttondiv2").classList.add("bigbuttondiv-mobile");
+        document.getElementById("bigbuttondiv2").classList.add("bigbuttondiv2-mobile");
 
         document.getElementById("containerweapon").classList.remove("containerweapon");
         document.getElementById("containerweapon").classList.add("containerweapon-mobile");
@@ -100,6 +100,7 @@ function mobileCSS() {
         document.getElementById("extendstatbox").style.marginRight = "0px";
 
         document.getElementById("extendstatsbutton").style.minHeight = "0px";
+        document.getElementById("extendstatsbutton").style.height = "100%";
 
         document.getElementById("guncardgrid1").style.minHeight = "0px";
         document.getElementById("guncardgrid2").style.minHeight = "0px";

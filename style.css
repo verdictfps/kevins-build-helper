@@ -1247,7 +1247,14 @@ select.custom-dropdown {
 
 .bigbuttondiv-mobile {
     grid-column: span 1 !important;
-    height: auto !important;
+    height: 7vh !important;
+    min-height: 0 !important;
+    margin-top: 15px !important;
+}
+
+.bigbuttondiv2-mobile {
+    grid-column: span 1 !important;
+    height: 7vh !important;
     min-height: 0 !important;
     margin-top: 15px !important;
 }
