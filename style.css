@@ -219,6 +219,39 @@ body {
     min-height: 0 !important;
 }
 
+.build-chooser-button-div {
+    border-radius: 5px;
+    border: 1px solid #FDB142;
+    margin: 0px;
+    min-height: 5vh;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 0px !important;
+    padding: 0px !important;
+    
+}
+
+.build-chooser-button {
+    width: 20%;
+    height: 100%;
+    margin: 5px;
+    gap: 10px;
+    border: 5px inset #FDB142;
+}
+
+.build-chooser-button:hover {
+    width: 20%;
+    height: 100%;
+    margin: 5px;
+    gap: 10px;
+    border: 5px inset #ffc56e;
+}
+
+.build-chooser-button-selected {
+    border: 5px inset white;
+    text-shadow: 0px 0px 5px white;
+}
+
 #infoboxText {
     position: absolute;
     font-family: "Doto", sans-serif;
@@ -887,7 +920,7 @@ body {
     padding: 0px !important;
     border: 0px solid #FDB142 !important;
     height: auto !important;
-    min-height: 100vh !important;
+    min-height: 99vh !important;
 }
 
 .bigboxdeals-mobile {
@@ -1189,6 +1222,15 @@ select.custom-dropdown {
     max-height: 100vh !important;
 }
 
+@media (max-width: 1500px) {
+    .containerattachdiv .desc {
+        font-size: 0.6em !important;
+    }
+    #mainHeader {
+    font-size: 1em !important;
+  }
+}
+
 @media (max-width: 1700px) {
   .cardStat {
     font-size: 0.7vw !important;
@@ -1205,6 +1247,13 @@ select.custom-dropdown {
   .oils {
     font-size: 0.8vw !important;
   }
+  
+}
+
+@media (max-width: 2000px) {
+    .ench-card-header {
+        font-size: 0.8vw !important;
+    }
 }
 
 .card-cat-header {
@@ -1222,6 +1271,14 @@ select.custom-dropdown {
     width: 100% !important;
 }
 
+.ench-card-header {
+    font-size: 0.9vw;
+}
+
+.ench-card-header-mobile {
+    font-size: 2vw;
+}
+
 .target-container {
     margin: 0px !important;
     padding: 0px !important;
@@ -1230,7 +1287,7 @@ select.custom-dropdown {
     float: right !important;
     padding-right: 0px !important;
     height: auto;
-    max-height: 100vh;
+    min-height: 99vh;
 }
 
 .target-container-mobile {
@@ -1705,6 +1762,8 @@ select.custom-dropdown {
 .oilimages {
     background-repeat: no-repeat;
     background-position: bottom right;
+    min-height: 13vh;
+    font-size: 0.8vw;
 }
 
 .weaponimage {

@@ -81,6 +81,9 @@ function mobileCSS() {
         document.querySelectorAll(".buttonGeneral").forEach(e => {e.classList.add("buttonGeneral-mobile")});
         document.querySelectorAll(".buttonGeneral").forEach(e => {e.classList.remove("buttonGeneral")});
 
+        document.querySelectorAll(".ench-card-header").forEach(e => {e.classList.add("ench-card-header-mobile")});
+        document.querySelectorAll(".ench-card-header").forEach(e => {e.classList.remove("ench-card-header")});
+
         document.querySelectorAll(".custom-select-selected").forEach(e => {e.style.height = "40px", e.style.fontSize = "2em", e.style.border = "0.1em solid black"});
         document.querySelectorAll(".custom-select").forEach(e => {e.style.height = "60px"});
         document.querySelectorAll(".oils").forEach(e => {e.style.fontSize = "1.5em", e.style.width = "100%", e.style.flexWrap = "wrap"});
@@ -390,6 +393,106 @@ function resetTempSelections() {
     tempSelections.set("firemode", {Name: "None", Value: "none"});
     tempSelections.set("chamber", {Name: "None", Value: "none"});
 }
+
+const build1Selections = new Map();
+
+function resetBuild1Selections() {
+    console.info("KBH: Resetting Build 1 selections");
+    build1Selections.set("weapon", {Name: "P38 Dirk", Value: "p38-dirk"});
+    build1Selections.set("ench1", {Name: "None", Value: "none"});
+    build1Selections.set("ench2", {Name: "None", Value: "none"});
+    build1Selections.set("ench3", {Name: "None", Value: "none"});
+    build1Selections.set("ench4", {Name: "None", Value: "none"});
+    build1Selections.set("ench5", {Name: "None", Value: "none"});
+    build1Selections.set("barrel", {Name: "None", Value: "none"});
+    build1Selections.set("optic", {Name: "None", Value: "none"});
+    build1Selections.set("laser", {Name: "None", Value: "none"});
+    build1Selections.set("firemode", {Name: "None", Value: "none"});
+    build1Selections.set("chamber", {Name: "None", Value: "none"});
+
+    return;
+}
+const build2Selections = new Map();
+
+function resetBuild2Selections() {
+    console.info("KBH: Resetting Build 2 selections");
+    build2Selections.set("weapon", {Name: "P38 Dirk", Value: "p38-dirk"});
+    build2Selections.set("ench1", {Name: "None", Value: "none"});
+    build2Selections.set("ench2", {Name: "None", Value: "none"});
+    build2Selections.set("ench3", {Name: "None", Value: "none"});
+    build2Selections.set("ench4", {Name: "None", Value: "none"});
+    build2Selections.set("ench5", {Name: "None", Value: "none"});
+    build2Selections.set("barrel", {Name: "None", Value: "none"});
+    build2Selections.set("optic", {Name: "None", Value: "none"});
+    build2Selections.set("laser", {Name: "None", Value: "none"});
+    build2Selections.set("firemode", {Name: "None", Value: "none"});
+    build2Selections.set("chamber", {Name: "None", Value: "none"});
+
+    return;
+}
+const build3Selections = new Map();
+
+function resetBuild3Selections() {
+    console.info("KBH: Resetting Build 3 selections");
+    build3Selections.set("weapon", {Name: "P38 Dirk", Value: "p38-dirk"});
+    build3Selections.set("ench1", {Name: "None", Value: "none"});
+    build3Selections.set("ench2", {Name: "None", Value: "none"});
+    build3Selections.set("ench3", {Name: "None", Value: "none"});
+    build3Selections.set("ench4", {Name: "None", Value: "none"});
+    build3Selections.set("ench5", {Name: "None", Value: "none"});
+    build3Selections.set("barrel", {Name: "None", Value: "none"});
+    build3Selections.set("optic", {Name: "None", Value: "none"});
+    build3Selections.set("laser", {Name: "None", Value: "none"});
+    build3Selections.set("firemode", {Name: "None", Value: "none"});
+    build3Selections.set("chamber", {Name: "None", Value: "none"});
+
+    return;
+}
+const build4Selections = new Map();
+
+function resetBuild4Selections() {
+    console.info("KBH: Resetting Build 4 selections");
+    build4Selections.set("weapon", {Name: "P38 Dirk", Value: "p38-dirk"});
+    build4Selections.set("ench1", {Name: "None", Value: "none"});
+    build4Selections.set("ench2", {Name: "None", Value: "none"});
+    build4Selections.set("ench3", {Name: "None", Value: "none"});
+    build4Selections.set("ench4", {Name: "None", Value: "none"});
+    build4Selections.set("ench5", {Name: "None", Value: "none"});
+    build4Selections.set("barrel", {Name: "None", Value: "none"});
+    build4Selections.set("optic", {Name: "None", Value: "none"});
+    build4Selections.set("laser", {Name: "None", Value: "none"});
+    build4Selections.set("firemode", {Name: "None", Value: "none"});
+    build4Selections.set("chamber", {Name: "None", Value: "none"});
+
+    return;
+}
+const build5Selections = new Map();
+
+function resetBuild5Selections() {
+    console.info("KBH: Resetting Build 5 selections");
+    build5Selections.set("weapon", {Name: "P38 Dirk", Value: "p38-dirk"});
+    build5Selections.set("ench1", {Name: "None", Value: "none"});
+    build5Selections.set("ench2", {Name: "None", Value: "none"});
+    build5Selections.set("ench3", {Name: "None", Value: "none"});
+    build5Selections.set("ench4", {Name: "None", Value: "none"});
+    build5Selections.set("ench5", {Name: "None", Value: "none"});
+    build5Selections.set("barrel", {Name: "None", Value: "none"});
+    build5Selections.set("optic", {Name: "None", Value: "none"});
+    build5Selections.set("laser", {Name: "None", Value: "none"});
+    build5Selections.set("firemode", {Name: "None", Value: "none"});
+    build5Selections.set("chamber", {Name: "None", Value: "none"});
+
+    return;
+}
+
+resetBuild1Selections();
+resetBuild2Selections();
+resetBuild3Selections();
+resetBuild4Selections();
+resetBuild5Selections();
+
+let selectedBuild = 1;
+let buildSwapping = false;
 
 // Indexers //
 //#region
@@ -2027,6 +2130,86 @@ function setAllAsRandom() {
     randomizeAllOils();
 }
 
+function setBuildButton(sel) {
+    document.querySelectorAll(".build-chooser-button-selected").forEach(e => {e.classList.remove("build-chooser-button-selected")});
+    switch (sel) {
+        case 1:
+            document.getElementById("build-button-1").classList.add("build-chooser-button-selected");
+            break;
+        case 2:
+            document.getElementById("build-button-2").classList.add("build-chooser-button-selected");
+            break;
+        case 3:
+            document.getElementById("build-button-3").classList.add("build-chooser-button-selected");
+            break;
+        case 4:
+            document.getElementById("build-button-4").classList.add("build-chooser-button-selected");
+            break;
+        case 5:
+            document.getElementById("build-button-5").classList.add("build-chooser-button-selected");
+            break;
+    }
+}
+
+function setBuildAsActive(sel) {
+    if (selectedBuild === sel) {
+        return;
+    }
+    else {
+        buildSwapping = true;
+        setBuildButton(sel)
+
+        selectedBuild = sel;
+        let build = null;
+
+        switch (selectedBuild) {
+            case 1:
+                build = build1Selections;
+                break;
+            case 2:
+                build = build2Selections;
+                break;
+            case 3:
+                build = build3Selections;
+                break;
+            case 4:
+                build = build4Selections;
+                break;
+            case 5:
+                build = build5Selections;
+                break;
+        }
+        console.log(build)
+        if (shallNotPass === false) {
+            shallNotPass = true;
+
+            document.getElementById("weapons").setValue(build.get("weapon").Value);
+            document.getElementById("barrelselector").setValue(build.get("barrel").Value);
+            document.getElementById("opticselector").setValue(build.get("optic").Value);
+            document.getElementById("laserselector").setValue(build.get("laser").Value);
+            document.getElementById("chamberselector").setValue(build.get("chamber").Value);
+            document.getElementById("oils1selector").setValue(build.get("ench1").Value);
+            document.getElementById("oils2selector").setValue(build.get("ench2").Value);
+            document.getElementById("oils3selector").setValue(build.get("ench3").Value);
+            document.getElementById("oils4selector").setValue(build.get("ench4").Value);
+            document.getElementById("oils5selector").setValue(build.get("ench5").Value);
+            rollAggregator('weapon', 'weapons', 1, build.get("weapon").Value, "weapon");
+            rollAggregator('barrel', 'barrelselector', 1, build.get("barrel").Value, "attachment");
+            rollAggregator('optic', 'opticselector', 2, build.get("optic").Value, "attachment");
+            rollAggregator('laser', 'laserselector', 3, build.get("laser").Value, "attachment");
+            rollAggregator('chamber', 'chamberselector', 5, build.get("chamber").Value, "attachment");
+            rollAggregator('ench1', 'oils1selector', 1, build.get("ench1").Value, "ench");
+            rollAggregator('ench2', 'oils2selector', 2, build.get("ench2").Value, "ench");
+            rollAggregator('ench3', 'oils3selector', 3, build.get("ench3").Value, "ench");
+            rollAggregator('ench4', 'oils4selector', 4, build.get("ench4").Value, "ench");
+            rollAggregator('ench5', 'oils5selector', 5, build.get("ench5").Value, "ench");
+            
+            shallNotPass = false;
+            buildSwapping = false;
+        }
+    }
+}
+
 function commitAll() {
     commitSelection('weapon', 'weapons', 'weapon');
     commitAllEnch();
@@ -2845,18 +3028,19 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
 }
 
 function rollAggregator(flag, selector, selID, selValue, selType) {
-    
-    document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
-    document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
-    document.getElementById("oilstatcontainer3").classList.remove("spinanimation");
-    document.getElementById("oilstatcontainer4").classList.remove("spinanimation");
-    document.getElementById("oilstatcontainer5").classList.remove("spinanimation");
+    if (buildSwapping === false) {
+        document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
+        document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
+        document.getElementById("oilstatcontainer3").classList.remove("spinanimation");
+        document.getElementById("oilstatcontainer4").classList.remove("spinanimation");
+        document.getElementById("oilstatcontainer5").classList.remove("spinanimation");
 
-    document.getElementById("cardOil1Img").classList.remove("otherspinanimation");
-    document.getElementById("cardOil2Img").classList.remove("otherspinanimation");
-    document.getElementById("cardOil3Img").classList.remove("otherspinanimation");
-    document.getElementById("cardOil4Img").classList.remove("otherspinanimation");
-    document.getElementById("cardOil5Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil1Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil2Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil3Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil4Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil5Img").classList.remove("otherspinanimation");
+    }
 
     let select = null;
     if (flag.startsWith("ench")) {
@@ -2931,42 +3115,49 @@ function rollAggregator(flag, selector, selID, selValue, selType) {
     oilRemover();
     oilStats();
     oilCalcs(oilStatModifiers);
-
-    setTimeout(() => {
-    document.getElementById("oilstatcontainer1").classList.add("spinanimation");
-    document.getElementById("cardOil1Img").classList.add("otherspinanimation");
-    }, 10);
-    setTimeout(() => {
-    document.getElementById("oilstatcontainer2").classList.add("spinanimation");
-    document.getElementById("cardOil2Img").classList.add("otherspinanimation");
-    }, 110);
-    setTimeout(() => {
-    document.getElementById("oilstatcontainer3").classList.add("spinanimation");
-    document.getElementById("cardOil3Img").classList.add("otherspinanimation");
-    }, 210);
-    setTimeout(() => {
-    document.getElementById("oilstatcontainer4").classList.add("spinanimation");
-    document.getElementById("cardOil4Img").classList.add("otherspinanimation");
-    }, 310);
-    setTimeout(() => {
-    document.getElementById("oilstatcontainer5").classList.add("spinanimation");
-    document.getElementById("cardOil5Img").classList.add("otherspinanimation");
-    }, 410);
-    
-    
-    setTimeout(() => {
-    addName();
-
-    if (isMobile === false) {
-        scrollToTop();
+    if (buildSwapping === false) {
+        setTimeout(() => {
+        document.getElementById("oilstatcontainer1").classList.add("spinanimation");
+        document.getElementById("cardOil1Img").classList.add("otherspinanimation");
+        }, 10);
+        setTimeout(() => {
+        document.getElementById("oilstatcontainer2").classList.add("spinanimation");
+        document.getElementById("cardOil2Img").classList.add("otherspinanimation");
+        }, 110);
+        setTimeout(() => {
+        document.getElementById("oilstatcontainer3").classList.add("spinanimation");
+        document.getElementById("cardOil3Img").classList.add("otherspinanimation");
+        }, 210);
+        setTimeout(() => {
+        document.getElementById("oilstatcontainer4").classList.add("spinanimation");
+        document.getElementById("cardOil4Img").classList.add("otherspinanimation");
+        }, 310);
+        setTimeout(() => {
+        document.getElementById("oilstatcontainer5").classList.add("spinanimation");
+        document.getElementById("cardOil5Img").classList.add("otherspinanimation");
+        }, 410);
     }
-
-    }, 430);
     
-    setTimeout(() => {
-    encodeBuildAsUri();
-    setBuildAsMetadata();
-    }, 730);
+    if (buildSwapping === false) {
+        setTimeout(() => {
+            addName();
+            if (isMobile === false) {
+                scrollToTop();
+            }
+        }, 430);
+        setTimeout(() => {
+        encodeBuildAsUri();
+        setBuildAsMetadata();
+        }, 730);
+    }
+    else if (buildSwapping === true) {
+        addName();
+        if (isMobile === false) {
+            scrollToTop();
+        }
+        encodeBuildAsUri();
+        setBuildAsMetadata();
+    }
 }
 
 function rollOnSelect(evt) {
@@ -5103,6 +5294,75 @@ function addToCoreMap(flag, itemName, itemValue) {
                 break;
             case "chamber":
                 coreSelections.set("chamber", {Name: itemName, Value: itemValue});
+                break; 
+            case undefined:
+                break;  
+            case "all":
+                break;
+            default:
+        }
+        addToActiveBuild(flag, itemName, itemValue);
+    }
+    
+}
+
+function addToActiveBuild(flag, itemName, itemValue) {
+
+    let build = null;
+
+    switch (selectedBuild) {
+        case 1:
+            build = build1Selections;
+            break;
+        case 2:
+            build = build2Selections;
+            break;
+        case 3:
+            build = build3Selections;
+            break;
+        case 4:
+            build = build4Selections;
+            break;
+        case 5:
+            build = build5Selections;
+            break;
+    }
+
+    if (itemName !== null && itemValue !== null && itemValue !== "") {
+        
+        switch (flag) {
+            case "weapon":
+                build.set("weapon", {Name: itemName, Value: itemValue});
+                break;
+            case "ench1":
+                build.set("ench1", {Name: itemName, Value: itemValue});
+                break;
+            case "ench2":
+                build.set("ench2", {Name: itemName, Value: itemValue});
+                break;
+            case "ench3":
+                build.set("ench3", {Name: itemName, Value: itemValue});
+                break;
+            case "ench4":
+                build.set("ench4", {Name: itemName, Value: itemValue});
+                break;
+            case "ench5":
+                build.set("ench5", {Name: itemName, Value: itemValue});
+                break;
+            case "barrel":
+                build.set("barrel", {Name: itemName, Value: itemValue});
+                break;
+            case "optic":
+                build.set("optic", {Name: itemName, Value: itemValue});
+                break;
+            case "laser":
+                build.set("laser", {Name: itemName, Value: itemValue});
+                break;
+            case "firemode":
+                build.set("firemode", {Name: itemName, Value: itemValue});
+                break;
+            case "chamber":
+                build.set("chamber", {Name: itemName, Value: itemValue});
                 break; 
             case undefined:
                 break;  
