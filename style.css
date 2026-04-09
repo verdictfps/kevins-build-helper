@@ -225,31 +225,99 @@ body {
     margin: 0px;
     min-height: 5vh;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-right: 0px !important;
     padding: 0px !important;
-    
+    align-items: center;
+}
+
+.fa-clone {
+    font-size: 14px;
+    width: 100%;
+}
+
+.build-copy-button {
+    display: flex;
+    width: 20%;
+    height: 4vh;
+    margin: 5px;
+    margin-top: 0px;
+    gap: 10px;
+    border: 5px inset #FDB142;
+    border-radius: 0px;
+    align-items: center;
+}
+
+.build-copy-button:hover {
+    width: 20%;
+    height: 4vh;
+    margin: 5px;
+    margin-top: 0px;
+    gap: 10px;
+    border: 5px inset #ffc56e;
+    border-radius: 0px;
+    align-items: center;
+}
+.build-copy-button:active {
+    width: 20%;
+    height: 4vh;
+    border: 5px inset #FDB142;
+    align-items: center;
 }
 
 .build-chooser-button {
     width: 20%;
     height: 100%;
     margin: 5px;
+    margin-bottom: 0px;
     gap: 10px;
     border: 5px inset #FDB142;
+    border-radius: 5px 5px 0px 0px;
 }
 
 .build-chooser-button:hover {
     width: 20%;
     height: 100%;
     margin: 5px;
+    margin-bottom: 0px;
     gap: 10px;
     border: 5px inset #ffc56e;
+    border-radius: 5px 5px 0px 0px;
+}
+.build-chooser-button:active {
+    width: 20%;
+    height: 100%;
+    border: 5px inset #FDB142;
 }
 
 .build-chooser-button-selected {
     border: 5px inset white;
     text-shadow: 0px 0px 5px white;
+}
+
+.build-chooser-button-mobile {
+    width: 20%;
+    height: 5vh;
+    margin: 5px;
+    margin-bottom: 0px;
+    gap: 10px;
+    border: 5px inset #FDB142;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.build-chooser-button-mobile:hover {
+    width: 20%;
+    height: 5vh;
+    margin: 5px;
+    margin-bottom: 0px;
+    gap: 10px;
+    border: 5px inset #ffc56e;
+    border-radius: 5px 5px 0px 0px;
+}
+.build-chooser-button-mobile:active {
+    width: 20%;
+    height: 100%;
+    border: 5px inset #FDB142;
 }
 
 #infoboxText {
@@ -1759,11 +1827,24 @@ select.custom-dropdown {
     width: auto !important;
 }
 
+.cardOilDesc {
+    max-height: 10vh;
+}
+
 .oilimages {
     background-repeat: no-repeat;
     background-position: bottom right;
-    min-height: 13vh;
+    height: 8vh;
     font-size: 0.8vw;
+    min-height: 0;
+    
+}
+
+.oilimages-mobile {
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    min-height: 6vh;
+    font-size: 2vw;
 }
 
 .weaponimage {

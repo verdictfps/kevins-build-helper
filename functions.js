@@ -93,6 +93,12 @@ function mobileCSS() {
         document.querySelectorAll(".cardStat").forEach(e => {e.classList.add("cardStat-mobile")});
         document.querySelectorAll(".cardStat").forEach(e => {e.classList.remove("cardStat")});
 
+        document.querySelectorAll(".oilimages").forEach(e => {e.classList.add("oilimages-mobile")});
+        document.querySelectorAll(".oilimages").forEach(e => {e.classList.remove("oilimages")});
+
+        document.querySelectorAll(".build-chooser-button").forEach(e => {e.classList.add("build-chooser-button-mobile")});
+        document.querySelectorAll(".build-chooser-button").forEach(e => {e.classList.remove("build-chooser-button")});
+
         document.getElementById("weapsubdiv").style.height = "70px";
         document.getElementById("buttonRandomGun").style.width = "70px";
         document.getElementById("buttonResetGun").style.width = "70px";
@@ -2151,61 +2157,122 @@ function setBuildButton(sel) {
     }
 }
 
-function setBuildAsActive(sel) {
+function cloneBuild(sel) {
+    setBuildAsActive(sel, true);
+}
+
+function setBuildAsActive(sel, clone) {
     if (selectedBuild === sel) {
         return;
     }
     else {
-        buildSwapping = true;
-        setBuildButton(sel)
+        if (clone === true) {
+            buildSwapping = true;
 
-        selectedBuild = sel;
-        let build = null;
+            let build = null;
 
-        switch (selectedBuild) {
-            case 1:
-                build = build1Selections;
-                break;
-            case 2:
-                build = build2Selections;
-                break;
-            case 3:
-                build = build3Selections;
-                break;
-            case 4:
-                build = build4Selections;
-                break;
-            case 5:
-                build = build5Selections;
-                break;
-        }
-        console.log(build)
-        if (shallNotPass === false) {
-            shallNotPass = true;
-
-            document.getElementById("weapons").setValue(build.get("weapon").Value);
-            document.getElementById("barrelselector").setValue(build.get("barrel").Value);
-            document.getElementById("opticselector").setValue(build.get("optic").Value);
-            document.getElementById("laserselector").setValue(build.get("laser").Value);
-            document.getElementById("chamberselector").setValue(build.get("chamber").Value);
-            document.getElementById("oils1selector").setValue(build.get("ench1").Value);
-            document.getElementById("oils2selector").setValue(build.get("ench2").Value);
-            document.getElementById("oils3selector").setValue(build.get("ench3").Value);
-            document.getElementById("oils4selector").setValue(build.get("ench4").Value);
-            document.getElementById("oils5selector").setValue(build.get("ench5").Value);
-            rollAggregator('weapon', 'weapons', 1, build.get("weapon").Value, "weapon");
-            rollAggregator('barrel', 'barrelselector', 1, build.get("barrel").Value, "attachment");
-            rollAggregator('optic', 'opticselector', 2, build.get("optic").Value, "attachment");
-            rollAggregator('laser', 'laserselector', 3, build.get("laser").Value, "attachment");
-            rollAggregator('chamber', 'chamberselector', 5, build.get("chamber").Value, "attachment");
-            rollAggregator('ench1', 'oils1selector', 1, build.get("ench1").Value, "ench");
-            rollAggregator('ench2', 'oils2selector', 2, build.get("ench2").Value, "ench");
-            rollAggregator('ench3', 'oils3selector', 3, build.get("ench3").Value, "ench");
-            rollAggregator('ench4', 'oils4selector', 4, build.get("ench4").Value, "ench");
-            rollAggregator('ench5', 'oils5selector', 5, build.get("ench5").Value, "ench");
+            switch (selectedBuild) {
+                case 1:
+                    build = build1Selections;
+                    break;
+                case 2:
+                    build = build2Selections;
+                    break;
+                case 3:
+                    build = build3Selections;
+                    break;
+                case 4:
+                    build = build4Selections;
+                    break;
+                case 5:
+                    build = build5Selections;
+                    break;
+            }
             
-            shallNotPass = false;
-            buildSwapping = false;
+            selectedBuild = sel;
+            setBuildButton(sel)
+
+            if (shallNotPass === false) {
+                shallNotPass = true;
+
+                document.getElementById("weapons").setValue(build.get("weapon").Value);
+                document.getElementById("barrelselector").setValue(build.get("barrel").Value);
+                document.getElementById("opticselector").setValue(build.get("optic").Value);
+                document.getElementById("laserselector").setValue(build.get("laser").Value);
+                document.getElementById("chamberselector").setValue(build.get("chamber").Value);
+                document.getElementById("oils1selector").setValue(build.get("ench1").Value);
+                document.getElementById("oils2selector").setValue(build.get("ench2").Value);
+                document.getElementById("oils3selector").setValue(build.get("ench3").Value);
+                document.getElementById("oils4selector").setValue(build.get("ench4").Value);
+                document.getElementById("oils5selector").setValue(build.get("ench5").Value);
+                rollAggregator('weapon', 'weapons', 1, build.get("weapon").Value, "weapon");
+                rollAggregator('barrel', 'barrelselector', 1, build.get("barrel").Value, "attachment");
+                rollAggregator('optic', 'opticselector', 2, build.get("optic").Value, "attachment");
+                rollAggregator('laser', 'laserselector', 3, build.get("laser").Value, "attachment");
+                rollAggregator('chamber', 'chamberselector', 5, build.get("chamber").Value, "attachment");
+                rollAggregator('ench1', 'oils1selector', 1, build.get("ench1").Value, "ench");
+                rollAggregator('ench2', 'oils2selector', 2, build.get("ench2").Value, "ench");
+                rollAggregator('ench3', 'oils3selector', 3, build.get("ench3").Value, "ench");
+                rollAggregator('ench4', 'oils4selector', 4, build.get("ench4").Value, "ench");
+                rollAggregator('ench5', 'oils5selector', 5, build.get("ench5").Value, "ench");
+                
+                shallNotPass = false;
+                buildSwapping = false;
+            }
+
+        }
+        else {
+            buildSwapping = true;
+            setBuildButton(sel)
+
+            selectedBuild = sel;
+            let build = null;
+
+            switch (selectedBuild) {
+                case 1:
+                    build = build1Selections;
+                    break;
+                case 2:
+                    build = build2Selections;
+                    break;
+                case 3:
+                    build = build3Selections;
+                    break;
+                case 4:
+                    build = build4Selections;
+                    break;
+                case 5:
+                    build = build5Selections;
+                    break;
+            }
+            console.log(build)
+            if (shallNotPass === false) {
+                shallNotPass = true;
+
+                document.getElementById("weapons").setValue(build.get("weapon").Value);
+                document.getElementById("barrelselector").setValue(build.get("barrel").Value);
+                document.getElementById("opticselector").setValue(build.get("optic").Value);
+                document.getElementById("laserselector").setValue(build.get("laser").Value);
+                document.getElementById("chamberselector").setValue(build.get("chamber").Value);
+                document.getElementById("oils1selector").setValue(build.get("ench1").Value);
+                document.getElementById("oils2selector").setValue(build.get("ench2").Value);
+                document.getElementById("oils3selector").setValue(build.get("ench3").Value);
+                document.getElementById("oils4selector").setValue(build.get("ench4").Value);
+                document.getElementById("oils5selector").setValue(build.get("ench5").Value);
+                rollAggregator('weapon', 'weapons', 1, build.get("weapon").Value, "weapon");
+                rollAggregator('barrel', 'barrelselector', 1, build.get("barrel").Value, "attachment");
+                rollAggregator('optic', 'opticselector', 2, build.get("optic").Value, "attachment");
+                rollAggregator('laser', 'laserselector', 3, build.get("laser").Value, "attachment");
+                rollAggregator('chamber', 'chamberselector', 5, build.get("chamber").Value, "attachment");
+                rollAggregator('ench1', 'oils1selector', 1, build.get("ench1").Value, "ench");
+                rollAggregator('ench2', 'oils2selector', 2, build.get("ench2").Value, "ench");
+                rollAggregator('ench3', 'oils3selector', 3, build.get("ench3").Value, "ench");
+                rollAggregator('ench4', 'oils4selector', 4, build.get("ench4").Value, "ench");
+                rollAggregator('ench5', 'oils5selector', 5, build.get("ench5").Value, "ench");
+                
+                shallNotPass = false;
+                buildSwapping = false;
+            }
         }
     }
 }
@@ -5302,6 +5369,77 @@ function addToCoreMap(flag, itemName, itemValue) {
             default:
         }
         addToActiveBuild(flag, itemName, itemValue);
+    }
+    
+}
+let clone = 0;
+
+function cloneTo(flag, itemName, itemValue) {
+console.log(flag, itemName, itemValue)
+    let build = null;
+    console.log(clone)
+    switch (clone) {
+            case 1:
+                build = build1Selections;
+                break;
+            case 2:
+                build = build2Selections;
+                break;
+            case 3:
+                build = build3Selections;
+                break;
+            case 4:
+                build = build4Selections;
+                break;
+            case 5:
+                build = build5Selections;
+                break;
+        }
+
+    if (itemName !== null && itemValue !== null && itemValue !== "") {
+        
+        switch (flag) {
+            case "weapon":
+                console.log(build.get("weapon"))
+                build.set("weapon", {Name: itemName, Value: itemValue});
+                console.log(build.get("weapon"))
+                break;
+            case "ench1":
+                build.set("ench1", {Name: itemName, Value: itemValue});
+                break;
+            case "ench2":
+                build.set("ench2", {Name: itemName, Value: itemValue});
+                break;
+            case "ench3":
+                build.set("ench3", {Name: itemName, Value: itemValue});
+                break;
+            case "ench4":
+                build.set("ench4", {Name: itemName, Value: itemValue});
+                break;
+            case "ench5":
+                build.set("ench5", {Name: itemName, Value: itemValue});
+                break;
+            case "barrel":
+                build.set("barrel", {Name: itemName, Value: itemValue});
+                break;
+            case "optic":
+                build.set("optic", {Name: itemName, Value: itemValue});
+                break;
+            case "laser":
+                build.set("laser", {Name: itemName, Value: itemValue});
+                break;
+            case "firemode":
+                build.set("firemode", {Name: itemName, Value: itemValue});
+                break;
+            case "chamber":
+                build.set("chamber", {Name: itemName, Value: itemValue});
+                break; 
+            case undefined:
+                break;  
+            case "all":
+                break;
+            default:
+        }
     }
     
 }
