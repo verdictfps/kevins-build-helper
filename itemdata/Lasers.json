@@ -55,7 +55,8 @@
       "TypePositive1": "Laser",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "None None selected"
     },
     "Random Laser": {
       "Name": "Random Laser",
@@ -112,7 +113,8 @@
       "TypePositive1": "Laser",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Random Laser None selected"
     },
     "Green": {
       "Name": "Green",
@@ -169,7 +171,8 @@
       "TypePositive1": "Laser",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Green Move Accuracy: +50%"
     },
     "Red": {
       "Name": "Red",
@@ -226,7 +229,8 @@
       "TypePositive1": "Laser",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Red Move Accuracy: +50%"
     },
     "Yellow": {
       "Name": "Yellow",
@@ -283,7 +287,8 @@
       "TypePositive1": "Laser",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Yellow Move Accuracy: +50%"
     }
   }
 }

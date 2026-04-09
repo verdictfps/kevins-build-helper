@@ -1,54 +1,31 @@
+function stripHTML(str) {
+  console.log(str)
+  if (typeof str !== "string") return "";
+
+  return str
+    .replace(/<br\s*\/?>/gi, ", ") // convert line breaks
+    .replace(/<[^>]*>/g, "")       // remove all HTML tags
+    .replace(/\s+/g, " ")          // normalize whitespace
+    .trim();
+}
+
+function addSearchDescriptions(data) {
+  
+    for (const key in data.Optic) {
+        const oil = data.Optic[key];
+        oil.SearchDescription = oil.Name;
+        oil.SearchDescription += " ";
+        oil.SearchDescription += (stripHTML(oil.StatDescription));
+    }
+
+  return data;
+}
+
 const fs = require("fs");
 
-// Load your JSON file as a string
-let text = fs.readFileSync("Oils.json", "utf8");
+const inputFile = "./Optics.json";
+const oils = JSON.parse(fs.readFileSync(inputFile, "utf8"));
 
-const abbreviations = {
-  "Ammo Consume Chance": "AmCC",
-  "Bullet Drop": "BD",
-  "Recoil": "RCL",
-  "Reload Speed": "RLD",
-  "Movement Soeed": "MVSPD",
-  "Damage - Mult": "DMG%",
-  "Damage - Flat": "DMG+-",
-  "Extra Ammo Use Chance": "EAUC",
-  "Loot Chance": "LOOT",
-  "Bullet Speed": "BS",
-  "No Money Drops": "No Money",
-  "No Organ Drops": "No Organs",
-  "Jump Power": "JMP",
-  "Max Durability": "DUR",
-  "Bullet Bounciness": "BNCE",
-  "Move Accuracy": "MVACC",
-  "Bullet Bounces": "Bounces",
-  "Crit Chance": "CRIT",
-  "Penetrations": "PEN",
-  "Projectiles": "PROJ",
-  "Does not increase durability usage": "No Dur Use",
-  "Spread": "SPRD"
-};
+addSearchDescriptions(oils);
 
-text = text.replace(
-  /("DropdownDescription":\s*")([^"]*)(")/g,
-  (_, prefix, content, suffix) => {
-    const stats = content.split(" • ");
-
-    const newStats = stats.map(stat => {
-      // Match optional arrow, then stat name before colon
-      const match = stat.match(/^([▲▼]?\s*)([^:]+):/);
-      if (match) {
-        const arrow = match[1];        // ▲ or ▼ + space, if present
-        const name = match[2];         // actual stat name
-        if (abbreviations[name]) {
-          return stat.replace(/^([▲▼]?\s*)([^:]+):/, arrow + abbreviations[name] + ":");
-        }
-      }
-      return stat; // no change
-    });
-
-    return prefix + newStats.join(" • ") + suffix;
-  }
-);
-
-fs.writeFileSync("Oils.json", text, "utf8");
-console.log("✅ DropdownDescription updated with ▲/▼ arrows!");
+fs.writeFileSync("Optics.json", JSON.stringify(oils, null, 2));

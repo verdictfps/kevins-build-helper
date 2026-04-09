@@ -55,7 +55,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "None None selected"
     },
     "Random Barrel": {
       "Name": "Random Barrel",
@@ -112,7 +113,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Random Barrel None selected"
     },
     "A12C Muzzle Brake": {
       "Name": "A12C Muzzle Brake",
@@ -169,7 +171,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "A12C Muzzle Brake Recoil: -35%"
     },
     "Aftermarket Haukland Silencer": {
       "Name": "Aftermarket Haukland Silencer",
@@ -226,7 +229,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Aftermarket Haukland Silencer RPM: -15%, Crit Chance: +25%"
     },
     "Barrel Extension 2in": {
       "Name": "Barrel Extension 2in",
@@ -283,7 +287,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Barrel Extension 2in Bullet Speed: +10%, Spread: -10%"
     },
     "Barrel Extension 4in": {
       "Name": "Barrel Extension 4in",
@@ -340,7 +345,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Barrel Extension 4in Movement Speed: -10%, Bullet Speed: +25%, Spread: -25%"
     },
     "Barrel Extension 6in": {
       "Name": "Barrel Extension 6in",
@@ -397,7 +403,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Barrel Extension 6in Movement Speed: -20%, Bullet Speed: +50%, Spread: -50%"
     },
     "Breznik BMD (Tactical)": {
       "Name": "Breznik BMD (Tactical)",
@@ -454,7 +461,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Breznik BMD (Tactical) Recoil: -20%, Spread: -15%"
     },
     "Breznik BMD": {
       "Name": "Breznik BMD",
@@ -511,7 +519,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Breznik BMD Recoil: -20%, Spread: -15%"
     },
     "Haukland Flash Hider": {
       "Name": "Haukland Flash Hider",
@@ -568,7 +577,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Haukland Flash Hider Recoil: -20%, Spread: -0.2, Reduces muzzle flash"
     },
     "Haukland Silencer": {
       "Name": "Haukland Silencer",
@@ -625,7 +635,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Haukland Silencer RPM: -10%, Recoil: -10%, Crit Chance: +20%"
     },
     "Improvised Barrel Extension": {
       "Name": "Improvised Barrel Extension",
@@ -682,7 +693,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Improvised Barrel Extension Max Durability: +15%, Spread: +0.1"
     },
     "M87 Albatross Silencer": {
       "Name": "M87 Albatross Silencer",
@@ -739,7 +751,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "M87 Albatross Silencer Damage: +15%, Max Durability: -10%, Crit Chance: +15%, Spread: +0.25"
     },
     "Shrouded Barrel Extension": {
       "Name": "Shrouded Barrel Extension",
@@ -796,7 +809,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Shrouded Barrel Extension Max Durability: +20%, Spread: -0.2"
     },
     "SR-P3 Silencer": {
       "Name": "SR-P3 Silencer",
@@ -853,7 +867,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "SR-P3 Silencer RPM: -10%, Recoil: -20%, Crit Chance: +10%"
     },
     "Warmage Compensator": {
       "Name": "Warmage Compensator",
@@ -910,7 +925,8 @@
       "TypePositive1": "Barrel",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Warmage Compensator Recoil: -25%, Spread: -0.15"
     }
   }
 }

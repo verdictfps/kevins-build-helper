@@ -1,6 +1,6 @@
 
-let newField = "ScoreNeg";
-let newDefault = 0;
+let newField = "SearchDescription";
+let newDefault = "";
 
 function oilField() {
     console.log("-------------------Starting Oils-------------------");

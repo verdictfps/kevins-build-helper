@@ -55,7 +55,8 @@
       "TypePositive1": "Chamber",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "None "
     },
     "Random Chamber": {
       "Name": "Random Chamber",
@@ -112,7 +113,8 @@
       "TypePositive1": "Chamber",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Random Chamber "
     },
     "Chamber Chisel - .50 BMG": {
       "Name": "Chamber Chisel - .50 BMG",
@@ -172,7 +174,8 @@
       "TypePositive1": "Chamber",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Chamber Chisel - .50 BMG Base Damage: 200"
     },
     "Chamber Chisel - 12Ga": {
       "Name": "Chamber Chisel - 12Ga",
@@ -232,7 +235,8 @@
       "TypePositive1": "Chamber",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Chamber Chisel - 12Ga Base Damage: 20 x 8"
     },
     "Chamber Chisel - 5.56mm": {
       "Name": "Chamber Chisel - 5.56mm",
@@ -292,7 +296,8 @@
       "TypePositive1": "None",
       "TypeNegative1": "Chamber",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Chamber Chisel - 5.56mm Base Damage: 80"
     },
     "Chamber Chisel - 7.62mm": {
       "Name": "Chamber Chisel - 7.62mm",
@@ -352,7 +357,8 @@
       "TypePositive1": "Chamber",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Chamber Chisel - 7.62mm Base Damage: 100"
     },
     "Chamber Chisel - 9mm": {
       "Name": "Chamber Chisel - 9mm",
@@ -412,7 +418,8 @@
       "TypePositive1": "None",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Chamber Chisel - 9mm Base Damage: 60"
     },
     "Chamber Chisel - Energy": {
       "Name": "Chamber Chisel - Energy",
@@ -472,7 +479,8 @@
       "TypePositive1": "Chamber",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Chamber Chisel - Energy Base Damage: 50"
     }
   }
 }

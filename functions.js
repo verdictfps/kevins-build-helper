@@ -1364,10 +1364,10 @@ async function createProDropdown(select) {
     // ===== FILTERING =====
     function applyFilter(options) {
         if (!state.search) return options;
-
+        console.log(options)
         const s = state.search.toLowerCase();
         return options.filter(o =>
-            o.label.toLowerCase().includes(s)
+            o.meta.SearchDescription.toLowerCase().includes(s)
         );
     }
 
@@ -1656,7 +1656,6 @@ function closeAllGroupsExcept(exception) {
     // search
     searchInput.addEventListener("input", (e) => {
         state.search = e.target.value;
-        console.log(e.target);
         render();
         list.querySelectorAll(".custom-group").forEach(header => {
             if (header.dataset.collapsible === "true" && header.textContent !== "Barrel" && header.textContent !== "Optic" && header.textContent !== "Laser" && header.textContent !== "Firemode" && header.textContent !== "Chamber" && header.textContent !== "General") {

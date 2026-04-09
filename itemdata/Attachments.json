@@ -54,7 +54,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": ""
       }
     },
     "Barrel": {
@@ -112,7 +113,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "none None selected"
       },
       "None": {
         "Name": "None",
@@ -169,7 +171,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "None None selected"
       },
       "A12C Muzzle Brake": {
         "Name": "A12C Muzzle Brake",
@@ -226,7 +229,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "A12C Muzzle Brake Recoil: -35%"
       },
       "Aftermarket Haukland Silencer": {
         "Name": "Aftermarket Haukland Silencer",
@@ -283,7 +287,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Aftermarket Haukland Silencer RPM: -15%, Crit Chance: +25%"
       },
       "Barrel Extension 2in": {
         "Name": "Barrel Extension 2in",
@@ -340,7 +345,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Barrel Extension 2in Bullet Speed: +10%, Spread: -10%"
       },
       "Barrel Extension 4in": {
         "Name": "Barrel Extension 4in",
@@ -397,7 +403,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Barrel Extension 4in Movement Speed: -10%, Bullet Speed: +25%, Spread: -25%"
       },
       "Barrel Extension 6in": {
         "Name": "Barrel Extension 6in",
@@ -454,7 +461,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Barrel Extension 6in Movement Speed: -20%, Bullet Speed: +50%, Spread: -50%"
       },
       "Breznik BMD (Tactical)": {
         "Name": "Breznik BMD (Tactical)",
@@ -511,7 +519,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Breznik BMD (Tactical) Recoil: -20%, Spread: -15%"
       },
       "Breznik BMD": {
         "Name": "Breznik BMD",
@@ -568,7 +577,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Breznik BMD Recoil: -20%, Spread: -15%"
       },
       "Haukland Flash Hider": {
         "Name": "Haukland Flash Hider",
@@ -625,7 +635,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Haukland Flash Hider Recoil: -20%, Spread: -0.2, Reduces muzzle flash"
       },
       "Haukland Silencer": {
         "Name": "Haukland Silencer",
@@ -682,7 +693,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Haukland Silencer RPM: -10%, Recoil: -10%, Crit Chance: +20%"
       },
       "Improvised Barrel Extension": {
         "Name": "Improvised Barrel Extension",
@@ -739,7 +751,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Improvised Barrel Extension Max Durability: +15%, Spread: +0.1"
       },
       "M87 Albatross Silencer": {
         "Name": "M87 Albatross Silencer",
@@ -796,7 +809,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "M87 Albatross Silencer Damage: +15%, Max Durability: -10%, Crit Chance: +15%, Spread: +0.25"
       },
       "Shrouded Barrel Extension": {
         "Name": "Shrouded Barrel Extension",
@@ -853,7 +867,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Shrouded Barrel Extension Max Durability: +20%, Spread: -0.2"
       },
       "SR-P3 Silencer": {
         "Name": "SR-P3 Silencer",
@@ -910,7 +925,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "SR-P3 Silencer RPM: -10%, Recoil: -20%, Crit Chance: +10%"
       },
       "Warmage Compensator": {
         "Name": "Warmage Compensator",
@@ -967,7 +983,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Warmage Compensator Recoil: -25%, Spread: -0.15"
       }
     },
     "Chamber": {
@@ -1025,7 +1042,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "None "
       },
       "Chamber Chisel - .50 BMG": {
         "Name": "Chamber Chisel - .50 BMG",
@@ -1084,7 +1102,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Chamber Chisel - .50 BMG Base Damage: 200"
       },
       "Chamber Chisel - 12Ga": {
         "Name": "Chamber Chisel - 12Ga",
@@ -1143,7 +1162,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Chamber Chisel - 12Ga Base Damage: 20 x 8"
       },
       "Chamber Chisel - 5.56mm": {
         "Name": "Chamber Chisel - 5.56mm",
@@ -1202,7 +1222,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Chamber Chisel - 5.56mm Base Damage: 80"
       },
       "Chamber Chisel - 7.62mm": {
         "Name": "Chamber Chisel - 7.62mm",
@@ -1261,7 +1282,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Chamber Chisel - 7.62mm Base Damage: 100"
       },
       "Chamber Chisel - 9mm": {
         "Name": "Chamber Chisel - 9mm",
@@ -1320,7 +1342,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Chamber Chisel - 9mm Base Damage: 60"
       },
       "Chamber Chisel - Energy": {
         "Name": "Chamber Chisel - Energy",
@@ -1379,7 +1402,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Chamber Chisel - Energy Base Damage: 50"
       }
     },
     "Firemode": {
@@ -1437,7 +1461,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "none None selected"
       },
       "None": {
         "Name": "None",
@@ -1494,7 +1519,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "None None selected"
       },
       "Gun Crank": {
         "Name": "Gun Crank",
@@ -1551,7 +1577,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Gun Crank Firemode: Auto"
       },
       "Priming Bolt": {
         "Name": "Priming Bolt",
@@ -1608,7 +1635,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Priming Bolt Damage: +10%, Spread: -0.1, Firemode: Single"
       }
     },
     "Laser": {
@@ -1666,7 +1694,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "none None selected"
       },
       "None": {
         "Name": "None",
@@ -1723,7 +1752,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "None None selected"
       },
       "Green": {
         "Name": "Green",
@@ -1780,7 +1810,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Green Move Acc: +50%"
       },
       "Red": {
         "Name": "Red",
@@ -1837,7 +1868,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Red Move Acc: +50%"
       },
       "Yellow": {
         "Name": "Yellow",
@@ -1894,7 +1926,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Yellow Move Acc: +50%"
       }
     },
     "Optic": {
@@ -1952,7 +1985,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "none None selected"
       },
       "None": {
         "Name": "None",
@@ -2009,7 +2043,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "None None selected"
       },
       "Assault Scope": {
         "Name": "Assault Scope",
@@ -2066,7 +2101,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Assault Scope ADS Crit Chance: +20%, Zoom: 4x"
       },
       "Compact Sight": {
         "Name": "Compact Sight",
@@ -2123,7 +2159,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Compact Sight ADS Crit Chance: +20%, Zoom: 2x"
       },
       "Holographic Sight": {
         "Name": "Holographic Sight",
@@ -2180,7 +2217,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Holographic Sight ADS Crit Chance: +10%, Zoom: 1x"
       },
       "Hunting Scope": {
         "Name": "Hunting Scope",
@@ -2237,7 +2275,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Hunting Scope ADS Crit Chance: +25%, Zoom: 8x"
       },
       "Recon Scope": {
         "Name": "Recon Scope",
@@ -2294,7 +2333,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Recon Scope ADS Crit Chance: +10%, Zoom: 12x"
       },
       "Reflex Sight": {
         "Name": "Reflex Sight",
@@ -2351,7 +2391,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Reflex Sight ADS Crit Chance: +15%, Zoom: 1x"
       },
       "Sniper Scope": {
         "Name": "Sniper Scope",
@@ -2408,7 +2449,8 @@
         "TypePositive1": "None",
         "TypeNegative1": "None",
         "ScorePos": 0,
-        "ScoreNeg": 0
+        "ScoreNeg": 0,
+        "SearchDescription": "Sniper Scope ADS Crit Chance: +30%, Zoom: 12x"
       }
     }
   }

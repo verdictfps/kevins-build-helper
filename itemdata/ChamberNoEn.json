@@ -52,8 +52,9 @@
         "ScrollField": "None",
         "DamageMultInd": 0,
         "DropdownDescription": "",
-      "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+        "TypePositive1": "Chamber",
+        "TypeNegative1": "None",
+        "SearchDescription": "None "
       },
     "Random Chamber": {
       "Name": "Random Chamber",
@@ -108,7 +109,8 @@
       "DamageMultInd": 0,
       "DropdownDescription": "",
       "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "SearchDescription": "Random Chamber "
     },
     "Chamber Chisel - .50 BMG": {
       "Name": "Chamber Chisel - .50 BMG",
@@ -166,7 +168,8 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Base Damage: 200",
       "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "SearchDescription": "Chamber Chisel - .50 BMG Base Damage: 200"
     },
     "Chamber Chisel - 12Ga": {
       "Name": "Chamber Chisel - 12Ga",
@@ -224,7 +227,8 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Base Damage: 20 x 8",
       "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "SearchDescription": "Chamber Chisel - 12Ga Base Damage: 20 x 8"
     },
     "Chamber Chisel - 5.56mm": {
       "Name": "Chamber Chisel - 5.56mm",
@@ -282,7 +286,8 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Base Damage: 80",
       "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "SearchDescription": "Chamber Chisel - 5.56mm Base Damage: 80"
     },
     "Chamber Chisel - 7.62mm": {
       "Name": "Chamber Chisel - 7.62mm",
@@ -340,7 +345,8 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Base Damage: 100",
       "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "SearchDescription": "Chamber Chisel - 7.62mm Base Damage: 100"
     },
     "Chamber Chisel - 9mm": {
       "Name": "Chamber Chisel - 9mm",
@@ -398,7 +404,8 @@
       "DamageMultInd": 0,
       "DropdownDescription": "Base Damage: 60",
       "TypePositive1": "Chamber",
-      "TypeNegative1": "None"
+      "TypeNegative1": "None",
+      "SearchDescription": "Chamber Chisel - 9mm Base Damage: 60"
     }
   }
 }

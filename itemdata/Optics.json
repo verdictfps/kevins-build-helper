@@ -55,7 +55,8 @@
       "TypePositive1": "Optic",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "None None selected"
     },
     "Random Optic": {
       "Name": "Random Optic",
@@ -112,7 +113,8 @@
       "TypePositive1": "Optic",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Random Optic None selected"
     },
     "Assault Scope": {
       "Name": "Assault Scope",
@@ -169,7 +171,8 @@
       "TypePositive1": "Optic",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Assault Scope ADS Crit Chance: +20%, Zoom: 4x"
     },
     "Compact Sight": {
       "Name": "Compact Sight",
@@ -226,7 +229,8 @@
       "TypePositive1": "Optic",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Compact Sight ADS Crit Chance: +20%, Zoom: 2x"
     },
     "Holographic Sight": {
       "Name": "Holographic Sight",
@@ -283,7 +287,8 @@
       "TypePositive1": "Optic",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Holographic Sight ADS Crit Chance: +10%, Zoom: 1x"
     },
     "Hunting Scope": {
       "Name": "Hunting Scope",
@@ -340,7 +345,8 @@
       "TypePositive1": "Optic",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Hunting Scope ADS Crit Chance: +25%, Zoom: 8x"
     },
     "Recon Scope": {
       "Name": "Recon Scope",
@@ -397,7 +403,8 @@
       "TypePositive1": "Optic",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Recon Scope ADS Crit Chance: +10%, Zoom: 12x"
     },
     "Reflex Sight": {
       "Name": "Reflex Sight",
@@ -454,7 +461,8 @@
       "TypePositive1": "Optic",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Reflex Sight ADS Crit Chance: +15%, Zoom: 1x"
     },
     "Sniper Scope": {
       "Name": "Sniper Scope",
@@ -511,7 +519,8 @@
       "TypePositive1": "Optic",
       "TypeNegative1": "None",
       "ScorePos": 0,
-      "ScoreNeg": 0
+      "ScoreNeg": 0,
+      "SearchDescription": "Sniper Scope ADS Crit Chance: +30%, Zoom: 12x"
     }
   }
 }
