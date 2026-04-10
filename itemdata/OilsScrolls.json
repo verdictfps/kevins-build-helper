@@ -53,7 +53,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "none None selected"
+      "SearchDescription": "none None selected",
+      "DupeFilter": false
     },
     "Default": {
       "Name": "Default",
@@ -108,7 +109,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Default None selected"
+      "SearchDescription": "Default None selected",
+      "DupeFilter": false
     },
     "Random Enchantment": {
       "Name": "Random Enchantment",
@@ -117,7 +119,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Enchantment "
+      "SearchDescription": "Random Enchantment ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Scroll": {
       "Name": "Random Scroll",
@@ -126,7 +130,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Scroll "
+      "SearchDescription": "Random Scroll ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random T1 Scroll": {
       "Name": "Random T1 Scroll",
@@ -135,7 +141,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random T1 Scroll "
+      "SearchDescription": "Random T1 Scroll ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random T2 Scroll": {
       "Name": "Random T2 Scroll",
@@ -144,7 +152,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random T2 Scroll "
+      "SearchDescription": "Random T2 Scroll ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Oil": {
       "Name": "Random Oil",
@@ -153,7 +163,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Oil "
+      "SearchDescription": "Random Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Base Crit Chance Oil": {
       "Name": "Random Base Crit Chance Oil",
@@ -162,7 +174,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Base Crit Chance Oil "
+      "SearchDescription": "Random Base Crit Chance Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Bullet Bounce Oil": {
       "Name": "Random Bullet Bounce Oil",
@@ -171,7 +185,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Bullet Bounce Oil "
+      "SearchDescription": "Random Bullet Bounce Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Bullet Speed Oil": {
       "Name": "Random Bullet Speed Oil",
@@ -180,7 +196,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Bullet Speed Oil "
+      "SearchDescription": "Random Bullet Speed Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Damage - Flat Oil": {
       "Name": "Random Damage - Flat Oil",
@@ -189,7 +207,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Damage - Flat Oil "
+      "SearchDescription": "Random Damage - Flat Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Damage - Mult Oil": {
       "Name": "Random Damage - Mult Oil",
@@ -198,7 +218,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Damage - Mult Oil "
+      "SearchDescription": "Random Damage - Mult Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Max Durability Oil": {
       "Name": "Random Max Durability Oil",
@@ -207,7 +229,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Max Durability Oil "
+      "SearchDescription": "Random Max Durability Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Penetration Oil": {
       "Name": "Random Penetration Oil",
@@ -216,7 +240,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Penetration Oil "
+      "SearchDescription": "Random Penetration Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Projectiles Oil": {
       "Name": "Random Projectiles Oil",
@@ -225,7 +251,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Projectiles Oil "
+      "SearchDescription": "Random Projectiles Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Recoil Oil": {
       "Name": "Random Recoil Oil",
@@ -234,7 +262,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Recoil Oil "
+      "SearchDescription": "Random Recoil Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Reload Speed Oil": {
       "Name": "Random Reload Speed Oil",
@@ -243,7 +273,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Reload Speed Oil "
+      "SearchDescription": "Random Reload Speed Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random RPM Oil": {
       "Name": "Random RPM Oil",
@@ -252,7 +284,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random RPM Oil "
+      "SearchDescription": "Random RPM Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Spread Oil": {
       "Name": "Random Spread Oil",
@@ -261,7 +295,9 @@
       "ScorePos": 0,
       "ScoreNeg": 0,
       "DropdownDescription": "",
-      "SearchDescription": "Random Spread Oil "
+      "SearchDescription": "Random Spread Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "None": {
       "Name": "None",
@@ -318,7 +354,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "None None selected"
+      "SearchDescription": "None None selected",
+      "DupeFilter": false
     },
     "Scroll of Dark": {
       "Name": "Scroll of Dark",
@@ -375,7 +412,8 @@
       "TypeNegative1": "Scrolls - Tier 1",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Dark Damage: -80%, Chance to blind targets: 100%"
+      "SearchDescription": "Scroll of Dark Damage: -80%, Chance to blind targets: 100%",
+      "DupeFilter": false
     },
     "Scroll of Earth": {
       "Name": "Scroll of Earth",
@@ -432,7 +470,8 @@
       "TypeNegative1": "Scrolls - Tier 1",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Earth Chance to stun target"
+      "SearchDescription": "Scroll of Earth Chance to stun target",
+      "DupeFilter": false
     },
     "Scroll of Embers": {
       "Name": "Scroll of Embers",
@@ -489,7 +528,8 @@
       "TypeNegative1": "Scrolls - Tier 1",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Embers Chance to set target on fire"
+      "SearchDescription": "Scroll of Embers Chance to set target on fire",
+      "DupeFilter": false
     },
     "Scroll of Frostbite": {
       "Name": "Scroll of Frostbite",
@@ -546,7 +586,8 @@
       "TypeNegative1": "Scrolls - Tier 1",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Frostbite Freezes target"
+      "SearchDescription": "Scroll of Frostbite Freezes target",
+      "DupeFilter": false
     },
     "Scroll of Toxic Lobotomy": {
       "Name": "Scroll of Toxic Lobotomy",
@@ -603,7 +644,8 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Toxic Lobotomy Headshot damage +200%, Always drop organs on hit, Durability Loss +350%, Railgun"
+      "SearchDescription": "Scroll of Toxic Lobotomy Headshot damage +200%, Always drop organs on hit, Durability Loss +350%, Railgun",
+      "DupeFilter": false
     },
     "Scroll of Light": {
       "Name": "Scroll of Light",
@@ -660,7 +702,8 @@
       "TypeNegative1": "Scrolls - Tier 1",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Light Railgun, Bullets penetrate +999, Penetration damage multiplier -50%, RPM: -50%"
+      "SearchDescription": "Scroll of Light Railgun, Bullets penetrate +999, Penetration damage multiplier -50%, RPM: -50%",
+      "DupeFilter": false
     },
     "Scroll of Holy Fire": {
       "Name": "Scroll of Holy Fire",
@@ -717,7 +760,8 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Holy Fire Railgun, Bullets penetrate +999, Penetration damage multiplier +50%, RPM: -50%"
+      "SearchDescription": "Scroll of Holy Fire Railgun, Bullets penetrate +999, Penetration damage multiplier +50%, RPM: -50%",
+      "DupeFilter": false
     },
     "Scroll of Nature": {
       "Name": "Scroll of Nature",
@@ -774,7 +818,8 @@
       "TypeNegative1": "Scrolls - Tier 1",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Nature Chance to root target"
+      "SearchDescription": "Scroll of Nature Chance to root target",
+      "DupeFilter": false
     },
     "Scroll of Plague": {
       "Name": "Scroll of Plague",
@@ -831,7 +876,8 @@
       "TypeNegative1": "Scrolls - Tier 1",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Plague Bullets apply poison"
+      "SearchDescription": "Scroll of Plague Bullets apply poison",
+      "DupeFilter": false
     },
     "Scroll of Surge": {
       "Name": "Scroll of Surge",
@@ -888,7 +934,8 @@
       "TypeNegative1": "Scrolls - Tier 1",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Surge Chance to electrocute target"
+      "SearchDescription": "Scroll of Surge Chance to electrocute target",
+      "DupeFilter": false
     },
     "Scroll of Water": {
       "Name": "Scroll of Water",
@@ -945,7 +992,8 @@
       "TypeNegative1": "Scrolls - Tier 1",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Water Makes target wet, Damage: -99%, Bullet Drop: +5"
+      "SearchDescription": "Scroll of Water Makes target wet, Damage: -99%, Bullet Drop: +5",
+      "DupeFilter": false
     },
     "Scroll of Aftershock": {
       "Name": "Scroll of Aftershock",
@@ -1002,7 +1050,8 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Aftershock Adds chance to shock the area on hit, stunning nearby units."
+      "SearchDescription": "Scroll of Aftershock Adds chance to shock the area on hit, stunning nearby units.",
+      "DupeFilter": false
     },
     "Scroll of Chain Lightning": {
       "Name": "Scroll of Chain Lightning",
@@ -1059,7 +1108,8 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Chain Lightning Adds a chance of spawning a bolt that electrocutes and spreads to nearby enemies."
+      "SearchDescription": "Scroll of Chain Lightning Adds a chance of spawning a bolt that electrocutes and spreads to nearby enemies.",
+      "DupeFilter": false
     },
     "Scroll of Chaos Strike": {
       "Name": "Scroll of Chaos Strike",
@@ -1116,7 +1166,8 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Chaos Strike Dark Damage +50, Chance to increase dark damage up to 250 total, Chance to stun target, Swap places with target, Bigger Bullets"
+      "SearchDescription": "Scroll of Chaos Strike Dark Damage +50, Chance to increase dark damage up to 250 total, Chance to stun target, Swap places with target, Bigger Bullets",
+      "DupeFilter": false
     },
     "Scroll of Charm": {
       "Name": "Scroll of Charm",
@@ -1173,7 +1224,8 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Charm Bullets get a chance to charm the target, making them fight for you."
+      "SearchDescription": "Scroll of Charm Bullets get a chance to charm the target, making them fight for you.",
+      "DupeFilter": false
     },
     "Scroll of Corpse Explosion": {
       "Name": "Scroll of Corpse Explosion",
@@ -1230,7 +1282,8 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Corpse Explosion Shooting corpses causes them to explode, Increase corpse explosion power per hit"
+      "SearchDescription": "Scroll of Corpse Explosion Shooting corpses causes them to explode, Increase corpse explosion power per hit",
+      "DupeFilter": false
     },
     "Scroll of Crusader": {
       "Name": "Scroll of Crusader",
@@ -1287,7 +1340,8 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Crusader Increases damage on target for every bullet hit."
+      "SearchDescription": "Scroll of Crusader Increases damage on target for every bullet hit.",
+      "DupeFilter": false
     },
     "Scroll of Explosions": {
       "Name": "Scroll of Explosions",
@@ -1344,7 +1398,8 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Explosions Bullets explode on impact"
+      "SearchDescription": "Scroll of Explosions Bullets explode on impact",
+      "DupeFilter": false
     },
     "Scroll of Fear": {
       "Name": "Scroll of Fear",
@@ -1401,7 +1456,8 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Fear Adds a chance to proc fear on target on hit."
+      "SearchDescription": "Scroll of Fear Adds a chance to proc fear on target on hit.",
+      "DupeFilter": false
     },
     "Scroll of Flame Thrower": {
       "Name": "Scroll of Flame Thrower",
@@ -1412,7 +1468,7 @@
       "ExtraAmmoUseChance": 0,
       "BaseCritChance": 0,
       "DamageAdd": 0,
-      "DamageMult": -0.86,
+      "DamageMult": 0,
       "CanADS": "Yes",
       "JumpPower": 0,
       "LootDropChance": 0,
@@ -1452,13 +1508,14 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfoflamethrower",
-      "DamageMultInd": 0,
+      "DamageMultInd": -0.86,
       "DropdownDescription": "",
       "TypePositive1": "Scrolls - Tier 2",
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Flame Thrower Spread +150%, Bullet speed -70%, More drag, Less force speed, Damage -86%, Converts into Flamethrower, More life time, Bullets bounce +1"
+      "SearchDescription": "Scroll of Flame Thrower Spread +150%, Bullet speed -70%, More drag, Less force speed, Damage -86%, Converts into Flamethrower, More life time, Bullets bounce +1",
+      "DupeFilter": false
     },
     "Scroll of Pesticide": {
       "Name": "Scroll of Pesticide",
@@ -1490,7 +1547,7 @@
       "BulletBounciness": 0.2,
       "MovingAccuracy": 0,
       "DurLossMult": 0,
-      "StatDescription": "Spread +150%<br>Bullet speed -70%<br>More drag<br>Less force speed<br>Damage -86%<br>Converts into poison sprayer<br>More life time<br>Bullets bounce +1",
+      "StatDescription": "<div style='margin: 0px; padding: 0px; border: 0px; display: grid; grid-auto-flow: column; background-color: transparent'><span>Spread +150%<br>Bullet speed -70%<br>More drag<br>Less force speed</span><br>Damage -86%<br>Converts into poison sprayer<br>More life time<br>Bullets bounce +1</span></div>",
       "ADSCritChance": 0,
       "Firemode": "None",
       "BulletSize": 0,
@@ -1515,7 +1572,8 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Pesticide Spread +150%, Bullet speed -70%, More drag, Less force speed, Damage -86%, Converts into poison sprayer, More life time, Bullets bounce +1"
+      "SearchDescription": "Scroll of Pesticide Spread +150%, Bullet speed -70%, More drag, Less force speed, Damage -86%, Converts into poison sprayer, More life time, Bullets bounce +1",
+      "DupeFilter": false
     },
     "Scroll of Holy Purge": {
       "Name": "Scroll of Holy Purge",
@@ -1572,7 +1630,8 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Holy Purge Weapon-based area damage: +10%, Blinds surrounding enemies as well as yourself, Durabiilty Loss: +250%, Do self damage on each bullet -10"
+      "SearchDescription": "Scroll of Holy Purge Weapon-based area damage: +10%, Blinds surrounding enemies as well as yourself, Durabiilty Loss: +250%, Do self damage on each bullet -10",
+      "DupeFilter": false
     },
     "Scroll of Lava": {
       "Name": "Scroll of Lava",
@@ -1628,7 +1687,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Lava Spawns lava on hit that burns targets., Bullet Drop: +25"
+      "SearchDescription": "Scroll of Lava Spawns lava on hit that burns targets., Bullet Drop: +25",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Least Resistance": {
       "Name": "Scroll of Least Resistance",
@@ -1684,7 +1745,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Least Resistance Homing bullets, Bullet Speed: -90%, Durability loss: +200%"
+      "SearchDescription": "Scroll of Least Resistance Homing bullets, Bullet Speed: -90%, Durability loss: +200%",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Noxiosa": {
       "Name": "Scroll of Noxiosa",
@@ -1740,7 +1803,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Noxiosa Creates a cloud of deadly poison on hit."
+      "SearchDescription": "Scroll of Noxiosa Creates a cloud of deadly poison on hit.",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Petrification": {
       "Name": "Scroll of Petrification",
@@ -1796,7 +1861,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Petrification Adds a chance to petrify a unit, turning it into stone. Petrified units cannot take direct bullet damage, and instead deflect incoming bullets."
+      "SearchDescription": "Scroll of Petrification Adds a chance to petrify a unit, turning it into stone. Petrified units cannot take direct bullet damage, and instead deflect incoming bullets.",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Petroleum": {
       "Name": "Scroll of Petroleum",
@@ -1852,7 +1919,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Petroleum Drenches the target in oil, Applies oil to target, Bullet Drop: +25"
+      "SearchDescription": "Scroll of Petroleum Drenches the target in oil, Applies oil to target, Bullet Drop: +25",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Poison Blood": {
       "Name": "Scroll of Poison Blood",
@@ -1908,7 +1977,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Poison Blood Creates puddles of poison beneath targets hit"
+      "SearchDescription": "Scroll of Poison Blood Creates puddles of poison beneath targets hit",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Prism": {
       "Name": "Scroll of Prism",
@@ -1964,7 +2035,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Prism Random elemental effect per projectile"
+      "SearchDescription": "Scroll of Prism Random elemental effect per projectile",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Rocket Launcher": {
       "Name": "Scroll of Rocket Launcher",
@@ -2020,7 +2093,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Rocket Launcher Bullet Drop: +10, Bullets become rockets that explode on impact"
+      "SearchDescription": "Scroll of Rocket Launcher Bullet Drop: +10, Bullets become rockets that explode on impact",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Slush": {
       "Name": "Scroll of Slush",
@@ -2076,7 +2151,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Slush Spawn frost puddles, Chance to solid freeze +10%, Bullet Drop: +40"
+      "SearchDescription": "Scroll of Slush Spawn frost puddles, Chance to solid freeze +10%, Bullet Drop: +40",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Sacrifice": {
       "Name": "Scroll of Sacrifice",
@@ -2132,7 +2209,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Sacrifice Self Damage: +5%, Damage: +100%"
+      "SearchDescription": "Scroll of Sacrifice Self Damage: +5%, Damage: +100%",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Storm Surge": {
       "Name": "Scroll of Storm Surge",
@@ -2188,7 +2267,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Storm Surge Creates a deadly discharge of electricity on hit that can damage multiple targets., Bullet Drop: +25"
+      "SearchDescription": "Scroll of Storm Surge Creates a deadly discharge of electricity on hit that can damage multiple targets., Bullet Drop: +25",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Thunderbolt": {
       "Name": "Scroll of Thunderbolt",
@@ -2244,7 +2325,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Thunderbolt Railgun, Electrocutes targets, Base RPM: -50%"
+      "SearchDescription": "Scroll of Thunderbolt Railgun, Electrocutes targets, Base RPM: -50%",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Voodoo": {
       "Name": "Scroll of Voodoo",
@@ -2300,7 +2383,9 @@
       "TypeNegative1": "Scrolls - Tier 2",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Scroll of Voodoo Bullets link targets together., Linked targets share a percentage of their damage taken."
+      "SearchDescription": "Scroll of Voodoo Bullets link targets together., Linked targets share a percentage of their damage taken.",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Action Oil": {
       "Name": "Action Oil",
@@ -2359,7 +2444,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.8,
       "ScoreNeg": 1,
-      "SearchDescription": "Action Oil Reload Speed: +80%, Recoil: +100%"
+      "SearchDescription": "Action Oil Reload Speed: +80%, Recoil: +100%",
+      "DupeFilter": false
     },
     "Add Damage Oil": {
       "Name": "Add Damage Oil",
@@ -2418,7 +2504,8 @@
       "DamageMultInd": 0,
       "ScorePos": 15,
       "ScoreNeg": 0,
-      "SearchDescription": "Add Damage Oil Damage - Flat: +15"
+      "SearchDescription": "Add Damage Oil Damage - Flat: +15",
+      "DupeFilter": false
     },
     "Aimless Oil": {
       "Name": "Aimless Oil",
@@ -2477,7 +2564,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0,
-      "SearchDescription": "Aimless Oil Crit Chance: +30%, Disables Aiming"
+      "SearchDescription": "Aimless Oil Crit Chance: +30%, Disables Aiming",
+      "DupeFilter": false
     },
     "Airsoft Oil": {
       "Name": "Airsoft Oil",
@@ -2536,7 +2624,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1.2,
       "ScoreNeg": 7,
-      "SearchDescription": "Airsoft Oil Reload Speed: +120%, Drag: +7, Damage - Flat: -15"
+      "SearchDescription": "Airsoft Oil Reload Speed: +120%, Drag: +7, Damage - Flat: -15",
+      "DupeFilter": false
     },
     "Altruistic Oil": {
       "Name": "Altruistic Oil",
@@ -2595,7 +2684,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.7,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Altruistic Oil Spread: -0.7, Loot Chance: -30%"
+      "SearchDescription": "Altruistic Oil Spread: -0.7, Loot Chance: -30%",
+      "DupeFilter": false
     },
     "Arkanoid Oil": {
       "Name": "Arkanoid Oil",
@@ -2654,7 +2744,8 @@
       "DamageMultInd": 0,
       "ScorePos": 10,
       "ScoreNeg": 0.8,
-      "SearchDescription": "Arkanoid Oil Bullet Bounces: +10, Bullet Speed: -80%"
+      "SearchDescription": "Arkanoid Oil Bullet Bounces: +10, Bullet Speed: -80%",
+      "DupeFilter": false
     },
     "Arrow Oil": {
       "Name": "Arrow Oil",
@@ -2713,7 +2804,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.8,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Arrow Oil Bullet Speed: +80%, Damage - Mult: -15%"
+      "SearchDescription": "Arrow Oil Bullet Speed: +80%, Damage - Mult: -15%",
+      "DupeFilter": false
     },
     "Artery Oil": {
       "Name": "Artery Oil",
@@ -2772,7 +2864,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.1,
       "ScoreNeg": 0,
-      "SearchDescription": "Artery Oil Crit Chance: +10%"
+      "SearchDescription": "Artery Oil Crit Chance: +10%",
+      "DupeFilter": false
     },
     "Artillery Oil": {
       "Name": "Artillery Oil",
@@ -2831,7 +2924,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 15,
-      "SearchDescription": "Artillery Oil Spread: -2, Bullet Drop: +15"
+      "SearchDescription": "Artillery Oil Spread: -2, Bullet Drop: +15",
+      "DupeFilter": false
     },
     "Ascetic Oil": {
       "Name": "Ascetic Oil",
@@ -2890,7 +2984,8 @@
       "DamageMultInd": 0,
       "ScorePos": 30,
       "ScoreNeg": 0,
-      "SearchDescription": "Ascetic Oil Damage - Flat: +30, No Money Drops"
+      "SearchDescription": "Ascetic Oil Damage - Flat: +30, No Money Drops",
+      "DupeFilter": false
     },
     "Assassin Dart Oil": {
       "Name": "Assassin Dart Oil",
@@ -2949,7 +3044,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.7,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Assassin Dart Oil Bullet Speed: +70%, Movement Speed: -25%"
+      "SearchDescription": "Assassin Dart Oil Bullet Speed: +70%, Movement Speed: -25%",
+      "DupeFilter": false
     },
     "Attack Speed Oil": {
       "Name": "Attack Speed Oil",
@@ -3008,7 +3104,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0,
-      "SearchDescription": "Attack Speed Oil RPM: +20%"
+      "SearchDescription": "Attack Speed Oil RPM: +20%",
+      "DupeFilter": false
     },
     "Axe Oil": {
       "Name": "Axe Oil",
@@ -3067,7 +3164,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 10,
-      "SearchDescription": "Axe Oil Crit Chance: +25%, Bullet Drop: +10"
+      "SearchDescription": "Axe Oil Crit Chance: +25%, Bullet Drop: +10",
+      "DupeFilter": false
     },
     "Bad Planet Oil": {
       "Name": "Bad Planet Oil",
@@ -3126,7 +3224,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Bad Planet Oil Penetrations: +2, Jump Power: -30%"
+      "SearchDescription": "Bad Planet Oil Penetrations: +2, Jump Power: -30%",
+      "DupeFilter": false
     },
     "Bandit Oil": {
       "Name": "Bandit Oil",
@@ -3185,7 +3284,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0,
-      "SearchDescription": "Bandit Oil Bullet Bounces: +2, No Money Drops"
+      "SearchDescription": "Bandit Oil Bullet Bounces: +2, No Money Drops",
+      "DupeFilter": false
     },
     "BB Oil": {
       "Name": "BB Oil",
@@ -3244,7 +3344,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0,
-      "SearchDescription": "BB Oil RPM: +30%"
+      "SearchDescription": "BB Oil RPM: +30%",
+      "DupeFilter": false
     },
     "Big Oil": {
       "Name": "Big Oil",
@@ -3303,7 +3404,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 20,
-      "SearchDescription": "Big Oil Bullet Speed: +20%, Damage - Flat: +35, Bullet Drop: +20"
+      "SearchDescription": "Big Oil Bullet Speed: +20%, Damage - Flat: +35, Bullet Drop: +20",
+      "DupeFilter": false
     },
     "Black Friday Oil": {
       "Name": "Black Friday Oil",
@@ -3362,7 +3464,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Black Friday Oil Projectiles: +200%, Damage - Mult: -30%, Max Durability: -30%, Spread: +30%"
+      "SearchDescription": "Black Friday Oil Projectiles: +200%, Damage - Mult: -30%, Max Durability: -30%, Spread: +30%",
+      "DupeFilter": false
     },
     "Blindfold Oil": {
       "Name": "Blindfold Oil",
@@ -3421,7 +3524,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 2,
-      "SearchDescription": "Blindfold Oil Crit Chance: +20%, Spread: +2"
+      "SearchDescription": "Blindfold Oil Crit Chance: +20%, Spread: +2",
+      "DupeFilter": false
     },
     "Blurt Oil": {
       "Name": "Blurt Oil",
@@ -3480,7 +3584,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.4,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Blurt Oil RPM: +40%, Bullet Speed: -20%"
+      "SearchDescription": "Blurt Oil RPM: +40%, Bullet Speed: -20%",
+      "DupeFilter": false
     },
     "Bolt Oil": {
       "Name": "Bolt Oil",
@@ -3539,7 +3644,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.6,
       "ScoreNeg": 15,
-      "SearchDescription": "Bolt Oil Bullet Speed: +60%, Damage - Flat: -15"
+      "SearchDescription": "Bolt Oil Bullet Speed: +60%, Damage - Flat: -15",
+      "DupeFilter": false
     },
     "Bombard Oil": {
       "Name": "Bombard Oil",
@@ -3598,7 +3704,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.1,
-      "SearchDescription": "Bombard Oil Projectiles: +200%, Damage - Mult: -10%, Spread: +1.4, Bullet Drop: +10"
+      "SearchDescription": "Bombard Oil Projectiles: +200%, Damage - Mult: -10%, Spread: +1.4, Bullet Drop: +10",
+      "DupeFilter": false
     },
     "Boomstick Oil": {
       "Name": "Boomstick Oil",
@@ -3657,7 +3764,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Boomstick Oil Projectiles: +200%, Disables Aiming, Damage - Mult: -25%, Recoil: +200%, Spread: +150%"
+      "SearchDescription": "Boomstick Oil Projectiles: +200%, Disables Aiming, Damage - Mult: -25%, Recoil: +200%, Spread: +150%",
+      "DupeFilter": false
     },
     "Boulder Oil": {
       "Name": "Boulder Oil",
@@ -3716,7 +3824,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 10,
-      "SearchDescription": "Boulder Oil Damage - Mult: +20%, Bullet Bounces: +1, Bullet Bounciness: +0.7, Bullet Drop: +10"
+      "SearchDescription": "Boulder Oil Damage - Mult: +20%, Bullet Bounces: +1, Bullet Bounciness: +0.7, Bullet Drop: +10",
+      "DupeFilter": false
     },
     "Bowl Oil": {
       "Name": "Bowl Oil",
@@ -3775,7 +3884,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.75,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Bowl Oil Spread: -0.75, Bullet Speed: -20%"
+      "SearchDescription": "Bowl Oil Spread: -0.75, Bullet Speed: -20%",
+      "DupeFilter": false
     },
     "Braced Oil": {
       "Name": "Braced Oil",
@@ -3834,7 +3944,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Braced Oil Recoil: -30%, Jump Power: -20%"
+      "SearchDescription": "Braced Oil Recoil: -30%, Jump Power: -20%",
+      "DupeFilter": false
     },
     "Brute Oil": {
       "Name": "Brute Oil",
@@ -3893,7 +4004,8 @@
       "DamageMultInd": 0,
       "ScorePos": 30,
       "ScoreNeg": 0.7,
-      "SearchDescription": "Brute Oil Damage - Flat: +30, Spread: +0.7"
+      "SearchDescription": "Brute Oil Damage - Flat: +30, Spread: +0.7",
+      "DupeFilter": false
     },
     "Bulk Oil": {
       "Name": "Bulk Oil",
@@ -3952,7 +4064,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.4,
       "ScoreNeg": 15,
-      "SearchDescription": "Bulk Oil Ammo Consume Chance: -40%, Bullet Drop: +15"
+      "SearchDescription": "Bulk Oil Ammo Consume Chance: -40%, Bullet Drop: +15",
+      "DupeFilter": false
     },
     "Bystander Oil": {
       "Name": "Bystander Oil",
@@ -4011,7 +4124,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0,
-      "SearchDescription": "Bystander Oil Penetrations: +2, Disables Aiming"
+      "SearchDescription": "Bystander Oil Penetrations: +2, Disables Aiming",
+      "DupeFilter": false
     },
     "Carefree Oil": {
       "Name": "Carefree Oil",
@@ -4070,7 +4184,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 1,
-      "SearchDescription": "Carefree Oil Ammo Consume Chance: -20%, Spread: +1"
+      "SearchDescription": "Carefree Oil Ammo Consume Chance: -20%, Spread: +1",
+      "DupeFilter": false
     },
     "Careful Oil": {
       "Name": "Careful Oil",
@@ -4129,7 +4244,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.7,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Careful Oil Spread: -0.7, RPM: -25%"
+      "SearchDescription": "Careful Oil Spread: -0.7, RPM: -25%",
+      "DupeFilter": false
     },
     "Careless Splitter Oil": {
       "Name": "Careless Splitter Oil",
@@ -4188,7 +4304,8 @@
       "DamageMultInd": 0,
       "ScorePos": 3,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Careless Splitter Oil Projectiles: +300%, Damage - Mult: -25%, Recoil: +200%, Max Durability: -75%, Spread: +200%"
+      "SearchDescription": "Careless Splitter Oil Projectiles: +300%, Damage - Mult: -25%, Recoil: +200%, Max Durability: -75%, Spread: +200%",
+      "DupeFilter": false
     },
     "Cartoon Oil": {
       "Name": "Cartoon Oil",
@@ -4247,7 +4364,8 @@
       "DamageMultInd": 0,
       "ScorePos": 6,
       "ScoreNeg": 2,
-      "SearchDescription": "Cartoon Oil Bullet Bounces: +6, Spread: +200%"
+      "SearchDescription": "Cartoon Oil Bullet Bounces: +6, Spread: +200%",
+      "DupeFilter": false
     },
     "Casual Oil": {
       "Name": "Casual Oil",
@@ -4306,7 +4424,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Casual Oil Recoil: -30%, Loot Chance: -20%"
+      "SearchDescription": "Casual Oil Recoil: -30%, Loot Chance: -20%",
+      "DupeFilter": false
     },
     "Cheap Oil": {
       "Name": "Cheap Oil",
@@ -4365,7 +4484,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Cheap Oil Ammo Consume Chance: -30%, Damage - Mult: -20%"
+      "SearchDescription": "Cheap Oil Ammo Consume Chance: -30%, Damage - Mult: -20%",
+      "DupeFilter": false
     },
     "Collateral Oil": {
       "Name": "Collateral Oil",
@@ -4424,7 +4544,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 1,
-      "SearchDescription": "Collateral Oil Penetrations: +2, Recoil: +100%"
+      "SearchDescription": "Collateral Oil Penetrations: +2, Recoil: +100%",
+      "DupeFilter": false
     },
     "Complicated Oil": {
       "Name": "Complicated Oil",
@@ -4483,7 +4604,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Complicated Oil Damage - Mult: +30%, Reload Speed: -25%"
+      "SearchDescription": "Complicated Oil Damage - Mult: +30%, Reload Speed: -25%",
+      "DupeFilter": false
     },
     "Compo Oil": {
       "Name": "Compo Oil",
@@ -4542,7 +4664,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1.6,
       "ScoreNeg": 0.6,
-      "SearchDescription": "Compo Oil Reload Speed: +160%, Recoil: -10%, Spread: -10%, Movement Speed: -60%"
+      "SearchDescription": "Compo Oil Reload Speed: +160%, Recoil: -10%, Spread: -10%, Movement Speed: -60%",
+      "DupeFilter": false
     },
     "Confidence Oil": {
       "Name": "Confidence Oil",
@@ -4601,7 +4724,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Confidence Oil Crit Chance: +20%, Reload Speed: -25%"
+      "SearchDescription": "Confidence Oil Crit Chance: +20%, Reload Speed: -25%",
+      "DupeFilter": false
     },
     "Considerate Oil": {
       "Name": "Considerate Oil",
@@ -4660,7 +4784,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 25,
-      "SearchDescription": "Considerate Oil Penetrations: +2, Damage - Flat: -25"
+      "SearchDescription": "Considerate Oil Penetrations: +2, Damage - Flat: -25",
+      "DupeFilter": false
     },
     "Contained Force Oil": {
       "Name": "Contained Force Oil",
@@ -4719,7 +4844,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.45,
       "ScoreNeg": 0.1,
-      "SearchDescription": "Contained Force Oil Recoil: -45%, Max Durability: -10%"
+      "SearchDescription": "Contained Force Oil Recoil: -45%, Max Durability: -10%",
+      "DupeFilter": false
     },
     "Critical Oil": {
       "Name": "Critical Oil",
@@ -4778,7 +4904,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.15,
       "ScoreNeg": 0,
-      "SearchDescription": "Critical Oil Crit Chance: +15%"
+      "SearchDescription": "Critical Oil Crit Chance: +15%",
+      "DupeFilter": false
     },
     "Cycle Oil": {
       "Name": "Cycle Oil",
@@ -4837,7 +4964,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.9,
       "ScoreNeg": 1,
-      "SearchDescription": "Cycle Oil Reload Speed: +90%, Spread: +1"
+      "SearchDescription": "Cycle Oil Reload Speed: +90%, Spread: +1",
+      "DupeFilter": false
     },
     "Damage Oil": {
       "Name": "Damage Oil",
@@ -4896,7 +5024,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0,
-      "SearchDescription": "Damage Oil Damage - Mult: +20%"
+      "SearchDescription": "Damage Oil Damage - Mult: +20%",
+      "DupeFilter": false
     },
     "Dart Oil": {
       "Name": "Dart Oil",
@@ -4955,7 +5084,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Dart Oil Bullet Speed: +50%, Jump Power: -20%"
+      "SearchDescription": "Dart Oil Bullet Speed: +50%, Jump Power: -20%",
+      "DupeFilter": false
     },
     "Dead Center Oil": {
       "Name": "Dead Center Oil",
@@ -5014,7 +5144,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 1,
-      "SearchDescription": "Dead Center Oil Spread: -2, Recoil: +1"
+      "SearchDescription": "Dead Center Oil Spread: -2, Recoil: +1",
+      "DupeFilter": false
     },
     "Delayed Hyper Tube Oil": {
       "Name": "Delayed Hyper Tube Oil",
@@ -5073,7 +5204,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Delayed Hyper Tube Oil Bullet Speed: +100%, RPM: -50%"
+      "SearchDescription": "Delayed Hyper Tube Oil Bullet Speed: +100%, RPM: -50%",
+      "DupeFilter": false
     },
     "Dense Oil": {
       "Name": "Dense Oil",
@@ -5132,7 +5264,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Dense Oil Max Durability: +30%, Jump Power: -20%, Does not increase durability usage"
+      "SearchDescription": "Dense Oil Max Durability: +30%, Jump Power: -20%, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Detune Oil": {
       "Name": "Detune Oil",
@@ -5191,7 +5324,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Detune Oil Max Durability: +50%, Damage - Mult: -25%, Does not increase durability usage"
+      "SearchDescription": "Detune Oil Max Durability: +50%, Damage - Mult: -25%, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Diesel Oil": {
       "Name": "Diesel Oil",
@@ -5250,7 +5384,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Diesel Oil Bullet Speed: +50%, Recoil: +30%"
+      "SearchDescription": "Diesel Oil Bullet Speed: +50%, Recoil: +30%",
+      "DupeFilter": false
     },
     "Discharge Oil": {
       "Name": "Discharge Oil",
@@ -5309,7 +5444,8 @@
       "DamageMultInd": 0,
       "ScorePos": 30,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Discharge Oil Damage - Flat: +30, Extra Ammo Use Chance: +30%"
+      "SearchDescription": "Discharge Oil Damage - Flat: +30, Extra Ammo Use Chance: +30%",
+      "DupeFilter": false
     },
     "Disposable Oil": {
       "Name": "Disposable Oil",
@@ -5368,7 +5504,8 @@
       "DamageMultInd": 0,
       "ScorePos": 50,
       "ScoreNeg": 0.75,
-      "SearchDescription": "Disposable Oil Damage - Flat: +50, Max Durability: -75%"
+      "SearchDescription": "Disposable Oil Damage - Flat: +50, Max Durability: -75%",
+      "DupeFilter": false
     },
     "Division Oil": {
       "Name": "Division Oil",
@@ -5427,7 +5564,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Division Oil Projectiles: +100%, Damage - Mult: -20%, Spread: +1.7"
+      "SearchDescription": "Division Oil Projectiles: +100%, Damage - Mult: -20%, Spread: +1.7",
+      "DupeFilter": false
     },
     "Do-over Oil": {
       "Name": "Do-over Oil",
@@ -5486,7 +5624,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Do-over Oil Ammo Consume Chance: -20%, RPM: -25%"
+      "SearchDescription": "Do-over Oil Ammo Consume Chance: -20%, RPM: -25%",
+      "DupeFilter": false
     },
     "Double Fire Oil": {
       "Name": "Double Fire Oil",
@@ -5545,7 +5684,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Double Fire Oil RPM: +50%, Extra Ammo Use Chance: +25%"
+      "SearchDescription": "Double Fire Oil RPM: +50%, Extra Ammo Use Chance: +25%",
+      "DupeFilter": false
     },
     "Double Lock Oil": {
       "Name": "Double Lock Oil",
@@ -5604,7 +5744,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Double Lock Oil Reload Speed: +50%, RPM: -20%"
+      "SearchDescription": "Double Lock Oil Reload Speed: +50%, RPM: -20%",
+      "DupeFilter": false
     },
     "Double Nothing Oil": {
       "Name": "Double Nothing Oil",
@@ -5663,7 +5804,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Double Nothing Oil Projectiles: +100%, Damage - Mult: -25%, Loot Chance: -100%, Spread: +0.7"
+      "SearchDescription": "Double Nothing Oil Projectiles: +100%, Damage - Mult: -25%, Loot Chance: -100%, Spread: +0.7",
+      "DupeFilter": false
     },
     "Dum Dum Oil": {
       "Name": "Dum Dum Oil",
@@ -5722,7 +5864,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0,
-      "SearchDescription": "Dum Dum Oil Damage - Mult: +20%, No Organ Drops"
+      "SearchDescription": "Dum Dum Oil Damage - Mult: +20%, No Organ Drops",
+      "DupeFilter": false
     },
     "Dynamic Oil": {
       "Name": "Dynamic Oil",
@@ -5781,7 +5924,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 15,
-      "SearchDescription": "Dynamic Oil Reload Speed: +100%, Damage - Flat: -15"
+      "SearchDescription": "Dynamic Oil Reload Speed: +100%, Damage - Flat: -15",
+      "DupeFilter": false
     },
     "Easy Oil": {
       "Name": "Easy Oil",
@@ -5840,7 +5984,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0,
-      "SearchDescription": "Easy Oil Recoil: -20%, No Money Drops"
+      "SearchDescription": "Easy Oil Recoil: -20%, No Money Drops",
+      "DupeFilter": false
     },
     "Easy Plop Oil": {
       "Name": "Easy Plop Oil",
@@ -5899,7 +6044,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.65,
       "ScoreNeg": 5,
-      "SearchDescription": "Easy Plop Oil Recoil: -65%, Bullet Drop: +5"
+      "SearchDescription": "Easy Plop Oil Recoil: -65%, Bullet Drop: +5",
+      "DupeFilter": false
     },
     "Elephant Oil": {
       "Name": "Elephant Oil",
@@ -5958,7 +6104,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Elephant Oil Projectiles: +200%, Damage - Mult: -25%, Recoil: +10%, Movement Speed: -50%, Spread: +200%, Bullet Drop: +10"
+      "SearchDescription": "Elephant Oil Projectiles: +200%, Damage - Mult: -25%, Recoil: +10%, Movement Speed: -50%, Spread: +200%, Bullet Drop: +10",
+      "DupeFilter": false
     },
     "Exotic Barrel Oil": {
       "Name": "Exotic Barrel Oil",
@@ -6017,7 +6164,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Exotic Barrel Oil Spread: -2, Max Durability: -25%"
+      "SearchDescription": "Exotic Barrel Oil Spread: -2, Max Durability: -25%",
+      "DupeFilter": false
     },
     "Expander Oil": {
       "Name": "Expander Oil",
@@ -6076,7 +6224,8 @@
       "DamageMultInd": 0,
       "ScorePos": 20,
       "ScoreNeg": 0,
-      "SearchDescription": "Expander Oil Damage - Flat: +20, No Organ Drops"
+      "SearchDescription": "Expander Oil Damage - Flat: +20, No Organ Drops",
+      "DupeFilter": false
     },
     "Extra Powder Oil": {
       "Name": "Extra Powder Oil",
@@ -6135,7 +6284,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Extra Powder Oil Bullet Speed: +50%, Reload Speed: -15%"
+      "SearchDescription": "Extra Powder Oil Bullet Speed: +50%, Reload Speed: -15%",
+      "DupeFilter": false
     },
     "Farsighted Oil": {
       "Name": "Farsighted Oil",
@@ -6194,7 +6344,8 @@
       "DamageMultInd": 0,
       "ScorePos": 3,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Farsighted Oil Penetrations: +3, Extra Ammo Use Chance: +30%"
+      "SearchDescription": "Farsighted Oil Penetrations: +3, Extra Ammo Use Chance: +30%",
+      "DupeFilter": false
     },
     "Fast Bet Oil": {
       "Name": "Fast Bet Oil",
@@ -6253,7 +6404,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.35,
       "ScoreNeg": 0,
-      "SearchDescription": "Fast Bet Oil Bullet Speed: +35%, No Money Drops"
+      "SearchDescription": "Fast Bet Oil Bullet Speed: +35%, No Money Drops",
+      "DupeFilter": false
     },
     "Feature Gun Oil": {
       "Name": "Feature Gun Oil",
@@ -6312,7 +6464,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0,
-      "SearchDescription": "Feature Gun Oil Max Durability: +30%, Disables Aiming, Does not increase durability usage"
+      "SearchDescription": "Feature Gun Oil Max Durability: +30%, Disables Aiming, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Fidget Lord Oil": {
       "Name": "Fidget Lord Oil",
@@ -6371,7 +6524,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1.4,
       "ScoreNeg": 0.4,
-      "SearchDescription": "Fidget Lord Oil Reload Speed: +140%, Movement Speed: -40%, Max Durability: -60%"
+      "SearchDescription": "Fidget Lord Oil Reload Speed: +140%, Movement Speed: -40%, Max Durability: -60%",
+      "DupeFilter": false
     },
     "Fidget Oil": {
       "Name": "Fidget Oil",
@@ -6430,7 +6584,8 @@
       "DamageMultInd": 0,
       "ScorePos": 20,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Fidget Oil Damage - Flat: +20, Reload Speed: -25%"
+      "SearchDescription": "Fidget Oil Damage - Flat: +20, Reload Speed: -25%",
+      "DupeFilter": false
     },
     "First Blood Oil": {
       "Name": "First Blood Oil",
@@ -6489,7 +6644,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 1,
-      "SearchDescription": "First Blood Oil Damage - Mult: +30%, Spread: +1"
+      "SearchDescription": "First Blood Oil Damage - Mult: +30%, Spread: +1",
+      "DupeFilter": false
     },
     "Flea Oil": {
       "Name": "Flea Oil",
@@ -6548,7 +6704,8 @@
       "DamageMultInd": 0,
       "ScorePos": 4,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Flea Oil Bullet Bounces: +4, Damage - Mult: -50%"
+      "SearchDescription": "Flea Oil Bullet Bounces: +4, Damage - Mult: -50%",
+      "DupeFilter": false
     },
     "Flow Funnel Oil": {
       "Name": "Flow Funnel Oil",
@@ -6607,7 +6764,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.65,
       "ScoreNeg": 3,
-      "SearchDescription": "Flow Funnel Oil Recoil: -65%, Spread: +3"
+      "SearchDescription": "Flow Funnel Oil Recoil: -65%, Spread: +3",
+      "DupeFilter": false
     },
     "Food Stamp Oil": {
       "Name": "Food Stamp Oil",
@@ -6666,7 +6824,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0,
-      "SearchDescription": "Food Stamp Oil Ammo Consume Chance: -20%, No Money Drops"
+      "SearchDescription": "Food Stamp Oil Ammo Consume Chance: -20%, No Money Drops",
+      "DupeFilter": false
     },
     "Fragile System Oil": {
       "Name": "Fragile System Oil",
@@ -6725,7 +6884,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Fragile System Oil RPM: +50%, Max Durability: -15%"
+      "SearchDescription": "Fragile System Oil RPM: +50%, Max Durability: -15%",
+      "DupeFilter": false
     },
     "Franciscan Oil": {
       "Name": "Franciscan Oil",
@@ -6784,7 +6944,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0,
-      "SearchDescription": "Franciscan Oil Damage - Mult: +20%, No Money Drops"
+      "SearchDescription": "Franciscan Oil Damage - Mult: +20%, No Money Drops",
+      "DupeFilter": false
     },
     "Frugal Oil": {
       "Name": "Frugal Oil",
@@ -6843,7 +7004,8 @@
       "DamageMultInd": 0,
       "ScorePos": 25,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Frugal Oil Damage - Flat: +25, Loot Chance: -50%"
+      "SearchDescription": "Frugal Oil Damage - Flat: +25, Loot Chance: -50%",
+      "DupeFilter": false
     },
     "Gambler Oil": {
       "Name": "Gambler Oil",
@@ -6902,7 +7064,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0.1,
-      "SearchDescription": "Gambler Oil Crit Chance: +20%, Damage - Mult: -10%"
+      "SearchDescription": "Gambler Oil Crit Chance: +20%, Damage - Mult: -10%",
+      "DupeFilter": false
     },
     "Gemini Oil": {
       "Name": "Gemini Oil",
@@ -6961,7 +7124,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0.7,
-      "SearchDescription": "Gemini Oil Projectiles: +100%, Spread: +0.7, Damage - Flat: -30"
+      "SearchDescription": "Gemini Oil Projectiles: +100%, Spread: +0.7, Damage - Flat: -30",
+      "DupeFilter": false
     },
     "Gentle Oil": {
       "Name": "Gentle Oil",
@@ -7020,7 +7184,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 0,
-      "SearchDescription": "Gentle Oil Max Durability: +25%, Does not increase durability usage"
+      "SearchDescription": "Gentle Oil Max Durability: +25%, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Glass Cannon Oil": {
       "Name": "Glass Cannon Oil",
@@ -7079,7 +7244,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Glass Cannon Oil Damage - Mult: +50%, Max Durability: -25%"
+      "SearchDescription": "Glass Cannon Oil Damage - Mult: +50%, Max Durability: -25%",
+      "DupeFilter": false
     },
     "Great Oil": {
       "Name": "Great Oil",
@@ -7138,7 +7304,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.6,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Great Oil Damage - Mult: +60%, Bullet Speed: -20%, Bullet Drop: +35"
+      "SearchDescription": "Great Oil Damage - Mult: +60%, Bullet Speed: -20%, Bullet Drop: +35",
+      "DupeFilter": false
     },
     "Grounded Oil": {
       "Name": "Grounded Oil",
@@ -7197,7 +7364,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Grounded Oil Damage - Mult: +25%, Jump Power: -15%"
+      "SearchDescription": "Grounded Oil Damage - Mult: +25%, Jump Power: -15%",
+      "DupeFilter": false
     },
     "Gunslinger Oil": {
       "Name": "Gunslinger Oil",
@@ -7256,7 +7424,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.75,
       "ScoreNeg": 0,
-      "SearchDescription": "Gunslinger Oil Reload Speed: +75%, Disables Aiming"
+      "SearchDescription": "Gunslinger Oil Reload Speed: +75%, Disables Aiming",
+      "DupeFilter": false
     },
     "Happy Accident Oil": {
       "Name": "Happy Accident Oil",
@@ -7315,7 +7484,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.15,
       "ScoreNeg": 0.4,
-      "SearchDescription": "Happy Accident Oil Crit Chance: +15%, Recoil: +40%"
+      "SearchDescription": "Happy Accident Oil Crit Chance: +15%, Recoil: +40%",
+      "DupeFilter": false
     },
     "Heavy Lead Oil": {
       "Name": "Heavy Lead Oil",
@@ -7374,7 +7544,8 @@
       "DamageMultInd": 0,
       "ScorePos": 4,
       "ScoreNeg": 20,
-      "SearchDescription": "Heavy Lead Oil Penetrations: +4, Bullet Drop: +20"
+      "SearchDescription": "Heavy Lead Oil Penetrations: +4, Bullet Drop: +20",
+      "DupeFilter": false
     },
     "Heavy Oil": {
       "Name": "Heavy Oil",
@@ -7433,7 +7604,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.6,
       "ScoreNeg": 10,
-      "SearchDescription": "Heavy Oil Damage - Mult: +60%, Bullet Drop: +10"
+      "SearchDescription": "Heavy Oil Damage - Mult: +60%, Bullet Drop: +10",
+      "DupeFilter": false
     },
     "Heavy Pockets Oil": {
       "Name": "Heavy Pockets Oil",
@@ -7492,7 +7664,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 1,
-      "SearchDescription": "Heavy Pockets Oil Ammo Consume Chance: -20%, Jump Power: -100%"
+      "SearchDescription": "Heavy Pockets Oil Ammo Consume Chance: -20%, Jump Power: -100%",
+      "DupeFilter": false
     },
     "Hefty Oil": {
       "Name": "Hefty Oil",
@@ -7551,7 +7724,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.45,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Hefty Oil Max Durability: +45%, Movement Speed: -20%, Does not increase durability usage"
+      "SearchDescription": "Hefty Oil Max Durability: +45%, Movement Speed: -20%, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Helium Oil": {
       "Name": "Helium Oil",
@@ -7610,7 +7784,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.4,
       "ScoreNeg": 0.4,
-      "SearchDescription": "Helium Oil Ammo Consume Chance: -40%, Bullet Speed: -40%"
+      "SearchDescription": "Helium Oil Ammo Consume Chance: -40%, Bullet Speed: -40%",
+      "DupeFilter": false
     },
     "High Grade Oil": {
       "Name": "High Grade Oil",
@@ -7669,7 +7844,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0,
-      "SearchDescription": "High Grade Oil Max Durability: +20%, Does not increase durability usage"
+      "SearchDescription": "High Grade Oil Max Durability: +20%, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Hip Blaster Oil": {
       "Name": "Hip Blaster Oil",
@@ -7728,7 +7904,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 0,
-      "SearchDescription": "Hip Blaster Oil Damage - Mult: +25%, Disables Aiming"
+      "SearchDescription": "Hip Blaster Oil Damage - Mult: +25%, Disables Aiming",
+      "DupeFilter": false
     },
     "Hip Marksman Oil": {
       "Name": "Hip Marksman Oil",
@@ -7787,7 +7964,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.8,
       "ScoreNeg": 0,
-      "SearchDescription": "Hip Marksman Oil Spread: -0.8, Disables Aiming"
+      "SearchDescription": "Hip Marksman Oil Spread: -0.8, Disables Aiming",
+      "DupeFilter": false
     },
     "Hoop Oil": {
       "Name": "Hoop Oil",
@@ -7846,7 +8024,8 @@
       "DamageMultInd": 0,
       "ScorePos": 4,
       "ScoreNeg": 10,
-      "SearchDescription": "Hoop Oil Bullet Bounces: +4, Bullet Drop: +10"
+      "SearchDescription": "Hoop Oil Bullet Bounces: +4, Bullet Drop: +10",
+      "DupeFilter": false
     },
     "Hunter Oil": {
       "Name": "Hunter Oil",
@@ -7905,7 +8084,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.15,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Hunter Oil Crit Chance: +15%, Movement Speed: -30%"
+      "SearchDescription": "Hunter Oil Crit Chance: +15%, Movement Speed: -30%",
+      "DupeFilter": false
     },
     "Hustler Oil": {
       "Name": "Hustler Oil",
@@ -7964,7 +8144,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 30,
-      "SearchDescription": "Hustler Oil Crit Chance: +25%, Damage - Flat: -30"
+      "SearchDescription": "Hustler Oil Crit Chance: +25%, Damage - Flat: -30",
+      "DupeFilter": false
     },
     "Hyper Lead Oil": {
       "Name": "Hyper Lead Oil",
@@ -8023,7 +8204,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.4,
       "ScoreNeg": 40,
-      "SearchDescription": "Hyper Lead Oil Damage - Mult: +40%, Bullet Speed: +100%, Bullet Drop: +40"
+      "SearchDescription": "Hyper Lead Oil Damage - Mult: +40%, Bullet Speed: +100%, Bullet Drop: +40",
+      "DupeFilter": false
     },
     "Imperfect Oil": {
       "Name": "Imperfect Oil",
@@ -8082,7 +8264,8 @@
       "DamageMultInd": 0,
       "ScorePos": 3,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Imperfect Oil Bullet Bounces: +3, Max Durability: -15%"
+      "SearchDescription": "Imperfect Oil Bullet Bounces: +3, Max Durability: -15%",
+      "DupeFilter": false
     },
     "Inconsiderate Oil": {
       "Name": "Inconsiderate Oil",
@@ -8141,7 +8324,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 2,
-      "SearchDescription": "Inconsiderate Oil Penetrations: +2, Spread: +2"
+      "SearchDescription": "Inconsiderate Oil Penetrations: +2, Spread: +2",
+      "DupeFilter": false
     },
     "Inherited Oil": {
       "Name": "Inherited Oil",
@@ -8200,7 +8384,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 1,
-      "SearchDescription": "Inherited Oil Max Durability: +50%, Loot Chance: -100%, Does not increase durability usage"
+      "SearchDescription": "Inherited Oil Max Durability: +50%, Loot Chance: -100%, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Instant Oil": {
       "Name": "Instant Oil",
@@ -8259,7 +8444,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1.5,
       "ScoreNeg": 0,
-      "SearchDescription": "Instant Oil Bullet Speed: +150%, Disables Aiming"
+      "SearchDescription": "Instant Oil Bullet Speed: +150%, Disables Aiming",
+      "DupeFilter": false
     },
     "Judgement Oil": {
       "Name": "Judgement Oil",
@@ -8318,7 +8504,8 @@
       "DamageMultInd": 0,
       "ScorePos": 25,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Judgement Oil Damage - Flat: +25, Movement Speed: -15%"
+      "SearchDescription": "Judgement Oil Damage - Flat: +25, Movement Speed: -15%",
+      "DupeFilter": false
     },
     "Jungian Oil": {
       "Name": "Jungian Oil",
@@ -8377,7 +8564,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Jungian Oil Penetrations: +2, Movement Speed: -15%"
+      "SearchDescription": "Jungian Oil Penetrations: +2, Movement Speed: -15%",
+      "DupeFilter": false
     },
     "Keep Oil": {
       "Name": "Keep Oil",
@@ -8436,7 +8624,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0,
-      "SearchDescription": "Keep Oil Ammo Consume Chance: -20%, No Organ Drops"
+      "SearchDescription": "Keep Oil Ammo Consume Chance: -20%, No Organ Drops",
+      "DupeFilter": false
     },
     "Kicker Oil": {
       "Name": "Kicker Oil",
@@ -8495,7 +8684,8 @@
       "DamageMultInd": 0,
       "ScorePos": 20,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Kicker Oil Damage - Flat: +20, Recoil: +50%"
+      "SearchDescription": "Kicker Oil Damage - Flat: +20, Recoil: +50%",
+      "DupeFilter": false
     },
     "Kinetic Oil": {
       "Name": "Kinetic Oil",
@@ -8554,7 +8744,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 20,
-      "SearchDescription": "Kinetic Oil Bullet Speed: +100%, Bullet Drop: +20"
+      "SearchDescription": "Kinetic Oil Bullet Speed: +100%, Bullet Drop: +20",
+      "DupeFilter": false
     },
     "Last Drop Oil": {
       "Name": "Last Drop Oil",
@@ -8613,7 +8804,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Last Drop Oil Ammo Consume Chance: -30%, Max Durability: -30%"
+      "SearchDescription": "Last Drop Oil Ammo Consume Chance: -30%, Max Durability: -30%",
+      "DupeFilter": false
     },
     "Late Boom Oil": {
       "Name": "Late Boom Oil",
@@ -8672,7 +8864,8 @@
       "DamageMultInd": 0,
       "ScorePos": 30,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Late Boom Oil Damage - Flat: +30, Bullet Speed: -30%"
+      "SearchDescription": "Late Boom Oil Damage - Flat: +30, Bullet Speed: -30%",
+      "DupeFilter": false
     },
     "Launcher Oil": {
       "Name": "Launcher Oil",
@@ -8731,7 +8924,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Launcher Oil Damage - Mult: +25%, RPM: -20%"
+      "SearchDescription": "Launcher Oil Damage - Mult: +25%, RPM: -20%",
+      "DupeFilter": false
     },
     "Lazy Oil": {
       "Name": "Lazy Oil",
@@ -8790,7 +8984,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Lazy Oil Bullet Bounces: +2, Reload Speed: -15%"
+      "SearchDescription": "Lazy Oil Bullet Bounces: +2, Reload Speed: -15%",
+      "DupeFilter": false
     },
     "Less Recoil Oil": {
       "Name": "Less Recoil Oil",
@@ -8849,7 +9044,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0,
-      "SearchDescription": "Less Recoil Oil Recoil: -20%"
+      "SearchDescription": "Less Recoil Oil Recoil: -20%",
+      "DupeFilter": false
     },
     "Lightweight Oil": {
       "Name": "Lightweight Oil",
@@ -8908,7 +9104,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Lightweight Oil RPM: +50%, Recoil: +50%"
+      "SearchDescription": "Lightweight Oil RPM: +50%, Recoil: +50%",
+      "DupeFilter": false
     },
     "Longshot Oil": {
       "Name": "Longshot Oil",
@@ -8967,7 +9164,8 @@
       "DamageMultInd": 0,
       "ScorePos": 3,
       "ScoreNeg": 0,
-      "SearchDescription": "Longshot Oil Bullet Bounces: +3, Disables Aiming"
+      "SearchDescription": "Longshot Oil Bullet Bounces: +3, Disables Aiming",
+      "DupeFilter": false
     },
     "Lost In Focus Oil": {
       "Name": "Lost In Focus Oil",
@@ -9026,7 +9224,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Lost In Focus Oil Spread: -2, Extra Ammo Use Chance: +30%"
+      "SearchDescription": "Lost In Focus Oil Spread: -2, Extra Ammo Use Chance: +30%",
+      "DupeFilter": false
     },
     "Low Roller Oil": {
       "Name": "Low Roller Oil",
@@ -9085,7 +9284,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.1,
       "ScoreNeg": 0,
-      "SearchDescription": "Low Roller Oil Crit Chance: +10%, No Money Drops"
+      "SearchDescription": "Low Roller Oil Crit Chance: +10%, No Money Drops",
+      "DupeFilter": false
     },
     "Machine Oil": {
       "Name": "Machine Oil",
@@ -9144,7 +9344,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.6,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Machine Oil RPM: +60%, Movement Speed: -30%"
+      "SearchDescription": "Machine Oil RPM: +60%, Movement Speed: -30%",
+      "DupeFilter": false
     },
     "Main Discipline Oil": {
       "Name": "Main Discipline Oil",
@@ -9203,7 +9404,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.8,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Main Discipline Oil Reload Speed: +80%, Loot Chance: -30%"
+      "SearchDescription": "Main Discipline Oil Reload Speed: +80%, Loot Chance: -30%",
+      "DupeFilter": false
     },
     "Main Focus Oil": {
       "Name": "Main Focus Oil",
@@ -9262,7 +9464,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0,
-      "SearchDescription": "Main Focus Oil Reload Speed: +50%, No Money Drops"
+      "SearchDescription": "Main Focus Oil Reload Speed: +50%, No Money Drops",
+      "DupeFilter": false
     },
     "Manifestation Oil": {
       "Name": "Manifestation Oil",
@@ -9321,7 +9524,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Manifestation Oil Crit Chance: +25%, Reload Speed: -50%"
+      "SearchDescription": "Manifestation Oil Crit Chance: +25%, Reload Speed: -50%",
+      "DupeFilter": false
     },
     "Matrix Oil": {
       "Name": "Matrix Oil",
@@ -9380,7 +9584,8 @@
       "DamageMultInd": 0,
       "ScorePos": 3,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Matrix Oil Projectiles: +300%, Damage - Mult: -30%, Bullet Speed: -90%, Drag: +40, Spread: +4"
+      "SearchDescription": "Matrix Oil Projectiles: +300%, Damage - Mult: -30%, Bullet Speed: -90%, Drag: +40, Spread: +4",
+      "DupeFilter": false
     },
     "Micro Wing Oil": {
       "Name": "Micro Wing Oil",
@@ -9439,7 +9644,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.8,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Micro Wing Oil Bullet Speed: +80%, Extra Ammo Use Chance: +20%"
+      "SearchDescription": "Micro Wing Oil Bullet Speed: +80%, Extra Ammo Use Chance: +20%",
+      "DupeFilter": false
     },
     "Modern Technology Oil": {
       "Name": "Modern Technology Oil",
@@ -9498,7 +9704,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.35,
       "ScoreNeg": 0.1,
-      "SearchDescription": "Modern Technology Oil Recoil: -35%, Extra Ammo Use Chance: +10%"
+      "SearchDescription": "Modern Technology Oil Recoil: -35%, Extra Ammo Use Chance: +10%",
+      "DupeFilter": false
     },
     "Mosquito Oil": {
       "Name": "Mosquito Oil",
@@ -9557,7 +9764,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.4,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Mosquito Oil Ammo Consume Chance: -40%, Damage - Mult: -15%, Bullet Speed: -30%"
+      "SearchDescription": "Mosquito Oil Ammo Consume Chance: -40%, Damage - Mult: -15%, Bullet Speed: -30%",
+      "DupeFilter": false
     },
     "Multichamber Oil": {
       "Name": "Multichamber Oil",
@@ -9616,7 +9824,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 1,
-      "SearchDescription": "Multichamber Oil Projectiles: +100%, Extra Ammo Use Chance: +100%, Spread: +100%"
+      "SearchDescription": "Multichamber Oil Projectiles: +100%, Extra Ammo Use Chance: +100%, Spread: +100%",
+      "DupeFilter": false
     },
     "Multishot Oil": {
       "Name": "Multishot Oil",
@@ -9675,7 +9884,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.7,
-      "SearchDescription": "Multishot Oil Projectiles: +200%, Damage - Mult: -70%, Spread: +40%"
+      "SearchDescription": "Multishot Oil Projectiles: +200%, Damage - Mult: -70%, Spread: +40%",
+      "DupeFilter": false
     },
     "Needleye Oil": {
       "Name": "Needleye Oil",
@@ -9734,7 +9944,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Needleye Oil Penetrations: +2, RPM: -25%"
+      "SearchDescription": "Needleye Oil Penetrations: +2, RPM: -25%",
+      "DupeFilter": false
     },
     "Nerf Oil": {
       "Name": "Nerf Oil",
@@ -9793,7 +10004,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1.2,
       "ScoreNeg": 0.1,
-      "SearchDescription": "Nerf Oil Reload Speed: +120%, Damage - Mult: -10%, Bullet Drop: +5"
+      "SearchDescription": "Nerf Oil Reload Speed: +120%, Damage - Mult: -10%, Bullet Drop: +5",
+      "DupeFilter": false
     },
     "No Look Oil": {
       "Name": "No Look Oil",
@@ -9852,7 +10064,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0,
-      "SearchDescription": "No Look Oil RPM: +30%, Disables Aiming"
+      "SearchDescription": "No Look Oil RPM: +30%, Disables Aiming",
+      "DupeFilter": false
     },
     "No Need Oil": {
       "Name": "No Need Oil",
@@ -9911,7 +10124,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.15,
       "ScoreNeg": 0.25,
-      "SearchDescription": "No Need Oil Crit Chance: +15%, Loot Chance: -25%"
+      "SearchDescription": "No Need Oil Crit Chance: +15%, Loot Chance: -25%",
+      "DupeFilter": false
     },
     "Out of the Box Oil": {
       "Name": "Out of the Box Oil",
@@ -9970,7 +10184,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Out of the Box Oil Crit Chance: +20%, Max Durability: -15%"
+      "SearchDescription": "Out of the Box Oil Crit Chance: +20%, Max Durability: -15%",
+      "DupeFilter": false
     },
     "Overclock Oil": {
       "Name": "Overclock Oil",
@@ -10029,7 +10244,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.4,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Overclock Oil Damage - Mult: +40%, Extra Ammo Use Chance: +30%"
+      "SearchDescription": "Overclock Oil Damage - Mult: +40%, Extra Ammo Use Chance: +30%",
+      "DupeFilter": false
     },
     "Overdose Oil": {
       "Name": "Overdose Oil",
@@ -10088,7 +10304,8 @@
       "DamageMultInd": 0,
       "ScorePos": 3,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Overdose Oil Penetrations: +3, Max Durability: -25%"
+      "SearchDescription": "Overdose Oil Penetrations: +3, Max Durability: -25%",
+      "DupeFilter": false
     },
     "Parallel Mag Oil": {
       "Name": "Parallel Mag Oil",
@@ -10147,7 +10364,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Parallel Mag Oil Projectiles: +100%, Reload Speed: -50%, Spread: +0.7"
+      "SearchDescription": "Parallel Mag Oil Projectiles: +100%, Reload Speed: -50%, Spread: +0.7",
+      "DupeFilter": false
     },
     "Peashooter Oil": {
       "Name": "Peashooter Oil",
@@ -10206,7 +10424,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 0,
-      "SearchDescription": "Peashooter Oil Recoil: -25%"
+      "SearchDescription": "Peashooter Oil Recoil: -25%",
+      "DupeFilter": false
     },
     "Penetration Oil": {
       "Name": "Penetration Oil",
@@ -10265,7 +10484,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0,
-      "SearchDescription": "Penetration Oil Penetrations: +1"
+      "SearchDescription": "Penetration Oil Penetrations: +1",
+      "DupeFilter": false
     },
     "Perfect Bounce Oil": {
       "Name": "Perfect Bounce Oil",
@@ -10324,7 +10544,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0,
-      "SearchDescription": "Perfect Bounce Oil Bullet Bounces: +1"
+      "SearchDescription": "Perfect Bounce Oil Bullet Bounces: +1",
+      "DupeFilter": false
     },
     "Perforate Oil": {
       "Name": "Perforate Oil",
@@ -10383,7 +10604,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 0,
-      "SearchDescription": "Perforate Oil RPM: +25%, No Organ Drops"
+      "SearchDescription": "Perforate Oil RPM: +25%, No Organ Drops",
+      "DupeFilter": false
     },
     "Plinker Oil": {
       "Name": "Plinker Oil",
@@ -10442,7 +10664,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.9,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Plinker Oil Spread: -0.9, Damage - Mult: -20%"
+      "SearchDescription": "Plinker Oil Spread: -0.9, Damage - Mult: -20%",
+      "DupeFilter": false
     },
     "Plop Back Oil": {
       "Name": "Plop Back Oil",
@@ -10501,7 +10724,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 1.25,
-      "SearchDescription": "Plop Back Oil Ammo Consume Chance: -20%, Recoil: +125%"
+      "SearchDescription": "Plop Back Oil Ammo Consume Chance: -20%, Recoil: +125%",
+      "DupeFilter": false
     },
     "Pool Oil": {
       "Name": "Pool Oil",
@@ -10560,7 +10784,8 @@
       "DamageMultInd": 0,
       "ScorePos": 5,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Pool Oil Bullet Bounces: +5, Movement Speed: -30%"
+      "SearchDescription": "Pool Oil Bullet Bounces: +5, Movement Speed: -30%",
+      "DupeFilter": false
     },
     "Potshot Oil": {
       "Name": "Potshot Oil",
@@ -10619,7 +10844,8 @@
       "DamageMultInd": 0,
       "ScorePos": 35,
       "ScoreNeg": 0,
-      "SearchDescription": "Potshot Oil Damage - Flat: +35, Disables Aiming"
+      "SearchDescription": "Potshot Oil Damage - Flat: +35, Disables Aiming",
+      "DupeFilter": false
     },
     "Puncher Oil": {
       "Name": "Puncher Oil",
@@ -10678,7 +10904,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 1.5,
-      "SearchDescription": "Puncher Oil Damage - Mult: +30%, Recoil: +150%"
+      "SearchDescription": "Puncher Oil Damage - Mult: +30%, Recoil: +150%",
+      "DupeFilter": false
     },
     "Puncture Oil": {
       "Name": "Puncture Oil",
@@ -10737,7 +10964,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.15,
       "ScoreNeg": 0,
-      "SearchDescription": "Puncture Oil Crit Chance: +15%, No Organ Drops"
+      "SearchDescription": "Puncture Oil Crit Chance: +15%, No Organ Drops",
+      "DupeFilter": false
     },
     "Purse Gun Oil": {
       "Name": "Purse Gun Oil",
@@ -10796,7 +11024,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.35,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Purse Gun Oil Recoil: -35%, Reload Speed: -30%"
+      "SearchDescription": "Purse Gun Oil Recoil: -35%, Reload Speed: -30%",
+      "DupeFilter": false
     },
     "Rapid Internals Oil": {
       "Name": "Rapid Internals Oil",
@@ -10855,7 +11084,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Rapid Internals Oil RPM: +50%, Damage - Mult: -15%"
+      "SearchDescription": "Rapid Internals Oil RPM: +50%, Damage - Mult: -15%",
+      "DupeFilter": false
     },
     "Ready Oil": {
       "Name": "Ready Oil",
@@ -10914,7 +11144,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.45,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Ready Oil Recoil: -45%, RPM: -30%"
+      "SearchDescription": "Ready Oil Recoil: -45%, RPM: -30%",
+      "DupeFilter": false
     },
     "Rebound Oil": {
       "Name": "Rebound Oil",
@@ -10973,7 +11204,8 @@
       "DamageMultInd": 0,
       "ScorePos": 3,
       "ScoreNeg": 15,
-      "SearchDescription": "Rebound Oil Bullet Bounces: +3, Damage - Flat: -15"
+      "SearchDescription": "Rebound Oil Bullet Bounces: +3, Damage - Flat: -15",
+      "DupeFilter": false
     },
     "Recycle Oil": {
       "Name": "Recycle Oil",
@@ -11032,7 +11264,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.15,
       "ScoreNeg": 0,
-      "SearchDescription": "Recycle Oil Ammo Consume Chance: -15%"
+      "SearchDescription": "Recycle Oil Ammo Consume Chance: -15%",
+      "DupeFilter": false
     },
     "Relax Oil": {
       "Name": "Relax Oil",
@@ -11091,7 +11324,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Relax Oil Recoil: -50%, Bullet Speed: -20%"
+      "SearchDescription": "Relax Oil Recoil: -50%, Bullet Speed: -20%",
+      "DupeFilter": false
     },
     "Release Oil": {
       "Name": "Release Oil",
@@ -11150,7 +11384,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.4,
       "ScoreNeg": 1.5,
-      "SearchDescription": "Release Oil Max Durability: +40%, Recoil: +150%, Does not increase durability usage"
+      "SearchDescription": "Release Oil Max Durability: +40%, Recoil: +150%, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Reload Oil": {
       "Name": "Reload Oil",
@@ -11209,7 +11444,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.4,
       "ScoreNeg": 0,
-      "SearchDescription": "Reload Oil Reload Speed: +40%"
+      "SearchDescription": "Reload Oil Reload Speed: +40%",
+      "DupeFilter": false
     },
     "Ricochet Oil": {
       "Name": "Ricochet Oil",
@@ -11268,7 +11504,8 @@
       "DamageMultInd": 0,
       "ScorePos": 3,
       "ScoreNeg": 0.1,
-      "SearchDescription": "Ricochet Oil Bullet Bounces: +3, Damage - Mult: -10%"
+      "SearchDescription": "Ricochet Oil Bullet Bounces: +3, Damage - Mult: -10%",
+      "DupeFilter": false
     },
     "Rigid System Oil": {
       "Name": "Rigid System Oil",
@@ -11327,7 +11564,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.4,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Rigid System Oil Max Durability: +40%, Extra Ammo Use Chance: +20%, Does not increase durability usage"
+      "SearchDescription": "Rigid System Oil Max Durability: +40%, Extra Ammo Use Chance: +20%, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Rigor Oil": {
       "Name": "Rigor Oil",
@@ -11386,7 +11624,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Rigor Oil Penetrations: +2, Bullet Speed: -50%"
+      "SearchDescription": "Rigor Oil Penetrations: +2, Bullet Speed: -50%",
+      "DupeFilter": false
     },
     "Robust Mechanics Oil": {
       "Name": "Robust Mechanics Oil",
@@ -11445,7 +11684,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.35,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Robust Mechanics Oil Max Durability: +35%, RPM: -25%, Does not increase durability usage"
+      "SearchDescription": "Robust Mechanics Oil Max Durability: +35%, RPM: -25%, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Rookie Oil": {
       "Name": "Rookie Oil",
@@ -11504,7 +11744,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.75,
-      "SearchDescription": "Rookie Oil RPM: +50%, Reload Speed: -75%"
+      "SearchDescription": "Rookie Oil RPM: +50%, Reload Speed: -75%",
+      "DupeFilter": false
     },
     "Rubber Oil": {
       "Name": "Rubber Oil",
@@ -11563,7 +11804,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 10,
-      "SearchDescription": "Rubber Oil Max Durability: +30%, Damage - Flat: -10, Does not increase durability usage"
+      "SearchDescription": "Rubber Oil Max Durability: +30%, Damage - Flat: -10, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Rush Job Oil": {
       "Name": "Rush Job Oil",
@@ -11622,7 +11864,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1.3,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Rush Job Oil Reload Speed: +130%, Extra Ammo Use Chance: +30%"
+      "SearchDescription": "Rush Job Oil Reload Speed: +130%, Extra Ammo Use Chance: +30%",
+      "DupeFilter": false
     },
     "Safety Oil": {
       "Name": "Safety Oil",
@@ -11681,7 +11924,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.45,
       "ScoreNeg": 0.08,
-      "SearchDescription": "Safety Oil Recoil: -45%, Damage - Mult: -8%"
+      "SearchDescription": "Safety Oil Recoil: -45%, Damage - Mult: -8%",
+      "DupeFilter": false
     },
     "Tetrus Oil": {
       "Name": "Tetrus Oil",
@@ -11740,7 +11984,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0.4,
-      "SearchDescription": "Tetrus Oil Ammo Consume Chance: -20%, Reload Speed: -40%"
+      "SearchDescription": "Tetrus Oil Ammo Consume Chance: -20%, Reload Speed: -40%",
+      "DupeFilter": false
     },
     "Saviour Oil": {
       "Name": "Saviour Oil",
@@ -11799,7 +12044,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 1,
-      "SearchDescription": "Saviour Oil Ammo Consume Chance: -30%, Loot Chance: -100%"
+      "SearchDescription": "Saviour Oil Ammo Consume Chance: -30%, Loot Chance: -100%",
+      "DupeFilter": false
     },
     "Scatter Oil": {
       "Name": "Scatter Oil",
@@ -11858,7 +12104,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Scatter Oil Projectiles: +100%, Damage - Mult: -15%, Spread: +1.7"
+      "SearchDescription": "Scatter Oil Projectiles: +100%, Damage - Mult: -15%, Spread: +1.7",
+      "DupeFilter": false
     },
     "Scramble Oil": {
       "Name": "Scramble Oil",
@@ -11917,7 +12164,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0,
-      "SearchDescription": "Scramble Oil Bullet Bounces: +2, No Organ Drops"
+      "SearchDescription": "Scramble Oil Bullet Bounces: +2, No Organ Drops",
+      "DupeFilter": false
     },
     "Seated Fit Oil": {
       "Name": "Seated Fit Oil",
@@ -11976,7 +12224,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.7,
       "ScoreNeg": 10,
-      "SearchDescription": "Seated Fit Oil Max Durability: +70%, Bullet Drop: +10, Does not increase durability usage"
+      "SearchDescription": "Seated Fit Oil Max Durability: +70%, Bullet Drop: +10, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Seated Oil": {
       "Name": "Seated Oil",
@@ -12035,7 +12284,8 @@
       "DamageMultInd": 0,
       "ScorePos": 30,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Seated Oil Damage - Flat: +30, Jump Power: -15%"
+      "SearchDescription": "Seated Oil Damage - Flat: +30, Jump Power: -15%",
+      "DupeFilter": false
     },
     "Sect Oil": {
       "Name": "Sect Oil",
@@ -12094,7 +12344,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0,
-      "SearchDescription": "Sect Oil Penetrations: +1, No Money Drops"
+      "SearchDescription": "Sect Oil Penetrations: +1, No Money Drops",
+      "DupeFilter": false
     },
     "Sender Oil": {
       "Name": "Sender Oil",
@@ -12153,7 +12404,8 @@
       "DamageMultInd": 0,
       "ScorePos": 25,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Sender Oil Damage - Flat: +25, RPM: -25%"
+      "SearchDescription": "Sender Oil Damage - Flat: +25, RPM: -25%",
+      "DupeFilter": false
     },
     "Sensible Oil": {
       "Name": "Sensible Oil",
@@ -12212,7 +12464,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 0,
-      "SearchDescription": "Sensible Oil Max Durability: +25%, No Organ Drops, Does not increase durability usage"
+      "SearchDescription": "Sensible Oil Max Durability: +25%, No Organ Drops, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Shaved Clip Oil": {
       "Name": "Shaved Clip Oil",
@@ -12271,7 +12524,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Shaved Clip Oil Reload Speed: +100%, Max Durability: -15%"
+      "SearchDescription": "Shaved Clip Oil Reload Speed: +100%, Max Durability: -15%",
+      "DupeFilter": false
     },
     "Shellman Oil": {
       "Name": "Shellman Oil",
@@ -12330,7 +12584,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.7,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Shellman Oil Spread: -0.7, Reload Speed: -25%"
+      "SearchDescription": "Shellman Oil Spread: -0.7, Reload Speed: -25%",
+      "DupeFilter": false
     },
     "Sherlock Oil": {
       "Name": "Sherlock Oil",
@@ -12389,7 +12644,8 @@
       "DamageMultInd": 0,
       "ScorePos": 5,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Sherlock Oil Bullet Bounces: +5, RPM: -50%"
+      "SearchDescription": "Sherlock Oil Bullet Bounces: +5, RPM: -50%",
+      "DupeFilter": false
     },
     "Shower Oil": {
       "Name": "Shower Oil",
@@ -12448,7 +12704,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.6,
       "ScoreNeg": 10,
-      "SearchDescription": "Shower Oil RPM: +60%, Bullet Drop: +10"
+      "SearchDescription": "Shower Oil RPM: +60%, Bullet Drop: +10",
+      "DupeFilter": false
     },
     "Shredder Oil": {
       "Name": "Shredder Oil",
@@ -12507,7 +12764,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Shredder Oil Projectiles: +100%, No Organ Drops, Damage - Mult: -20%, Spread: +1.7"
+      "SearchDescription": "Shredder Oil Projectiles: +100%, No Organ Drops, Damage - Mult: -20%, Spread: +1.7",
+      "DupeFilter": false
     },
     "Skip Oil": {
       "Name": "Skip Oil",
@@ -12566,7 +12824,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Skip Oil Bullet Bounces: +2, Loot Chance: -25%"
+      "SearchDescription": "Skip Oil Bullet Bounces: +2, Loot Chance: -25%",
+      "DupeFilter": false
     },
     "Slick Oil": {
       "Name": "Slick Oil",
@@ -12625,7 +12884,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.6,
       "ScoreNeg": 0.1,
-      "SearchDescription": "Slick Oil Spread: -0.6, Jump Power: -10%"
+      "SearchDescription": "Slick Oil Spread: -0.6, Jump Power: -10%",
+      "DupeFilter": false
     },
     "Slippy Coating Oil": {
       "Name": "Slippy Coating Oil",
@@ -12684,7 +12944,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 1,
-      "SearchDescription": "Slippy Coating Oil Max Durability: +30%, Spread: +1, Does not increase durability usage"
+      "SearchDescription": "Slippy Coating Oil Max Durability: +30%, Spread: +1, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Slotmachine Oil": {
       "Name": "Slotmachine Oil",
@@ -12743,7 +13004,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Slotmachine Oil Crit Chance: +25%, Extra Ammo Use Chance: +20%"
+      "SearchDescription": "Slotmachine Oil Crit Chance: +25%, Extra Ammo Use Chance: +20%",
+      "DupeFilter": false
     },
     "Slow Punch Oil": {
       "Name": "Slow Punch Oil",
@@ -12802,7 +13064,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Slow Punch Oil Damage - Mult: +50%, Bullet Speed: -50%"
+      "SearchDescription": "Slow Punch Oil Damage - Mult: +50%, Bullet Speed: -50%",
+      "DupeFilter": false
     },
     "Smart Bullet Oil": {
       "Name": "Smart Bullet Oil",
@@ -12861,7 +13124,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0.6,
-      "SearchDescription": "Smart Bullet Oil Crit Chance: +20%, Bullet Speed: -60%"
+      "SearchDescription": "Smart Bullet Oil Crit Chance: +20%, Bullet Speed: -60%",
+      "DupeFilter": false
     },
     "Soft Bullet Oil": {
       "Name": "Soft Bullet Oil",
@@ -12920,7 +13184,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Soft Bullet Oil Max Durability: +30%, Bullet Speed: -30%, Does not increase durability usage"
+      "SearchDescription": "Soft Bullet Oil Max Durability: +30%, Bullet Speed: -30%, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Solid Oil": {
       "Name": "Solid Oil",
@@ -12979,7 +13244,8 @@
       "DamageMultInd": 0,
       "ScorePos": 40,
       "ScoreNeg": 10,
-      "SearchDescription": "Solid Oil Damage - Flat: +40, Bullet Drop: +10"
+      "SearchDescription": "Solid Oil Damage - Flat: +40, Bullet Drop: +10",
+      "DupeFilter": false
     },
     "Spartan Oil": {
       "Name": "Spartan Oil",
@@ -13038,7 +13304,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.2,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Spartan Oil Damage - Mult: +20%, Loot Chance: -50%"
+      "SearchDescription": "Spartan Oil Damage - Mult: +20%, Loot Chance: -50%",
+      "DupeFilter": false
     },
     "Speed Trade Oil": {
       "Name": "Speed Trade Oil",
@@ -13097,7 +13364,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.8,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Speed Trade Oil Reload Speed: +80%, Bullet Speed: -30%"
+      "SearchDescription": "Speed Trade Oil Reload Speed: +80%, Bullet Speed: -30%",
+      "DupeFilter": false
     },
     "Spitter Oil": {
       "Name": "Spitter Oil",
@@ -13156,7 +13424,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.35,
       "ScoreNeg": 1,
-      "SearchDescription": "Spitter Oil RPM: +35%, Spread: +1"
+      "SearchDescription": "Spitter Oil RPM: +35%, Spread: +1",
+      "DupeFilter": false
     },
     "Spread Oil": {
       "Name": "Spread Oil",
@@ -13215,7 +13484,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0,
-      "SearchDescription": "Spread Oil Spread: -0.5"
+      "SearchDescription": "Spread Oil Spread: -0.5",
+      "DupeFilter": false
     },
     "Stability Oil": {
       "Name": "Stability Oil",
@@ -13274,7 +13544,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.45,
       "ScoreNeg": 10,
-      "SearchDescription": "Stability Oil Recoil: -45%, Damage - Flat: -10"
+      "SearchDescription": "Stability Oil Recoil: -45%, Damage - Flat: -10",
+      "DupeFilter": false
     },
     "Stable Hip Oil": {
       "Name": "Stable Hip Oil",
@@ -13333,7 +13604,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.62,
       "ScoreNeg": 0,
-      "SearchDescription": "Stable Hip Oil Recoil: -62%, Disables Aiming"
+      "SearchDescription": "Stable Hip Oil Recoil: -62%, Disables Aiming",
+      "DupeFilter": false
     },
     "Stationary Oil": {
       "Name": "Stationary Oil",
@@ -13392,7 +13664,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.8,
       "ScoreNeg": 0.9,
-      "SearchDescription": "Stationary Oil RPM: +80%, Recoil: -85%, Movement Speed: -90%, Jump Power: -90%"
+      "SearchDescription": "Stationary Oil RPM: +80%, Recoil: -85%, Movement Speed: -90%, Jump Power: -90%",
+      "DupeFilter": false
     },
     "Stiffy Fit Oil": {
       "Name": "Stiffy Fit Oil",
@@ -13451,7 +13724,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.45,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Stiffy Fit Oil Max Durability: +45%, Reload Speed: -50%, Does not increase durability usage"
+      "SearchDescription": "Stiffy Fit Oil Max Durability: +45%, Reload Speed: -50%, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Stoic Oil": {
       "Name": "Stoic Oil",
@@ -13510,7 +13784,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.6,
       "ScoreNeg": 0,
-      "SearchDescription": "Stoic Oil Spread: -0.6, No Money Drops"
+      "SearchDescription": "Stoic Oil Spread: -0.6, No Money Drops",
+      "DupeFilter": false
     },
     "Suppressive Oil": {
       "Name": "Suppressive Oil",
@@ -13569,7 +13844,8 @@
       "DamageMultInd": 0,
       "ScorePos": 3,
       "ScoreNeg": 2,
-      "SearchDescription": "Suppressive Oil Projectiles: +300%, Move Accuracy: -200%, Damage - Mult: -40%, Spread: +2.1"
+      "SearchDescription": "Suppressive Oil Projectiles: +300%, Move Accuracy: -200%, Damage - Mult: -40%, Spread: +2.1",
+      "DupeFilter": false
     },
     "Surgical Laser Oil": {
       "Name": "Surgical Laser Oil",
@@ -13628,7 +13904,8 @@
       "DamageMultInd": 0,
       "ScorePos": 3,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Surgical Laser Oil Penetrations: +3, Damage - Mult: -30%"
+      "SearchDescription": "Surgical Laser Oil Penetrations: +3, Damage - Mult: -30%",
+      "DupeFilter": false
     },
     "Synchronicity Oil": {
       "Name": "Synchronicity Oil",
@@ -13687,7 +13964,8 @@
       "DamageMultInd": 0,
       "ScorePos": 4,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Synchronicity Oil Bullet Bounces: +4, Extra Ammo Use Chance: +25%"
+      "SearchDescription": "Synchronicity Oil Bullet Bounces: +4, Extra Ammo Use Chance: +25%",
+      "DupeFilter": false
     },
     "Tactical Oil": {
       "Name": "Tactical Oil",
@@ -13746,7 +14024,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1.1,
       "ScoreNeg": 0.1,
-      "SearchDescription": "Tactical Oil Reload Speed: +110%, Damage - Mult: -10%"
+      "SearchDescription": "Tactical Oil Reload Speed: +110%, Damage - Mult: -10%",
+      "DupeFilter": false
     },
     "Tandem Oil": {
       "Name": "Tandem Oil",
@@ -13805,7 +14084,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Tandem Oil Projectiles: +100%, Damage - Mult: -15%, Spread: +0.7"
+      "SearchDescription": "Tandem Oil Projectiles: +100%, Damage - Mult: -15%, Spread: +0.7",
+      "DupeFilter": false
     },
     "Task Oil": {
       "Name": "Task Oil",
@@ -13864,7 +14144,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.6,
       "ScoreNeg": 0,
-      "SearchDescription": "Task Oil Reload Speed: +60%, No Organ Drops"
+      "SearchDescription": "Task Oil Reload Speed: +60%, No Organ Drops",
+      "DupeFilter": false
     },
     "Tech Support Oil": {
       "Name": "Tech Support Oil",
@@ -13923,7 +14204,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.8,
       "ScoreNeg": 0.3,
-      "SearchDescription": "Tech Support Oil Reload Speed: +80%, Jump Power: -30%"
+      "SearchDescription": "Tech Support Oil Reload Speed: +80%, Jump Power: -30%",
+      "DupeFilter": false
     },
     "Tension Oil": {
       "Name": "Tension Oil",
@@ -13982,7 +14264,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.35,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Tension Oil Recoil: -35%, Movement Speed: -15%"
+      "SearchDescription": "Tension Oil Recoil: -35%, Movement Speed: -15%",
+      "DupeFilter": false
     },
     "Terminator Oil": {
       "Name": "Terminator Oil",
@@ -14041,7 +14324,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Terminator Oil Damage - Mult: +30%, Movement Speed: -15%"
+      "SearchDescription": "Terminator Oil Damage - Mult: +30%, Movement Speed: -15%",
+      "DupeFilter": false
     },
     "Thorough Oil": {
       "Name": "Thorough Oil",
@@ -14100,7 +14384,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.8,
       "ScoreNeg": 0.15,
-      "SearchDescription": "Thorough Oil Spread: -0.8, Movement Speed: -15%"
+      "SearchDescription": "Thorough Oil Spread: -0.8, Movement Speed: -15%",
+      "DupeFilter": false
     },
     "Tight Barrel Oil": {
       "Name": "Tight Barrel Oil",
@@ -14159,7 +14444,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.7,
       "ScoreNeg": 0.1,
-      "SearchDescription": "Tight Barrel Oil Bullet Speed: +70%, Max Durability: -10%"
+      "SearchDescription": "Tight Barrel Oil Bullet Speed: +70%, Max Durability: -10%",
+      "DupeFilter": false
     },
     "Too Much Oil": {
       "Name": "Too Much Oil",
@@ -14218,7 +14504,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0,
-      "SearchDescription": "Too Much Oil Penetrations: +1, No Organ Drops"
+      "SearchDescription": "Too Much Oil Penetrations: +1, No Organ Drops",
+      "DupeFilter": false
     },
     "Trusty Old Oil": {
       "Name": "Trusty Old Oil",
@@ -14277,7 +14564,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 0,
-      "SearchDescription": "Trusty Old Oil Max Durability: +25%, No Money Drops, Does not increase durability usage"
+      "SearchDescription": "Trusty Old Oil Max Durability: +25%, No Money Drops, Does not increase durability usage",
+      "DupeFilter": false
     },
     "Turbulence Oil": {
       "Name": "Turbulence Oil",
@@ -14336,7 +14624,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.4,
       "ScoreNeg": 0,
-      "SearchDescription": "Turbulence Oil Bullet Speed: +40%, No Organ Drops"
+      "SearchDescription": "Turbulence Oil Bullet Speed: +40%, No Organ Drops",
+      "DupeFilter": false
     },
     "Twice Oil": {
       "Name": "Twice Oil",
@@ -14395,7 +14684,8 @@
       "DamageMultInd": 0,
       "ScorePos": 1,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Twice Oil Projectiles: +100%, Damage - Mult: -25%, Spread: +0.7"
+      "SearchDescription": "Twice Oil Projectiles: +100%, Damage - Mult: -25%, Spread: +0.7",
+      "DupeFilter": false
     },
     "Two Time Oil": {
       "Name": "Two Time Oil",
@@ -14454,7 +14744,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.1,
-      "SearchDescription": "Two Time Oil Projectiles: +200%, No Money Drops, Damage - Mult: -10%, Spread: +4.4"
+      "SearchDescription": "Two Time Oil Projectiles: +200%, No Money Drops, Damage - Mult: -10%, Spread: +4.4",
+      "DupeFilter": false
     },
     "Untechnical Oil": {
       "Name": "Untechnical Oil",
@@ -14513,7 +14804,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Untechnical Oil Penetrations: +2, Reload Speed: -25%"
+      "SearchDescription": "Untechnical Oil Penetrations: +2, Reload Speed: -25%",
+      "DupeFilter": false
     },
     "Vasectomy Oil": {
       "Name": "Vasectomy Oil",
@@ -14572,7 +14864,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 0.5,
-      "SearchDescription": "Vasectomy Oil Penetrations: +2, Loot Chance: -50%"
+      "SearchDescription": "Vasectomy Oil Penetrations: +2, Loot Chance: -50%",
+      "DupeFilter": false
     },
     "Vegan Oil": {
       "Name": "Vegan Oil",
@@ -14631,7 +14924,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.6,
       "ScoreNeg": 0,
-      "SearchDescription": "Vegan Oil Spread: -0.6, No Organ Drops"
+      "SearchDescription": "Vegan Oil Spread: -0.6, No Organ Drops",
+      "DupeFilter": false
     },
     "Vegetable Oil": {
       "Name": "Vegetable Oil",
@@ -14690,7 +14984,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0,
-      "SearchDescription": "Vegetable Oil Recoil: -30%, No Organ Drops"
+      "SearchDescription": "Vegetable Oil Recoil: -30%, No Organ Drops",
+      "DupeFilter": false
     },
     "Velocity Oil": {
       "Name": "Velocity Oil",
@@ -14749,7 +15044,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.3,
       "ScoreNeg": 0,
-      "SearchDescription": "Velocity Oil Bullet Speed: +30%"
+      "SearchDescription": "Velocity Oil Bullet Speed: +30%",
+      "DupeFilter": false
     },
     "Walk Easy Oil": {
       "Name": "Walk Easy Oil",
@@ -14808,7 +15104,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.15,
       "ScoreNeg": 0.1,
-      "SearchDescription": "Walk Easy Oil Ammo Consume Chance: -15%, Movement Speed: -10%"
+      "SearchDescription": "Walk Easy Oil Ammo Consume Chance: -15%, Movement Speed: -10%",
+      "DupeFilter": false
     },
     "Waster Oil": {
       "Name": "Waster Oil",
@@ -14867,7 +15164,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 0,
-      "SearchDescription": "Waster Oil RPM: +25%, No Money Drops"
+      "SearchDescription": "Waster Oil RPM: +25%, No Money Drops",
+      "DupeFilter": false
     },
     "Whim Oil": {
       "Name": "Whim Oil",
@@ -14926,7 +15224,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.25,
-      "SearchDescription": "Whim Oil Bullet Speed: +50%, Loot Chance: -25%"
+      "SearchDescription": "Whim Oil Bullet Speed: +50%, Loot Chance: -25%",
+      "DupeFilter": false
     },
     "Whos Counting Oil": {
       "Name": "Whos Counting Oil",
@@ -14985,7 +15284,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.25,
       "ScoreNeg": 0,
-      "SearchDescription": "Whos Counting Oil Ammo Consume Chance: -25%, Disables Aiming"
+      "SearchDescription": "Whos Counting Oil Ammo Consume Chance: -25%, Disables Aiming",
+      "DupeFilter": false
     },
     "Wobble Oil": {
       "Name": "Wobble Oil",
@@ -15044,7 +15344,8 @@
       "DamageMultInd": 0,
       "ScorePos": 2,
       "ScoreNeg": 1,
-      "SearchDescription": "Wobble Oil Bullet Bounces: +2, Spread: +1"
+      "SearchDescription": "Wobble Oil Bullet Bounces: +2, Spread: +1",
+      "DupeFilter": false
     },
     "Zero Fucks Oil": {
       "Name": "Zero Fucks Oil",
@@ -15103,7 +15404,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 1,
-      "SearchDescription": "Zero Fucks Oil RPM: +50%, Loot Chance: -100%"
+      "SearchDescription": "Zero Fucks Oil RPM: +50%, Loot Chance: -100%",
+      "DupeFilter": false
     },
     "Zooming Oil": {
       "Name": "Zooming Oil",
@@ -15162,7 +15464,8 @@
       "DamageMultInd": 0,
       "ScorePos": 0.8,
       "ScoreNeg": 1,
-      "SearchDescription": "Zooming Oil Bullet Speed: +80%, Spread: +1"
+      "SearchDescription": "Zooming Oil Bullet Speed: +80%, Spread: +1",
+      "DupeFilter": false
     }
   }
 }

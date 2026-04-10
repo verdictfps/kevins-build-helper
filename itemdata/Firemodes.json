@@ -56,7 +56,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "None None selected"
+      "SearchDescription": "None None selected",
+      "DupeFilter": false
     },
     "Gun Crank": {
       "Name": "Gun Crank",
@@ -114,7 +115,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Gun Crank Firemode: Auto"
+      "SearchDescription": "Gun Crank Firemode: Auto",
+      "DupeFilter": false
     },
     "Priming Bolt": {
       "Name": "Priming Bolt",
@@ -172,7 +174,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Priming Bolt Damage: +10%, Spread: -0.1, Firemode: Single"
+      "SearchDescription": "Priming Bolt Damage: +10%, Spread: -0.1, Firemode: Single",
+      "DupeFilter": false
     }
   }
 }

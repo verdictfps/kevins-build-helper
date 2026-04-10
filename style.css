@@ -1319,6 +1319,10 @@ select.custom-dropdown {
   
 }
 
+.filtered-option {
+    display: none !important;
+}
+
 @media (max-width: 2000px) {
     .ench-card-header {
         font-size: 0.8vw !important;
@@ -1407,6 +1411,8 @@ select.custom-dropdown {
     z-index:1000;
     width: 100% !important;
     top: 50px;
+    height: 380px !important;
+    anchor-name: --dropdown-anchor;
 }
 
 .group-font-size {
@@ -1654,6 +1660,7 @@ select.custom-dropdown {
     justify-content: center !important;
     align-items: center !important;
     width: initial !important;
+    anchor-name: --search-anchor;
 }
 
 .custom-select-search {
@@ -1756,6 +1763,13 @@ select.custom-dropdown {
     overflow-y:auto;
     text-align: left;
     width: initial !important;
+    position: fixed;
+    position-anchor: --dropdown-anchor;
+    left: anchor(left);
+    right: anchor(right);
+    bottom: anchor(bottom);
+    top: anchor(top);
+    margin-top: 100px !important;
 }
 
 .custom-select-menu-mobile {
@@ -1788,24 +1802,28 @@ select.custom-dropdown {
 .custom-option .name {
     font-weight: 500;
     border: 0px !important; 
+    width: 90%;
 }
 
 .custom-option .desc {
     font-size: 0.8em;
     border: 0px !important;
+    width: 90%;
 }
 
 .custom-option .name-mobile {
     padding: 5px;
     font-size: 3em;
     font-weight: 500;
-    border: 0px !important; 
+    border: 0px !important;
+    width: 90%;
 }
 
 .custom-option .desc-mobile {
     padding: 5px;
     font-size: 2.5em;
     border: 0px !important;
+    width: 90%;
 }
 
 .custom-option.active,

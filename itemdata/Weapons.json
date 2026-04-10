@@ -50,7 +50,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Random Weapon "
+      "SearchDescription": "Random Weapon ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Pistol": {
       "Name": "Random Pistol",
@@ -102,7 +104,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Random Pistol "
+      "SearchDescription": "Random Pistol ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Revolver": {
       "Name": "Random Revolver",
@@ -154,7 +158,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Random Revolver "
+      "SearchDescription": "Random Revolver ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Shotgun": {
       "Name": "Random Shotgun",
@@ -206,7 +212,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Random Shotgun "
+      "SearchDescription": "Random Shotgun ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random SMG": {
       "Name": "Random SMG",
@@ -258,7 +266,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Random SMG "
+      "SearchDescription": "Random SMG ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random AR": {
       "Name": "Random AR",
@@ -310,7 +320,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Random AR "
+      "SearchDescription": "Random AR ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random LMG": {
       "Name": "Random LMG",
@@ -362,7 +374,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Random LMG "
+      "SearchDescription": "Random LMG ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Rifle": {
       "Name": "Random Rifle",
@@ -414,7 +428,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Random Rifle "
+      "SearchDescription": "Random Rifle ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Random Sniper": {
       "Name": "Random Sniper",
@@ -466,7 +482,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Random Sniper "
+      "SearchDescription": "Random Sniper ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     ".357 Balthazar": {
       "Name": ".357 Balthazar",
@@ -518,7 +536,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ".357 Balthazar Ammo: 7.62mm • DMG Mult: 1.6x • DMG: 160"
+      "SearchDescription": ".357 Balthazar Ammo: 7.62mm • DMG Mult: 1.6x • DMG: 160",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "1889 Mario": {
       "Name": "1889 Mario",
@@ -570,7 +590,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "1889 Mario Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8"
+      "SearchDescription": "1889 Mario Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Arbiter 2": {
       "Name": "Arbiter 2",
@@ -622,7 +644,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Arbiter 2 Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8"
+      "SearchDescription": "Arbiter 2 Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Beck 8": {
       "Name": "Beck 8",
@@ -674,7 +698,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Beck 8 Ammo: 9mm • DMG Mult: 1x • DMG: 60"
+      "SearchDescription": "Beck 8 Ammo: 9mm • DMG Mult: 1x • DMG: 60",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Bronco 89": {
       "Name": "Bronco 89",
@@ -726,7 +752,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Bronco 89 Ammo: 9mm • DMG Mult: 1.5x • DMG: 90"
+      "SearchDescription": "Bronco 89 Ammo: 9mm • DMG Mult: 1.5x • DMG: 90",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Cavalier": {
       "Name": "Cavalier",
@@ -778,7 +806,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Cavalier Ammo: 9mm • DMG Mult: 1x • DMG: 60"
+      "SearchDescription": "Cavalier Ammo: 9mm • DMG Mult: 1x • DMG: 60",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Flicker": {
       "Name": "Flicker",
@@ -830,7 +860,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Flicker Ammo: 9mm • DMG Mult: 1x • DMG: 60"
+      "SearchDescription": "Flicker Ammo: 9mm • DMG Mult: 1x • DMG: 60",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Gravekeeper": {
       "Name": "Gravekeeper",
@@ -882,7 +914,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Gravekeeper Ammo: 5.56mm • DMG Mult: 1x • DMG: 80"
+      "SearchDescription": "Gravekeeper Ammo: 5.56mm • DMG Mult: 1x • DMG: 80",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Hell 'N' Back": {
       "Name": "Hell 'N' Back",
@@ -934,7 +968,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Hell 'N' Back Ammo: 7.62mm • DMG Mult: 1x • DMG: 100"
+      "SearchDescription": "Hell 'N' Back Ammo: 7.62mm • DMG Mult: 1x • DMG: 100",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "M182 Pierre-Fusil": {
       "Name": "M182 Pierre-Fusil",
@@ -986,7 +1022,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "M182 Pierre-Fusil Ammo: 7.62mm • DMG Mult: 2x • DMG: 200"
+      "SearchDescription": "M182 Pierre-Fusil Ammo: 7.62mm • DMG Mult: 2x • DMG: 200",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "P38 Dirk": {
       "Name": "P38 Dirk",
@@ -1038,7 +1076,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "P38 Dirk Ammo: 9mm • DMG Mult: 1x • DMG: 60"
+      "SearchDescription": "P38 Dirk Ammo: 9mm • DMG Mult: 1x • DMG: 60",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Palehorse Topclipper": {
       "Name": "Palehorse Topclipper",
@@ -1090,7 +1130,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Palehorse Topclipper Ammo: 5.56mm • DMG Mult: 1.6x • DMG: 128"
+      "SearchDescription": "Palehorse Topclipper Ammo: 5.56mm • DMG Mult: 1.6x • DMG: 128",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Salamander": {
       "Name": "Salamander",
@@ -1142,7 +1184,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Salamander Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120"
+      "SearchDescription": "Salamander Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Snut .38": {
       "Name": "Snut .38",
@@ -1194,7 +1238,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Snut .38 Ammo: 9mm • DMG Mult: 1.6x • DMG: 96"
+      "SearchDescription": "Snut .38 Ammo: 9mm • DMG Mult: 1.6x • DMG: 96",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Socom 9": {
       "Name": "Socom 9",
@@ -1246,7 +1292,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Socom 9 Ammo: 9mm • DMG Mult: 1x • DMG: 60"
+      "SearchDescription": "Socom 9 Ammo: 9mm • DMG Mult: 1x • DMG: 60",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Star & Witness": {
       "Name": "Star & Witness",
@@ -1298,7 +1346,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Star & Witness Ammo: 9mm • DMG Mult: 1x • DMG: 60"
+      "SearchDescription": "Star & Witness Ammo: 9mm • DMG Mult: 1x • DMG: 60",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Unknown": {
       "Name": "Unknown",
@@ -1350,7 +1400,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Unknown Ammo: Energy • DMG Mult: 1x • DMG: 50"
+      "SearchDescription": "Unknown Ammo: Energy • DMG Mult: 1x • DMG: 50",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Wyatt PULSAR": {
       "Name": "Wyatt PULSAR",
@@ -1402,7 +1454,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Wyatt PULSAR Ammo: Energy • DMG Mult: 1.6x • DMG: 80"
+      "SearchDescription": "Wyatt PULSAR Ammo: Energy • DMG Mult: 1.6x • DMG: 80",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Augusta": {
       "Name": "Augusta",
@@ -1454,7 +1508,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Augusta Ammo: Energy • DMG Mult: 1x • DMG: 50"
+      "SearchDescription": "Augusta Ammo: Energy • DMG Mult: 1x • DMG: 50",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Breacher 8": {
       "Name": "Breacher 8",
@@ -1506,7 +1562,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Breacher 8 Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8"
+      "SearchDescription": "Breacher 8 Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Neuraxis F22": {
       "Name": "Neuraxis F22",
@@ -1558,7 +1616,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Neuraxis F22 Ammo: Energy • DMG Mult: 1x • DMG: 50"
+      "SearchDescription": "Neuraxis F22 Ammo: Energy • DMG Mult: 1x • DMG: 50",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Flock 76": {
       "Name": "Flock 76",
@@ -1610,7 +1670,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Flock 76 Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8"
+      "SearchDescription": "Flock 76 Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Majordome": {
       "Name": "Majordome",
@@ -1662,7 +1724,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Majordome Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8"
+      "SearchDescription": "Majordome Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Mossman": {
       "Name": "Mossman",
@@ -1714,7 +1778,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Mossman Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8"
+      "SearchDescription": "Mossman Ammo: 12Ga • DMG Mult: 2x • DMG: 40x 8",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Deathstar PG": {
       "Name": "Deathstar PG",
@@ -1766,7 +1832,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Deathstar PG Ammo: 5.56mm • DMG Mult: 1x • DMG: 80"
+      "SearchDescription": "Deathstar PG Ammo: 5.56mm • DMG Mult: 1x • DMG: 80",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Drifter 9": {
       "Name": "Drifter 9",
@@ -1818,7 +1886,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Drifter 9 Ammo: 9mm • DMG Mult: 1x • DMG: 60"
+      "SearchDescription": "Drifter 9 Ammo: 9mm • DMG Mult: 1x • DMG: 60",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Ferryman": {
       "Name": "Ferryman",
@@ -1870,7 +1940,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Ferryman Ammo: .50 BMG • DMG Mult: 1.5x • DMG: 300"
+      "SearchDescription": "Ferryman Ammo: .50 BMG • DMG Mult: 1.5x • DMG: 300",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "M3 Termite": {
       "Name": "M3 Termite",
@@ -1922,7 +1994,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "M3 Termite Ammo: 9mm • DMG Mult: 1.1x • DMG: 66"
+      "SearchDescription": "M3 Termite Ammo: 9mm • DMG Mult: 1.1x • DMG: 66",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Ploika Compact": {
       "Name": "Ploika Compact",
@@ -1974,7 +2048,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Ploika Compact Ammo: 9mm • DMG Mult: 1x • DMG: 60"
+      "SearchDescription": "Ploika Compact Ammo: 9mm • DMG Mult: 1x • DMG: 60",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Songbird": {
       "Name": "Songbird",
@@ -2026,7 +2102,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Songbird Ammo: 9mm • DMG Mult: 1x • DMG: 60"
+      "SearchDescription": "Songbird Ammo: 9mm • DMG Mult: 1x • DMG: 60",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Valet": {
       "Name": "Valet",
@@ -2078,7 +2156,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Valet Ammo: 9mm • DMG Mult: 1.2x • DMG: 72"
+      "SearchDescription": "Valet Ammo: 9mm • DMG Mult: 1.2x • DMG: 72",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Vrede": {
       "Name": "Vrede",
@@ -2130,7 +2210,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Vrede Ammo: 9mm • DMG Mult: 1x • DMG: 60"
+      "SearchDescription": "Vrede Ammo: 9mm • DMG Mult: 1x • DMG: 60",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Catacoil Rapid X": {
       "Name": "Catacoil Rapid X",
@@ -2182,7 +2264,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Catacoil Rapid X Ammo: Energy • DMG Mult: 1.2x • DMG: 60"
+      "SearchDescription": "Catacoil Rapid X Ammo: Energy • DMG Mult: 1.2x • DMG: 60",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Corpsemaker": {
       "Name": "Corpsemaker",
@@ -2234,7 +2318,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Corpsemaker Ammo: 5.56mm • DMG Mult: 1.2x • DMG: 96"
+      "SearchDescription": "Corpsemaker Ammo: 5.56mm • DMG Mult: 1.2x • DMG: 96",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "M11A2 Fisk": {
       "Name": "M11A2 Fisk",
@@ -2286,7 +2372,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "M11A2 Fisk Ammo: 5.56mm • DMG Mult: 1.2x • DMG: 96"
+      "SearchDescription": "M11A2 Fisk Ammo: 5.56mm • DMG Mult: 1.2x • DMG: 96",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Type 80 Typhoon": {
       "Name": "Type 80 Typhoon",
@@ -2338,7 +2426,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Type 80 Typhoon Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120"
+      "SearchDescription": "Type 80 Typhoon Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Wingman": {
       "Name": "Wingman",
@@ -2390,7 +2480,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Wingman Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120"
+      "SearchDescription": "Wingman Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Chat-Pardeur 98": {
       "Name": "Chat-Pardeur 98",
@@ -2442,7 +2534,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Chat-Pardeur 98 Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120"
+      "SearchDescription": "Chat-Pardeur 98 Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Duhar": {
       "Name": "Duhar",
@@ -2494,7 +2588,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Duhar Ammo: 7.62mm • DMG Mult: 1x • DMG: 100"
+      "SearchDescription": "Duhar Ammo: 7.62mm • DMG Mult: 1x • DMG: 100",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Rektor 100rd": {
       "Name": "Rektor 100rd",
@@ -2546,7 +2642,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Rektor 100rd Ammo: 7.62mm • DMG Mult: 1x • DMG: 100"
+      "SearchDescription": "Rektor 100rd Ammo: 7.62mm • DMG Mult: 1x • DMG: 100",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Warpig": {
       "Name": "Warpig",
@@ -2598,7 +2696,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Warpig Ammo: 5.56mm • DMG Mult: 1x • DMG: 80"
+      "SearchDescription": "Warpig Ammo: 5.56mm • DMG Mult: 1x • DMG: 80",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Farsight": {
       "Name": "Farsight",
@@ -2650,7 +2750,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Farsight Ammo: 5.56mm • DMG Mult: 2.2x • DMG: 176"
+      "SearchDescription": "Farsight Ammo: 5.56mm • DMG Mult: 2.2x • DMG: 176",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Knop .22": {
       "Name": "Knop .22",
@@ -2702,7 +2804,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Knop .22 Ammo: 9mm • DMG Mult: 2x • DMG: 120"
+      "SearchDescription": "Knop .22 Ammo: 9mm • DMG Mult: 2x • DMG: 120",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Tailor Marksman MKII": {
       "Name": "Tailor Marksman MKII",
@@ -2754,7 +2858,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Tailor Marksman MKII Ammo: 5.56mm • DMG Mult: 2x • DMG: 160"
+      "SearchDescription": "Tailor Marksman MKII Ammo: 5.56mm • DMG Mult: 2x • DMG: 160",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "D4RT": {
       "Name": "D4RT",
@@ -2806,7 +2912,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "D4RT Ammo: Energy • DMG Mult: 10x • DMG: 500"
+      "SearchDescription": "D4RT Ammo: Energy • DMG Mult: 10x • DMG: 500",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Dolphin 99": {
       "Name": "Dolphin 99",
@@ -2858,7 +2966,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Dolphin 99 Ammo: .50 BMG • DMG Mult: 2.5x • DMG: 500"
+      "SearchDescription": "Dolphin 99 Ammo: .50 BMG • DMG Mult: 2.5x • DMG: 500",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Impala Gravita": {
       "Name": "Impala Gravita",
@@ -2910,7 +3020,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Impala Gravita Ammo: 7.62mm • DMG Mult: 4x • DMG: 400"
+      "SearchDescription": "Impala Gravita Ammo: 7.62mm • DMG Mult: 4x • DMG: 400",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Longboy": {
       "Name": "Longboy",
@@ -2962,7 +3074,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Longboy Ammo: .50 BMG • DMG Mult: 2x • DMG: 400"
+      "SearchDescription": "Longboy Ammo: .50 BMG • DMG Mult: 2x • DMG: 400",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Rokua .308": {
       "Name": "Rokua .308",
@@ -3014,7 +3128,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Rokua .308 Ammo: 7.62mm • DMG Mult: 2x • DMG: 200"
+      "SearchDescription": "Rokua .308 Ammo: 7.62mm • DMG Mult: 2x • DMG: 200",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     }
   }
 }

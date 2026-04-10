@@ -56,7 +56,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "None "
+      "SearchDescription": "None ",
+      "DupeFilter": false
     },
     "Random Chamber": {
       "Name": "Random Chamber",
@@ -114,7 +115,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Random Chamber "
+      "SearchDescription": "Random Chamber ",
+      "DupeFilter": false
     },
     "Chamber Chisel - .50 BMG": {
       "Name": "Chamber Chisel - .50 BMG",
@@ -175,7 +177,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Chamber Chisel - .50 BMG Base Damage: 200"
+      "SearchDescription": "Chamber Chisel - .50 BMG Base Damage: 200",
+      "DupeFilter": false
     },
     "Chamber Chisel - 12Ga": {
       "Name": "Chamber Chisel - 12Ga",
@@ -236,7 +239,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Chamber Chisel - 12Ga Base Damage: 20 x 8"
+      "SearchDescription": "Chamber Chisel - 12Ga Base Damage: 20 x 8",
+      "DupeFilter": false
     },
     "Chamber Chisel - 5.56mm": {
       "Name": "Chamber Chisel - 5.56mm",
@@ -297,7 +301,8 @@
       "TypeNegative1": "Chamber",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Chamber Chisel - 5.56mm Base Damage: 80"
+      "SearchDescription": "Chamber Chisel - 5.56mm Base Damage: 80",
+      "DupeFilter": false
     },
     "Chamber Chisel - 7.62mm": {
       "Name": "Chamber Chisel - 7.62mm",
@@ -358,7 +363,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Chamber Chisel - 7.62mm Base Damage: 100"
+      "SearchDescription": "Chamber Chisel - 7.62mm Base Damage: 100",
+      "DupeFilter": false
     },
     "Chamber Chisel - 9mm": {
       "Name": "Chamber Chisel - 9mm",
@@ -419,7 +425,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Chamber Chisel - 9mm Base Damage: 60"
+      "SearchDescription": "Chamber Chisel - 9mm Base Damage: 60",
+      "DupeFilter": false
     },
     "Chamber Chisel - Energy": {
       "Name": "Chamber Chisel - Energy",
@@ -480,7 +487,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": "Chamber Chisel - Energy Base Damage: 50"
+      "SearchDescription": "Chamber Chisel - Energy Base Damage: 50",
+      "DupeFilter": false
     }
   }
 }

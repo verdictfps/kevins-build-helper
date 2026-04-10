@@ -268,11 +268,24 @@ const dropdownsReady = new Promise(res => {
     dropdownReadyResolve = res;
 });
 
+let chamberDupe = null;
+let weaponDupe = null;
+let weaponOrigDupe = null;
+let attachmentDupe = null;
+let barrelDupe = null;
+let opticDupe = null;
+let laserDupe = null;
+let firemodeDupe = null;
+let oilDupe = null;
+let scrollDupe = null;
+let oilScrollDupe = null;
+
 async function loadChamber() {
     const response = await fetch("./itemdata/Chamber.json");
     chamberData = await response.json();
     const response2 = await fetch("./itemdata/ChamberNoEn.json");
     chamberData2 = await response2.json();
+    chamberDupe = structuredClone(chamberData2);
     return chamberData2;
 }
 
@@ -292,23 +305,26 @@ async function loadAttachments() {
     const response = await fetch("./itemdata/Attachments.json");
     attachmentsData = await response.json();
     return attachmentsData;
-
 }
+
 async function loadBarrels() {
     const response = await fetch("./itemdata/Barrels.json");
     barrelsData = await response.json();
     return barrelsData;
 }
+
 async function loadOptics() {
     const response = await fetch("./itemdata/Optics.json");
     opticsData = await response.json();
     return opticsData;
 }
+
 async function loadLasers() {
     const response = await fetch("./itemdata/Lasers.json");
     lasersData = await response.json();
     return lasersData;
 }
+
 async function loadFiremodes() {
     const response = await fetch("./itemdata/Firemodes.json");
     firemodesData = await response.json();
@@ -334,17 +350,21 @@ async function loadOilsScrolls() {
     return oilsScrollsData;
 }
 
+let firstTimeSetup = true;
+
 async function dropdownBuilder() {
     const selects = document.querySelectorAll("select.custom-dropdown");
-
-    await Promise.all(
-        [...selects].map(select => {
-            if (!select.nextElementSibling?.classList.contains("custom-select")) {
-                return createProDropdown(select);
-            }
-        })
-    );
-    return true;
+    if (firstTimeSetup === true) {
+        firstTimeSetup = false;
+        await Promise.all(
+            [...selects].map(select => {
+                if (!select.nextElementSibling?.classList.contains("custom-select")) {
+                    return createProDropdown(select);
+                }
+            })
+        );
+        return true;
+    }
 }
 /*
 async function dropdownBuilder() {
@@ -807,19 +827,7 @@ setWeaponNameIndexer();
 setScrollValueIndexer();
 setScrollNameIndexer();
 
-function fuzzyMatch(text, query) {
-    text = text.toLowerCase();
-    query = query.toLowerCase();
 
-    let ti = 0, qi = 0;
-
-    while (ti < text.length && qi < query.length) {
-        if (text[ti] === query[qi]) qi++;
-        ti++;
-    }
-
-    return qi === query.length;
-}
 
 async function createProDropdown(select) {
 
@@ -833,7 +841,7 @@ async function createProDropdown(select) {
         groupMode: "positive"
     };
 
-   
+
 
     // ===== LOAD DATA =====
     if (select.classList.contains("scroll-dropdown")) {
@@ -1100,7 +1108,7 @@ async function createProDropdown(select) {
         wrapper.classList.remove("drop-up");
 
         const rect = panel.getBoundingClientRect();
-        const panelHeight = panel.offsetHeight || 320;
+        const panelHeight = panel.offsetHeight || 380;
 
         const spaceBelow = window.innerHeight - rect.bottom;
         const spaceAbove = rect.top;
@@ -1383,7 +1391,6 @@ async function createProDropdown(select) {
             } else {
                 g = o.group; // fallback
             }
-
             if (!g || g === "None") g = "Other";
             if (!groups[g]) groups[g] = [];
             groups[g].push(o);
@@ -1452,7 +1459,7 @@ function closeGroup(groupEl) {
 }
 
 function closeAllGroupsExcept(exception) {
-  
+
     const dropdown = exception.closest(".custom-dropdown");
 
     if (dropdown?.dataset.accordion !== "true")
@@ -1470,9 +1477,12 @@ function closeAllGroupsExcept(exception) {
 
     // ===== RENDER =====
     function render() {
+        console.log(wrapper.childNodes[1].childNodes[2].childNodes[64])
+        console.log(state.options)
         list.innerHTML = '';
 
         let opts = applySort(state.options, sortMode);
+        console.log(state.options)
         opts = applyFilter(opts);
         state.filtered = opts;
 
@@ -1510,6 +1520,10 @@ function closeAllGroupsExcept(exception) {
                 const el = document.createElement("div");
                 el.className = "custom-option";
                 el.dataset.value = opt.value;
+                el.dataset.DupeFilter = opt.meta.DupeFilter;
+                if (el.dataset.DupeFilter === "true") {
+                    el.classList.add("filtered-option");
+                }
                 if (isMobile === true) {
                     el.innerHTML = `
                     <div class="name-mobile">${opt.label}</div>
@@ -1617,6 +1631,21 @@ function closeAllGroupsExcept(exception) {
         return state.value;
     }
 
+    function dupeFilter(optval) {
+        state.options.forEach((o) => {
+            if (o.value === optval) {
+                o.meta.DupeFilter = true;
+            }
+        });
+    }
+    function removeDupeFilter(optval) {
+        state.options.forEach((o) => {
+            if (o.value === optval) {
+                o.meta.DupeFilter = false;
+            }
+        });
+    }
+
     // expose API
     select.getValue = getValue;
     select.setValue = setValue;
@@ -1624,6 +1653,8 @@ function closeAllGroupsExcept(exception) {
     select.render = render;
     select.setSortMode = setSortMode;
     select.setGroupMode = setGroupMode;
+    select.dupeFilter = dupeFilter;
+    select.removeDupeFilter = removeDupeFilter;
     
     function setSortMode(mode) {
         sortMode = mode;
@@ -1695,6 +1726,8 @@ function closeAllGroupsExcept(exception) {
         open,
         close,
         render,
+        dupeFilter,
+        removeDupeFilter,
         setSortMode: (mode) => {
             sortMode = mode;
             render();
@@ -1913,7 +1946,6 @@ function decodeUriAsBuild(source, link) {
         let split2 = decoded.split("build");
         finalSplit = split2[1].split("+");
         iterationSplit = 0
-        console.log(finalSplit)
     }
 
     let defShantPass = false;
@@ -1935,7 +1967,6 @@ function decodeUriAsBuild(source, link) {
             let scroll = null;
             let selItem = null;
             let select = null;
-console.log(key, value)
             switch (key) {
                 case undefined:
                     break;
@@ -2038,11 +2069,8 @@ console.log(key, value)
         coreSelections.forEach(rebuildBuild);
         let yeeteth = tempSelections.get("weapon");
         
-        console.log(yeeteth)
         let gunny = weaponValueIndexer.get(yeeteth);
-        console.log(gunny)
         let gunboog = getWeaponByName(gunny);
-        console.log("weapon", gunboog, yeeteth);
         
         addToCoreMap("weapon", gunboog, yeeteth);
         tempSelections.forEach(grabOils);
@@ -2066,7 +2094,6 @@ console.log(key, value)
             tempSelections.forEach(convertToCore)
         }*/
 
-        console.log(coreSelections)
         rollFromBuild();
         defShantPass = false;
     }
@@ -2215,7 +2242,6 @@ function setBuildAsActive(sel, clone) {
                 rollAggregator('ench4', 'oils4selector', 4, build.get("ench4").Value, "ench");
                 rollAggregator('ench5', 'oils5selector', 5, build.get("ench5").Value, "ench");
                 
-                shallNotPass = false;
                 buildSwapping = false;
             }
 
@@ -2269,10 +2295,13 @@ function setBuildAsActive(sel, clone) {
                 rollAggregator('ench4', 'oils4selector', 4, build.get("ench4").Value, "ench");
                 rollAggregator('ench5', 'oils5selector', 5, build.get("ench5").Value, "ench");
                 
-                shallNotPass = false;
+                
                 buildSwapping = false;
             }
         }
+            oilRemover();
+            attachmentFilter();
+            shallNotPass = false;
     }
 }
 
@@ -2580,11 +2609,11 @@ function commitAllAtt() {
 function oilRemover() {
 console.info("KBH: Beginning oil filtering process");
 
-    let altSelector1Options = document.getElementById("oils1selector").options;
-    let altSelector2Options = document.getElementById("oils2selector").options;
-    let altSelector3Options = document.getElementById("oils3selector").options;
-    let altSelector4Options = document.getElementById("oils4selector").options;
-    let altSelector5Options = document.getElementById("oils5selector").options;
+    let altSelector1Options = document.getElementById("oils1selector-custom").childNodes[1].childNodes[2].childNodes;
+    let altSelector2Options = document.getElementById("oils2selector-custom").childNodes[1].childNodes[2].childNodes;
+    let altSelector3Options = document.getElementById("oils3selector-custom").childNodes[1].childNodes[2].childNodes;
+    let altSelector4Options = document.getElementById("oils4selector-custom").childNodes[1].childNodes[2].childNodes;
+    let altSelector5Options = document.getElementById("oils5selector-custom").childNodes[1].childNodes[2].childNodes;
 
     let oilsel1 = document.getElementById("oils1selector");
     let oilsel2 = document.getElementById("oils2selector");
@@ -2593,147 +2622,106 @@ console.info("KBH: Beginning oil filtering process");
     let oilsel5 = document.getElementById("oils5selector");
 
     function makeAllOilsVisible() {
-        console.info("KBH: Making all oils visible");
-        /*if (window.mobileCheck === false) {
-            for (var i = 0; i < selector1Options.length; i++) {
-                if (selector1Options[i].li.hidden === true) {
-                    selector1Options[i].li.hidden = false;
-                }
-            }
-            for (var i = 0; i < selector2Options.length; i++) {
-                    if (selector2Options[i].li.hidden === true) {
-                        selector2Options[i].li.hidden = false;
-                    }
-                }
-            for (var i = 0; i < selector3Options.length; i++) {
-                if (selector3Options[i].li.hidden === true) {
-                    selector3Options[i].li.hidden = false;
-                }
-            }
-            for (var i = 0; i < selector4Options.length; i++) {
-                    if (selector4Options[i].li.hidden === true) {
-                        selector4Options[i].li.hidden = false;
-                    }
-                }
-            for (var i = 0; i < selector5Options.length; i++) {
-                if (selector5Options[i].li.hidden === true) {
-                    selector5Options[i].li.hidden = false;
-                }
+        console.info("KBH: Making all oils selectable");
+
+        for (var i = 0; i < altSelector1Options.length; i++) {
+            if (altSelector1Options[i].classList.contains("filtered-option")) {
+                oilsel1.removeDupeFilter(altSelector1Options[i].dataset.value);
+                break;
             }
         }
-        if (window.mobileCheck === true) {*/
+        for (var i = 0; i < altSelector2Options.length; i++) {
+            if (altSelector2Options[i].classList.contains("filtered-option")) {
+                oilsel2.removeDupeFilter(altSelector2Options[i].dataset.value);
+                break;
+            }
+        }
+        for (var i = 0; i < altSelector3Options.length; i++) {
+            if (altSelector3Options[i].classList.contains("filtered-option")) {
+                oilsel3.removeDupeFilter(altSelector3Options[i].dataset.value);
+                break;
+            }
+        }
+        for (var i = 0; i < altSelector4Options.length; i++) {
+            if (altSelector4Options[i].classList.contains("filtered-option")) {
+                oilsel4.removeDupeFilter(altSelector4Options[i].dataset.value);
+                break;
+            }
+        }
+        for (var i = 0; i < altSelector5Options.length; i++) {
+            if (altSelector5Options[i].classList.contains("filtered-option")) {
+                oilsel5.removeDupeFilter(altSelector5Options[i].dataset.value);
+                break;
+            }
+        }
+    }
+    
+    function hideSelectedOils(value, key, map) {
+        console.info("KBH: Hiding ", key, value);
+        if (key.startsWith("ench")) {
+            if (value.Value === "none" || value.Value.startsWith("static") || value.Value.startsWith("scroll")) {
+                return;
+            }
             for (var i = 0; i < altSelector1Options.length; i++) {
-                if (altSelector1Options[i].hidden === true) {
-                    altSelector1Options[i].hidden = false;
+                if (altSelector1Options[i].dataset.value === value.Value) {
+                    oilsel1.dupeFilter(value.Value);
+                    break;
                 }
             }
             for (var i = 0; i < altSelector2Options.length; i++) {
-                if (altSelector2Options[i].hidden === true) {
-                    altSelector2Options[i].hidden = false;
+                if (altSelector2Options[i].dataset.value === value.Value) {
+                    oilsel2.dupeFilter(value.Value);
+                    break;
                 }
             }
             for (var i = 0; i < altSelector3Options.length; i++) {
-                if (altSelector3Options[i].hidden === true) {
-                    altSelector3Options[i].hidden = false;
+                if (altSelector3Options[i].dataset.value === value.Value) {
+                    oilsel3.dupeFilter(value.Value);
+                    break;
                 }
             }
             for (var i = 0; i < altSelector4Options.length; i++) {
-                if (altSelector4Options[i].hidden === true) {
-                    altSelector4Options[i].hidden = false;
+                if (altSelector4Options[i].dataset.value === value.Value) {
+                    oilsel4.dupeFilter(value.Value);
+                    break;
                 }
             }
             for (var i = 0; i < altSelector5Options.length; i++) {
-                if (altSelector5Options[i].hidden === true) {
-                    altSelector5Options[i].hidden = false;
-                }
-            }
-        //}
-    }
-
-    function hideSelectedOils(value, key, map) {
-        console.info("KBH: Hiding ", key, value);
-        /*if (window.mobileCheck === false) {
-            if (key.startsWith("ench")) {
-                let compOilRep = value.Name.Name.replaceAll(" ", "-");
-                let compOilLower = compOilRep.toLowerCase();
-
-                for (const value of selector1Options) {
-                    if (value.li.dataset.value === compOilLower) {
-                        value.li.hidden = true;
-                    }
-                }
-                for (const value of selector2Options) {
-                    if (value.li.dataset.value === compOilLower) {
-                        value.li.hidden = true;
-                    }
-                }
-                for (const value of selector3Options) {
-                    if (value.li.dataset.value === compOilLower) {
-                        value.li.hidden = true;
-                    }
-                }
-                for (const value of selector4Options) {
-                    if (value.li.dataset.value === compOilLower) {
-                        value.li.hidden = true;
-                    }
-                }
-                for (const value of selector5Options) {
-                    if (value.li.dataset.value === compOilLower) {
-                        value.li.hidden = true;
-                    }
+                if (altSelector5Options[i].dataset.value === value.Value) {
+                    oilsel5.dupeFilter(value.Value);
+                    break;
                 }
             }
         }
-        if (window.mobileCheck === true) {*/
-            if (key.startsWith("ench")) {
-                let compOilRep = value.Value;
-
-                for (const value of altSelector1Options) {
-                    if (value.value === compOilRep) {
-                        value.hidden = true;
-                    }
-                }
-                for (const value of altSelector2Options) {
-                    if (value.value === compOilRep) {
-                        value.hidden = true;
-                    }
-                }
-                for (const value of altSelector3Options) {
-                    if (value.value === compOilRep) {
-                        value.hidden = true;
-                    }
-                }
-                for (const value of altSelector4Options) {
-                    if (value.value === compOilRep) {
-                        value.hidden = true;
-                    }
-                }
-                for (const value of altSelector5Options) {
-                    if (value.value === compOilRep) {
-                        value.hidden = true;
-                    }
-                }
-            }
-        //}
     }
 
     makeAllOilsVisible()
 
-    coreSelections.forEach(hideSelectedOils)
-
-    /*oilsel1.updateDisplay();
-    oilsel2.updateDisplay();
-    oilsel3.updateDisplay();
-    oilsel4.updateDisplay();
-    oilsel5.updateDisplay();*/
+    switch (selectedBuild) {
+        case 1:
+            build1Selections.forEach(hideSelectedOils);
+            break;
+        case 2:
+            build2Selections.forEach(hideSelectedOils);
+            break;
+        case 3:
+            build3Selections.forEach(hideSelectedOils);
+            break;
+        case 4:
+            build4Selections.forEach(hideSelectedOils);
+            break;
+        case 5:
+            build5Selections.forEach(hideSelectedOils);
+            break;
+    }
 
 } 
 
 function attachmentFilter(evt) {
 console.info("KBH: Filtering attachments based on weapon selection");
-    let selectorBarrel = document.getElementById("barrelselector");
+
     let selectorFiremode = document.getElementById("firemodeselector");
-    let selectorChamber = document.getElementById("chamberselector");
+    let selectorFiremodePro = document.getElementById("firemodeselector-custom").childNodes[1].childNodes[2].childNodes;
 
     let dropdownWeapon = ((coreSelections.get("weapon")).Name); 
     
@@ -2742,27 +2730,48 @@ console.info("KBH: Filtering attachments based on weapon selection");
     document.getElementById("firemodeselector-custom").classList.remove("disabled");
     // Filter Firemodes
 
-    let sFire = selectorFiremode.options;
-
-    for (let i = 0; i < sFire.length; i++) {
-        sFire[i].hidden = false;
+    for (var i = 0; i < selectorFiremodePro.length; i++) {
+        if (selectorFiremodePro[i].classList.contains("filtered-option")) {
+            selectorFiremode.removeDupeFilter(selectorFiremodePro[i].dataset.value);
+            break;
+        }
     }
 
     switch (dropdownWeapon.Firemode) {
         case "Single":
-            sFire[2].hidden = true;
+            for (var i = 0; i < selectorFiremodePro.length; i++) {
+                console.log(selectorFiremodePro[i])
+                if (selectorFiremodePro[i].dataset.value === "priming-bolt") {
+                    selectorFiremode.dupeFilter("priming-bolt");
+                    break;
+                }
+            }
             if (selectorFiremode.getValue() === "priming-bolt") {
-                selectorFiremode.setValue("none");     
+                selectorFiremode.setValue("none");
+                rollAggregator("firemode", "firemodeselector", 4, "none", "attachment"); 
             };
             break;
         case "Auto":
-            sFire[1].hidden = true;
+            for (var i = 0; i < selectorFiremodePro.length; i++) {
+                console.log(selectorFiremodePro[i])
+                if (selectorFiremodePro[i].dataset.value === "gun-crank") {
+                    selectorFiremode.dupeFilter("gun-crank");
+                    break;
+                }
+            }
             if (selectorFiremode.getValue() === "gun-crank") {
                 selectorFiremode.setValue("none")
+                rollAggregator("firemode", "firemodeselector", 4, "none", "attachment");
             }
             break;
         case "3-Round Burst":
-            sFire[2].hidden = true;
+            for (var i = 0; i < selectorFiremodePro.length; i++) {
+                console.log(selectorFiremodePro[i])
+                if (selectorFiremodePro[i].dataset.value === "priming-bolt") {
+                    selectorFiremode.dupeFilter("priming-bolt");
+                    break;
+                }
+            }
             if (selectorFiremode.getValue() === "priming-bolt") {
                 selectorFiremode.setValue("none");     
             };
@@ -2770,9 +2779,12 @@ console.info("KBH: Filtering attachments based on weapon selection");
         case "Static Single":
             document.getElementById("firemodeselector-custom").classList.add("disabled");
             selectorFiremode.setValue("static-not-applicable");
+            rollAggregator("firemode", "firemodeselector", 4, "none", "attachment");
         default:
     }
     
+    selectorFiremode.updateDisplay();
+
     if (dropdownWeapon.AmmoType === "Energy") {
         selectorChamber.setValue("static-not-applicable");
         selectorBarrel.setValue("static-not-applicable");
@@ -3213,7 +3225,7 @@ function rollAggregator(flag, selector, selID, selValue, selType) {
         }, 430);
         setTimeout(() => {
         encodeBuildAsUri();
-        setBuildAsMetadata();
+        //setBuildAsMetadata();
         }, 730);
     }
     else if (buildSwapping === true) {
@@ -3222,7 +3234,7 @@ function rollAggregator(flag, selector, selID, selValue, selType) {
             scrollToTop();
         }
         encodeBuildAsUri();
-        setBuildAsMetadata();
+        //setBuildAsMetadata();
     }
 }
 
@@ -3457,8 +3469,10 @@ function oilStats() {
             oilStatModifiers.HeadshotDamage = selectedOil.HeadshotDamage;
         }
         if (selectedOil.ScrollField !== "None" && selectedOil.ScrollField !== undefined) {
-            
             oilStatModifiers.ScrollField = selectedOil.ScrollField;
+        }
+        if (selectedOil.DamageMultInd !== "None" && selectedOil.DamageMultInd !== 0) {
+            oilStatModifiers.DamageMultInd = selectedOil.DamageMultInd;
         }
     }
 
@@ -4037,7 +4051,8 @@ function oilCalcs(calcOil) {
 
     //// Damage Multiplier
     let damCalc = damAdd * (1 + calcOil.DamageMult);
-    let damRound = Math.round((damCalc + Number.EPSILON)* 100) / 100;
+    let damSub = damCalc * (1 + calcOil.DamageMultInd);
+    let damRound = Math.round((damSub + Number.EPSILON)* 100) / 100;
     if (zeroDamage > 0 && damRound <= 0) {
         damRound = zeroDamage * 0.01;
     }
@@ -5645,6 +5660,16 @@ function setDefaultChamber(gun) {
 
 function rollSelections(flag, selector, selID, value, type) {
     enchAll = enchAllMain.slice();
+
+    // Come back to this - generating pools based on json instead of manually lmao
+    /*let enchAll = [];
+
+    Object.values(oilsScrollsData.OilScroll).forEach(oil => {
+        if (oil.Name !== "none" && oil.Name !== "None" && oil.Name !== "Default" && oil.Name !== undefined && oil.Name !== null && !(oil.Name.startsWith("Random"))) {
+            enchAll.push(oil.Name);
+        }
+    });*/
+
     scrollsAll = scrollsAllMain.slice();
     scrollsT1 = scrollsT1Main.slice();
     scrollsT2 = scrollsT2Main.slice();
@@ -5666,9 +5691,16 @@ function rollSelections(flag, selector, selID, value, type) {
     let selectedItem = null;
     let selectedValue = null;
 
+    /*function randomDupePrevention(name) {
+        enchAll
+        for (var i = 0; i < enchAll.length; i++) {
+            if (enchAll[i] !== undefined) {
+                console.log(enchAll[i])
+            }
+    }*/
+
     function rollEnch(value, flag) {
         
-            
         switch (value) {
             case "static-no-selection":
                 selectedItem = getOilByName("None");
@@ -5831,6 +5863,7 @@ function rollSelections(flag, selector, selID, value, type) {
         if (selectedItem !== null) {
             poolRemover(selectedItem.Name);
         }
+        //randomDupePrevention
     }
 
     function rollWeapon(value, flag) {
@@ -6098,6 +6131,10 @@ function rollSelections(flag, selector, selID, value, type) {
             break;
         default:
     }
+
+    /*Object.values(oilsScrollsData.OilScroll).forEach(oil => {
+        if (oil.Name === )
+    });*/
 
 }
 

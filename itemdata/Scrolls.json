@@ -55,7 +55,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Dark": {
       "Name": "Scroll of Dark",
@@ -112,7 +113,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Earth": {
       "Name": "Scroll of Earth",
@@ -169,7 +171,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Embers": {
       "Name": "Scroll of Embers",
@@ -226,7 +229,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Frostbite": {
       "Name": "Scroll of Frostbite",
@@ -283,7 +287,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Toxic Lobotomy": {
       "Name": "Scroll of Toxic Lobotomy",
@@ -340,7 +345,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Light": {
       "Name": "Scroll of Light",
@@ -397,7 +403,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Holy Fire": {
       "Name": "Scroll of Holy Fire",
@@ -454,7 +461,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Nature": {
       "Name": "Scroll of Nature",
@@ -511,7 +519,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Plague": {
       "Name": "Scroll of Plague",
@@ -568,7 +577,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Surge": {
       "Name": "Scroll of Surge",
@@ -625,7 +635,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Water": {
       "Name": "Scroll of Water",
@@ -682,7 +693,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Aftershock": {
       "Name": "Scroll of Aftershock",
@@ -739,7 +751,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Chain Lightning": {
       "Name": "Scroll of Chain Lightning",
@@ -796,7 +809,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Chaos Strike": {
       "Name": "Scroll of Chaos Strike",
@@ -853,7 +867,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Charm": {
       "Name": "Scroll of Charm",
@@ -910,7 +925,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Corpse Explosion": {
       "Name": "Scroll of Corpse Explosion",
@@ -967,7 +983,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Crusader": {
       "Name": "Scroll of Crusader",
@@ -1024,7 +1041,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Explosions": {
       "Name": "Scroll of Explosions",
@@ -1081,7 +1099,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Fear": {
       "Name": "Scroll of Fear",
@@ -1138,7 +1157,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Flame Thrower": {
       "Name": "Scroll of Flame Thrower",
@@ -1149,7 +1169,7 @@
       "ExtraAmmoUseChance": 0,
       "BaseCritChance": 0,
       "DamageAdd": 0,
-      "DamageMult": -0.86,
+      "DamageMult": 0,
       "CanADS": "Yes",
       "JumpPower": 0,
       "LootDropChance": 0,
@@ -1189,13 +1209,14 @@
       "IsRailgun": false,
       "LongDescription": "None",
       "ScrollField": "scrollinfoflamethrower",
-      "DamageMultInd": 0,
+      "DamageMultInd": -0.86,
       "DropdownDescription": "",
       "TypePositive1": "Scrolls - Tier 2",
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Pesticide": {
       "Name": "Scroll of Pesticide",
@@ -1227,7 +1248,7 @@
       "BulletBounciness": 0.2,
       "MovingAccuracy": 0,
       "DurLossMult": 0,
-      "StatDescription": "Spread +150%<br>Bullet speed -70%<br>More drag<br>Less force speed<br>Damage -86%<br>Converts into poison sprayer<br>More life time<br>Bullets bounce +1",
+      "StatDescription": "<div style='margin: 0px; padding: 0px; border: 0px; display: grid; grid-auto-flow: column; background-color: transparent'><span>Spread +150%<br>Bullet speed -70%<br>More drag<br>Less force speed</span><br>Damage -86%<br>Converts into poison sprayer<br>More life time<br>Bullets bounce +1</span></div>",
       "ADSCritChance": 0,
       "Firemode": "None",
       "BulletSize": 0,
@@ -1252,7 +1273,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Holy Purge": {
       "Name": "Scroll of Holy Purge",
@@ -1309,7 +1331,8 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DupeFilter": false
     },
     "Scroll of Lava": {
       "Name": "Scroll of Lava",
@@ -1365,7 +1388,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Least Resistance": {
       "Name": "Scroll of Least Resistance",
@@ -1421,7 +1446,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Noxiosa": {
       "Name": "Scroll of Noxiosa",
@@ -1477,7 +1504,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Petrification": {
       "Name": "Scroll of Petrification",
@@ -1533,7 +1562,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Petroleum": {
       "Name": "Scroll of Petroleum",
@@ -1589,7 +1620,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Poison Blood": {
       "Name": "Scroll of Poison Blood",
@@ -1645,7 +1678,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Prism": {
       "Name": "Scroll of Prism",
@@ -1701,7 +1736,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Rocket Launcher": {
       "Name": "Scroll of Rocket Launcher",
@@ -1757,7 +1794,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Slush": {
       "Name": "Scroll of Slush",
@@ -1813,7 +1852,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Sacrifice": {
       "Name": "Scroll of Sacrifice",
@@ -1869,7 +1910,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Storm Surge": {
       "Name": "Scroll of Storm Surge",
@@ -1925,7 +1968,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Thunderbolt": {
       "Name": "Scroll of Thunderbolt",
@@ -1981,7 +2026,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     },
     "Scroll of Voodoo": {
       "Name": "Scroll of Voodoo",
@@ -2037,7 +2084,9 @@
       "TypeNegative1": "None",
       "ScorePos": 0,
       "ScoreNeg": 0,
-      "SearchDescription": ""
+      "SearchDescription": "",
+      "DamageMultInd": 0,
+      "DupeFilter": false
     }
   }
 }

@@ -1,6 +1,6 @@
 
-let newField = "SearchDescription";
-let newDefault = "";
+let newField = "DupeFilter";
+let newDefault = false;
 
 function oilField() {
     console.log("-------------------Starting Oils-------------------");
@@ -139,6 +139,25 @@ function chamField() {
 
     console.log("Field added to all chambers in Chambers.json.");
 }
+function chamNoEnField() {
+    console.log("-------------------Starting Chambers-------------------");
+    const fs = require("fs");
+
+    const inputFile = "./ChamberNoEn.json";
+    const outputFile = "./ChamberNoEn.json";
+
+    const data = JSON.parse(fs.readFileSync(inputFile, "utf8"));
+
+    for (const key in data.Chamber) {
+        const cham = data.Chamber[key];
+
+            addField(cham);
+    }
+
+    fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));
+
+    console.log("Field added to all chambers in Chambers.json.");
+}
 function lasField() {
     console.log("-------------------Starting Lasers-------------------");
     const fs = require("fs");
@@ -215,6 +234,7 @@ attField();
 barField();
 optField();
 chamField();
+chamNoEnField();
 lasField();
 fireField();
 weapField();
