@@ -3281,13 +3281,6 @@ function rebuildRandomArrays() {
 
 async function rollAggregator(flag, selector, selID, selValue, selType, last, source) {
 console.log(flag, selector, selID, selValue, selType, last, source)
-    if (poolRebuildReady === true) {
-        poolRebuildReady = false;
-
-        
-
-        
-    }
 
     if (buildSwapping === false) {
         document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
