@@ -3145,6 +3145,25 @@ function rollAggregator(flag, selector, selID, selValue, selType, last) {
     if (poolRebuildReady === true) {
         poolRebuildReady = false;
 
+        enchAll = [];
+        scrollsAll = [];
+        scrollsT1 = [];
+        scrollsT2 = [];
+        oilsAll = [];
+        oilsAmmo = [];
+        oilsCrit = [];
+        oilsBounce = [];
+        oilsSpeed = [];
+        oilsAddDam = [];
+        oilsMultDam = [];
+        oilsDur = [];
+        oilsPen = [];
+        oilsProj = [];
+        oilsRecoil = [];
+        oilsReload = [];
+        oilsRPM = [];
+        oilsSpread = [];
+
         Object.values(oilsScrollsData.OilScroll).forEach(oil => {
             if (oil.Name !== "none" && oil.Name !== "None" && oil.Name !== "Default" && oil.Name !== undefined && oil.Name !== null && !(oil.Name.startsWith("Random"))) {
                 enchAll.push(oil.Name);
@@ -3336,11 +3355,31 @@ function rollAggregator(flag, selector, selID, selValue, selType, last) {
             encodeBuildAsUri();
             //setBuildAsMetadata();
         }
+        
     }
     
     if (shallNotPass = false) {
         poolRebuildReady = true;
+        enchAll = [];
+        scrollsAll = [];
+        scrollsT1 = [];
+        scrollsT2 = [];
+        oilsAll = [];
+        oilsAmmo = [];
+        oilsCrit = [];
+        oilsBounce = [];
+        oilsSpeed = [];
+        oilsAddDam = [];
+        oilsMultDam = [];
+        oilsDur = [];
+        oilsPen = [];
+        oilsProj = [];
+        oilsRecoil = [];
+        oilsReload = [];
+        oilsRPM = [];
+        oilsSpread = [];
     }
+    
 }
 
 function rollOnSelect(evt) {
