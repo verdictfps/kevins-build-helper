@@ -159,7 +159,8 @@ body {
     padding-left: 0px !important;
     display: flex !important;
     flex-wrap: nowrap !important;
-    min-height: 0 !important;
+    min-height: 59% !important;
+    max-height: 59% !important;
 }  
 
 .containerattachdiv {
@@ -169,6 +170,7 @@ body {
     height: 100% !important;
     width: 25% !important;
     border-bottom: 0px !important;
+    border-top: 0px !important;
     display: flex !important;
     flex-wrap: wrap !important;
     margin: 0px !important;
@@ -178,7 +180,6 @@ body {
     background-color: #FDB142 !important;
     border-right: 1px solid #FDB142 !important;
     margin-top: 0px !important;
-    border-bottom: 2px inset black !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
     padding: 0px !important;
@@ -1330,7 +1331,7 @@ select.custom-dropdown {
 }
 
 .card-cat-header {
-    margin: 0px;
+    margin: 0px !important;
     font-size: 0.8vw;
 }
 
@@ -2021,8 +2022,13 @@ mark {
     transition: transform 1s ease;
     transform: translateY(-200px);
     border-top: 0px !important;
+    border-right: 0px !important;
+    border-left: 0px !important;
+    border-bottom: 1px solid #e4a039 !important;
     width: 50%;
     height: 100% !important;
+    max-height: 100% !important;
+    min-height: 0 !important;
 }
 
 

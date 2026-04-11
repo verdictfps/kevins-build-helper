@@ -127,6 +127,17 @@
       "DamageMultInd": 0,
       "DupeFilter": false
     },
+    "Random Ammo Consume Chance Oil": {
+      "Name": "Random Ammo Consume Chance Oil",
+      "TypePositive1": "Ammo Consume Chance",
+      "TypeNegative1": "None",
+      "ScorePos": 0,
+      "ScoreNeg": 0,
+      "DropdownDescription": "",
+      "SearchDescription": "Random Ammo Consume Chance Oil ",
+      "DamageMultInd": 0,
+      "DupeFilter": false
+    },
     "Random Base Crit Chance Oil": {
       "Name": "Random Base Crit Chance Oil",
       "TypePositive1": "Base Crit Chance",
