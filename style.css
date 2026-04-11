@@ -159,8 +159,8 @@ body {
     padding-left: 0px !important;
     display: flex !important;
     flex-wrap: nowrap !important;
-    min-height: 59% !important;
-    max-height: 59% !important;
+    min-height: 49% !important;
+    max-height: 49% !important;
 }  
 
 .containerattachdiv {
@@ -247,6 +247,7 @@ body {
     border: 5px inset #FDB142;
     border-radius: 0px;
     align-items: center;
+    justify-content: center;
 }
 
 .build-copy-button:hover {
@@ -258,12 +259,14 @@ body {
     border: 5px inset #ffc56e;
     border-radius: 0px;
     align-items: center;
+    justify-content: center;
 }
 .build-copy-button:active {
     width: 20%;
     height: 4vh;
     border: 5px inset #FDB142;
     align-items: center;
+    justify-content: center;
 }
 
 .build-chooser-button {
@@ -283,6 +286,7 @@ body {
     margin-bottom: 0px;
     gap: 10px;
     border: 5px inset #ffc56e;
+    background-color: #b16a00 !important;
     border-radius: 5px 5px 0px 0px;
 }
 .build-chooser-button:active {
@@ -315,6 +319,7 @@ body {
     gap: 10px;
     border: 5px inset #ffc56e;
     border-radius: 5px 5px 0px 0px;
+    background-color: #b16a00 !important;
 }
 .build-chooser-button-mobile:active {
     width: 20%;
