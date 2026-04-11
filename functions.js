@@ -3076,6 +3076,7 @@ let shallNotPass = true;
 async function rollOnPageLoad(flag, selector, selID, value, type) {
     console.info("KBH: Beginning initial load");
     await dropdownsReady;
+    await rebuildRandomArrays();
     setTimeout(() => {
         addAllEventListeners()
         let selPageLoad = document.getElementById("weapons");
@@ -3099,6 +3100,7 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
         selectedChamber = null;
         rolledOils = [];
         selectedChamber = null;
+        rebuildRandomArrays();
         rollSelections(flag, selector, selID, value, type);
         rollSelections('ench1', 'oils1selector', 1, 'static-choose', 'ench');
         rollSelections('ench2', 'oils2selector', 2, 'static-choose', 'ench');
@@ -3140,86 +3142,90 @@ let oilsReload = [];
 let oilsRPM = [];
 let oilsSpread = [];
 
+function rebuildRandomArrays() {
+    enchAll = [];
+    scrollsAll = [];
+    scrollsT1 = [];
+    scrollsT2 = [];
+    oilsAll = [];
+    oilsAmmo = [];
+    oilsCrit = [];
+    oilsBounce = [];
+    oilsSpeed = [];
+    oilsAddDam = [];
+    oilsMultDam = [];
+    oilsDur = [];
+    oilsPen = [];
+    oilsProj = [];
+    oilsRecoil = [];
+    oilsReload = [];
+    oilsRPM = [];
+    oilsSpread = [];
+
+    Object.values(oilsScrollsData.OilScroll).forEach(oil => {
+        if (oil.Name !== "none" && oil.Name !== "None" && oil.Name !== "Default" && oil.Name !== undefined && oil.Name !== null && !(oil.Name.startsWith("Random"))) {
+            enchAll.push(oil.Name);
+            if (oil.TypePositive1 === "Scrolls - Tier 1" || oil.TypePositive1 === "Scrolls - Tier 2") {
+                scrollsAll.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Scrolls - Tier 1") {
+                scrollsT1.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Scrolls - Tier 2") {
+                scrollsT2.push(oil.Name);
+            }
+            if (!(oil.Name.startsWith("Scroll"))) {
+                oilsAll.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Ammo Consume Chance") {
+                oilsAmmo.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Base Crit Chance") {
+                oilsCrit.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Bullet Bounces") {
+                oilsBounce.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Bullet Speed") {
+                oilsSpeed.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Damage - Flat") {
+                oilsAddDam.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Damage - Mult") {
+                oilsMultDam.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Max Durability") {
+                oilsDur.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Penetration") {
+                oilsPen.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Projectiles") {
+                oilsProj.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Recoil") {
+                oilsRecoil.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Reload Speed") {
+                oilsReload.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "RPM") {
+                oilsRPM.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Spread") {
+                oilsSpread.push(oil.Name);
+            }
+        }
+    });
+}
+
 function rollAggregator(flag, selector, selID, selValue, selType, last) {
 
     if (poolRebuildReady === true) {
         poolRebuildReady = false;
 
-        enchAll = [];
-        scrollsAll = [];
-        scrollsT1 = [];
-        scrollsT2 = [];
-        oilsAll = [];
-        oilsAmmo = [];
-        oilsCrit = [];
-        oilsBounce = [];
-        oilsSpeed = [];
-        oilsAddDam = [];
-        oilsMultDam = [];
-        oilsDur = [];
-        oilsPen = [];
-        oilsProj = [];
-        oilsRecoil = [];
-        oilsReload = [];
-        oilsRPM = [];
-        oilsSpread = [];
-
-        Object.values(oilsScrollsData.OilScroll).forEach(oil => {
-            if (oil.Name !== "none" && oil.Name !== "None" && oil.Name !== "Default" && oil.Name !== undefined && oil.Name !== null && !(oil.Name.startsWith("Random"))) {
-                enchAll.push(oil.Name);
-                if (oil.TypePositive1 === "Scrolls - Tier 1" || oil.TypePositive1 === "Scrolls - Tier 2") {
-                    scrollsAll.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Scrolls - Tier 1") {
-                    scrollsT1.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Scrolls - Tier 2") {
-                    scrollsT2.push(oil.Name);
-                }
-                if (!(oil.Name.startsWith("Scroll"))) {
-                    oilsAll.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Ammo Consume Chance") {
-                    oilsAmmo.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Base Crit Chance") {
-                    oilsCrit.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Bullet Bounces") {
-                    oilsBounce.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Bullet Speed") {
-                    oilsSpeed.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Damage - Flat") {
-                    oilsAddDam.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Damage - Mult") {
-                    oilsMultDam.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Max Durability") {
-                    oilsDur.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Penetration") {
-                    oilsPen.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Projectiles") {
-                    oilsProj.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Recoil") {
-                    oilsRecoil.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Reload Speed") {
-                    oilsReload.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "RPM") {
-                    oilsRPM.push(oil.Name);
-                }
-                if (oil.TypePositive1 === "Spread") {
-                    oilsSpread.push(oil.Name);
-                }
-            }
-        });
+        
 
         
     }
