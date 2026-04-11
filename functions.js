@@ -1618,8 +1618,10 @@ function closeAllGroupsExcept(exception) {
         });
     }
     function removeDupeFilter(optval) {
+        console.log(optval)
         state.options.forEach((o) => {
             if (o.value === optval) {
+                console.log (o);
                 o.meta.DupeFilter = false;
             }
         });
@@ -2661,6 +2663,8 @@ console.info("KBH: Beginning oil filtering process");
     let altSelector4Options = document.getElementById("oils4selector-custom").childNodes[1].childNodes[2].childNodes;
     let altSelector5Options = document.getElementById("oils5selector-custom").childNodes[1].childNodes[2].childNodes;
 
+    let filteredOptions = document.querySelectorAll(".filtered-option");
+
     let oilsel1 = document.getElementById("oils1selector");
     let oilsel2 = document.getElementById("oils2selector");
     let oilsel3 = document.getElementById("oils3selector");
@@ -2669,85 +2673,53 @@ console.info("KBH: Beginning oil filtering process");
 
     function makeAllOilsVisible() {
         console.info("KBH: Making all oils selectable");
-
-        for (var i = 0; i < altSelector1Options.length; i++) {
-            if (altSelector1Options[i].classList.contains("filtered-option")) {
-                oilsel1.removeDupeFilter(altSelector1Options[i].dataset.value);
-                altSelector1Options[i].classList.remove("filtered-option");
-                break;
-            }
-        }
-        for (var i = 0; i < altSelector2Options.length; i++) {
-            if (altSelector2Options[i].classList.contains("filtered-option")) {
-                oilsel2.removeDupeFilter(altSelector2Options[i].dataset.value);
-                altSelector2Options[i].classList.remove("filtered-option");
-                break;
-            }
-        }
-        for (var i = 0; i < altSelector3Options.length; i++) {
-            if (altSelector3Options[i].classList.contains("filtered-option")) {
-                oilsel3.removeDupeFilter(altSelector3Options[i].dataset.value);
-                altSelector3Options[i].classList.remove("filtered-option");
-                break;
-            }
-        }
-        for (var i = 0; i < altSelector4Options.length; i++) {
-            if (altSelector4Options[i].classList.contains("filtered-option")) {
-                oilsel4.removeDupeFilter(altSelector4Options[i].dataset.value);
-                altSelector4Options[i].classList.remove("filtered-option");
-                break;
-            }
-        }
-        for (var i = 0; i < altSelector5Options.length; i++) {
-            if (altSelector5Options[i].classList.contains("filtered-option")) {
-                oilsel5.removeDupeFilter(altSelector5Options[i].dataset.value);
-                altSelector5Options[i].classList.remove("filtered-option");
-                break;
-            }
+        for (var i = 0; i < filteredOptions.length; i++) {
+            oilsel1.removeDupeFilter(filteredOptions[i].dataset.value);
+            oilsel2.removeDupeFilter(filteredOptions[i].dataset.value);
+            oilsel3.removeDupeFilter(filteredOptions[i].dataset.value);
+            oilsel4.removeDupeFilter(filteredOptions[i].dataset.value);
+            oilsel5.removeDupeFilter(filteredOptions[i].dataset.value);
+            filteredOptions[i].classList.remove("filtered-option");
         }
     }
     
     function hideSelectedOils(value, key, map) {
         if (key.startsWith("ench")) {
         console.info("KBH: Hiding", key);
+        console.info(value)
             if (value.Value === "none" || value.Value.startsWith("static") || value.Value.startsWith("scroll")) {
                 return;
             }
             for (var i = 0; i < altSelector1Options.length; i++) {
                 if (altSelector1Options[i].dataset.value === value.Value) {
                     oilsel1.dupeFilter(value.Value);
-                    break;
                 }
             }
             for (var i = 0; i < altSelector2Options.length; i++) {
                 if (altSelector2Options[i].dataset.value === value.Value) {
                     oilsel2.dupeFilter(value.Value);
-                    break;
                 }
             }
             for (var i = 0; i < altSelector3Options.length; i++) {
                 if (altSelector3Options[i].dataset.value === value.Value) {
                     oilsel3.dupeFilter(value.Value);
-                    break;
                 }
             }
             for (var i = 0; i < altSelector4Options.length; i++) {
                 if (altSelector4Options[i].dataset.value === value.Value) {
                     oilsel4.dupeFilter(value.Value);
-                    break;
                 }
             }
             for (var i = 0; i < altSelector5Options.length; i++) {
                 if (altSelector5Options[i].dataset.value === value.Value) {
                     oilsel5.dupeFilter(value.Value);
-                    break;
                 }
             }
         }
     }
 
-    makeAllOilsVisible()
-
+    makeAllOilsVisible();
+    //coreSelections.forEach(hideSelectedOils);
     switch (selectedBuild) {
         case 1:
             build1Selections.forEach(hideSelectedOils);
@@ -3364,6 +3336,7 @@ console.log(flag, selector, selID, selValue, selType, last, source)
     selectedChamber = null;
 
     rollSelections(flag, selector, selID, selValue, selType);
+
     if (last === true) {
         attachmentFilter();
         oilRemover();
