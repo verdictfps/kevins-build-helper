@@ -1618,10 +1618,8 @@ function closeAllGroupsExcept(exception) {
         });
     }
     function removeDupeFilter(optval) {
-        console.log(optval)
         state.options.forEach((o) => {
             if (o.value === optval) {
-                console.log (o);
                 o.meta.DupeFilter = false;
             }
         });
@@ -1857,13 +1855,11 @@ let buildToEncode = null;
 let buildBlocker = false;
 
 function encodeBuildAsUri(last) {
-    console.log(last)
     if (buildBlocker === true) {
         return;
     }
     if (last === true) {
         console.info("KBH: Encoding build as URI string and applying to URL");
-        console.log(coreSelections)
 
         buildToEncode = "build";
         function toBuild(value, key, map) {
@@ -1904,7 +1900,6 @@ function setBuildAsMetadata() {
 
 function decodeUriAsBuild(source, link) {
     console.info("KBH: Decoding URL to detect build");
-    extSource = true;
     let currentURL = null;
     if (source === "load") {
         currentURL = link;
@@ -2074,7 +2069,6 @@ function decodeUriAsBuild(source, link) {
         }*/
 
         rollFromBuild();
-        extSource = false;
         defShantPass = false;
     }
     return true;
@@ -2134,20 +2128,13 @@ function pasteBuildLink() {
         }
 }
 
-let extSource = false;
-
 function setAllAsRandom() {
-    extSource = true;
     shallNotPass = true;
     document.getElementById("weapons").setValue("random-all-weapons");
-    shallNotPass = false;
+    rollAggregator('weapon', 'weapons', 1, "random-all-weapons", "weapon", true, "setAllAsRandom");
     randomizeAllAttachments(true);
     randomizeAllOils(true);
-    rollAggregator('weapon', 'weapons', 1, "random-all-weapons", "weapon", true, "setAllAsRandom");
-    extSource = false;
-    setTimeout(() => {
-        return true;
-    },1000);
+    shallNotPass = false;
 }
 
 function rollFiveBuilds() {
@@ -2256,7 +2243,6 @@ function setBuildAsActive(sel, clone) {
 
             if (shallNotPass === false) {
                 shallNotPass = true;
-                extSource = true;
                 document.getElementById("weapons").setValue(build.get("weapon").Value);
                 document.getElementById("barrelselector").setValue(build.get("barrel").Value);
                 document.getElementById("opticselector").setValue(build.get("optic").Value);
@@ -2277,7 +2263,6 @@ function setBuildAsActive(sel, clone) {
                 rollAggregator('ench3', 'oils3selector', 3, build.get("ench3").Value, "ench", false, "setBuildAsActive");
                 rollAggregator('ench4', 'oils4selector', 4, build.get("ench4").Value, "ench", false, "setBuildAsActive");
                 rollAggregator('ench5', 'oils5selector', 5, build.get("ench5").Value, "ench", true, "setBuildAsActive");
-                
                 buildSwapping = false;
             }
 
@@ -2308,7 +2293,6 @@ function setBuildAsActive(sel, clone) {
             }
             if (shallNotPass === false) {
                 shallNotPass = true;
-                extSource = true;
                 document.getElementById("weapons").setValue(build.get("weapon").Value);
                 document.getElementById("barrelselector").setValue(build.get("barrel").Value);
                 document.getElementById("opticselector").setValue(build.get("optic").Value);
@@ -2336,7 +2320,6 @@ function setBuildAsActive(sel, clone) {
         }
             oilRemover();
             attachmentFilter();
-            extSource = false;
             shallNotPass = false;
     }
     setTimeout(() => {
@@ -2353,7 +2336,6 @@ function commitAll() {
 function resetAll() {
     if (shallNotPass === false) {
         shallNotPass = true;
-        extSource = true;
         document.getElementById("weapons").setValue("p38-dirk");
 
         rollAggregator('weapon', 'weapons', 1, "p38-dirk", "weapon", false, "resetAll");
@@ -2364,11 +2346,11 @@ function resetAll() {
         document.getElementById("oils4selector").setValue("static-no-selection");
         document.getElementById("oils5selector").setValue("static-no-selection");
         
-        rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench", false, "resetAll");
-        rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench", false, "resetAll");
-        rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench", false, "resetAll");
-        rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench", false, "resetAll");
-        rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench", false, "resetAll");
+        rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench", true, "resetAll");
+        rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench", true, "resetAll");
+        rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench", true, "resetAll");
+        rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench", true, "resetAll");
+        rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench", true, "resetAll");
 
         document.getElementById("barrelselector").setValue("none");
         document.getElementById("opticselector").setValue("none");
@@ -2376,12 +2358,11 @@ function resetAll() {
         document.getElementById("firemodeselector").setValue("none");
         document.getElementById("chamberselector").setValue("none");
         
-        rollAggregator('barrel', 'barrelselector', 1, "none", "attachment", false, "resetAll");
-        rollAggregator('optic', 'opticselector', 2, "none", "attachment", false, "resetAll");
-        rollAggregator('laser', 'laserselector', 3, "none", "attachment", false, "resetAll");
-        rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment", false, "resetAll");
+        rollAggregator('barrel', 'barrelselector', 1, "none", "attachment", true, "resetAll");
+        rollAggregator('optic', 'opticselector', 2, "none", "attachment", true, "resetAll");
+        rollAggregator('laser', 'laserselector', 3, "none", "attachment", true, "resetAll");
+        rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment", true, "resetAll");
         rollAggregator('chamber', 'chamberselector', 5, "none", "attachment", true, "resetAll");
-        extSource = false;
         shallNotPass = false;
     }
 }
@@ -2539,18 +2520,17 @@ function randomizeAllOils(all) {
     console.info("KBH: Randomizing all enchantment slots");
     if (shallNotPass === false) {
         shallNotPass = true;
-        extSource = true;
         if (all === true) {
             document.getElementById("oils1selector").setValue("static-random-all-enchantments");
             document.getElementById("oils2selector").setValue("static-random-all-oils");
             document.getElementById("oils3selector").setValue("static-random-all-oils");
             document.getElementById("oils4selector").setValue("static-random-all-oils");
             document.getElementById("oils5selector").setValue("static-random-all-oils");
-            rollAggregator('ench1', 'oils1selector', 1, "static-random-all-enchantments", "ench", false, "randomizeAllOils");
-            rollAggregator('ench2', 'oils2selector', 2, "static-random-all-oils", "ench", false, "randomizeAllOils");
-            rollAggregator('ench3', 'oils3selector', 3, "static-random-all-oils", "ench", false, "randomizeAllOils");
-            rollAggregator('ench4', 'oils4selector', 4, "static-random-all-oils", "ench", false, "randomizeAllOils");
-            rollAggregator('ench5', 'oils5selector', 5, "static-random-all-oils", "ench", false, "randomizeAllOils");
+            rollAggregator('ench1', 'oils1selector', 1, "static-random-all-enchantments", "ench", true, "randomizeAllOils");
+            rollAggregator('ench2', 'oils2selector', 2, "static-random-all-oils", "ench", true, "randomizeAllOils");
+            rollAggregator('ench3', 'oils3selector', 3, "static-random-all-oils", "ench", true, "randomizeAllOils");
+            rollAggregator('ench4', 'oils4selector', 4, "static-random-all-oils", "ench", true, "randomizeAllOils");
+            rollAggregator('ench5', 'oils5selector', 5, "static-random-all-oils", "ench", true, "randomizeAllOils");
         }
         else {
             document.getElementById("oils1selector").setValue("static-random-all-enchantments");
@@ -2560,13 +2540,11 @@ function randomizeAllOils(all) {
             document.getElementById("oils5selector").setValue("static-random-all-oils");
             rollAggregator('ench1', 'oils1selector', 1, "static-random-all-enchantments", "ench", false, "randomizeAllOils");
             rollAggregator('ench2', 'oils2selector', 2, "static-random-all-oils", "ench", false, "randomizeAllOils");
-            rollAggregator('ench3', 'oils3selector', 3, "static-random-all-oils", "ench", false, "randomizeAllOils");
             rollAggregator('ench4', 'oils4selector', 4, "static-random-all-oils", "ench", false, "randomizeAllOils");
-            rollAggregator('ench5', 'oils5selector', 5, "static-random-all-oils", "ench", true, "randomizeAllOils");
-            extSource = false;
+            rollAggregator('ench5', 'oils5selector', 5, "static-random-all-oils", "ench", false, "randomizeAllOils");
+            
         }
         shallNotPass = false;
-
     }
 }
 
@@ -2574,7 +2552,6 @@ function resetAllOils(all) {
     console.info("KBH: Resetting all enchantment slots");
     if (shallNotPass === false) {
         shallNotPass = true;
-        extSource = true;
         if (all === true) {
             document.getElementById("oils1selector").setValue("static-no-selection");
             document.getElementById("oils2selector").setValue("static-no-selection");
@@ -2582,11 +2559,11 @@ function resetAllOils(all) {
             document.getElementById("oils4selector").setValue("static-no-selection");
             document.getElementById("oils5selector").setValue("static-no-selection");
             
-            rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench", false, "resetAllOils");
-            rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench", false, "resetAllOils");
-            rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench", false, "resetAllOils");
-            rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench", false, "resetAllOils");
-            rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench", false, "resetAllOils");
+            rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench", true, "resetAllOils");
+            rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench", true, "resetAllOils");
+            rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench", true, "resetAllOils");
+            rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench", true, "resetAllOils");
+            rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench", true, "resetAllOils");
         }
         else {
             document.getElementById("oils1selector").setValue("static-no-selection");
@@ -2595,15 +2572,14 @@ function resetAllOils(all) {
             document.getElementById("oils4selector").setValue("static-no-selection");
             document.getElementById("oils5selector").setValue("static-no-selection");
             
-            rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench", false, "resetAllOils");
-            rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench", false, "resetAllOils");
-            rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench", false, "resetAllOils");
-            rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench", false, "resetAllOils");
+            rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench", true, "resetAllOils");
+            rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench", true, "resetAllOils");
+            rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench", true, "resetAllOils");
+            rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench", true, "resetAllOils");
             rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench", true, "resetAllOils");
-            extSource = false;
+            
         }
         shallNotPass = false;
-
     }
 }
 
@@ -2611,30 +2587,28 @@ function randomizeAllAttachments(all) {
     console.info("KBH: Randomizing all attachment slots");
     if (shallNotPass === false) {
         shallNotPass = true;
-        extSource = true;
         if (all === true) {
             document.getElementById("barrelselector").setValue("static-random-barrel");
             document.getElementById("opticselector").setValue("static-random-optic");
             document.getElementById("laserselector").setValue("static-random-laser");
             document.getElementById("chamberselector").setValue("static-random-chamber");
-            rollAggregator('barrel', 'barrelselector', 1, "static-random-barrel", "attachment", false, "randomizeAllAttachments");
-            rollAggregator('optic', 'opticselector', 2, "static-random-optic", "attachment", false, "randomizeAllAttachments");
-            rollAggregator('laser', 'laserselector', 3, "static-random-laser", "attachment", false, "randomizeAllAttachments");
-            rollAggregator('chamber', 'chamberselector', 5, "static-random-chamber", "attachment", false, "randomizeAllAttachments");
+            rollAggregator('barrel', 'barrelselector', 1, "static-random-barrel", "attachment", true, "randomizeAllAttachments");
+            rollAggregator('optic', 'opticselector', 2, "static-random-optic", "attachment", true, "randomizeAllAttachments");
+            rollAggregator('laser', 'laserselector', 3, "static-random-laser", "attachment", true, "randomizeAllAttachments");
+            rollAggregator('chamber', 'chamberselector', 5, "static-random-chamber", "attachment", true, "randomizeAllAttachments");
         }
         else {
             document.getElementById("barrelselector").setValue("static-random-barrel");
             document.getElementById("opticselector").setValue("static-random-optic");
             document.getElementById("laserselector").setValue("static-random-laser");
             document.getElementById("chamberselector").setValue("static-random-chamber");
-            rollAggregator('barrel', 'barrelselector', 1, "static-random-barrel", "attachment", false, "randomizeAllAttachments");
-            rollAggregator('optic', 'opticselector', 2, "static-random-optic", "attachment", false, "randomizeAllAttachments");
-            rollAggregator('laser', 'laserselector', 3, "static-random-laser", "attachment", false, "randomizeAllAttachments");
+            rollAggregator('barrel', 'barrelselector', 1, "static-random-barrel", "attachment", true, "randomizeAllAttachments");
+            rollAggregator('optic', 'opticselector', 2, "static-random-optic", "attachment", true, "randomizeAllAttachments");
+            rollAggregator('laser', 'laserselector', 3, "static-random-laser", "attachment", true, "randomizeAllAttachments");
             rollAggregator('chamber', 'chamberselector', 5, "static-random-chamber", "attachment", true, "randomizeAllAttachments");
-            extSource = false;
+            
         }
         shallNotPass = false;
-
     }
 }
 
@@ -2642,7 +2616,6 @@ function resetAllAttachments(all) {
 console.info("KBH: Resetting all attachment slots");
     if (shallNotPass === false) {
         shallNotPass = true;
-        extSource = true;
         if (all === true) {
             document.getElementById("barrelselector").setValue("none");
             document.getElementById("opticselector").setValue("none");
@@ -2668,11 +2641,10 @@ console.info("KBH: Resetting all attachment slots");
             rollAggregator('laser', 'laserselector', 3, "none", "attachment", false);
             rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment", false, "resetAllAttachments");
             rollAggregator('chamber', 'chamberselector', 5, "none", "attachment", true, "resetAllAttachments");
-            extSource = false;
+            
         }
         
         shallNotPass = false;
-
     }   
 }
 
@@ -2680,11 +2652,9 @@ function commitSelection(buttonID, dropdownID, item) {
     console.info("KBH: Committing...");
     if (shallNotPass === false) {
         shallNotPass = true;
-        extSource = true;
         let getValue = coreSelections.get(item);
         let value = getValue.Value; 
         document.getElementById(dropdownID).setValue(value);
-        extSource = false;
         shallNotPass = false;
     }
 }
@@ -2803,11 +2773,12 @@ function attachmentFilter(evt) {
     let selectorFiremode = document.getElementById("firemodeselector");
     let selectorFiremodePro = document.getElementById("firemodeselector-custom").childNodes[1].childNodes[2].childNodes;
 
-    let dropdownWeapon = ((coreSelections.get("weapon")).Name); 
-    
+    let dropdownWeapon = ((coreSelections.get("weapon")).Name);
+
     document.getElementById("chamberselector-custom").classList.remove("disabled");
     document.getElementById("barrelselector-custom").classList.remove("disabled");
     document.getElementById("firemodeselector-custom").classList.remove("disabled");
+    
     // Filter Firemodes
 
     for (var i = 0; i < selectorFiremodePro.length; i++) {
@@ -2927,7 +2898,6 @@ function animationQueue(type, id) {
 
 // For when the button is clicked.
 function onGenerate() {
-    extSource = true;
     rollAggregator("weapon", "weapons", 1, document.getElementById("weapons").getValue(), "weapon", false, "onGenerate");
     rollAggregator("ench1", "oils1selector", 1, document.getElementById("oils1selector").getValue(), "ench", false, "onGenerate");
     rollAggregator("ench2", "oils2selector", 2, document.getElementById("oils2selector").getValue(), "ench", false, "onGenerate");
@@ -2939,7 +2909,6 @@ function onGenerate() {
     rollAggregator("laser", "laserselector", 3, document.getElementById("laserselector").getValue(), "attachment", false, "onGenerate");
     rollAggregator("firemode", "firemodeselector", 4, document.getElementById("firemodeselector").getValue(), "attachment", false, "onGenerate");
     rollAggregator("chamber", "chamberselector", 5, document.getElementById("chamberselector").getValue(), "attachment", true, "onGenerate");
-    extSource = false;
 }
 
 function rerollRandomEnch(opt) {
@@ -2964,7 +2933,6 @@ function rerollRandomEnch(opt) {
 }
 
 function rollFromBuild() {
-        extSource = true;
         document.getElementById("weapons").setValue(coreSelections.get("weapon").Value);
         /*commitSelection('', 'weapons', 'weapon');
         commitSelection('buttonCommitOil1', 'oils1selector', 'ench1', false);
@@ -2978,7 +2946,6 @@ function rollFromBuild() {
         commitSelection('buttonCommitFiremode', 'firemodeselector', 'firemode', false);
         commitSelection('buttonCommitChamber', 'chamberselector', 'chamber', false);*/
         //rollAggregator("weapon", "weapons", 1, coreSelections.get("weapon").Value, "weapon", true);
-        extSource = false;
         onGenerate();
         shallNotPass = false;
 }
@@ -3208,24 +3175,6 @@ let oilsRPM = [];
 let oilsSpread = [];
 
 function rebuildRandomArrays() {
-    console.log(enchAll);
-    console.log(scrollsAll);
-    console.log(scrollsT1);
-    console.log(scrollsT2);
-    console.log(oilsAll );
-    console.log(oilsAmmo);
-    console.log(oilsCrit);
-    console.log(oilsBounce);
-    console.log(oilsSpeed);
-    console.log(oilsAddDam);
-    console.log(oilsMultDam);
-    console.log(oilsDur);
-    console.log(oilsPen);
-    console.log(oilsProj);
-    console.log(oilsRecoil);
-    console.log(oilsReload);
-    console.log(oilsRPM);
-    console.log(oilsSpread);
 
     enchAll = [];
     scrollsAll = [];
@@ -3306,7 +3255,6 @@ function rebuildRandomArrays() {
 }
 
 async function rollAggregator(flag, selector, selID, selValue, selType, last, source) {
-console.log(flag, selector, selID, selValue, selType, last, source)
 
     if (buildSwapping === false) {
         document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
@@ -3478,14 +3426,7 @@ function rollOnSelect(evt) {
                 selID = evt.currentTarget.selID;
                 selValue = evt.currentTarget.getValue()
                 selType = evt.currentTarget.selType;
-                if (extSource === true) {
-                    rollAggregator(flag, selector, selID, selValue, selType, false, "rollOnSelect");
-                }
-                else {
                     rollAggregator(flag, selector, selID, selValue, selType, true, "rollOnSelect");
-                }
-
-                shallNotPass = false;
         
             }
             if (!(evt)) {
@@ -6290,6 +6231,10 @@ function rollSelections(flag, selector, selID, value, type) {
                         setDefaultChamber(weapCha.Name);
                         break;
                     case undefined:
+                        weapCha = coreSelections.get("weapon");
+                        setDefaultChamber(weapCha.Name);
+                        break;
+                    case "":
                         weapCha = coreSelections.get("weapon");
                         setDefaultChamber(weapCha.Name);
                         break;
