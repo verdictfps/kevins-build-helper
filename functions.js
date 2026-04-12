@@ -2131,57 +2131,71 @@ function pasteBuildLink() {
 function setAllAsRandom() {
     shallNotPass = true;
     document.getElementById("weapons").setValue("random-all-weapons");
-    rollAggregator('weapon', 'weapons', 1, "random-all-weapons", "weapon", true, "setAllAsRandom");
-    randomizeAllAttachments(true);
-    randomizeAllOils(true);
     shallNotPass = false;
+    rollAggregator('weapon', 'weapons', 1, "random-all-weapons", "weapon", true, "setAllAsRandom");
+    randomizeAllAttachments();
+    randomizeAllOils();
 }
 
-function rollFiveBuilds() {
+function checkAnimation() {
+    if(animationCardEnd === false) {
+        console.log(animationCardEnd)
+       window.setTimeout(checkAnimation, 100);
+    }
+    /*else {
+        console.log("should be first before animation")
+        animationCardEnd = false;
+        return true;
+    }*/
+}
+
+async function rollFiveBuilds() {
+    animationCardEnd = false;
+    resetBuild1Selections();
+    resetBuild2Selections();
+    resetBuild3Selections();
+    resetBuild4Selections();
+    resetBuild5Selections();
+    
     buildSwapping = true;
     setBuildAsActive(1);
     buildSwapping = true;
     setTimeout(() => {
         buildSwapping = true;
         setAllAsRandom();
-        commitAll();
         buildSwapping = true;
     },500);
     setTimeout(() => {
         setBuildAsActive(2);
         buildSwapping = true;
-    },1100);
+    },1500);
     setTimeout(() => {
         setAllAsRandom();
-        commitAll();
-    },1300);
+    },2000);
     setTimeout(() => {
         setBuildAsActive(3);
         buildSwapping = true;
-    },1900);
+    },3000);
     setTimeout(() => {
         setAllAsRandom();
-        commitAll();
-    },2100);
+    },3500);
     setTimeout(() => {
         setBuildAsActive(4);
         buildSwapping = true;
-    },2600);
+    },4500);
     setTimeout(() => {
         setAllAsRandom();
-        commitAll();
-    },2800);
+    },5000);
     setTimeout(() => {
         setBuildAsActive(5);
         buildSwapping = true;
-    },3300);
+    },6000);
     setTimeout(() => {
         setAllAsRandom();
-        commitAll();
-    },3500);
+    },6500);
     setTimeout(() => {
         buildSwapping = false;
-    },4000);
+    },7500);
 }
 
 function setBuildButton(sel) {
@@ -2303,15 +2317,15 @@ function setBuildAsActive(sel, clone) {
                 document.getElementById("oils3selector").setValue(build.get("ench3").Value);
                 document.getElementById("oils4selector").setValue(build.get("ench4").Value);
                 document.getElementById("oils5selector").setValue(build.get("ench5").Value);
-                rollAggregator('weapon', 'weapons', 1, build.get("weapon").Value, "weapon", false, "setBuildAsActive");
-                rollAggregator('barrel', 'barrelselector', 1, build.get("barrel").Value, "attachment", false, "setBuildAsActive");
-                rollAggregator('optic', 'opticselector', 2, build.get("optic").Value, "attachment", false, "setBuildAsActive");
-                rollAggregator('laser', 'laserselector', 3, build.get("laser").Value, "attachment", false, "setBuildAsActive");
-                rollAggregator('chamber', 'chamberselector', 5, build.get("chamber").Value, "attachment", false, "setBuildAsActive");
-                rollAggregator('ench1', 'oils1selector', 1, build.get("ench1").Value, "ench", false, "setBuildAsActive");
-                rollAggregator('ench2', 'oils2selector', 2, build.get("ench2").Value, "ench", false, "setBuildAsActive");
-                rollAggregator('ench3', 'oils3selector', 3, build.get("ench3").Value, "ench", false, "setBuildAsActive");
-                rollAggregator('ench4', 'oils4selector', 4, build.get("ench4").Value, "ench", false, "setBuildAsActive");
+                rollSelections('weapon', 'weapons', 1, build.get("weapon").Value, "weapon", false, "setBuildAsActive");
+                rollSelections('barrel', 'barrelselector', 1, build.get("barrel").Value, "attachment", false, "setBuildAsActive");
+                rollSelections('optic', 'opticselector', 2, build.get("optic").Value, "attachment", false, "setBuildAsActive");
+                rollSelections('laser', 'laserselector', 3, build.get("laser").Value, "attachment", false, "setBuildAsActive");
+                rollAggregator('chamber', 'chamberselector', 5, build.get("chamber").Value, "attachment", true, "setBuildAsActive");
+                rollSelections('ench1', 'oils1selector', 1, build.get("ench1").Value, "ench", false, "setBuildAsActive");
+                rollSelections('ench2', 'oils2selector', 2, build.get("ench2").Value, "ench", false, "setBuildAsActive");
+                rollSelections('ench3', 'oils3selector', 3, build.get("ench3").Value, "ench", false, "setBuildAsActive");
+                rollSelections('ench4', 'oils4selector', 4, build.get("ench4").Value, "ench", false, "setBuildAsActive");
                 rollAggregator('ench5', 'oils5selector', 5, build.get("ench5").Value, "ench", true, "setBuildAsActive");
                 
                 
@@ -2324,7 +2338,7 @@ function setBuildAsActive(sel, clone) {
     }
     setTimeout(() => {
         return true;
-    },1000);
+    },200);
 }
 
 function commitAll() {
@@ -2516,69 +2530,39 @@ function setSlot(key, selector, index, value, type) {
     }
 }
 
-function randomizeAllOils(all) {
+function randomizeAllOils() {
     console.info("KBH: Randomizing all enchantment slots");
     if (shallNotPass === false) {
         shallNotPass = true;
-        if (all === true) {
             document.getElementById("oils1selector").setValue("static-random-all-enchantments");
             document.getElementById("oils2selector").setValue("static-random-all-oils");
             document.getElementById("oils3selector").setValue("static-random-all-oils");
             document.getElementById("oils4selector").setValue("static-random-all-oils");
             document.getElementById("oils5selector").setValue("static-random-all-oils");
-            rollAggregator('ench1', 'oils1selector', 1, "static-random-all-enchantments", "ench", true, "randomizeAllOils");
-            rollAggregator('ench2', 'oils2selector', 2, "static-random-all-oils", "ench", true, "randomizeAllOils");
-            rollAggregator('ench3', 'oils3selector', 3, "static-random-all-oils", "ench", true, "randomizeAllOils");
-            rollAggregator('ench4', 'oils4selector', 4, "static-random-all-oils", "ench", true, "randomizeAllOils");
+            rollSelections('ench1', 'oils1selector', 1, "static-random-all-enchantments", "ench", false, "randomizeAllOils");
+            rollSelections('ench2', 'oils2selector', 2, "static-random-all-oils", "ench", false, "randomizeAllOils");
+            rollSelections('ench3', 'oils3selector', 3, "static-random-all-oils", "ench", false, "randomizeAllOils");
+            rollSelections('ench4', 'oils4selector', 4, "static-random-all-oils", "ench", false, "randomizeAllOils");
             rollAggregator('ench5', 'oils5selector', 5, "static-random-all-oils", "ench", true, "randomizeAllOils");
-        }
-        else {
-            document.getElementById("oils1selector").setValue("static-random-all-enchantments");
-            document.getElementById("oils2selector").setValue("static-random-all-oils");
-            document.getElementById("oils3selector").setValue("static-random-all-oils");
-            document.getElementById("oils4selector").setValue("static-random-all-oils");
-            document.getElementById("oils5selector").setValue("static-random-all-oils");
-            rollAggregator('ench1', 'oils1selector', 1, "static-random-all-enchantments", "ench", false, "randomizeAllOils");
-            rollAggregator('ench2', 'oils2selector', 2, "static-random-all-oils", "ench", false, "randomizeAllOils");
-            rollAggregator('ench4', 'oils4selector', 4, "static-random-all-oils", "ench", false, "randomizeAllOils");
-            rollAggregator('ench5', 'oils5selector', 5, "static-random-all-oils", "ench", false, "randomizeAllOils");
-            
-        }
         shallNotPass = false;
     }
 }
 
-function resetAllOils(all) {
+function resetAllOils() {
     console.info("KBH: Resetting all enchantment slots");
     if (shallNotPass === false) {
         shallNotPass = true;
-        if (all === true) {
             document.getElementById("oils1selector").setValue("static-no-selection");
             document.getElementById("oils2selector").setValue("static-no-selection");
             document.getElementById("oils3selector").setValue("static-no-selection");
             document.getElementById("oils4selector").setValue("static-no-selection");
             document.getElementById("oils5selector").setValue("static-no-selection");
             
-            rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench", true, "resetAllOils");
-            rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench", true, "resetAllOils");
-            rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench", true, "resetAllOils");
-            rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench", true, "resetAllOils");
+            rollSelections('ench1', 'oils1selector', 1, "static-no-selection", "ench", false, "resetAllOils");
+            rollSelections('ench2', 'oils2selector', 2, "static-no-selection", "ench", false, "resetAllOils");
+            rollSelections('ench3', 'oils3selector', 3, "static-no-selection", "ench", false, "resetAllOils");
+            rollSelections('ench4', 'oils4selector', 4, "static-no-selection", "ench", false, "resetAllOils");
             rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench", true, "resetAllOils");
-        }
-        else {
-            document.getElementById("oils1selector").setValue("static-no-selection");
-            document.getElementById("oils2selector").setValue("static-no-selection");
-            document.getElementById("oils3selector").setValue("static-no-selection");
-            document.getElementById("oils4selector").setValue("static-no-selection");
-            document.getElementById("oils5selector").setValue("static-no-selection");
-            
-            rollAggregator('ench1', 'oils1selector', 1, "static-no-selection", "ench", true, "resetAllOils");
-            rollAggregator('ench2', 'oils2selector', 2, "static-no-selection", "ench", true, "resetAllOils");
-            rollAggregator('ench3', 'oils3selector', 3, "static-no-selection", "ench", true, "resetAllOils");
-            rollAggregator('ench4', 'oils4selector', 4, "static-no-selection", "ench", true, "resetAllOils");
-            rollAggregator('ench5', 'oils5selector', 5, "static-no-selection", "ench", true, "resetAllOils");
-            
-        }
         shallNotPass = false;
     }
 }
@@ -2587,27 +2571,14 @@ function randomizeAllAttachments(all) {
     console.info("KBH: Randomizing all attachment slots");
     if (shallNotPass === false) {
         shallNotPass = true;
-        if (all === true) {
-            document.getElementById("barrelselector").setValue("static-random-barrel");
-            document.getElementById("opticselector").setValue("static-random-optic");
-            document.getElementById("laserselector").setValue("static-random-laser");
-            document.getElementById("chamberselector").setValue("static-random-chamber");
-            rollAggregator('barrel', 'barrelselector', 1, "static-random-barrel", "attachment", true, "randomizeAllAttachments");
-            rollAggregator('optic', 'opticselector', 2, "static-random-optic", "attachment", true, "randomizeAllAttachments");
-            rollAggregator('laser', 'laserselector', 3, "static-random-laser", "attachment", true, "randomizeAllAttachments");
-            rollAggregator('chamber', 'chamberselector', 5, "static-random-chamber", "attachment", true, "randomizeAllAttachments");
-        }
-        else {
-            document.getElementById("barrelselector").setValue("static-random-barrel");
-            document.getElementById("opticselector").setValue("static-random-optic");
-            document.getElementById("laserselector").setValue("static-random-laser");
-            document.getElementById("chamberselector").setValue("static-random-chamber");
-            rollAggregator('barrel', 'barrelselector', 1, "static-random-barrel", "attachment", true, "randomizeAllAttachments");
-            rollAggregator('optic', 'opticselector', 2, "static-random-optic", "attachment", true, "randomizeAllAttachments");
-            rollAggregator('laser', 'laserselector', 3, "static-random-laser", "attachment", true, "randomizeAllAttachments");
-            rollAggregator('chamber', 'chamberselector', 5, "static-random-chamber", "attachment", true, "randomizeAllAttachments");
-            
-        }
+        document.getElementById("barrelselector").setValue("static-random-barrel");
+        document.getElementById("opticselector").setValue("static-random-optic");
+        document.getElementById("laserselector").setValue("static-random-laser");
+        document.getElementById("chamberselector").setValue("static-random-chamber");
+        rollSelections('barrel', 'barrelselector', 1, "static-random-barrel", "attachment", false, "randomizeAllAttachments");
+        rollSelections('optic', 'opticselector', 2, "static-random-optic", "attachment", false, "randomizeAllAttachments");
+        rollSelections('laser', 'laserselector', 3, "static-random-laser", "attachment", false, "randomizeAllAttachments");
+        rollAggregator('chamber', 'chamberselector', 5, "static-random-chamber", "attachment", true, "randomizeAllAttachments");
         shallNotPass = false;
     }
 }
@@ -2616,34 +2587,17 @@ function resetAllAttachments(all) {
 console.info("KBH: Resetting all attachment slots");
     if (shallNotPass === false) {
         shallNotPass = true;
-        if (all === true) {
-            document.getElementById("barrelselector").setValue("none");
-            document.getElementById("opticselector").setValue("none");
-            document.getElementById("laserselector").setValue("none");
-            document.getElementById("firemodeselector").setValue("none");
-            document.getElementById("chamberselector").setValue("none");
-            
-            rollAggregator('barrel', 'barrelselector', 1, "none", "attachment", false, "resetAllAttachments");
-            rollAggregator('optic', 'opticselector', 2, "none", "attachment", false, "resetAllAttachments");
-            rollAggregator('laser', 'laserselector', 3, "none", "attachment", false, "resetAllAttachments");
-            rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment", false, "resetAllAttachments");
-            rollAggregator('chamber', 'chamberselector', 5, "none", "attachment", false, "resetAllAttachments");
-        }
-        else {
-            document.getElementById("barrelselector").setValue("none");
-            document.getElementById("opticselector").setValue("none");
-            document.getElementById("laserselector").setValue("none");
-            document.getElementById("firemodeselector").setValue("none");
-            document.getElementById("chamberselector").setValue("none");
-            
-            rollAggregator('barrel', 'barrelselector', 1, "none", "attachment", false, "resetAllAttachments");
-            rollAggregator('optic', 'opticselector', 2, "none", "attachment", false, "resetAllAttachments");
-            rollAggregator('laser', 'laserselector', 3, "none", "attachment", false);
-            rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment", false, "resetAllAttachments");
-            rollAggregator('chamber', 'chamberselector', 5, "none", "attachment", true, "resetAllAttachments");
-            
-        }
+        document.getElementById("barrelselector").setValue("none");
+        document.getElementById("opticselector").setValue("none");
+        document.getElementById("laserselector").setValue("none");
+        document.getElementById("firemodeselector").setValue("none");
+        document.getElementById("chamberselector").setValue("none");
         
+        rollAggregator('barrel', 'barrelselector', 1, "none", "attachment", false, "resetAllAttachments");
+        rollAggregator('optic', 'opticselector', 2, "none", "attachment", false, "resetAllAttachments");
+        rollAggregator('laser', 'laserselector', 3, "none", "attachment", false);
+        rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment", false, "resetAllAttachments");
+        rollAggregator('chamber', 'chamberselector', 5, "none", "attachment", true, "resetAllAttachments");
         shallNotPass = false;
     }   
 }
@@ -2787,14 +2741,13 @@ function attachmentFilter(evt) {
             break;
         }
     }
-
+    shallNotPass = true;
     if (dropdownWeapon.AmmoType === "Energy") {
-        selectorChamber.setValue("static-not-applicable");
-        selectorBarrel.setValue("static-not-applicable");
+        selectorChamber.setValue("none");
+        selectorBarrel.setValue("none");
         document.getElementById("chamberselector-custom").classList.add("disabled");
         document.getElementById("barrelselector-custom").classList.add("disabled");
     }
-
     if (document.getElementById("chamberselector-custom").classList.contains("disabled")) {
         selectorChamber.setValue("none");
         let cham = getChamberByName("Chamber Chisel - Energy");
@@ -2853,9 +2806,9 @@ function attachmentFilter(evt) {
             addToCoreMap("firemode", name3, "none")
             break;
         default:
-    
-        selectorFiremode.updateDisplay();
+        //selectorFiremode.updateDisplay();
     }
+    shallNotPass = false;
 }
 
 function animationQueue(type, id) {
@@ -2950,6 +2903,8 @@ function rollFromBuild() {
         shallNotPass = false;
 }
 
+let animationCardEnd = false;
+
 function addAllEventListeners() {
 
     // Weapon onchange handler
@@ -3038,11 +2993,15 @@ function addAllEventListeners() {
 
     // Buttons and fields
 
-
-
-
+    
 
     // Animations
+
+    cardAnimationHandler = document.getElementById('cardOil5Img');
+    cardAnimationHandler.addEventListener('animationend', () => {
+        animationCardEnd = true;
+    });
+
 
     // Mobile checks
     //dropdownSelectHandler = document.getElementsByClassName('custom-select');
@@ -3098,6 +3057,7 @@ let opticSelectHandler = document.getElementById('opticselector');
 let laserSelectHandler = document.getElementById('laserselector');
 let firemodeSelectHandler = document.getElementById('firemodeselector');
 let chamberSelectHandler = document.getElementById('chamberselector');
+let cardAnimationHandler = document.getElementById('cardOil5Img');
 
 let flag = null;
 let selector = null;
@@ -3488,12 +3448,14 @@ function addName() {
                 let oil4 = getOilByName(coreName);
                 document.getElementById("cardOilDesc4").innerHTML = oil4.StatDescription;
                 document.getElementById("cardOilName4").textContent = coreName;
-                document.getElementById(`cardOil4Img`).style.backgroundImage = `url('./Images/Enchantments/${coreName}.webp')`;                break;
+                document.getElementById(`cardOil4Img`).style.backgroundImage = `url('./Images/Enchantments/${coreName}.webp')`;
+                break;
             case "ench5":
                 let oil5 = getOilByName(coreName);
                 document.getElementById("cardOilDesc5").innerHTML = oil5.StatDescription;
                 document.getElementById("cardOilName5").textContent = coreName;
-                document.getElementById(`cardOil5Img`).style.backgroundImage = `url('./Images/Enchantments/${coreName}.webp')`;                break;
+                document.getElementById(`cardOil5Img`).style.backgroundImage = `url('./Images/Enchantments/${coreName}.webp')`;
+                break;
             case "barrel":
                 let barrel = getBarrelByName(coreName);
                 document.getElementById("barrelname").textContent = coreName;
@@ -3512,7 +3474,18 @@ function addName() {
                 let firemode = getBarrelByName(coreName);
                 document.getElementById("firemodename").textContent = coreName;
                 document.getElementById("firemodedesc").innerHTML = value.Name.StatDescription;
-                break;   
+                break;
+            case "chamber":
+                if (coreSelections.get("chamber").Name.AmmoType === coreSelections.get("weapon").Name.AmmoType) {
+                    if (shallNotPass === true) {
+                        document.getElementById("chamberselector").setValue("none");
+                    }
+                    else {
+                        shallNotPass = true;
+                        document.getElementById("chamberselector").setValue("none");
+                        shallNotPass = false;
+                    }
+                }
             case "all":
                 break;
             default:
@@ -5996,7 +5969,6 @@ function rollSelections(flag, selector, selID, value, type) {
         if (selectedItem !== null) {
             poolRemover(selectedItem.Name);
         }
-        //randomDupePrevention
     }
 
     function rollWeapon(value, flag) {
@@ -6227,7 +6199,6 @@ function rollSelections(flag, selector, selID, value, type) {
                 switch (value) {
                     case "static-choose":
                         weapCha = coreSelections.get("weapon");
-                        
                         setDefaultChamber(weapCha.Name);
                         break;
                     case undefined:
@@ -6245,12 +6216,22 @@ function rollSelections(flag, selector, selID, value, type) {
                     case "static-random-chamber":
                         shuffle(attachmentsRechambers);
                         selectedItem = getChamberByName(attachmentsRechambers[0]);
-                        selectedValue = convNameToVal(selectedItem.Name);
+                        selectedValue = chamberNameIndexer.get(selectedItem.Name);
+                        if (selectedItem.AmmoType === coreSelections.get("weapon").Name.AmmoType) {
+                            console.log(coreSelections.get("weapon").Name.AmmoType)
+                            weapCha = coreSelections.get("weapon");
+                            setDefaultChamber(weapCha.Name);
+                        }
                         addToCoreMap(flag, selectedItem, selectedValue);
                         break;
                     default:
                         selectedItem = chamberValueIndexer.get(value);
                         selectedChamber = getChamberByName(selectedItem);
+                        if (selectedChamber.AmmoType === coreSelections.get("weapon").Name.AmmoType) {
+                            console.log(coreSelections.get("weapon").Name.AmmoType)
+                            weapCha = coreSelections.get("weapon");
+                            setDefaultChamber(weapCha.Name);
+                        }
                         addToCoreMap(flag, selectedChamber, value);
                 }
             }

@@ -927,7 +927,7 @@
       "Damage": 0,
       "Projectiles": 1,
       "RPM": 300,
-      "MagSize": 7,
+      "MagSize": 14,
       "Spread": 0,
       "Spread12ga": 7,
       "Durability": 2000,
