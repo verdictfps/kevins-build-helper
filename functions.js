@@ -2145,6 +2145,56 @@ function setAllAsRandom() {
     randomizeAllOils(true);
     rollAggregator('weapon', 'weapons', 1, "random-all-weapons", "weapon", true, "setAllAsRandom");
     extSource = false;
+    setTimeout(() => {
+        return true;
+    },1000);
+}
+
+function rollFiveBuilds() {
+    buildSwapping = true;
+    setBuildAsActive(1);
+    buildSwapping = true;
+    setTimeout(() => {
+        buildSwapping = true;
+        setAllAsRandom();
+        commitAll();
+        buildSwapping = true;
+    },500);
+    setTimeout(() => {
+        setBuildAsActive(2);
+        buildSwapping = true;
+    },1100);
+    setTimeout(() => {
+        setAllAsRandom();
+        commitAll();
+    },1300);
+    setTimeout(() => {
+        setBuildAsActive(3);
+        buildSwapping = true;
+    },1900);
+    setTimeout(() => {
+        setAllAsRandom();
+        commitAll();
+    },2100);
+    setTimeout(() => {
+        setBuildAsActive(4);
+        buildSwapping = true;
+    },2600);
+    setTimeout(() => {
+        setAllAsRandom();
+        commitAll();
+    },2800);
+    setTimeout(() => {
+        setBuildAsActive(5);
+        buildSwapping = true;
+    },3300);
+    setTimeout(() => {
+        setAllAsRandom();
+        commitAll();
+    },3500);
+    setTimeout(() => {
+        buildSwapping = false;
+    },4000);
 }
 
 function setBuildButton(sel) {
@@ -2166,6 +2216,7 @@ function setBuildButton(sel) {
             document.getElementById("build-button-5").classList.add("build-chooser-button-selected");
             break;
     }
+    return true;
 }
 
 function cloneBuild(sel) {
@@ -2288,6 +2339,9 @@ function setBuildAsActive(sel, clone) {
             extSource = false;
             shallNotPass = false;
     }
+    setTimeout(() => {
+        return true;
+    },1000);
 }
 
 function commitAll() {
