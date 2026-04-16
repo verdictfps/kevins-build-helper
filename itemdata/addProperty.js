@@ -1,6 +1,6 @@
 
-let newField = "DupeFilter";
-let newDefault = false;
+let newField = "BulletSize";
+let newDefault = 1;
 
 function oilField() {
     console.log("-------------------Starting Oils-------------------");
@@ -215,6 +215,82 @@ function weapField() {
 
     console.log("Field added to all weapons in Weapons.json.");
 }
+function armorHeadField() {
+    console.log("-------------------Starting Head Armor-------------------");
+    const fs = require("fs");
+
+    const inputFile = "./armorHead.json";
+    const outputFile = "./armorHead.json";
+
+    const data = JSON.parse(fs.readFileSync(inputFile, "utf8"));
+
+    for (const key in data.ArmorHead) {
+        const arm = data.ArmorHead[key];
+
+            addField(arm);
+    }
+
+    fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));
+
+    console.log("Field added to all armor in armorHead.json.");
+}
+function armorChestField() {
+    console.log("-------------------Starting Chest Armor-------------------");
+    const fs = require("fs");
+
+    const inputFile = "./armorChest.json";
+    const outputFile = "./armorChest.json";
+
+    const data = JSON.parse(fs.readFileSync(inputFile, "utf8"));
+
+    for (const key in data.ArmorChest) {
+        const arm = data.ArmorChest[key];
+
+            addField(arm);
+    }
+
+    fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));
+
+    console.log("Field added to all armor in armorChest.json.");
+}
+function armorFeetField() {
+    console.log("-------------------Starting Foot Armor-------------------");
+    const fs = require("fs");
+
+    const inputFile = "./armorFeet.json";
+    const outputFile = "./armorFeet.json";
+
+    const data = JSON.parse(fs.readFileSync(inputFile, "utf8"));
+
+    for (const key in data.ArmorFeet) {
+        const arm = data.ArmorFeet[key];
+
+            addField(arm);
+    }
+
+    fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));
+
+    console.log("Field added to all armor in armorFeet.json.");
+}
+function trinketField() {
+    console.log("-------------------Starting Trinkets-------------------");
+    const fs = require("fs");
+
+    const inputFile = "./Trinkets.json";
+    const outputFile = "./Trinkets.json";
+
+    const data = JSON.parse(fs.readFileSync(inputFile, "utf8"));
+
+    for (const key in data.Trinket) {
+        const tri = data.Trinket[key];
+
+            addField(tri);
+    }
+
+    fs.writeFileSync(outputFile, JSON.stringify(data, null, 2));
+
+    console.log("Field added to all trinkets in Trinkets.json.");
+}
 function addField(item) {
 
     if (!(newField in item)) {
@@ -238,3 +314,7 @@ chamNoEnField();
 lasField();
 fireField();
 weapField();
+armorHeadField();
+armorChestField();
+armorFeetField();
+trinketField();

@@ -365,6 +365,21 @@ async function dropdownBuilder() {
 let firstLoad = true;
 
 document.addEventListener("DOMContentLoaded", async () => {
+    await loadOilsScrolls();
+    await loadChamber();
+    await loadWeapons();
+    await loadOrigWeapons();
+    await loadAttachments();
+    await loadBarrels();
+    await loadOptics();
+    await loadLasers();
+    await loadFiremodes();
+    await loadOils();
+    await loadScrolls();
+    await rebuildRandomArrays();
+    await setOilValueIndexer();
+    await setOilNameIndexer();
+
     await dropdownBuilder();
     dropdownReadyResolve();
     rollOnPageLoad('weapon', 'pageload', 7, 'p38-dirk', 'weapon');
@@ -830,7 +845,7 @@ async function createProDropdown(select) {
     // ===== LOAD DATA =====
     if (select.classList.contains("scroll-dropdown")) {
         const data = await loadOilsScrolls();
-        loadScrolls();
+        await loadScrolls();
         state.options = normalizeOptions(data);
     }
     if (select.classList.contains("oil-dropdown")) {
@@ -839,7 +854,7 @@ async function createProDropdown(select) {
     }
     if (select.classList.contains("weapon-dropdown")) {
         const data = await loadWeapons();
-        loadOrigWeapons();
+        await loadOrigWeapons();
         state.options = normalizeOptions(data);
     }
     if (select.classList.contains("barrel-dropdown")) {
@@ -1312,6 +1327,7 @@ async function createProDropdown(select) {
         "Random Ammo Consume Chance Oil",
         "Random Base Crit Chance Oil",
         "Random Bullet Bounce Oil",
+        "Random Bullet Size Oil",
         "Random Bullet Speed Oil",
         "Random Damage - Flat Oil",
         "Random Damage - Mult Oil",
@@ -2224,7 +2240,7 @@ function cloneBuild(sel) {
     setBuildAsActive(sel, true);
 }
 
-function setBuildAsActive(sel, clone) {
+async function setBuildAsActive(sel, clone) {
     if (selectedBuild === sel) {
         return;
     }
@@ -2332,8 +2348,8 @@ function setBuildAsActive(sel, clone) {
                 buildSwapping = false;
             }
         }
-            oilRemover();
-            attachmentFilter();
+            await oilRemover();
+            await attachmentFilter();
             shallNotPass = false;
     }
     setTimeout(() => {
@@ -2631,7 +2647,7 @@ function commitAllAtt() {
     commitSelection('buttonCommitChamber', 'chamberselector', 'chamber');
 }
 
-// Used to remove and replace oils to prevent dupes
+// Used to remove and replace oils to prevent dupes - this should ALWAYS run before attachmentFilter
 function oilRemover(build) {
 console.info("KBH: Beginning oil filtering process");
 
@@ -2640,6 +2656,7 @@ console.info("KBH: Beginning oil filtering process");
     let altSelector3Options = document.getElementById("oils3selector-custom").childNodes[1].childNodes[2].childNodes;
     let altSelector4Options = document.getElementById("oils4selector-custom").childNodes[1].childNodes[2].childNodes;
     let altSelector5Options = document.getElementById("oils5selector-custom").childNodes[1].childNodes[2].childNodes;
+    let fireModeOptions = document.getElementById("firemodeselector-custom").childNodes[1].childNodes[2].childNodes;
 
     let filteredOptions = document.querySelectorAll(".filtered-option");
 
@@ -2648,7 +2665,8 @@ console.info("KBH: Beginning oil filtering process");
     let oilsel3 = document.getElementById("oils3selector");
     let oilsel4 = document.getElementById("oils4selector");
     let oilsel5 = document.getElementById("oils5selector");
-
+    let firesel = document.getElementById("firemodeselector");
+console.log(filteredOptions)
     function makeAllOilsVisible() {
         console.info("KBH: Making all oils selectable");
         for (var i = 0; i < filteredOptions.length; i++) {
@@ -2657,6 +2675,7 @@ console.info("KBH: Beginning oil filtering process");
             oilsel3.removeDupeFilter(filteredOptions[i].dataset.value);
             oilsel4.removeDupeFilter(filteredOptions[i].dataset.value);
             oilsel5.removeDupeFilter(filteredOptions[i].dataset.value);
+            firesel.removeDupeFilter(filteredOptions[i].dataset.value);
             filteredOptions[i].classList.remove("filtered-option");
         }
     }
@@ -2664,7 +2683,6 @@ console.info("KBH: Beginning oil filtering process");
     function hideSelectedOils(value, key, map) {
         if (key.startsWith("ench")) {
         console.info("KBH: Hiding", key);
-        console.info(value)
             if (value.Value === "none" || value.Value.startsWith("static") || value.Value.startsWith("scroll")) {
                 return;
             }
@@ -2715,7 +2733,7 @@ console.info("KBH: Beginning oil filtering process");
             build5Selections.forEach(hideSelectedOils);
             break;
     }
-
+    return true;
 } 
 
 function attachmentFilter(evt) {
@@ -2809,6 +2827,7 @@ function attachmentFilter(evt) {
         //selectorFiremode.updateDisplay();
     }
     shallNotPass = false;
+    return true;
 }
 
 function animationQueue(type, id) {
@@ -3071,7 +3090,6 @@ let shallNotPass = true;
 async function rollOnPageLoad(flag, selector, selID, value, type) {
     console.info("KBH: Beginning initial load");
     await dropdownsReady;
-    await rebuildRandomArrays();
     await addAllEventListeners();
 
     oilDefault = oilsData?.Oil["Default"];
@@ -3133,6 +3151,7 @@ let oilsRecoil = [];
 let oilsReload = [];
 let oilsRPM = [];
 let oilsSpread = [];
+let oilsSize = [];
 
 function rebuildRandomArrays() {
 
@@ -3143,6 +3162,7 @@ function rebuildRandomArrays() {
     oilsAll = [];
     oilsAmmo = [];
     oilsCrit = [];
+    oilsSize = [];
     oilsBounce = [];
     oilsSpeed = [];
     oilsAddDam = [];
@@ -3208,6 +3228,9 @@ function rebuildRandomArrays() {
             }
             if (oil.TypePositive1 === "Spread") {
                 oilsSpread.push(oil.Name);
+            }
+            if (oil.TypePositive1 === "Bullet Size") {
+                oilsSize.push(oil.Name);
             }
         }
     });
@@ -3300,8 +3323,8 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
     rollSelections(flag, selector, selID, selValue, selType);
 
     if (last === true) {
-        attachmentFilter();
-        oilRemover();
+        await oilRemover();
+        await attachmentFilter();
         oilStats();
         oilCalcs(oilStatModifiers);
         if (buildSwapping === false) {
@@ -3358,6 +3381,7 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
         oilsAmmo = [];
         oilsCrit = [];
         oilsBounce = [];
+        oilsSize = [];
         oilsSpeed = [];
         oilsAddDam = [];
         oilsMultDam = [];
@@ -3405,14 +3429,15 @@ function addName() {
             case "weapon":
                 let test = Math.floor(Math.random() * 200);
                 document.getElementById("bydonk").hidden = true;
-                if (test > 198) {
+                if (test > 199) {
                     let weapReplace = coreName.replaceAll(" ", "_");
                     document.getElementById("weaponimage").src = `.\\Images\\Dead_Skrip.png`;
                     document.getElementById("cardWeaponName").textContent = coreName;
                     document.getElementById("bydonk").hidden = false;
                 }
                 else {
-                    let weapReplace = coreName.replaceAll(" ", "_");
+                    let firstStepReplace = coreName.replaceAll(" ", "_");
+                    let weapReplace = firstStepReplace.replaceAll(".", "");
                     document.getElementById("weaponimage").src = `.\\Images\\Weapons\\${weapReplace}.png`;
                     document.getElementById("cardWeaponName").textContent = coreName;
                 }
@@ -3502,6 +3527,43 @@ function percentConv(stat) {
     return stat *= 100;
 }
 
+function applyModifiers(base, modifier) {
+    console.log("------------------------")
+    console.log("Initial...", "Base:", base, "Modifier:", modifier)
+    let value = base;
+    let mod = 1 + modifier;
+    console.log("After adjustment...", "Value:", value, "Modifier:", mod)
+
+    if (mod < 1) {
+        // purely multiplicative
+        value *= mod;
+    } else {
+        const multiplied = value * mod;
+
+        if (multiplied <= 1) {
+            // doesn't cross 1 → normal multiply
+            value = multiplied;
+        } else {
+            if (value < 1) {
+                // figure out how much multiplier was needed to reach 1
+                const neededToOne = 1 / value;
+
+                // leftover multiplier after reaching 1
+                const remainder = mod / neededToOne;
+
+                // now apply leftover as additive
+                value = 1 + (remainder - 1);
+            } else {
+                // already ≥ 1 → fully additive
+                value += (mod - 1);
+            }
+        }
+    }
+    console.log("After calc:", value)
+
+    return value;
+}
+
 function oilStats() {
     oilStatModifiers = structuredClone(oilDefault);
 
@@ -3571,13 +3633,16 @@ function oilStats() {
             oilStatModifiers.RecoilMult += selectedOil.RecoilMult;
         }
         if (selectedOil.ReloadSpeed != 0 && selectedOil.ReloadSpeed !== undefined) {
-            oilStatModifiers.ReloadSpeed += selectedOil.ReloadSpeed;
+            oilStatModifiers.ReloadSpeed = applyModifiers(oilStatModifiers.ReloadSpeed, selectedOil.ReloadSpeed)
         }
         if (selectedOil.SpreadAdd != 0 && selectedOil.SpreadAdd !== undefined) {
             oilStatModifiers.SpreadAdd += selectedOil.SpreadAdd;
         }
         if (selectedOil.SpreadMult != 0 && selectedOil.SpreadMult !== undefined) {
             oilStatModifiers.SpreadMult += selectedOil.SpreadMult;
+        }
+        if (selectedOil.BulletSize != 0 && selectedOil.BulletSize !== undefined) {
+            oilStatModifiers.BulletSize += selectedOil.BulletSize;
         }
         if (selectedOil.Drag != 0 && selectedOil.Drag !== undefined) {
             oilStatModifiers.Drag += selectedOil.Drag;
@@ -3656,9 +3721,9 @@ function oilCalcs(calcOil) {
     weapon.AmmoType = chamber.AmmoType;
     weapon.Projectiles = chamber.Projectiles;
    
-    weaponOriginal.Damage = weaponOriginal.DamageMultiplier * weaponOriginalChamber.Damage;
-    weaponOriginal.AmmoType = weaponOriginalChamber.AmmoType;
-    weaponOriginal.Projectiles = weaponOriginalChamber.Projectiles;
+    weaponOriginal.Damage = weapon.DamageMultiplier * chamber.Damage;
+    weaponOriginal.AmmoType = chamber.AmmoType;
+    weaponOriginal.Projectiles = chamber.Projectiles;
 
     if (weapon.Name === "Augusta") {
         weapon.Projectiles = 3;
@@ -4059,6 +4124,59 @@ function oilCalcs(calcOil) {
     }
     if (speedRound === 100) {
         document.getElementById("cardSpeed").textContent = "100%";
+    }
+    //#endregion
+
+    /////////////////////
+    //// Bullet Size ////
+    /////////////////////
+    //#region
+
+    document.getElementById("cardSize").textContent = "";
+    document.getElementById("cardSize").style.color = "";
+    document.getElementById("cardSize%").textContent = "";
+    document.getElementById("cardSize%").style.color = "";
+    document.getElementById("cardSizeArrow").innerHTML = "";
+    document.getElementById("cardSizeArrow").style.color = "";
+    document.getElementById("cardSizeLBrac").textContent = "";
+    document.getElementById("cardSizeComp").textContent = "";
+    document.getElementById("cardSizeRBrac").textContent = "";
+
+    let sizeCalc = weapon.BulletSize + calcOil.BulletSize;
+    console.log(sizeCalc)
+    let sizeConv = percentConv(sizeCalc);
+    console.log(sizeConv)
+
+    let sizeRound = Math.round((sizeConv + Number.EPSILON)* 100) / 100;
+
+    if (sizeRound < 0) {
+        sizeRound = 0;
+    }
+
+    if (sizeRound > 100) {
+        document.getElementById("cardSize").textContent = sizeRound;
+        document.getElementById("cardSize").style.color = "Lime";
+        document.getElementById("cardSize%").textContent = "%";
+        document.getElementById("cardSize%").style.color = "Lime";
+        document.getElementById("cardSizeArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardSizeArrow").style.color = "Lime";
+        document.getElementById("cardSizeLBrac").textContent = "(";
+        document.getElementById("cardSizeComp").textContent = "100%";
+        document.getElementById("cardSizeRBrac").textContent = ")";
+    }
+    if (sizeRound < 100) {
+        document.getElementById("cardSize").textContent = sizeRound;
+        document.getElementById("cardSize").style.color = "OrangeRed";
+        document.getElementById("cardSize%").textContent = "%";
+        document.getElementById("cardSize%").style.color = "OrangeRed";
+        document.getElementById("cardSizeArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardSizeArrow").style.color = "OrangeRed";
+        document.getElementById("cardSizeLBrac").textContent = "(";
+        document.getElementById("cardSizeComp").textContent = "100%";
+        document.getElementById("cardSizeRBrac").textContent = ")";
+    }
+    if (sizeRound === 100) {
+        document.getElementById("cardSize").textContent = "100%";
     }
     //#endregion
 
@@ -5092,11 +5210,11 @@ function oilCalcs(calcOil) {
     document.getElementById("cardReloadSpeedComp").textContent = "";
     document.getElementById("cardReloadSpeedRBrac").textContent = "";
 
-    let reloadTimeModifier = (weapon.ReloadSpeed * (1 + calcOil.ReloadSpeed));
+    let reloadTimeModifier = (weapon.ReloadSpeed * calcOil.ReloadSpeed);
     if (reloadTimeModifier < 0.01) {
         reloadTimeModifier = 0.01;
     }
-    let relSpdCalc = weapon.ReloadSpeed * ((1 + calcOil.ReloadSpeed));
+    let relSpdCalc = weapon.ReloadSpeed * calcOil.ReloadSpeed;
     let relSpdConv = percentConv(relSpdCalc);
     let relSpdConvOrig = percentConv(weaponOriginal.ReloadSpeed);
 
@@ -5311,7 +5429,7 @@ function oilCalcs(calcOil) {
     //// Shots to break
 
     let shotsToBreak = durRound / durUseCalc2;
-    let shotsToBreakRounded = Math.round(shotsToBreak);
+    let shotsToBreakRounded = Math.ceil(shotsToBreak);
 
     if (shotsToBreakRounded < 1) {
         shotsToBreakRounded = 1;
@@ -5780,6 +5898,10 @@ function poolRemover(name) {
     if (indexSpread > -1) {
         oilsSpread.splice(indexSpread, 1);
     }
+    const indexSize = oilsSize.indexOf(name);
+    if (indexSize > -1) {
+        oilsSize.splice(indexSize, 1);
+    }
 }
 
 let selChamb = null;
@@ -5951,6 +6073,12 @@ function rollSelections(flag, selector, selID, value, type) {
             case "static-random-spread":
                 shuffle(oilsSpread);
                 selectedItem = getOilByName(oilsSpread[0]);
+                selectedValue = oilNameIndexer.get(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-bullet-size":
+                shuffle(oilsSize);
+                selectedItem = getOilByName(oilsSize[0]);
                 selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
@@ -6261,560 +6389,6 @@ function rollSelections(flag, selector, selID, value, type) {
 
 // Arrays; don't add functions below this
 
-let scrollsT1Main = [
-    "Scroll of Dark",
-    "Scroll of Earth",
-    "Scroll of Embers",
-    "Scroll of Frostbite",
-    "Scroll of Light",
-    "Scroll of Nature",
-    "Scroll of Plague",
-    "Scroll of Surge",
-    "Scroll of Water"
-];
-
-let scrollsT2Main = [
-    "Scroll of Holy Fire",
-    "Scroll of Aftershock",
-    "Scroll of Toxic Lobotomy",
-    "Scroll of Chain Lightning",
-    "Scroll of Chaos Strike",
-    "Scroll of Charm",
-    "Scroll of Corpse Explosion",
-    "Scroll of Crusader",
-    "Scroll of Explosions",
-    "Scroll of Fear",
-    "Scroll of Flame Thrower",
-    "Scroll of Holy Purge",
-    "Scroll of Lava",
-    "Scroll of Least Resistance",
-    "Scroll of Noxiosa",
-    "Scroll of Pesticide",
-    "Scroll of Petrification",
-    "Scroll of Petroleum",
-    "Scroll of Poison Blood",
-    "Scroll of Prism",
-    "Scroll of Rocket Launcher",
-    "Scroll of Slush",
-    "Scroll of Sacrifice",
-    "Scroll of Storm Surge",
-    "Scroll of Thunderbolt",
-    "Scroll of Voodoo"
-];
-
-let scrollsAllMain = [
-    "Scroll of Dark",
-    "Scroll of Earth",
-    "Scroll of Embers",
-    "Scroll of Frostbite",
-    "Scroll of Light",
-    "Scroll of Nature",
-    "Scroll of Plague",
-    "Scroll of Surge",
-    "Scroll of Water",
-    "Scroll of Holy Fire",
-    "Scroll of Aftershock",
-    "Scroll of Toxic Lobotomy",
-    "Scroll of Chain Lightning",
-    "Scroll of Chaos Strike",
-    "Scroll of Charm",
-    "Scroll of Corpse Explosion",
-    "Scroll of Crusader",
-    "Scroll of Explosions",
-    "Scroll of Fear",
-    "Scroll of Flame Thrower",
-    "Scroll of Holy Purge",
-    "Scroll of Lava",
-    "Scroll of Least Resistance",
-    "Scroll of Noxiosa",
-    "Scroll of Pesticide",
-    "Scroll of Petrification",
-    "Scroll of Petroleum",
-    "Scroll of Poison Blood",
-    "Scroll of Prism",
-    "Scroll of Rocket Launcher",
-    "Scroll of Slush",
-    "Scroll of Sacrifice",
-    "Scroll of Storm Surge",
-    "Scroll of Thunderbolt",
-    "Scroll of Voodoo"
-];
-
-let enchAllMain = [
-     "Scroll of Dark",
-    "Scroll of Earth",
-    "Scroll of Embers",
-    "Scroll of Frostbite",
-    "Scroll of Light",
-    "Scroll of Nature",
-    "Scroll of Plague",
-    "Scroll of Surge",
-    "Scroll of Water",
-    "Scroll of Holy Fire",
-    "Scroll of Aftershock",
-    "Scroll of Toxic Lobotomy",
-    "Scroll of Chain Lightning",
-    "Scroll of Chaos Strike",
-    "Scroll of Charm",
-    "Scroll of Corpse Explosion",
-    "Scroll of Crusader",
-    "Scroll of Explosions",
-    "Scroll of Fear",
-    "Scroll of Flame Thrower",
-    "Scroll of Holy Purge",
-    "Scroll of Lava",
-    "Scroll of Least Resistance",
-    "Scroll of Noxiosa",
-    "Scroll of Pesticide",
-    "Scroll of Petrification",
-    "Scroll of Petroleum",
-    "Scroll of Poison Blood",
-    "Scroll of Prism",
-    "Scroll of Rocket Launcher",
-    "Scroll of Slush",
-    "Scroll of Sacrifice",
-    "Scroll of Storm Surge",
-    "Scroll of Thunderbolt",
-    "Scroll of Voodoo",
-    "Action Oil",
-    "Add Damage Oil",
-    "Aimless Oil",
-    "Airsoft Oil",
-    "Altruistic Oil",
-    "Arkanoid Oil",
-    "Arrow Oil",
-    "Artery Oil",
-    "Artillery Oil",
-    "Ascetic Oil",
-    "Assassin Dart Oil",
-    "Attack Speed Oil",
-    "Axe Oil",
-    "BB Oil",
-    "Bad Planet Oil",
-    "Bandit Oil",
-    "Big Oil",
-    "Black Friday Oil",
-    "Blindfold Oil",
-    "Blurt Oil",
-    "Bolt Oil",
-    "Bombard Oil",
-    "Boomstick Oil",
-    "Boulder Oil",
-    "Bowl Oil",
-    "Braced Oil",
-    "Brute Oil",
-    "Bulk Oil",
-    "Bystander Oil",
-    "Carefree Oil",
-    "Careful Oil",
-    "Careless Splitter Oil",
-    "Cartoon Oil",
-    "Casual Oil",
-    "Cheap Oil",
-    "Collateral Oil",
-    "Complicated Oil",
-    "Compo Oil",
-    "Confidence Oil",
-    "Considerate Oil",
-    "Contained Force Oil",
-    "Critical Oil",
-    "Cycle Oil",
-    "Damage Oil",
-    "Dart Oil",
-    "Dead Center Oil",
-    "Delayed Hyper Tube Oil",
-    "Dense Oil",
-    "Detune Oil",
-    "Diesel Oil",
-    "Discharge Oil",
-    "Disposable Oil",
-    "Division Oil",
-    "Do-over Oil",
-    "Double Fire Oil",
-    "Double Lock Oil",
-    "Double Nothing Oil",
-    "Dum Dum Oil",
-    "Dynamic Oil",
-    "Easy Oil",
-    "Easy Plop Oil",
-    "Elephant Oil",
-    "Exotic Barrel Oil",
-    "Expander Oil",
-    "Extra Powder Oil",
-    "Farsighted Oil",
-    "Fast Bet Oil",
-    "Feature Gun Oil",
-    "Fidget Lord Oil",
-    "Fidget Oil",
-    "First Blood Oil",
-    "Flea Oil",
-    "Flow Funnel Oil",
-    "Food Stamp Oil",
-    "Fragile System Oil",
-    "Franciscan Oil",
-    "Frugal Oil",
-    "Gambler Oil",
-    "Gemini Oil",
-    "Gentle Oil",
-    "Glass Cannon Oil",
-    "Great Oil",
-    "Grounded Oil",
-    "Gunslinger Oil",
-    "Happy Accident Oil",
-    "Heavy Lead Oil",
-    "Heavy Oil",
-    "Heavy Pockets Oil",
-    "Hefty Oil",
-    "Helium Oil",
-    "High Grade Oil",
-    "Hip Blaster Oil",
-    "Hip Marksman Oil",
-    "Hoop Oil",
-    "Hunter Oil",
-    "Hustler Oil",
-    "Hyper Lead Oil",
-    "Imperfect Oil",
-    "Inconsiderate Oil",
-    "Inherited Oil",
-    "Instant Oil",
-    "Judgement Oil",
-    "Jungian Oil",
-    "Keep Oil",
-    "Kicker Oil",
-    "Kinetic Oil",
-    "Last Drop Oil",
-    "Late Boom Oil",
-    "Launcher Oil",
-    "Lazy Oil",
-    "Less Recoil Oil",
-    "Lightweight Oil",
-    "Longshot Oil",
-    "Lost In Focus Oil",
-    "Low Roller Oil",
-    "Machine Oil",
-    "Main Discipline Oil",
-    "Main Focus Oil",
-    "Manifestation Oil",
-    "Matrix Oil",
-    "Micro Wing Oil",
-    "Modern Technology Oil",
-    "Mosquito Oil",
-    "Multichamber Oil",
-    "Multishot Oil",
-    "Needleye Oil",
-    "Nerf Oil",
-    "No Look Oil",
-    "No Need Oil",
-    "Out of the Box Oil",
-    "Overclock Oil",
-    "Overdose Oil",
-    "Parallel Mag Oil",
-    "Peashooter Oil",
-    "Penetration Oil",
-    "Perfect Bounce Oil",
-    "Perforate Oil",
-    "Plinker Oil",
-    "Plop Back Oil",
-    "Pool Oil",
-    "Potshot Oil",
-    "Puncher Oil",
-    "Puncture Oil",
-    "Purse Gun Oil",
-    "Rapid Internals Oil",
-    "Ready Oil",
-    "Rebound Oil",
-    "Recycle Oil",
-    "Relax Oil",
-    "Release Oil",
-    "Reload Oil",
-    "Ricochet Oil",
-    "Rigid System Oil",
-    "Rigor Oil",
-    "Robust Mechanics Oil",
-    "Rookie Oil",
-    "Rubber Oil",
-    "Rush Job Oil",
-    "Safety Oil",
-    "Tetrus Oil",
-    "Saviour Oil",
-    "Scatter Oil",
-    "Scramble Oil",
-    "Seated Fit Oil",
-    "Seated Oil",
-    "Sect Oil",
-    "Sender Oil",
-    "Sensible Oil",
-    "Shaved Clip Oil",
-    "Shellman Oil",
-    "Sherlock Oil",
-    "Shower Oil",
-    "Shredder Oil",
-    "Skip Oil",
-    "Slick Oil",
-    "Slippy Coating Oil",
-    "Slotmachine Oil",
-    "Slow Punch Oil",
-    "Smart Bullet Oil",
-    "Soft Bullet Oil",
-    "Solid Oil",
-    "Spartan Oil",
-    "Speed Trade Oil",
-    "Spitter Oil",
-    "Spread Oil",
-    "Stability Oil",
-    "Stable Hip Oil",
-    "Stationary Oil",
-    "Stiffy Fit Oil",
-    "Stoic Oil",
-    "Suppressive Oil",
-    "Surgical Laser Oil",
-    "Synchronicity Oil",
-    "Tactical Oil",
-    "Tandem Oil",
-    "Task Oil",
-    "Tech Support Oil",
-    "Tension Oil",
-    "Terminator Oil",
-    "Thorough Oil",
-    "Tight Barrel Oil",
-    "Too Much Oil",
-    "Trusty Old Oil",
-    "Turbulence Oil",
-    "Twice Oil",
-    "Two Time Oil",
-    "Untechnical Oil",
-    "Vasectomy Oil",
-    "Vegan Oil",
-    "Vegetable Oil",
-    "Velocity Oil",
-    "Walk Easy Oil",
-    "Waster Oil",
-    "Whim Oil",
-    "Whos Counting Oil",
-    "Wobble Oil",
-    "Zero Fucks Oil",
-    "Zooming Oil"];
-
-let oilsAllMain = [
-    "Action Oil",
-    "Add Damage Oil",
-    "Aimless Oil",
-    "Airsoft Oil",
-    "Altruistic Oil",
-    "Arkanoid Oil",
-    "Arrow Oil",
-    "Artery Oil",
-    "Artillery Oil",
-    "Ascetic Oil",
-    "Assassin Dart Oil",
-    "Attack Speed Oil",
-    "Axe Oil",
-    "BB Oil",
-    "Bad Planet Oil",
-    "Bandit Oil",
-    "Big Oil",
-    "Black Friday Oil",
-    "Blindfold Oil",
-    "Blurt Oil",
-    "Bolt Oil",
-    "Bombard Oil",
-    "Boomstick Oil",
-    "Boulder Oil",
-    "Bowl Oil",
-    "Braced Oil",
-    "Brute Oil",
-    "Bulk Oil",
-    "Bystander Oil",
-    "Carefree Oil",
-    "Careful Oil",
-    "Careless Splitter Oil",
-    "Cartoon Oil",
-    "Casual Oil",
-    "Cheap Oil",
-    "Collateral Oil",
-    "Complicated Oil",
-    "Compo Oil",
-    "Confidence Oil",
-    "Considerate Oil",
-    "Contained Force Oil",
-    "Critical Oil",
-    "Cycle Oil",
-    "Damage Oil",
-    "Dart Oil",
-    "Dead Center Oil",
-    "Delayed Hyper Tube Oil",
-    "Dense Oil",
-    "Detune Oil",
-    "Diesel Oil",
-    "Discharge Oil",
-    "Disposable Oil",
-    "Division Oil",
-    "Do-over Oil",
-    "Double Fire Oil",
-    "Double Lock Oil",
-    "Double Nothing Oil",
-    "Dum Dum Oil",
-    "Dynamic Oil",
-    "Easy Oil",
-    "Easy Plop Oil",
-    "Elephant Oil",
-    "Exotic Barrel Oil",
-    "Expander Oil",
-    "Extra Powder Oil",
-    "Farsighted Oil",
-    "Fast Bet Oil",
-    "Feature Gun Oil",
-    "Fidget Lord Oil",
-    "Fidget Oil",
-    "First Blood Oil",
-    "Flea Oil",
-    "Flow Funnel Oil",
-    "Food Stamp Oil",
-    "Fragile System Oil",
-    "Franciscan Oil",
-    "Frugal Oil",
-    "Gambler Oil",
-    "Gemini Oil",
-    "Gentle Oil",
-    "Glass Cannon Oil",
-    "Great Oil",
-    "Grounded Oil",
-    "Gunslinger Oil",
-    "Happy Accident Oil",
-    "Heavy Lead Oil",
-    "Heavy Oil",
-    "Heavy Pockets Oil",
-    "Hefty Oil",
-    "Helium Oil",
-    "High Grade Oil",
-    "Hip Blaster Oil",
-    "Hip Marksman Oil",
-    "Hoop Oil",
-    "Hunter Oil",
-    "Hustler Oil",
-    "Hyper Lead Oil",
-    "Imperfect Oil",
-    "Inconsiderate Oil",
-    "Inherited Oil",
-    "Instant Oil",
-    "Judgement Oil",
-    "Jungian Oil",
-    "Keep Oil",
-    "Kicker Oil",
-    "Kinetic Oil",
-    "Last Drop Oil",
-    "Late Boom Oil",
-    "Launcher Oil",
-    "Lazy Oil",
-    "Less Recoil Oil",
-    "Lightweight Oil",
-    "Longshot Oil",
-    "Lost In Focus Oil",
-    "Low Roller Oil",
-    "Machine Oil",
-    "Main Discipline Oil",
-    "Main Focus Oil",
-    "Manifestation Oil",
-    "Matrix Oil",
-    "Micro Wing Oil",
-    "Modern Technology Oil",
-    "Mosquito Oil",
-    "Multichamber Oil",
-    "Multishot Oil",
-    "Needleye Oil",
-    "Nerf Oil",
-    "No Look Oil",
-    "No Need Oil",
-    "Out of the Box Oil",
-    "Overclock Oil",
-    "Overdose Oil",
-    "Parallel Mag Oil",
-    "Peashooter Oil",
-    "Penetration Oil",
-    "Perfect Bounce Oil",
-    "Perforate Oil",
-    "Plinker Oil",
-    "Plop Back Oil",
-    "Pool Oil",
-    "Potshot Oil",
-    "Puncher Oil",
-    "Puncture Oil",
-    "Purse Gun Oil",
-    "Rapid Internals Oil",
-    "Ready Oil",
-    "Rebound Oil",
-    "Recycle Oil",
-    "Relax Oil",
-    "Release Oil",
-    "Reload Oil",
-    "Ricochet Oil",
-    "Rigid System Oil",
-    "Rigor Oil",
-    "Robust Mechanics Oil",
-    "Rookie Oil",
-    "Rubber Oil",
-    "Rush Job Oil",
-    "Safety Oil",
-    "Tetrus Oil",
-    "Saviour Oil",
-    "Scatter Oil",
-    "Scramble Oil",
-    "Seated Fit Oil",
-    "Seated Oil",
-    "Sect Oil",
-    "Sender Oil",
-    "Sensible Oil",
-    "Shaved Clip Oil",
-    "Shellman Oil",
-    "Sherlock Oil",
-    "Shower Oil",
-    "Shredder Oil",
-    "Skip Oil",
-    "Slick Oil",
-    "Slippy Coating Oil",
-    "Slotmachine Oil",
-    "Slow Punch Oil",
-    "Smart Bullet Oil",
-    "Soft Bullet Oil",
-    "Solid Oil",
-    "Spartan Oil",
-    "Speed Trade Oil",
-    "Spitter Oil",
-    "Spread Oil",
-    "Stability Oil",
-    "Stable Hip Oil",
-    "Stationary Oil",
-    "Stiffy Fit Oil",
-    "Stoic Oil",
-    "Suppressive Oil",
-    "Surgical Laser Oil",
-    "Synchronicity Oil",
-    "Tactical Oil",
-    "Tandem Oil",
-    "Task Oil",
-    "Tech Support Oil",
-    "Tension Oil",
-    "Terminator Oil",
-    "Thorough Oil",
-    "Tight Barrel Oil",
-    "Too Much Oil",
-    "Trusty Old Oil",
-    "Turbulence Oil",
-    "Twice Oil",
-    "Two Time Oil",
-    "Untechnical Oil",
-    "Vasectomy Oil",
-    "Vegan Oil",
-    "Vegetable Oil",
-    "Velocity Oil",
-    "Walk Easy Oil",
-    "Waster Oil",
-    "Whim Oil",
-    "Whos Counting Oil",
-    "Wobble Oil",
-    "Zero Fucks Oil",
-    "Zooming Oil"];
-
 const oilValueIndexer = new Map();
 
 function setOilValueIndexer() {
@@ -6826,6 +6400,7 @@ function setOilValueIndexer() {
     oilValueIndexer.set("static-random-base-crit-chance", "Random Base Crit Chance Oil");
     oilValueIndexer.set("static-random-bullet-bounces", "Random Bullet Bounce Oil");
     oilValueIndexer.set("static-random-bullet-speed", "Random Bullet Speed Oil");
+    oilValueIndexer.set("static-random-bullet-size", "Random Bullet Size Oil");
     oilValueIndexer.set("static-random-damage---flat", "Random Damage - Flat Oil");
     oilValueIndexer.set("static-random-damage---mult", "Random Damage - Mult Oil");
     oilValueIndexer.set("static-random-max-durability", "Random Max Durability Oil");
@@ -6835,13 +6410,12 @@ function setOilValueIndexer() {
     oilValueIndexer.set("static-random-reload-speed", "Random Reload Speed Oil");
     oilValueIndexer.set("static-random-rpm", "Random RPM Oil");
     oilValueIndexer.set("static-random-spread", "Random Spread Oil");
-    oilsAllMain.forEach(oil => {
+    oilsAll.forEach(oil => {
         const key = oil.toLowerCase().replaceAll(" ", "-");
         oilValueIndexer.set(key, oil);
     });
+    return true;
 }
-
-setOilValueIndexer();
 
 const oilNameIndexer = new Map();
 
@@ -6853,267 +6427,8 @@ console.info("KBH: Setting oil name indexer");
     }
 
     oilValueIndexer.forEach(addToWNI);  
-    
+    return true;
 }
-
-setOilNameIndexer()
-
-let oilsAmmoMain = [
-    "Bulk Oil",
-    "Carefree Oil",
-    "Cheap Oil",
-    "Do-over Oil",
-    "Food Stamp Oil",
-    "Heavy Pockets Oil",
-    "Helium Oil",
-    "Keep Oil",
-    "Last Drop Oil",
-    "Mosquito Oil",
-    "Plop Back Oil",
-    "Recycle Oil",
-    "Tetrus Oil",
-    "Saviour Oil",
-    "Walk Easy Oil",
-    "Whos Counting Oil",
-];
-
-let oilsCritMain = [
-    "Aimless Oil",
-    "Artery Oil",
-    "Axe Oil",
-    "Blindfold Oil",
-    "Confidence Oil",
-    "Critical Oil",
-    "Gambler Oil",
-    "Happy Accident Oil",
-    "Hunter Oil",
-    "Hustler Oil",
-    "Low Roller Oil",
-    "Manifestation Oil",
-    "No Need Oil",
-    "Out of the Box Oil",
-    "Puncture Oil",
-    "Slotmachine Oil",
-    "Smart Bullet Oil",
-];
-
-let oilsBounceMain = [
-    "Arkanoid Oil",
-    "Bandit Oil",
-    "Cartoon Oil",
-    "Flea Oil",
-    "Hoop Oil",
-    "Imperfect Oil",
-    "Lazy Oil",
-    "Longshot Oil",
-    "Perfect Bounce Oil",
-    "Pool Oil",
-    "Rebound Oil",
-    "Ricochet Oil",
-    "Scramble Oil",
-    "Sherlock Oil",
-    "Skip Oil",
-    "Synchronicity Oil",
-    "Wobble Oil",
-];
-
-let oilsSpeedMain = [
-    "Arrow Oil",
-    "Assassin Dart Oil",
-    "Bolt Oil",
-    "Dart Oil",
-    "Delayed Hyper Tube Oil",
-    "Diesel Oil",
-    "Extra Powder Oil",
-    "Fast Bet Oil",
-    "Instant Oil",
-    "Kinetic Oil",
-    "Micro Wing Oil",
-    "Tight Barrel Oil",
-    "Turbulence Oil",
-    "Velocity Oil",
-    "Whim Oil",
-    "Zooming Oil",
-];
-
-let oilsAddDamMain = [
-    "Add Damage Oil",
-    "Ascetic Oil",
-    "Big Oil",
-    "Brute Oil",
-    "Discharge Oil",
-    "Disposable Oil",
-    "Expander Oil",
-    "Fidget Oil",
-    "Frugal Oil",
-    "Judgement Oil",
-    "Kicker Oil",
-    "Late Boom Oil",
-    "Potshot Oil",
-    "Seated Oil",
-    "Sender Oil",
-    "Solid Oil",
-];
-
-let oilsMultDamMain = [
-    "Boulder Oil",
-    "Complicated Oil",
-    "Damage Oil",
-    "Dum Dum Oil",
-    "First Blood Oil",
-    "Franciscan Oil",
-    "Glass Cannon Oil",
-    "Great Oil",
-    "Grounded Oil",
-    "Heavy Oil",
-    "Hip Blaster Oil",
-    "Hyper Lead Oil",
-    "Launcher Oil",
-    "Overclock Oil",
-    "Puncher Oil",
-    "Slow Punch Oil",
-    "Spartan Oil",
-    "Terminator Oil",
-];
-
-let oilsDurMain = [
-    "Dense Oil",
-    "Detune Oil",
-    "Feature Gun Oil",
-    "Gentle Oil",
-    "Hefty Oil",
-    "High Grade Oil",
-    "Inherited Oil",
-    "Release Oil",
-    "Rigid System Oil",
-    "Robust Mechanics Oil",
-    "Rubber Oil",
-    "Seated Fit Oil",
-    "Sensible Oil",
-    "Slippy Coating Oil",
-    "Soft Bullet Oil",
-    "Stiffy Fit Oil",
-    "Trusty Old Oil",
-];
-
-let oilsPenMain = [
-    "Bad Planet Oil",
-    "Bystander Oil",
-    "Collateral Oil",
-    "Considerate Oil",
-    "Farsighted Oil",
-    "Heavy Lead Oil",
-    "Inconsiderate Oil",
-    "Jungian Oil",
-    "Needleye Oil",
-    "Overdose Oil",
-    "Penetration Oil",
-    "Rigor Oil",
-    "Sect Oil",
-    "Surgical Laser Oil",
-    "Too Much Oil",
-    "Untechnical Oil",
-    "Vasectomy Oil",
-];
-
-let oilsProjMain = [
-    "Black Friday Oil",
-    "Bombard Oil",
-    "Boomstick Oil",
-    "Careless Splitter Oil",
-    "Division Oil",
-    "Double Nothing Oil",
-    "Elephant Oil",
-    "Gemini Oil",
-    "Matrix Oil",
-    "Multichamber Oil",
-    "Multishot Oil",
-    "Parallel Mag Oil",
-    "Scatter Oil",
-    "Shredder Oil",
-    "Suppressive Oil",
-    "Tandem Oil",
-    "Twice Oil",
-    "Two Time Oil",
-];
-
-let oilsRecoilMain = [
-    "Braced Oil",
-    "Casual Oil",
-    "Contained Force Oil",
-    "Easy Oil",
-    "Easy Plop Oil",
-    "Flow Funnel Oil",
-    "Less Recoil Oil",
-    "Modern Technology Oil",
-    "Peashooter Oil",
-    "Purse Gun Oil",
-    "Ready Oil",
-    "Relax Oil",
-    "Safety Oil",
-    "Stability Oil",
-    "Stable Hip Oil",
-    "Tension Oil",
-    "Vegetable Oil",
-];
-
-let oilsReloadMain = [
-    "Action Oil",
-    "Airsoft Oil",
-    "Compo Oil",
-    "Cycle Oil",
-    "Double Lock Oil",
-    "Dynamic Oil",
-    "Gunslinger Oil",
-    "Fidget Lord Oil",
-    "Main Discipline Oil",
-    "Main Focus Oil",
-    "Nerf Oil",
-    "Reload Oil",
-    "Rush Job Oil",
-    "Shaved Clip Oil",
-    "Speed Trade Oil",
-    "Tactical Oil",
-    "Task Oil",
-    "Tech Support Oil",
-];
-
-let oilsRPMMain = [
-    "Attack Speed Oil",
-    "BB Oil",
-    "Blurt Oil",
-    "Double Fire Oil",
-    "Fragile System Oil",
-    "Lightweight Oil",
-    "Machine Oil",
-    "No Look Oil",
-    "Perforate Oil",
-    "Rapid Internals Oil",
-    "Rookie Oil",
-    "Shower Oil",
-    "Spitter Oil",
-    "Stationary Oil",
-    "Waster Oil",
-    "Zero Fucks Oil",
-];
-
-let oilsSpreadMain = [
-    "Altruistic Oil",
-    "Artillery Oil",
-    "Bowl Oil",
-    "Careful Oil",
-    "Dead Center Oil",
-    "Exotic Barrel Oil",
-    "Hip Marksman Oil",
-    "Lost In Focus Oil",
-    "Plinker Oil",
-    "Shellman Oil",
-    "Slick Oil",
-    "Spread Oil",
-    "Stoic Oil",
-    "Thorough Oil",
-    "Vegan Oil",
-];
 
 const gunsAll = [
     "P38 Dirk", "Socom 9", "Star & Witness", "Gravekeeper", "Beck 8",
