@@ -1,6 +1,6 @@
 
-let newField = "BulletSize";
-let newDefault = 1;
+let newField = "ReloadNegative";
+let newDefault = 0;
 
 function oilField() {
     console.log("-------------------Starting Oils-------------------");

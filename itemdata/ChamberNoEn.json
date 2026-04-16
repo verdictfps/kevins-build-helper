@@ -80,7 +80,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Chamber": {
       "Name": "Random Chamber",
@@ -162,7 +164,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Chamber Chisel - .50 BMG": {
       "Name": "Chamber Chisel - .50 BMG",
@@ -247,7 +251,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Chamber Chisel - 12Ga": {
       "Name": "Chamber Chisel - 12Ga",
@@ -332,7 +338,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Chamber Chisel - 5.56mm": {
       "Name": "Chamber Chisel - 5.56mm",
@@ -417,7 +425,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Chamber Chisel - 7.62mm": {
       "Name": "Chamber Chisel - 7.62mm",
@@ -502,7 +512,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Chamber Chisel - 9mm": {
       "Name": "Chamber Chisel - 9mm",
@@ -587,7 +599,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     }
   }
 }

@@ -379,6 +379,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     await rebuildRandomArrays();
     await setOilValueIndexer();
     await setOilNameIndexer();
+    await resetCoreSelections();
+    await resetTempSelections();
+    await setChamberValueIndexer();
+    await setChamberNameIndexer();
+    await setBarrelValueIndexer();
+    await setBarrelNameIndexer();
+    await setOpticValueIndexer();
+    await setOpticNameIndexer();
+    await setLaserValueIndexer();
+    await setLaserNameIndexer();
+    await setFiremodeValueIndexer();
+    await setFiremodeNameIndexer();
+    await setWeaponValueIndexer();
+    await setWeaponNameIndexer();
+    await setScrollValueIndexer();
+    await setScrollNameIndexer();
 
     await dropdownBuilder();
     dropdownReadyResolve();
@@ -595,9 +611,10 @@ function setLaserValueIndexer() {
     console.info("KBH: Setting laser value indexer");
     laserValueIndexer.set("none", "None");
     laserValueIndexer.set("static-random-laser", "Random Laser");
-    laserValueIndexer.set("red", "Red");
-    laserValueIndexer.set("yellow", "Yellow");
-    laserValueIndexer.set("green", "Green");
+    attachmentsLasers.forEach(laser => {
+        const key = laser.toLowerCase().replaceAll(" ", "-");
+        laserValueIndexer.set(key, laser);
+    });
 }
 
 let laserNameIndexer = new Map();
@@ -810,23 +827,6 @@ console.info("KBH: Setting scroll name indexer");
 }
 
 //#endregion
-
-resetCoreSelections();
-resetTempSelections();
-setChamberValueIndexer();
-setChamberNameIndexer();
-setBarrelValueIndexer();
-setBarrelNameIndexer();
-setOpticValueIndexer();
-setOpticNameIndexer();
-setLaserValueIndexer();
-setLaserNameIndexer();
-setFiremodeValueIndexer();
-setFiremodeNameIndexer();
-setWeaponValueIndexer();
-setWeaponNameIndexer();
-setScrollValueIndexer();
-setScrollNameIndexer();
 
 async function createProDropdown(select) {
 
@@ -2900,6 +2900,18 @@ function rerollRandomEnch(opt) {
         case "ench5":
             rollAggregator("ench5", "oils5selector", 5, document.getElementById("oils5selector").getValue(), "ench", true, "rerollRandomEnch");
             break;
+        case "barrel":
+            rollAggregator("barrel", "barrelselector", 5, document.getElementById("barrelselector").getValue(), "attachment", true, "rerollRandomEnch");
+            break;
+        case "optic":
+            rollAggregator("optic", "opticselector", 5, document.getElementById("opticselector").getValue(), "attachment", true, "rerollRandomEnch");
+            break;
+        case "laser":
+            rollAggregator("laser", "laserselector", 5, document.getElementById("laserselector").getValue(), "attachment", true, "rerollRandomEnch");
+            break;
+        case "chamber":
+            rollAggregator("chamber", "chamberselector", 5, document.getElementById("chamberselector").getValue(), "attachment", true, "rerollRandomEnch");
+            break;
         default:
     }
 }
@@ -3152,6 +3164,7 @@ let oilsReload = [];
 let oilsRPM = [];
 let oilsSpread = [];
 let oilsSize = [];
+let attachmentsLasers = [];
 
 function rebuildRandomArrays() {
 
@@ -3174,6 +3187,7 @@ function rebuildRandomArrays() {
     oilsReload = [];
     oilsRPM = [];
     oilsSpread = [];
+    attachmentsLasers = [];
 
     Object.values(oilsScrollsData.OilScroll).forEach(oil => {
         if (oil.Name !== "none" && oil.Name !== "None" && oil.Name !== "Default" && oil.Name !== undefined && oil.Name !== null && !(oil.Name.startsWith("Random"))) {
@@ -3233,6 +3247,12 @@ function rebuildRandomArrays() {
                 oilsSize.push(oil.Name);
             }
         }
+    });
+    Object.values(lasersData.Laser).forEach(laser => {
+            if (laser.Name !== "none" && laser.Name !== "None" && laser.Name !== "Default" && laser.Name !== undefined && laser.Name !== null && !(laser.Name.startsWith("Random"))) {
+                attachmentsLasers.push(laser.Name);
+            }
+
     });
     return true;
 }
@@ -3527,43 +3547,6 @@ function percentConv(stat) {
     return stat *= 100;
 }
 
-function applyModifiers(base, modifier) {
-    console.log("------------------------")
-    console.log("Initial...", "Base:", base, "Modifier:", modifier)
-    let value = base;
-    let mod = 1 + modifier;
-    console.log("After adjustment...", "Value:", value, "Modifier:", mod)
-
-    if (mod < 1) {
-        // purely multiplicative
-        value *= mod;
-    } else {
-        const multiplied = value * mod;
-
-        if (multiplied <= 1) {
-            // doesn't cross 1 → normal multiply
-            value = multiplied;
-        } else {
-            if (value < 1) {
-                // figure out how much multiplier was needed to reach 1
-                const neededToOne = 1 / value;
-
-                // leftover multiplier after reaching 1
-                const remainder = mod / neededToOne;
-
-                // now apply leftover as additive
-                value = 1 + (remainder - 1);
-            } else {
-                // already ≥ 1 → fully additive
-                value += (mod - 1);
-            }
-        }
-    }
-    console.log("After calc:", value)
-
-    return value;
-}
-
 function oilStats() {
     oilStatModifiers = structuredClone(oilDefault);
 
@@ -3632,8 +3615,13 @@ function oilStats() {
         if (selectedOil.RecoilMult != 0 && selectedOil.RecoilMult !== undefined) {
             oilStatModifiers.RecoilMult += selectedOil.RecoilMult;
         }
-        if (selectedOil.ReloadSpeed != 0 && selectedOil.ReloadSpeed !== undefined) {
-            oilStatModifiers.ReloadSpeed = applyModifiers(oilStatModifiers.ReloadSpeed, selectedOil.ReloadSpeed)
+        if (selectedOil.ReloadSpeed < 0 && selectedOil.ReloadSpeed !== undefined) {
+            console.log(selectedOil.ReloadSpeed)
+            oilStatModifiers.ReloadNegative *= (1 + selectedOil.ReloadSpeed);
+        }
+        if (selectedOil.ReloadSpeed > 0 && selectedOil.ReloadSpeed !== undefined) {
+            console.log(selectedOil.ReloadSpeed, oilStatModifiers.ReloadPositive)
+            oilStatModifiers.ReloadPositive += selectedOil.ReloadSpeed;
         }
         if (selectedOil.SpreadAdd != 0 && selectedOil.SpreadAdd !== undefined) {
             oilStatModifiers.SpreadAdd += selectedOil.SpreadAdd;
@@ -4051,12 +4039,10 @@ function oilCalcs(calcOil) {
     weapon.BulletDrop += calcOil.BulletDrop;
 
     if (weapon.BulletDrop > 0) {
-        if (calcOil.ScrollField !== "scrollinforocket") {
             let dropMeters =  (105 / (Math.log(weapon.BulletDrop)) - 20);
             let dropMeterRound = Math.round((dropMeters + Number.EPSILON)* 100) / 100;
             document.getElementById("dropmeters").textContent = `~${dropMeterRound}m`;
             document.getElementById("dropimage").src = "./Images/bullet_drop_pos.png";
-        }
         document.getElementById("cardDrop").textContent = weapon.BulletDrop;
         document.getElementById("cardDrop").style.color = "OrangeRed";
         document.getElementById("cardDropArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
@@ -5210,11 +5196,14 @@ function oilCalcs(calcOil) {
     document.getElementById("cardReloadSpeedComp").textContent = "";
     document.getElementById("cardReloadSpeedRBrac").textContent = "";
 
-    let reloadTimeModifier = (weapon.ReloadSpeed * calcOil.ReloadSpeed);
+    
+    let relSpdCalc = (calcOil.ReloadPositive) * calcOil.ReloadNegative;
+
+    let reloadTimeModifier = (calcOil.ReloadPositive) * calcOil.ReloadNegative;
     if (reloadTimeModifier < 0.01) {
         reloadTimeModifier = 0.01;
     }
-    let relSpdCalc = weapon.ReloadSpeed * calcOil.ReloadSpeed;
+
     let relSpdConv = percentConv(relSpdCalc);
     let relSpdConvOrig = percentConv(weaponOriginal.ReloadSpeed);
 
@@ -6509,12 +6498,6 @@ const attachmentsOptics = [
     "Recon Scope",
     "Reflex Sight",
     "Sniper Scope"
-];
-
-const attachmentsLasers = [
-    "Red",
-    "Green",
-    "Yellow"
 ];
 
 const attachmentsFiremodes = [

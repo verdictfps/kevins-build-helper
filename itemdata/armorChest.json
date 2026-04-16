@@ -79,7 +79,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Default": {
       "Name": "Default",
@@ -160,7 +162,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Badass Vest": {
       "Name": "Badass Vest",
@@ -241,7 +245,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Ballistic Vest": {
       "Name": "Ballistic Vest",
@@ -322,7 +328,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Bathrobe": {
       "Name": "Bathrobe",
@@ -402,7 +410,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Breastplate": {
       "Name": "Breastplate",
@@ -482,7 +492,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Camo Jacket": {
       "Name": "Camo Jacket",
@@ -562,7 +574,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Christmas Sweater": {
       "Name": "Christmas Sweater",
@@ -642,7 +656,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Cowboy Vest": {
       "Name": "Cowboy Vest",
@@ -722,7 +738,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Denim Jacket": {
       "Name": "Denim Jacket",
@@ -802,7 +820,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Encrypted Hoodie": {
       "Name": "Encrypted Hoodie",
@@ -882,7 +902,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Father's Shirt": {
       "Name": "Father's Shirt",
@@ -962,7 +984,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Firefighter Jacket": {
       "Name": "Firefighter Jacket",
@@ -1042,7 +1066,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Ghillie Suit": {
       "Name": "Ghillie Suit",
@@ -1122,7 +1148,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Green Tunic": {
       "Name": "Green Tunic",
@@ -1202,7 +1230,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Hazmat Suit": {
       "Name": "Hazmat Suit",
@@ -1282,7 +1312,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Hedgehog Suit": {
       "Name": "Hedgehog Suit",
@@ -1362,7 +1394,9 @@
       "DamageResistFrost": 0,
       "Luck": 0,
       "DamageResistLight": 0,
-      "DamageMultWearableLMG": 0
+      "DamageMultWearableLMG": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     }
   }
 }

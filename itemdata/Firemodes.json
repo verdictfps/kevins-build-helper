@@ -80,7 +80,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Gun Crank": {
       "Name": "Gun Crank",
@@ -162,7 +164,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Priming Bolt": {
       "Name": "Priming Bolt",
@@ -244,7 +248,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     }
   }
 }

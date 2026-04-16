@@ -76,7 +76,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Pistol": {
       "Name": "Random Pistol",
@@ -154,7 +156,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Revolver": {
       "Name": "Random Revolver",
@@ -232,7 +236,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Shotgun": {
       "Name": "Random Shotgun",
@@ -310,7 +316,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random SMG": {
       "Name": "Random SMG",
@@ -388,7 +396,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random AR": {
       "Name": "Random AR",
@@ -466,7 +476,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random LMG": {
       "Name": "Random LMG",
@@ -544,7 +556,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Rifle": {
       "Name": "Random Rifle",
@@ -622,7 +636,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Sniper": {
       "Name": "Random Sniper",
@@ -700,7 +716,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     ".357 Balthazar": {
       "Name": ".357 Balthazar",
@@ -778,7 +796,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "1889 Mario": {
       "Name": "1889 Mario",
@@ -856,7 +876,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Arbiter 2": {
       "Name": "Arbiter 2",
@@ -934,7 +956,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Beck 8": {
       "Name": "Beck 8",
@@ -1012,7 +1036,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Bronco 89": {
       "Name": "Bronco 89",
@@ -1090,7 +1116,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Cavalier": {
       "Name": "Cavalier",
@@ -1168,7 +1196,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Flicker": {
       "Name": "Flicker",
@@ -1246,7 +1276,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Gravekeeper": {
       "Name": "Gravekeeper",
@@ -1324,7 +1356,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Hell 'N' Back": {
       "Name": "Hell 'N' Back",
@@ -1402,7 +1436,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "M182 Pierre-Fusil": {
       "Name": "M182 Pierre-Fusil",
@@ -1480,7 +1516,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "P38 Dirk": {
       "Name": "P38 Dirk",
@@ -1558,7 +1596,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Palehorse Topclipper": {
       "Name": "Palehorse Topclipper",
@@ -1636,7 +1676,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Salamander": {
       "Name": "Salamander",
@@ -1714,7 +1756,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Snut .38": {
       "Name": "Snut .38",
@@ -1792,7 +1836,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Socom 9": {
       "Name": "Socom 9",
@@ -1870,7 +1916,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Star & Witness": {
       "Name": "Star & Witness",
@@ -1948,7 +1996,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Unknown": {
       "Name": "Unknown",
@@ -2026,7 +2076,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Wyatt PULSAR": {
       "Name": "Wyatt PULSAR",
@@ -2104,7 +2156,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Augusta": {
       "Name": "Augusta",
@@ -2182,7 +2236,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Breacher 8": {
       "Name": "Breacher 8",
@@ -2260,7 +2316,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Neuraxis F22": {
       "Name": "Neuraxis F22",
@@ -2338,7 +2396,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Flock 76": {
       "Name": "Flock 76",
@@ -2416,7 +2476,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Majordome": {
       "Name": "Majordome",
@@ -2494,7 +2556,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Mossman": {
       "Name": "Mossman",
@@ -2572,7 +2636,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Deathstar PG": {
       "Name": "Deathstar PG",
@@ -2650,7 +2716,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Drifter 9": {
       "Name": "Drifter 9",
@@ -2728,7 +2796,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Ferryman": {
       "Name": "Ferryman",
@@ -2806,7 +2876,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "M3 Termite": {
       "Name": "M3 Termite",
@@ -2884,7 +2956,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Ploika Compact": {
       "Name": "Ploika Compact",
@@ -2962,7 +3036,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Songbird": {
       "Name": "Songbird",
@@ -3040,7 +3116,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Valet": {
       "Name": "Valet",
@@ -3118,7 +3196,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Vrede": {
       "Name": "Vrede",
@@ -3196,7 +3276,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Catacoil Rapid X": {
       "Name": "Catacoil Rapid X",
@@ -3274,7 +3356,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Corpsemaker": {
       "Name": "Corpsemaker",
@@ -3352,7 +3436,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "M11A2 Fisk": {
       "Name": "M11A2 Fisk",
@@ -3430,7 +3516,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Type 80 Typhoon": {
       "Name": "Type 80 Typhoon",
@@ -3508,7 +3596,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Wingman": {
       "Name": "Wingman",
@@ -3586,7 +3676,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Chat-Pardeur 98": {
       "Name": "Chat-Pardeur 98",
@@ -3664,7 +3756,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Duhar": {
       "Name": "Duhar",
@@ -3742,7 +3836,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Rektor 100rd": {
       "Name": "Rektor 100rd",
@@ -3820,7 +3916,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Warpig": {
       "Name": "Warpig",
@@ -3898,7 +3996,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Farsight": {
       "Name": "Farsight",
@@ -3976,7 +4076,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Knop .22": {
       "Name": "Knop .22",
@@ -4054,7 +4156,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Tailor Marksman MKII": {
       "Name": "Tailor Marksman MKII",
@@ -4132,7 +4236,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "D4RT": {
       "Name": "D4RT",
@@ -4210,7 +4316,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Dolphin 99": {
       "Name": "Dolphin 99",
@@ -4288,7 +4396,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Impala Gravita": {
       "Name": "Impala Gravita",
@@ -4366,7 +4476,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Longboy": {
       "Name": "Longboy",
@@ -4444,7 +4556,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Rokua .308": {
       "Name": "Rokua .308",
@@ -4522,7 +4636,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     }
   }
 }

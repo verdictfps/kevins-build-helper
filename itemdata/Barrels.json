@@ -80,7 +80,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Barrel": {
       "Name": "Random Barrel",
@@ -162,7 +164,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "A12C Muzzle Brake": {
       "Name": "A12C Muzzle Brake",
@@ -244,7 +248,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Aftermarket Haukland Silencer": {
       "Name": "Aftermarket Haukland Silencer",
@@ -326,7 +332,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Barrel Extension 2in": {
       "Name": "Barrel Extension 2in",
@@ -408,7 +416,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Barrel Extension 4in": {
       "Name": "Barrel Extension 4in",
@@ -490,7 +500,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Barrel Extension 6in": {
       "Name": "Barrel Extension 6in",
@@ -572,7 +584,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Breznik BMD (Tactical)": {
       "Name": "Breznik BMD (Tactical)",
@@ -654,7 +668,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Breznik BMD": {
       "Name": "Breznik BMD",
@@ -736,7 +752,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Haukland Flash Hider": {
       "Name": "Haukland Flash Hider",
@@ -818,7 +836,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Haukland Silencer": {
       "Name": "Haukland Silencer",
@@ -900,7 +920,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Improvised Barrel Extension": {
       "Name": "Improvised Barrel Extension",
@@ -982,7 +1004,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "M87 Albatross Silencer": {
       "Name": "M87 Albatross Silencer",
@@ -1064,7 +1088,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Shrouded Barrel Extension": {
       "Name": "Shrouded Barrel Extension",
@@ -1146,7 +1172,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "SR-P3 Silencer": {
       "Name": "SR-P3 Silencer",
@@ -1228,7 +1256,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Warmage Compensator": {
       "Name": "Warmage Compensator",
@@ -1310,7 +1340,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     }
   }
 }

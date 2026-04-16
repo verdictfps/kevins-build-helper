@@ -77,7 +77,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Default": {
       "Name": "Default",
@@ -156,7 +158,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Enchantment": {
       "Name": "Random Enchantment",
@@ -191,7 +195,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Scroll": {
       "Name": "Random Scroll",
@@ -226,7 +232,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random T1 Scroll": {
       "Name": "Random T1 Scroll",
@@ -261,7 +269,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random T2 Scroll": {
       "Name": "Random T2 Scroll",
@@ -296,7 +306,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Oil": {
       "Name": "Random Oil",
@@ -331,7 +343,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Ammo Consume Chance Oil": {
       "Name": "Random Ammo Consume Chance Oil",
@@ -366,7 +380,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Base Crit Chance Oil": {
       "Name": "Random Base Crit Chance Oil",
@@ -401,7 +417,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Bullet Bounce Oil": {
       "Name": "Random Bullet Bounce Oil",
@@ -436,7 +454,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Bullet Size Oil": {
       "Name": "Random Bullet Size Oil",
@@ -471,7 +491,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Bullet Speed Oil": {
       "Name": "Random Bullet Speed Oil",
@@ -506,7 +528,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Damage - Flat Oil": {
       "Name": "Random Damage - Flat Oil",
@@ -541,7 +565,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Damage - Mult Oil": {
       "Name": "Random Damage - Mult Oil",
@@ -576,7 +602,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Max Durability Oil": {
       "Name": "Random Max Durability Oil",
@@ -611,7 +639,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Penetration Oil": {
       "Name": "Random Penetration Oil",
@@ -646,7 +676,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Projectiles Oil": {
       "Name": "Random Projectiles Oil",
@@ -681,7 +713,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Recoil Oil": {
       "Name": "Random Recoil Oil",
@@ -716,7 +750,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Reload Speed Oil": {
       "Name": "Random Reload Speed Oil",
@@ -751,7 +787,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random RPM Oil": {
       "Name": "Random RPM Oil",
@@ -786,7 +824,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Random Spread Oil": {
       "Name": "Random Spread Oil",
@@ -821,7 +861,9 @@
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
       "WeaponWeightModifier": 0,
-      "BulletSize": 1
+      "BulletSize": 1,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "None": {
       "Name": "None",
@@ -902,7 +944,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Dark": {
       "Name": "Scroll of Dark",
@@ -983,7 +1027,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Earth": {
       "Name": "Scroll of Earth",
@@ -1064,7 +1110,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Embers": {
       "Name": "Scroll of Embers",
@@ -1145,7 +1193,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Frostbite": {
       "Name": "Scroll of Frostbite",
@@ -1226,7 +1276,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Toxic Lobotomy": {
       "Name": "Scroll of Toxic Lobotomy",
@@ -1307,7 +1359,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Light": {
       "Name": "Scroll of Light",
@@ -1388,7 +1442,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Holy Fire": {
       "Name": "Scroll of Holy Fire",
@@ -1469,7 +1525,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Nature": {
       "Name": "Scroll of Nature",
@@ -1550,7 +1608,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Plague": {
       "Name": "Scroll of Plague",
@@ -1631,7 +1691,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Surge": {
       "Name": "Scroll of Surge",
@@ -1712,7 +1774,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Water": {
       "Name": "Scroll of Water",
@@ -1793,7 +1857,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Aftershock": {
       "Name": "Scroll of Aftershock",
@@ -1874,7 +1940,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Chain Lightning": {
       "Name": "Scroll of Chain Lightning",
@@ -1955,7 +2023,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Chaos Strike": {
       "Name": "Scroll of Chaos Strike",
@@ -2036,7 +2106,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Charm": {
       "Name": "Scroll of Charm",
@@ -2117,7 +2189,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Corpse Explosion": {
       "Name": "Scroll of Corpse Explosion",
@@ -2198,7 +2272,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Crusader": {
       "Name": "Scroll of Crusader",
@@ -2279,7 +2355,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Explosions": {
       "Name": "Scroll of Explosions",
@@ -2360,7 +2438,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Fear": {
       "Name": "Scroll of Fear",
@@ -2441,7 +2521,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Flame Thrower": {
       "Name": "Scroll of Flame Thrower",
@@ -2522,7 +2604,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Pesticide": {
       "Name": "Scroll of Pesticide",
@@ -2603,7 +2687,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Holy Purge": {
       "Name": "Scroll of Holy Purge",
@@ -2684,7 +2770,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Lava": {
       "Name": "Scroll of Lava",
@@ -2765,7 +2853,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Least Resistance": {
       "Name": "Scroll of Least Resistance",
@@ -2846,7 +2936,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Noxiosa": {
       "Name": "Scroll of Noxiosa",
@@ -2927,7 +3019,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Petrification": {
       "Name": "Scroll of Petrification",
@@ -3008,7 +3102,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Petroleum": {
       "Name": "Scroll of Petroleum",
@@ -3089,7 +3185,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Poison Blood": {
       "Name": "Scroll of Poison Blood",
@@ -3170,7 +3268,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Prism": {
       "Name": "Scroll of Prism",
@@ -3251,7 +3351,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Rocket Launcher": {
       "Name": "Scroll of Rocket Launcher",
@@ -3332,7 +3434,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Slush": {
       "Name": "Scroll of Slush",
@@ -3413,7 +3517,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Sacrifice": {
       "Name": "Scroll of Sacrifice",
@@ -3494,7 +3600,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Storm Surge": {
       "Name": "Scroll of Storm Surge",
@@ -3575,7 +3683,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Thunderbolt": {
       "Name": "Scroll of Thunderbolt",
@@ -3656,7 +3766,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scroll of Voodoo": {
       "Name": "Scroll of Voodoo",
@@ -3737,7 +3849,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Action Oil": {
       "Name": "Action Oil",
@@ -3820,7 +3934,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Add Damage Oil": {
       "Name": "Add Damage Oil",
@@ -3903,7 +4019,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Aimless Oil": {
       "Name": "Aimless Oil",
@@ -3986,7 +4104,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Airsoft Oil": {
       "Name": "Airsoft Oil",
@@ -4069,7 +4189,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Altruistic Oil": {
       "Name": "Altruistic Oil",
@@ -4152,7 +4274,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Arkanoid Oil": {
       "Name": "Arkanoid Oil",
@@ -4235,7 +4359,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Arrow Oil": {
       "Name": "Arrow Oil",
@@ -4318,7 +4444,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Artery Oil": {
       "Name": "Artery Oil",
@@ -4401,7 +4529,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Artillery Oil": {
       "Name": "Artillery Oil",
@@ -4484,7 +4614,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Ascetic Oil": {
       "Name": "Ascetic Oil",
@@ -4567,7 +4699,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Assassin Dart Oil": {
       "Name": "Assassin Dart Oil",
@@ -4650,7 +4784,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Attack Speed Oil": {
       "Name": "Attack Speed Oil",
@@ -4733,7 +4869,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Axe Oil": {
       "Name": "Axe Oil",
@@ -4816,7 +4954,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Bad Planet Oil": {
       "Name": "Bad Planet Oil",
@@ -4899,7 +5039,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Bandit Oil": {
       "Name": "Bandit Oil",
@@ -4982,7 +5124,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "BB Oil": {
       "Name": "BB Oil",
@@ -5065,7 +5209,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Big Oil": {
       "Name": "Big Oil",
@@ -5148,7 +5294,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Black Friday Oil": {
       "Name": "Black Friday Oil",
@@ -5231,7 +5379,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Blindfold Oil": {
       "Name": "Blindfold Oil",
@@ -5314,7 +5464,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Blurt Oil": {
       "Name": "Blurt Oil",
@@ -5397,7 +5549,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Bolt Oil": {
       "Name": "Bolt Oil",
@@ -5480,7 +5634,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Bombard Oil": {
       "Name": "Bombard Oil",
@@ -5563,7 +5719,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Boomstick Oil": {
       "Name": "Boomstick Oil",
@@ -5646,7 +5804,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Boulder Oil": {
       "Name": "Boulder Oil",
@@ -5729,7 +5889,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Bowl Oil": {
       "Name": "Bowl Oil",
@@ -5812,7 +5974,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Braced Oil": {
       "Name": "Braced Oil",
@@ -5895,7 +6059,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Brute Oil": {
       "Name": "Brute Oil",
@@ -5978,7 +6144,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Bulk Oil": {
       "Name": "Bulk Oil",
@@ -6061,7 +6229,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Bystander Oil": {
       "Name": "Bystander Oil",
@@ -6144,7 +6314,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Carefree Oil": {
       "Name": "Carefree Oil",
@@ -6227,7 +6399,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Careful Oil": {
       "Name": "Careful Oil",
@@ -6310,7 +6484,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Careless Splitter Oil": {
       "Name": "Careless Splitter Oil",
@@ -6393,7 +6569,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Cartoon Oil": {
       "Name": "Cartoon Oil",
@@ -6476,7 +6654,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Casual Oil": {
       "Name": "Casual Oil",
@@ -6559,7 +6739,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Cheap Oil": {
       "Name": "Cheap Oil",
@@ -6642,7 +6824,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Collateral Oil": {
       "Name": "Collateral Oil",
@@ -6725,7 +6909,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Complicated Oil": {
       "Name": "Complicated Oil",
@@ -6808,7 +6994,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Compo Oil": {
       "Name": "Compo Oil",
@@ -6891,7 +7079,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Confidence Oil": {
       "Name": "Confidence Oil",
@@ -6974,7 +7164,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Considerate Oil": {
       "Name": "Considerate Oil",
@@ -7057,7 +7249,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Contained Force Oil": {
       "Name": "Contained Force Oil",
@@ -7140,7 +7334,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Critical Oil": {
       "Name": "Critical Oil",
@@ -7223,7 +7419,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Cycle Oil": {
       "Name": "Cycle Oil",
@@ -7306,7 +7504,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Damage Oil": {
       "Name": "Damage Oil",
@@ -7389,7 +7589,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Dart Oil": {
       "Name": "Dart Oil",
@@ -7472,7 +7674,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Dead Center Oil": {
       "Name": "Dead Center Oil",
@@ -7555,7 +7759,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Delayed Hyper Tube Oil": {
       "Name": "Delayed Hyper Tube Oil",
@@ -7638,7 +7844,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Dense Oil": {
       "Name": "Dense Oil",
@@ -7721,7 +7929,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Detune Oil": {
       "Name": "Detune Oil",
@@ -7804,7 +8014,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Diesel Oil": {
       "Name": "Diesel Oil",
@@ -7887,7 +8099,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Discharge Oil": {
       "Name": "Discharge Oil",
@@ -7970,7 +8184,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Disposable Oil": {
       "Name": "Disposable Oil",
@@ -8053,7 +8269,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Division Oil": {
       "Name": "Division Oil",
@@ -8136,7 +8354,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Do-over Oil": {
       "Name": "Do-over Oil",
@@ -8219,7 +8439,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Double Fire Oil": {
       "Name": "Double Fire Oil",
@@ -8302,7 +8524,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Double Lock Oil": {
       "Name": "Double Lock Oil",
@@ -8330,13 +8554,13 @@
       "RPM": -0.2,
       "RecoilAdd": 0,
       "RecoilMult": 0,
-      "ReloadSpeed": 0.5,
+      "ReloadSpeed": 0.6,
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "Drag": 0,
       "DurabilityUsage": 1,
-      "StatDescription": "Reload Speed: <span style='color:green'>+50%</span><br>RPM: <span style='color:red'>-20%</span>",
-      "DropdownDescription": "▲ RLD: <span style='color:green'>+50%</span> • ▼ RPM: <span style='color:red'>-20%</span>",
+      "StatDescription": "Reload Speed: <span style='color:green'>+60%</span><br>RPM: <span style='color:red'>-20%</span>",
+      "DropdownDescription": "▲ RLD: <span style='color:green'>+60%</span> • ▼ RPM: <span style='color:red'>-20%</span>",
       "DurLossMult": 0,
       "BulletBounciness": 0,
       "MovingAccuracy": 0,
@@ -8361,7 +8585,7 @@
       "DamageMultInd": 0,
       "ScorePos": 0.5,
       "ScoreNeg": 0.2,
-      "SearchDescription": "Double Lock Oil Reload Speed: +50%, RPM: -20%",
+      "SearchDescription": "Double Lock Oil Reload Speed: +60%, RPM: -20%",
       "DupeFilter": false,
       "DamageMultWearablePistol": 0,
       "DamageMultWearableRevolver": 0,
@@ -8385,7 +8609,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Double Nothing Oil": {
       "Name": "Double Nothing Oil",
@@ -8468,7 +8694,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Dum Dum Oil": {
       "Name": "Dum Dum Oil",
@@ -8551,7 +8779,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Dynamic Oil": {
       "Name": "Dynamic Oil",
@@ -8634,7 +8864,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Easy Oil": {
       "Name": "Easy Oil",
@@ -8717,7 +8949,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Easy Plop Oil": {
       "Name": "Easy Plop Oil",
@@ -8800,7 +9034,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Elephant Oil": {
       "Name": "Elephant Oil",
@@ -8883,7 +9119,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Exotic Barrel Oil": {
       "Name": "Exotic Barrel Oil",
@@ -8966,7 +9204,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Expander Oil": {
       "Name": "Expander Oil",
@@ -9049,7 +9289,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Extra Powder Oil": {
       "Name": "Extra Powder Oil",
@@ -9132,7 +9374,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Farsighted Oil": {
       "Name": "Farsighted Oil",
@@ -9215,7 +9459,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Fast Bet Oil": {
       "Name": "Fast Bet Oil",
@@ -9298,7 +9544,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Feature Gun Oil": {
       "Name": "Feature Gun Oil",
@@ -9381,7 +9629,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Fidget Lord Oil": {
       "Name": "Fidget Lord Oil",
@@ -9464,7 +9714,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Fidget Oil": {
       "Name": "Fidget Oil",
@@ -9547,7 +9799,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "First Blood Oil": {
       "Name": "First Blood Oil",
@@ -9630,7 +9884,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Flea Oil": {
       "Name": "Flea Oil",
@@ -9713,7 +9969,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Flow Funnel Oil": {
       "Name": "Flow Funnel Oil",
@@ -9796,7 +10054,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Food Stamp Oil": {
       "Name": "Food Stamp Oil",
@@ -9879,7 +10139,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Fragile System Oil": {
       "Name": "Fragile System Oil",
@@ -9962,7 +10224,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Franciscan Oil": {
       "Name": "Franciscan Oil",
@@ -10045,7 +10309,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Frugal Oil": {
       "Name": "Frugal Oil",
@@ -10128,7 +10394,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Gambler Oil": {
       "Name": "Gambler Oil",
@@ -10211,7 +10479,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Gemini Oil": {
       "Name": "Gemini Oil",
@@ -10294,7 +10564,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Gentle Oil": {
       "Name": "Gentle Oil",
@@ -10377,7 +10649,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Glass Cannon Oil": {
       "Name": "Glass Cannon Oil",
@@ -10460,7 +10734,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Great Oil": {
       "Name": "Great Oil",
@@ -10543,7 +10819,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Grounded Oil": {
       "Name": "Grounded Oil",
@@ -10626,7 +10904,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Gunslinger Oil": {
       "Name": "Gunslinger Oil",
@@ -10709,7 +10989,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Happy Accident Oil": {
       "Name": "Happy Accident Oil",
@@ -10792,7 +11074,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Heavy Lead Oil": {
       "Name": "Heavy Lead Oil",
@@ -10875,7 +11159,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Heavy Oil": {
       "Name": "Heavy Oil",
@@ -10958,7 +11244,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Heavy Pockets Oil": {
       "Name": "Heavy Pockets Oil",
@@ -11041,7 +11329,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Hefty Oil": {
       "Name": "Hefty Oil",
@@ -11124,7 +11414,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Helium Oil": {
       "Name": "Helium Oil",
@@ -11207,7 +11499,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "High Grade Oil": {
       "Name": "High Grade Oil",
@@ -11290,7 +11584,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Hip Blaster Oil": {
       "Name": "Hip Blaster Oil",
@@ -11373,7 +11669,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Hip Marksman Oil": {
       "Name": "Hip Marksman Oil",
@@ -11456,7 +11754,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Hoop Oil": {
       "Name": "Hoop Oil",
@@ -11539,7 +11839,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Hunter Oil": {
       "Name": "Hunter Oil",
@@ -11622,7 +11924,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Hustler Oil": {
       "Name": "Hustler Oil",
@@ -11705,7 +12009,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Hyper Lead Oil": {
       "Name": "Hyper Lead Oil",
@@ -11788,7 +12094,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Imperfect Oil": {
       "Name": "Imperfect Oil",
@@ -11871,7 +12179,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Inconsiderate Oil": {
       "Name": "Inconsiderate Oil",
@@ -11954,7 +12264,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Inherited Oil": {
       "Name": "Inherited Oil",
@@ -12037,7 +12349,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Instant Oil": {
       "Name": "Instant Oil",
@@ -12120,7 +12434,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Judgement Oil": {
       "Name": "Judgement Oil",
@@ -12203,7 +12519,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Jungian Oil": {
       "Name": "Jungian Oil",
@@ -12286,7 +12604,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Keep Oil": {
       "Name": "Keep Oil",
@@ -12369,7 +12689,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Kicker Oil": {
       "Name": "Kicker Oil",
@@ -12452,7 +12774,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Kinetic Oil": {
       "Name": "Kinetic Oil",
@@ -12535,7 +12859,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Last Drop Oil": {
       "Name": "Last Drop Oil",
@@ -12618,7 +12944,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Late Boom Oil": {
       "Name": "Late Boom Oil",
@@ -12701,7 +13029,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Launcher Oil": {
       "Name": "Launcher Oil",
@@ -12784,7 +13114,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Lazy Oil": {
       "Name": "Lazy Oil",
@@ -12867,7 +13199,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Less Recoil Oil": {
       "Name": "Less Recoil Oil",
@@ -12950,7 +13284,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Lightweight Oil": {
       "Name": "Lightweight Oil",
@@ -13033,7 +13369,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Longshot Oil": {
       "Name": "Longshot Oil",
@@ -13116,7 +13454,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Lost In Focus Oil": {
       "Name": "Lost In Focus Oil",
@@ -13199,7 +13539,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Low Roller Oil": {
       "Name": "Low Roller Oil",
@@ -13282,7 +13624,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Machine Oil": {
       "Name": "Machine Oil",
@@ -13365,7 +13709,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Main Discipline Oil": {
       "Name": "Main Discipline Oil",
@@ -13448,7 +13794,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Main Focus Oil": {
       "Name": "Main Focus Oil",
@@ -13531,7 +13879,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Manifestation Oil": {
       "Name": "Manifestation Oil",
@@ -13614,7 +13964,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Matrix Oil": {
       "Name": "Matrix Oil",
@@ -13697,7 +14049,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Micro Wing Oil": {
       "Name": "Micro Wing Oil",
@@ -13780,7 +14134,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Modern Technology Oil": {
       "Name": "Modern Technology Oil",
@@ -13863,7 +14219,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Mosquito Oil": {
       "Name": "Mosquito Oil",
@@ -13946,7 +14304,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Multichamber Oil": {
       "Name": "Multichamber Oil",
@@ -14029,7 +14389,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Multishot Oil": {
       "Name": "Multishot Oil",
@@ -14112,7 +14474,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Needleye Oil": {
       "Name": "Needleye Oil",
@@ -14195,7 +14559,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Nerf Oil": {
       "Name": "Nerf Oil",
@@ -14278,7 +14644,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "No Look Oil": {
       "Name": "No Look Oil",
@@ -14361,7 +14729,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "No Need Oil": {
       "Name": "No Need Oil",
@@ -14444,7 +14814,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Out of the Box Oil": {
       "Name": "Out of the Box Oil",
@@ -14527,7 +14899,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Overclock Oil": {
       "Name": "Overclock Oil",
@@ -14610,7 +14984,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Overdose Oil": {
       "Name": "Overdose Oil",
@@ -14693,7 +15069,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Parallel Mag Oil": {
       "Name": "Parallel Mag Oil",
@@ -14776,7 +15154,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Peashooter Oil": {
       "Name": "Peashooter Oil",
@@ -14859,7 +15239,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Penetration Oil": {
       "Name": "Penetration Oil",
@@ -14942,7 +15324,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Perfect Bounce Oil": {
       "Name": "Perfect Bounce Oil",
@@ -15025,7 +15409,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Perforate Oil": {
       "Name": "Perforate Oil",
@@ -15108,7 +15494,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Plinker Oil": {
       "Name": "Plinker Oil",
@@ -15191,7 +15579,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Plop Back Oil": {
       "Name": "Plop Back Oil",
@@ -15274,7 +15664,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Pool Oil": {
       "Name": "Pool Oil",
@@ -15357,7 +15749,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Potshot Oil": {
       "Name": "Potshot Oil",
@@ -15440,7 +15834,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Puncher Oil": {
       "Name": "Puncher Oil",
@@ -15523,7 +15919,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Puncture Oil": {
       "Name": "Puncture Oil",
@@ -15606,7 +16004,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Purse Gun Oil": {
       "Name": "Purse Gun Oil",
@@ -15689,7 +16089,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Rapid Internals Oil": {
       "Name": "Rapid Internals Oil",
@@ -15772,7 +16174,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Ready Oil": {
       "Name": "Ready Oil",
@@ -15855,7 +16259,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Rebound Oil": {
       "Name": "Rebound Oil",
@@ -15938,7 +16344,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Recycle Oil": {
       "Name": "Recycle Oil",
@@ -16021,7 +16429,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Relax Oil": {
       "Name": "Relax Oil",
@@ -16104,7 +16514,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Release Oil": {
       "Name": "Release Oil",
@@ -16187,7 +16599,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Reload Oil": {
       "Name": "Reload Oil",
@@ -16270,7 +16684,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Ricochet Oil": {
       "Name": "Ricochet Oil",
@@ -16353,7 +16769,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Rigid System Oil": {
       "Name": "Rigid System Oil",
@@ -16436,7 +16854,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Rigor Oil": {
       "Name": "Rigor Oil",
@@ -16519,7 +16939,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Robust Mechanics Oil": {
       "Name": "Robust Mechanics Oil",
@@ -16602,7 +17024,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Rookie Oil": {
       "Name": "Rookie Oil",
@@ -16685,7 +17109,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Rubber Oil": {
       "Name": "Rubber Oil",
@@ -16768,7 +17194,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Rush Job Oil": {
       "Name": "Rush Job Oil",
@@ -16851,7 +17279,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Safety Oil": {
       "Name": "Safety Oil",
@@ -16934,7 +17364,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Tetrus Oil": {
       "Name": "Tetrus Oil",
@@ -17017,7 +17449,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Saviour Oil": {
       "Name": "Saviour Oil",
@@ -17100,7 +17534,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scatter Oil": {
       "Name": "Scatter Oil",
@@ -17183,7 +17619,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Scramble Oil": {
       "Name": "Scramble Oil",
@@ -17266,7 +17704,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Seated Fit Oil": {
       "Name": "Seated Fit Oil",
@@ -17349,7 +17789,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Seated Oil": {
       "Name": "Seated Oil",
@@ -17432,7 +17874,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Sect Oil": {
       "Name": "Sect Oil",
@@ -17515,7 +17959,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Sender Oil": {
       "Name": "Sender Oil",
@@ -17598,7 +18044,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Sensible Oil": {
       "Name": "Sensible Oil",
@@ -17681,7 +18129,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Shaved Clip Oil": {
       "Name": "Shaved Clip Oil",
@@ -17764,7 +18214,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Shellman Oil": {
       "Name": "Shellman Oil",
@@ -17847,7 +18299,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Sherlock Oil": {
       "Name": "Sherlock Oil",
@@ -17930,7 +18384,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Shower Oil": {
       "Name": "Shower Oil",
@@ -18013,7 +18469,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Shredder Oil": {
       "Name": "Shredder Oil",
@@ -18096,7 +18554,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Skip Oil": {
       "Name": "Skip Oil",
@@ -18179,7 +18639,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Slick Oil": {
       "Name": "Slick Oil",
@@ -18262,7 +18724,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Slippy Coating Oil": {
       "Name": "Slippy Coating Oil",
@@ -18345,7 +18809,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Slotmachine Oil": {
       "Name": "Slotmachine Oil",
@@ -18428,7 +18894,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Slow Punch Oil": {
       "Name": "Slow Punch Oil",
@@ -18511,7 +18979,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Smart Bullet Oil": {
       "Name": "Smart Bullet Oil",
@@ -18594,7 +19064,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Soft Bullet Oil": {
       "Name": "Soft Bullet Oil",
@@ -18677,7 +19149,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Solid Oil": {
       "Name": "Solid Oil",
@@ -18760,7 +19234,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Spartan Oil": {
       "Name": "Spartan Oil",
@@ -18843,7 +19319,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Speed Trade Oil": {
       "Name": "Speed Trade Oil",
@@ -18926,7 +19404,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Spitter Oil": {
       "Name": "Spitter Oil",
@@ -19009,7 +19489,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Spread Oil": {
       "Name": "Spread Oil",
@@ -19092,7 +19574,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Stability Oil": {
       "Name": "Stability Oil",
@@ -19175,7 +19659,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Stable Hip Oil": {
       "Name": "Stable Hip Oil",
@@ -19258,7 +19744,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Stationary Oil": {
       "Name": "Stationary Oil",
@@ -19341,7 +19829,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Stiffy Fit Oil": {
       "Name": "Stiffy Fit Oil",
@@ -19424,7 +19914,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Stoic Oil": {
       "Name": "Stoic Oil",
@@ -19507,7 +19999,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Suppressive Oil": {
       "Name": "Suppressive Oil",
@@ -19590,7 +20084,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Surgical Laser Oil": {
       "Name": "Surgical Laser Oil",
@@ -19673,7 +20169,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Synchronicity Oil": {
       "Name": "Synchronicity Oil",
@@ -19756,7 +20254,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Tactical Oil": {
       "Name": "Tactical Oil",
@@ -19839,7 +20339,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Tandem Oil": {
       "Name": "Tandem Oil",
@@ -19922,7 +20424,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Task Oil": {
       "Name": "Task Oil",
@@ -20005,7 +20509,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Tech Support Oil": {
       "Name": "Tech Support Oil",
@@ -20088,7 +20594,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Tension Oil": {
       "Name": "Tension Oil",
@@ -20171,7 +20679,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Terminator Oil": {
       "Name": "Terminator Oil",
@@ -20254,7 +20764,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Thorough Oil": {
       "Name": "Thorough Oil",
@@ -20337,7 +20849,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Tight Barrel Oil": {
       "Name": "Tight Barrel Oil",
@@ -20420,7 +20934,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Too Much Oil": {
       "Name": "Too Much Oil",
@@ -20503,7 +21019,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Trusty Old Oil": {
       "Name": "Trusty Old Oil",
@@ -20586,7 +21104,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Turbulence Oil": {
       "Name": "Turbulence Oil",
@@ -20669,7 +21189,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Twice Oil": {
       "Name": "Twice Oil",
@@ -20752,7 +21274,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Two Time Oil": {
       "Name": "Two Time Oil",
@@ -20835,7 +21359,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Untechnical Oil": {
       "Name": "Untechnical Oil",
@@ -20918,7 +21444,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Vasectomy Oil": {
       "Name": "Vasectomy Oil",
@@ -21001,7 +21529,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Vegan Oil": {
       "Name": "Vegan Oil",
@@ -21084,7 +21614,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Vegetable Oil": {
       "Name": "Vegetable Oil",
@@ -21167,7 +21699,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Velocity Oil": {
       "Name": "Velocity Oil",
@@ -21250,7 +21784,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Walk Easy Oil": {
       "Name": "Walk Easy Oil",
@@ -21333,7 +21869,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Waster Oil": {
       "Name": "Waster Oil",
@@ -21416,7 +21954,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Whim Oil": {
       "Name": "Whim Oil",
@@ -21499,7 +22039,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Whos Counting Oil": {
       "Name": "Whos Counting Oil",
@@ -21582,7 +22124,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Wobble Oil": {
       "Name": "Wobble Oil",
@@ -21665,7 +22209,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Zero Fucks Oil": {
       "Name": "Zero Fucks Oil",
@@ -21748,7 +22294,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Zooming Oil": {
       "Name": "Zooming Oil",
@@ -21831,7 +22379,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Big Tax Oil": {
       "Name": "Big Tax Oil",
@@ -21912,7 +22462,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Birth Oil": {
       "Name": "Birth Oil",
@@ -21993,7 +22545,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Chonk Oil": {
       "Name": "Chonk Oil",
@@ -22074,7 +22628,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Chub Oil": {
       "Name": "Chub Oil",
@@ -22155,7 +22711,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Clump Oil": {
       "Name": "Clump Oil",
@@ -22236,7 +22794,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Congestion Oil": {
       "Name": "Congestion Oil",
@@ -22317,7 +22877,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Flop Oil": {
       "Name": "Flop Oil",
@@ -22398,7 +22960,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Gargantuan Oil": {
       "Name": "Gargantuan Oil",
@@ -22479,7 +23043,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Over Oil": {
       "Name": "Over Oil",
@@ -22560,7 +23126,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Potato Oil": {
       "Name": "Potato Oil",
@@ -22641,7 +23209,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Size Up Oil": {
       "Name": "Size Up Oil",
@@ -22722,7 +23292,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Smash Oil": {
       "Name": "Smash Oil",
@@ -22803,7 +23375,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Tight Oil": {
       "Name": "Tight Oil",
@@ -22884,7 +23458,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     },
     "Xanny Oil": {
       "Name": "Xanny Oil",
@@ -22965,7 +23541,9 @@
       "Luck": 0,
       "DamageResistLight": 0,
       "DamageMultWearableLMG": 0,
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "ReloadPositive": 1,
+      "ReloadNegative": 1
     }
   }
 }
