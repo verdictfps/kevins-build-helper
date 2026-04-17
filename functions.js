@@ -2155,7 +2155,6 @@ function setAllAsRandom() {
 
 function checkAnimation() {
     if(animationCardEnd === false) {
-        console.log(animationCardEnd)
        window.setTimeout(checkAnimation, 100);
     }
     /*else {
@@ -2666,7 +2665,6 @@ console.info("KBH: Beginning oil filtering process");
     let oilsel4 = document.getElementById("oils4selector");
     let oilsel5 = document.getElementById("oils5selector");
     let firesel = document.getElementById("firemodeselector");
-console.log(filteredOptions)
     function makeAllOilsVisible() {
         console.info("KBH: Making all oils selectable");
         for (var i = 0; i < filteredOptions.length; i++) {
@@ -3125,6 +3123,7 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
 
     let decode = await decodeUriAsBuild();
     if (decode === false) {
+        console.info("KBH: Loading defaults");
         let selPageLoad = document.getElementById("weapons");
         selPageLoad.setValue(value); 
         rollAggregator(flag, selector, selID, value, type, false, "rollOnPageLoad");
@@ -3616,11 +3615,9 @@ function oilStats() {
             oilStatModifiers.RecoilMult += selectedOil.RecoilMult;
         }
         if (selectedOil.ReloadSpeed < 0 && selectedOil.ReloadSpeed !== undefined) {
-            console.log(selectedOil.ReloadSpeed)
             oilStatModifiers.ReloadNegative *= (1 + selectedOil.ReloadSpeed);
         }
         if (selectedOil.ReloadSpeed > 0 && selectedOil.ReloadSpeed !== undefined) {
-            console.log(selectedOil.ReloadSpeed, oilStatModifiers.ReloadPositive)
             oilStatModifiers.ReloadPositive += selectedOil.ReloadSpeed;
         }
         if (selectedOil.SpreadAdd != 0 && selectedOil.SpreadAdd !== undefined) {
@@ -4129,9 +4126,7 @@ function oilCalcs(calcOil) {
     document.getElementById("cardSizeRBrac").textContent = "";
 
     let sizeCalc = weapon.BulletSize + calcOil.BulletSize;
-    console.log(sizeCalc)
     let sizeConv = percentConv(sizeCalc);
-    console.log(sizeConv)
 
     let sizeRound = Math.round((sizeConv + Number.EPSILON)* 100) / 100;
 
@@ -5181,6 +5176,18 @@ function oilCalcs(calcOil) {
     }
     //#endregion
 
+    // RPM/Recoil ratio
+    let recoilRatio = recoilRound;
+    let rpmRatio = rpmRound;
+
+    if (rpmRatio < 110) {
+        recoilRatio = recoilRound / 2;
+    }
+
+    let totalRatio = (recoilRatio * rpmRatio) / 500;
+
+    document.getElementById("cardRPMToRec").textContent = totalRatio;
+
     //////////////////////
     //// Reload Speed ////
     //////////////////////
@@ -5913,8 +5920,6 @@ function setDefaultChamber(gun) {
 
 function oilSwapper(flag, val) {
 
-    console.log(val)
-
     let oil1 = document.getElementById("oils1selector").getValue();
     let oil2 = document.getElementById("oils2selector").getValue();
     let oil3 = document.getElementById("oils3selector").getValue();
@@ -5961,7 +5966,6 @@ function oilSwapper(flag, val) {
 
     oils.forEach((oil) => {
         if (oil === val && counter !== active && val !== "none" && !(val.startsWith("static")) && !(val.startsWith("scroll"))) {
-            console.log(flag, val, active, counter)
             shallNotPass = true;
             switch (counter) {
                 case 0:
@@ -6438,7 +6442,6 @@ function rollSelections(flag, selector, selID, value, type) {
                         selectedItem = getChamberByName(attachmentsRechambers[0]);
                         selectedValue = chamberNameIndexer.get(selectedItem.Name);
                         if (selectedItem.AmmoType === coreSelections.get("weapon").Name.AmmoType) {
-                            console.log(coreSelections.get("weapon").Name.AmmoType)
                             weapCha = coreSelections.get("weapon");
                             setDefaultChamber(weapCha.Name);
                         }
@@ -6448,7 +6451,6 @@ function rollSelections(flag, selector, selID, value, type) {
                         selectedItem = chamberValueIndexer.get(value);
                         selectedChamber = getChamberByName(selectedItem);
                         if (selectedChamber.AmmoType === coreSelections.get("weapon").Name.AmmoType) {
-                            console.log(coreSelections.get("weapon").Name.AmmoType)
                             weapCha = coreSelections.get("weapon");
                             setDefaultChamber(weapCha.Name);
                         }
