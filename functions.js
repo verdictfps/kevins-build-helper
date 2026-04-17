@@ -1706,7 +1706,7 @@ function closeAllGroupsExcept(exception) {
         close();
     });
 
-    // keyboard support (basic)
+    // keyboard support - extend this pls
     control.addEventListener("keydown", (e) => {
         if (e.key === "Enter") toggle();
         if (e.key === "Escape") close();
@@ -2348,7 +2348,7 @@ async function setBuildAsActive(sel, clone) {
                 buildSwapping = false;
             }
         }
-            await oilRemover();
+            //await oilRemover();
             await attachmentFilter();
             shallNotPass = false;
     }
@@ -3343,7 +3343,7 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
     rollSelections(flag, selector, selID, selValue, selType);
 
     if (last === true) {
-        await oilRemover();
+        //await oilRemover();
         await attachmentFilter();
         oilStats();
         oilCalcs(oilStatModifiers);
@@ -5911,6 +5911,107 @@ function setDefaultChamber(gun) {
     }
 }
 
+function oilSwapper(flag, val) {
+
+    console.log(val)
+
+    let oil1 = document.getElementById("oils1selector").getValue();
+    let oil2 = document.getElementById("oils2selector").getValue();
+    let oil3 = document.getElementById("oils3selector").getValue();
+    let oil4 = document.getElementById("oils4selector").getValue();
+    let oil5 = document.getElementById("oils5selector").getValue();
+
+    let oils = [];
+    oils.push(oil1);
+    oils.push(oil2);
+    oils.push(oil3);
+    oils.push(oil4);
+    oils.push(oil5);
+
+    let active = null;
+
+    let sel = null;
+
+    switch (flag) {
+        case "ench1":
+            active = 0;
+            sel = "oils1selector";
+            break;
+        case "ench2":
+            active = 1;
+            sel = "oils2selector";
+            break;
+        case "ench3":
+            active = 2;
+            sel = "oils3selector";
+            break;
+        case "ench4":
+            active = 3;
+            sel = "oils4selector";
+            break;
+        case "ench5":
+            active = 4;
+            sel = "oils5selector";
+            break;
+    }
+
+    let counter = 0;
+    let selectedItem = null;
+    let selectedValue = null;
+
+    oils.forEach((oil) => {
+        if (oil === val && counter !== active && val !== "none" && !(val.startsWith("static")) && !(val.startsWith("scroll"))) {
+            console.log(flag, val, active, counter)
+            shallNotPass = true;
+            switch (counter) {
+                case 0:
+                    document.getElementById("oils1selector").setValue("none");
+                    selectedItem = getOilByName("None");
+                    selectedValue = oilNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    rollAggregator('ench1', 'oils1selector', 1, "none", "ench", false, "oilSwapper");
+                    rollAggregator(flag, sel, 1, val, "ench", true, "oilSwapper");
+                    break;
+                case 1:
+                    document.getElementById("oils2selector").setValue("none");
+                    selectedItem = getOilByName("None");
+                    selectedValue = oilNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    rollAggregator('ench2', 'oils2selector', 2, "none", "ench", false, "oilSwapper");
+                    rollAggregator(flag, sel, 1, val, "ench", true, "oilSwapper");
+                    break;
+                case 2:
+                    document.getElementById("oils3selector").setValue("none");
+                    selectedItem = getOilByName("None");
+                    selectedValue = oilNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    rollAggregator('ench3', 'oils3selector', 3, "none", "ench", false, "oilSwapper");
+                    rollAggregator(flag, sel, 1, val, "ench", true, "oilSwapper");
+                    break;
+                case 3:
+                    document.getElementById("oils4selector").setValue("none");
+                    selectedItem = getOilByName("None");
+                    selectedValue = oilNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    rollAggregator('ench4', 'oils4selector', 4, "none", "ench", false, "oilSwapper");
+                    rollAggregator(flag, sel, 1, val, "ench", true, "oilSwapper");
+                    break;
+                case 4:
+                    document.getElementById("oils5selector").setValue("none");
+                    selectedItem = getOilByName("None");
+                    selectedValue = oilNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    rollAggregator('ench5', 'oils5selector', 5, "none", "ench", false, "oilSwapper");
+                    rollAggregator(flag, sel, 1, val, "ench", true, "oilSwapper");
+                    break;
+            }
+            shallNotPass = false;
+        }
+        counter += 1;
+    })
+
+}
+
 function rollSelections(flag, selector, selID, value, type) {
 
     let selectedItem = null;
@@ -6081,10 +6182,12 @@ function rollSelections(flag, selector, selID, value, type) {
                     let scroll = scrollValueIndexer.get(value);
                     selectedItem = getScrollByName(scroll);
                 }
+                selectedValue = value;
                 addToCoreMap(flag, selectedItem, value);
         }
         if (selectedItem !== null) {
             poolRemover(selectedItem.Name);
+            oilSwapper(flag, selectedValue)
         }
     }
 
