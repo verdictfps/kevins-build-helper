@@ -1,6 +1,6 @@
 
-let newField = "ReloadNegative";
-let newDefault = 0;
+let newField = "TypeNegative5";
+let newDefault = "None";
 
 function oilField() {
     console.log("-------------------Starting Oils-------------------");

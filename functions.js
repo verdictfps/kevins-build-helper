@@ -3370,9 +3370,6 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
 
             setTimeout(async() => {
                 await addName();
-                if (isMobile === false) {
-                    scrollToTop();
-                }
                 encodeBuildAsUri(last);
             }, 170);
             //setTimeout(() => {
@@ -3381,9 +3378,6 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
         }
         else if (buildSwapping === true) {
             await addName();
-            if (isMobile === false) {
-                scrollToTop();
-            }
             encodeBuildAsUri(last);
             //setBuildAsMetadata();
         }
@@ -4544,16 +4538,6 @@ function oilCalcs(calcOil) {
     }
     //#endregion
 
-    document.getElementById("cardDamagePerMag").textContent = "";
-    let damageMagazine = totalComp * effRound;
-    let dMagRound = Math.round((damageMagazine + Number.EPSILON)* 100) / 100;
-    document.getElementById("cardDamagePerMag").textContent = dMagRound;
-
-    document.getElementById("cardDPMCrit").textContent = "";
-    let dpmCrit =  ((totalRound * effRound) * (1 + baseCalc)) + (scrollMult * effRound);
-    let dCritRound = Math.round((dpmCrit + Number.EPSILON)* 100) / 100;
-    document.getElementById("cardDPMCrit").textContent = dCritRound;
-
     //////////////////////////////
     //// Headshot Damage ////
     //////////////////////////////
@@ -4813,6 +4797,25 @@ function oilCalcs(calcOil) {
     if (totalHeadRound == weaponOriginal.TotalDamage) {
         document.getElementById("cardHeadDamageTotal").textContent = totalHeadRound;
     }
+
+    document.getElementById("cardDamagePerMag").textContent = "";
+
+    let damageMagazine = null;
+
+    if (calcOil.ScrollField === "scrollinfotoxic") {
+        damageMagazine = (totalHeadRound * effRound) + (scrollMult * effRound);
+    }
+    else {
+        damageMagazine = (totalComp * effRound);
+    }
+    let dMagRound = Math.round((damageMagazine + Number.EPSILON)* 100) / 100;
+    document.getElementById("cardDamagePerMag").textContent = dMagRound;
+
+    document.getElementById("cardDPMCrit").textContent = "";
+    let dpmCrit =  ((totalRound * effRound) * (1 + baseCalc)) + (scrollMult * effRound);
+    let dCritRound = Math.round((dpmCrit + Number.EPSILON)* 100) / 100;
+    document.getElementById("cardDPMCrit").textContent = dCritRound;
+
     //#endregion
 
     /////////////////
@@ -5176,18 +5179,6 @@ function oilCalcs(calcOil) {
     }
     //#endregion
 
-    // RPM/Recoil ratio
-    let recoilRatio = recoilRound;
-    let rpmRatio = rpmRound;
-
-    if (rpmRatio < 110) {
-        recoilRatio = recoilRound / 2;
-    }
-
-    let totalRatio = (recoilRatio * rpmRatio) / 500;
-
-    document.getElementById("cardRPMToRec").textContent = totalRatio;
-
     //////////////////////
     //// Reload Speed ////
     //////////////////////
@@ -5488,13 +5479,21 @@ function oilCalcs(calcOil) {
     let durWinTime = 0;
     let durWinShots = shotsToBreakRounded;
 
+    let damageForDPS = 0;
+    if (calcOil.ScrollField === "scrollinfotoxic") {
+        damageForDPS = totalHeadRound;
+    }
+    else {
+        damageForDPS = totalRound;
+    }
+
     do {
         let magSizeCalc = 0;
         do {
             dpsTime += secPerRound;
 
             // Base Damage
-            dps60Dam += totalRound;
+            dps60Dam += damageForDPS;
 
             // Unmodifiable Damage
             dps60DamUnmod += scrollMult;
@@ -5513,7 +5512,7 @@ function oilCalcs(calcOil) {
         do {
             // Durability Window
             durWinTime += secPerRound;
-            durWinDam += totalRound;
+            durWinDam += damageForDPS;
             durWinDamUnmod += scrollMult;
             durWinShots -= 1;
 
@@ -5545,7 +5544,20 @@ function oilCalcs(calcOil) {
     document.getElementById("cardDPS60").textContent = dps60UnmodRound; 
 
     document.getElementById("cardBreakDam").textContent = durWinDamRound;
-    document.getElementById("cardBreakTime").textContent = `${durWinTimeRound} seconds`; 
+    document.getElementById("cardBreakTime").textContent = `${durWinTimeRound} seconds`;
+
+    // RPM/Recoil ratio
+
+    let recoilRatio = recoilRound;
+    let rpmRatio = rpmRound;
+
+    if (rpmRatio < 110) {
+        recoilRatio = recoilRound / 2;
+    }
+
+    let totalRatio = (recoilRatio * rpmRatio) / 500;
+
+    document.getElementById("cardRPMToRec").textContent = totalRatio;
     
     //#endregion
     
