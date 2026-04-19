@@ -1528,6 +1528,10 @@ select.custom-dropdown {
     margin-top: 15px !important;
 }
 
+.hide-selectors {
+    display: none !important;
+}
+
 .mobiledrop {
     display: flex;
     font-size: 1em;
@@ -2145,6 +2149,11 @@ mark {
 }
 
 #width-grid {
+     grid-column: 1 / -1;
+     min-width: 0;
+}
+
+#width-grid2 {
      grid-column: 1 / -1;
      min-width: 0;
 }

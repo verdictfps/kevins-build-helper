@@ -132,94 +132,6 @@ function mobileCSS() {
         document.querySelectorAll(".stuffbutton").forEach(e => {e.classList.add("stuffbutton-mobile")});
     }
 }
-function revertMobileCSS() {
-        document.getElementById("mainbuildcontainer").classList.add("container");
-        document.getElementById("mainbuildcontainer").classList.remove("container-mobile");
-
-        document.getElementById("targetme").classList.add("build-card");
-        document.getElementById("targetme").classList.remove("build-card-mobile");
-
-        document.getElementById("targetcontainer").classList.add("target-container");
-        document.getElementById("targetcontainer").classList.remove("target-container-mobile");
-
-        document.getElementById("bigbuttondiv1").classList.add("bigbuttondiv");
-        document.getElementById("bigbuttondiv1").classList.remove("bigbuttondiv-mobile");
-
-        document.getElementById("bigbuttondiv2").classList.add("bigbuttondiv");
-        document.getElementById("bigbuttondiv2").classList.remove("bigbuttondiv-mobile");
-
-        document.getElementById("containerweapon").classList.add("containerweapon");
-        document.getElementById("containerweapon").classList.remove("containerweapon-mobile");
-
-        document.getElementById("containerheaders").classList.add("containerheaders");
-        document.getElementById("containerheaders").classList.remove("containerheaders-mobile");
-
-        document.getElementById("containheadatt").classList.add("containerheaders");
-        document.getElementById("containheadatt").classList.remove("containerheaders2-mobile");
-
-        document.getElementById("containheadench").classList.add("containerheaders");
-        document.getElementById("containheadench").classList.remove("containerheaders2-mobile");
-
-        document.getElementById("targetsub").classList.add("targetsub");
-        document.getElementById("targetsub").classList.remove("targetsub-mobile");
-        
-        document.getElementById("weaponstuffcontainer").classList.add("weaponstuffcontainer");
-        document.getElementById("weaponstuffcontainer").classList.remove("weaponstuffcontainer-mobile");
-
-        document.getElementById("extendedstatscontainer1").classList.add("extendedstatscontainer");
-        document.getElementById("extendedstatscontainer1").classList.remove("extendedstatscontainer-mobile");
-
-        document.getElementById("extendedstatscontainer2").classList.add("extendedstatscontainer");
-        document.getElementById("extendedstatscontainer2").classList.remove("extendedstatscontainer-mobile");
-        
-        document.getElementById("extendstatgrid").classList.add("extend-stat-grid");
-        document.getElementById("extendstatgrid").classList.remove("extend-stat-grid-mobile");
-
-        document.getElementById("weapondiv").classList.add("weapondiv");
-        document.getElementById("weapondiv").classList.remove("weapondiv-mobile");
-
-        document.getElementById("externalbuttondiv").classList.add("external-button-cont");
-        document.getElementById("externalbuttondiv").classList.remove("external-button-cont-mobile");
-        
-        document.getElementById("tooltipboxdiv").classList.add("tooltipboxdiv");
-        document.getElementById("tooltipboxdiv").classList.remove("tooltipboxdiv-mobile");
-
-        document.getElementById("containerweapchoose").classList.add("containerweapchoose");
-        document.getElementById("containerweapchoose").classList.remove("containerweapchoose-mobile");
-
-        document.querySelectorAll(".buttonGeneral-mobile").forEach(e => {e.classList.add("buttonGeneral")});
-        document.querySelectorAll(".buttonGeneral").forEach(e => {e.classList.remove("buttonGeneral-mobile")});
-
-        document.querySelectorAll(".custom-select-selected").forEach(e => {e.style.height = "", e.style.fontSize = "", e.style.border = ""});
-        document.querySelectorAll(".custom-select").forEach(e => {e.style.height = ""});
-        document.querySelectorAll(".oils").forEach(e => {e.style.fontSize = "1em", e.style.width = "50%", e.style.flexWrap = "nowrap"});
-        document.querySelectorAll("h2").forEach(e => {e.style.fontSize = ""});
-        document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "20px", e.style.width = "20px"});
-
-        document.querySelectorAll(".cardStat").forEach(e => {e.style.fontSize = "0.85em"});
-
-        document.getElementById("weapsubdiv").style.height = "10px";
-        document.getElementById("buttonRandomGun").style.width = "30px";
-        document.getElementById("buttonResetGun").style.width = "30px";
-        document.getElementById("buttonCommitGun").style.width = "30px";
-
-        document.getElementById("bigboxdeals").style.height = "88vh";
-
-        //document.getElementById("containerheaders2").style.display = "";
- 
-        document.querySelectorAll(".stuffbutton").forEach(e => {e.classList.remove("stuffbutton-mobile")});
-}/*
-window.addEventListener("resize", (e) => {
-    if (window.innerWidth <= 1700 && isMobile === false) {
-        isMobile = true;
-        mobileCSS();
-    }
-    else if (window.innerWidth > 1700 && isMobile === true){ 
-        isMobile = false;
-        revertMobileCSS();
-    }
-});
-*/
 
 // Global Variables
 
@@ -728,6 +640,7 @@ console.info("KBH: Setting weapon value indexer");
     weaponValueIndexer.set("random-assault-rifles", "Random AR");
     weaponValueIndexer.set("catacoil-rapid-x", "Catacoil Rapid X");
     weaponValueIndexer.set("corpsemaker", "Corpsemaker");
+    weaponValueIndexer.set("socom-acr", "Socom ACR");
     weaponValueIndexer.set("m11a2-fisk", "M11A2 Fisk");
     weaponValueIndexer.set("type-80-typhoon", "Type 80 Typhoon");
     weaponValueIndexer.set("wingman", "Wingman");
@@ -748,6 +661,7 @@ console.info("KBH: Setting weapon value indexer");
     weaponValueIndexer.set("impala-gravita", "Impala Gravita");
     weaponValueIndexer.set("longboy", "Longboy");
     weaponValueIndexer.set("rokua-308", "Rokua .308");
+    weaponValueIndexer.set("terrier-urb", "Terrier URB");
 
 }
 
@@ -2806,6 +2720,16 @@ function attachmentFilter(evt) {
             }
             break;
         case "3-Round Burst":
+            if (selectorFiremode.getValue() === "priming-bolt") {
+                selectorFiremode.setValue("none");     
+            };
+            for (var i = 0; i < selectorFiremodePro.length; i++) {
+                if (selectorFiremodePro[i].dataset.value === "priming-bolt") {
+                    selectorFiremode.dupeFilter("priming-bolt");
+                }
+            }
+            break;
+        case "2-Round Burst":
             if (selectorFiremode.getValue() === "priming-bolt") {
                 selectorFiremode.setValue("none");     
             };
@@ -6547,13 +6471,13 @@ const gunsAll = [
     "M11A2 Fisk", "Wingman", "Rektor 100rd", "Duhar", "Neuraxis F22",
     "Knop .22", "M182 Pierre-Fusil", "Tailor Marksman MKII",
     "Farsight", "Rokua .308", "Dolphin 99", "D4RT",
-    "Impala Gravita", "Longboy", "Chat-Pardeur 98", "Warpig", "Songbird"
+    "Impala Gravita", "Longboy", "Chat-Pardeur 98", "Warpig", "Songbird", "Socom ACR", "Terrier URB"
 ];
 
 const gunsPistols = [
     "P38 Dirk", "Socom 9", "Star & Witness", "Gravekeeper",
     "Beck 8", "Salamander", "Bronco 89", "Flicker",
-    "Unknown", "Hell 'N' Back", "Cavalier"
+    "Unknown", "Hell 'N' Back", "Cavalier", "Terrier URB"
 ];
 
 const gunsRevolvers = [
@@ -6573,7 +6497,7 @@ const gunsSMGs = [
 
 const gunsARs = [
     "Corpsemaker", "Catacoil Rapid X",
-    "Type 80 Typhoon", "M11A2 Fisk", "Wingman"
+    "Type 80 Typhoon", "M11A2 Fisk", "Wingman", "Socom ACR"
 ];
 
 const gunsLMGs = [
