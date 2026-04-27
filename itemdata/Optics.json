@@ -90,7 +90,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Compact Sight": {
       "ADSCritChance": 0.2,
@@ -182,7 +190,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Holographic Sight": {
       "ADSCritChance": 0.1,
@@ -274,7 +290,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Hunting Scope": {
       "ADSCritChance": 0.25,
@@ -366,7 +390,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "None": {
       "ADSCritChance": 0,
@@ -458,7 +490,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Optic": {
       "ADSCritChance": 0,
@@ -550,7 +590,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Recon Scope": {
       "ADSCritChance": 0.1,
@@ -587,7 +635,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "ADS Crit Chance: +25% • Zoom: 8x",
+      "DropdownDescription": "ADS Crit Chance: +10% • Zoom: 12x",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 0,
@@ -642,7 +690,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Reflex Sight": {
       "ADSCritChance": 0.15,
@@ -734,7 +790,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Sniper Scope": {
       "ADSCritChance": 0.3,
@@ -826,7 +890,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     }
   }
 }

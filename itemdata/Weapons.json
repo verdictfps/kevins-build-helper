@@ -86,7 +86,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "1889 Mario": {
       "ADSCritChance": 0,
@@ -174,7 +182,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Arbiter 2": {
       "ADSCritChance": 0,
@@ -262,7 +278,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 8,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.92
+      "WeightClassFactor": 0.92,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Augusta": {
       "ADSCritChance": 0,
@@ -350,7 +374,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Beck 8": {
       "ADSCritChance": 0,
@@ -436,9 +468,17 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeight": 5,
+      "WeaponWeight": 8,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.92,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Breacher 8": {
       "ADSCritChance": 0,
@@ -480,7 +520,7 @@
       "ExtraAmmoUseChance": 0,
       "ExtraJumps": 0,
       "FinalMovementSpeed": 1,
-      "Firemode": "Single",
+      "Firemode": "Static Single",
       "JumpPower": 1,
       "LootDropChance": 1,
       "Luck": 0,
@@ -526,7 +566,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 35,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.65
+      "WeightClassFactor": 0.65,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Bronco 89": {
       "ADSCritChance": 0,
@@ -614,7 +662,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Catacoil Rapid X": {
       "ADSCritChance": 0,
@@ -702,7 +758,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 8,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.92
+      "WeightClassFactor": 0.92,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Cavalier": {
       "ADSCritChance": 0,
@@ -790,7 +854,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Chat-Pardeur 98": {
       "ADSCritChance": 0,
@@ -862,7 +934,7 @@
       "SearchDescription": "Chat-Pardeur 98 Ammo: 7.62mm • DMG Mult: 1.2x • DMG: 120",
       "Spread": 0,
       "Spread12ga": 7,
-      "SpreadOther": 2.5,
+      "SpreadOther": 3,
       "TotalCritChance": 0,
       "TotalDamage": 0,
       "Type": "LMG",
@@ -878,7 +950,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 35,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.65
+      "WeightClassFactor": 0.65,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Corpsemaker": {
       "ADSCritChance": 0,
@@ -966,7 +1046,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Socom ACR": {
       "ADSCritChance": 0,
@@ -1054,7 +1142,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "D4RT": {
       "ADSCritChance": 0,
@@ -1142,7 +1238,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Deathstar PG": {
       "ADSCritChance": 0,
@@ -1230,7 +1334,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 8,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.92
+      "WeightClassFactor": 0.92,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Dolphin 99": {
       "ADSCritChance": 0,
@@ -1318,7 +1430,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Drifter 9": {
       "ADSCritChance": 0,
@@ -1406,7 +1526,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 8,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.92
+      "WeightClassFactor": 0.92,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Duhar": {
       "ADSCritChance": 0,
@@ -1494,7 +1622,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Farsight": {
       "ADSCritChance": 0,
@@ -1582,7 +1718,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Ferryman": {
       "ADSCritChance": 0,
@@ -1670,7 +1814,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Flicker": {
       "ADSCritChance": 0,
@@ -1758,7 +1910,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 0,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 1
+      "WeightClassFactor": 1,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Terrier URB": {
       "ADSCritChance": 0,
@@ -1846,7 +2006,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Flock 76": {
       "ADSCritChance": 0,
@@ -1934,7 +2102,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 8,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.92
+      "WeightClassFactor": 0.92,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Gravekeeper": {
       "ADSCritChance": 0,
@@ -2022,7 +2198,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Hell 'N' Back": {
       "ADSCritChance": 0,
@@ -2110,7 +2294,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Impala Gravita": {
       "ADSCritChance": 0,
@@ -2198,7 +2390,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Knop .22": {
       "ADSCritChance": 0,
@@ -2286,7 +2486,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Longboy": {
       "ADSCritChance": 0,
@@ -2374,7 +2582,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 25,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.75
+      "WeightClassFactor": 0.75,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "M11A2 Fisk": {
       "ADSCritChance": 0,
@@ -2462,7 +2678,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "M182 Pierre-Fusil": {
       "ADSCritChance": 0,
@@ -2550,7 +2774,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "M3 Termite": {
       "ADSCritChance": 0,
@@ -2638,7 +2870,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 8,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.92
+      "WeightClassFactor": 0.92,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Majordome": {
       "ADSCritChance": 0,
@@ -2726,7 +2966,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Mossman": {
       "ADSCritChance": 0,
@@ -2814,7 +3062,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Neuraxis F22": {
       "ADSCritChance": 0,
@@ -2902,7 +3158,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 25,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.75
+      "WeightClassFactor": 0.75,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "P38 Dirk": {
       "ADSCritChance": 0,
@@ -2990,7 +3254,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Palehorse Topclipper": {
       "ADSCritChance": 0,
@@ -3078,7 +3350,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Ploika Compact": {
       "ADSCritChance": 0,
@@ -3166,7 +3446,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 8,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.92
+      "WeightClassFactor": 0.92,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random AR": {
       "ADSCritChance": 0,
@@ -3254,7 +3542,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 0,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 1
+      "WeightClassFactor": 1,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random LMG": {
       "ADSCritChance": 0,
@@ -3342,7 +3638,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 0,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 1
+      "WeightClassFactor": 1,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Pistol": {
       "ADSCritChance": 0,
@@ -3430,7 +3734,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 0,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 1
+      "WeightClassFactor": 1,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Revolver": {
       "ADSCritChance": 0,
@@ -3518,7 +3830,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 0,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 1
+      "WeightClassFactor": 1,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Rifle": {
       "ADSCritChance": 0,
@@ -3606,7 +3926,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 0,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 1
+      "WeightClassFactor": 1,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Shotgun": {
       "ADSCritChance": 0,
@@ -3694,7 +4022,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 0,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 1
+      "WeightClassFactor": 1,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random SMG": {
       "ADSCritChance": 0,
@@ -3782,7 +4118,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 0,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 1
+      "WeightClassFactor": 1,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Sniper": {
       "ADSCritChance": 0,
@@ -3870,7 +4214,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 0,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 1
+      "WeightClassFactor": 1,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Weapon": {
       "ADSCritChance": 0,
@@ -3958,7 +4310,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 0,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 1
+      "WeightClassFactor": 1,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Rektor 100rd": {
       "ADSCritChance": 0,
@@ -4046,7 +4406,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 35,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.65
+      "WeightClassFactor": 0.65,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Rokua .308": {
       "ADSCritChance": 0,
@@ -4134,7 +4502,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 25,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.75
+      "WeightClassFactor": 0.75,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Salamander": {
       "ADSCritChance": 0,
@@ -4222,7 +4598,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Snut .38": {
       "ADSCritChance": 0,
@@ -4310,7 +4694,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Socom 9": {
       "ADSCritChance": 0,
@@ -4398,7 +4790,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Songbird": {
       "ADSCritChance": 0,
@@ -4486,7 +4886,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 8,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.92
+      "WeightClassFactor": 0.92,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Star & Witness": {
       "ADSCritChance": 0,
@@ -4574,7 +4982,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Tailor Marksman MKII": {
       "ADSCritChance": 0,
@@ -4662,7 +5078,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 8,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.92
+      "WeightClassFactor": 0.92,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Type 80 Typhoon": {
       "ADSCritChance": 0,
@@ -4750,7 +5174,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Unknown": {
       "ADSCritChance": 0,
@@ -4838,7 +5270,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Valet": {
       "ADSCritChance": 0,
@@ -4926,7 +5366,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 8,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.92
+      "WeightClassFactor": 0.92,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Vrede": {
       "ADSCritChance": 0,
@@ -5014,7 +5462,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 8,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.92
+      "WeightClassFactor": 0.92,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Warpig": {
       "ADSCritChance": 0,
@@ -5102,7 +5558,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Wingman": {
       "ADSCritChance": 0,
@@ -5190,7 +5654,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 16,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.84
+      "WeightClassFactor": 0.84,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Wyatt PULSAR": {
       "ADSCritChance": 0,
@@ -5232,7 +5704,7 @@
       "ExtraAmmoUseChance": 0,
       "ExtraJumps": 0,
       "FinalMovementSpeed": 1,
-      "Firemode": "Single",
+      "Firemode": "Static Single",
       "JumpPower": 1,
       "LootDropChance": 1,
       "Luck": 0,
@@ -5278,7 +5750,15 @@
       "TypePositive5": "None",
       "WeaponWeight": 5,
       "WeaponWeightModifier": 0,
-      "WeightClassFactor": 0.95
+      "WeightClassFactor": 0.95,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     }
   }
 }

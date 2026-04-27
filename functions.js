@@ -12,11 +12,21 @@ let isMobile = (() => {
 
 function mobileCSS() {
     if (isMobile === true) {
+
+        document.body.style.margin = "0";
+        document.body.style.padding = "0";
+        document.body.style.maxWidth = "100vw";
+        document.body.style.overflowX = "hidden";
+
+        document.getElementById("mobileheaderbox").style.display = "flex";
+
+        document.getElementById("mobilefooterbox").style.display = "flex";
+
         document.getElementById("mainbuildcontainer").classList.remove("container");
         document.getElementById("mainbuildcontainer").classList.add("container-mobile");
         
-        document.getElementById("tooltipboxdiv2").classList.remove("tooltipboxdiv");
-        document.getElementById("tooltipboxdiv2").classList.add("tooltipboxdiv-mobile");
+        document.getElementById("tooltipboxdiv").classList.remove("tooltipboxdiv");
+        document.getElementById("tooltipboxdiv").classList.add("tooltipboxdiv-mobile");
 
         document.getElementById("weapondiv").classList.remove("weapondiv");
         document.getElementById("weapondiv").classList.add("weapondiv-mobile");
@@ -27,11 +37,17 @@ function mobileCSS() {
         document.getElementById("oilcontainer").classList.remove("oilcontainer");
         document.getElementById("oilcontainer").classList.add("oilcontainer-mobile");
 
+        document.getElementById("armorcontainer").classList.remove("oilcontainer");
+        document.getElementById("armorcontainer").classList.add("oilcontainer-mobile");
+
         document.getElementById("bigboxdeals").classList.remove("bigboxdeals");
         document.getElementById("bigboxdeals").classList.add("bigboxdeals-mobile");
 
         document.getElementById("attachmentcontainer").classList.remove("attachmentcontainer");
         document.getElementById("attachmentcontainer").classList.add("attachmentcontainer-mobile");
+
+        document.getElementById("trinketcontainer").classList.remove("attachmentcontainer");
+        document.getElementById("trinketcontainer").classList.add("attachmentcontainer-mobile");
 
         document.getElementById("targetme").classList.remove("build-card");
         document.getElementById("targetme").classList.add("build-card-mobile");
@@ -39,19 +55,20 @@ function mobileCSS() {
         document.getElementById("targetcontainer").classList.remove("target-container");
         document.getElementById("targetcontainer").classList.add("target-container-mobile");
 
-        document.getElementById("bigbuttondiv1").classList.remove("bigbuttondiv");
-        document.getElementById("bigbuttondiv1").classList.add("bigbuttondiv-mobile");
-
-        document.getElementById("bigbuttondiv2").classList.remove("bigbuttondiv");
-        document.getElementById("bigbuttondiv2").classList.add("bigbuttondiv2-mobile");
-
         document.getElementById("containerweapon").classList.remove("containerweapon");
         document.getElementById("containerweapon").classList.add("containerweapon-mobile");
 
-        document.getElementById("containerheaders").classList.add("containerheadershidden");
+        document.getElementById("mobilearrow").classList.remove("mobile-arrow");
+        document.getElementById("mobilearrow").classList.add("mobile-arrow-mobile");
+
+        //document.getElementById("containerheaders").classList.add("containerheadershidden");
+        //document.getElementById("containerheaders").classList.remove("containerheaders");
+        //document.getElementById("containerheaders2").classList.add("containerheaders3");
+        //document.getElementById("containerheaders2").classList.remove("containerheaders2");
+        document.getElementById("containerheaders").classList.add("containerheaders3");
         document.getElementById("containerheaders").classList.remove("containerheaders");
-        document.getElementById("containerheaders2").classList.add("containerheaders3");
-        document.getElementById("containerheaders2").classList.remove("containerheaders2");
+        document.getElementById("containerheaders").style.height = "auto";
+        document.getElementById("containerheaders").style.width = "100%";
 
         document.getElementById("containheadatt").classList.remove("containerheaders");
         document.getElementById("containheadatt").classList.add("containerheaders2-mobile");
@@ -59,35 +76,108 @@ function mobileCSS() {
         document.getElementById("containheadench").classList.remove("containerheaders");
         document.getElementById("containheadench").classList.add("containerheaders2-mobile");
 
+        document.getElementById("containheadarm").classList.remove("containerheaders");
+        document.getElementById("containheadarm").classList.add("containerheaders2-mobile");
+
+        document.getElementById("containheadtrinket").classList.remove("containerheaders");
+        document.getElementById("containheadtrinket").classList.add("containerheaders2-mobile");
+
         document.getElementById("oilresultcontainer").classList.remove("oilresultcontainer");
         document.getElementById("oilresultcontainer").classList.add("oilresultcontainer-mobile");
-
-        document.getElementById("targetsub").classList.remove("targetsub");
-        document.getElementById("targetsub").classList.add("targetsub-mobile");
         
         document.getElementById("weaponstuffcontainer").classList.remove("weaponstuffcontainer");
         document.getElementById("weaponstuffcontainer").classList.add("weaponstuffcontainer-mobile");
 
-        document.getElementById("extendedstatscontainer2").classList.remove("extendedstatscontainer");
-        document.getElementById("extendedstatscontainer2").classList.add("extendedstatscontainer-mobile");
+        document.getElementById("secondpagediv").classList.remove("secondpagediv");
+        document.getElementById("secondpagediv").classList.add("secondpagediv-mobile");
+
+        document.getElementById("extendstatbox").classList.remove("extendstatbox");
+        document.getElementById("extendstatbox").classList.add("extendstatbox-mobile");
+
+        document.getElementById("yetanotherspacer").classList.remove("mobile-arrow");
+        document.getElementById("yetanotherspacer").classList.add("ext-mob");
+
+        document.getElementById("spacer1").style.display = "none";
+        document.getElementById("spacer2").style.display = "none";
+
+        document.getElementById("oilequipwrapper").style.flexWrap = "wrap";
+
+        document.getElementById("equipbox1").style.flexBasis = "45%";
+        document.getElementById("equipbox1").style.flexGrow = "1";
+        document.getElementById("equipbox1").style.marginLeft = "0";
+        document.getElementById("equipbox1").style.marginbottom = "5px";
+        document.getElementById("equipbox2").style.flexBasis = "45%";
+        document.getElementById("equipbox2").style.flexGrow = "1";
+        document.getElementById("equipbox2").style.marginbottom = "5px";
+
+        document.getElementById("weaponstuffcontainerequip").classList.remove("hide-selectors");
+        document.getElementById("weaponstuffcontainerequip").classList.add("hide-selectors-mobile");
+        document.getElementById("weaponstuffcontainerequip").classList.remove("weaponstuffcontainer");
+        document.getElementById("weaponstuffcontainerequip").classList.add("weaponstuffcontainer-mobile");
+
+        document.getElementById("bigbuttondiv2").style.display = "none";
+        document.getElementById("bigbuttondiv1").style.display = "none";
 
         document.getElementById("externalbuttondiv").classList.remove("external-button-cont");
         document.getElementById("externalbuttondiv").classList.add("external-button-cont-mobile");
 
         document.getElementById("containerweapchoose").classList.remove("containerweapchoose");
         document.getElementById("containerweapchoose").classList.add("containerweapchoose-mobile");
+        document.getElementById("containerweapchoose").style.flexBasis = "100%";
+        document.getElementById("containerweapchoose").style.fontSize = "2vw";
+
+        document.getElementById("overall-stats").style.flexBasis = "45%";
+        document.getElementById("overall-stats").style.flexGrow = "1";
+        document.getElementById("overall-stats").style.maxHeight = "9vh";
+        document.getElementById("overall-stats").style.marginLeft = "0px";
+        document.getElementById("overall-stats").style.marginBottom = "0px";
+        document.getElementById("overall-stats").style.background = "#2D424B";
+
+        document.getElementById("session-stats").style.flexBasis = "45%";
+        document.getElementById("session-stats").style.flexGrow = "1";
+        document.getElementById("session-stats").style.maxHeight = "9vh";
+        document.getElementById("session-stats").style.marginBottom = "0px";
+        document.getElementById("session-stats").style.background = "#2D424B";
+
+        document.getElementById("weapon-parts-button").style.fontSize = "4vw";
+        document.getElementById("equipment-button").style.fontSize = "4vw";
         
         document.querySelectorAll(".buttonGeneral").forEach(e => {e.classList.add("buttonGeneral-mobile")});
         document.querySelectorAll(".buttonGeneral").forEach(e => {e.classList.remove("buttonGeneral")});
+
+        document.querySelectorAll(".custom-select-top-row").forEach(e => {e.classList.add("custom-select-top-row-mobile")});
+        document.querySelectorAll(".custom-select-top-row").forEach(e => {e.classList.remove("custom-select-top-row")});
+
+        document.querySelectorAll(".card-cat-header").forEach(e => {e.classList.add("card-cat-header-mobile")});
+        document.querySelectorAll(".card-cat-header").forEach(e => {e.classList.remove("card-cat-header")});
+
+        document.querySelectorAll(".cardStatEquip").forEach(e => {e.classList.add("cardStatEquip-mobile")});
+        document.querySelectorAll(".cardStatEquip").forEach(e => {e.classList.remove("cardStatEquip")});
+
+        document.querySelectorAll(".scrollcard").forEach(e => {e.classList.add("scrollcard-mobile")});
+        document.querySelectorAll(".scrollcard").forEach(e => {e.classList.remove("scrollcard")});
+
+        document.querySelectorAll(".attachtitle").forEach(e => {e.classList.add("attachtitle-mobile")});
+        document.querySelectorAll(".attachtitle").forEach(e => {e.classList.remove("attachtitle")});
+
+        document.querySelectorAll(".build-copy-button").forEach(e => {e.classList.add("build-copy-button-mobile")});
+        document.querySelectorAll(".build-copy-button").forEach(e => {e.classList.remove("build-copy-button")});
+
+        document.querySelectorAll(".stat-header").forEach(e => {e.classList.add("stat-header-mobile")});
+        document.querySelectorAll(".stat-header").forEach(e => {e.classList.remove("stat-header")});
+
+        document.querySelectorAll(".stat-text").forEach(e => {e.classList.add("stat-text-mobile")});
+        document.querySelectorAll(".stat-text").forEach(e => {e.classList.remove("stat-text")});
 
         document.querySelectorAll(".ench-card-header").forEach(e => {e.classList.add("ench-card-header-mobile")});
         document.querySelectorAll(".ench-card-header").forEach(e => {e.classList.remove("ench-card-header")});
 
         document.querySelectorAll(".custom-select-selected").forEach(e => {e.style.height = "40px", e.style.fontSize = "2em", e.style.border = "0.1em solid black"});
         document.querySelectorAll(".custom-select").forEach(e => {e.style.height = "60px"});
-        document.querySelectorAll(".oils").forEach(e => {e.style.fontSize = "1.5em", e.style.width = "100%", e.style.flexWrap = "wrap"});
-        document.querySelectorAll("h2").forEach(e => {e.style.fontSize = "2em"});
-        document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "50px", e.style.width = "100px"});
+        document.querySelectorAll(".oils").forEach(e => {e.classList.add("oils-mobile")});
+        document.querySelectorAll(".oils").forEach(e => {e.classList.remove("oils")});
+        document.querySelectorAll("h2").forEach(e => {e.style.fontSize = "3vw"});
+        document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "50px", e.style.width = "50px"});
 
         document.querySelectorAll(".cardStat").forEach(e => {e.classList.add("cardStat-mobile")});
         document.querySelectorAll(".cardStat").forEach(e => {e.classList.remove("cardStat")});
@@ -98,12 +188,17 @@ function mobileCSS() {
         document.querySelectorAll(".build-chooser-button").forEach(e => {e.classList.add("build-chooser-button-mobile")});
         document.querySelectorAll(".build-chooser-button").forEach(e => {e.classList.remove("build-chooser-button")});
 
+        document.querySelectorAll(".selector-header").forEach(e => {e.style.marginBottom = "5px";});
+
         document.getElementById("weapsubdiv").style.height = "70px";
         document.getElementById("buttonRandomGun").style.width = "70px";
         document.getElementById("buttonResetGun").style.width = "70px";
         document.getElementById("buttonCommitGun").style.width = "70px";
 
         document.getElementById("bigboxdeals").style.height = "auto";
+
+        document.getElementById("dropdownselectordiv").classList.add("dropdownselectordiv-mobile");
+        document.getElementById("dropdownselectordiv").classList.remove("dropdownselectordiv");
 
         document.getElementById("extendstatbox").style.marginRight = "0px";
 
@@ -115,23 +210,104 @@ function mobileCSS() {
         document.getElementById("guncardgrid3").style.minHeight = "0px";
         document.getElementById("guncardgrid4").style.minHeight = "0px";
         document.getElementById("guncardgrid5").style.minHeight = "0px";
+        document.getElementById("guncardgrid6").style.minHeight = "0px";
+        document.getElementById("guncardgrid8").style.minHeight = "0px";
 
         document.getElementById("extendstatbox").style.minHeight = "0px";
         document.getElementById("extendstatbox").style.height = "auto";
         document.getElementById("extendstatbox").style.marginTop = "10px";
+        document.getElementById("extendstatbox").style.marginLeft = "10px";
+        document.getElementById("extendstatbox").style.marginRight = "10px";
 
-        document.getElementById("bigbuttondiv2").style.marginTop = "10px";
-        document.getElementById("bigbuttondiv2").style.padding = "0px";
+        document.getElementById("build-chooser-button-div").style.marginLeft = "0";
+        document.getElementById("build-chooser-button-div").style.marginTop = "15px";
 
         document.getElementById("boxglowthing").style.height = "125px";
-
-        document.body.style.margin = "5px"
 
         //document.getElementById("containerheaders2").style.display = "";
  
         document.querySelectorAll(".stuffbutton").forEach(e => {e.classList.add("stuffbutton-mobile")});
+
+        let mainbuild = document.getElementById("mainbuildcontainer");
+        let mobilebuild = document.getElementById("mobileheaderbox");
+        let tooltip = document.getElementById("containerheaders");
+        let bigbox = document.getElementById("bigboxdeals");
+        let target = document.getElementById("targetcontainer");
+        let second = document.getElementById("secondpagediv");
+        let extend = document.getElementById("extendedstatscontainer2");
+        let spacer3 = document.getElementById("spacer3");
+        let mobilearrow = document.getElementById("mobilearrow");
+
+        target.append(second, mobilearrow)
+        mainbuild.append(bigbox, target, extend);
+        mobilebuild.append(tooltip);
+
+        let buildcardrow1 = document.getElementById("buildcardrow1");
+        let buildcardrow2 = document.getElementById("buildcardrow2");
+        let buildcardrow3 = document.getElementById("buildcardrow3");
+        let buildcardrow4 = document.getElementById("buildcardrow4");
+
+        let guncardgrid1 = document.getElementById("guncardgrid1");
+        let guncardgrid2 = document.getElementById("guncardgrid2");
+        let guncardgrid3 = document.getElementById("guncardgrid3");
+        let guncardgrid4 = document.getElementById("guncardgrid4");
+        let guncardgrid5 = document.getElementById("guncardgrid5");
+        let guncardgrid6 = document.getElementById("guncardgrid6");
+        let guncardgrid8 = document.getElementById("guncardgrid8");
+
+        buildcardrow1.style.width = "100%";
+        buildcardrow2.style.width = "100%";
+        buildcardrow3.style.width = "100%";
+        buildcardrow4.style.width = "100%";
+
+        buildcardrow2.style.display = "flex";
+        buildcardrow3.style.display = "flex";
+
+        guncardgrid8.style.borderTop = "0px";
+
+        buildcardrow1.append(guncardgrid1, guncardgrid2, guncardgrid8);
+        buildcardrow2.append(guncardgrid1, guncardgrid2);
+        buildcardrow3.append(guncardgrid5, guncardgrid6);
+
+        guncardgrid1.style.width = "50%";
+        guncardgrid2.style.width = "50%";
+        guncardgrid3.style.width = "49.85%";
+        guncardgrid5.style.width = "50%";
+        guncardgrid6.style.width = "50%";
+
+        buildcardrow2.style.borderTop = "1px solid #FDB142";
+        guncardgrid2.style.borderTop = "0px";
+
+        document.getElementById("scrollinfobackground").style.display = "none"
+
+        mainbuild.addEventListener("scroll", () => {
+            if (scrollBlock === false) {
+                if (mainbuild.scrollLeft < (window.innerWidth / 2)) {
+                    document.getElementById("mobilescrollbuttonright").classList.remove("mobile-scroll-button-selected");
+                    document.getElementById("mobilescrollbuttonleft").classList.add("mobile-scroll-button-selected");
+                }
+                else if (mainbuild.scrollLeft > (window.innerWidth / 2)) {
+                    document.getElementById("mobilescrollbuttonleft").classList.remove("mobile-scroll-button-selected");
+                    document.getElementById("mobilescrollbuttonright").classList.add("mobile-scroll-button-selected");
+                }
+            }
+        });
+
+        target.addEventListener("scroll", () => {
+            if (target.scrollTop > (target.scrollTopMax * 0.9)) {
+                document.getElementById("mobilearrow").classList.remove("mobile-arrow-mobile");
+                document.getElementById("mobilearrow").classList.add("mobile-arrow");
+                return;
+            }
+            else {
+                document.getElementById("mobilearrow").classList.remove("mobile-arrow");
+                document.getElementById("mobilearrow").classList.add("mobile-arrow-mobile");
+            }
+        });
     }
 }
+
+let scrollBlock = false;
 
 // Global Variables
 
@@ -246,6 +422,27 @@ async function loadOilsScrolls() {
     return oilsScrollsData;
 }
 
+async function loadHeadArmor() {
+    const response = await fetch("./itemdata/armorHead.json");
+    armorHeadData = await response.json();
+    return armorHeadData;
+}
+async function loadChestArmor() {
+    const response = await fetch("./itemdata/armorChest.json");
+    armorChestData = await response.json();
+    return armorChestData;
+}
+async function loadFootArmor() {
+    const response = await fetch("./itemdata/armorFeet.json");
+    armorFootData = await response.json();
+    return armorFootData;
+}
+async function loadTrinkets() {
+    const response = await fetch("./itemdata/Trinkets.json");
+    trinketData = await response.json();
+    return trinketData;
+}
+
 let firstTimeSetup = true;
 
 async function dropdownBuilder() {
@@ -288,6 +485,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadFiremodes();
     await loadOils();
     await loadScrolls();
+    await loadHeadArmor();
+    await loadChestArmor();
+    await loadFootArmor();
+    await loadTrinkets();
     await rebuildRandomArrays();
     await setOilValueIndexer();
     await setOilNameIndexer();
@@ -307,6 +508,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     await setWeaponNameIndexer();
     await setScrollValueIndexer();
     await setScrollNameIndexer();
+    await setArmorHeadValueIndexer();
+    await setArmorHeadNameIndexer();
+    await setArmorChestValueIndexer();
+    await setArmorChestNameIndexer();
+    await setArmorFootValueIndexer();
+    await setArmorFootNameIndexer();
+    await setTrinketValueIndexer();
+    await setTrinketNameIndexer();
 
     await dropdownBuilder();
     dropdownReadyResolve();
@@ -328,6 +537,14 @@ function resetCoreSelections() {
     coreSelections.set("laser", {Name: "None", Value: "none"});
     coreSelections.set("firemode", {Name: "None", Value: "none"});
     coreSelections.set("chamber", {Name: "None", Value: "none"});
+    coreSelections.set("head", {Name: "None", Value: "none"});
+    coreSelections.set("chest", {Name: "None", Value: "none"});
+    coreSelections.set("lfoot", {Name: "None", Value: "none"});
+    coreSelections.set("rfoot", {Name: "None", Value: "none"});
+    coreSelections.set("trinket1", {Name: "None", Value: "none"});
+    coreSelections.set("trinket2", {Name: "None", Value: "none"});
+    coreSelections.set("trinket3", {Name: "None", Value: "none"});
+    coreSelections.set("trinket4", {Name: "None", Value: "none"});
 
     return;
 }
@@ -347,6 +564,14 @@ function resetTempSelections() {
     tempSelections.set("laser", {Name: "None", Value: "none"});
     tempSelections.set("firemode", {Name: "None", Value: "none"});
     tempSelections.set("chamber", {Name: "None", Value: "none"});
+    tempSelections.set("head", {Name: "None", Value: "none"});
+    tempSelections.set("chest", {Name: "None", Value: "none"});
+    tempSelections.set("lfoot", {Name: "None", Value: "none"});
+    tempSelections.set("rfoot", {Name: "None", Value: "none"});
+    tempSelections.set("trinket1", {Name: "None", Value: "none"});
+    tempSelections.set("trinket2", {Name: "None", Value: "none"});
+    tempSelections.set("trinket3", {Name: "None", Value: "none"});
+    tempSelections.set("trinket4", {Name: "None", Value: "none"});
 }
 
 const build1Selections = new Map();
@@ -364,6 +589,14 @@ function resetBuild1Selections() {
     build1Selections.set("laser", {Name: "None", Value: "none"});
     build1Selections.set("firemode", {Name: "None", Value: "none"});
     build1Selections.set("chamber", {Name: "None", Value: "none"});
+    build1Selections.set("head", {Name: "None", Value: "none"});
+    build1Selections.set("chest", {Name: "None", Value: "none"});
+    build1Selections.set("lfoot", {Name: "None", Value: "none"});
+    build1Selections.set("rfoot", {Name: "None", Value: "none"});
+    build1Selections.set("trinket1", {Name: "None", Value: "none"});
+    build1Selections.set("trinket2", {Name: "None", Value: "none"});
+    build1Selections.set("trinket3", {Name: "None", Value: "none"});
+    build1Selections.set("trinket4", {Name: "None", Value: "none"});
 
     return;
 }
@@ -382,6 +615,14 @@ function resetBuild2Selections() {
     build2Selections.set("laser", {Name: "None", Value: "none"});
     build2Selections.set("firemode", {Name: "None", Value: "none"});
     build2Selections.set("chamber", {Name: "None", Value: "none"});
+    build2Selections.set("head", {Name: "None", Value: "none"});
+    build2Selections.set("chest", {Name: "None", Value: "none"});
+    build2Selections.set("lfoot", {Name: "None", Value: "none"});
+    build2Selections.set("rfoot", {Name: "None", Value: "none"});
+    build2Selections.set("trinket1", {Name: "None", Value: "none"});
+    build2Selections.set("trinket2", {Name: "None", Value: "none"});
+    build2Selections.set("trinket3", {Name: "None", Value: "none"});
+    build2Selections.set("trinket4", {Name: "None", Value: "none"});
 
     return;
 }
@@ -400,6 +641,14 @@ function resetBuild3Selections() {
     build3Selections.set("laser", {Name: "None", Value: "none"});
     build3Selections.set("firemode", {Name: "None", Value: "none"});
     build3Selections.set("chamber", {Name: "None", Value: "none"});
+    build3Selections.set("head", {Name: "None", Value: "none"});
+    build3Selections.set("chest", {Name: "None", Value: "none"});
+    build3Selections.set("lfoot", {Name: "None", Value: "none"});
+    build3Selections.set("rfoot", {Name: "None", Value: "none"});
+    build3Selections.set("trinket1", {Name: "None", Value: "none"});
+    build3Selections.set("trinket2", {Name: "None", Value: "none"});
+    build3Selections.set("trinket3", {Name: "None", Value: "none"});
+    build3Selections.set("trinket4", {Name: "None", Value: "none"});
 
     return;
 }
@@ -418,6 +667,14 @@ function resetBuild4Selections() {
     build4Selections.set("laser", {Name: "None", Value: "none"});
     build4Selections.set("firemode", {Name: "None", Value: "none"});
     build4Selections.set("chamber", {Name: "None", Value: "none"});
+    build4Selections.set("head", {Name: "None", Value: "none"});
+    build4Selections.set("chest", {Name: "None", Value: "none"});
+    build4Selections.set("lfoot", {Name: "None", Value: "none"});
+    build4Selections.set("rfoot", {Name: "None", Value: "none"});
+    build4Selections.set("trinket1", {Name: "None", Value: "none"});
+    build4Selections.set("trinket2", {Name: "None", Value: "none"});
+    build4Selections.set("trinket3", {Name: "None", Value: "none"});
+    build4Selections.set("trinket4", {Name: "None", Value: "none"});
 
     return;
 }
@@ -436,6 +693,14 @@ function resetBuild5Selections() {
     build5Selections.set("laser", {Name: "None", Value: "none"});
     build5Selections.set("firemode", {Name: "None", Value: "none"});
     build5Selections.set("chamber", {Name: "None", Value: "none"});
+    build5Selections.set("head", {Name: "None", Value: "none"});
+    build5Selections.set("chest", {Name: "None", Value: "none"});
+    build5Selections.set("lfoot", {Name: "None", Value: "none"});
+    build5Selections.set("rfoot", {Name: "None", Value: "none"});
+    build5Selections.set("trinket1", {Name: "None", Value: "none"});
+    build5Selections.set("trinket2", {Name: "None", Value: "none"});
+    build5Selections.set("trinket3", {Name: "None", Value: "none"});
+    build5Selections.set("trinket4", {Name: "None", Value: "none"});
 
     return;
 }
@@ -602,8 +867,8 @@ const weaponValueIndexer = new Map();
 function setWeaponValueIndexer() {
 console.info("KBH: Setting weapon value indexer");
     weaponValueIndexer.set("none", "None");
-    weaponValueIndexer.set("random-all-weapons", "Random Weapon");
-    weaponValueIndexer.set("random-pistols", "Random Pistol");
+    weaponValueIndexer.set("static-random-all-weapons", "Random Weapon");
+    weaponValueIndexer.set("static-random-pistols", "Random Pistol");
     weaponValueIndexer.set("beck-8", "Beck 8");
     weaponValueIndexer.set("bronco-89", "Bronco 89");
     weaponValueIndexer.set("cavalier", "Cavalier");
@@ -615,12 +880,12 @@ console.info("KBH: Setting weapon value indexer");
     weaponValueIndexer.set("socom-9", "Socom 9");
     weaponValueIndexer.set("star-witness", "Star & Witness");
     weaponValueIndexer.set("unknown", "Unknown");
-    weaponValueIndexer.set("random-revolvers", "Random Revolver");
+    weaponValueIndexer.set("static-random-revolvers", "Random Revolver");
     weaponValueIndexer.set(".357-balthazar", ".357 Balthazar");
     weaponValueIndexer.set("palehorse-topclipper", "Palehorse Topclipper");
     weaponValueIndexer.set("snut-.38", "Snut .38");
     weaponValueIndexer.set("wyatt-pulsar", "Wyatt PULSAR");
-    weaponValueIndexer.set("random-shotguns", "Random Shotgun");
+    weaponValueIndexer.set("static-random-shotguns", "Random Shotgun");
     weaponValueIndexer.set("1889-mario", "1889 Mario");
     weaponValueIndexer.set("arbiter-2", "Arbiter 2");
     weaponValueIndexer.set("augusta", "Augusta");
@@ -628,7 +893,7 @@ console.info("KBH: Setting weapon value indexer");
     weaponValueIndexer.set("flock-76", "Flock 76");
     weaponValueIndexer.set("majordome", "Majordome");
     weaponValueIndexer.set("mossman", "Mossman");
-    weaponValueIndexer.set("random-smgs", "Random SMG");
+    weaponValueIndexer.set("static-random-smgs", "Random SMG");
     weaponValueIndexer.set("deathstar-pg", "Deathstar PG");
     weaponValueIndexer.set("drifter-9", "Drifter 9");
     weaponValueIndexer.set("ferryman", "Ferryman");
@@ -637,25 +902,25 @@ console.info("KBH: Setting weapon value indexer");
     weaponValueIndexer.set("songbird", "Songbird");
     weaponValueIndexer.set("valet", "Valet");
     weaponValueIndexer.set("vrede", "Vrede");
-    weaponValueIndexer.set("random-assault-rifles", "Random AR");
+    weaponValueIndexer.set("static-random-assault-rifles", "Random AR");
     weaponValueIndexer.set("catacoil-rapid-x", "Catacoil Rapid X");
     weaponValueIndexer.set("corpsemaker", "Corpsemaker");
     weaponValueIndexer.set("socom-acr", "Socom ACR");
     weaponValueIndexer.set("m11a2-fisk", "M11A2 Fisk");
     weaponValueIndexer.set("type-80-typhoon", "Type 80 Typhoon");
     weaponValueIndexer.set("wingman", "Wingman");
-    weaponValueIndexer.set("random-lmgs", "Random LMG");
+    weaponValueIndexer.set("static-random-lmgs", "Random LMG");
     weaponValueIndexer.set("chat-pardeur-98", "Chat-Pardeur 98");
     weaponValueIndexer.set("duhar", "Duhar");
     weaponValueIndexer.set("neuraxis-f22", "Neuraxis F22");
     weaponValueIndexer.set("rektor-100rd", "Rektor 100rd");
     weaponValueIndexer.set("warpig", "Warpig");
-    weaponValueIndexer.set("random-rifles", "Random Rifle");
+    weaponValueIndexer.set("static-random-rifles", "Random Rifle");
     weaponValueIndexer.set("farsight", "Farsight");
     weaponValueIndexer.set("knop-22", "Knop .22");
     weaponValueIndexer.set("m182-pierre-fusil", "M182 Pierre-Fusil");
     weaponValueIndexer.set("tailor-marksman-mkii", "Tailor Marksman MKII");
-    weaponValueIndexer.set("random-sniper-rifles", "Random Sniper");
+    weaponValueIndexer.set("static-random-sniper-rifles", "Random Sniper");
     weaponValueIndexer.set("d4rt", "D4RT");
     weaponValueIndexer.set("dolphin-99", "Dolphin 99");
     weaponValueIndexer.set("impala-gravita", "Impala Gravita");
@@ -789,6 +1054,22 @@ async function createProDropdown(select) {
     }
     if (select.classList.contains("chamber-dropdown")) {
         const data = await loadChamber();
+        state.options = normalizeOptions(data);
+    }
+    if (select.classList.contains("head-dropdown")) {
+        const data = await loadHeadArmor();
+        state.options = normalizeOptions(data);
+    }
+    if (select.classList.contains("chest-dropdown")) {
+        const data = await loadChestArmor();
+        state.options = normalizeOptions(data);
+    }
+    if (select.classList.contains("foot-dropdown")) {
+        const data = await loadFootArmor();
+        state.options = normalizeOptions(data);
+    }
+    if (select.classList.contains("trinket-dropdown")) {
+        const data = await loadTrinkets();
         state.options = normalizeOptions(data);
     }
     
@@ -941,7 +1222,7 @@ async function createProDropdown(select) {
     const buttonClose = document.createElement("button");
     if (isMobile === true) {
         buttonClose.className = "custom-select-panel-close-mobile";
-        buttonClose.innerHTML = "<span style='font-size: 50px; display: flex; margin-right: 30px;' class='fa-solid fa-xmark'></span>"
+        buttonClose.innerHTML = "<span style='font-size: 50px; display: flex;' class='fa-solid fa-xmark'></span>"
     }
     else {
         buttonClose.className = "custom-select-panel-close";
@@ -983,19 +1264,43 @@ async function createProDropdown(select) {
                 dropnamecheck = "Enchantment 5";
                 break;
             case "barrelselector":
-                dropnamecheck = "Barrel"
+                dropnamecheck = "Barrel";
                 break;
             case "opticselector":
-                dropnamecheck = "Optic"
+                dropnamecheck = "Optic";
                 break;
             case "laserselector":
-                dropnamecheck = "Laser"
+                dropnamecheck = "Laser";
                 break;
             case "firemodeselector":
-                dropnamecheck = "Firemode"
+                dropnamecheck = "Firemode";
                 break;
             case "chamberselector":
-                dropnamecheck = "Chamber"
+                dropnamecheck = "Chamber";
+                break;
+            case "headselector":
+                dropnamecheck = "Head Armor";
+                break;
+            case "chestselector":
+                dropnamecheck = "Chest Armor";
+                break;
+            case "lfootselector":
+                dropnamecheck = "Left Foot Armor";
+                break;
+            case "rfootselector":
+                dropnamecheck = "Right Foot Armor";
+                break;
+            case "trinket1selector":
+                dropnamecheck = "Trinket 1";
+                break;
+            case "trinket2selector":
+                dropnamecheck = "Trinket 2";
+                break;
+            case "trinket3selector":
+                dropnamecheck = "Trinket 3";
+                break;
+            case "trinket4selector":
+                dropnamecheck = "Trinket 4";
                 break;
             default:
         }
@@ -1005,8 +1310,13 @@ async function createProDropdown(select) {
     else {
         topRowClose.append(buttonClose);
     }
+
+    const header = document.createElement("div");
+    header.classList = "custom-select-header";
+
     topRow.append(topRowSort, topRowClose)
-    panel.append(topRow, searchContainer, list);
+    header.append(topRow, searchContainer)
+    panel.append(header, list);
     
     wrapper.append(control, panel);
 
@@ -1207,6 +1517,82 @@ async function createProDropdown(select) {
                 });
             });
         }
+        if (data.ArmorHead) {
+            const heads = data.ArmorHead;
+
+            Object.entries(heads).forEach(([key, head]) => {
+
+                if (!head.Name || ["none", "Default"].includes(head.Name)) return;
+
+                let group = head.TypePositive1 || "Other";
+
+                if (group === "None") group = "Other";
+
+                results.push({
+                    label: head.Name,
+                    value: armorHeadNameIndexer.get(head.Name),
+                    group: group,
+                    meta: head
+                });
+            });
+        }
+        if (data.ArmorChest) {
+            const chests = data.ArmorChest;
+
+            Object.entries(chests).forEach(([key, chest]) => {
+
+                if (!chest.Name || ["none", "Default"].includes(chest.Name)) return;
+
+                let group = chest.TypePositive1 || "Other";
+
+                if (group === "None") group = "Other";
+
+                results.push({
+                    label: chest.Name,
+                    value: armorChestNameIndexer.get(chest.Name),
+                    group: group,
+                    meta: chest
+                });
+            });
+        }
+        if (data.ArmorFeet) {
+            const feet = data.ArmorFeet;
+
+            Object.entries(feet).forEach(([key, foot]) => {
+
+                if (!foot.Name || ["none", "Default"].includes(foot.Name)) return;
+
+                let group = foot.TypePositive1 || "Other";
+
+                if (group === "None") group = "Other";
+
+                results.push({
+                    label: foot.Name,
+                    value: armorFootNameIndexer.get(foot.Name),
+                    group: group,
+                    meta: foot
+                });
+            });
+        }
+        if (data.Trinket) {
+            const trinks = data.Trinket;
+
+            Object.entries(trinks).forEach(([key, trink]) => {
+
+                if (!trink.Name || ["none", "Default"].includes(trink.Name)) return;
+
+                let group = trink.TypePositive1 || "Other";
+
+                if (group === "None") group = "Other";
+
+                results.push({
+                    label: trink.Name,
+                    value: trinketNameIndexer.get(trink.Name),
+                    group: group,
+                    meta: trink
+                });
+            });
+        }
     
         return results;
     }
@@ -1256,6 +1642,10 @@ async function createProDropdown(select) {
         "Random Optic",
         "Random Laser",
         "Random Chamber",
+        "Random Head Armor",
+        "Random Chest Armor",
+        "Random Foot Armor",
+        "Random Trinket",
         "None"
     ]);
 
@@ -1664,12 +2054,34 @@ function scrollExtendedStats() {
     window.scrollTo({ top: 9999999, behavior: 'smooth' });
 }
 
+function scrollMobileLeft() {
+    scrollBlock = true;
+    document.getElementById("mobilescrollbuttonright").classList.remove("mobile-scroll-button-selected");
+    document.getElementById("mobilescrollbuttonleft").classList.add("mobile-scroll-button-selected");
+    let dascroll = document.getElementById("mainbuildcontainer");
+    dascroll.addEventListener("scrollend", (event) => { 
+    scrollBlock = false;
+    });
+    dascroll.scrollTo({ left: 0, behavior: 'smooth' });
+}
+function scrollMobileRight() {
+    scrollBlock = true;
+    document.getElementById("mobilescrollbuttonleft").classList.remove("mobile-scroll-button-selected");
+    document.getElementById("mobilescrollbuttonright").classList.add("mobile-scroll-button-selected");
+    let dascroll = document.getElementById("mainbuildcontainer");
+    dascroll.addEventListener("scrollend", (event) => { 
+    scrollBlock = false;
+    });
+    dascroll.scrollTo({ left: 9999999, behavior: 'smooth' });
+}
+
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Screenshots
 async function captureElement(activated, save) {
+
     document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
     document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
     document.getElementById("oilstatcontainer3").classList.remove("spinanimation");
@@ -1701,10 +2113,37 @@ async function captureElement(activated, save) {
     document.getElementById("buttonSaveScreenshot").style.marginRight = "0px";
     document.getElementById("buttonCopyBuildLink").style.marginBottom = "0px";
 
-    document.getElementById("targetsub").style.backgroundColor = "#2D424B";
+    document.getElementById("bigboxdeals").classList.remove("bigboxdeals");
+    document.getElementById("bigboxdeals").classList.add("bigboxdeals-screen");
+
+    document.getElementById("secondpagediv").classList.remove("secondpagediv");
+    document.getElementById("secondpagediv").classList.add("secondpagediv-screen");
+
+    document.getElementById("containerglass").style.opacity = "30%";
+
+    document.getElementById("screenshotcontainer").style.backgroundColor = "#2D424B";
+
+    const node = document.getElementById("extendstatbox");
+    const clone = node.cloneNode(true);
+    const node1 = document.getElementById("targetcontainer");
+    const clone1 = node1.cloneNode(true);
+    node1.style.display = "none";
+    clone1.childNodes[7].style.maxWidth = "68vw";
+
+    document.getElementById("screenshotcontainer").style.display = "grid";
+    document.getElementById("screenshotcontainer").append(clone1, clone); 
 
     await takeScreenshot(activated, save);
 
+    clone.remove();
+    clone1.remove();
+    node1.style.display = "";
+    document.getElementById("bigboxdeals").classList.remove("bigboxdeals-screen");
+    document.getElementById("bigboxdeals").classList.add("bigboxdeals");
+    document.getElementById("secondpagediv").classList.remove("secondpagediv-screen");
+    document.getElementById("secondpagediv").classList.add("secondpagediv");
+    document.getElementById("containerglass").style.opacity = "100%";
+    document.getElementById("targetme").style.backgroundColor = "";
     document.getElementById("boxglowthing").classList.add("boxglowthing");
     document.getElementById("otherboxthing").classList.add("otherboxthing");
     document.getElementById("weaponimage").classList.add("weaponimage");
@@ -1726,11 +2165,11 @@ async function captureElement(activated, save) {
 
 function takeScreenshot(activated, save) {
         let screeny = null;
-    const target = document.getElementById('targetsub');
-    infoboxHover("screenshot");
+    const target = document.getElementById('screenshotcontainer');
+    infoboxClear();
 
     html2canvas(target, {
-        allowTaint: true,
+        scale: 1.4
         
     }).then(canvas => {
         canvas.toBlob((blob) => {
@@ -1875,8 +2314,9 @@ function decodeUriAsBuild(source, link) {
                 case undefined:
                     break;
                 default:
-                    
-
+                if (value === undefined || value === "static-no-selection" || value === "") {
+                        value = "none";
+                    }
                 if (key.startsWith("ench")) {
                     if (value.endsWith("oil") === true || value === "none") {
                         selItem = convertToUpper(value);
@@ -1934,7 +2374,7 @@ function decodeUriAsBuild(source, link) {
                     select.setValue(value);
                 }
                 if (key === "laser") {
-                    let selaser = convertToUpper(value);
+                    let selaser = laserValueIndexer.get(value);
                     selectedItem = getLaserByName(selaser);
                     addToCoreMap("laser", selectedItem, value);
                     select = document.getElementById("laserselector");
@@ -1964,6 +2404,62 @@ function decodeUriAsBuild(source, link) {
                     select = document.getElementById("firemodeselector");
                     select.setValue(value);
                     
+                }
+                if (key === "head") {
+                    let selhead = armorHeadValueIndexer.get(value);
+                    selectedItem = getHeadByName(selhead);
+                    addToCoreMap("head", selectedItem, value);
+                    select = document.getElementById("headselector");
+                    select.setValue(value);
+                }
+                if (key === "chest") {
+                    let selchest = armorChestValueIndexer.get(value);
+                    selectedItem = getChestByName(selchest);
+                    addToCoreMap("chest", selectedItem, value);
+                    select = document.getElementById("chestselector");
+                    select.setValue(value);
+                }
+                if (key === "lfoot") {
+                    let sellfoot = armorFootValueIndexer.get(value);
+                    selectedItem = getFootByName(sellfoot);
+                    addToCoreMap("lfoot", selectedItem, value);
+                    select = document.getElementById("lfootselector");
+                    select.setValue(value);
+                }
+                if (key === "rfoot") {
+                    let selrfoot = armorFootValueIndexer.get(value);
+                    selectedItem = getFootByName(selrfoot);
+                    addToCoreMap("rfoot", selectedItem, value);
+                    select = document.getElementById("rfootselector");
+                    select.setValue(value);
+                }
+                if (key === "trinket1") {
+                    let selt1 = trinketValueIndexer.get(value);
+                    selectedItem = getTrinketByName(selt1);
+                    addToCoreMap("trinket1", selectedItem, value);
+                    select = document.getElementById("trinket1selector");
+                    select.setValue(value);
+                }
+                if (key === "trinket2") {
+                    let selt2 = trinketValueIndexer.get(value);
+                    selectedItem = getTrinketByName(selt2);
+                    addToCoreMap("trinket2", selectedItem, value);
+                    select = document.getElementById("trinket2selector");
+                    select.setValue(value);
+                }
+                if (key === "trinket3") {
+                    let selt3 = trinketValueIndexer.get(value);
+                    selectedItem = getTrinketByName(selt3);
+                    addToCoreMap("trinket3", selectedItem, value);
+                    select = document.getElementById("trinket3selector");
+                    select.setValue(value);
+                }
+                if (key === "trinket4") {
+                    let selt4 = trinketValueIndexer.get(value);
+                    selectedItem = getTrinketByName(selt4);
+                    addToCoreMap("trinket4", selectedItem, value);
+                    select = document.getElementById("trinket4selector");
+                    select.setValue(value);
                 }
             }
                     
@@ -2060,11 +2556,43 @@ function pasteBuildLink() {
 
 function setAllAsRandom() {
     shallNotPass = true;
-    document.getElementById("weapons").setValue("random-all-weapons");
+    document.getElementById("weapons").setValue("static-random-all-weapons");
     shallNotPass = false;
-    rollAggregator('weapon', 'weapons', 1, "random-all-weapons", "weapon", true, "setAllAsRandom");
+    rollAggregator('weapon', 'weapons', 1, "static-random-all-weapons", "weapon", true, "setAllAsRandom");
     randomizeAllAttachments();
     randomizeAllOils();
+    randomizeAllArmor();
+    randomizeAllTrinkets();
+}
+
+function makeEquipmentMenuVisible() {
+    if (isMobile === true) {
+        document.getElementById("weapon-parts-button").classList.remove("menu-switcher-button-selected");
+        document.getElementById("equipment-button").classList.add("menu-switcher-button-selected");
+        document.getElementById("weaponstuffcontainer").classList.add("hide-selectors-mobile");
+        document.getElementById("weaponstuffcontainerequip").classList.remove("hide-selectors-mobile");
+    }
+    else {
+        document.getElementById("weapon-parts-button").classList.remove("menu-switcher-button-selected");
+        document.getElementById("equipment-button").classList.add("menu-switcher-button-selected");
+        document.getElementById("weaponstuffcontainer").classList.add("hide-selectors");
+        document.getElementById("weaponstuffcontainerequip").classList.remove("hide-selectors");
+    }
+}
+
+function makeWeaponStuffMenuVisible() {
+    if (isMobile === true) {
+        document.getElementById("equipment-button").classList.remove("menu-switcher-button-selected");
+        document.getElementById("weapon-parts-button").classList.add("menu-switcher-button-selected");
+        document.getElementById("weaponstuffcontainerequip").classList.add("hide-selectors-mobile");
+        document.getElementById("weaponstuffcontainer").classList.remove("hide-selectors-mobile");
+    }
+    else {
+        document.getElementById("equipment-button").classList.remove("menu-switcher-button-selected");
+        document.getElementById("weapon-parts-button").classList.add("menu-switcher-button-selected");
+        document.getElementById("weaponstuffcontainerequip").classList.add("hide-selectors");
+        document.getElementById("weaponstuffcontainer").classList.remove("hide-selectors");
+    }
 }
 
 function checkAnimation() {
@@ -2088,36 +2616,38 @@ async function rollFiveBuilds() {
     
     buildSwapping = true;
     setBuildAsActive(1);
-    buildSwapping = true;
+    buildSwapping = false;
     setTimeout(() => {
-        buildSwapping = true;
         setAllAsRandom();
-        buildSwapping = true;
     },500);
     setTimeout(() => {
-        setBuildAsActive(2);
         buildSwapping = true;
+        setBuildAsActive(2);
+        buildSwapping = false;
     },1500);
     setTimeout(() => {
         setAllAsRandom();
     },2000);
     setTimeout(() => {
-        setBuildAsActive(3);
         buildSwapping = true;
+        setBuildAsActive(3);
+        buildSwapping = false;
     },3000);
     setTimeout(() => {
         setAllAsRandom();
     },3500);
     setTimeout(() => {
-        setBuildAsActive(4);
         buildSwapping = true;
+        setBuildAsActive(4);
+        buildSwapping = false;
     },4500);
     setTimeout(() => {
         setAllAsRandom();
     },5000);
     setTimeout(() => {
-        setBuildAsActive(5);
         buildSwapping = true;
+        setBuildAsActive(5);
+        buildSwapping = false;
     },6000);
     setTimeout(() => {
         setAllAsRandom();
@@ -2196,6 +2726,14 @@ async function setBuildAsActive(sel, clone) {
                 document.getElementById("oils3selector").setValue(build.get("ench3").Value);
                 document.getElementById("oils4selector").setValue(build.get("ench4").Value);
                 document.getElementById("oils5selector").setValue(build.get("ench5").Value);
+                document.getElementById("headselector").setValue(build.get("head").Value);
+                document.getElementById("chestselector").setValue(build.get("chest").Value);
+                document.getElementById("lfootselector").setValue(build.get("lfoot").Value);
+                document.getElementById("rfootselector").setValue(build.get("rfoot").Value);
+                document.getElementById("trinket1selector").setValue(build.get("trinket1").Value);
+                document.getElementById("trinket2selector").setValue(build.get("trinket2").Value);
+                document.getElementById("trinket3selector").setValue(build.get("trinket3").Value);
+                document.getElementById("trinket4selector").setValue(build.get("trinket4").Value);
                 rollAggregator('weapon', 'weapons', 1, build.get("weapon").Value, "weapon", false, "setBuildAsActive");
                 rollAggregator('barrel', 'barrelselector', 1, build.get("barrel").Value, "attachment", false, "setBuildAsActive");
                 rollAggregator('optic', 'opticselector', 2, build.get("optic").Value, "attachment", false, "setBuildAsActive");
@@ -2205,7 +2743,15 @@ async function setBuildAsActive(sel, clone) {
                 rollAggregator('ench2', 'oils2selector', 2, build.get("ench2").Value, "ench", false, "setBuildAsActive");
                 rollAggregator('ench3', 'oils3selector', 3, build.get("ench3").Value, "ench", false, "setBuildAsActive");
                 rollAggregator('ench4', 'oils4selector', 4, build.get("ench4").Value, "ench", false, "setBuildAsActive");
-                rollAggregator('ench5', 'oils5selector', 5, build.get("ench5").Value, "ench", true, "setBuildAsActive");
+                rollAggregator('ench5', 'oils5selector', 5, build.get("ench5").Value, "ench", false, "setBuildAsActive");
+                rollAggregator('head', 'headselector', 1, build.get("head").Value, "armor", false, "setBuildAsActive");
+                rollAggregator('chest', 'chestselector', 2, build.get("chest").Value, "armor", false, "setBuildAsActive");
+                rollAggregator('lfoot', 'lfootselector', 3, build.get("lfoot").Value, "armor", false, "setBuildAsActive");
+                rollAggregator('rfoot', 'rfootselector', 4, build.get("rfoot").Value, "armor", false, "setBuildAsActive");
+                rollAggregator('trinket1', 'trinket1selector', 1, build.get("trinket1").Value, "trinket", false, "setBuildAsActive");
+                rollAggregator('trinket2', 'trinket2selector', 2, build.get("trinket2").Value, "trinket", false, "setBuildAsActive");
+                rollAggregator('trinket3', 'trinket3selector', 3, build.get("trinket3").Value, "trinket", false, "setBuildAsActive");
+                rollAggregator('trinket4', 'trinket4selector', 4, build.get("trinket4").Value, "trinket", true, "setBuildAsActive");
                 buildSwapping = false;
             }
 
@@ -2246,6 +2792,14 @@ async function setBuildAsActive(sel, clone) {
                 document.getElementById("oils3selector").setValue(build.get("ench3").Value);
                 document.getElementById("oils4selector").setValue(build.get("ench4").Value);
                 document.getElementById("oils5selector").setValue(build.get("ench5").Value);
+                document.getElementById("headselector").setValue(build.get("head").Value);
+                document.getElementById("chestselector").setValue(build.get("chest").Value);
+                document.getElementById("lfootselector").setValue(build.get("lfoot").Value);
+                document.getElementById("rfootselector").setValue(build.get("rfoot").Value);
+                document.getElementById("trinket1selector").setValue(build.get("trinket1").Value);
+                document.getElementById("trinket2selector").setValue(build.get("trinket2").Value);
+                document.getElementById("trinket3selector").setValue(build.get("trinket3").Value);
+                document.getElementById("trinket4selector").setValue(build.get("trinket4").Value);
                 rollSelections('weapon', 'weapons', 1, build.get("weapon").Value, "weapon", false, "setBuildAsActive");
                 rollSelections('barrel', 'barrelselector', 1, build.get("barrel").Value, "attachment", false, "setBuildAsActive");
                 rollSelections('optic', 'opticselector', 2, build.get("optic").Value, "attachment", false, "setBuildAsActive");
@@ -2255,8 +2809,15 @@ async function setBuildAsActive(sel, clone) {
                 rollSelections('ench2', 'oils2selector', 2, build.get("ench2").Value, "ench", false, "setBuildAsActive");
                 rollSelections('ench3', 'oils3selector', 3, build.get("ench3").Value, "ench", false, "setBuildAsActive");
                 rollSelections('ench4', 'oils4selector', 4, build.get("ench4").Value, "ench", false, "setBuildAsActive");
-                rollAggregator('ench5', 'oils5selector', 5, build.get("ench5").Value, "ench", true, "setBuildAsActive");
-                
+                rollAggregator('ench5', 'oils5selector', 5, build.get("ench5").Value, "ench", false, "setBuildAsActive");
+                rollAggregator('head', 'headselector', 1, build.get("head").Value, "armor", false, "setBuildAsActive");
+                rollAggregator('chest', 'chestselector', 2, build.get("chest").Value, "armor", false, "setBuildAsActive");
+                rollAggregator('lfoot', 'lfootselector', 3, build.get("lfoot").Value, "armor", false, "setBuildAsActive");
+                rollAggregator('rfoot', 'rfootselector', 4, build.get("rfoot").Value, "armor", false, "setBuildAsActive");
+                rollAggregator('trinket1', 'trinket1selector', 1, build.get("trinket1").Value, "trinket", false, "setBuildAsActive");
+                rollAggregator('trinket2', 'trinket2selector', 2, build.get("trinket2").Value, "trinket", false, "setBuildAsActive");
+                rollAggregator('trinket3', 'trinket3selector', 3, build.get("trinket3").Value, "trinket", false, "setBuildAsActive");
+                rollAggregator('trinket4', 'trinket4selector', 4, build.get("trinket4").Value, "trinket", true, "setBuildAsActive");
                 
                 buildSwapping = false;
             }
@@ -2274,6 +2835,8 @@ function commitAll() {
     commitSelection('weapon', 'weapons', 'weapon');
     commitAllEnch();
     commitAllAtt();
+    commitAllArmor();
+    commitAllTrink();
 }
 
 function resetAll() {
@@ -2306,6 +2869,26 @@ function resetAll() {
         rollAggregator('laser', 'laserselector', 3, "none", "attachment", true, "resetAll");
         rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment", true, "resetAll");
         rollAggregator('chamber', 'chamberselector', 5, "none", "attachment", true, "resetAll");
+
+        document.getElementById("headselector").setValue("none");
+        document.getElementById("chestselector").setValue("none");
+        document.getElementById("lfootselector").setValue("none");
+        document.getElementById("rfootselector").setValue("none");
+        
+        rollAggregator('head', 'headselector', 1, "none", "armor", true, "resetAll");
+        rollAggregator('chest', 'chestselector', 2, "none", "armor", true, "resetAll");
+        rollAggregator('lfoot', 'lfootselector', 3, "none", "armor", true, "resetAll");
+        rollAggregator('rfoot', 'rfootselector', 4, "none", "armor", true, "resetAll");
+
+        document.getElementById("trinket1selector").setValue("none");
+        document.getElementById("trinket2selector").setValue("none");
+        document.getElementById("trinket3selector").setValue("none");
+        document.getElementById("trinket4selector").setValue("none");
+        
+        rollAggregator('trinket1', 'trinket1selector', 1, "none", "trinket", true, "resetAll");
+        rollAggregator('trinket2', 'trinket2selector', 2, "none", "trinket", true, "resetAll");
+        rollAggregator('trinket3', 'trinket3selector', 3, "none", "trinket", true, "resetAll");
+        rollAggregator('trinket4', 'trinket4selector', 4, "none", "trinket", true, "resetAll");
         shallNotPass = false;
     }
 }
@@ -2330,8 +2913,8 @@ function resetGun() {
 function randomizeGun() {
     if (shallNotPass === false) {
         shallNotPass = true;
-        document.getElementById("weapons").setValue("random-all-weapons");
-        rollAggregator('weapon', 'weapons', 1, "random-all-weapons", "weapon", true, "randomizeGun");
+        document.getElementById("weapons").setValue("static-random-all-weapons");
+        rollAggregator('weapon', 'weapons', 1, "static-random-all-weapons", "weapon", true, "randomizeGun");
         shallNotPass = false;
     }
 }
@@ -2360,77 +2943,39 @@ function infoboxHover(elementType, value, name, data) {
     
     if (infoboxBlock === false) {
         infoboxBlock = true;
-        if (isMobile === false) {
-            document.getElementById("mainHeader").innerHTML = "";
-            switch (elementType) {
-                case "button":
-                    document.getElementById("infoboxText").innerHTML = data;
-                    infoboxBlock = false;
-                    break;
-                case "option":
-                    break;
-                case "stat":
-                    document.getElementById("infoboxText").innerHTML = data;
-                    infoboxBlock = false;
-                    break;
-                case "dropdown":
-                    break;
-                case "loadsucceed":
-                    document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: yellow; text-shadow: 0px 0px 5px white'>Build loading...</span>";
-                    setTimeout(() => {
-                        document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: lightgreen; animation: goodlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px green'>Build loaded</span>";
-                        setTimeout(() => {
-                            infoboxClear();
-                            infoboxBlock = false;
-                        },2000);
-                    },500);
-                    break;
-                case "loadfail":
-                    document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: red; animation: invalidlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px red'>Invalid link</span>";
+        document.getElementById("mainHeader").innerHTML = "";
+        switch (elementType) {
+            case "button":
+                document.getElementById("infoboxText").innerHTML = data;
+                infoboxBlock = false;
+                break;
+            case "option":
+                break;
+            case "stat":
+                document.getElementById("infoboxText").innerHTML = data;
+                infoboxBlock = false;
+                break;
+            case "dropdown":
+                break;
+            case "loadsucceed":
+                document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: yellow; text-shadow: 0px 0px 5px white'>Build loading...</span>";
+                setTimeout(() => {
+                    document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: lightgreen; animation: goodlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px green'>Build loaded</span>";
                     setTimeout(() => {
                         infoboxClear();
                         infoboxBlock = false;
                     },2000);
-                    break;
-                default:
+                },500);
+                break;
+            case "loadfail":
+                document.getElementById("infoboxText").innerHTML = "<span style='font-size: 20px; color: red; animation: invalidlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px red'>Invalid link</span>";
+                setTimeout(() => {
+                    infoboxClear();
                     infoboxBlock = false;
-            }
-        }
-        else if (isMobile === true) {
-            document.getElementById("mainHeader2").innerHTML = "";
-            switch (elementType) {
-                case "button":
-                    document.getElementById("infoboxText2").innerHTML = data;
-                    infoboxBlock = false;
-                    break;
-                case "option":
-                    break;
-                case "stat":
-                    document.getElementById("infoboxText2").innerHTML = data;
-                    infoboxBlock = false;
-                    break;
-                case "dropdown":
-                    break;
-                case "loadsucceed":
-                    document.getElementById("infoboxText2").innerHTML = "<span style='font-size: 20px; color: yellow; text-shadow: 0px 0px 5px white'>Build loading...</span>";
-                    setTimeout(() => {
-                        document.getElementById("infoboxText2").innerHTML = "<span style='font-size: 20px; color: lightgreen; animation: goodlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px green'>Build loaded</span>";
-                        setTimeout(() => {
-                            infoboxClear();
-                            infoboxBlock = false;
-                        },2000);
-                    },500);
-                    break;
-                case "loadfail":
-                    document.getElementById("infoboxText2").innerHTML = "<span style='font-size: 20px; color: red; animation: invalidlink 1s steps(4, end) 2; text-shadow: 0px 0px 5px red'>Invalid link</span>";
-                    setTimeout(() => {
-                        infoboxClear();
-                        infoboxBlock = false;
-                    },2000);
-                    break;
-                default:
-                    infoboxBlock = false;
-            }
+                },2000);
+                break;
+            default:
+                infoboxBlock = false;
         }
     }
     else {}
@@ -2438,14 +2983,8 @@ function infoboxHover(elementType, value, name, data) {
 
 function infoboxClear() {
     if (infoboxBlock === false) {
-        if (isMobile === false) {
-            document.getElementById("infoboxText").innerHTML = "";
-            document.getElementById("mainHeader").innerHTML = "Kevin's Build Helper";
-        }
-        else if (isMobile === true) {
-            document.getElementById("infoboxText2").innerHTML = "";
-            document.getElementById("mainHeader2").innerHTML = "Kevin's Build Helper";
-        }
+        document.getElementById("infoboxText").innerHTML = "";
+        document.getElementById("mainHeader").innerHTML = "Kevin's Build Helper";
     }
 }
 
@@ -2473,6 +3012,38 @@ function randomizeAllOils() {
             rollSelections('ench3', 'oils3selector', 3, "static-random-all-oils", "ench", false, "randomizeAllOils");
             rollSelections('ench4', 'oils4selector', 4, "static-random-all-oils", "ench", false, "randomizeAllOils");
             rollAggregator('ench5', 'oils5selector', 5, "static-random-all-oils", "ench", true, "randomizeAllOils");
+        shallNotPass = false;
+    }
+}
+
+function randomizeAllArmor() {
+    console.info("KBH: Randomizing all armor slots");
+    if (shallNotPass === false) {
+        shallNotPass = true;
+            document.getElementById("headselector").setValue("static-random-all-head-armor");
+            document.getElementById("chestselector").setValue("static-random-all-chest-armor");
+            document.getElementById("lfootselector").setValue("static-random-all-foot-armor");
+            document.getElementById("rfootselector").setValue("static-random-all-foot-armor");
+            rollSelections('head', 'headselector', 1, "static-random-all-head-armor", "armor", false, "randomizeAllArmor");
+            rollSelections('chest', 'chestselector', 2, "static-random-all-chest-armor", "armor", false, "randomizeAllArmor");
+            rollSelections('lfoot', 'lfootselector', 3, "static-random-all-foot-armor", "armor", false, "randomizeAllArmor");
+            rollAggregator('rfoot', 'rfootselector', 4, "static-random-all-foot-armor", "armor", true, "randomizeAllArmor");
+        shallNotPass = false;
+    }
+}
+
+function randomizeAllTrinkets() {
+    console.info("KBH: Randomizing all trinket slots");
+    if (shallNotPass === false) {
+        shallNotPass = true;
+            document.getElementById("trinket1selector").setValue("static-random-all-trinkets");
+            document.getElementById("trinket2selector").setValue("static-random-all-trinkets");
+            document.getElementById("trinket3selector").setValue("static-random-all-trinkets");
+            document.getElementById("trinket4selector").setValue("static-random-all-trinkets");
+            rollSelections('trinket1', 'trinket1selector', 1, "static-random-all-trinkets", "trinket", false, "randomizeAllTrinkets");
+            rollSelections('trinket2', 'trinket2selector', 2, "static-random-all-trinkets", "trinket", false, "randomizeAllTrinkets");
+            rollSelections('trinket3', 'trinket3selector', 3, "static-random-all-trinkets", "trinket", false, "randomizeAllTrinkets");
+            rollAggregator('trinket4', 'trinket4selector', 4, "static-random-all-trinkets", "trinket", true, "randomizeAllTrinkets");
         shallNotPass = false;
     }
 }
@@ -2524,9 +3095,42 @@ console.info("KBH: Resetting all attachment slots");
         
         rollAggregator('barrel', 'barrelselector', 1, "none", "attachment", false, "resetAllAttachments");
         rollAggregator('optic', 'opticselector', 2, "none", "attachment", false, "resetAllAttachments");
-        rollAggregator('laser', 'laserselector', 3, "none", "attachment", false);
+        rollAggregator('laser', 'laserselector', 3, "none", "attachment", false, "resetAllAttachments");
         rollAggregator('firemode', 'firemodeselector', 4, "none", "attachment", false, "resetAllAttachments");
         rollAggregator('chamber', 'chamberselector', 5, "none", "attachment", true, "resetAllAttachments");
+        shallNotPass = false;
+    }   
+}
+
+function resetAllArmor() {
+console.info("KBH: Resetting all armor slots");
+    if (shallNotPass === false) {
+        shallNotPass = true;
+        document.getElementById("headselector").setValue("none");
+        document.getElementById("chestselector").setValue("none");
+        document.getElementById("lfootselector").setValue("none");
+        document.getElementById("rfootselector").setValue("none");
+        
+        rollAggregator('head', 'headselector', 1, "none", "armor", false, "resetAllArmor");
+        rollAggregator('chest', 'chestselector', 2, "none", "armor", false, "resetAllArmor");
+        rollAggregator('lfoot', 'lfootselector', 3, "none", "armor", false, "resetAllArmor");
+        rollAggregator('rfoot', 'rfootselector', 4, "none", "armor", true, "resetAllArmor");
+        shallNotPass = false;
+    }   
+}
+function resetAllTrinkets() {
+console.info("KBH: Resetting all trinket slots");
+    if (shallNotPass === false) {
+        shallNotPass = true;
+        document.getElementById("trinket1selector").setValue("none");
+        document.getElementById("trinket2selector").setValue("none");
+        document.getElementById("trinket3selector").setValue("none");
+        document.getElementById("trinket4selector").setValue("none");
+        
+        rollAggregator('trinket1', 'trinket1selector', 1, "none", "trinket", false, "resetAllTrinkets");
+        rollAggregator('trinket2', 'trinket2selector', 2, "none", "trinket", false, "resetAllTrinkets");
+        rollAggregator('trinket3', 'trinket3selector', 3, "none", "trinket", false, "resetAllTrinkets");
+        rollAggregator('trinket4', 'trinket4selector', 4, "none", "trinket", true, "resetAllTrinkets");
         shallNotPass = false;
     }   
 }
@@ -2551,6 +3155,14 @@ function commitAllEnch() {
     commitSelection('buttonCommitOil5', 'oils5selector', 'ench5');
 }
 
+function commitAllArmor() {
+    console.info("KBH: Committing all armor pieces to their respective slots");
+    commitSelection('buttonCommitHead', 'headselector', 'head');
+    commitSelection('buttonCommitChest', 'chestselector', 'chest');
+    commitSelection('buttonCommitLFoot', 'lfootselector', 'lfoot');
+    commitSelection('buttonCommitRFoot', 'rfootselector', 'rfoot');
+}
+
 function commitAllAtt() {
     console.info("KBH: Committing all attachments to their respective slots");
     commitSelection('buttonCommitBarrel', 'barrelselector', 'barrel');
@@ -2560,16 +3172,24 @@ function commitAllAtt() {
     commitSelection('buttonCommitChamber', 'chamberselector', 'chamber');
 }
 
-// Used to remove and replace oils to prevent dupes - this should ALWAYS run before attachmentFilter
+function commitAllTrink() {
+    console.info("KBH: Committing all attachments to their respective slots");
+    commitSelection('buttonCommitTrinket1', 'trinket1selector', 'trinket1');
+    commitSelection('buttonCommitTrinket2', 'trinket2selector', 'trinket2');
+    commitSelection('buttonCommitTrinket3', 'trinket3selector', 'trinket3');
+    commitSelection('buttonCommitTrinket4', 'trinket4selector', 'trinket4');
+}
+
+// Used to remove and replace oils to prevent dupes - this should ALWAYS run before attachmentFilter ---- unless I've removed it entirely from the chain LOL
 function oilRemover(build) {
 console.info("KBH: Beginning oil filtering process");
 
-    let altSelector1Options = document.getElementById("oils1selector-custom").childNodes[1].childNodes[2].childNodes;
-    let altSelector2Options = document.getElementById("oils2selector-custom").childNodes[1].childNodes[2].childNodes;
-    let altSelector3Options = document.getElementById("oils3selector-custom").childNodes[1].childNodes[2].childNodes;
-    let altSelector4Options = document.getElementById("oils4selector-custom").childNodes[1].childNodes[2].childNodes;
-    let altSelector5Options = document.getElementById("oils5selector-custom").childNodes[1].childNodes[2].childNodes;
-    let fireModeOptions = document.getElementById("firemodeselector-custom").childNodes[1].childNodes[2].childNodes;
+    let altSelector1Options = document.getElementById("oils1selector-custom").childNodes[1].childNodes[1].childNodes;
+    let altSelector2Options = document.getElementById("oils2selector-custom").childNodes[1].childNodes[1].childNodes;
+    let altSelector3Options = document.getElementById("oils3selector-custom").childNodes[1].childNodes[1].childNodes;
+    let altSelector4Options = document.getElementById("oils4selector-custom").childNodes[1].childNodes[1].childNodes;
+    let altSelector5Options = document.getElementById("oils5selector-custom").childNodes[1].childNodes[1].childNodes;
+    let fireModeOptions = document.getElementById("firemodeselector-custom").childNodes[1].childNodes[1].childNodes;
 
     let filteredOptions = document.querySelectorAll(".filtered-option");
 
@@ -2655,7 +3275,7 @@ function attachmentFilter(evt) {
     let selectorChamber = document.getElementById("chamberselector");
     let selectorBarrel = document.getElementById("barrelselector");
     let selectorFiremode = document.getElementById("firemodeselector");
-    let selectorFiremodePro = document.getElementById("firemodeselector-custom").childNodes[1].childNodes[2].childNodes;
+    let selectorFiremodePro = document.getElementById("firemodeselector-custom").childNodes[1].childNodes[1].childNodes;
 
     let dropdownWeapon = ((coreSelections.get("weapon")).Name);
 
@@ -2802,7 +3422,15 @@ function onGenerate() {
     rollAggregator("optic", "opticselector", 2, document.getElementById("opticselector").getValue(), "attachment", false, "onGenerate");
     rollAggregator("laser", "laserselector", 3, document.getElementById("laserselector").getValue(), "attachment", false, "onGenerate");
     rollAggregator("firemode", "firemodeselector", 4, document.getElementById("firemodeselector").getValue(), "attachment", false, "onGenerate");
-    rollAggregator("chamber", "chamberselector", 5, document.getElementById("chamberselector").getValue(), "attachment", true, "onGenerate");
+    rollAggregator("chamber", "chamberselector", 5, document.getElementById("chamberselector").getValue(), "attachment", false, "onGenerate");
+    rollAggregator("head", "headselector", 1, document.getElementById("headselector").getValue(), "armor", false, "onGenerate");
+    rollAggregator("chest", "chestselector", 2, document.getElementById("chestselector").getValue(), "armor", false, "onGenerate");
+    rollAggregator("lfoot", "lfootselector", 3, document.getElementById("lfootselector").getValue(), "armor", false, "onGenerate");
+    rollAggregator("rfoot", "rfootselector", 4, document.getElementById("rfootselector").getValue(), "armor", false, "onGenerate");
+    rollAggregator("trinket1", "trinket1selector", 1, document.getElementById("trinket1selector").getValue(), "trinket", false, "onGenerate");
+    rollAggregator("trinket2", "trinket2selector", 2, document.getElementById("trinket2selector").getValue(), "trinket", false, "onGenerate");
+    rollAggregator("trinket3", "trinket3selector", 3, document.getElementById("trinket3selector").getValue(), "trinket", false, "onGenerate");
+    rollAggregator("trinket4", "trinket4selector", 4, document.getElementById("trinket4selector").getValue(), "trinket", true, "onGenerate");
 }
 
 function rerollRandomEnch(opt) {
@@ -2834,24 +3462,36 @@ function rerollRandomEnch(opt) {
         case "chamber":
             rollAggregator("chamber", "chamberselector", 5, document.getElementById("chamberselector").getValue(), "attachment", true, "rerollRandomEnch");
             break;
+        case "head":
+            rollAggregator("head", "headselector", 5, document.getElementById("headselector").getValue(), "armor", true, "rerollRandomEnch");
+            break;
+        case "chest":
+            rollAggregator("chest", "chestselector", 5, document.getElementById("chestselector").getValue(), "armor", true, "rerollRandomEnch");
+            break;
+        case "lfoot":
+            rollAggregator("lfoot", "lfootselector", 5, document.getElementById("lfootselector").getValue(), "armor", true, "rerollRandomEnch");
+            break;
+        case "rfoot":
+            rollAggregator("rfoot", "rfootselector", 5, document.getElementById("rfootselector").getValue(), "armor", true, "rerollRandomEnch");
+            break;
+        case "trinket1":
+            rollAggregator("trinket1", "trinket1selector", 5, document.getElementById("trinket1selector").getValue(), "trinket", true, "rerollRandomEnch");
+            break;
+        case "trinket2":
+            rollAggregator("trinket2", "trinket2selector", 5, document.getElementById("trinket2selector").getValue(), "trinket", true, "rerollRandomEnch");
+            break;
+        case "trinket3":
+            rollAggregator("trinket3", "trinket3selector", 5, document.getElementById("trinket3selector").getValue(), "trinket", true, "rerollRandomEnch");
+            break;
+        case "trinket4":
+            rollAggregator("trinket4", "trinket4selector", 5, document.getElementById("trinket4selector").getValue(), "trinket", true, "rerollRandomEnch");
+            break;
         default:
     }
 }
 
 function rollFromBuild() {
         document.getElementById("weapons").setValue(coreSelections.get("weapon").Value);
-        /*commitSelection('', 'weapons', 'weapon');
-        commitSelection('buttonCommitOil1', 'oils1selector', 'ench1', false);
-        commitSelection('buttonCommitOil2', 'oils2selector', 'ench2', false);
-        commitSelection('buttonCommitOil3', 'oils3selector', 'ench3', false);
-        commitSelection('buttonCommitOil4', 'oils4selector', 'ench4', false);
-        commitSelection('buttonCommitOil5', 'oils5selector', 'ench5', false);
-        commitSelection('buttonCommitBarrel', 'barrelselector', 'barrel', false);
-        commitSelection('buttonCommitOptic', 'opticselector', 'optic', false);
-        commitSelection('buttonCommitLaser', 'laserselector', 'laser', false);
-        commitSelection('buttonCommitFiremode', 'firemodeselector', 'firemode', false);
-        commitSelection('buttonCommitChamber', 'chamberselector', 'chamber', false);*/
-        //rollAggregator("weapon", "weapons", 1, coreSelections.get("weapon").Value, "weapon", true);
         onGenerate();
         shallNotPass = false;
 }
@@ -2944,6 +3584,62 @@ function addAllEventListeners() {
     chamberSelectHandler.selID = 5;
     chamberSelectHandler.selType = "attachment";
 
+    armorHeadSelectHandler = document.getElementById('headselector');
+    armorHeadSelectHandler.addEventListener('change', rollOnSelect);
+    armorHeadSelectHandler.flag = "head"
+    armorHeadSelectHandler.selector = "headselector";
+    armorHeadSelectHandler.selID = 1;
+    armorHeadSelectHandler.selType = "armor";
+
+    armorChestSelectHandler = document.getElementById('chestselector');
+    armorChestSelectHandler.addEventListener('change', rollOnSelect);
+    armorChestSelectHandler.flag = "chest"
+    armorChestSelectHandler.selector = "chestselector";
+    armorChestSelectHandler.selID = 2;
+    armorChestSelectHandler.selType = "armor";
+
+    armorLFootSelectHandler = document.getElementById('lfootselector');
+    armorLFootSelectHandler.addEventListener('change', rollOnSelect);
+    armorLFootSelectHandler.flag = "lfoot"
+    armorLFootSelectHandler.selector = "lfootselector";
+    armorLFootSelectHandler.selID = 3;
+    armorLFootSelectHandler.selType = "armor";
+
+    armorRFootSelectHandler = document.getElementById('rfootselector');
+    armorRFootSelectHandler.addEventListener('change', rollOnSelect);
+    armorRFootSelectHandler.flag = "rfoot"
+    armorRFootSelectHandler.selector = "rfootselector";
+    armorRFootSelectHandler.selID = 4;
+    armorRFootSelectHandler.selType = "armor";
+
+    trinket1SelectHandler = document.getElementById('trinket1selector');
+    trinket1SelectHandler.addEventListener('change', rollOnSelect);
+    trinket1SelectHandler.flag = "trinket1"
+    trinket1SelectHandler.selector = "trinket1selector";
+    trinket1SelectHandler.selID = 1;
+    trinket1SelectHandler.selType = "trinket";
+
+    trinket2SelectHandler = document.getElementById('trinket2selector');
+    trinket2SelectHandler.addEventListener('change', rollOnSelect);
+    trinket2SelectHandler.flag = "trinket2"
+    trinket2SelectHandler.selector = "trinket2selector";
+    trinket2SelectHandler.selID = 1;
+    trinket2SelectHandler.selType = "trinket";
+
+    trinket3SelectHandler = document.getElementById('trinket3selector');
+    trinket3SelectHandler.addEventListener('change', rollOnSelect);
+    trinket3SelectHandler.flag = "trinket3"
+    trinket3SelectHandler.selector = "trinket3selector";
+    trinket3SelectHandler.selID = 1;
+    trinket3SelectHandler.selType = "trinket";
+
+    trinket4SelectHandler = document.getElementById('trinket4selector');
+    trinket4SelectHandler.addEventListener('change', rollOnSelect);
+    trinket4SelectHandler.flag = "trinket4"
+    trinket4SelectHandler.selector = "trinket4selector";
+    trinket4SelectHandler.selID = 1;
+    trinket4SelectHandler.selType = "trinket";
+
     // Buttons and fields
 
     
@@ -3010,6 +3706,15 @@ let opticSelectHandler = document.getElementById('opticselector');
 let laserSelectHandler = document.getElementById('laserselector');
 let firemodeSelectHandler = document.getElementById('firemodeselector');
 let chamberSelectHandler = document.getElementById('chamberselector');
+let armorHeadSelectHandler = document.getElementById('headselector');
+let armorChestSelectHandler = document.getElementById('chestselector');
+let armorLFootSelectHandler = document.getElementById('lfootselector');
+let armorRFootSelectHandler = document.getElementById('rfootselector');
+let trinket1SelectHandler = document.getElementById('trinket1selector');
+let trinket2SelectHandler = document.getElementById('trinket2selector');
+let trinket3SelectHandler = document.getElementById('trinket3selector');
+let trinket4SelectHandler = document.getElementById('trinket4selector');
+
 let cardAnimationHandler = document.getElementById('cardOil5Img');
 
 let flag = null;
@@ -3020,9 +3725,11 @@ let selType = null;
 
 let shallNotPass = true;
 
+let skipRollCounting = false;
 
 async function rollOnPageLoad(flag, selector, selID, value, type) {
     console.info("KBH: Beginning initial load");
+    skipRollCounting = true;
     await dropdownsReady;
     await addAllEventListeners();
 
@@ -3051,23 +3758,45 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
         let selPageLoad = document.getElementById("weapons");
         selPageLoad.setValue(value); 
         rollAggregator(flag, selector, selID, value, type, false, "rollOnPageLoad");
-        rollAggregator('ench1', 'oils1selector', 1, 'static-choose', 'ench', false, "rollOnPageLoad");
-        rollAggregator('ench2', 'oils2selector', 2, 'static-choose', 'ench', false, "rollOnPageLoad");
-        rollAggregator('ench3', 'oils3selector', 3, 'static-choose', 'ench', false, "rollOnPageLoad");
-        rollAggregator('ench4', 'oils4selector', 4, 'static-choose', 'ench', false, "rollOnPageLoad");
-        rollAggregator('ench5', 'oils5selector', 5, 'static-choose', 'ench', false, "rollOnPageLoad");
-        rollAggregator('barrel', 'barrel', 1, 'static-choose', 'attachment', false, "rollOnPageLoad");
-        rollAggregator('optic', 'optic', 2, 'static-choose', 'attachment', false, "rollOnPageLoad");
-        rollAggregator('laser', 'laser', 3, 'static-choose', 'attachment', false, "rollOnPageLoad");
-        rollAggregator('firemode', 'firemode', 4, 'static-choose', 'attachment', false, "rollOnPageLoad");
-        rollAggregator('chamber', 'chamber', 5, 'static-choose', 'attachment', true, "rollOnPageLoad");
+        rollAggregator('ench1', 'oils1selector', 1, 'none', 'ench', false, "rollOnPageLoad");
+        rollAggregator('ench2', 'oils2selector', 2, 'none', 'ench', false, "rollOnPageLoad");
+        rollAggregator('ench3', 'oils3selector', 3, 'none', 'ench', false, "rollOnPageLoad");
+        rollAggregator('ench4', 'oils4selector', 4, 'none', 'ench', false, "rollOnPageLoad");
+        rollAggregator('ench5', 'oils5selector', 5, 'none', 'ench', false, "rollOnPageLoad");
+        rollAggregator('barrel', 'barrel', 1, 'none', 'attachment', false, "rollOnPageLoad");
+        rollAggregator('optic', 'optic', 2, 'none', 'attachment', false, "rollOnPageLoad");
+        rollAggregator('laser', 'laser', 3, 'none', 'attachment', false, "rollOnPageLoad");
+        rollAggregator('firemode', 'firemode', 4, 'none', 'attachment', false, "rollOnPageLoad");
+        rollAggregator('chamber', 'chamber', 5, 'none', 'attachment', false, "rollOnPageLoad");
+        rollAggregator('head', 'headselector', 1, "none", "armor", false, "rollOnPageLoad");
+        rollAggregator('chest', 'chestselector', 2, "none", "armor", false, "rollOnPageLoad");
+        rollAggregator('lfoot', 'lfootselector', 3, "none", "armor", false, "rollOnPageLoad");
+        rollAggregator('rfoot', 'rfootselector', 4, "none", "armor", false, "rollOnPageLoad");
+        rollAggregator('trinket1', 'trinket1selector', 1, "none", "trinket", false, "rollOnPageLoad");
+        rollAggregator('trinket2', 'trinket2selector', 2, "none", "trinket", false, "rollOnPageLoad");
+        rollAggregator('trinket3', 'trinket3selector', 3, "none", "trinket", false, "rollOnPageLoad");
+        rollAggregator('trinket4', 'trinket4selector', 4, "none", "trinket", true, "rollOnPageLoad");
     }
     mobileCSS();
+    skipRollCounting = false;
     shallNotPass = false;
 }
 
 let poolRebuildReady = true;
 
+// Initialize weapon name arrays
+
+let gunsAll = [];
+let gunsPistols = [];
+let gunsRevolvers = [];
+let gunsShotguns = [];
+let gunsSMGs = [];
+let gunsARs = [];
+let gunsLMGs = [];
+let gunsRifles = [];
+let gunsSnipers = [];
+
+// Initialize enchantment name arrays
 let enchAll = [];
 let scrollsAll = [];
 let scrollsT1 = [];
@@ -3087,10 +3816,74 @@ let oilsReload = [];
 let oilsRPM = [];
 let oilsSpread = [];
 let oilsSize = [];
+
+// Initalize attachment name arrays
 let attachmentsLasers = [];
+let attachmentsBarrels = [];
+let attachmentsOptics = [];
+let attachmentsFiremodes = [];
+let attachmentsRechambers = [];
+
+// Initialize equipment name arrays
+let armorHeadAll = [];
+let armorChestAll = [];
+let armorFeetAll = [];
+let trinketsAll = [];
+
+// Initalize counters
+let weaponCount = 0;
+let weaponARCount = 0;
+let weaponLMGCount = 0;
+let weaponPistolCount = 0;
+let weaponRevolverCount = 0;
+let weaponRifleCount = 0;
+let weaponShotgunCount = 0;
+let weaponSMGCount = 0;
+let weaponSniperCount = 0;
+let scrollCount = 0;
+let scrollT1Count = 0;
+let scrollT2Count = 0;
+let oilCount = 0;
+let oilACCCount = 0;
+let oilBCCCount = 0;
+let oilBounceCount = 0;
+let oilBSpeedCount = 0;
+let oilDamFlatCount = 0;
+let oilDamMultCount = 0;
+let oilMaxDurCount = 0;
+let oilPenCount = 0;
+let oilProjCount = 0;
+let oilRecCount = 0;
+let oilRelCount = 0;
+let oilRPMCount = 0;
+let oilSpreadCount = 0;
+let oilBSizeCount = 0;
+let barrelCount = 0;
+let opticCount = 0;
+let laserCount = 0;
+let firemodeCount = 0;
+let chamberCount = 0;
+let attachmentCount = 0;
+let armorCount = 0;
+let armorHeadCount = 0;
+let armorChestCount = 0;
+let armorFootCount = 0;
+let trinketCount = 0;
+
+let initialCount = true;
 
 function rebuildRandomArrays() {
 
+    // Clear arrays
+    gunsAll = [];
+    gunsPistols = [];
+    gunsRevolvers = [];
+    gunsShotguns = [];
+    gunsSMGs = [];
+    gunsARs = [];
+    gunsLMGs = [];
+    gunsRifles = [];
+    gunsSnipers = [];
     enchAll = [];
     scrollsAll = [];
     scrollsT1 = [];
@@ -3111,7 +3904,47 @@ function rebuildRandomArrays() {
     oilsRPM = [];
     oilsSpread = [];
     attachmentsLasers = [];
+    attachmentsBarrels = [];
+    attachmentsOptics = [];
+    attachmentsFiremodes = [];
+    attachmentsRechambers = [];
+    armorHeadAll = [];
+    armorChestAll = [];
+    armorFeetAll = [];
+    trinketsAll = [];
 
+    // Weapon arrays
+    Object.values(weaponsData.Weapon).forEach(weap => {
+        if (weap.Name !== "none" && weap.Name !== "None" && weap.Name !== "Default" && weap.Name !== undefined && weap.Name !== null && !(weap.Name.startsWith("Random"))) {
+            gunsAll.push(weap.Name);
+            if (weap.TypePositive1 === "AR") {
+                gunsARs.push(weap.Name);
+            }
+            if (weap.TypePositive1 === "LMG") {
+                gunsLMGs.push(weap.Name);
+            }
+            if (weap.TypePositive1 === "Pistol") {
+                gunsPistols.push(weap.Name);
+            }
+            if (weap.TypePositive1 === "Revolver") {
+                gunsRevolvers.push(weap.Name);
+            }
+            if (weap.TypePositive1 === "Rifle") {
+                gunsRifles.push(weap.Name);
+            }
+            if (weap.TypePositive1 === "Shotgun") {
+                gunsShotguns.push(weap.Name);
+            }
+            if (weap.TypePositive1 === "SMG") {
+                gunsSMGs.push(weap.Name);
+            }
+            if (weap.TypePositive1 === "Sniper") {
+                gunsSnipers.push(weap.Name);
+            }
+        }
+    });
+
+    // Scroll and oil arrays
     Object.values(oilsScrollsData.OilScroll).forEach(oil => {
         if (oil.Name !== "none" && oil.Name !== "None" && oil.Name !== "Default" && oil.Name !== undefined && oil.Name !== null && !(oil.Name.startsWith("Random"))) {
             enchAll.push(oil.Name);
@@ -3171,13 +4004,82 @@ function rebuildRandomArrays() {
             }
         }
     });
+
+    // Attachment arrays
+    Object.values(barrelsData.Barrel).forEach(barrel => {
+            if (barrel.Name !== "none" && barrel.Name !== "None" && barrel.Name !== "Default" && barrel.Name !== undefined && barrel.Name !== null && !(barrel.Name.startsWith("Random"))) {
+                attachmentsBarrels.push(barrel.Name);
+            }
+
+    });
+    Object.values(opticsData.Optic).forEach(optic => {
+            if (optic.Name !== "none" && optic.Name !== "None" && optic.Name !== "Default" && optic.Name !== undefined && optic.Name !== null && !(optic.Name.startsWith("Random"))) {
+                attachmentsOptics.push(optic.Name);
+            }
+
+    });
     Object.values(lasersData.Laser).forEach(laser => {
             if (laser.Name !== "none" && laser.Name !== "None" && laser.Name !== "Default" && laser.Name !== undefined && laser.Name !== null && !(laser.Name.startsWith("Random"))) {
                 attachmentsLasers.push(laser.Name);
             }
 
     });
+    Object.values(firemodesData.Firemode).forEach(fire => {
+            if (fire.Name !== "none" && fire.Name !== "None" && fire.Name !== "Default" && fire.Name !== undefined && fire.Name !== null && !(fire.Name.startsWith("Random"))) {
+                attachmentsFiremodes.push(fire.Name);
+            }
+
+    });
+    Object.values(chamberData2.Chamber).forEach(chamber => {
+            if (chamber.Name !== "none" && chamber.Name !== "None" && chamber.Name !== "Default" && chamber.Name !== undefined && chamber.Name !== null && !(chamber.Name.startsWith("Random"))) {
+                attachmentsRechambers.push(chamber.Name);
+            }
+
+    });
+    // Equipment arrays
+    Object.values(armorHeadData.ArmorHead).forEach(head => {
+            if (head.Name !== "none" && head.Name !== "None" && head.Name !== "Default" && head.Name !== undefined && head.Name !== null && !(head.Name.startsWith("Random"))) {
+                armorHeadAll.push(head.Name);
+            }
+
+    });
+    Object.values(armorChestData.ArmorChest).forEach(chest => {
+            if (chest.Name !== "none" && chest.Name !== "None" && chest.Name !== "Default" && chest.Name !== undefined && chest.Name !== null && !(chest.Name.startsWith("Random"))) {
+                armorChestAll.push(chest.Name);
+            }
+
+    });
+    Object.values(armorFootData.ArmorFeet).forEach(foot => {
+            if (foot.Name !== "none" && foot.Name !== "None" && foot.Name !== "Default" && foot.Name !== undefined && foot.Name !== null && !(foot.Name.startsWith("Random"))) {
+                armorFeetAll.push(foot.Name);
+            }
+
+    });
+    Object.values(trinketData.Trinket).forEach(trink => {
+            if (trink.Name !== "none" && trink.Name !== "None" && trink.Name !== "Default" && trink.Name !== undefined && trink.Name !== null && !(trink.Name.startsWith("Random"))) {
+                trinketsAll.push(trink.Name);
+            }
+
+    });
+
+    if (initialCount === true) {
+        initialCount = false;
+        addCountToDisplay();
+    }
     return true;
+}
+
+function addCountToDisplay() {
+
+    let combination = gunsAll.length * enchAll.length * (oilsAll.length - 1) * (oilsAll.length - 2) * (oilsAll.length - 3) * (oilsAll.length - 4) * attachmentsBarrels.length * attachmentsLasers.length * attachmentsOptics.length * attachmentsRechambers.length * armorChestAll.length * armorHeadAll.length * armorFeetAll.length * armorFeetAll.length * trinketsAll.length;
+
+    document.getElementById("totScrollSpan").textContent = scrollsAll.length;
+    document.getElementById("totOilSpan").textContent = oilsAll.length;
+    document.getElementById("totWeapSpan").textContent = gunsAll.length;
+    document.getElementById("totAttSpan").textContent = attachmentsBarrels.length + attachmentsLasers.length + attachmentsOptics.length + attachmentsRechambers.length + attachmentsFiremodes.length;
+    document.getElementById("totArmSpan").textContent = armorChestAll.length + armorHeadAll.length + armorFeetAll.length;
+    document.getElementById("totTrinkSpan").textContent = trinketsAll.length;
+    document.getElementById("totComboSpan").textContent = combination.toLocaleString('en-US');
 }
 
 async function rollAggregator(flag, selector, selID, selValue, selType, last, source) {
@@ -3195,7 +4097,7 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
         document.getElementById("cardOil4Img").classList.remove("otherspinanimation");
         document.getElementById("cardOil5Img").classList.remove("otherspinanimation");
     }
-
+    shallNotPass = true;
     let select = null;
     if (flag.startsWith("ench")) {
         switch (flag) {
@@ -3246,7 +4148,23 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
         select = document.getElementById("firemodeselector");
         select.setValue(selValue);
     }
-            
+    if (flag === "head") {
+        select = document.getElementById("headselector");
+        select.setValue(selValue);
+    }
+    if (flag === "chest") {
+        select = document.getElementById("chestselector");
+        select.setValue(selValue);
+    }
+    if (flag === "lfoot") {
+        select = document.getElementById("lfootselector");
+        select.setValue(selValue);
+    }
+    if (flag === "rfoot") {
+        select = document.getElementById("rfootselector");
+        select.setValue(selValue);
+    }
+    shallNotPass = false;    
 
     selectedWeapon = null;
     modifiedWeapon = null;
@@ -3310,6 +4228,15 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
     
     if (shallNotPass = false) {
         poolRebuildReady = true;
+        gunsAll = [];
+        gunsPistols = [];
+        gunsRevolvers = [];
+        gunsShotguns = [];
+        gunsSMGs = [];
+        gunsARs = [];
+        gunsLMGs = [];
+        gunsRifles = [];
+        gunsSnipers = [];
         enchAll = [];
         scrollsAll = [];
         scrollsT1 = [];
@@ -3317,8 +4244,8 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
         oilsAll = [];
         oilsAmmo = [];
         oilsCrit = [];
-        oilsBounce = [];
         oilsSize = [];
+        oilsBounce = [];
         oilsSpeed = [];
         oilsAddDam = [];
         oilsMultDam = [];
@@ -3329,6 +4256,15 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
         oilsReload = [];
         oilsRPM = [];
         oilsSpread = [];
+        attachmentsLasers = [];
+        attachmentsBarrels = [];
+        attachmentsOptics = [];
+        attachmentsFiremodes = [];
+        attachmentsRechambers = [];
+        armorHeadAll = [];
+        armorChestAll = [];
+        armorFeetAll = [];
+        trinketsAll = [];
     }
     
 }
@@ -3382,13 +4318,13 @@ function addName() {
             case "ench1":
                 let oil1 = null;
                 if (coreName.endsWith("Oil") === true) {
-                    oil1 =  getOilByName(coreName);
+                    oil1 = getOilByName(coreName);
                 }
                 else if (coreName.startsWith("Scroll") === true) {
-                    oil1 =  getScrollByName(coreName);
+                    oil1 = getScrollByName(coreName);
                 }
                 else {
-                    oil1 =  getOilByName(coreName);
+                    oil1 = getOilByName(coreName);
                 }
                 document.getElementById("cardOilDesc1").innerHTML = oil1.StatDescription;
                 document.getElementById("cardOilName1").textContent = coreName;
@@ -3448,6 +4384,111 @@ function addName() {
                         shallNotPass = false;
                     }
                 }
+                break;
+            case "head":
+                let headImgName = "armorHeadSlot";
+                if (value.Value === "none") {
+                    headImgName = "armorHeadSlot";
+                }
+                else {
+                    let headReplace1 = coreName.replaceAll(" ", "_");
+                    headImgName = headReplace1.replaceAll("'", "");
+                }
+                document.getElementById("armorHeaderHead").textContent = coreName;
+                document.getElementById("armorDescHead").innerHTML = value.Name.StatDescription;
+                document.getElementById("headArmorImg").src = `.\\Images\\Armor\\${headImgName}.png`;
+                break;
+            case "chest":
+                let chestImgName = "armorChestSlot";
+                if (value.Value === "none") {
+                    chestImgName = "armorChestSlot";
+                }
+                else {
+                    let chestReplace1 = coreName.replaceAll(" ", "_");
+                    chestImgName = chestReplace1.replaceAll("'", "");
+                }
+                document.getElementById("armorHeaderChest").textContent = coreName;
+                document.getElementById("armorDescChest").innerHTML = value.Name.StatDescription;
+                document.getElementById("chestArmorImg").src = `.\\Images\\Armor\\${chestImgName}.png`;
+                break;
+            case "lfoot":
+                let lfootImgName = "armorLFootSlot";
+                if (value.Value === "none") {
+                    lfootImgName = "armorLFootSlot";
+                }
+                else {
+                    let lfootReplace1 = coreName.replaceAll(" ", "_");
+                    lfootImgName = lfootReplace1.replaceAll("'", "");
+                }
+                document.getElementById("armorHeaderLFoot").textContent = coreName;
+                document.getElementById("armorDescLFoot").innerHTML = value.Name.StatDescription;
+                document.getElementById("lfootArmorImg").src = `.\\Images\\Armor\\${lfootImgName}.png`;
+                break;
+            case "rfoot":
+                let rfootImgName = "armorRFootSlot";
+                if (value.Value === "none") {
+                    rfootImgName = "armorRFootSlot";
+                }
+                else {
+                    let rfootReplace1 = coreName.replaceAll(" ", "_");
+                    rfootImgName = rfootReplace1.replaceAll("'", "");
+                }
+                document.getElementById("armorHeaderRFoot").textContent = coreName;
+                document.getElementById("armorDescRFoot").innerHTML = value.Name.StatDescription;
+                document.getElementById("rfootArmorImg").src = `.\\Images\\Armor\\${rfootImgName}.png`;
+                break;
+            case "trinket1":
+                let trinket1ImgName = "None";
+                if (value.Value === "none") {
+                    trinket1ImgName = "None";
+                }
+                else {
+                    let trinket1Replace1 = coreName.replaceAll(" ", "_");
+                    trinket1ImgName = trinket1Replace1.replaceAll("'", "");
+                }
+                document.getElementById("trinket1header").textContent = coreName;
+                document.getElementById("trinket1desc").innerHTML = value.Name.StatDescription;
+                document.getElementById("trinket1Img").src = `.\\Images\\Armor\\${trinket1ImgName}.png`;
+                break;
+            case "trinket2":
+                let trinket2ImgName = "None";
+                if (value.Value === "none") {
+                    trinket2ImgName = "None";
+                }
+                else {
+                    let trinket2Replace1 = coreName.replaceAll(" ", "_");
+                    trinket2ImgName = trinket2Replace1.replaceAll("'", "");
+                }
+                document.getElementById("trinket2header").textContent = coreName;
+                document.getElementById("trinket2desc").innerHTML = value.Name.StatDescription;
+                document.getElementById("trinket2Img").src = `.\\Images\\Armor\\${trinket2ImgName}.png`;
+                break;
+            case "trinket3":
+                let trinket3ImgName = "None";
+                if (value.Value === "none") {
+                    trinket3ImgName = "None";
+                }
+                else {
+                    let trinket3Replace1 = coreName.replaceAll(" ", "_");
+                    trinket3ImgName = trinket3Replace1.replaceAll("'", "");
+                }
+                document.getElementById("trinket3header").textContent = coreName;
+                document.getElementById("trinket3desc").innerHTML = value.Name.StatDescription;
+                document.getElementById("trinket3Img").src = `.\\Images\\Armor\\${trinket3ImgName}.png`;
+                break;
+            case "trinket4":
+                let trinket4ImgName = "None";
+                if (value.Value === "none") {
+                    trinket4ImgName = "None";
+                }
+                else {
+                    let trinket4Replace1 = coreName.replaceAll(" ", "_");
+                    trinket4ImgName = trinket4Replace1.replaceAll("'", "");
+                }
+                document.getElementById("trinket4header").textContent = coreName;
+                document.getElementById("trinket4desc").innerHTML = value.Name.StatDescription;
+                document.getElementById("trinket4Img").src = `.\\Images\\Armor\\${trinket4ImgName}.png`;
+                break;
             case "all":
                 break;
             default:
@@ -3544,9 +4585,6 @@ function oilStats() {
         if (selectedOil.SpreadMult != 0 && selectedOil.SpreadMult !== undefined) {
             oilStatModifiers.SpreadMult += selectedOil.SpreadMult;
         }
-        if (selectedOil.BulletSize != 0 && selectedOil.BulletSize !== undefined) {
-            oilStatModifiers.BulletSize += selectedOil.BulletSize;
-        }
         if (selectedOil.Drag != 0 && selectedOil.Drag !== undefined) {
             oilStatModifiers.Drag += selectedOil.Drag;
         }
@@ -3568,8 +4606,11 @@ function oilStats() {
         if (selectedOil.Firemode !== 'None' && selectedOil.Firemode !== undefined) {
             oilStatModifiers.Firemode = selectedOil.Firemode;
         }
-        if (selectedOil.BulletSize !== 0 && selectedOil.Firemode !== undefined) {
-            oilStatModifiers.Firemode = selectedOil.Firemode;
+        if (selectedOil.BulletSize < 0 && selectedOil.BulletSize !== undefined) {
+            oilStatModifiers.BulletSizeNegative *= (1 + selectedOil.BulletSize);
+        }
+        if (selectedOil.BulletSize > 0 && selectedOil.BulletSize !== undefined) {
+            oilStatModifiers.BulletSizePositive += selectedOil.BulletSize;
         }
         if (selectedOil.RPMBaseShift !== 0 && selectedOil.RPMBaseShift !== undefined) {
             oilStatModifiers.RPMBaseShift = selectedOil.RPMBaseShift;
@@ -3585,6 +4626,90 @@ function oilStats() {
         }
         if (selectedOil.DamageMultInd !== "None" && selectedOil.DamageMultInd !== 0) {
             oilStatModifiers.DamageMultInd = selectedOil.DamageMultInd;
+        }
+        if (selectedOil.DamageMultWearableAR !== 0 && selectedOil.DamageMultWearableAR !== undefined) {
+            oilStatModifiers.DamageMultWearableAR += selectedOil.DamageMultWearableAR;
+        }
+        if (selectedOil.DamageMultWearableAutomatic !== 0 && selectedOil.DamageMultWearableAutomatic !== undefined) {
+            oilStatModifiers.DamageMultWearableAutomatic += selectedOil.DamageMultWearableAutomatic;
+        }
+        if (selectedOil.DamageMultWearableLMG !== 0 && selectedOil.DamageMultWearableLMG !== undefined) {
+            oilStatModifiers.DamageMultWearableLMG += selectedOil.DamageMultWearableLMG;
+        }
+        if (selectedOil.DamageMultWearablePistol !== 0 && selectedOil.DamageMultWearablePistol !== undefined) {
+            oilStatModifiers.DamageMultWearablePistol += selectedOil.DamageMultWearablePistol;
+        }
+        if (selectedOil.DamageMultWearableRevolver !== 0 && selectedOil.DamageMultWearableRevolver !== undefined) {
+            oilStatModifiers.DamageMultWearableRevolver += selectedOil.DamageMultWearableRevolver;
+        }
+        if (selectedOil.DamageMultWearableRifle !== 0 && selectedOil.DamageMultWearableRifle !== undefined) {
+            oilStatModifiers.DamageMultWearableRifle += selectedOil.DamageMultWearableRifle;
+        }
+        if (selectedOil.DamageMultWearableShotgun !== 0 && selectedOil.DamageMultWearableShotgun !== undefined) {
+            oilStatModifiers.DamageMultWearableShotgun += selectedOil.DamageMultWearableShotgun;
+        }
+        if (selectedOil.DamageMultWearableSniper !== 0 && selectedOil.DamageMultWearableSniper !== undefined) {
+            oilStatModifiers.DamageMultWearableSniper += selectedOil.DamageMultWearableSniper;
+        }
+        if (selectedOil.MovementSpeedEquipment !== 0 && selectedOil.MovementSpeedEquipment !== undefined) {
+            oilStatModifiers.MovementSpeedEquipment += selectedOil.MovementSpeedEquipment;
+        }
+        if (selectedOil.SprintSpeedEquipment !== 0 && selectedOil.SprintSpeedEquipment !== undefined) {
+            oilStatModifiers.SprintSpeedEquipment += selectedOil.SprintSpeedEquipment;
+        }
+        if (selectedOil.SwimSpeedEquipment !== 0 && selectedOil.SwimSpeedEquipment !== undefined) {
+            oilStatModifiers.SwimSpeedEquipment += selectedOil.SwimSpeedEquipment;
+        }
+        if (selectedOil.JumpPowerEquipment !== 0 && selectedOil.JumpPowerEquipment !== undefined) {
+            oilStatModifiers.JumpPowerEquipment += selectedOil.JumpPowerEquipment;
+        }
+        if (selectedOil.MeleeDamageMultEquip !== 0 && selectedOil.MeleeDamageMultEquip !== undefined) {
+            oilStatModifiers.MeleeDamageMultEquip += selectedOil.MeleeDamageMultEquip;
+        }
+        if (selectedOil.WeaponWeightModifier !== 0 && selectedOil.WeaponWeightModifier !== undefined) {
+            oilStatModifiers.WeaponWeightModifier += selectedOil.WeaponWeightModifier;
+        }
+        if (selectedOil.MoveAccuracyEquipment !== 0 && selectedOil.MoveAccuracyEquipment !== undefined) {
+            oilStatModifiers.MoveAccuracyEquipment += selectedOil.MoveAccuracyEquipment;
+        }
+        if (selectedOil.MeleeDamageMultEquip !== 0 && selectedOil.MeleeDamageMultEquip !== undefined) {
+            oilStatModifiers.ExtraJumpsMult += selectedOil.ExtraJumpsMult;
+        }
+        if (selectedOil.Charisma !== 0 && selectedOil.Charisma !== undefined) {
+            oilStatModifiers.Charisma += selectedOil.Charisma;
+        }
+        if (selectedOil.Armor !== 0 && selectedOil.Armor !== undefined) {
+            oilStatModifiers.Armor += selectedOil.Armor;
+        }
+        if (selectedOil.CharmResistance !== 0 && selectedOil.CharmResistance !== undefined) {
+            oilStatModifiers.CharmResistance += selectedOil.CharmResistance;
+        }
+        if (selectedOil.CoyoteTime !== 0 && selectedOil.CoyoteTime !== undefined) {
+            oilStatModifiers.CoyoteTime += selectedOil.CoyoteTime;
+        }
+        if (selectedOil.DamageResistElectric !== 0 && selectedOil.DamageResistElectric !== undefined) {
+            oilStatModifiers.DamageResistElectric += selectedOil.DamageResistElectric;
+        }
+        if (selectedOil.DamageResistExplosive !== 0 && selectedOil.DamageResistExplosive !== undefined) {
+            oilStatModifiers.DamageResistExplosive += selectedOil.DamageResistExplosive;
+        }
+        if (selectedOil.DamageResistFire !== 0 && selectedOil.DamageResistFire !== undefined) {
+            oilStatModifiers.DamageResistFire += selectedOil.DamageResistFire;
+        }
+        if (selectedOil.DamageResistFrost !== 0 && selectedOil.DamageResistFrost !== undefined) {
+            oilStatModifiers.DamageResistFrost += selectedOil.DamageResistFrost;
+        }
+        if (selectedOil.DamageResistLight !== 0 && selectedOil.DamageResistLight !== undefined) {
+            oilStatModifiers.DamageResistLight += selectedOil.DamageResistLight;
+        }
+        if (selectedOil.DamageResistPoison !== 0 && selectedOil.DamageResistPoison !== undefined) {
+            oilStatModifiers.DamageResistPoison += selectedOil.DamageResistPoison;
+        }
+        if (selectedOil.ExtraJumps !== 0 && selectedOil.ExtraJumps !== undefined) {
+            oilStatModifiers.ExtraJumps += selectedOil.ExtraJumps;
+        }
+        if (selectedOil.Luck !== 0 && selectedOil.Luck !== undefined) {
+            oilStatModifiers.Luck += selectedOil.Luck;
         }
     }
 
@@ -3624,7 +4749,7 @@ function oilCalcs(calcOil) {
     weapon.AmmoType = chamber.AmmoType;
     weapon.Projectiles = chamber.Projectiles;
    
-    weaponOriginal.Damage = weapon.DamageMultiplier * chamber.Damage;
+    weaponOriginal.Damage = Math.round(((weapon.DamageMultiplier * chamber.Damage) + Number.EPSILON)* 100) / 100;
     weaponOriginal.AmmoType = chamber.AmmoType;
     weaponOriginal.Projectiles = chamber.Projectiles;
 
@@ -3658,6 +4783,7 @@ function oilCalcs(calcOil) {
     //////////////////////
     //// Scroll Cards ////
     //////////////////////
+    //#region
 
     let scrollDefaultCard = document.getElementById("scrollinfodefault");
 
@@ -3719,11 +4845,12 @@ function oilCalcs(calcOil) {
                 document.getElementById(id).classList.add("scrollcardanimate");
             }, 50);
             scrollDefaultCard.style.display = "none";
-            document.getElementById(id).style.display = "flex";
+            document.getElementById(id).style.display = "";
         }
     }
     
     animateScrollCard(calcOil.ScrollField);
+    //#endregion
 
     /////////////
     //// RPM ////
@@ -3874,6 +5001,7 @@ function oilCalcs(calcOil) {
     //////////////////
     //// Mag Size ////
     //////////////////
+    //#region
 
     document.getElementById("cardMagSize").textContent = weapon.MagSize;
 
@@ -3907,6 +5035,7 @@ function oilCalcs(calcOil) {
     let effRound = Math.round((effMagSize + Number.EPSILON)* 100) / 100;
 
     document.getElementById("cardEffMagSize").textContent = effRound;
+    //#endregion
 
     /////////////////
     //// Bounces ////
@@ -4043,10 +5172,11 @@ function oilCalcs(calcOil) {
     document.getElementById("cardSizeComp").textContent = "";
     document.getElementById("cardSizeRBrac").textContent = "";
 
-    let sizeCalc = weapon.BulletSize + calcOil.BulletSize;
-    let sizeConv = percentConv(sizeCalc);
+    let bSizeSpdCalc = (calcOil.BulletSizePositive) * calcOil.BulletSizeNegative;
 
-    let sizeRound = Math.round((sizeConv + Number.EPSILON)* 100) / 100;
+    let bSizeSpdConv = percentConv(bSizeSpdCalc);
+
+    let sizeRound = Math.round((bSizeSpdConv + Number.EPSILON)* 100) / 100;
 
     if (sizeRound < 0) {
         sizeRound = 0;
@@ -4168,6 +5298,35 @@ function oilCalcs(calcOil) {
     }*/
     //#endregion
 
+    //////////////////
+    //// Firemode ////
+    //////////////////
+    //#region
+
+    document.getElementById("cardFiremode").textContent = "";
+    document.getElementById("cardFiremode").style.color = "";
+    document.getElementById("cardFiremodeLBrac").textContent = "";
+    document.getElementById("cardFiremodeComp").textContent = "";
+    document.getElementById("cardFiremodeRBrac").textContent = "";
+
+    if (calcOil.Firemode !== 'None') {
+        weapon.Firemode = calcOil.Firemode;
+    }
+
+    if (weapon.Firemode === weaponOriginal.Firemode) {
+        document.getElementById("cardFiremode").textContent = weapon.Firemode;
+    }
+    else {
+        document.getElementById("cardFiremode").textContent = weapon.Firemode;
+        document.getElementById("cardFiremode").style.color = "Goldenrod";
+        document.getElementById("cardFiremodeLBrac").textContent = "(";
+        document.getElementById("cardFiremodeComp").textContent = weaponOriginal.Firemode;
+        document.getElementById("cardFiremodeRBrac").textContent = ")";
+    }
+
+    //#endregion
+
+
     //////////////////////////////
     //// Damage & Projectiles ////
     //////////////////////////////
@@ -4205,6 +5364,9 @@ function oilCalcs(calcOil) {
 
     //// Projectiles
     let weapProj = weapon.Projectiles * (1 + calcOil.ProjectileMult);
+    if (weapProj > (weapon.Projectiles * 10)) {
+        weapProj = weapon.Projectiles * 10;
+    }
 
     //// Damage Add
     let damAdd = weapon.Damage + calcOil.DamageAdd;
@@ -4213,10 +5375,44 @@ function oilCalcs(calcOil) {
     //// Damage Multiplier
     let damCalc = damAdd * (1 + calcOil.DamageMult);
     let damSub = damCalc * (1 + calcOil.DamageMultInd);
-    let damRound = Math.round((damSub + Number.EPSILON)* 100) / 100;
-    if (zeroDamage > 0 && damRound <= 0) {
-        damRound = zeroDamage * 0.01;
+    let damSubRound = Math.round((damSub + Number.EPSILON)* 100) / 100;
+    if (zeroDamage > 0 && damSubRound <= 0) {
+        damSubRound = zeroDamage * 0.01;
     }
+
+    let eqpDmgMod = 1;
+
+    switch (weapon.Type) {
+        case "AR":
+            eqpDmgMod += calcOil.DamageMultWearableAR;
+            break;
+        case "Rifle":
+            eqpDmgMod += calcOil.DamageMultWearableRifle;
+            break;
+        case "LMG":
+            eqpDmgMod += calcOil.DamageMultWearableLMG;
+            break;
+        case "Pistol":
+            eqpDmgMod += calcOil.DamageMultWearablePistol;
+            break;
+        case "Revolver":
+            eqpDmgMod += calcOil.DamageMultWearableRevolver;
+            break;
+        case "Shotgun":
+            eqpDmgMod += calcOil.DamageMultWearableShotgun;
+            break;
+        case "Sniper":
+            eqpDmgMod += calcOil.DamageMultWearableSniper;
+            break;
+    }
+
+    if (weapon.Firemode === "Auto") {
+        eqpDmgMod += calcOil.DamageMultWearableAutomatic;
+    }
+    
+    let eqpModifiedDmg = damSubRound * eqpDmgMod;
+
+    let damRound = Math.round((eqpModifiedDmg + Number.EPSILON)* 100) / 100;
 
     //// Total Damage Calc
     let totalCalc = damRound * weapProj * weapon.MultiShot;
@@ -4240,7 +5436,7 @@ function oilCalcs(calcOil) {
             scrollDam = 25;
             break;
         case "scrollinforocket":
-            scrollDam = 50;
+            scrollDam = 80;
             break;
         case "scrollinfochaos":
             scrollDam = 125 / weapProj;
@@ -4274,9 +5470,9 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4296,9 +5492,9 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4315,9 +5511,9 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4339,9 +5535,9 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4361,9 +5557,9 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4380,9 +5576,9 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4401,9 +5597,9 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4417,12 +5613,12 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
             document.getElementById("cardDamageProjArrow").style.color = "Lime";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+            document.getElementById("cardDamageXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4431,7 +5627,7 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
             }
         }
@@ -4488,7 +5684,9 @@ function oilCalcs(calcOil) {
     document.getElementById("cardHeadDamageMultiComp").textContent = "";
     document.getElementById("cardHeadDamageXComp").innerHTML = "";
 
-    let headshotDamage = damRound * (1 + calcOil.HeadshotDamage);
+    let headshotPreRound = damRound * (1 + calcOil.HeadshotDamage);
+
+    let headshotDamage = Math.round((headshotPreRound + Number.EPSILON)* 100) / 100;
 
     //// Total Damage Calc
     let totalHead = headshotDamage * weapProj * weapon.MultiShot;
@@ -4516,9 +5714,9 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4539,9 +5737,9 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4559,9 +5757,9 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4650,9 +5848,9 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4670,9 +5868,9 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
             document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -4780,7 +5978,10 @@ function oilCalcs(calcOil) {
     let jumpConv = percentConv(jumpCalc);
     let jumpConvOrig = percentConv(weaponOriginal.JumpPower);
 
-    let jumpRound = Math.round((jumpConv + Number.EPSILON)* 100) / 100;
+    let jumpSub = jumpConv * (1 + calcOil.JumpPowerEquipment);
+
+    let jumpRound = Math.round((jumpSub + Number.EPSILON)* 100) / 100;
+
     let jumpRoundOrig = Math.round((jumpConvOrig + Number.EPSILON)* 100) / 100;
 
     if (jumpRound < 1) {
@@ -4916,15 +6117,43 @@ function oilCalcs(calcOil) {
     document.getElementById("cardMoveRBrac").textContent = "";
 
     document.getElementById("cardWeight").textContent = "";
+    document.getElementById("cardWeight").style.color = "";
+    document.getElementById("cardWeightArrow").innerHTML = "";
+    document.getElementById("cardWeightArrow").style.color = "";
+    document.getElementById("cardWeightLBrac").textContent = "";
+    document.getElementById("cardWeightComp").textContent = "";
+    document.getElementById("cardWeightRBrac").textContent = "";
 
-    document.getElementById("cardWeight").textContent = weapon.WeaponWeight;
+    let weaponWeightFinal = Math.round(((weapon.WeaponWeight * (1 + calcOil.WeaponWeightModifier)) + Number.EPSILON)* 100) / 100;
 
-    let weaponWeightAdjustment = 0;
-    let s = weapon.MovementSpeedModifier;
+    if (weaponWeightFinal < weapon.WeaponWeight) {
+        document.getElementById("cardWeight").textContent = weaponWeightFinal;
+        document.getElementById("cardWeight").style.color = "Lime";
+        document.getElementById("cardWeightArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardWeightArrow").style.color = "Lime";
+        document.getElementById("cardWeightLBrac").textContent = "(";
+        document.getElementById("cardWeightComp").textContent = weapon.WeaponWeight;
+        document.getElementById("cardWeightRBrac").textContent = ")";
+    }
+    else if (weaponWeightFinal > weapon.WeaponWeight) {
+        document.getElementById("cardWeight").textContent = weaponWeightFinal;
+        document.getElementById("cardWeight").style.color = "OrangeRed";
+        document.getElementById("cardWeightArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardWeightArrow").style.color = "OrangeRed";
+        document.getElementById("cardWeightLBrac").textContent = "(";
+        document.getElementById("cardWeightComp").textContent = weapon.WeaponWeight;
+        document.getElementById("cardWeightRBrac").textContent = ")";
+    }
+    else if (weaponWeightFinal === weapon.WeaponWeight) {
+        document.getElementById("cardWeight").textContent = weaponWeightFinal;
+    }
+
+    let weaponWeightAdjustment = calcOil.WeaponWeightModifier;
+    let s = weapon.MovementSpeedModifier * (1 + calcOil.MovementSpeedEquipment);
     //// Duplicate calculation for original comparison
-    let resultFirstMvmntStepComp = (1 - weapon.WeightClassFactor) * (1 + weaponWeightAdjustment);
+    let resultFirstMvmntStepComp = (1 - weapon.WeightClassFactor);
     let resultSecondMvmntStepComp = 1 - resultFirstMvmntStepComp;
-    let resultMovementSpeedComp = resultSecondMvmntStepComp * (s * 100);
+    let resultMovementSpeedComp = resultSecondMvmntStepComp * (100);
     //// Actual Calculation
     let resultFirstMvmntStep = (1 - weapon.WeightClassFactor) * (1 + weaponWeightAdjustment);
     let resultSecondMvmntStep = 1 - resultFirstMvmntStep;
@@ -5138,9 +6367,6 @@ function oilCalcs(calcOil) {
     else {
         
     }
-        
-    
-    
 
     if (relSpdRound < relSpdConvOrig) {
         document.getElementById("cardReloadSpeed").textContent = relSpdRound;
@@ -5349,41 +6575,38 @@ function oilCalcs(calcOil) {
     document.getElementById("cardShotsToBreak").textContent = shotsToBreakRounded;
     //#endregion
 
-    //////////////////
-    //// Firemode ////
-    //////////////////
-    //#region
-
-    document.getElementById("cardFiremode").textContent = "";
-    document.getElementById("cardFiremode").style.color = "";
-    document.getElementById("cardFiremodeLBrac").textContent = "";
-    document.getElementById("cardFiremodeComp").textContent = "";
-    document.getElementById("cardFiremodeRBrac").textContent = "";
-
-    if (calcOil.Firemode !== 'None') {
-        weapon.Firemode = calcOil.Firemode;
-    }
-
-    if (weapon.Firemode === weaponOriginal.Firemode) {
-        document.getElementById("cardFiremode").textContent = weapon.Firemode;
-    }
-    else {
-        document.getElementById("cardFiremode").textContent = weapon.Firemode;
-        document.getElementById("cardFiremode").style.color = "Goldenrod";
-        document.getElementById("cardFiremodeLBrac").textContent = "(";
-        document.getElementById("cardFiremodeComp").textContent = weaponOriginal.Firemode;
-        document.getElementById("cardFiremodeRBrac").textContent = ")";
-    }
-
-    //#endregion
-
     /////////////
     //// DPS ////
     /////////////
     //#region
 
     document.getElementById("cardTotDam60").textContent = "";
-    document.getElementById("cardDPS60").textContent = ""; 
+    document.getElementById("cardDPS60").textContent = "";
+
+    // setup for ammo cost calcs
+    let ammoCost = 0;
+    let ammoCostSpent60 = 0;
+    let ammoCostSpentDur = 0;
+    switch (weapon.AmmoType) {
+        case "9mm":
+            ammoCost = 1;
+            break;
+        case "7.62mm":
+            ammoCost = 4;
+            break;
+        case "5.56mm":
+            ammoCost = 3.33;
+            break;
+        case ".50 BMG":
+            ammoCost = 16.67;
+            break;
+        case "12Ga":
+            ammoCost = 5.83;
+            break;
+        case "Energy":
+            ammoCost = 3.33;
+            break;
+    }
 
     let dpsRPM = 0;
     
@@ -5402,6 +6625,7 @@ function oilCalcs(calcOil) {
     let durWinDamUnmod = 0;
     let durWinTime = 0;
     let durWinShots = shotsToBreakRounded;
+    let projFired60 = 0;
 
     let damageForDPS = 0;
     if (calcOil.ScrollField === "scrollinfotoxic") {
@@ -5411,28 +6635,48 @@ function oilCalcs(calcOil) {
         damageForDPS = totalRound;
     }
 
+    // simulate firing for 60 seconds
     do {
         let magSizeCalc = 0;
+
+        // firing weapon
         do {
             dpsTime += secPerRound;
 
             // Base Damage
             dps60Dam += damageForDPS;
 
+            // add projectiles fired for this bullet
+            projFired60 += weapProj * weapon.MultiShot;
+
             // Unmodifiable Damage
             dps60DamUnmod += scrollMult;
+
+            // ammo cost
+            let acc = getRandomInt();
+            if (acc < ammoRound) {
+                ammoCostSpent60 += ammoCost;
+                let eauc = getRandomInt();
+                if (eauc < extraRound) {
+                    ammoCostSpent60 += ammoCost;
+                }
+            }
 
             magSizeCalc += 1;
         }
         while (magSizeCalc < effMagSize && dpsTime < 60);
 
+        // reloading weapon, if applicable
         dpsTime += reloadTime;
 
     }
     while (dpsTime < 60);
 
+    // simulate firing until broken
     do {
         let magSizeCalc = 0;
+
+        // firing weapon
         do {
             // Durability Window
             durWinTime += secPerRound;
@@ -5440,14 +6684,33 @@ function oilCalcs(calcOil) {
             durWinDamUnmod += scrollMult;
             durWinShots -= 1;
 
+            // ammo cost
+            let acc = getRandomInt();
+            if (acc < ammoRound) {
+                ammoCostSpentDur += ammoCost;
+                let eauc = getRandomInt();
+                if (eauc < extraRound) {
+                    ammoCostSpentDur += ammoCost;
+                }
+            }
+
             magSizeCalc += 1;
         }
         while (magSizeCalc < effMagSize && durWinShots > 0);
 
+        // reloading weapon, if applicable
         durWinTime += reloadTime;
 
     }
     while (durWinShots > 0);
+
+    let ammoCostSec = ammoCostSpent60 / 60;
+    let ammoCostSecRound = Math.round((ammoCostSec + Number.EPSILON)* 100) / 100;
+    let ammoCostSpent60Round = Math.round((ammoCostSpent60 + Number.EPSILON)* 100) / 100;
+    let ammoCostSpentDurRound = Math.round((ammoCostSpentDur + Number.EPSILON)* 100) / 100;
+
+    let projPerSec = projFired60 / 60;
+    let projPerSecRound = Math.round((projPerSec + Number.EPSILON)* 100) / 100;
 
     let dps60 = dps60Dam / 60;
     let dps60Unmod = dps60DamUnmod / 60;
@@ -5465,7 +6728,15 @@ function oilCalcs(calcOil) {
     let durWinDamRound = Math.round(((durWinTot) + Number.EPSILON)* 100) / 100;
 
     document.getElementById("cardTotDam60").textContent = dmgTotRound;
-    document.getElementById("cardDPS60").textContent = dps60UnmodRound; 
+    document.getElementById("cardDPS60").textContent = dps60UnmodRound;
+
+    document.getElementById("cardAmmoCostSec").textContent = ammoCostSecRound; 
+    document.getElementById("cardAmmoCostMin").textContent = ammoCostSpent60Round;
+    document.getElementById("cardAmmoCostDur").textContent = ammoCostSpentDurRound;
+
+    document.getElementById("cardProjShot").textContent = weapProj * weapon.MultiShot;
+    document.getElementById("cardProjSec").textContent = projPerSecRound;
+    document.getElementById("cardProjMin").textContent = projFired60; 
 
     document.getElementById("cardBreakDam").textContent = durWinDamRound;
     document.getElementById("cardBreakTime").textContent = `${durWinTimeRound} seconds`;
@@ -5474,17 +6745,107 @@ function oilCalcs(calcOil) {
 
     let recoilRatio = recoilRound;
     let rpmRatio = rpmRound;
+    let firemodeRatio = 1;
+
+    switch (weapon.Firemode) {
+        case "Single":
+            firemodeRatio = 4;
+            break;
+        case "2-Round Burst":
+            firemodeRatio = 3;
+            break;
+        case "3-Round Burst":
+            firemodeRatio = 2;
+        default:
+    }
 
     if (rpmRatio < 110) {
         recoilRatio = recoilRound / 2;
     }
 
-    let totalRatio = (recoilRatio * rpmRatio) / 500;
+    let totalRatio = ((recoilRatio * rpmRatio) / 500) / firemodeRatio;
 
     document.getElementById("cardRPMToRec").textContent = totalRatio;
     
     //#endregion
+
+    /////////////////////////
+    //// Equipment Stuff ////
+    /////////////////////////
+    //#region
+
+    // Reset fields
+    document.getElementById("cardArmor").textContent = "";
+    document.getElementById("cardExpRes").textContent = "";
+    document.getElementById("cardFireRes").textContent = "";
+    document.getElementById("cardPoisonRes").textContent = "";
+    document.getElementById("cardFrostRes").textContent = "";
+    document.getElementById("cardElectricRes").textContent = "";
+    document.getElementById("cardLightRes").textContent = "";
+    document.getElementById("cardCharmRes").textContent = "";
+    document.getElementById("cardExtraJumps").textContent = "";
+    document.getElementById("cardMelee").textContent = "";
+    document.getElementById("cardSprint").textContent = "";
+    document.getElementById("cardSwim").textContent = "";
+    document.getElementById("cardCoyote").textContent = "";
+    document.getElementById("cardLuck").textContent = "";
+    document.getElementById("cardCharisma").textContent = "";
+    document.getElementById("explosionResistDiv").style.display = "none";
+    document.getElementById("fireResistDiv").style.display = "none";
+    document.getElementById("poisonResistDiv").style.display = "none";
+    document.getElementById("frostResistDiv").style.display = "none";
+    document.getElementById("electricResistDiv").style.display = "none";
+    document.getElementById("lightResistDiv").style.display = "none";
+    document.getElementById("charmResistDiv").style.display = "none";
     
+    // Set all non-resistance fields
+    document.getElementById("cardArmor").textContent = calcOil.Armor;
+    document.getElementById("cardExtraJumps").textContent = calcOil.ExtraJumps * (1 + calcOil.ExtraJumpsMult);
+    document.getElementById("cardMelee").textContent = `${Math.round(((((1 + calcOil.MeleeDamageMultEquip) * 1) * 100) + Number.EPSILON)* 100) / 100}%`;
+    document.getElementById("cardSprint").textContent = `${Math.round(((((1 + calcOil.SprintSpeedEquipment) * 1) * 100) + Number.EPSILON)* 100) / 100}%`;
+    document.getElementById("cardSwim").textContent = `${Math.round(((((1 + calcOil.SwimSpeedEquipment) * 1) * 100) + Number.EPSILON)* 100) / 100}%`;
+    document.getElementById("cardCoyote").textContent = `${calcOil.CoyoteTime}s`;
+    document.getElementById("cardLuck").textContent = calcOil.Luck;
+    document.getElementById("cardCharisma").textContent = calcOil.Charisma;
+
+    // Enable and set all resistance fields
+
+    if (calcOil.DamageResistExplosive > 0) {
+        document.getElementById("explosionResistDiv").style.display = "flex";
+        document.getElementById("cardExpRes").textContent = calcOil.DamageResistExplosive;
+    }
+    if (calcOil.DamageResistFire > 0) {
+        document.getElementById("fireResistDiv").style.display = "flex";
+        document.getElementById("cardFireRes").textContent = calcOil.DamageResistFire;
+    }
+    if (calcOil.DamageResistPoison > 0) {
+        document.getElementById("poisonResistDiv").style.display = "flex";
+        document.getElementById("cardPoisonRes").textContent = calcOil.DamageResistPoison;
+    }
+    if (calcOil.DamageResistFrost > 0) {
+        document.getElementById("frostResistDiv").style.display = "flex";
+        document.getElementById("cardFrostRes").textContent = calcOil.DamageResistFrost;
+    }
+    if (calcOil.DamageResistElectric > 0) {
+        document.getElementById("electricResistDiv").style.display = "flex";
+        document.getElementById("cardElectricRes").textContent = calcOil.DamageResistElectric;
+    }
+    if (calcOil.DamageResistLight > 0) {
+        document.getElementById("lightResistDiv").style.display = "flex";
+        document.getElementById("cardLightRes").textContent = calcOil.DamageResistLight;
+    }
+    if (calcOil.CharmResistance > 0) {
+        document.getElementById("charmResistDiv").style.display = "flex";
+        document.getElementById("cardCharmRes").textContent = calcOil.CharmResistance;
+    }
+
+    //#endregion
+}
+
+function getRandomInt() {
+  const minCeiled = Math.ceil(0);
+  const maxFloored = Math.floor(100);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 }
 
 function getOilByName(name) {
@@ -5524,6 +6885,22 @@ function getOrigWeaponByName(name) {
 
 function getChamberByName(name) {
     return chamberData?.Chamber[name] || null;
+}
+
+function getHeadByName(name) {
+    return armorHeadData?.ArmorHead[name] || null;
+}
+
+function getChestByName(name) {
+    return armorChestData?.ArmorChest[name] || null;
+}
+
+function getFootByName(name) {
+    return armorFootData?.ArmorFeet[name] || null;
+}
+
+function getTrinketByName(name) {
+    return trinketData?.Trinket[name] || null;
 }
 
 function convNameToVal(name) {
@@ -5567,7 +6944,31 @@ function addToCoreMap(flag, itemName, itemValue) {
                 break;
             case "chamber":
                 coreSelections.set("chamber", {Name: itemName, Value: itemValue});
-                break; 
+                break;
+            case "head":
+                coreSelections.set("head", {Name: itemName, Value: itemValue});
+                break;
+            case "chest":
+                coreSelections.set("chest", {Name: itemName, Value: itemValue});
+                break;
+            case "lfoot":
+                coreSelections.set("lfoot", {Name: itemName, Value: itemValue});
+                break;
+            case "rfoot":
+                coreSelections.set("rfoot", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket1":
+                coreSelections.set("trinket1", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket2":
+                coreSelections.set("trinket2", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket3":
+                coreSelections.set("trinket3", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket4":
+                coreSelections.set("trinket4", {Name: itemName, Value: itemValue});
+                break;
             case undefined:
                 break;  
             case "all":
@@ -5635,7 +7036,31 @@ function cloneTo(flag, itemName, itemValue) {
                 break;
             case "chamber":
                 build.set("chamber", {Name: itemName, Value: itemValue});
-                break; 
+                break;
+            case "head":
+                build.set("head", {Name: itemName, Value: itemValue});
+                break;
+            case "chest":
+                build.set("chest", {Name: itemName, Value: itemValue});
+                break;
+            case "lfoot":
+                build.set("lfoot", {Name: itemName, Value: itemValue});
+                break;
+            case "rfoot":
+                build.set("rfoot", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket1":
+                build.set("trinket1", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket2":
+                build.set("trinket2", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket3":
+                build.set("trinket3", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket4":
+                build.set("trinket4", {Name: itemName, Value: itemValue});
+                break;
             case undefined:
                 break;  
             case "all":
@@ -5703,6 +7128,30 @@ function addToActiveBuild(flag, itemName, itemValue) {
                 break;
             case "chamber":
                 build.set("chamber", {Name: itemName, Value: itemValue});
+                break;
+            case "head":
+                build.set("head", {Name: itemName, Value: itemValue});
+                break;
+            case "chest":
+                build.set("chest", {Name: itemName, Value: itemValue});
+                break;
+            case "lfoot":
+                build.set("lfoot", {Name: itemName, Value: itemValue});
+                break;
+            case "rfoot":
+                build.set("rfoot", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket1":
+                build.set("trinket1", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket2":
+                build.set("trinket2", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket3":
+                build.set("trinket3", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket4":
+                build.set("trinket4", {Name: itemName, Value: itemValue});
                 break; 
             case undefined:
                 break;  
@@ -5749,7 +7198,31 @@ function addToTempMap(flag, itemName, itemValue) {
                 break;
             case "chamber":
                 tempSelections.set("chamber", {Name: itemName, Value: itemValue});
-                break; 
+                break;
+            case "head":
+                tempSelections.set("head", {Name: itemName, Value: itemValue});
+                break;
+            case "chest":
+                tempSelections.set("chest", {Name: itemName, Value: itemValue});
+                break;
+            case "lfoot":
+                tempSelections.set("lfoot", {Name: itemName, Value: itemValue});
+                break;
+            case "rfoot":
+                tempSelections.set("rfoot", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket1":
+                tempSelections.set("trinket1", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket2":
+                tempSelections.set("trinket2", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket3":
+                tempSelections.set("trinket3", {Name: itemName, Value: itemValue});
+                break;
+            case "trinket4":
+                tempSelections.set("trinket4", {Name: itemName, Value: itemValue});
+                break;
             case undefined:
                 break;  
             case "all":
@@ -5952,7 +7425,18 @@ function oilSwapper(flag, val) {
 
 }
 
+let totalItemRolls = 0;
+let totalRandomRolls = 0;
+
 function rollSelections(flag, selector, selID, value, type) {
+    if (buildSwapping === false && skipRollCounting === false) {
+        totalItemRolls += 1;
+        if (value.startsWith("static")) {
+            totalRandomRolls += 1;
+        }
+    }
+    document.getElementById("totItemRollSpan").textContent = totalItemRolls;
+    document.getElementById("totRandomRollSpan").textContent = totalRandomRolls;
 
     let selectedItem = null;
     let selectedValue = null;
@@ -6134,63 +7618,63 @@ function rollSelections(flag, selector, selID, value, type) {
     function rollWeapon(value, flag) {
         
         switch (value) {
-            case "random-all-weapons":
+            case "static-random-all-weapons":
                 shuffle(gunsAll);
                 selectedItem = getWeaponByName(gunsAll[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
                 setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
-            case "random-pistols":
+            case "static-random-pistols":
                 shuffle(gunsPistols);
                 selectedItem = getWeaponByName(gunsPistols[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
                 setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
-            case "random-revolvers":
+            case "static-random-revolvers":
                 shuffle(gunsRevolvers);
                 selectedItem = getWeaponByName(gunsRevolvers[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
                 setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
-            case "random-shotguns":
+            case "static-random-shotguns":
                 shuffle(gunsShotguns);
                 selectedItem = getWeaponByName(gunsShotguns[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
                 setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
-            case "random-smgs":
+            case "static-random-smgs":
                 shuffle(gunsSMGs);
                 selectedItem = getWeaponByName(gunsSMGs[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
                 setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
-            case "random-assault-rifles":
+            case "static-random-assault-rifles":
                 shuffle(gunsARs);
                 selectedItem = getWeaponByName(gunsARs[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
                 setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
-            case "random-lmgs":
+            case "static-random-lmgs":
                 shuffle(gunsLMGs);
                 selectedItem = getWeaponByName(gunsLMGs[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
                 setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
-            case "random-rifles":
+            case "static-random-rifles":
                 shuffle(gunsRifles);
                 selectedItem = getWeaponByName(gunsRifles[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
                 setDefaultChamber(selectedItem);
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
-            case "random-sniper-rifles":
+            case "static-random-sniper-rifles":
                 shuffle(gunsSnipers);
                 selectedItem = getWeaponByName(gunsSnipers[0]);
                 selectedValue = weaponNameIndexer.get(selectedItem.Name);
@@ -6396,6 +7880,106 @@ function rollSelections(flag, selector, selID, value, type) {
         }
     }
 
+    function rollArmor(value, flag) {
+        if (flag === "head") {
+            switch (value) {
+                case "static-choose":
+                    selectedItem = getHeadByName("None");
+                    selectedValue = armorHeadNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "none":
+                    selectedItem = getHeadByName("None");
+                    selectedValue = armorHeadNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "static-random-all-head-armor":
+                    shuffle(armorHeadAll);
+                    selectedItem = getHeadByName(armorHeadAll[0]);
+                    selectedValue = armorHeadNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                default:
+                    let selhead = armorHeadValueIndexer.get(value);
+                    selectedItem = getHeadByName(selhead);
+                    addToCoreMap(flag, selectedItem, value);
+            }
+        }
+        if (flag === "chest") {
+            switch (value) {
+                case "static-choose":
+                    selectedItem = getChestByName("None");
+                    selectedValue = armorChestNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "none":
+                    selectedItem = getChestByName("None");
+                    selectedValue = armorChestNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "static-random-all-chest-armor":
+                    shuffle(armorChestAll);
+                    selectedItem = getChestByName(armorChestAll[0]);
+                    selectedValue = armorChestNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                default:
+                    let selchest = armorChestValueIndexer.get(value);
+                    selectedItem = getChestByName(selchest);
+                    addToCoreMap(flag, selectedItem, value);
+            }
+        }
+        if (flag === "lfoot" || flag === "rfoot") {
+            switch (value) {
+                case "static-choose":
+                    selectedItem = getFootByName("None");
+                    selectedValue = armorFootNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "none":
+                    selectedItem = getFootByName("None");
+                    selectedValue = armorFootNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                case "static-random-all-foot-armor":
+                    shuffle(armorFeetAll);
+                    selectedItem = getFootByName(armorFeetAll[0]);
+                    selectedValue = armorFootNameIndexer.get(selectedItem.Name);
+                    addToCoreMap(flag, selectedItem, selectedValue);
+                    break;
+                default:
+                    let selfoot = armorFootValueIndexer.get(value);
+                    selectedItem = getFootByName(selfoot);
+                    addToCoreMap(flag, selectedItem, value);
+            }
+        }
+    }
+
+    function rollTrinket(value, flag) {
+        switch (value) {
+            case "static-choose":
+                selectedItem = getTrinketByName("None");
+                selectedValue = trinketNameIndexer.get(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "none":
+                selectedItem = getTrinketByName("None");
+                selectedValue = trinketNameIndexer.get(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            case "static-random-all-trinkets":
+                shuffle(trinketsAll);
+                selectedItem = getTrinketByName(trinketsAll[0]);
+                selectedValue = trinketNameIndexer.get(selectedItem.Name);
+                addToCoreMap(flag, selectedItem, selectedValue);
+                break;
+            default:
+                let seltrink = trinketValueIndexer.get(value);
+                selectedItem = getTrinketByName(seltrink);
+                addToCoreMap(flag, selectedItem, value);
+        }
+    }
+
     switch (type) {
         case "ench":
             rollEnch(value, flag);
@@ -6406,13 +7990,14 @@ function rollSelections(flag, selector, selID, value, type) {
         case "weapon":
             rollWeapon(value, flag);
             break;
+        case "armor":
+            rollArmor(value, flag);
+            break;
+        case "trinket":
+            rollTrinket(value, flag);
+            break;
         default:
     }
-
-    /*Object.values(oilsScrollsData.OilScroll).forEach(oil => {
-        if (oil.Name === )
-    });*/
-
 }
 
 
@@ -6460,99 +8045,110 @@ console.info("KBH: Setting oil name indexer");
     return true;
 }
 
-const gunsAll = [
-    "P38 Dirk", "Socom 9", "Star & Witness", "Gravekeeper", "Beck 8",
-    "Salamander", "Bronco 89", "Flicker", "Unknown", "Hell 'N' Back",
-    "Cavalier", "Snut .38", "Palehorse Topclipper", ".357 Balthazar",
-    "Wyatt PULSAR", "Breacher 8", "Mossman", "Arbiter 2", "Augusta",
-    "1889 Mario", "Flock 76", "Majordome", "Drifter 9", "Vrede",
-    "Ploika Compact", "Ferryman", "M3 Termite", "Deathstar PG",
-    "Valet", "Corpsemaker", "Catacoil Rapid X", "Type 80 Typhoon",
-    "M11A2 Fisk", "Wingman", "Rektor 100rd", "Duhar", "Neuraxis F22",
-    "Knop .22", "M182 Pierre-Fusil", "Tailor Marksman MKII",
-    "Farsight", "Rokua .308", "Dolphin 99", "D4RT",
-    "Impala Gravita", "Longboy", "Chat-Pardeur 98", "Warpig", "Songbird", "Socom ACR", "Terrier URB"
-];
+const armorHeadValueIndexer = new Map();
 
-const gunsPistols = [
-    "P38 Dirk", "Socom 9", "Star & Witness", "Gravekeeper",
-    "Beck 8", "Salamander", "Bronco 89", "Flicker",
-    "Unknown", "Hell 'N' Back", "Cavalier", "Terrier URB"
-];
+function setArmorHeadValueIndexer() {
+    console.info("KBH: Setting head armor value indexer");
+    armorHeadValueIndexer.set("none", "None");
+    armorHeadValueIndexer.set("static-random-all-head-armor", "Random Head Armor");
+    armorHeadAll.forEach(head => {
+        const key1 = head.toLowerCase().replaceAll("'", "");
+        const key = key1.replaceAll(" ", "-");
+        armorHeadValueIndexer.set(key, head);
+    });
+    return true;
+}
 
-const gunsRevolvers = [
-    "Snut .38", "Palehorse Topclipper",
-    ".357 Balthazar", "Wyatt PULSAR"
-];
+const armorHeadNameIndexer = new Map();
 
-const gunsShotguns = [
-    "Breacher 8", "Mossman", "Arbiter 2",
-    "Augusta", "1889 Mario", "Flock 76", "Majordome"
-];
+function setArmorHeadNameIndexer() {
+console.info("KBH: Setting head armor name indexer");
+    function addToWNI(value, key, map) {
+        armorHeadNameIndexer.set(value, key);
+    }
 
-const gunsSMGs = [
-    "Drifter 9", "Vrede", "Ploika Compact",
-    "Ferryman", "M3 Termite", "Deathstar PG", "Valet", "Songbird"
-];
+    armorHeadValueIndexer.forEach(addToWNI);  
+    return true;
+}
 
-const gunsARs = [
-    "Corpsemaker", "Catacoil Rapid X",
-    "Type 80 Typhoon", "M11A2 Fisk", "Wingman", "Socom ACR"
-];
+const armorChestValueIndexer = new Map();
 
-const gunsLMGs = [
-    "Rektor 100rd", "Duhar", "Neuraxis F22", "Chat-Pardeur 98", "Warpig"
-];
+function setArmorChestValueIndexer() {
+    console.info("KBH: Setting chest armor value indexer");
+    armorChestValueIndexer.set("none", "None");
+    armorChestValueIndexer.set("static-random-all-chest-armor", "Random Chest Armor");
+    armorChestAll.forEach(chest => {
+        const key1 = chest.toLowerCase().replaceAll("'", "");
+        const key = key1.replaceAll(" ", "-");
+        armorChestValueIndexer.set(key, chest);
+    });
+    return true;
+}
 
-const gunsRifles = [
-    "Knop .22", "M182 Pierre-Fusil",
-    "Tailor Marksman MKII", "Farsight"
-];
+const armorChestNameIndexer = new Map();
 
-const gunsSnipers = [
-    "Rokua .308", "Dolphin 99",
-    "D4RT", "Impala Gravita", "Longboy"
-];
+function setArmorChestNameIndexer() {
+console.info("KBH: Setting chest armor name indexer");
+    function addToWNI(value, key, map) {
+        armorChestNameIndexer.set(value, key);
+    }
 
-const attachmentsBarrels = [
-    "A12C Muzzle Brake",
-    "Aftermarket Haukland Silencer",
-    "Barrel Extension 2in",
-    "Barrel Extension 4in",
-    "Barrel Extension 6in",
-    "Breznik BMD",
-    "Breznik BMD (Tactical)",
-    "Haukland Flash Hider",
-    "Haukland Silencer",
-    "Improvised Barrel Extension",
-    "M87 Albatross Silencer",
-    "SR-P3 Silencer",
-    "Shrouded Barrel Extension",
-    "Warmage Compensator"
-];
+    armorChestValueIndexer.forEach(addToWNI);  
+    return true;
+}
 
-const attachmentsOptics = [
-    "Assault Scope",
-    "Compact Sight",
-    "Holographic Sight",
-    "Hunting Scope",
-    "Recon Scope",
-    "Reflex Sight",
-    "Sniper Scope"
-];
+const armorFootValueIndexer = new Map();
 
-const attachmentsFiremodes = [
-    "Gun Crank",
-    "Priming Bolt"
-];
+function setArmorFootValueIndexer() {
+    console.info("KBH: Setting foot armor value indexer");
+    armorFootValueIndexer.set("none", "None");
+    armorFootValueIndexer.set("static-random-all-foot-armor", "Random Foot Armor");
+    armorFeetAll.forEach(foot => {
+        const key1 = foot.toLowerCase().replaceAll("'", "");
+        const key = key1.replaceAll(" ", "-");
+        armorFootValueIndexer.set(key, foot);
+    });
+    return true;
+}
 
-const attachmentsRechambers = [
-    "Chamber Chisel - .50 BMG",
-    "Chamber Chisel - 12Ga",
-    "Chamber Chisel - 5.56mm",
-    "Chamber Chisel - 7.62mm",
-    "Chamber Chisel - 9mm"
-];
+const armorFootNameIndexer = new Map();
+
+function setArmorFootNameIndexer() {
+console.info("KBH: Setting foot armor name indexer");
+    function addToWNI(value, key, map) {
+        armorFootNameIndexer.set(value, key);
+    }
+
+    armorFootValueIndexer.forEach(addToWNI);  
+    return true;
+}
+
+const trinketValueIndexer = new Map();
+
+function setTrinketValueIndexer() {
+    console.info("KBH: Setting trinket value indexer");
+    trinketValueIndexer.set("none", "None");
+    trinketValueIndexer.set("static-random-all-trinkets", "Random Trinket");
+    trinketsAll.forEach(trink => {
+        const key1 = trink.toLowerCase().replaceAll("'", "");
+        const key = key1.replaceAll(" ", "-");
+        trinketValueIndexer.set(key, trink);
+    });
+    return true;
+}
+
+const trinketNameIndexer = new Map();
+
+function setTrinketNameIndexer() {
+console.info("KBH: Setting trinket name indexer");
+    function addToWNI(value, key, map) {
+        trinketNameIndexer.set(value, key);
+    }
+
+    trinketValueIndexer.forEach(addToWNI);  
+    return true;
+}
+
 function mobileDropdownCheck(evt) {
     /*let helloThere = "hello there, i am mobile";
     

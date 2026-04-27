@@ -89,7 +89,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Add Damage Oil": {
       "ADSCritChance": 0,
@@ -180,7 +188,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Aimless Oil": {
       "ADSCritChance": 0,
@@ -271,7 +287,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Airsoft Oil": {
       "ADSCritChance": 0,
@@ -362,7 +386,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Altruistic Oil": {
       "ADSCritChance": 0,
@@ -453,7 +485,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Arkanoid Oil": {
       "ADSCritChance": 0,
@@ -544,7 +584,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Arrow Oil": {
       "ADSCritChance": 0,
@@ -635,7 +683,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Artery Oil": {
       "ADSCritChance": 0,
@@ -726,7 +782,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Artillery Oil": {
       "ADSCritChance": 0,
@@ -763,7 +827,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ SPRD: <span style='color:green'>-2</span> • ▼ BDROP: <span style='color:red'>+15</span>",
+      "DropdownDescription": "▲ SPRD: <span style='color:green'>-2</span> • ▼ BDROP: <span style='color:red'>x15</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -817,7 +881,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Ascetic Oil": {
       "ADSCritChance": 0,
@@ -908,7 +980,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Assassin Dart Oil": {
       "ADSCritChance": 0,
@@ -999,7 +1079,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Attack Speed Oil": {
       "ADSCritChance": 0,
@@ -1090,7 +1178,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Axe Oil": {
       "ADSCritChance": 0,
@@ -1127,7 +1223,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ Crit: <span style='color:green'>+25%</span> • ▼ BDROP: <span style='color:red'>+10</span>",
+      "DropdownDescription": "▲ Crit: <span style='color:green'>+25%</span> • ▼ BDROP: <span style='color:red'>x10</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -1181,7 +1277,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Bad Planet Oil": {
       "ADSCritChance": 0,
@@ -1272,7 +1376,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Bandit Oil": {
       "ADSCritChance": 0,
@@ -1363,7 +1475,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "BB Oil": {
       "ADSCritChance": 0,
@@ -1444,7 +1564,7 @@
       "SpreadAdd": 0,
       "SpreadMult": 0,
       "StatDescription": "RPM: <span style='color:green'>+30%</span><br>Bullet Size: <span style='color:red'>-70%</span>",
-      "TypeNegative1": "None",
+      "TypeNegative1": "Bullet Size",
       "TypeNegative2": "None",
       "TypeNegative3": "None",
       "TypeNegative4": "None",
@@ -1454,7 +1574,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Big Oil": {
       "ADSCritChance": 0,
@@ -1491,7 +1619,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ BSPD: <span style='color:green'>+20%</span> • ▲ DMG+-: <span style='color:green'>+35</span> • ▼ BDROP: <span style='color:red'>+20</span>",
+      "DropdownDescription": "▲ BSPD: <span style='color:green'>+20%</span> • ▲ DMG+-: <span style='color:green'>+35</span> • ▼ BDROP: <span style='color:red'>x20</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -1545,7 +1673,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Big Tax Oil": {
       "ADSCritChance": 0,
@@ -1636,7 +1772,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Birth Oil": {
       "ADSCritChance": 0,
@@ -1727,7 +1871,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Black Friday Oil": {
       "ADSCritChance": 0,
@@ -1818,7 +1970,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Blindfold Oil": {
       "ADSCritChance": 0,
@@ -1909,7 +2069,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Blurt Oil": {
       "ADSCritChance": 0,
@@ -2000,7 +2168,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Bolt Oil": {
       "ADSCritChance": 0,
@@ -2091,7 +2267,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Bombard Oil": {
       "ADSCritChance": 0,
@@ -2128,7 +2312,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ PROJ: <span style='color:green'>+200%</span> • ▼ DMG%: <span style='color:red'>-10%</span> • ▼ SPRD: <span style='color:red'>+1.4</span> • ▼ BDROP: <span style='color:red'>+10</span>",
+      "DropdownDescription": "▲ PROJ: <span style='color:green'>+200%</span> • ▼ DMG%: <span style='color:red'>-10%</span> • ▼ SPRD: <span style='color:red'>+1.4</span> • ▼ BDROP: <span style='color:red'>x10</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -2182,7 +2366,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Boomstick Oil": {
       "ADSCritChance": 0,
@@ -2273,7 +2465,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Boulder Oil": {
       "ADSCritChance": 0,
@@ -2310,7 +2510,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ DMG%: <span style='color:green'>+20%</span> • ▲ Bounces: <span style='color:green'>+1</span> • ▲ BNCE: <span style='color:green'>+0.7</span> • ▼ BDROP: <span style='color:red'>+10</span>",
+      "DropdownDescription": "▲ DMG%: <span style='color:green'>+20%</span> • ▲ Bounces: <span style='color:green'>+1</span> • ▲ BNCE: <span style='color:green'>+0.7</span> • ▼ BDROP: <span style='color:red'>x10</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -2364,7 +2564,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Bowl Oil": {
       "ADSCritChance": 0,
@@ -2455,7 +2663,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Braced Oil": {
       "ADSCritChance": 0,
@@ -2546,7 +2762,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Brute Oil": {
       "ADSCritChance": 0,
@@ -2637,7 +2861,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Bulk Oil": {
       "ADSCritChance": 0,
@@ -2674,7 +2906,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ AmmoCC: <span style='color:green'>-40%</span> • ▼ BDROP: <span style='color:red'>+15</span>",
+      "DropdownDescription": "▲ AmmoCC: <span style='color:green'>-40%</span> • ▼ BDROP: <span style='color:red'>x15</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -2728,7 +2960,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Bystander Oil": {
       "ADSCritChance": 0,
@@ -2819,7 +3059,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Carefree Oil": {
       "ADSCritChance": 0,
@@ -2910,7 +3158,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Careful Oil": {
       "ADSCritChance": 0,
@@ -3001,7 +3257,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Careless Splitter Oil": {
       "ADSCritChance": 0,
@@ -3092,7 +3356,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Cartoon Oil": {
       "ADSCritChance": 0,
@@ -3129,7 +3401,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ Bounces: <span style='color:green'>+6</span> • ▼ SPRD: <span style='color:red'>+200%</span>",
+      "DropdownDescription": "▲ Bounces: <span style='color:green'>+6</span> • ▼ RCL: <span style='color:red'>+200%</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -3158,7 +3430,7 @@
       "ProcType": "None",
       "ProjectileMult": 0,
       "RecoilAdd": 0,
-      "RecoilMult": 0,
+      "RecoilMult": 2,
       "ReloadNegative": 1,
       "ReloadPositive": 1,
       "ReloadSpeed": 0,
@@ -3167,13 +3439,13 @@
       "ScoreNeg": 2,
       "ScorePos": 6,
       "ScrollField": "None",
-      "SearchDescription": "Cartoon Oil Bullet Bounces: +6, Spread: +200%",
+      "SearchDescription": "Cartoon Oil Bullet Bounces: +6, Recoil: +200%",
       "SelfDamage": "No",
       "SelfDamageAmount": "None",
       "SpreadAdd": 0,
-      "SpreadMult": 2,
-      "StatDescription": "Bullet Bounces: <span style='color:green'>+6</span><br>Spread: <span style='color:red'>+200%</span>",
-      "TypeNegative1": "Spread",
+      "SpreadMult": 0,
+      "StatDescription": "Bullet Bounces: <span style='color:green'>+6</span><br>Recoil: <span style='color:red'>+200%</span>",
+      "TypeNegative1": "Recoil",
       "TypeNegative2": "None",
       "TypeNegative3": "None",
       "TypeNegative4": "None",
@@ -3183,7 +3455,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Casual Oil": {
       "ADSCritChance": 0,
@@ -3274,7 +3554,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Cheap Oil": {
       "ADSCritChance": 0,
@@ -3365,7 +3653,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Chonk Oil": {
       "ADSCritChance": 0,
@@ -3456,7 +3752,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Chub Oil": {
       "ADSCritChance": 0,
@@ -3547,7 +3851,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Clump Oil": {
       "ADSCritChance": 0,
@@ -3638,7 +3950,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Collateral Oil": {
       "ADSCritChance": 0,
@@ -3729,7 +4049,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Complicated Oil": {
       "ADSCritChance": 0,
@@ -3820,7 +4148,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Compo Oil": {
       "ADSCritChance": 0,
@@ -3911,7 +4247,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Confidence Oil": {
       "ADSCritChance": 0,
@@ -4002,7 +4346,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Congestion Oil": {
       "ADSCritChance": 0,
@@ -4093,7 +4445,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Considerate Oil": {
       "ADSCritChance": 0,
@@ -4184,7 +4544,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Contained Force Oil": {
       "ADSCritChance": 0,
@@ -4275,7 +4643,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Critical Oil": {
       "ADSCritChance": 0,
@@ -4366,7 +4742,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Cycle Oil": {
       "ADSCritChance": 0,
@@ -4457,7 +4841,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Damage Oil": {
       "ADSCritChance": 0,
@@ -4548,7 +4940,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Dart Oil": {
       "ADSCritChance": 0,
@@ -4639,7 +5039,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Dead Center Oil": {
       "ADSCritChance": 0,
@@ -4730,7 +5138,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Default": {
       "ADSCritChance": 0,
@@ -4821,7 +5237,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Delayed Hyper Tube Oil": {
       "ADSCritChance": 0,
@@ -4912,7 +5336,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Dense Oil": {
       "ADSCritChance": 0,
@@ -5003,7 +5435,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Detune Oil": {
       "ADSCritChance": 0,
@@ -5094,7 +5534,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Diesel Oil": {
       "ADSCritChance": 0,
@@ -5185,7 +5633,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Discharge Oil": {
       "ADSCritChance": 0,
@@ -5276,7 +5732,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Disposable Oil": {
       "ADSCritChance": 0,
@@ -5367,7 +5831,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Division Oil": {
       "ADSCritChance": 0,
@@ -5458,7 +5930,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Do-over Oil": {
       "ADSCritChance": 0,
@@ -5549,7 +6029,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Double Fire Oil": {
       "ADSCritChance": 0,
@@ -5640,7 +6128,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Double Lock Oil": {
       "ADSCritChance": 0,
@@ -5731,7 +6227,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Double Nothing Oil": {
       "ADSCritChance": 0,
@@ -5822,7 +6326,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Dum Dum Oil": {
       "ADSCritChance": 0,
@@ -5913,7 +6425,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Dynamic Oil": {
       "ADSCritChance": 0,
@@ -6004,7 +6524,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Easy Oil": {
       "ADSCritChance": 0,
@@ -6095,7 +6623,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Easy Plop Oil": {
       "ADSCritChance": 0,
@@ -6132,7 +6668,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ RCL: <span style='color:green'>-65%</span> • ▼ BDROP: <span style='color:red'>+5</span>",
+      "DropdownDescription": "▲ RCL: <span style='color:green'>-65%</span> • ▼ BDROP: <span style='color:red'>x5</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -6186,7 +6722,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Elephant Oil": {
       "ADSCritChance": 0,
@@ -6223,7 +6767,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ PROJ: <span style='color:green'>+200%</span> • ▲ BSIZE: <span style='color:green'>+200%</span> • ▼ DMG%: <span style='color:red'>-25%</span> • ▼ RCL: <span style='color:red'>+10%</span> • ▼ MVSPD: <span style='color:red'>-50%</span> • ▼ SPRD: <span style='color:red'>+200%</span> • ▼ BDROP: <span style='color:red'>+10</span>",
+      "DropdownDescription": "▲ PROJ: <span style='color:green'>+200%</span> • ▲ BSIZE: <span style='color:green'>+200%</span> • ▼ DMG%: <span style='color:red'>-25%</span> • ▼ RCL: <span style='color:red'>+10%</span> • ▼ MVSPD: <span style='color:red'>-50%</span> • ▼ SPRD: <span style='color:red'>+200%</span> • ▼ BDROP: <span style='color:red'>x10</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -6266,7 +6810,7 @@
       "SelfDamageAmount": "None",
       "SpreadAdd": 0,
       "SpreadMult": 2,
-      "StatDescription": "<div style='margin: 0px; padding: 0px; border: 0px; display: grid; grid-auto-flow: column; background-color: transparent'><span>Projectiles: <span style='color:green'>+200%</span><br>Bullet Size: <span style='color:green'>+200%</span><br>Damage - Mult: <span style='color:red'>-25%</span><br>Recoil: <span style='color:red'>+10%</span></span><br><span>Movement Speed: <span style='color:red'>-50%</span><br>Spread: <span style='color:red'>+200%</span><br>Bullet Drop: <span style='color:red'>+10</span></span></div>",
+      "StatDescription": "Projectiles: <span style='color:green'>+200%</span><br>Bullet Size: <span style='color:green'>+200%</span><br>Damage - Mult: <span style='color:red'>-25%</span><br>Recoil: <span style='color:red'>+10%</span><br>Movement Speed: <span style='color:red'>-50%</span><br>Spread: <span style='color:red'>+200%</span><br>Bullet Drop: <span style='color:red'>+10</span>",
       "TypeNegative1": "Damage - Mult",
       "TypeNegative2": "None",
       "TypeNegative3": "None",
@@ -6277,7 +6821,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Exotic Barrel Oil": {
       "ADSCritChance": 0,
@@ -6368,7 +6920,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Expander Oil": {
       "ADSCritChance": 0,
@@ -6459,7 +7019,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Extra Powder Oil": {
       "ADSCritChance": 0,
@@ -6550,7 +7118,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Farsighted Oil": {
       "ADSCritChance": 0,
@@ -6641,7 +7217,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Fast Bet Oil": {
       "ADSCritChance": 0,
@@ -6732,7 +7316,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Feature Gun Oil": {
       "ADSCritChance": 0,
@@ -6823,7 +7415,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Fidget Lord Oil": {
       "ADSCritChance": 0,
@@ -6914,7 +7514,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Fidget Oil": {
       "ADSCritChance": 0,
@@ -7005,7 +7613,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "First Blood Oil": {
       "ADSCritChance": 0,
@@ -7096,7 +7712,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Flea Oil": {
       "ADSCritChance": 0,
@@ -7187,7 +7811,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Flop Oil": {
       "ADSCritChance": 0,
@@ -7278,7 +7910,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Flow Funnel Oil": {
       "ADSCritChance": 0,
@@ -7369,7 +8009,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Food Stamp Oil": {
       "ADSCritChance": 0,
@@ -7460,7 +8108,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Fragile System Oil": {
       "ADSCritChance": 0,
@@ -7551,7 +8207,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Franciscan Oil": {
       "ADSCritChance": 0,
@@ -7642,7 +8306,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Frugal Oil": {
       "ADSCritChance": 0,
@@ -7733,7 +8405,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Gambler Oil": {
       "ADSCritChance": 0,
@@ -7824,7 +8504,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Gargantuan Oil": {
       "ADSCritChance": 0,
@@ -7915,7 +8603,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Gemini Oil": {
       "ADSCritChance": 0,
@@ -8006,7 +8702,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Gentle Oil": {
       "ADSCritChance": 0,
@@ -8097,7 +8801,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Glass Cannon Oil": {
       "ADSCritChance": 0,
@@ -8188,7 +8900,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Great Oil": {
       "ADSCritChance": 0,
@@ -8225,7 +8945,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ DMG%: <span style='color:green'>+60%</span> • ▼ BSPD: <span style='color:red'>-20%</span> • ▼ BDROP: <span style='color:red'>+35</span>",
+      "DropdownDescription": "▲ DMG%: <span style='color:green'>+60%</span> • ▼ BSPD: <span style='color:red'>-20%</span> • ▼ BDROP: <span style='color:red'>x35</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -8279,7 +8999,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Grounded Oil": {
       "ADSCritChance": 0,
@@ -8370,7 +9098,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Gunslinger Oil": {
       "ADSCritChance": 0,
@@ -8461,7 +9197,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Happy Accident Oil": {
       "ADSCritChance": 0,
@@ -8552,7 +9296,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Heavy Lead Oil": {
       "ADSCritChance": 0,
@@ -8589,7 +9341,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ PEN: <span style='color:green'>+4</span> • ▼ BDROP: <span style='color:red'>+20</span>",
+      "DropdownDescription": "▲ PEN: <span style='color:green'>+4</span> • ▼ BDROP: <span style='color:red'>x20</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -8643,7 +9395,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Heavy Oil": {
       "ADSCritChance": 0,
@@ -8680,7 +9440,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ DMG%: <span style='color:green'>+60%</span> • ▲ BSIZE: <span style='color:green'>+50%</span> • ▼ BDROP: <span style='color:red'>+10</span>",
+      "DropdownDescription": "▲ DMG%: <span style='color:green'>+60%</span> • ▲ BSIZE: <span style='color:green'>+50%</span> • ▼ BDROP: <span style='color:red'>x10</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -8734,7 +9494,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Heavy Pockets Oil": {
       "ADSCritChance": 0,
@@ -8825,7 +9593,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Hefty Oil": {
       "ADSCritChance": 0,
@@ -8916,7 +9692,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Helium Oil": {
       "ADSCritChance": 0,
@@ -9007,7 +9791,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "High Grade Oil": {
       "ADSCritChance": 0,
@@ -9098,7 +9890,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Hip Blaster Oil": {
       "ADSCritChance": 0,
@@ -9189,7 +9989,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Hip Marksman Oil": {
       "ADSCritChance": 0,
@@ -9280,7 +10088,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Hoop Oil": {
       "ADSCritChance": 0,
@@ -9317,7 +10133,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ Bounces: <span style='color:green'>+4</span> • ▼ BDROP: <span style='color:red'>+10</span>",
+      "DropdownDescription": "▲ Bounces: <span style='color:green'>+4</span> • ▼ BDROP: <span style='color:red'>x10</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -9371,7 +10187,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Hunter Oil": {
       "ADSCritChance": 0,
@@ -9462,7 +10286,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Hustler Oil": {
       "ADSCritChance": 0,
@@ -9553,7 +10385,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Hyper Lead Oil": {
       "ADSCritChance": 0,
@@ -9590,7 +10430,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ DMG%: <span style='color:green'>+40%</span> • ▲ BSPD: <span style='color:green'>+100%</span> • ▼ BDROP: <span style='color:red'>+40</span>",
+      "DropdownDescription": "▲ DMG%: <span style='color:green'>+40%</span> • ▲ BSPD: <span style='color:green'>+100%</span> • ▼ BDROP: <span style='color:red'>x40</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -9644,7 +10484,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Imperfect Oil": {
       "ADSCritChance": 0,
@@ -9735,7 +10583,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Inconsiderate Oil": {
       "ADSCritChance": 0,
@@ -9826,7 +10682,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Inherited Oil": {
       "ADSCritChance": 0,
@@ -9917,7 +10781,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Instant Oil": {
       "ADSCritChance": 0,
@@ -10008,7 +10880,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Judgement Oil": {
       "ADSCritChance": 0,
@@ -10099,7 +10979,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Jungian Oil": {
       "ADSCritChance": 0,
@@ -10190,7 +11078,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Keep Oil": {
       "ADSCritChance": 0,
@@ -10281,7 +11177,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Kicker Oil": {
       "ADSCritChance": 0,
@@ -10372,7 +11276,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Kinetic Oil": {
       "ADSCritChance": 0,
@@ -10409,7 +11321,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ BSPD: <span style='color:green'>+100%</span> • ▼ BDROP: <span style='color:red'>+20</span>",
+      "DropdownDescription": "▲ BSPD: <span style='color:green'>+100%</span> • ▼ BDROP: <span style='color:red'>x20</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -10463,7 +11375,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Last Drop Oil": {
       "ADSCritChance": 0,
@@ -10554,7 +11474,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Late Boom Oil": {
       "ADSCritChance": 0,
@@ -10645,7 +11573,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Launcher Oil": {
       "ADSCritChance": 0,
@@ -10736,7 +11672,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Lazy Oil": {
       "ADSCritChance": 0,
@@ -10827,7 +11771,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Less Recoil Oil": {
       "ADSCritChance": 0,
@@ -10918,7 +11870,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Lightweight Oil": {
       "ADSCritChance": 0,
@@ -11009,7 +11969,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Longshot Oil": {
       "ADSCritChance": 0,
@@ -11100,7 +12068,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Lost In Focus Oil": {
       "ADSCritChance": 0,
@@ -11191,7 +12167,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Low Roller Oil": {
       "ADSCritChance": 0,
@@ -11282,7 +12266,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Machine Oil": {
       "ADSCritChance": 0,
@@ -11373,7 +12365,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Main Discipline Oil": {
       "ADSCritChance": 0,
@@ -11464,7 +12464,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Main Focus Oil": {
       "ADSCritChance": 0,
@@ -11555,7 +12563,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Manifestation Oil": {
       "ADSCritChance": 0,
@@ -11646,7 +12662,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Matrix Oil": {
       "ADSCritChance": 0,
@@ -11737,7 +12761,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Micro Wing Oil": {
       "ADSCritChance": 0,
@@ -11828,7 +12860,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Modern Technology Oil": {
       "ADSCritChance": 0,
@@ -11919,7 +12959,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Mosquito Oil": {
       "ADSCritChance": 0,
@@ -12010,7 +13058,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Multichamber Oil": {
       "ADSCritChance": 0,
@@ -12101,7 +13157,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Multishot Oil": {
       "ADSCritChance": 0,
@@ -12192,7 +13256,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Needleye Oil": {
       "ADSCritChance": 0,
@@ -12283,7 +13355,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Nerf Oil": {
       "ADSCritChance": 0,
@@ -12320,7 +13400,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ RLD: <span style='color:green'>+120%</span> • ▼ DMG%: <span style='color:red'>-10%</span> • ▼ BDROP: <span style='color:red'>+5</span>",
+      "DropdownDescription": "▲ RLD: <span style='color:green'>+120%</span> • ▼ DMG%: <span style='color:red'>-10%</span> • ▼ BDROP: <span style='color:red'>x5</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -12374,7 +13454,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "No Look Oil": {
       "ADSCritChance": 0,
@@ -12465,7 +13553,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "No Need Oil": {
       "ADSCritChance": 0,
@@ -12556,7 +13652,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "none": {
       "ADSCritChance": 0,
@@ -12647,7 +13751,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "None": {
       "ADSCritChance": 0,
@@ -12738,7 +13850,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Out of the Box Oil": {
       "ADSCritChance": 0,
@@ -12829,7 +13949,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Over Oil": {
       "ADSCritChance": 0,
@@ -12920,7 +14048,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Overclock Oil": {
       "ADSCritChance": 0,
@@ -13011,7 +14147,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Overdose Oil": {
       "ADSCritChance": 0,
@@ -13102,7 +14246,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Parallel Mag Oil": {
       "ADSCritChance": 0,
@@ -13193,7 +14345,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Peashooter Oil": {
       "ADSCritChance": 0,
@@ -13284,7 +14444,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Penetration Oil": {
       "ADSCritChance": 0,
@@ -13375,7 +14543,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Perfect Bounce Oil": {
       "ADSCritChance": 0,
@@ -13466,7 +14642,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Perforate Oil": {
       "ADSCritChance": 0,
@@ -13557,7 +14741,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Plinker Oil": {
       "ADSCritChance": 0,
@@ -13648,7 +14840,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Plop Back Oil": {
       "ADSCritChance": 0,
@@ -13739,7 +14939,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Pool Oil": {
       "ADSCritChance": 0,
@@ -13830,7 +15038,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Potato Oil": {
       "ADSCritChance": 0,
@@ -13921,7 +15137,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Potshot Oil": {
       "ADSCritChance": 0,
@@ -14012,7 +15236,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Puncher Oil": {
       "ADSCritChance": 0,
@@ -14103,7 +15335,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Puncture Oil": {
       "ADSCritChance": 0,
@@ -14194,7 +15434,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Purse Gun Oil": {
       "ADSCritChance": 0,
@@ -14285,7 +15533,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Ammo Consume Chance Oil": {
       "Armor": 0,
@@ -14330,7 +15586,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Base Crit Chance Oil": {
       "Armor": 0,
@@ -14375,7 +15639,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Bullet Bounce Oil": {
       "Armor": 0,
@@ -14420,7 +15692,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Bullet Size Oil": {
       "Armor": 0,
@@ -14465,7 +15745,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Bullet Speed Oil": {
       "Armor": 0,
@@ -14510,7 +15798,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Damage - Flat Oil": {
       "Armor": 0,
@@ -14555,7 +15851,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Damage - Mult Oil": {
       "Armor": 0,
@@ -14600,7 +15904,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Max Durability Oil": {
       "Armor": 0,
@@ -14645,7 +15957,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Oil": {
       "Armor": 0,
@@ -14690,7 +16010,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Penetration Oil": {
       "Armor": 0,
@@ -14735,7 +16063,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Projectiles Oil": {
       "Armor": 0,
@@ -14780,7 +16116,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Recoil Oil": {
       "Armor": 0,
@@ -14825,7 +16169,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Reload Speed Oil": {
       "Armor": 0,
@@ -14870,7 +16222,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random RPM Oil": {
       "Armor": 0,
@@ -14915,7 +16275,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Spread Oil": {
       "Armor": 0,
@@ -14960,7 +16328,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Rapid Internals Oil": {
       "ADSCritChance": 0,
@@ -15051,7 +16427,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Ready Oil": {
       "ADSCritChance": 0,
@@ -15142,7 +16526,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Rebound Oil": {
       "ADSCritChance": 0,
@@ -15233,7 +16625,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Recycle Oil": {
       "ADSCritChance": 0,
@@ -15324,7 +16724,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Relax Oil": {
       "ADSCritChance": 0,
@@ -15415,7 +16823,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Release Oil": {
       "ADSCritChance": 0,
@@ -15506,7 +16922,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Reload Oil": {
       "ADSCritChance": 0,
@@ -15597,7 +17021,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Ricochet Oil": {
       "ADSCritChance": 0,
@@ -15688,7 +17120,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Rigid System Oil": {
       "ADSCritChance": 0,
@@ -15779,7 +17219,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Rigor Oil": {
       "ADSCritChance": 0,
@@ -15870,7 +17318,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Robust Mechanics Oil": {
       "ADSCritChance": 0,
@@ -15961,7 +17417,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Rookie Oil": {
       "ADSCritChance": 0,
@@ -16052,7 +17516,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Rubber Oil": {
       "ADSCritChance": 0,
@@ -16143,7 +17615,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Rush Job Oil": {
       "ADSCritChance": 0,
@@ -16234,7 +17714,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Safety Oil": {
       "ADSCritChance": 0,
@@ -16325,7 +17813,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Saviour Oil": {
       "ADSCritChance": 0,
@@ -16416,7 +17912,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Scatter Oil": {
       "ADSCritChance": 0,
@@ -16507,7 +18011,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Scramble Oil": {
       "ADSCritChance": 0,
@@ -16598,7 +18110,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Seated Fit Oil": {
       "ADSCritChance": 0,
@@ -16635,7 +18155,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ DUR: <span style='color:green'>+70%</span> • ▼ BDROP: <span style='color:red'>+10</span> • <span style='color:purple'>No Dur Use</span>",
+      "DropdownDescription": "▲ DUR: <span style='color:green'>+70%</span> • ▼ BDROP: <span style='color:red'>x10</span> • <span style='color:purple'>No Dur Use</span>",
       "DupeFilter": false,
       "DurabilityMult": 0.7,
       "DurabilityUsage": 0,
@@ -16689,7 +18209,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Seated Oil": {
       "ADSCritChance": 0,
@@ -16780,7 +18308,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Sect Oil": {
       "ADSCritChance": 0,
@@ -16871,7 +18407,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Sender Oil": {
       "ADSCritChance": 0,
@@ -16962,7 +18506,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Sensible Oil": {
       "ADSCritChance": 0,
@@ -17053,7 +18605,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Shaved Clip Oil": {
       "ADSCritChance": 0,
@@ -17144,7 +18704,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Shellman Oil": {
       "ADSCritChance": 0,
@@ -17235,7 +18803,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Sherlock Oil": {
       "ADSCritChance": 0,
@@ -17326,7 +18902,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Shower Oil": {
       "ADSCritChance": 0,
@@ -17363,7 +18947,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ RPM: <span style='color:green'>+60%</span> • ▼ BDROP: <span style='color:red'>+10</span>",
+      "DropdownDescription": "▲ RPM: <span style='color:green'>+60%</span> • ▼ BDROP: <span style='color:red'>x10</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -17417,7 +19001,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Shredder Oil": {
       "ADSCritChance": 0,
@@ -17508,7 +19100,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Size Up Oil": {
       "ADSCritChance": 0,
@@ -17599,7 +19199,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Skip Oil": {
       "ADSCritChance": 0,
@@ -17690,7 +19298,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Slick Oil": {
       "ADSCritChance": 0,
@@ -17781,7 +19397,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Slippy Coating Oil": {
       "ADSCritChance": 0,
@@ -17872,7 +19496,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Slotmachine Oil": {
       "ADSCritChance": 0,
@@ -17963,7 +19595,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Slow Punch Oil": {
       "ADSCritChance": 0,
@@ -18054,7 +19694,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Smart Bullet Oil": {
       "ADSCritChance": 0,
@@ -18145,7 +19793,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Smash Oil": {
       "ADSCritChance": 0,
@@ -18236,7 +19892,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Soft Bullet Oil": {
       "ADSCritChance": 0,
@@ -18327,7 +19991,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Solid Oil": {
       "ADSCritChance": 0,
@@ -18364,7 +20036,7 @@
       "DamageResistPoison": 0,
       "DamageType": "None",
       "Drag": 0,
-      "DropdownDescription": "▲ DMG+-: <span style='color:green'>+40</span> • ▲ BSIZE: <span style='color:green'>+50%</span> • ▼ BDROP: <span style='color:red'>+10</span>",
+      "DropdownDescription": "▲ DMG+-: <span style='color:green'>+40</span> • ▲ BSIZE: <span style='color:green'>+50%</span> • ▼ BDROP: <span style='color:red'>x10</span>",
       "DupeFilter": false,
       "DurabilityMult": 0,
       "DurabilityUsage": 1,
@@ -18418,7 +20090,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Spartan Oil": {
       "ADSCritChance": 0,
@@ -18509,7 +20189,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Speed Trade Oil": {
       "ADSCritChance": 0,
@@ -18600,7 +20288,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Spitter Oil": {
       "ADSCritChance": 0,
@@ -18691,7 +20387,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Spread Oil": {
       "ADSCritChance": 0,
@@ -18782,7 +20486,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Stability Oil": {
       "ADSCritChance": 0,
@@ -18873,7 +20585,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Stable Hip Oil": {
       "ADSCritChance": 0,
@@ -18964,7 +20684,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Stationary Oil": {
       "ADSCritChance": 0,
@@ -19055,7 +20783,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Stiffy Fit Oil": {
       "ADSCritChance": 0,
@@ -19146,7 +20882,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Stoic Oil": {
       "ADSCritChance": 0,
@@ -19237,7 +20981,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Suppressive Oil": {
       "ADSCritChance": 0,
@@ -19328,7 +21080,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Surgical Laser Oil": {
       "ADSCritChance": 0,
@@ -19419,7 +21179,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Synchronicity Oil": {
       "ADSCritChance": 0,
@@ -19510,7 +21278,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Tactical Oil": {
       "ADSCritChance": 0,
@@ -19601,7 +21377,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Tandem Oil": {
       "ADSCritChance": 0,
@@ -19692,7 +21476,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Task Oil": {
       "ADSCritChance": 0,
@@ -19783,7 +21575,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Tech Support Oil": {
       "ADSCritChance": 0,
@@ -19874,7 +21674,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Tension Oil": {
       "ADSCritChance": 0,
@@ -19965,7 +21773,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Terminator Oil": {
       "ADSCritChance": 0,
@@ -20056,7 +21872,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Tetrus Oil": {
       "ADSCritChance": 0,
@@ -20147,7 +21971,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Thorough Oil": {
       "ADSCritChance": 0,
@@ -20238,7 +22070,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Tight Barrel Oil": {
       "ADSCritChance": 0,
@@ -20329,7 +22169,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Tight Oil": {
       "ADSCritChance": 0,
@@ -20420,7 +22268,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Too Much Oil": {
       "ADSCritChance": 0,
@@ -20511,7 +22367,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Trusty Old Oil": {
       "ADSCritChance": 0,
@@ -20602,7 +22466,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Turbulence Oil": {
       "ADSCritChance": 0,
@@ -20693,7 +22565,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Twice Oil": {
       "ADSCritChance": 0,
@@ -20784,7 +22664,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Two Time Oil": {
       "ADSCritChance": 0,
@@ -20875,7 +22763,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Untechnical Oil": {
       "ADSCritChance": 0,
@@ -20966,7 +22862,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Vasectomy Oil": {
       "ADSCritChance": 0,
@@ -21057,7 +22961,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Vegan Oil": {
       "ADSCritChance": 0,
@@ -21148,7 +23060,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Vegetable Oil": {
       "ADSCritChance": 0,
@@ -21239,7 +23159,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Velocity Oil": {
       "ADSCritChance": 0,
@@ -21330,7 +23258,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Walk Easy Oil": {
       "ADSCritChance": 0,
@@ -21421,7 +23357,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Waster Oil": {
       "ADSCritChance": 0,
@@ -21512,7 +23456,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Whim Oil": {
       "ADSCritChance": 0,
@@ -21603,7 +23555,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Whos Counting Oil": {
       "ADSCritChance": 0,
@@ -21694,7 +23654,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Wobble Oil": {
       "ADSCritChance": 0,
@@ -21785,7 +23753,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Xanny Oil": {
       "ADSCritChance": 0,
@@ -21876,7 +23852,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Zero Fucks Oil": {
       "ADSCritChance": 0,
@@ -21967,7 +23951,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Zooming Oil": {
       "ADSCritChance": 0,
@@ -22058,7 +24050,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizeNegative": 1,
+      "BulletSizePositive": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     }
   }
 }

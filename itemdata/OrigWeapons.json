@@ -227,8 +227,8 @@
       "TotalCritChance": 0,
       "TotalDamage": 0,
       "Type": "Pistol",
-      "WeaponWeight": 5,
-      "WeightClassFactor": 0.95
+      "WeaponWeight": 8,
+      "WeightClassFactor": 0.92
     },
     "Breacher 8": {
       "ADSCritChance": 0,
@@ -246,7 +246,7 @@
       "DurabilityUsage": 1,
       "ExtraAmmoUseChance": 0,
       "FinalMovementSpeed": 1,
-      "Firemode": "Single",
+      "Firemode": "Static Single",
       "JumpPower": 1,
       "LootDropChance": 1,
       "MagSize": 8,
@@ -453,7 +453,7 @@
       "RPM": 400,
       "Spread": 0,
       "Spread12ga": 7,
-      "SpreadOther": 2.5,
+      "SpreadOther": 3,
       "TotalCritChance": 0,
       "TotalDamage": 0,
       "Type": "Light Machine Gun",
@@ -2224,7 +2224,7 @@
       "DurabilityUsage": 1,
       "ExtraAmmoUseChance": 0,
       "FinalMovementSpeed": 1,
-      "Firemode": "Single",
+      "Firemode": "Static Single",
       "JumpPower": 1,
       "LootDropChance": 1,
       "MagSize": 18,

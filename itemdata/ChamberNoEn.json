@@ -93,7 +93,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Chamber Chisel - 12Ga": {
       "ADSCritChance": 0,
@@ -188,7 +196,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Chamber Chisel - 5.56mm": {
       "ADSCritChance": 0,
@@ -283,7 +299,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Chamber Chisel - 7.62mm": {
       "ADSCritChance": 0,
@@ -378,7 +402,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Chamber Chisel - 9mm": {
       "ADSCritChance": 0,
@@ -473,7 +505,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "None": {
       "ADSCritChance": 0,
@@ -565,7 +605,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     },
     "Random Chamber": {
       "ADSCritChance": 0,
@@ -657,7 +705,15 @@
       "TypePositive3": "None",
       "TypePositive4": "None",
       "TypePositive5": "None",
-      "WeaponWeightModifier": 0
+      "WeaponWeightModifier": 0,
+      "MeleeDamageMultEquip": 0,
+      "BulletSizePositive": 1,
+      "BulletSizeNegative": 1,
+      "SwimSpeedEquipment": 0,
+      "JumpPowerEquipment": 0,
+      "SprintSpeedEquipment": 0,
+      "MoveAccuracyEquipment": 0,
+      "ExtraJumpsMult": 0
     }
   }
 }

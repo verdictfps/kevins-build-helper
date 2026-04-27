@@ -1,6 +1,6 @@
 
-let newField = "TypeNegative5";
-let newDefault = "None";
+let newField = "ExtraJumpsMult";
+let newDefault = 0;
 
 function oilField() {
     console.log("-------------------Starting Oils-------------------");
