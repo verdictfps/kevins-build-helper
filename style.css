@@ -283,6 +283,17 @@ body {
     padding: 0px !important;
     align-items: center;
 }
+.build-chooser-button-div-mobile {
+    border-radius: 5px;
+    border: 1px solid #FDB142;
+    margin: 0px !important;
+    min-height: 5vh;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0px !important;
+    align-items: center;
+    margin-top: 5px !important;
+}
 .build-shuffle-button-div {
     border-radius: 5px;
     border: 1px solid #FDB142;
@@ -1318,6 +1329,20 @@ select.custom-dropdown {
     flex-direction: column;
 }
 
+.secondpagediv-screen-mobile {
+    border: 0px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 20vh;
+    margin-right: 10px !important;
+    justify-content: space-between;
+    padding-bottom: 1vh !important;
+    flex-direction: column;
+}
+
 .secondpagediv-mobile {
     border: 0px !important;
     margin: 5px !important;
@@ -1530,9 +1555,6 @@ select.custom-dropdown {
 }
 
 @media (max-width: 1700px) {
-  .cardStat {
-    font-size: 0.7vw !important;
-  }
   #screenbutton1 {
     font-size: 12px !important;
   }
@@ -1545,7 +1567,32 @@ select.custom-dropdown {
   .oils {
     font-size: 0.8vw !important;
   }
+
   
+}
+
+@media (max-width: 1800px) {
+  #guncardgrid1 {
+    min-height: 0 !important;
+  }
+  #guncardgrid2 {
+    min-height: 0 !important;
+  }
+  #guncardgrid3 {
+    min-height: 0 !important;
+  }
+  #guncardgrid4 {
+    min-height: 0 !important;
+  }
+  .cardStat {
+    font-size: 0.5vw !important;
+  }
+}
+
+@media (min-width: 2000px) {
+  .cardStat {
+    font-size: 0.5vw !important;
+  }
 }
 
 .stat-text {

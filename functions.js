@@ -219,8 +219,8 @@ function mobileCSS() {
         document.getElementById("extendstatbox").style.marginLeft = "10px";
         document.getElementById("extendstatbox").style.marginRight = "10px";
 
-        document.getElementById("build-chooser-button-div").style.marginLeft = "0";
-        document.getElementById("build-chooser-button-div").style.marginTop = "15px";
+        document.getElementById("build-chooser-button-div").classList.add("build-chooser-button-div-mobile");
+        document.getElementById("build-chooser-button-div").classList.remove("build-chooser-button-div");
 
         document.getElementById("boxglowthing").style.height = "125px";
 
@@ -2082,46 +2082,48 @@ function scrollToTop() {
 // Screenshots
 async function captureElement(activated, save) {
 
-    document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
-    document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
-    document.getElementById("oilstatcontainer3").classList.remove("spinanimation");
-    document.getElementById("oilstatcontainer4").classList.remove("spinanimation");
-    document.getElementById("oilstatcontainer5").classList.remove("spinanimation");
-
-    document.getElementById("cardOil1Img").classList.remove("otherspinanimation");
-    document.getElementById("cardOil2Img").classList.remove("otherspinanimation");
-    document.getElementById("cardOil3Img").classList.remove("otherspinanimation");
-    document.getElementById("cardOil4Img").classList.remove("otherspinanimation");
-    document.getElementById("cardOil5Img").classList.remove("otherspinanimation");
-
-    document.getElementById("boxglowthing").classList.remove("boxglowthing");
-    document.getElementById("otherboxthing").classList.remove("otherboxthing");
-    document.getElementById("weaponimage").classList.remove("weaponimage");
-    document.getElementById("weaponimage").classList.add("weaponimage2");
-
-    document.getElementById("buttonTakeScreenshot").classList.remove("buttonSaveLoad");
-    document.getElementById("buttonSaveScreenshot").classList.remove("buttonSaveLoad");
-    document.getElementById("buttonCopyBuildLink").classList.remove("buttonSaveLoad");
-    document.getElementById("buttonTakeScreenshot").classList.add("buttonSaveLoadScreen");
-    document.getElementById("buttonSaveScreenshot").classList.add("buttonSaveLoadScreen");
-    document.getElementById("buttonCopyBuildLink").classList.add("buttonSaveLoadScreen");
-    document.getElementById("buttonTakeScreenshot").style.height = "30px";
-    document.getElementById("buttonSaveScreenshot").style.height = "30px";
-    document.getElementById("buttonCopyBuildLink").style.height = "30px";
-    document.getElementById("buttonTakeScreenshot").style.marginBottom = "0px";
-    document.getElementById("buttonSaveScreenshot").style.marginBottom = "0px";
-    document.getElementById("buttonSaveScreenshot").style.marginRight = "0px";
-    document.getElementById("buttonCopyBuildLink").style.marginBottom = "0px";
-
-    document.getElementById("bigboxdeals").classList.remove("bigboxdeals");
-    document.getElementById("bigboxdeals").classList.add("bigboxdeals-screen");
-
-    document.getElementById("secondpagediv").classList.remove("secondpagediv");
-    document.getElementById("secondpagediv").classList.add("secondpagediv-screen");
-
-    document.getElementById("containerglass").style.opacity = "30%";
+    
 
     if (isMobile === false) {
+        document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
+        document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
+        document.getElementById("oilstatcontainer3").classList.remove("spinanimation");
+        document.getElementById("oilstatcontainer4").classList.remove("spinanimation");
+        document.getElementById("oilstatcontainer5").classList.remove("spinanimation");
+
+        document.getElementById("cardOil1Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil2Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil3Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil4Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil5Img").classList.remove("otherspinanimation");
+
+        document.getElementById("boxglowthing").classList.remove("boxglowthing");
+        document.getElementById("otherboxthing").classList.remove("otherboxthing");
+        document.getElementById("weaponimage").classList.remove("weaponimage");
+        document.getElementById("weaponimage").classList.add("weaponimage2");
+
+        document.getElementById("buttonTakeScreenshot").classList.remove("buttonSaveLoad");
+        document.getElementById("buttonSaveScreenshot").classList.remove("buttonSaveLoad");
+        document.getElementById("buttonCopyBuildLink").classList.remove("buttonSaveLoad");
+        document.getElementById("buttonTakeScreenshot").classList.add("buttonSaveLoadScreen");
+        document.getElementById("buttonSaveScreenshot").classList.add("buttonSaveLoadScreen");
+        document.getElementById("buttonCopyBuildLink").classList.add("buttonSaveLoadScreen");
+        document.getElementById("buttonTakeScreenshot").style.height = "30px";
+        document.getElementById("buttonSaveScreenshot").style.height = "30px";
+        document.getElementById("buttonCopyBuildLink").style.height = "30px";
+        document.getElementById("buttonTakeScreenshot").style.marginBottom = "0px";
+        document.getElementById("buttonSaveScreenshot").style.marginBottom = "0px";
+        document.getElementById("buttonSaveScreenshot").style.marginRight = "0px";
+        document.getElementById("buttonCopyBuildLink").style.marginBottom = "0px";
+
+        document.getElementById("bigboxdeals").classList.remove("bigboxdeals");
+        document.getElementById("bigboxdeals").classList.add("bigboxdeals-screen");
+
+        document.getElementById("secondpagediv").classList.remove("secondpagediv");
+        document.getElementById("secondpagediv").classList.add("secondpagediv-screen");
+
+        document.getElementById("containerglass").style.opacity = "30%";
+        
         document.getElementById("screenshotcontainer").style.backgroundColor = "#2D424B";
         const node = document.getElementById("extendstatbox");
         const clone = node.cloneNode(true);
@@ -2137,38 +2139,97 @@ async function captureElement(activated, save) {
         clone.remove();
         clone1.remove();
         node1.style.display = "";
+
+        document.getElementById("bigboxdeals").classList.remove("bigboxdeals-screen");
+        document.getElementById("bigboxdeals").classList.add("bigboxdeals");
+        document.getElementById("secondpagediv").classList.remove("secondpagediv-screen");
+        document.getElementById("secondpagediv").classList.add("secondpagediv");
+        document.getElementById("containerglass").style.opacity = "100%";
+        document.getElementById("targetme").style.backgroundColor = "";
+        document.getElementById("boxglowthing").classList.add("boxglowthing");
+        document.getElementById("otherboxthing").classList.add("otherboxthing");
+        document.getElementById("weaponimage").classList.add("weaponimage");
+        document.getElementById("weaponimage").classList.remove("weaponimage2");
+        document.getElementById("buttonTakeScreenshot").classList.remove("buttonSaveLoadScreen");
+        document.getElementById("buttonSaveScreenshot").classList.remove("buttonSaveLoadScreen");
+        document.getElementById("buttonCopyBuildLink").classList.remove("buttonSaveLoadScreen");
+        document.getElementById("buttonTakeScreenshot").classList.add("buttonSaveLoad");
+        document.getElementById("buttonSaveScreenshot").classList.add("buttonSaveLoad");
+        document.getElementById("buttonCopyBuildLink").classList.add("buttonSaveLoad");
+        document.getElementById("buttonTakeScreenshot").style.height = "27px";
+        document.getElementById("buttonSaveScreenshot").style.height = "27px";
+        document.getElementById("buttonCopyBuildLink").style.height = "27px";
+        document.getElementById("buttonTakeScreenshot").style.marginBottom = "4px";
+        document.getElementById("buttonSaveScreenshot").style.marginBottom = "4px";
+        document.getElementById("buttonSaveScreenshot").style.marginRight = "4px";
+        document.getElementById("buttonCopyBuildLink").style.marginBottom = "4px";
     }
     else {
+        document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
+        document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
+        document.getElementById("oilstatcontainer3").classList.remove("spinanimation");
+        document.getElementById("oilstatcontainer4").classList.remove("spinanimation");
+        document.getElementById("oilstatcontainer5").classList.remove("spinanimation");
+
+        document.getElementById("cardOil1Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil2Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil3Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil4Img").classList.remove("otherspinanimation");
+        document.getElementById("cardOil5Img").classList.remove("otherspinanimation");
+
+        document.getElementById("boxglowthing").classList.remove("boxglowthing");
+        document.getElementById("otherboxthing").classList.remove("otherboxthing");
+        document.getElementById("weaponimage").classList.remove("weaponimage");
+        document.getElementById("weaponimage").classList.add("weaponimage2");
+
+        document.getElementById("buttonTakeScreenshot").classList.remove("buttonSaveLoad");
+        document.getElementById("buttonSaveScreenshot").classList.remove("buttonSaveLoad");
+        document.getElementById("buttonCopyBuildLink").classList.remove("buttonSaveLoad");
+        document.getElementById("buttonTakeScreenshot").classList.add("buttonSaveLoadScreen");
+        document.getElementById("buttonSaveScreenshot").classList.add("buttonSaveLoadScreen");
+        document.getElementById("buttonCopyBuildLink").classList.add("buttonSaveLoadScreen");
+        document.getElementById("buttonTakeScreenshot").style.height = "30px";
+        document.getElementById("buttonSaveScreenshot").style.height = "30px";
+        document.getElementById("buttonCopyBuildLink").style.height = "30px";
+        document.getElementById("buttonTakeScreenshot").style.marginBottom = "0px";
+        document.getElementById("buttonSaveScreenshot").style.marginBottom = "0px";
+        document.getElementById("buttonSaveScreenshot").style.marginRight = "0px";
+        document.getElementById("buttonCopyBuildLink").style.marginBottom = "0px";
+
+        document.getElementById("secondpagediv").classList.remove("secondpagediv-mobile");
+        document.getElementById("secondpagediv").classList.add("secondpagediv-screen-mobile");
+
+        document.getElementById("containerglass").style.opacity = "30%";
+
         document.getElementById("targetcontainer").style.backgroundColor = "#2D424B";
         document.getElementById("mobilearrow").style.display = "none";
+        document.getElementById("build-chooser-button-div").style.display = "none";
+
         await takeScreenshot(activated, save, "targetcontainer");
-        mobileCSS();
+        
+        document.getElementById("build-chooser-button-div").style.display = "";
+        document.getElementById("secondpagediv").classList.remove("secondpagediv-screen-mobile");
+        document.getElementById("secondpagediv").classList.add("secondpagediv-mobile");
+        document.getElementById("containerglass").style.opacity = "100%";
+        document.getElementById("targetme").style.backgroundColor = "";
+        document.getElementById("boxglowthing").classList.add("boxglowthing");
+        document.getElementById("otherboxthing").classList.add("otherboxthing");
+        document.getElementById("weaponimage").classList.add("weaponimage");
+        document.getElementById("weaponimage").classList.remove("weaponimage2");
+        document.getElementById("buttonTakeScreenshot").classList.remove("buttonSaveLoadScreen");
+        document.getElementById("buttonSaveScreenshot").classList.remove("buttonSaveLoadScreen");
+        document.getElementById("buttonCopyBuildLink").classList.remove("buttonSaveLoadScreen");
+        document.getElementById("buttonTakeScreenshot").classList.add("buttonSaveLoad");
+        document.getElementById("buttonSaveScreenshot").classList.add("buttonSaveLoad");
+        document.getElementById("buttonCopyBuildLink").classList.add("buttonSaveLoad");
+        document.getElementById("buttonTakeScreenshot").style.height = "27px";
+        document.getElementById("buttonSaveScreenshot").style.height = "27px";
+        document.getElementById("buttonCopyBuildLink").style.height = "27px";
+        document.getElementById("buttonTakeScreenshot").style.marginBottom = "4px";
+        document.getElementById("buttonSaveScreenshot").style.marginBottom = "4px";
+        document.getElementById("buttonSaveScreenshot").style.marginRight = "4px";
+        document.getElementById("buttonCopyBuildLink").style.marginBottom = "4px";
     }
-    
-    
-    document.getElementById("bigboxdeals").classList.remove("bigboxdeals-screen");
-    document.getElementById("bigboxdeals").classList.add("bigboxdeals");
-    document.getElementById("secondpagediv").classList.remove("secondpagediv-screen");
-    document.getElementById("secondpagediv").classList.add("secondpagediv");
-    document.getElementById("containerglass").style.opacity = "100%";
-    document.getElementById("targetme").style.backgroundColor = "";
-    document.getElementById("boxglowthing").classList.add("boxglowthing");
-    document.getElementById("otherboxthing").classList.add("otherboxthing");
-    document.getElementById("weaponimage").classList.add("weaponimage");
-    document.getElementById("weaponimage").classList.remove("weaponimage2");
-    document.getElementById("buttonTakeScreenshot").classList.remove("buttonSaveLoadScreen");
-    document.getElementById("buttonSaveScreenshot").classList.remove("buttonSaveLoadScreen");
-    document.getElementById("buttonCopyBuildLink").classList.remove("buttonSaveLoadScreen");
-    document.getElementById("buttonTakeScreenshot").classList.add("buttonSaveLoad");
-    document.getElementById("buttonSaveScreenshot").classList.add("buttonSaveLoad");
-    document.getElementById("buttonCopyBuildLink").classList.add("buttonSaveLoad");
-    document.getElementById("buttonTakeScreenshot").style.height = "27px";
-    document.getElementById("buttonSaveScreenshot").style.height = "27px";
-    document.getElementById("buttonCopyBuildLink").style.height = "27px";
-    document.getElementById("buttonTakeScreenshot").style.marginBottom = "4px";
-    document.getElementById("buttonSaveScreenshot").style.marginBottom = "4px";
-    document.getElementById("buttonSaveScreenshot").style.marginRight = "4px";
-    document.getElementById("buttonCopyBuildLink").style.marginBottom = "4px";
 }
 
 function takeScreenshot(activated, save, target2) {
