@@ -144,6 +144,7 @@
             scroll-snap-type: x mandatory;
             scroll-snap-align: center;
             overflow-x: auto;
+            overflow-y: hidden;
         }
 
             .container-mobile div {
@@ -274,7 +275,7 @@
             }
         .oilresultcontainer-mobile {
             display: grid;
-            grid-template-columns: 25% 18.75% 18.75% 18.75% 18.75%;
+            grid-template-columns: 20% 20% 20% 20% 20%;
             background-color: #2D424B;
             margin-top: 25px !important;
             border-radius: 5px;
@@ -1061,11 +1062,8 @@
                                         <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Effective Magazine Size, calculated based on Ammo Consume Chance, Extra Ammo Use Chance, and base Mag Size. Can be Infinity.')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600; margin: 0em; padding: 0em; width: 100%; white-space: wrap;">Eff. Mag Size <br><span style="font-weight:400" class="compLabel" id="cardEffMagSize"></span></p>
                                     </div>
                                 </div>
-                                <p class="card-cat-header" style="width: auto; border-radius: 0px 15px 0px 0px; margin-top: 0px; margin-left: 1px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 5px; background-color:#FDB142; color:black; font-weight: 600; height: auto; position-anchor: --weapon-anchor; border-right: 2px solid black; border-top: 2px solid black; border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142; position: fixed; left: anchor(left); bottom: anchor(top);">Weapon Behavior</p>
                             </div>
                             <div id="guncardgrid2" style="padding-left: 0px; height: auto; border-left: 0px solid #FDB142; border-right: 1px solid #FDB142; justify-content:space-between; border-bottom: 0px; border-top: 2px solid black; padding-bottom: 0px; anchor-name: --crit-anchor; min-height: 25vh; width: 20%; display: flex; flex-wrap: wrap; gap: 1px; padding-right: 0;">
-                                <p class="card-cat-header" style="width: auto; border-radius: 0px 0px 15px 0px; margin-top: 0px; margin-left: 0px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; background-color:#FDB142; color:black; font-weight: 600; position-anchor: --crit-anchor; position: fixed; left: anchor(left); top: anchor(top); border-right: 2px solid black; border-bottom: 2px solid black; border-left: 1px solid #FDB142; border-top: 1px solid #FDB142;">Crit Chance</p>
-                                <p class="card-cat-header" style="width: auto; border-radius: 0px 0px 0px 15px; padding-left: 5px; margin-top: 0px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; margin-bottom: 1px; background-color:#FDB142; color:black; font-weight: 600; border-left: 2px solid black; border-bottom: 2px solid black; position-anchor:  --crit-anchor; position: fixed; right: anchor(right); top: anchor(top); border-top: 1px solid #FDB142; border-right: 1px solid #FDB142;">Loot Drops</p>
                                 <div class="statbox" style="display: flex; justify-content:space-between; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; gap: 1px; border: 0px; border-bottom: 0px solid #FDB142; padding: 0px; padding-top: 15px; padding-left: 0px; padding-right: 0px; padding-bottom: 10px; height: auto; width: 100%;">
                                     <div class="cardDiv" style="display: flex; justify-content:left; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; margin: 0px; width: 45%">
                                         <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'Weapon\'s Base Crit Chance. Caps at 100%.')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600; margin: 0em; padding: 0em; width: 100%; white-space: wrap">Base <br></r><span style="font-weight:400" class="compLabel" id="cardCrit"></span><span style="font-weight:400" class="compLabel" id="cardCrit%"></span><span id="cardCritArrow"></span></p>
@@ -1085,7 +1083,6 @@
                                         <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'The Weapon\'s ability to cause general Loot drops. Does NOT influence Money and Organ drops.')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600; margin: 0em; padding: 0em; width: 100%; white-space: wrap">Loot% <br><span style="font-weight:400" class="compLabel" id="cardLoot"></span><span style="font-weight:400" class="compLabel" id="cardLoot%"></span><span id="cardLootArrow"></span><span id="cardLootspace"> </span></p>
                                     </div>
                                 </div>
-                                    <p class="card-cat-header" style="width: auto; border-radius: 0px 15px 0px 0px; margin-top: 5px; margin-left: 0px; margin-bottom: 1px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; background-color:#FDB142; color:black; font-weight: 600; border-right: 2px solid black; border-top: 2px solid black; position-anchor: --movement-anchor; position: fixed; left: anchor(left); bottom: anchor(top); border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142;">Movement</p>
                                 
                                 <div class="statbox" style="display: flex; justify-content:space-between; anchor-name: --movement-anchor; align-items: center; padding: 0px; border: 0px; flex-wrap: wrap; gap: 1px; border: 0px; border-top: 1px solid #FDB142;padding: 0px; padding-top: 0px; padding-left: 0px; padding-right: 0px; padding-bottom: 10px; height: auto; width: 100%;">
                                     
@@ -1100,7 +1097,6 @@
                                         <div class="cardDiv" style="display: flex; justify-content:left; align-items: center; border: 0px; flex-wrap: wrap; margin: 0px; width: 45%">
                                             <p class= "cardStat" onmouseover="infoboxHover('stat', 0, 0, 'The Weapon\'s Weight. For a quick mental calc, the weight can be used as a percent reduction from 100% movement speed.')" onmouseout="infoboxClear()" style="font-size: 0.85em; font-weight:600; margin: 0em; margin-top: 0px; padding: 0em; padding-top: 0px; width: 100%; white-space: wrap">Wpn Weight <span id="cardWeightLBrac" class="compLabel" style="font-weight:200"></span><span id="cardWeightComp" class="compLabel" style="font-weight:200"></span><span id="cardWeightRBrac" class="compLabel" style="font-weight:200"></span><br><span style="font-weight:400" class="compLabel" id="cardWeight"></span><span id="cardWeightArrow"></span><span id="cardWeightspace"> </span></p>
                                         </div>
-                                    <p class="card-cat-header" style="width: auto; border-radius: 0px 15px 0px 0px; margin-top: -3px; margin-left: 0px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 5px; background-color:#FDB142; color:black; font-weight: 600; position-anchor: --bullet-anchor; border-right: 2px solid black; border-top: 2px solid black; position: fixed; left: anchor(left); bottom: anchor(top); border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142;">Bullet Behavior</p>
                                 </div>
                             </div>
                             <div id="guncardgrid3" style="border: 0px; height:100%; max-height: 100%; background-color: #FDB142; padding-left: 0; padding-bottom: 0px; padding-right: 0; padding-top: 0px; z-index: 10; margin: 0px; anchor-name: --sliding2; display: flex; flex-wrap: wrap; width: 40%; min-width: 0; border-right: 1px solid #FDB142; border-bottom: 1px solid #FDB142;">
@@ -1598,7 +1594,12 @@
                                             </div>
                                         </div>
                                     </div>
-                            </div>
+                                </div>
+                                <p class="card-cat-header" style="width: auto; border-radius: 0px 0px 15px 0px; margin-top: 0px; margin-left: 0px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; background-color:#FDB142; color:black; font-weight: 600; position-anchor: --crit-anchor; position: fixed; left: anchor(left); top: anchor(top); border-right: 2px solid black; border-bottom: 2px solid black; border-left: 1px solid #FDB142; border-top: 1px solid #FDB142;">Crit Chance</p>
+                                <p class="card-cat-header" style="width: auto; border-radius: 0px 0px 0px 15px; padding-left: 5px; margin-top: 0px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; margin-bottom: 1px; background-color:#FDB142; color:black; font-weight: 600; border-left: 2px solid black; border-bottom: 2px solid black; position-anchor:  --crit-anchor; position: fixed; right: anchor(right); top: anchor(top); border-top: 1px solid #FDB142; border-right: 1px solid #FDB142;">Loot Drops</p>
+                                <p class="card-cat-header" style="width: auto; border-radius: 0px 15px 0px 0px; margin-top: -3px; margin-left: 0px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 5px; background-color:#FDB142; color:black; font-weight: 600; position-anchor: --bullet-anchor; border-right: 2px solid black; border-top: 2px solid black; position: fixed; left: anchor(left); bottom: anchor(top); border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142;">Bullet Behavior</p>
+                                <p class="card-cat-header" style="width: auto; border-radius: 0px 15px 0px 0px; margin-top: 5px; margin-left: 0px; margin-bottom: 1px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 15px; background-color:#FDB142; color:black; font-weight: 600; border-right: 2px solid black; border-top: 2px solid black; position-anchor: --movement-anchor; position: fixed; left: anchor(left); bottom: anchor(top); border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142;">Movement</p>
+                                <p class="card-cat-header" style="width: auto; border-radius: 0px 15px 0px 0px; margin-top: 0px; margin-left: 1px; margin-bottom: 0px; padding-left: 5px; padding-bottom: 4px; padding-top: 3px; padding-right: 5px; background-color:#FDB142; color:black; font-weight: 600; height: auto; position-anchor: --weapon-anchor; border-right: 2px solid black; border-top: 2px solid black; border-left: 1px solid #FDB142; border-bottom: 1px solid #FDB142; position: fixed; left: anchor(left); bottom: anchor(top);">Weapon Behavior</p>
                         </div>
                         
                     </div>

@@ -2121,23 +2121,31 @@ async function captureElement(activated, save) {
 
     document.getElementById("containerglass").style.opacity = "30%";
 
-    document.getElementById("screenshotcontainer").style.backgroundColor = "#2D424B";
+    if (isMobile === false) {
+        document.getElementById("screenshotcontainer").style.backgroundColor = "#2D424B";
+        const node = document.getElementById("extendstatbox");
+        const clone = node.cloneNode(true);
+        const node1 = document.getElementById("targetcontainer");
+        const clone1 = node1.cloneNode(true);
+        node1.style.display = "none";
+        clone1.childNodes[7].style.maxWidth = "68vw";
+        document.getElementById("screenshotcontainer").style.display = "grid";
+        document.getElementById("screenshotcontainer").append(clone1, clone); 
 
-    const node = document.getElementById("extendstatbox");
-    const clone = node.cloneNode(true);
-    const node1 = document.getElementById("targetcontainer");
-    const clone1 = node1.cloneNode(true);
-    node1.style.display = "none";
-    clone1.childNodes[7].style.maxWidth = "68vw";
+        await takeScreenshot(activated, save, "screenshotcontainer");
 
-    document.getElementById("screenshotcontainer").style.display = "grid";
-    document.getElementById("screenshotcontainer").append(clone1, clone); 
-
-    await takeScreenshot(activated, save);
-
-    clone.remove();
-    clone1.remove();
-    node1.style.display = "";
+        clone.remove();
+        clone1.remove();
+        node1.style.display = "";
+    }
+    else {
+        document.getElementById("targetcontainer").style.backgroundColor = "#2D424B";
+        document.getElementById("mobilearrow").style.display = "none";
+        await takeScreenshot(activated, save, "targetcontainer");
+        mobileCSS();
+    }
+    
+    
     document.getElementById("bigboxdeals").classList.remove("bigboxdeals-screen");
     document.getElementById("bigboxdeals").classList.add("bigboxdeals");
     document.getElementById("secondpagediv").classList.remove("secondpagediv-screen");
@@ -2163,13 +2171,15 @@ async function captureElement(activated, save) {
     document.getElementById("buttonCopyBuildLink").style.marginBottom = "4px";
 }
 
-function takeScreenshot(activated, save) {
-        let screeny = null;
-    const target = document.getElementById('screenshotcontainer');
+function takeScreenshot(activated, save, target2) {
+    let screeny = null;
+    const target = document.getElementById(target2);
     infoboxClear();
 
     html2canvas(target, {
-        scale: 1.4
+        scale: 1.4,
+        allowTaint: true,
+        removeContainer: true
         
     }).then(canvas => {
         canvas.toBlob((blob) => {
