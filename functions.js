@@ -20,6 +20,8 @@ function mobileCSS() {
 
         document.getElementById("mobileheaderbox").style.display = "flex";
 
+        document.getElementById("infoboxText").style.fontSize = "2vw";
+
         document.getElementById("mobilefooterbox").style.display = "flex";
 
         document.getElementById("mainbuildcontainer").classList.remove("container");
@@ -99,6 +101,9 @@ function mobileCSS() {
 
         document.getElementById("spacer1").style.display = "none";
         document.getElementById("spacer2").style.display = "none";
+
+        document.getElementById("overall-stats").style.display = "none";
+        document.getElementById("session-stats").style.display = "none";
 
         document.getElementById("oilequipwrapper").style.flexWrap = "wrap";
 
@@ -237,10 +242,11 @@ function mobileCSS() {
         let extend = document.getElementById("extendedstatscontainer2");
         let spacer3 = document.getElementById("spacer3");
         let mobilearrow = document.getElementById("mobilearrow");
+        let builddiv = document.getElementById("build-chooser-button-div");
 
         target.append(second, mobilearrow)
         mainbuild.append(bigbox, target, extend);
-        mobilebuild.append(tooltip);
+        mobilebuild.append(tooltip, builddiv);
 
         let buildcardrow1 = document.getElementById("buildcardrow1");
         let buildcardrow2 = document.getElementById("buildcardrow2");
@@ -2079,10 +2085,22 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function swapScreenshotMode() {
+    let mode = document.getElementById("screenshottype");
+    if (mode.textContent === "Simple") {
+        mode.textContent = "Ext";
+    }
+    else {
+        mode.textContent = "Simple";
+    }
+}
+
 // Screenshots
 async function captureElement(activated, save) {
-
     
+    let mode = document.getElementById("screenshottype");
+    let newtarget = null;
+    document.getElementById("helicoptermode").style.display = "none";
 
     if (isMobile === false) {
         document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
@@ -2102,19 +2120,8 @@ async function captureElement(activated, save) {
         document.getElementById("weaponimage").classList.remove("weaponimage");
         document.getElementById("weaponimage").classList.add("weaponimage2");
 
-        document.getElementById("buttonTakeScreenshot").classList.remove("buttonSaveLoad");
-        document.getElementById("buttonSaveScreenshot").classList.remove("buttonSaveLoad");
-        document.getElementById("buttonCopyBuildLink").classList.remove("buttonSaveLoad");
-        document.getElementById("buttonTakeScreenshot").classList.add("buttonSaveLoadScreen");
-        document.getElementById("buttonSaveScreenshot").classList.add("buttonSaveLoadScreen");
-        document.getElementById("buttonCopyBuildLink").classList.add("buttonSaveLoadScreen");
-        document.getElementById("buttonTakeScreenshot").style.height = "30px";
-        document.getElementById("buttonSaveScreenshot").style.height = "30px";
-        document.getElementById("buttonCopyBuildLink").style.height = "30px";
-        document.getElementById("buttonTakeScreenshot").style.marginBottom = "0px";
-        document.getElementById("buttonSaveScreenshot").style.marginBottom = "0px";
-        document.getElementById("buttonSaveScreenshot").style.marginRight = "0px";
-        document.getElementById("buttonCopyBuildLink").style.marginBottom = "0px";
+        document.getElementById("sharingbar").style.display = "none";
+        document.getElementById("weaponnamebar").style.width = "100%";
 
         document.getElementById("bigboxdeals").classList.remove("bigboxdeals");
         document.getElementById("bigboxdeals").classList.add("bigboxdeals-screen");
@@ -2123,23 +2130,54 @@ async function captureElement(activated, save) {
         document.getElementById("secondpagediv").classList.add("secondpagediv-screen");
 
         document.getElementById("containerglass").style.opacity = "30%";
+
+        let node = null;
+        let clone = null;
+        let node1 = null;
+        let clone1 = null;
         
-        document.getElementById("screenshotcontainer").style.backgroundColor = "#2D424B";
-        const node = document.getElementById("extendstatbox");
-        const clone = node.cloneNode(true);
-        const node1 = document.getElementById("targetcontainer");
-        const clone1 = node1.cloneNode(true);
-        node1.style.display = "none";
-        clone1.childNodes[7].style.maxWidth = "68vw";
-        document.getElementById("screenshotcontainer").style.display = "grid";
-        document.getElementById("screenshotcontainer").append(clone1, clone); 
+        if (mode.textContent === "Simple") {
+            document.getElementById("containerheaders").classList.remove("containerheaders");
+            document.getElementById("containerheaders").classList.add("mobile-arrow");
+            document.getElementById("build-chooser-button-div").style.display = "none";
+            document.getElementById("targetme").style.backgroundColor = "#2D424B";
+            document.getElementById("targetme").classList.remove("build-card");
+            document.getElementById("targetme").classList.add("build-card-screen");
+            document.getElementById("oilequipwrapper").style.marginTop = "1px";
+            newtarget = "targetme";
+        }
+        else {
+            node = document.getElementById("extendstatbox");
+            clone = node.cloneNode(true);
+            node1 = document.getElementById("targetcontainer");
+            clone1 = node1.cloneNode(true);
+            node1.style.display = "none";
+            clone1.childNodes[7].style.maxWidth = "68vw";
+            document.getElementById("screenshotcontainer").style.display = "grid";
+            document.getElementById("screenshotcontainer").append(clone1, clone);
+            document.getElementById("screenshotcontainer").style.backgroundColor = "#2D424B";
+            newtarget = "screenshotcontainer";
+        }
 
-        await takeScreenshot(activated, save, "screenshotcontainer");
+        await takeScreenshot(activated, save, newtarget);
 
-        clone.remove();
-        clone1.remove();
-        node1.style.display = "";
+        if (mode.textContent === "Simple") {
+            document.getElementById("containerheaders").classList.remove("mobile-arrow");
+            document.getElementById("containerheaders").classList.add("containerheaders");
+            document.getElementById("build-chooser-button-div").style.display = "";
+            document.getElementById("targetme").style.backgroundColor = "";
+            document.getElementById("targetme").classList.remove("build-card-screen");
+            document.getElementById("targetme").classList.add("build-card");
+            document.getElementById("oilequipwrapper").style.marginTop = "0";
+        }
+        else {
+            clone.remove();
+            clone1.remove();
+            node1.style.display = "";
+        }
 
+        document.getElementById("sharingbar").style.display = "flex";
+        document.getElementById("weaponnamebar").style.width = "30%";
         document.getElementById("bigboxdeals").classList.remove("bigboxdeals-screen");
         document.getElementById("bigboxdeals").classList.add("bigboxdeals");
         document.getElementById("secondpagediv").classList.remove("secondpagediv-screen");
@@ -2150,19 +2188,6 @@ async function captureElement(activated, save) {
         document.getElementById("otherboxthing").classList.add("otherboxthing");
         document.getElementById("weaponimage").classList.add("weaponimage");
         document.getElementById("weaponimage").classList.remove("weaponimage2");
-        document.getElementById("buttonTakeScreenshot").classList.remove("buttonSaveLoadScreen");
-        document.getElementById("buttonSaveScreenshot").classList.remove("buttonSaveLoadScreen");
-        document.getElementById("buttonCopyBuildLink").classList.remove("buttonSaveLoadScreen");
-        document.getElementById("buttonTakeScreenshot").classList.add("buttonSaveLoad");
-        document.getElementById("buttonSaveScreenshot").classList.add("buttonSaveLoad");
-        document.getElementById("buttonCopyBuildLink").classList.add("buttonSaveLoad");
-        document.getElementById("buttonTakeScreenshot").style.height = "27px";
-        document.getElementById("buttonSaveScreenshot").style.height = "27px";
-        document.getElementById("buttonCopyBuildLink").style.height = "27px";
-        document.getElementById("buttonTakeScreenshot").style.marginBottom = "4px";
-        document.getElementById("buttonSaveScreenshot").style.marginBottom = "4px";
-        document.getElementById("buttonSaveScreenshot").style.marginRight = "4px";
-        document.getElementById("buttonCopyBuildLink").style.marginBottom = "4px";
     }
     else {
         document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
@@ -2182,19 +2207,8 @@ async function captureElement(activated, save) {
         document.getElementById("weaponimage").classList.remove("weaponimage");
         document.getElementById("weaponimage").classList.add("weaponimage2");
 
-        document.getElementById("buttonTakeScreenshot").classList.remove("buttonSaveLoad");
-        document.getElementById("buttonSaveScreenshot").classList.remove("buttonSaveLoad");
-        document.getElementById("buttonCopyBuildLink").classList.remove("buttonSaveLoad");
-        document.getElementById("buttonTakeScreenshot").classList.add("buttonSaveLoadScreen");
-        document.getElementById("buttonSaveScreenshot").classList.add("buttonSaveLoadScreen");
-        document.getElementById("buttonCopyBuildLink").classList.add("buttonSaveLoadScreen");
-        document.getElementById("buttonTakeScreenshot").style.height = "30px";
-        document.getElementById("buttonSaveScreenshot").style.height = "30px";
-        document.getElementById("buttonCopyBuildLink").style.height = "30px";
-        document.getElementById("buttonTakeScreenshot").style.marginBottom = "0px";
-        document.getElementById("buttonSaveScreenshot").style.marginBottom = "0px";
-        document.getElementById("buttonSaveScreenshot").style.marginRight = "0px";
-        document.getElementById("buttonCopyBuildLink").style.marginBottom = "0px";
+        document.getElementById("sharingbar").style.display = "none";
+        document.getElementById("weaponnamebar").style.width = "100%";
 
         document.getElementById("secondpagediv").classList.remove("secondpagediv-mobile");
         document.getElementById("secondpagediv").classList.add("secondpagediv-screen-mobile");
@@ -2205,8 +2219,31 @@ async function captureElement(activated, save) {
         document.getElementById("mobilearrow").style.display = "none";
         document.getElementById("build-chooser-button-div").style.display = "none";
 
-        await takeScreenshot(activated, save, "targetcontainer");
+        let node = null;
+        let clone = null;
+        let node1 = null;
+        let clone1 = null;
         
+        if (mode.textContent === "Simple") {
+            document.getElementById("extendstatbox").style.display = "none";
+            document.getElementById("targetme").style.backgroundColor = "#2D424B";
+            document.getElementById("oilequipwrapper").style.marginTop = "1px";
+            newtarget = "targetme";
+        }
+        else {
+            newtarget = "targetcontainer";
+        }
+
+        await takeScreenshot(activated, save, newtarget);
+
+        if (mode.textContent === "Simple") {
+            document.getElementById("extendstatbox").style.display = "";
+            document.getElementById("targetme").style.backgroundColor = "";
+            document.getElementById("oilequipwrapper").style.marginTop = "0";
+        }
+        
+        document.getElementById("sharingbar").style.display = "flex";
+        document.getElementById("weaponnamebar").style.width = "30%";
         document.getElementById("build-chooser-button-div").style.display = "";
         document.getElementById("secondpagediv").classList.remove("secondpagediv-screen-mobile");
         document.getElementById("secondpagediv").classList.add("secondpagediv-mobile");
@@ -2216,23 +2253,12 @@ async function captureElement(activated, save) {
         document.getElementById("otherboxthing").classList.add("otherboxthing");
         document.getElementById("weaponimage").classList.add("weaponimage");
         document.getElementById("weaponimage").classList.remove("weaponimage2");
-        document.getElementById("buttonTakeScreenshot").classList.remove("buttonSaveLoadScreen");
-        document.getElementById("buttonSaveScreenshot").classList.remove("buttonSaveLoadScreen");
-        document.getElementById("buttonCopyBuildLink").classList.remove("buttonSaveLoadScreen");
-        document.getElementById("buttonTakeScreenshot").classList.add("buttonSaveLoad");
-        document.getElementById("buttonSaveScreenshot").classList.add("buttonSaveLoad");
-        document.getElementById("buttonCopyBuildLink").classList.add("buttonSaveLoad");
-        document.getElementById("buttonTakeScreenshot").style.height = "27px";
-        document.getElementById("buttonSaveScreenshot").style.height = "27px";
-        document.getElementById("buttonCopyBuildLink").style.height = "27px";
-        document.getElementById("buttonTakeScreenshot").style.marginBottom = "4px";
-        document.getElementById("buttonSaveScreenshot").style.marginBottom = "4px";
-        document.getElementById("buttonSaveScreenshot").style.marginRight = "4px";
-        document.getElementById("buttonCopyBuildLink").style.marginBottom = "4px";
     }
+    document.getElementById("helicoptermode").style.display = "";
 }
 
 function takeScreenshot(activated, save, target2) {
+    let mode = document.getElementById("screenshottype");
     let screeny = null;
     const target = document.getElementById(target2);
     infoboxClear();

@@ -285,14 +285,15 @@ body {
 }
 .build-chooser-button-div-mobile {
     border-radius: 5px;
-    border: 1px solid #FDB142;
+    border: 0px;
     margin: 0px !important;
-    min-height: 5vh;
+    min-height: 4vh;
     display: flex;
     flex-wrap: nowrap;
     padding: 0px !important;
     align-items: center;
     margin-top: 5px !important;
+    width: 100%;
 }
 .build-shuffle-button-div {
     border-radius: 5px;
@@ -1545,6 +1546,23 @@ select.custom-dropdown {
     justify-content: space-between;
 }
 
+.build-card-screen {
+    border:0px !important;
+    margin-left:0px !important;
+    margin-right: 20px !important;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    padding: 0px !important;
+    position: fixed !important;
+    min-height: auto !important;
+    max-height: 98vh !important;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 10px !important;
+}
+
 @media (max-width: 1500px) {
     .containerattachdiv .desc {
         font-size: 0.6em !important;
@@ -1629,7 +1647,8 @@ select.custom-dropdown {
     background: linear-gradient(354deg,rgba(25, 38, 43, 1) 0%, rgba(105, 105, 105, 1) 43%, rgba(25, 38, 43, 1) 100%);
     height: 19.5dvh;
     border-bottom: 2px solid #232c2f;
-    box-shadow: 0px 5px 5px black
+    box-shadow: 0px 5px 5px black;
+    flex-wrap: wrap;
 }
 
 .mobile-footer-box {
