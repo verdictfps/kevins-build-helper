@@ -70,8 +70,8 @@
       "ReloadSpeed": 0,
       "RPM": 0,
       "RPMBaseShift": 0,
-      "ScoreNeg": 0,
-      "ScorePos": 0,
+      "ScoreNeg1": 0,
+      "ScorePos1": 0,
       "ScrollField": "None",
       "SearchDescription": "Gun Crank Firemode: Auto",
       "SelfDamage": "No",
@@ -98,7 +98,15 @@
       "JumpPowerEquipment": 0,
       "SprintSpeedEquipment": 0,
       "MoveAccuracyEquipment": 0,
-      "ExtraJumpsMult": 0
+      "ExtraJumpsMult": 0,
+      "ScorePos2": 0,
+      "ScorePos3": 0,
+      "ScorePos4": 0,
+      "ScorePos5": 0,
+      "ScoreNeg2": 0,
+      "ScoreNeg3": 0,
+      "ScoreNeg4": 0,
+      "ScoreNeg5": 0
     },
     "None": {
       "ADSCritChance": 0,
@@ -170,8 +178,8 @@
       "ReloadSpeed": 0,
       "RPM": 0,
       "RPMBaseShift": 0,
-      "ScoreNeg": 0,
-      "ScorePos": 0,
+      "ScoreNeg1": 0,
+      "ScorePos1": 0,
       "ScrollField": "None",
       "SearchDescription": "None None selected",
       "SelfDamage": "No",
@@ -198,7 +206,15 @@
       "JumpPowerEquipment": 0,
       "SprintSpeedEquipment": 0,
       "MoveAccuracyEquipment": 0,
-      "ExtraJumpsMult": 0
+      "ExtraJumpsMult": 0,
+      "ScorePos2": 0,
+      "ScorePos3": 0,
+      "ScorePos4": 0,
+      "ScorePos5": 0,
+      "ScoreNeg2": 0,
+      "ScoreNeg3": 0,
+      "ScoreNeg4": 0,
+      "ScoreNeg5": 0
     },
     "Priming Bolt": {
       "ADSCritChance": 0,
@@ -270,8 +286,8 @@
       "ReloadSpeed": 0,
       "RPM": 0,
       "RPMBaseShift": 0,
-      "ScoreNeg": 0,
-      "ScorePos": 0,
+      "ScoreNeg1": 0,
+      "ScorePos1": 0,
       "ScrollField": "None",
       "SearchDescription": "Priming Bolt Damage: +10%, Spread: -0.1, Firemode: Single",
       "SelfDamage": "No",
@@ -298,7 +314,15 @@
       "JumpPowerEquipment": 0,
       "SprintSpeedEquipment": 0,
       "MoveAccuracyEquipment": 0,
-      "ExtraJumpsMult": 0
+      "ExtraJumpsMult": 0,
+      "ScorePos2": 0,
+      "ScorePos3": 0,
+      "ScorePos4": 0,
+      "ScorePos5": 0,
+      "ScoreNeg2": 0,
+      "ScoreNeg3": 0,
+      "ScoreNeg4": 0,
+      "ScoreNeg5": 0
     }
   }
 }

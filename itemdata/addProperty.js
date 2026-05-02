@@ -1,5 +1,5 @@
 
-let newField = "ExtraJumpsMult";
+let newField = "ScoreNeg5";
 let newDefault = 0;
 
 function oilField() {

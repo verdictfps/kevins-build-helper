@@ -1025,8 +1025,6 @@ async function createProDropdown(select) {
         groupMode: "positive"
     };
 
-
-
     // ===== LOAD DATA =====
     if (select.classList.contains("scroll-dropdown")) {
         const data = await loadOilsScrolls();
@@ -1165,18 +1163,21 @@ async function createProDropdown(select) {
     const buttonAlph = document.createElement("button");
     if (isMobile === true) {
         buttonAlph.className = "custom-select-panel-button-mobile";
-        buttonAlph.innerHTML = "<span class='fa-solid fa-arrow-down-a-z' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto;'></span>"; 
+        buttonAlph.innerHTML = `<span id='${select.id}-sortalphbuttonicon' class='fa-solid fa-arrow-down-a-z sortfilterselected' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto;'></span>`; 
     }
     else {
         buttonAlph.className = "custom-select-panel-button";
-        buttonAlph.innerHTML = "<span class='fa-solid fa-arrow-down-a-z' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>";
+        buttonAlph.innerHTML = `<span id='${select.id}-sortalphbuttonicon' class='fa-solid fa-arrow-down-a-z sortfilterselected' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>`;
     }
+
+    buttonAlph.currentSort = "alphdefault";
+    buttonAlph.id = `${select.id}-sortalphbutton`;
     
     buttonAlph.addEventListener("click", () => {
-        filterChanger('default', select.id);
+        sortChanger(select, buttonAlph, buttonPos);
     });
     buttonAlph.addEventListener("mouseover", () => {
-        infoboxHover('button', 0, '', 'Sorts alphabetically');
+        infoboxHover('button', 0, '', 'Sorts alphabetically. Click again to sort in the opposite direction.');
     });
     buttonAlph.addEventListener("mouseout", () => {
         infoboxClear();
@@ -1186,43 +1187,50 @@ async function createProDropdown(select) {
     const buttonPos = document.createElement("button");
     if (isMobile === true) {
         buttonPos.className = "custom-select-panel-button-mobile";
-        buttonPos.innerHTML = "<span class='fa-solid fa-arrow-down-9-1' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto;'></span>";
+        buttonPos.innerHTML = `<span id='${select.id}-sortscorebuttonicon' class='fa-solid fa-arrow-down-9-1' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto;'></span>`;
     }
     else {
         buttonPos.className = "custom-select-panel-button";
-        buttonPos.innerHTML = "<span class='fa-solid fa-arrow-down-9-1' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>";
+        buttonPos.innerHTML = `<span id='${select.id}-sortscorebuttonicon' class='fa-solid fa-arrow-down-9-1' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>`;
     }
+
+    buttonPos.currentSort = "scorenull";
+    buttonPos.id = `${select.id}-sortscorebutton`;
     
     buttonPos.addEventListener("click", () => {
-        filterChanger('positive', select.id);
+        sortChanger(select, buttonPos, buttonAlph);
     });
     buttonPos.addEventListener("mouseover", () => {
-        infoboxHover('button', 0, '', 'Sorts by positive stat amount');
+        infoboxHover('button', 0, '', 'Sorts by stat amount. Click again to sort in the opposite direction.');
     });
     buttonPos.addEventListener("mouseout", () => {
         infoboxClear();
     });
 
-    // negative sort button
-    const buttonNeg = document.createElement("button");
+    // filter button
+    const buttonFilter = document.createElement("button");
     
     if (isMobile === true) {
-        buttonNeg.className = "custom-select-panel-button-mobile";
-        buttonNeg.innerHTML = "<span class='fa-solid fa-arrow-down-1-9' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto;'></span>";
+        buttonFilter.className = "custom-select-panel-button-mobile";
+        buttonFilter.innerHTML = "<span id='${select.id}-filterbuttonicon' class='fa-solid fa-filter' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto;'></span>";
     }
     else {
-        buttonNeg.className = "custom-select-panel-button";
-        buttonNeg.innerHTML = "<span class='fa-solid fa-arrow-down-1-9' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>";
+        buttonFilter.className = "custom-select-panel-button";
+        buttonFilter.innerHTML = "<span id='${select.id}-filterbuttonicon' class='fa-solid fa-filter' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>";
     }
-    buttonNeg.addEventListener("click", () => {
-        filterChanger('negative', select.id);
+
+    buttonFilter.currentFilter = "positive";
+
+    buttonFilter.addEventListener("click", () => {
+        filterChanger(buttonFilter, select);
     });
-    buttonNeg.addEventListener("mouseover", () => {
-        infoboxHover('button', 0, '', 'Sorts by negative stat amount');
+    buttonFilter.addEventListener("mouseover", () => {
+        infoboxHover('button', 0, '', 'Cycles through positive, negative, and no category group modes.');
     });
-    buttonNeg.addEventListener("mouseout", () => {
+    buttonFilter.addEventListener("mouseout", () => {
         infoboxClear();
     });
+    buttonFilter.id = `${select.id}-filterbutton`
 
     // close dropdown button
     const buttonClose = document.createElement("button");
@@ -1245,77 +1253,84 @@ async function createProDropdown(select) {
         infoboxClear();
     });
 
-    topRowSort.append(buttonAlph, buttonPos, buttonNeg);
+    // random-ass divider
+    const randomDivider = document.createElement("p");
+    randomDivider.textContent = "|";
+    randomDivider.style.color = "gray";
+
+    topRowSort.append(buttonFilter, randomDivider, buttonAlph, buttonPos);
+
+    const dropname = document.createElement("span");
+    dropname.className = "custom-panel-name";
+    let dropnamecheck = null;
+    switch (select.id) {
+        case "weapons":
+            dropnamecheck = "Weapon";
+            break;
+        case "oils1selector":
+            dropnamecheck = "Enchantment 1";
+            break;
+        case "oils2selector":
+            dropnamecheck = "Enchantment 2";
+            break;
+        case "oils3selector":
+            dropnamecheck = "Enchantment 3";
+            break;
+        case "oils4selector":
+            dropnamecheck = "Enchantment 4";
+            break;
+        case "oils5selector":
+            dropnamecheck = "Enchantment 5";
+            break;
+        case "barrelselector":
+            dropnamecheck = "Barrel";
+            break;
+        case "opticselector":
+            dropnamecheck = "Optic";
+            break;
+        case "laserselector":
+            dropnamecheck = "Laser";
+            break;
+        case "firemodeselector":
+            dropnamecheck = "Firemode";
+            break;
+        case "chamberselector":
+            dropnamecheck = "Chamber";
+            break;
+        case "headselector":
+            dropnamecheck = "Head Armor";
+            break;
+        case "chestselector":
+            dropnamecheck = "Chest Armor";
+            break;
+        case "lfootselector":
+            dropnamecheck = "Left Foot Armor";
+            break;
+        case "rfootselector":
+            dropnamecheck = "Right Foot Armor";
+            break;
+        case "trinket1selector":
+            dropnamecheck = "Trinket 1";
+            break;
+        case "trinket2selector":
+            dropnamecheck = "Trinket 2";
+            break;
+        case "trinket3selector":
+            dropnamecheck = "Trinket 3";
+            break;
+        case "trinket4selector":
+            dropnamecheck = "Trinket 4";
+            break;
+        default:
+    }
     if (isMobile === true) {
-        const dropname = document.createElement("span");
-        dropname.className = "custom-panel-name";
-        let dropnamecheck = null;
-        switch (select.id) {
-            case "weapons":
-                dropnamecheck = "Weapon";
-                break;
-            case "oils1selector":
-                dropnamecheck = "Enchantment 1";
-                break;
-            case "oils2selector":
-                dropnamecheck = "Enchantment 2";
-                break;
-            case "oils3selector":
-                dropnamecheck = "Enchantment 3";
-                break;
-            case "oils4selector":
-                dropnamecheck = "Enchantment 4";
-                break;
-            case "oils5selector":
-                dropnamecheck = "Enchantment 5";
-                break;
-            case "barrelselector":
-                dropnamecheck = "Barrel";
-                break;
-            case "opticselector":
-                dropnamecheck = "Optic";
-                break;
-            case "laserselector":
-                dropnamecheck = "Laser";
-                break;
-            case "firemodeselector":
-                dropnamecheck = "Firemode";
-                break;
-            case "chamberselector":
-                dropnamecheck = "Chamber";
-                break;
-            case "headselector":
-                dropnamecheck = "Head Armor";
-                break;
-            case "chestselector":
-                dropnamecheck = "Chest Armor";
-                break;
-            case "lfootselector":
-                dropnamecheck = "Left Foot Armor";
-                break;
-            case "rfootselector":
-                dropnamecheck = "Right Foot Armor";
-                break;
-            case "trinket1selector":
-                dropnamecheck = "Trinket 1";
-                break;
-            case "trinket2selector":
-                dropnamecheck = "Trinket 2";
-                break;
-            case "trinket3selector":
-                dropnamecheck = "Trinket 3";
-                break;
-            case "trinket4selector":
-                dropnamecheck = "Trinket 4";
-                break;
-            default:
-        }
         dropname.innerHTML = dropnamecheck;
-        topRowClose.append(dropname, buttonClose);
     }
     else {
-        topRowClose.append(buttonClose);
+        dropname.innerHTML = `<span style='font-size: 0.4em; display: flex;'>${dropnamecheck}</span>`;
     }
+    topRowClose.append(dropname, buttonClose);
+    
 
     const header = document.createElement("div");
     header.classList = "custom-select-header";
@@ -1378,18 +1393,21 @@ async function createProDropdown(select) {
                 return value;
             }
 
-            Object.entries(oilscrolls).forEach(([key, oilscroll]) => {
+            
 
+            Object.entries(oilscrolls).forEach(([key, oilscroll]) => {
+                let getval = getName(oilscroll.Name);
                 if (!oilscroll.Name || ["none", "Default"].includes(oilscroll.Name)) return;
 
                 let group = "Other";
 
-                results.push({
-                    label: oilscroll.Name,
-                    value: getName(oilscroll.Name),
-                    group: group,
-                    meta: oilscroll
-                });
+                results.push(
+                    ...expandTypedEntries(
+                        oilscroll,
+                        getval,
+                        oilscroll.Name
+                    )
+                );
             });
         }
         if (data.Oil){
@@ -1401,12 +1419,13 @@ async function createProDropdown(select) {
 
                 let group = "Other";
 
-                results.push({
-                    label: oil.Name,
-                    value: oilNameIndexer.get(oil.Name),
-                    group: group,
-                    meta: oil
-                });
+                results.push(
+                    ...expandTypedEntries(
+                        oil,
+                        oilNameIndexer.get(oil.Name),
+                        oil.Name
+                    )
+                );
             });
         }
         if (data.Weapon){
@@ -1420,12 +1439,13 @@ async function createProDropdown(select) {
 
                 if (group === "None") group = "Other";
 
-                results.push({
-                    label: weapon.Name,
-                    value: weaponNameIndexer.get(weapon.Name),
-                    group: group,
-                    meta: weapon
-                });
+                results.push(
+                    ...expandTypedEntries(
+                        weapon,
+                        weaponNameIndexer.get(weapon.Name),
+                        weapon.Name
+                    )
+                );
             });
         }
         if (data.Barrel) {
@@ -1439,12 +1459,13 @@ async function createProDropdown(select) {
 
                 if (group === "None") group = "Other";
 
-                results.push({
-                    label: barrel.Name,
-                    value: barrelNameIndexer.get(barrel.Name),
-                    group: group,
-                    meta: barrel
-                });
+                results.push(
+                    ...expandTypedEntries(
+                        barrel,
+                        barrelNameIndexer.get(barrel.Name),
+                        barrel.Name
+                    )
+                );
             });
         }
         if (data.Optic) {
@@ -1458,12 +1479,13 @@ async function createProDropdown(select) {
 
                 if (group === "None") group = "Other";
 
-                results.push({
-                    label: optic.Name,
-                    value: opticNameIndexer.get(optic.Name),
-                    group: group,
-                    meta: optic
-                });
+                results.push(
+                    ...expandTypedEntries(
+                        optic,
+                        opticNameIndexer.get(optic.Name),
+                        optic.Name
+                    )
+                );
             });
         }
         if (data.Laser) {
@@ -1477,12 +1499,13 @@ async function createProDropdown(select) {
 
                 if (group === "None") group = "Other";
 
-                results.push({
-                    label: laser.Name,
-                    value: laserNameIndexer.get(laser.Name),
-                    group: group,
-                    meta: laser
-                });
+                results.push(
+                    ...expandTypedEntries(
+                        laser,
+                        laserNameIndexer.get(laser.Name),
+                        laser.Name
+                    )
+                );
             });
         }
         if (data.Firemode) {
@@ -1496,12 +1519,13 @@ async function createProDropdown(select) {
 
                 if (group === "None") group = "Other";
 
-                results.push({
-                    label: firemode.Name,
-                    value: firemodeNameIndexer.get(firemode.Name),
-                    group: group,
-                    meta: firemode
-                });
+                results.push(
+                    ...expandTypedEntries(
+                        firemode,
+                        firemodeNameIndexer.get(firemode.Name),
+                        firemode.Name
+                    )
+                );
             });
         }
         if (data.Chamber) {
@@ -1515,12 +1539,13 @@ async function createProDropdown(select) {
 
                 if (group === "None") group = "Other";
 
-                results.push({
-                    label: chamber.Name,
-                    value: chamberNameIndexer.get(chamber.Name),
-                    group: group,
-                    meta: chamber
-                });
+                results.push(
+                    ...expandTypedEntries(
+                        chamber,
+                        chamberNameIndexer.get(chamber.Name),
+                        chamber.Name
+                    )
+                );
             });
         }
         if (data.ArmorHead) {
@@ -1534,12 +1559,13 @@ async function createProDropdown(select) {
 
                 if (group === "None") group = "Other";
 
-                results.push({
-                    label: head.Name,
-                    value: armorHeadNameIndexer.get(head.Name),
-                    group: group,
-                    meta: head
-                });
+                results.push(
+                    ...expandTypedEntries(
+                        head,
+                        armorHeadNameIndexer.get(head.Name),
+                        head.Name
+                    )
+                );
             });
         }
         if (data.ArmorChest) {
@@ -1553,12 +1579,13 @@ async function createProDropdown(select) {
 
                 if (group === "None") group = "Other";
 
-                results.push({
-                    label: chest.Name,
-                    value: armorChestNameIndexer.get(chest.Name),
-                    group: group,
-                    meta: chest
-                });
+                results.push(
+                    ...expandTypedEntries(
+                        chest,
+                        armorChestNameIndexer.get(chest.Name),
+                        chest.Name
+                    )
+                );
             });
         }
         if (data.ArmorFeet) {
@@ -1572,12 +1599,13 @@ async function createProDropdown(select) {
 
                 if (group === "None") group = "Other";
 
-                results.push({
-                    label: foot.Name,
-                    value: armorFootNameIndexer.get(foot.Name),
-                    group: group,
-                    meta: foot
-                });
+                results.push(
+                    ...expandTypedEntries(
+                        foot,
+                        armorFootNameIndexer.get(foot.Name),
+                        foot.Name
+                    )
+                );
             });
         }
         if (data.Trinket) {
@@ -1591,16 +1619,17 @@ async function createProDropdown(select) {
 
                 if (group === "None") group = "Other";
 
-                results.push({
-                    label: trink.Name,
-                    value: trinketNameIndexer.get(trink.Name),
-                    group: group,
-                    meta: trink
-                });
+                results.push(
+                    ...expandTypedEntries(
+                        trink,
+                        trinketNameIndexer.get(trink.Name),
+                        trink.Name
+                    )
+                );
             });
         }
     
-        return results;
+        return results.flat();
     }
 
     if (select.value) {
@@ -1658,10 +1687,9 @@ async function createProDropdown(select) {
     // ===== SORTING (EXTENSIBLE, PLEASEEEEEEE) =====
     const sorters = {
         default: (a, b) => a.label.localeCompare(b.label),
-        scorepos: (a,b) => a.meta.ScorePos - b.meta.ScorePos,
-        scoreposdec: (b,a) => a.meta.ScorePos - b.meta.ScorePos,
-        scoreneg: (a,b) => a.meta.ScoreNeg - b.meta.ScoreNeg,
-        scorenegdec: (b,a) => a.meta.ScoreNeg - b.meta.ScoreNeg
+        defaultrev: (a, b) => b.label.localeCompare(a.label),
+        descending: (a,b) => b.score - a.score,
+        ascending: (a,b) => a.score - b.score,
     };
 
     function applySort(options, sortMode) {
@@ -1673,7 +1701,7 @@ async function createProDropdown(select) {
 
             if (aPriority && !bPriority) return -1;
             if (!aPriority && bPriority) return 1;
-
+            
             return sorter ? sorter(a, b) : 0;
         });
     }
@@ -1690,21 +1718,18 @@ async function createProDropdown(select) {
     // ===== GROUPING =====
     function groupOptions(options) {
         const groups = {};
-        options.forEach(o => {
-            let g;
-            if (state.groupMode === "positive") {
-                g = o.meta.TypePositive1;
-            } else if (state.groupMode === "negative") {
-                g = o.meta.TypeNegative1;
-            } else {
-                g = o.group; // fallback
-            }
-            if (!g || g === "None") g = "Other";
-            if (!groups[g]) groups[g] = [];
-            groups[g].push(o);
-        });
-        let groups2 = Object.fromEntries(Object.entries(groups).sort());
-        return groups2;
+
+        options
+            .filter(o =>
+                state.groupMode === "default" ||
+                o.groupMode === state.groupMode
+            )
+            .forEach(o => {
+                if (!groups[o.group]) groups[o.group] = [];
+                groups[o.group].push(o);
+            });
+
+        return groups;
     }
 
     function sortGroups(groups) {
@@ -1719,80 +1744,136 @@ async function createProDropdown(select) {
         });
     }
 
-function toggleGroup(groupEl) {
+    function toggleGroup(groupEl, selector3) {
+        
+        let selectorGroup = selector3.querySelector(`#${(groupEl.textContent.replaceAll("-", "")).replaceAll(" ", "")}`);
 
-    if (groupEl.dataset.collapsible !== "true")
-        return;
+        if (groupEl.dataset.collapsible !== "true")
+            return;
 
-    const collapsed = groupEl.dataset.collapsed === "true";
+        const collapsed = groupEl.dataset.collapsed === "true";
 
-    if (collapsed) {
-        closeAllGroupsExcept(groupEl);
-        openGroup(groupEl);
-    } else {
-        closeGroup(groupEl);
+        if (collapsed) {
+            closeAllGroupsExcept(groupEl, selectorGroup);
+            openGroup(groupEl, selectorGroup);
+        } else {
+            closeGroup(groupEl, selectorGroup);
+        }
     }
-}
 
-// Opening groups in dropdown
-function openGroup(groupEl) {
+    // Opening groups in dropdown
+    function openGroup(groupEl, selectorGroup) {
+        groupEl.dataset.collapsed = "false";
+        if (selectorGroup) {
+            selectorGroup.collapsed = false;
+        }
 
-    groupEl.dataset.collapsed = "false";
+        let next = groupEl.nextElementSibling;
 
-    let next = groupEl.nextElementSibling;
+        while (next && !next.classList.contains("custom-group")) {
 
-    while (next && !next.classList.contains("custom-group")) {
+            if (next.classList.contains("custom-option"))
+                next.classList.remove("hidden-group");
 
-        if (next.classList.contains("custom-option"))
-            next.classList.remove("hidden-group");
-
-        next = next.nextElementSibling;
+            next = next.nextElementSibling;
+        }
     }
-}
 
-// closing groups in dropdown
-function closeGroup(groupEl) {
+    // closing groups in dropdown
+    function closeGroup(groupEl, selectorGroup) {
+        groupEl.dataset.collapsed = "true";
+        if (selectorGroup) {
+            selectorGroup.collapsed = true;
+        }
 
-    groupEl.dataset.collapsed = "true";
+        let next = groupEl.nextElementSibling;
 
-    let next = groupEl.nextElementSibling;
+        while (next && !next.classList.contains("custom-group")) {
 
-    while (next && !next.classList.contains("custom-group")) {
+            if (next.classList.contains("custom-option"))
+                next.classList.add("hidden-group");
 
-        if (next.classList.contains("custom-option"))
-            next.classList.add("hidden-group");
-
-        next = next.nextElementSibling;
+            next = next.nextElementSibling;
+        }
     }
-}
 
-function closeAllGroupsExcept(exception) {
+    function closeAllGroupsExcept(exception, selectorGroup) {
 
-    const dropdown = exception.closest(".custom-dropdown");
+        const dropdown = exception.closest(".custom-dropdown");
 
-    if (dropdown?.dataset.accordion !== "true")
-        return;
+        if (dropdown?.dataset.accordion !== "true")
+            return;
 
-    dropdown.querySelectorAll(".custom-group").forEach(group => {
+        dropdown.querySelectorAll(".custom-group").forEach(group => {
 
-        if (group === exception) return;
-        if (group.dataset.collapsible !== "true") return;
+            if (group === exception) return;
+            if (group.dataset.collapsible !== "true") return;
 
-        closeGroup(group);
-    });
-}
+            closeGroup(group);
+        });
+    }
 
+    function expandTypedEntries(meta, value, label, fallbackGroup = "Other") {
+        const entries = [];
+
+        for (let i = 1; i <= 5; i++) {
+            const posType = meta[`TypePositive${i}`];
+            const negType = meta[`TypeNegative${i}`];
+
+            if (posType && posType !== "None") {
+                entries.push({
+                    label,
+                    value,
+                    group: posType,
+                    groupMode: "positive",
+                    score: meta[`ScorePos${i}`] ?? 0,
+                    meta
+                });
+            }
+
+            if (negType && negType !== "None") {
+                entries.push({
+                    label,
+                    value,
+                    group: negType,
+                    groupMode: "negative",
+                    score: meta[`ScoreNeg${i}`] ?? 0,
+                    meta
+                });
+            }
+        }
+        entries.push({
+                    label,
+                    value,
+                    group: "General",
+                    groupMode: "None",
+                    score: 0,
+                    meta
+                });
+        if (!entries.length) {
+            entries.push({
+                label,
+                value,
+                group: fallbackGroup,
+                groupMode: "default",
+                score: 0,
+                meta
+            });
+        }
+
+        return entries;
+    }
 
     // ===== RENDER =====
-    function render() {
-        list.innerHTML = '';
+    function render(sorting, selector2) {
 
+        list.innerHTML = '';
         let opts = applySort(state.options, sortMode);
         opts = applyFilter(opts);
         state.filtered = opts;
 
         const groups = groupOptions(opts);
-
+        
         sortGroups(groups).forEach(([groupName, items]) => {
             if (groupName !== "_") {
                 const header = document.createElement("div");
@@ -1803,7 +1884,7 @@ function closeAllGroupsExcept(exception) {
                     header.className = "custom-group";
                 }
                 
-                header.addEventListener("click", () => toggleGroup(header));;
+                header.addEventListener("click", () => toggleGroup(header, select));;
                 header.dataset.collapsible = select.dataset.collapsible === "false" ? "false" : "true";
 
                 header.dataset.collapsed = select.dataset.collapsed ?? "true";
@@ -1816,6 +1897,11 @@ function closeAllGroupsExcept(exception) {
                     } else {
                         openGroup(header);
                     }
+                }
+
+                if (sorting === true) {
+                    let selectorGroup = selector2.querySelector(`#${(groupName.replaceAll("-", "")).replaceAll(" ", "")}`);
+                    header.dataset.collapsed = selectorGroup.collapsed;
                 }
 
                 header.textContent = groupName;
@@ -1852,11 +1938,23 @@ function closeAllGroupsExcept(exception) {
 
         updateDisplay();
 
-        list.querySelectorAll(".custom-group").forEach(header => {
-            if (header.dataset.collapsible === "true" && header.textContent !== "Barrel" && header.textContent !== "Optic" && header.textContent !== "Laser" && header.textContent !== "Firemode" && header.textContent !== "Chamber" && header.textContent !== "General") {
-                closeGroup(header);
-    }
-});
+        if (sorting === true) {
+            list.querySelectorAll(".custom-group").forEach(header => {
+                if (header.dataset.collapsible === "true" && header.textContent !== "Barrel" && header.textContent !== "Optic" && header.textContent !== "Laser" && header.textContent !== "Firemode" && header.textContent !== "Chamber" && header.textContent !== "General" && header.dataset.collapsed === "true") {
+                    closeGroup(header);
+                }
+                if (header.dataset.collapsed === "false") {
+                    openGroup(header);
+                }
+            });
+        }
+        else {
+            list.querySelectorAll(".custom-group").forEach(header => {
+                if (header.dataset.collapsible === "true" && header.textContent !== "Barrel" && header.textContent !== "Optic" && header.textContent !== "Laser" && header.textContent !== "Firemode" && header.textContent !== "Chamber" && header.textContent !== "General") {
+                    closeGroup(header);
+                }
+            });
+        }
     }
 
     function populateNativeSelect() {
@@ -1891,6 +1989,11 @@ function closeAllGroupsExcept(exception) {
 
     populateNativeSelect();
 
+    for (var i = 0; i < select.children.length; i++) {
+        select.children[i].collapsed = true;
+        select.children[i].id = (select.children[i].label.replaceAll("-", "")).replaceAll(" ", "");
+    }
+
     function updateDisplay() {
         const selected = state.options.find(o => o.value === state.value);
         display.textContent = selected ? selected.label : "Select...";
@@ -1898,6 +2001,8 @@ function closeAllGroupsExcept(exception) {
 
     // ===== OPEN / CLOSE =====
     function open() {
+        document.getElementById("secondpagediv").classList.add("secondpagediv-scroll");
+        document.getElementById("secondpagediv").classList.remove("secondpagediv");
         if (state.open) return;
         state.open = true;
         wrapper.classList.add("open");
@@ -1906,6 +2011,8 @@ function closeAllGroupsExcept(exception) {
     }
 
     function close() {
+        document.getElementById("secondpagediv").classList.add("secondpagediv");
+        document.getElementById("secondpagediv").classList.remove("secondpagediv-scroll");
         if (!state.open) return;
         state.open = false;
         wrapper.classList.remove("open");
@@ -3766,28 +3873,81 @@ function toggleNeg(select) {
 
 }
 
-function filterChanger(mode, selector) {
-    let select = null;
-    switch (mode) {
-        case "default":
-            select = document.getElementById(selector);
-            select.setSortMode("default");
-            select.render();
-            break;
+function filterChanger(button, selector) {
+    //remember you have a None filter too now
+    switch (button.currentFilter) {
         case "positive":
-            select = document.getElementById(selector);
-            select.setSortMode("scorepos");
-            select.setGroupMode("positive")
-            select.render();
+            selector.setGroupMode("negative");
+            button.currentFilter = "negative";
+            selector.render();
             break;
         case "negative":
-            select = document.getElementById(selector);
-            select.setSortMode("scoreneg");
-            select.setGroupMode("negative")
-            select.render();
+            selector.setGroupMode("None");
+            button.currentFilter = "None";
+            selector.render();
+            break;
+        case "None":
+            selector.setGroupMode("positive");
+            button.currentFilter = "positive";
+            selector.render();
             break;
     }
-    
+}
+
+function sortChanger(selector, button, otherbutton) {
+    let alphspan = document.getElementById(`${selector.id}-sortalphbuttonicon`);
+    let scorespan = document.getElementById(`${selector.id}-sortscorebuttonicon`);
+
+    switch (button.currentSort) {
+        case "scorenull":
+            selector.setSortMode("ascending");
+            button.currentSort = "scoreascending";
+            otherbutton.currentSort = "alphnull";
+            alphspan.classList.remove("sortfilterselected");
+            scorespan.classList.add("sortfilterselected");
+            alphspan.classList.remove("fa-arrow-down-z-a");
+            alphspan.classList.add("fa-arrow-down-a-z");
+            selector.render(true, selector);
+            break;
+        case "scoreascending":
+            selector.setSortMode("descending");
+            button.currentSort = "scoredescending";
+            scorespan.classList.remove("fa-arrow-down-9-1");
+            scorespan.classList.add("fa-arrow-down-1-9");
+            selector.render(true, selector);
+            break;
+        case "scoredescending":
+            selector.setSortMode("ascending");
+            button.currentSort = "scoreascending";
+            scorespan.classList.remove("fa-arrow-down-1-9");
+            scorespan.classList.add("fa-arrow-down-9-1");
+            selector.render(true, selector);
+            break;
+        case "alphnull":
+            selector.setSortMode("default");
+            button.currentSort = "alphdefault";
+            otherbutton.currentSort = "scorenull";
+            scorespan.classList.remove("sortfilterselected");
+            alphspan.classList.add("sortfilterselected");
+            scorespan.classList.remove("fa-arrow-down-1-9");
+            scorespan.classList.add("fa-arrow-down-9-1");
+            selector.render(true, selector);
+            break;
+        case "alphdefault":
+            selector.setSortMode("defaultrev");
+            button.currentSort = "alphdefaultrev";
+            alphspan.classList.remove("fa-arrow-down-a-z");
+            alphspan.classList.add("fa-arrow-down-z-a");
+            selector.render(true, selector);
+            break;
+        case "alphdefaultrev":
+            selector.setSortMode("default");
+            button.currentSort = "alphdefault";
+            alphspan.classList.remove("fa-arrow-down-z-a");
+            alphspan.classList.add("fa-arrow-down-a-z");
+            selector.render(true, selector);
+            break;
+    }
 }
 
 let dropdownSelectHandler = null;
@@ -5183,7 +5343,6 @@ function oilCalcs(calcOil) {
             let dropMeters =  (105 / (Math.log(weapon.BulletDrop)) - 20);
             let dropMeterRound = Math.round((dropMeters + Number.EPSILON)* 100) / 100;
             document.getElementById("dropmeters").textContent = `~${dropMeterRound}m`;
-            document.getElementById("dropimage").src = "./Images/bullet_drop_pos.png";
         document.getElementById("cardDrop").textContent = weapon.BulletDrop;
         document.getElementById("cardDrop").style.color = "OrangeRed";
         document.getElementById("cardDropArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
@@ -5193,7 +5352,6 @@ function oilCalcs(calcOil) {
         document.getElementById("cardDropRBrac").textContent = ")";
     }
     if (weapon.BulletDrop == 0) {
-        document.getElementById("dropimage").src = "./Images/bullet_drop_0.png";
        document.getElementById("cardDrop").textContent = "0";
        document.getElementById("dropmeters").textContent = "-";
     }
@@ -6724,6 +6882,9 @@ function oilCalcs(calcOil) {
     let durWinShots = shotsToBreakRounded;
     let projFired60 = 0;
 
+    let oneMag = true;
+    let dpsTimeMag = 0;
+
     let damageForDPS = 0;
     if (calcOil.ScrollField === "scrollinfotoxic") {
         damageForDPS = totalHeadRound;
@@ -6795,11 +6956,24 @@ function oilCalcs(calcOil) {
         }
         while (magSizeCalc < effMagSize && durWinShots > 0);
 
+        // time per mag
+        if (oneMag === true) {
+            oneMag = false;
+            dpsTimeMag += durWinTime;
+        }
+
         // reloading weapon, if applicable
-        durWinTime += reloadTime;
+        if (durWinShots > 0) {
+            durWinTime += reloadTime;
+        }
 
     }
     while (durWinShots > 0);
+
+    if (oneMag === true) {
+        oneMag = false;
+        dpsTimeMag += durWinTime;
+    }
 
     let ammoCostSec = ammoCostSpent60 / 60;
     let ammoCostSecRound = Math.round((ammoCostSec + Number.EPSILON)* 100) / 100;
@@ -6824,6 +6998,8 @@ function oilCalcs(calcOil) {
     let durWinTimeRound = Math.round((durWinTime + Number.EPSILON)* 100) / 100;
     let durWinDamRound = Math.round(((durWinTot) + Number.EPSILON)* 100) / 100;
 
+    let dpsTimeMagRound = Math.round(((dpsTimeMag) + Number.EPSILON)* 100) / 100;
+
     document.getElementById("cardTotDam60").textContent = dmgTotRound;
     document.getElementById("cardDPS60").textContent = dps60UnmodRound;
 
@@ -6833,12 +7009,24 @@ function oilCalcs(calcOil) {
 
     document.getElementById("cardProjShot").textContent = weapProj * weapon.MultiShot;
     document.getElementById("cardProjSec").textContent = projPerSecRound;
-    document.getElementById("cardProjMin").textContent = projFired60; 
+    document.getElementById("cardProjMin").textContent = projFired60;
+
+    document.getElementById("cardTimePerMag").textContent = `${dpsTimeMagRound} seconds`;
 
     document.getElementById("cardBreakDam").textContent = durWinDamRound;
     document.getElementById("cardBreakTime").textContent = `${durWinTimeRound} seconds`;
 
-    // RPM/Recoil ratio
+    // RPM/Recoil ratio //
+
+    document.getElementById("cardRTR").textContent = "";
+    document.getElementById("cardRTR").style.color = "";
+    document.getElementById("cardRTRArrow").innerHTML = "";
+    document.getElementById("cardRTRArrow").style.color = "";
+    document.getElementById("cardRTRComp").textContent = "";
+    document.getElementById("cardRTRLBrac").textContent = "";
+    document.getElementById("cardRTRRBrac").textContent = "";
+
+    // modded weapon
 
     let recoilRatio = recoilRound;
     let rpmRatio = rpmRound;
@@ -6846,13 +7034,13 @@ function oilCalcs(calcOil) {
 
     switch (weapon.Firemode) {
         case "Single":
-            firemodeRatio = 4;
+            firemodeRatio = 2.5;
             break;
         case "2-Round Burst":
-            firemodeRatio = 3;
+            firemodeRatio = 2;
             break;
         case "3-Round Burst":
-            firemodeRatio = 2;
+            firemodeRatio = 1.5;
         default:
     }
 
@@ -6860,9 +7048,56 @@ function oilCalcs(calcOil) {
         recoilRatio = recoilRound / 2;
     }
 
-    let totalRatio = ((recoilRatio * rpmRatio) / 500) / firemodeRatio;
+    let totalRatioRound = ((recoilRatio * rpmRatio) / 500) / firemodeRatio;
+    let totalRatio = Math.round(((totalRatioRound) + Number.EPSILON) * 1000) / 1000;
 
-    document.getElementById("cardRPMToRec").textContent = totalRatio;
+    // original, rechambered weapon
+
+    let firemodeRatioOrig = 1;
+    let origRecoilRatio = weaponOriginal.RecoilBase;
+
+    switch (weaponOriginal.Firemode) {
+        case "Single":
+            firemodeRatioOrig = 2.5;
+            break;
+        case "2-Round Burst":
+            firemodeRatioOrig = 2;
+            break;
+        case "3-Round Burst":
+            firemodeRatioOrig = 1.5;
+        default:
+    }
+
+    if (weaponOriginal.RPM < 110) {
+        origRecoilRatio = weaponOriginal.RecoilBase / 2;
+    }
+
+    let origRatioRound = ((origRecoilRatio * weaponOriginal.RPM) / 500) / firemodeRatio;
+    let origRatio = Math.round(((origRatioRound) + Number.EPSILON) * 1000) / 1000;
+
+    if (totalRatio < origRatio) {
+        document.getElementById("cardRTR").textContent = totalRatio;
+        document.getElementById("cardRTR").style.color = "Lime";
+        document.getElementById("cardRTRArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardRTRArrow").style.color = "Lime";
+        document.getElementById("cardRTRComp").textContent = origRatio;
+        document.getElementById("cardRTRLBrac").textContent = "(";
+        document.getElementById("cardRTRRBrac").textContent = ")";
+    }
+    if (totalRatio > origRatio) {
+        document.getElementById("cardRTR").textContent = totalRatio;
+        document.getElementById("cardRTR").style.color = "OrangeRed";
+        document.getElementById("cardRTRArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardRTRArrow").style.color = "OrangeRed";
+        document.getElementById("cardRTRComp").textContent = origRatio;
+        document.getElementById("cardRTRLBrac").textContent = "(";
+        document.getElementById("cardRTRRBrac").textContent = ")";
+    }
+    if (totalRatio > origRatio) {
+        document.getElementById("cardRTR").textContent = totalRatio;
+    }
+
+    document.getElementById("cardRTR").textContent = totalRatio;
     
     //#endregion
 

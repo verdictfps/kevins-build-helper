@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const INPUT_FILE = "./OilsScrolls.json";
-const OUTPUT_FILE = "./output.json";
+const OUTPUT_FILE = "./OilsScrolls.json";
 
 const data = JSON.parse(fs.readFileSync(INPUT_FILE, "utf8"));
 
@@ -15,7 +15,7 @@ const statMap = {
     "Damage - Mult": ["DamageMult"],
     "Spread": ["SpreadAdd", "SpreadMult"],
     "Movement Speed": ["MovementSpeedMult"],
-    "Durability": ["DurabilityMult"],
+    "Max Durability": ["DurabilityMult"],
     "Base Crit Chance": ["BaseCritChance", "ADSCritChance"],
     "Bullet Speed": ["BulletSpeed"],
     "Jump Power": ["JumpPower"],
@@ -26,7 +26,16 @@ const statMap = {
     "Loot Drop Chance": ["LootDropChance"],
     "Projectiles": ["ProjectileMult"],
     "RPM": ["RPM", "RPMBaseShift"],
-    "Drag": ["Drag"]
+    "Drag": ["Drag"],
+    "Bullet Size": ["BulletSize"],
+    "AmmoConsumeChance": ["AmmoConsumeChance"],
+    "Base Crit Chance": ["BaseCritChance"],
+    "Movement Speed": ["MovementSpeedMult"],
+    "Disables Aiming": ["CanADS"],
+    "No Money Drops": ["MoneyDrops"],
+    "No Organ Drops": ["OrganDrops"],
+    "Move Accuracy": ["MovingAccuracy"],
+    "Bullet Bounciness": ["BulletBounciness"]
 };
 
 /**
@@ -40,8 +49,12 @@ function getStatValue(obj, statName) {
 
     for (const field of fields) {
         if (obj[field] !== undefined && obj[field] !== 0) {
-
-            return Math.abs(obj[field]);
+            if (obj[field] === "Yes" || obj[field] === "No") {
+                return 0;
+            }
+            else {
+                return Math.abs(obj[field]);
+            }
         }
     }
 
@@ -71,20 +84,31 @@ function parseFromDescription(desc, statName) {
  */
 function resolveScore(obj, typeField) {
     let val = getStatValue(obj, typeField);
+    console.log(val);
 
     if (val === null) {
         val = parseFromDescription(obj.StatDescription, typeField);
+        
+        console.log(val);
     }
-console.log(val)
     return val || 0;
 }
 
 // MAIN LOOP
-for (const key in data.Oil) {
-    const oil = data.Oil[key];
+for (const key in data.OilScroll) {
+    const oil = data.OilScroll[key];
 
-    oil.ScorePos = resolveScore(oil, oil.TypePositive1);
-    oil.ScoreNeg = resolveScore(oil, oil.TypeNegative1);
+    oil.ScorePos1 = resolveScore(oil, oil.TypePositive1);
+    oil.ScorePos2 = resolveScore(oil, oil.TypePositive2);
+    oil.ScorePos3 = resolveScore(oil, oil.TypePositive3);
+    oil.ScorePos4 = resolveScore(oil, oil.TypePositive4);
+    oil.ScorePos5 = resolveScore(oil, oil.TypePositive5);
+
+    oil.ScoreNeg1 = resolveScore(oil, oil.TypeNegative1);
+    oil.ScoreNeg2 = resolveScore(oil, oil.TypeNegative2);
+    oil.ScoreNeg3 = resolveScore(oil, oil.TypeNegative3);
+    oil.ScoreNeg4 = resolveScore(oil, oil.TypeNegative4);
+    oil.ScoreNeg5 = resolveScore(oil, oil.TypeNegative5);
 }
 
 // WRITE OUTPUT
