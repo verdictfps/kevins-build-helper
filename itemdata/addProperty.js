@@ -1,5 +1,5 @@
 
-let newField = "ScoreNeg5";
+let newField = ["DamageMultTrinketAutomatic"];
 let newDefault = 0;
 
 function oilField() {
@@ -293,13 +293,16 @@ function trinketField() {
 }
 function addField(item) {
 
-    if (!(newField in item)) {
-        item[newField] = newDefault;
-        console.log(`Field added to ${item.Name}`)
-    }
-    else {
-        console.log(`${item.Name} skipped.`)
-    }
+    newField.forEach(field => {
+        if (!(field in item)) {
+            item[field] = newDefault;
+            console.log(`Field added to ${item.Name}`)
+        }
+        else {
+            console.log(`${item.Name} skipped.`)
+        }
+    })
+    
 
 }
 

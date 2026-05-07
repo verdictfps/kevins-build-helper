@@ -45,8 +45,8 @@
 @keyframes insideShadow {
     /*from {-webkit-filter: drop-shadow(0px 0px 0px #000000be); filter: drop-shadow(0px 0px 0px #000000be);;}
     to {-webkit-filter: drop-shadow(0px 0px 20px #000000be); filter: drop-shadow(0px 0px 20px #000000be);;}*/
-      from {box-shadow: inset 0px 0px 15px 0px #000000; z-index: 15;}
-  to {box-shadow: inset 0px 0px 80px 5px #000000; z-index: 15;}
+      from {box-shadow: inset 0px 0px 10px 0px #000000; z-index: 15;}
+  to {box-shadow: inset 0px 0px 50px 5px #000000; z-index: 15;}
 
 }
 
@@ -88,7 +88,15 @@
 }
 
 .compLabel {
-    color: #89a0b8
+    color: #A3D5EA;
+    font-variation-settings: "wdth" 95;
+    font-size: 0.7vw !important;
+}
+
+.compLabelOriginal {
+    color: antiquewhite;
+    font-variation-settings: "wdth" 95;
+    font-size: 0.6vw !important;
 }
 
 .cardStatEquip {
@@ -117,8 +125,9 @@
     font-size: 0.65vw !important;
     padding: 5px !important;
     padding-top: 3px !important;
-    padding-bottom: 3px !important;
+    padding-bottom: 1px !important;
     text-align: left;
+    font-variation-settings: "wdth" 95;
 }
 
 .cardStatHeader {
@@ -151,12 +160,44 @@
 .cardStat-mobile {
     font-family: "Fredoka", sans-serif;
     color: white;
-    font-size: 1.5vw !important;
+    font-size: 3.5vw !important;
     padding-left: 5px !important;
 }
 
 .cardStat-mobile:hover {
     text-shadow: 0px 0px 15px #FDB142, 0px 0px 15px #FDB142;
+}
+
+.context-menu {
+    position: absolute;
+    text-align: center;
+    background: lightgray;
+    border: 1px solid black;
+    z-index: 99999;
+}
+
+.context-menu ul {
+    padding: 0px;
+    margin: 0px;
+    min-width: 150px;
+    list-style: none;
+}
+
+.context-menu ul li {
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid black;
+}
+
+.context-menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.context-menu ul li:hover {
+    background: darkgray;
 }
 
 @keyframes fucktest {
@@ -175,7 +216,6 @@ body {
         font-weight: 400;
         font-style: normal;
         font-variation-settings: "wdth" 100;
-        
     }
 
 .containerattach {
@@ -188,8 +228,9 @@ body {
     padding-left: 0px !important;
     display: flex !important;
     flex-wrap: nowrap !important;
-    min-height: 49% !important;
-    max-height: 49% !important;
+    min-height: 50% !important;
+    max-height: 50% !important;
+    border-bottom: 1px solid #FDB142 !important;
 }  
 
 .containerattachdiv {
@@ -215,12 +256,12 @@ body {
     padding: 0px !important;
     width: 100% !important;
     display: flex !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
     text-align: center !important;
-    justify-content: center !important;
+    justify-content: space-evenly !important;
     min-height: 0 !important;
     height: 20%;
-    align-content: center;
+    align-items: center;
 }
 .containerattachdivbody {
     border-right: 1px solid #FDB142 !important;
@@ -233,10 +274,11 @@ body {
     display: flex !important;
     flex-wrap: wrap !important;
     text-align: center !important;
-    justify-content: center !important;
+    justify-content: start !important;
     min-height: 0 !important;
     background-color: #2D424B !important;
     flex-grow: 2;
+    flex-direction: column;
 }
 
 .containerattachdiv .name {
@@ -249,10 +291,13 @@ body {
     text-align: center !important;
     padding-right: 0px !important;
     padding-left: 0px !important;
+    padding-bottom: 1px;
     min-height: 0 !important;
     justify-content: center !important;
     align-items: start !important;
     display: flex !important;
+    font-variation-settings: "wdth" 90;
+    line-height: 12px;
 }
 
 .containerattachdiv .desc {
@@ -267,18 +312,17 @@ body {
     text-align: center !important;
     padding-right: 0px !important;
     padding-left: 0px !important;
-    height: 100% !important;
     min-height: 0 !important;
     justify-content: center !important;
     align-items: start !important;
     display: flex !important;
+    font-variation-settings: "wdth" 85;
 }
 
 .build-chooser-button-div {
     border-radius: 5px;
     border: 1px solid #FDB142;
     margin: 0px !important;
-    min-height: 5vh;
     display: flex;
     flex-wrap: nowrap;
     padding: 0px !important;
@@ -300,7 +344,6 @@ body {
     border-radius: 5px;
     border: 1px solid #FDB142;
     margin: 0px;
-    min-height: 5vh;
     display: flex;
     flex-wrap: wrap;
     margin-right: 0px !important;
@@ -1378,6 +1421,10 @@ select.custom-dropdown {
     margin-right: 1vw !important;
 }
 
+.statbox {
+    overflow: hidden;
+}
+
 .equipstatbox {
     margin: 0 !important;
     padding: 0px !important;
@@ -1386,7 +1433,6 @@ select.custom-dropdown {
     display: flex;
     flex-direction: column;
     align-items: start;
-    min-height: 13vh;
 }
 
 .extendstatbox {
@@ -1487,7 +1533,6 @@ select.custom-dropdown {
     padding:0px !important;
     border:0px solid #FDB142 !important;
     display: flex !important;
-    min-height: 5vh !important;
     align-items: top !important;
     margin-bottom: 1.5vh !important;
 }
@@ -1603,25 +1648,37 @@ select.custom-dropdown {
   .oils {
     font-size: 0.8vw !important;
   }
-
+  .armor-desc {
+    font-size: 8px;
+  }
+  .armor-header {
+    font-size: 9px;
+  }
+  .containerattachdiv .name {
+    font-size: 0.65em !important
+  }
+  .containerattachdiv .desc {
+    font-size: 0.55em !important
+  }
+  .custom-select {
+    height: 30px;
+  }
+  .custom-select-selected {
+    height: 11px;
+  }
+  .commitgrid {
+    padding: 2px !important;
+    margin: 2px !important;
+  }
+  #cardWeaponName {
+    font-size: 1.3em !important;
+  }
   
 }
 
 @media (max-width: 1800px) {
-  #guncardgrid1 {
-    min-height: 0 !important;
-  }
-  #guncardgrid2 {
-    min-height: 0 !important;
-  }
-  #guncardgrid3 {
-    min-height: 0 !important;
-  }
-  #guncardgrid4 {
-    min-height: 0 !important;
-  }
   .cardStat {
-    font-size: 0.5vw !important;
+    font-size: 0.6vw !important;
   }
 }
 
@@ -1751,7 +1808,7 @@ select.custom-dropdown {
 
 .card-cat-header-mobile {
     margin: 0px !important;
-    font-size: 0.8em;
+    font-size: 4vw;
     white-space: nowrap;
 }
 
@@ -1794,7 +1851,6 @@ select.custom-dropdown {
     padding: 0px !important;
     border: 0px !important;
     width: 100% !important;
-    overflow: auto !important;
     scroll-snap-align: center;
     anchor-name: --arrow-anchor;
 }
@@ -1917,7 +1973,7 @@ select.custom-dropdown {
     width: auto !important;
     z-index: 9;
     background: #1b1b1b;
-    height: 12%;
+    height: 5em;
     margin: 0 !important;
     position-anchor: --dropdown-anchor;
     top: anchor(top);
@@ -1945,7 +2001,7 @@ select.custom-dropdown {
     right: anchor(right);
     z-index: 10;
     align-items: center;
-    transform: translateY(15%);
+    transform: translateY(0.2em);
 }
 .custom-select-top-row-mobile {
     display: flex !important;
@@ -2456,11 +2512,15 @@ select.custom-dropdown {
     
 }
 
-.boxglowthing:active
+.weaponimage:active
 {
     animation: spin 0.1s infinite linear;
     -moz-animation: spin 0.1s infinite linear;
     -webkit-animation: spin 0.1s infinite linear;
+}
+
+.weaponimage:active #helicoptermode {
+    display: flex !important;
 }
 
 /*.shake-little {
@@ -2568,6 +2628,7 @@ mark {
     height: 100% !important;
     max-height: 100% !important;
     min-height: 0 !important;
+    min-width: 40%;
 }
 
 .scrollcard-mobile {
@@ -2584,6 +2645,14 @@ mark {
 
 .attachtitle-mobile {
     margin: 0px !important;
+}
+
+.filter-orangered {
+    filter: brightness(0) saturate(100%) invert(41%) sepia(64%) saturate(5436%) hue-rotate(359deg) brightness(99%) contrast(107%);
+}
+
+.filter-lime {
+    filter: brightness(0) saturate(100%) invert(64%) sepia(83%) saturate(4021%) hue-rotate(83deg) brightness(121%) contrast(121%);
 }
 
 #extendoverlay button    {
@@ -2650,7 +2719,11 @@ mark {
 @-webkit-keyframes spin { 
     100% { -webkit-transform: rotate(-360deg); filter: blur(10.1px);} 
 }
-@keyframes spin { 
+@keyframes spin {
+    0%{-webkit-transform: rotate(0deg); 
+        transform:rotate(0deg); 
+        filter: blur(0px);
+    } 
     100% { 
         -webkit-transform: rotate(-360deg); 
         transform:rotate(-360deg); 

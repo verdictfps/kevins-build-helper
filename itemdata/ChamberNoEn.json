@@ -109,7 +109,15 @@
       "ScoreNeg2": 0,
       "ScoreNeg3": 0,
       "ScoreNeg4": 0,
-      "ScoreNeg5": 0
+      "ScoreNeg5": 0,
+      "DamageMultTrinketAR": 0,
+      "DamageMultTrinketLMG": 0,
+      "DamageMultTrinketPistol": 0,
+      "DamageMultTrinketRevolver": 0,
+      "DamageMultTrinketRifle": 0,
+      "DamageMultTrinketShotgun": 0,
+      "DamageMultTrinketSniper": 0,
+      "DamageMultTrinketAutomatic": 0
     },
     "Chamber Chisel - 12Ga": {
       "ADSCritChance": 0,
@@ -220,7 +228,15 @@
       "ScoreNeg2": 0,
       "ScoreNeg3": 0,
       "ScoreNeg4": 0,
-      "ScoreNeg5": 0
+      "ScoreNeg5": 0,
+      "DamageMultTrinketAR": 0,
+      "DamageMultTrinketLMG": 0,
+      "DamageMultTrinketPistol": 0,
+      "DamageMultTrinketRevolver": 0,
+      "DamageMultTrinketRifle": 0,
+      "DamageMultTrinketShotgun": 0,
+      "DamageMultTrinketSniper": 0,
+      "DamageMultTrinketAutomatic": 0
     },
     "Chamber Chisel - 5.56mm": {
       "ADSCritChance": 0,
@@ -331,7 +347,15 @@
       "ScoreNeg2": 0,
       "ScoreNeg3": 0,
       "ScoreNeg4": 0,
-      "ScoreNeg5": 0
+      "ScoreNeg5": 0,
+      "DamageMultTrinketAR": 0,
+      "DamageMultTrinketLMG": 0,
+      "DamageMultTrinketPistol": 0,
+      "DamageMultTrinketRevolver": 0,
+      "DamageMultTrinketRifle": 0,
+      "DamageMultTrinketShotgun": 0,
+      "DamageMultTrinketSniper": 0,
+      "DamageMultTrinketAutomatic": 0
     },
     "Chamber Chisel - 7.62mm": {
       "ADSCritChance": 0,
@@ -442,7 +466,15 @@
       "ScoreNeg2": 0,
       "ScoreNeg3": 0,
       "ScoreNeg4": 0,
-      "ScoreNeg5": 0
+      "ScoreNeg5": 0,
+      "DamageMultTrinketAR": 0,
+      "DamageMultTrinketLMG": 0,
+      "DamageMultTrinketPistol": 0,
+      "DamageMultTrinketRevolver": 0,
+      "DamageMultTrinketRifle": 0,
+      "DamageMultTrinketShotgun": 0,
+      "DamageMultTrinketSniper": 0,
+      "DamageMultTrinketAutomatic": 0
     },
     "Chamber Chisel - 9mm": {
       "ADSCritChance": 0,
@@ -553,7 +585,15 @@
       "ScoreNeg2": 0,
       "ScoreNeg3": 0,
       "ScoreNeg4": 0,
-      "ScoreNeg5": 0
+      "ScoreNeg5": 0,
+      "DamageMultTrinketAR": 0,
+      "DamageMultTrinketLMG": 0,
+      "DamageMultTrinketPistol": 0,
+      "DamageMultTrinketRevolver": 0,
+      "DamageMultTrinketRifle": 0,
+      "DamageMultTrinketShotgun": 0,
+      "DamageMultTrinketSniper": 0,
+      "DamageMultTrinketAutomatic": 0
     },
     "None": {
       "ADSCritChance": 0,
@@ -661,7 +701,18 @@
       "ScoreNeg2": 0,
       "ScoreNeg3": 0,
       "ScoreNeg4": 0,
-      "ScoreNeg5": 0
+      "ScoreNeg5": 0,
+      "AmmoType": "Default",
+      "Damage": 0,
+      "Projectiles": 0,
+      "DamageMultTrinketAR": 0,
+      "DamageMultTrinketLMG": 0,
+      "DamageMultTrinketPistol": 0,
+      "DamageMultTrinketRevolver": 0,
+      "DamageMultTrinketRifle": 0,
+      "DamageMultTrinketShotgun": 0,
+      "DamageMultTrinketSniper": 0,
+      "DamageMultTrinketAutomatic": 0
     },
     "Random Chamber": {
       "ADSCritChance": 0,
@@ -769,7 +820,18 @@
       "ScoreNeg2": 0,
       "ScoreNeg3": 0,
       "ScoreNeg4": 0,
-      "ScoreNeg5": 0
+      "ScoreNeg5": 0,
+      "AmmoType": "Default",
+      "Damage": 0,
+      "Projectiles": 0,
+      "DamageMultTrinketAR": 0,
+      "DamageMultTrinketLMG": 0,
+      "DamageMultTrinketPistol": 0,
+      "DamageMultTrinketRevolver": 0,
+      "DamageMultTrinketRifle": 0,
+      "DamageMultTrinketShotgun": 0,
+      "DamageMultTrinketSniper": 0,
+      "DamageMultTrinketAutomatic": 0
     }
   }
 }
