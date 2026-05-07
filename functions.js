@@ -2209,6 +2209,8 @@ async function captureElement(activated, save) {
     let newtarget = null;
     document.getElementById("helicoptermode").style.display = "none";
 
+    let capturedBlob = null;
+
     if (isMobile === false) {
         document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
         document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
@@ -2266,7 +2268,12 @@ async function captureElement(activated, save) {
             newtarget = "screenshotcontainer";
         }
 
-        await takeScreenshot(activated, save, newtarget);
+        try {
+            capturedBlob = await takeScreenshot(activated, save, newtarget);
+        }
+        catch {
+            capturedBlob = null;
+        }
 
         if (mode.textContent === "Simple") {
             document.getElementById("containerheaders").classList.remove("mobile-arrow");
@@ -2341,7 +2348,12 @@ async function captureElement(activated, save) {
             newtarget = "targetcontainer";
         }
 
-        await takeScreenshot(activated, save, newtarget);
+        try {
+            capturedBlob = await takeScreenshot(activated, save, newtarget);
+        }
+        catch {
+            capturedBlob = null;
+        }
 
         if (mode.textContent === "Simple") {
             document.getElementById("extendstatbox").style.display = "";
@@ -2362,36 +2374,38 @@ async function captureElement(activated, save) {
         document.getElementById("weaponimage").classList.remove("weaponimage2");
     }
     document.getElementById("helicoptermode").style.display = "";
+    return capturedBlob;
 }
 
-function takeScreenshot(activated, save, target2) {
-    let mode = document.getElementById("screenshottype");
-    let screeny = null;
+async function takeScreenshot(activated, save, target2) {
     const target = document.getElementById(target2);
     infoboxClear();
 
-    html2canvas(target, {
+    const canvas = await html2canvas(target, {
         scale: 1.4,
         allowTaint: true,
         removeContainer: true
-        
-    }).then(canvas => {
-        canvas.toBlob((blob) => {
-            
-            const cbi2 = new window.ClipboardItem({ 
-                'image/png': blob,
-            });
-            if (save === true) {
-                getNewFileHandle(blob);
-            }
-            else if (activated === true ) {
-                navigator.clipboard.write([cbi2]);
-            }
-            screeny = blob;
-        });
     });
 
-    return true;
+    const blob = await new Promise((resolve) => {
+        canvas.toBlob(resolve, "image/png");
+    });
+
+    if (blob === null) {
+        return null;
+    }
+
+    if (save === true) {
+        getNewFileHandle(blob);
+    }
+    else if (activated === true ) {
+        const cbi2 = new window.ClipboardItem({ 
+            'image/png': blob,
+        });
+        navigator.clipboard.write([cbi2]);
+    }
+
+    return blob;
 }
 
 function getNewFileHandle(blob) {
@@ -2427,6 +2441,17 @@ let buildToEncode = null;
 
 let buildBlocker = false;
 
+function getCurrentBuildPayload() {
+    let currentBuild = "build";
+
+    coreSelections.forEach((value) => {
+        currentBuild += value.Value;
+        currentBuild += "+";
+    });
+
+    return currentBuild;
+}
+
 function encodeBuildAsUri(last) {
     if (buildBlocker === true) {
         return;
@@ -2434,17 +2459,84 @@ function encodeBuildAsUri(last) {
     if (last === true) {
         console.info("KBH: Encoding build as URI string and applying to URL");
 
-        buildToEncode = "build";
-        function toBuild(value, key, map) {
-            
-            buildToEncode += value.Value;
-            buildToEncode += "+";
-        }
-        coreSelections.forEach(toBuild);
+        buildToEncode = getCurrentBuildPayload();
         const encodedBuild = "#!" + encodeURIComponent(buildToEncode);
         history.pushState(encodedBuild, "", encodedBuild);
-        document.getElementById("linkbox").value = `https://verdictfps.github.io/kevins-build-helper/${encodedBuild}`;
+        document.getElementById("linkbox").value = buildShareUrl(buildToEncode);
     }
+}
+
+function buildShareUrl(buildPayload, imageVersion) {
+    const shareUrl = new URL("/share", window.location.origin);
+    shareUrl.searchParams.set("build", buildPayload);
+
+    if (imageVersion !== undefined) {
+        shareUrl.searchParams.set("image", imageVersion);
+    }
+
+    return shareUrl.toString();
+}
+
+async function uploadShareScreenshot(buildPayload, imageVersion) {
+    const screenshotBlob = await captureElement(false, false);
+
+    if (screenshotBlob === null) {
+        return false;
+    }
+
+    try {
+        const uploadUrl = new URL("/share-image", window.location.origin);
+        uploadUrl.searchParams.set("build", buildPayload);
+        uploadUrl.searchParams.set("image", imageVersion);
+
+        const response = await fetch(uploadUrl.toString(), {
+            method: "POST",
+            headers: {
+                "content-type": "image/png",
+            },
+            body: screenshotBlob,
+        });
+
+        return response.ok;
+    }
+    catch {
+        return false;
+    }
+}
+
+function safeDecodeBuildPayload(value) {
+    try {
+        return decodeURIComponent(value);
+    }
+    catch {
+        return value;
+    }
+}
+
+function getBuildPayloadFromUrl(url) {
+    if (url.includes("#!") === true) {
+        const split = url.split("#!");
+        if (typeof split[1] === "undefined") {
+            return false;
+        }
+
+        const decodedBuild = safeDecodeBuildPayload(split[1]);
+        return decodedBuild.startsWith("build") ? decodedBuild : false;
+    }
+
+    try {
+        const parsedUrl = new URL(url, window.location.href);
+        const sharedBuild = parsedUrl.searchParams.get("build");
+
+        if (parsedUrl.pathname.replace(/\/$/, "") === "/share" && sharedBuild !== null) {
+            return sharedBuild.startsWith("build") ? sharedBuild : false;
+        }
+    }
+    catch {
+        return false;
+    }
+
+    return false;
 }
 
 function setBuildAsMetadata() {
@@ -2481,25 +2573,23 @@ function decodeUriAsBuild(source, link) {
         currentURL = window.location.href;
     }
     
-    let split = currentURL.split("#!");
+    let decoded = getBuildPayloadFromUrl(currentURL);
     let finalSplit = null;
     let iterationSplit = null;
     
-    if (typeof split[1] === 'undefined') {
+    if (decoded === false) {
         console.info("KBH: No build found");
         return false;
     }
     else {
         console.info("KBH: Build found. Loading...");
-        let resplit = split[1]
-        let decoded = decodeURIComponent(resplit);
         let split2 = decoded.split("build");
         finalSplit = split2[1].split("+");
         iterationSplit = 0
     }
 
     let defShantPass = false;
-    if (split[1].startsWith("build") === true && defShantPass === false ){
+    if (decoded.startsWith("build") === true && defShantPass === false ){
         defShantPass = true;
         
 
@@ -2729,7 +2819,10 @@ function buildLink() {
 }
 
 function copyLoadButton() {
-    if (window.location.href === document.getElementById("linkbox").value) {
+    const currentBuild = getBuildPayloadFromUrl(window.location.href);
+    const linkedBuild = getBuildPayloadFromUrl(document.getElementById("linkbox").value);
+
+    if (currentBuild !== false && currentBuild === linkedBuild) {
         document.getElementById("buttonCopyBuildLink").textContent = "Copy";
     }
     else {
@@ -2737,9 +2830,23 @@ function copyLoadButton() {
     }
 }
 
-function copyBuildLink() {
+async function copyBuildLink() {
     let copyObj = document.getElementById("linkbox");
-    copyObj.select;
+    const buildPayload = getCurrentBuildPayload();
+
+    if (buildPayload !== false) {
+        const imageVersion = Date.now().toString(36);
+        const screenshotUploaded = await uploadShareScreenshot(buildPayload, imageVersion);
+
+        if (screenshotUploaded === true) {
+            copyObj.value = buildShareUrl(buildPayload, imageVersion);
+        }
+        else {
+            copyObj.value = buildShareUrl(buildPayload);
+        }
+    }
+
+    copyObj.select();
     copyObj.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyObj.value);
     infoboxHover('button', 0, 0, 'Link copied to clipboard')
@@ -2748,8 +2855,8 @@ function copyBuildLink() {
 function pasteBuildLink() {
     let pasteObj = document.getElementById("linkbox");
     let currentURL = window.location.href;
-    let reg = /https:\/\/verdictfps\.github\.io\/kevins-build-helper\/[#][!]/;
-        if (pasteObj.value !== currentURL && reg.test(pasteObj.value) == true) {
+    let pastedBuild = getBuildPayloadFromUrl(pasteObj.value);
+        if (pasteObj.value !== currentURL && pastedBuild !== false) {
             decodeUriAsBuild("load", pasteObj.value)
             infoboxHover('loadsucceed')
         }
@@ -8510,4 +8617,3 @@ const dropPromise = new Promise((resolve, reject) => {
         mobileDropdownCheck();
     }, 500);
 })
-
