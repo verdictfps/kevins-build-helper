@@ -126,6 +126,9 @@ function mobileCSS() {
         document.getElementById("externalbuttondiv").classList.remove("external-button-cont");
         document.getElementById("externalbuttondiv").classList.add("external-button-cont-mobile");
 
+        document.getElementById("weaponstatcontainer").classList.remove("resultcontainer");
+        document.getElementById("weaponstatcontainer").classList.add("resultcontainer-mobile");
+
         document.getElementById("containerweapchoose").classList.remove("containerweapchoose");
         document.getElementById("containerweapchoose").classList.add("containerweapchoose-mobile");
         document.getElementById("containerweapchoose").style.flexBasis = "100%";
@@ -230,7 +233,7 @@ function mobileCSS() {
         document.getElementById("boxglowthing").style.height = "125px";
 
         //document.getElementById("containerheaders2").style.display = "";
- 
+        
         document.querySelectorAll(".stuffbutton").forEach(e => {e.classList.add("stuffbutton-mobile")});
 
         let mainbuild = document.getElementById("mainbuildcontainer");
@@ -252,6 +255,9 @@ function mobileCSS() {
         let buildcardrow2 = document.getElementById("buildcardrow2");
         let buildcardrow3 = document.getElementById("buildcardrow3");
         let buildcardrow4 = document.getElementById("buildcardrow4");
+        let buildcardrow5 = document.getElementById("buildcardrow5");
+        let buildcardrow6 = document.getElementById("buildcardrow6");
+        let buildcardrow7 = document.getElementById("buildcardrow7");
 
         let guncardgrid1 = document.getElementById("guncardgrid1");
         let guncardgrid2 = document.getElementById("guncardgrid2");
@@ -261,6 +267,26 @@ function mobileCSS() {
         let guncardgrid6 = document.getElementById("guncardgrid6");
         let guncardgrid8 = document.getElementById("guncardgrid8");
 
+        let lootheader = document.getElementById("lootheader");
+        let bulletheader = document.getElementById("bulletheader");
+        let dpsheader = document.getElementById("dpsheader");
+        let moveheader = document.getElementById("moveheader");
+        let weaponheader = document.getElementById("weaponheader");
+
+        let bulletbehaviorbox = document.getElementById("bulletbehaviorbox");
+        let lootbox = document.getElementById("lootbox");
+        let generalstatbox = document.getElementById("generalstatbox");
+        let trinketbox = document.getElementById("trinketbox");
+        let dpsbox = document.getElementById("dpsbox");
+        let movementbox = document.getElementById("movementbox");
+        let weaponbox = document.getElementById("weaponbox");
+
+        generalstatbox.style.paddingBottom = "5px";
+        generalstatbox.style.borderRight = "0px";
+        trinketbox.style.borderRight = "0px";
+        guncardgrid3.style.borderRight = "0px";
+        weaponbox.style.borderRight = "0px";
+
         buildcardrow1.style.width = "100%";
         buildcardrow2.style.width = "100%";
         buildcardrow3.style.width = "100%";
@@ -268,23 +294,99 @@ function mobileCSS() {
 
         buildcardrow2.style.display = "flex";
         buildcardrow3.style.display = "flex";
+        buildcardrow5.style.display = "flex";
+        buildcardrow6.style.display = "flex";
+        buildcardrow7.style.display = "flex";
+
+        buildcardrow4.style.flexDirection = "column";
+        buildcardrow5.style.flexDirection = "column";
+        buildcardrow6.style.flexDirection = "column";
+        buildcardrow7.style.flexDirection = "column";
 
         guncardgrid8.style.borderTop = "0px";
 
-        buildcardrow1.append(guncardgrid1, guncardgrid2, guncardgrid8);
-        buildcardrow2.append(guncardgrid1, guncardgrid2);
-        buildcardrow3.append(guncardgrid5, guncardgrid6);
+        buildcardrow1.append(guncardgrid1);
+        buildcardrow2.append(guncardgrid4, guncardgrid8);
+        buildcardrow3.append(guncardgrid1);
+        buildcardrow5.append(guncardgrid2);
+        buildcardrow6.append(guncardgrid5);
+        buildcardrow7.append(guncardgrid6);
 
-        guncardgrid1.style.width = "50%";
-        guncardgrid2.style.width = "50%";
-        guncardgrid3.style.width = "49.85%";
-        guncardgrid5.style.width = "50%";
-        guncardgrid6.style.width = "50%";
+        guncardgrid2.append(dpsheader, dpsbox, moveheader, movementbox)
+        guncardgrid5.append(weaponheader, weaponbox)
+        guncardgrid6.append(bulletheader, bulletbehaviorbox, lootheader, lootbox)
+
+        guncardgrid1.style.width = "100%";
+        guncardgrid2.style.width = "100%";
+        guncardgrid3.style.width = "100%";
+        guncardgrid5.style.width = "100%";
+        guncardgrid6.style.width = "100%";
+        guncardgrid6.style.flexDirection = "column";
 
         buildcardrow2.style.borderTop = "1px solid #FDB142";
         guncardgrid2.style.borderTop = "0px";
 
         document.getElementById("scrollinfobackground").style.display = "none"
+
+        bulletheader.style.display = "flex";
+        bulletheader.style.position = "relative";
+        bulletheader.style.width = "100%";
+        bulletheader.style.textAlign = "center";
+        bulletheader.style.left = "";
+        bulletheader.style.top = "";
+        bulletheader.style.borderWidth = "10px 0px 2px 0px";
+        bulletheader.style.borderColor = "black";
+        bulletheader.style.borderRadius = "0";
+        bulletheader.style.paddingRight = "0";
+        bulletheader.style.paddingLeft = "0";
+
+        moveheader.style.display = "flex";
+        moveheader.style.position = "relative";
+        moveheader.style.width = "100%";
+        moveheader.style.textAlign = "center";
+        moveheader.style.left = "";
+        moveheader.style.top = "";
+        moveheader.style.borderWidth = "10px 0px 2px 0px";
+        moveheader.style.borderColor = "black";
+        moveheader.style.borderRadius = "0";
+        moveheader.style.paddingRight = "0";
+        moveheader.style.paddingLeft = "0";
+
+        dpsheader.style.display = "flex";
+        dpsheader.style.position = "relative";
+        dpsheader.style.width = "100%";
+        dpsheader.style.textAlign = "center";
+        dpsheader.style.left = "";
+        dpsheader.style.top = "";
+        dpsheader.style.borderWidth = "10px 0px 2px 0px";
+        dpsheader.style.borderColor = "black";
+        dpsheader.style.borderRadius = "0";
+        dpsheader.style.paddingRight = "0";
+        dpsheader.style.paddingLeft = "0";
+
+        weaponheader.style.display = "flex";
+        weaponheader.style.position = "relative";
+        weaponheader.style.width = "100%";
+        weaponheader.style.textAlign = "center";
+        weaponheader.style.left = "";
+        weaponheader.style.top = "";
+        weaponheader.style.borderWidth = "10px 0px 2px 0px";
+        weaponheader.style.borderColor = "black";
+        weaponheader.style.borderRadius = "0";
+        weaponheader.style.paddingRight = "0";
+        weaponheader.style.paddingLeft = "0";
+
+        lootheader.style.display = "flex";
+        lootheader.style.position = "relative";
+        lootheader.style.width = "100%";
+        lootheader.style.textAlign = "center";
+        lootheader.style.left = "";
+        lootheader.style.top = "";
+        lootheader.style.borderWidth = "10px 0px 2px 0px";
+        lootheader.style.borderColor = "black";
+        lootheader.style.borderRadius = "0";
+        lootheader.style.paddingRight = "0";
+        lootheader.style.paddingLeft = "0";
 
         mainbuild.addEventListener("scroll", () => {
             if (scrollBlock === false) {
@@ -2163,6 +2265,14 @@ function clickLink(dest) {
     }
 }
 
+function helicopterModeOn() {
+    document.getElementById("helicoptermode").style.display = "flex";
+}
+
+function helicopterModeOff() {
+    document.getElementById("helicoptermode").style.display = "none";
+}
+
 function scrollExtendedStats() {
     window.scrollTo({ top: 9999999, behavior: 'smooth' });
 }
@@ -2361,7 +2471,7 @@ async function captureElement(activated, save) {
         document.getElementById("weaponimage").classList.add("weaponimage");
         document.getElementById("weaponimage").classList.remove("weaponimage2");
     }
-    document.getElementById("helicoptermode").style.display = "";
+    document.getElementById("helicoptermode").style.display = "none";
 }
 
 function takeScreenshot(activated, save, target2) {
@@ -2820,14 +2930,12 @@ async function rollFiveBuilds() {
     
     buildSwapping = true;
     setBuildAsActive(1);
-    buildSwapping = false;
     setTimeout(() => {
         setAllAsRandom();
     },500);
     setTimeout(() => {
         buildSwapping = true;
         setBuildAsActive(2);
-        buildSwapping = false;
     },1500);
     setTimeout(() => {
         setAllAsRandom();
@@ -2835,7 +2943,6 @@ async function rollFiveBuilds() {
     setTimeout(() => {
         buildSwapping = true;
         setBuildAsActive(3);
-        buildSwapping = false;
     },3000);
     setTimeout(() => {
         setAllAsRandom();
@@ -2843,7 +2950,6 @@ async function rollFiveBuilds() {
     setTimeout(() => {
         buildSwapping = true;
         setBuildAsActive(4);
-        buildSwapping = false;
     },4500);
     setTimeout(() => {
         setAllAsRandom();
@@ -2851,14 +2957,10 @@ async function rollFiveBuilds() {
     setTimeout(() => {
         buildSwapping = true;
         setBuildAsActive(5);
-        buildSwapping = false;
     },6000);
     setTimeout(() => {
         setAllAsRandom();
     },6500);
-    setTimeout(() => {
-        buildSwapping = false;
-    },7500);
 }
 
 function setBuildButton(sel) {
@@ -2956,7 +3058,6 @@ async function setBuildAsActive(sel, clone) {
                 rollAggregator('trinket2', 'trinket2selector', 2, build.get("trinket2").Value, "trinket", false, "setBuildAsActive");
                 rollAggregator('trinket3', 'trinket3selector', 3, build.get("trinket3").Value, "trinket", false, "setBuildAsActive");
                 rollAggregator('trinket4', 'trinket4selector', 4, build.get("trinket4").Value, "trinket", true, "setBuildAsActive");
-                buildSwapping = false;
             }
 
         }
@@ -3022,8 +3123,6 @@ async function setBuildAsActive(sel, clone) {
                 rollAggregator('trinket2', 'trinket2selector', 2, build.get("trinket2").Value, "trinket", false, "setBuildAsActive");
                 rollAggregator('trinket3', 'trinket3selector', 3, build.get("trinket3").Value, "trinket", false, "setBuildAsActive");
                 rollAggregator('trinket4', 'trinket4selector', 4, build.get("trinket4").Value, "trinket", true, "setBuildAsActive");
-                
-                buildSwapping = false;
             }
         }
             //await oilRemover();
@@ -3614,6 +3713,15 @@ function animationQueue(type, id) {
 //  rollOnPageLoad('weapon', 'pageload', 7, 'p38-dirk', 'weapon');
 //}, 150);
 
+let checkboxing = false;
+
+function onCheckedUnchecked() {
+    checkboxing = true;
+    skipRollCounting = true;
+    commitAll();
+    onGenerate('button');
+}
+
 // For when the button is clicked.
 function onGenerate() {
     rollAggregator("weapon", "weapons", 1, document.getElementById("weapons").getValue(), "weapon", false, "onGenerate");
@@ -4037,6 +4145,14 @@ async function rollOnPageLoad(flag, selector, selID, value, type) {
     mobileCSS();
     skipRollCounting = false;
     shallNotPass = false;
+
+    setTimeout(() => {
+        makeEquipmentMenuVisible();
+    }, 500)
+    setTimeout(() => {
+        makeWeaponStuffMenuVisible();
+    }, 1000)
+
 }
 
 let poolRebuildReady = true;
@@ -4341,7 +4457,7 @@ function addCountToDisplay() {
 
 async function rollAggregator(flag, selector, selID, selValue, selType, last, source) {
 
-    if (buildSwapping === false) {
+    //if (buildSwapping === false && checkboxing === false) {
         document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
         document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
         document.getElementById("oilstatcontainer3").classList.remove("spinanimation");
@@ -4353,7 +4469,7 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
         document.getElementById("cardOil3Img").classList.remove("otherspinanimation");
         document.getElementById("cardOil4Img").classList.remove("otherspinanimation");
         document.getElementById("cardOil5Img").classList.remove("otherspinanimation");
-    }
+    //}
     shallNotPass = true;
     let select = null;
     if (flag.startsWith("ench")) {
@@ -4445,7 +4561,7 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
         await attachmentFilter();
         oilStats();
         oilCalcs(oilStatModifiers);
-        if (buildSwapping === false) {
+        if (buildSwapping === false && checkboxing === false) {
             setTimeout(() => {
             document.getElementById("oilstatcontainer1").classList.add("spinanimation");
             document.getElementById("cardOil1Img").classList.add("otherspinanimation");
@@ -4475,12 +4591,14 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
             //setBuildAsMetadata();
             //}, 530);
         }
-        else if (buildSwapping === true) {
+        else if (buildSwapping === true || checkboxing === true) {
             await addName();
             encodeBuildAsUri(last);
             //setBuildAsMetadata();
         }
-        
+        checkboxing = false;
+        buildSwapping = false;
+        skipRollCounting = false;
     }
     
     if (shallNotPass = false) {
@@ -4523,7 +4641,6 @@ async function rollAggregator(flag, selector, selID, selValue, selType, last, so
         armorFeetAll = [];
         trinketsAll = [];
     }
-    
 }
 
 function rollOnSelect(evt) {
@@ -4641,6 +4758,29 @@ function addName() {
                         shallNotPass = false;
                     }
                 }
+                let type = coreName.replaceAll("Chamber Chisel - ", "");
+                let dawep = coreSelections.get('weapon').Name;
+                switch (type) {
+                    case "9mm":
+                        document.getElementById("chamberdesc").innerHTML = value.Name.StatDescription + dawep.RecoilBase9mm;
+                        break;
+                    case "7.62mm":
+                        document.getElementById("chamberdesc").innerHTML = value.Name.StatDescription + dawep.RecoilBase762;
+                        break;
+                    case "5.56mm":
+                        document.getElementById("chamberdesc").innerHTML = value.Name.StatDescription + dawep.RecoilBase556;
+                        break;
+                    case ".50 BMG":
+                        document.getElementById("chamberdesc").innerHTML = value.Name.StatDescription + dawep.RecoilBase50bmg;
+                        break;
+                    case "12Ga":
+                        document.getElementById("chamberdesc").innerHTML = value.Name.StatDescription + dawep.RecoilBase12ga;
+                        break;
+                    case "Energy":
+                        document.getElementById("chamberdesc").innerHTML = value.Name.StatDescription + dawep.RecoilBase;
+                        break;
+                }
+                document.getElementById("chambername").textContent = type;
                 break;
             case "head":
                 let headImgName = "armorHeadSlot";
@@ -4765,208 +4905,258 @@ function percentConv(stat) {
 function oilStats() {
     oilStatModifiers = structuredClone(oilDefault);
 
-    function oilStatCalcs(selectedOil) {
-        
-        if (selectedOil === undefined) {
+    function oilStatCalcs(selectedOil, key) {
+        if (document.getElementById(`${key}checkbox`).checked === false) {
+            if (key === "chamber") {
+                let ammo = coreSelections.get("weapon").Name.AmmoType;
+                let chamberStats = getChamberByName(`Chamber Chisel - ${ammo}`);
+                if (chamberStats.AmmoType !== "Default" && chamberStats.AmmoType !== undefined) {
+                oilStatModifiers.AmmoType = chamberStats.AmmoType;
+                }
+                if (chamberStats.Damage !== 0 && chamberStats.Damage !== 0) {
+                    oilStatModifiers.Damage += chamberStats.Damage;
+                }
+                if (chamberStats.Projectiles !== 0 && chamberStats.Projectiles !== 0) {
+                    oilStatModifiers.Projectiles += chamberStats.Projectiles;
+                }
+            }
             return;
         }
-        if (selectedOil.AmmoConsumeChance != 0.0 && selectedOil.AmmoConsumeChance !== undefined) {
-            oilStatModifiers.AmmoConsumeChance += selectedOil.AmmoConsumeChance;
-        }
-        if (selectedOil.Bounces != 0 && selectedOil.Bounces !== undefined) {
-            oilStatModifiers.Bounces += selectedOil.Bounces;
-        }
-        if (selectedOil.BulletDrop != 0 && selectedOil.BulletDrop !== undefined) {
-            oilStatModifiers.BulletDrop += selectedOil.BulletDrop;
-        }
-        if (selectedOil.BulletSpeed != 0 && selectedOil.BulletSpeed !== undefined) {
-            oilStatModifiers.BulletSpeed += selectedOil.BulletSpeed;
-        }
-        if (selectedOil.ExtraAmmoUseChance != 0 && selectedOil.ExtraAmmoUseChance !== undefined) {
-            oilStatModifiers.ExtraAmmoUseChance += selectedOil.ExtraAmmoUseChance;
-        }
-        if (selectedOil.BaseCritChance != 0 && selectedOil.BaseCritChance !== undefined) {
-            oilStatModifiers.BaseCritChance += selectedOil.BaseCritChance;
-        }
-        if (selectedOil.DamageAdd != 0 && selectedOil.DamageAdd !== undefined) {
-            oilStatModifiers.DamageAdd += selectedOil.DamageAdd;
-        }
-        if (selectedOil.DamageMult != 0 && selectedOil.DamageMult !== undefined) {
-            oilStatModifiers.DamageMult += selectedOil.DamageMult;
-        }
-        if (selectedOil.CanADS != "Yes" && selectedOil.CanADS !== undefined) {
-            oilStatModifiers.CanADS = selectedOil.CanADS;
-        }
-        if (selectedOil.JumpPower != 0 && selectedOil.JumpPower !== undefined) {
-            oilStatModifiers.JumpPower += selectedOil.JumpPower;
-        }
-        if (selectedOil.LootDropChance != 0 && selectedOil.LootDropChance !== undefined) {
-            oilStatModifiers.LootDropChance += selectedOil.LootDropChance;
-        }
-        if (selectedOil.DurabilityMult != 0 && selectedOil.DurabilityMult !== undefined) {
-            oilStatModifiers.DurabilityMult += selectedOil.DurabilityMult;
-        }
-        if (selectedOil.MovementSpeedMult != 0 && selectedOil.MovementSpeedMult !== undefined) {
-            oilStatModifiers.MovementSpeedMult += selectedOil.MovementSpeedMult;
-        }
-        if (selectedOil.MoneyDrops != "Yes" && selectedOil.MoneyDrops !== undefined) {
-            oilStatModifiers.MoneyDrops = selectedOil.MoneyDrops;
-        }
-        if (selectedOil.OrganDrops != "Yes" && selectedOil.OrganDrops !== undefined) {
-            oilStatModifiers.OrganDrops = selectedOil.OrganDrops;
-        }
-        if (selectedOil.Penetrations != 0 && selectedOil.Penetrations !== undefined) {
-            oilStatModifiers.Penetrations += selectedOil.Penetrations;
-        }
-        if (selectedOil.ProjectileMult != 0 && selectedOil.ProjectileMult !== undefined) {
-            oilStatModifiers.ProjectileMult += selectedOil.ProjectileMult;
-        }
-        if (selectedOil.RPM != 0 && selectedOil.RPM !== undefined) {
-            oilStatModifiers.RPM += selectedOil.RPM;
-        }
-        if (selectedOil.RecoilAdd != 0 && selectedOil.RecoilAdd !== undefined) {
-            oilStatModifiers.RecoilAdd += selectedOil.RecoilAdd;
-        }
-        if (selectedOil.RecoilMult != 0 && selectedOil.RecoilMult !== undefined) {
-            oilStatModifiers.RecoilMult += selectedOil.RecoilMult;
-        }
-        if (selectedOil.ReloadSpeed < 0 && selectedOil.ReloadSpeed !== undefined) {
-            oilStatModifiers.ReloadNegative *= (1 + selectedOil.ReloadSpeed);
-        }
-        if (selectedOil.ReloadSpeed > 0 && selectedOil.ReloadSpeed !== undefined) {
-            oilStatModifiers.ReloadPositive += selectedOil.ReloadSpeed;
-        }
-        if (selectedOil.SpreadAdd != 0 && selectedOil.SpreadAdd !== undefined) {
-            oilStatModifiers.SpreadAdd += selectedOil.SpreadAdd;
-        }
-        if (selectedOil.SpreadMult != 0 && selectedOil.SpreadMult !== undefined) {
-            oilStatModifiers.SpreadMult += selectedOil.SpreadMult;
-        }
-        if (selectedOil.Drag != 0 && selectedOil.Drag !== undefined) {
-            oilStatModifiers.Drag += selectedOil.Drag;
-        }
-        if (selectedOil.DurabilityUsage != 0 && selectedOil.DurabilityUsage !== undefined) {
-            oilStatModifiers.DurabilityUsage += selectedOil.DurabilityUsage;
-        }
-        if (selectedOil.BulletBounciness != 0 && selectedOil.BulletBounciness !== undefined) {
-            oilStatModifiers.BulletBounciness += selectedOil.BulletBounciness;
-        }
-        if (selectedOil.MovingAccuracy != 0 && selectedOil.MovingAccuracy !== undefined) {
-            oilStatModifiers.MovingAccuracy += selectedOil.MovingAccuracy;
-        }
-        if (selectedOil.DurLossMult != 0 && selectedOil.DurLossMult !== undefined) {
-            oilStatModifiers.DurLossMult += selectedOil.DurLossMult;
-        }
-        if (selectedOil.ADSCritChance != 0 && selectedOil.ADSCritChance !== undefined) {
-            oilStatModifiers.ADSCritChance += selectedOil.ADSCritChance;
-        }
-        if (selectedOil.Firemode !== 'None' && selectedOil.Firemode !== undefined) {
-            oilStatModifiers.Firemode = selectedOil.Firemode;
-        }
-        if (selectedOil.BulletSize < 0 && selectedOil.BulletSize !== undefined) {
-            oilStatModifiers.BulletSizeNegative *= (1 + selectedOil.BulletSize);
-        }
-        if (selectedOil.BulletSize > 0 && selectedOil.BulletSize !== undefined) {
-            oilStatModifiers.BulletSizePositive += selectedOil.BulletSize;
-        }
-        if (selectedOil.RPMBaseShift !== 0 && selectedOil.RPMBaseShift !== undefined) {
-            oilStatModifiers.RPMBaseShift = selectedOil.RPMBaseShift;
-        }
-        if (selectedOil.IsRailgun !== false && selectedOil.IsRailgun !== undefined) {
-            oilStatModifiers.IsRailgun = selectedOil.IsRailgun;
-        }
-        if (selectedOil.HeadshotDamage !== 0 && selectedOil.HeadshotDamage !== undefined) {
-            oilStatModifiers.HeadshotDamage = selectedOil.HeadshotDamage;
-        }
-        if (selectedOil.ScrollField !== "None" && selectedOil.ScrollField !== undefined) {
-            oilStatModifiers.ScrollField = selectedOil.ScrollField;
-        }
-        if (selectedOil.DamageMultInd !== "None" && selectedOil.DamageMultInd !== 0) {
-            oilStatModifiers.DamageMultInd = selectedOil.DamageMultInd;
-        }
-        if (selectedOil.DamageMultWearableAR !== 0 && selectedOil.DamageMultWearableAR !== undefined) {
-            oilStatModifiers.DamageMultWearableAR += selectedOil.DamageMultWearableAR;
-        }
-        if (selectedOil.DamageMultWearableAutomatic !== 0 && selectedOil.DamageMultWearableAutomatic !== undefined) {
-            oilStatModifiers.DamageMultWearableAutomatic += selectedOil.DamageMultWearableAutomatic;
-        }
-        if (selectedOil.DamageMultWearableLMG !== 0 && selectedOil.DamageMultWearableLMG !== undefined) {
-            oilStatModifiers.DamageMultWearableLMG += selectedOil.DamageMultWearableLMG;
-        }
-        if (selectedOil.DamageMultWearablePistol !== 0 && selectedOil.DamageMultWearablePistol !== undefined) {
-            oilStatModifiers.DamageMultWearablePistol += selectedOil.DamageMultWearablePistol;
-        }
-        if (selectedOil.DamageMultWearableRevolver !== 0 && selectedOil.DamageMultWearableRevolver !== undefined) {
-            oilStatModifiers.DamageMultWearableRevolver += selectedOil.DamageMultWearableRevolver;
-        }
-        if (selectedOil.DamageMultWearableRifle !== 0 && selectedOil.DamageMultWearableRifle !== undefined) {
-            oilStatModifiers.DamageMultWearableRifle += selectedOil.DamageMultWearableRifle;
-        }
-        if (selectedOil.DamageMultWearableShotgun !== 0 && selectedOil.DamageMultWearableShotgun !== undefined) {
-            oilStatModifiers.DamageMultWearableShotgun += selectedOil.DamageMultWearableShotgun;
-        }
-        if (selectedOil.DamageMultWearableSniper !== 0 && selectedOil.DamageMultWearableSniper !== undefined) {
-            oilStatModifiers.DamageMultWearableSniper += selectedOil.DamageMultWearableSniper;
-        }
-        if (selectedOil.MovementSpeedEquipment !== 0 && selectedOil.MovementSpeedEquipment !== undefined) {
-            oilStatModifiers.MovementSpeedEquipment += selectedOil.MovementSpeedEquipment;
-        }
-        if (selectedOil.SprintSpeedEquipment !== 0 && selectedOil.SprintSpeedEquipment !== undefined) {
-            oilStatModifiers.SprintSpeedEquipment += selectedOil.SprintSpeedEquipment;
-        }
-        if (selectedOil.SwimSpeedEquipment !== 0 && selectedOil.SwimSpeedEquipment !== undefined) {
-            oilStatModifiers.SwimSpeedEquipment += selectedOil.SwimSpeedEquipment;
-        }
-        if (selectedOil.JumpPowerEquipment !== 0 && selectedOil.JumpPowerEquipment !== undefined) {
-            oilStatModifiers.JumpPowerEquipment += selectedOil.JumpPowerEquipment;
-        }
-        if (selectedOil.MeleeDamageMultEquip !== 0 && selectedOil.MeleeDamageMultEquip !== undefined) {
-            oilStatModifiers.MeleeDamageMultEquip += selectedOil.MeleeDamageMultEquip;
-        }
-        if (selectedOil.WeaponWeightModifier !== 0 && selectedOil.WeaponWeightModifier !== undefined) {
-            oilStatModifiers.WeaponWeightModifier += selectedOil.WeaponWeightModifier;
-        }
-        if (selectedOil.MoveAccuracyEquipment !== 0 && selectedOil.MoveAccuracyEquipment !== undefined) {
-            oilStatModifiers.MoveAccuracyEquipment += selectedOil.MoveAccuracyEquipment;
-        }
-        if (selectedOil.MeleeDamageMultEquip !== 0 && selectedOil.MeleeDamageMultEquip !== undefined) {
-            oilStatModifiers.ExtraJumpsMult += selectedOil.ExtraJumpsMult;
-        }
-        if (selectedOil.Charisma !== 0 && selectedOil.Charisma !== undefined) {
-            oilStatModifiers.Charisma += selectedOil.Charisma;
-        }
-        if (selectedOil.Armor !== 0 && selectedOil.Armor !== undefined) {
-            oilStatModifiers.Armor += selectedOil.Armor;
-        }
-        if (selectedOil.CharmResistance !== 0 && selectedOil.CharmResistance !== undefined) {
-            oilStatModifiers.CharmResistance += selectedOil.CharmResistance;
-        }
-        if (selectedOil.CoyoteTime !== 0 && selectedOil.CoyoteTime !== undefined) {
-            oilStatModifiers.CoyoteTime += selectedOil.CoyoteTime;
-        }
-        if (selectedOil.DamageResistElectric !== 0 && selectedOil.DamageResistElectric !== undefined) {
-            oilStatModifiers.DamageResistElectric += selectedOil.DamageResistElectric;
-        }
-        if (selectedOil.DamageResistExplosive !== 0 && selectedOil.DamageResistExplosive !== undefined) {
-            oilStatModifiers.DamageResistExplosive += selectedOil.DamageResistExplosive;
-        }
-        if (selectedOil.DamageResistFire !== 0 && selectedOil.DamageResistFire !== undefined) {
-            oilStatModifiers.DamageResistFire += selectedOil.DamageResistFire;
-        }
-        if (selectedOil.DamageResistFrost !== 0 && selectedOil.DamageResistFrost !== undefined) {
-            oilStatModifiers.DamageResistFrost += selectedOil.DamageResistFrost;
-        }
-        if (selectedOil.DamageResistLight !== 0 && selectedOil.DamageResistLight !== undefined) {
-            oilStatModifiers.DamageResistLight += selectedOil.DamageResistLight;
-        }
-        if (selectedOil.DamageResistPoison !== 0 && selectedOil.DamageResistPoison !== undefined) {
-            oilStatModifiers.DamageResistPoison += selectedOil.DamageResistPoison;
-        }
-        if (selectedOil.ExtraJumps !== 0 && selectedOil.ExtraJumps !== undefined) {
-            oilStatModifiers.ExtraJumps += selectedOil.ExtraJumps;
-        }
-        if (selectedOil.Luck !== 0 && selectedOil.Luck !== undefined) {
-            oilStatModifiers.Luck += selectedOil.Luck;
+        else {
+            if (selectedOil === undefined) {
+                return;
+            }
+            if (selectedOil.AmmoConsumeChance != 0.0 && selectedOil.AmmoConsumeChance !== undefined) {
+                oilStatModifiers.AmmoConsumeChance += selectedOil.AmmoConsumeChance;
+            }
+            if (selectedOil.Bounces != 0 && selectedOil.Bounces !== undefined) {
+                oilStatModifiers.Bounces += selectedOil.Bounces;
+            }
+            if (selectedOil.BulletDrop != 0 && selectedOil.BulletDrop !== undefined) {
+                oilStatModifiers.BulletDrop += selectedOil.BulletDrop;
+            }
+            if (selectedOil.BulletSpeed != 0 && selectedOil.BulletSpeed !== undefined) {
+                oilStatModifiers.BulletSpeed += selectedOil.BulletSpeed;
+            }
+            if (selectedOil.ExtraAmmoUseChance != 0 && selectedOil.ExtraAmmoUseChance !== undefined) {
+                oilStatModifiers.ExtraAmmoUseChance += selectedOil.ExtraAmmoUseChance;
+            }
+            if (selectedOil.BaseCritChance != 0 && selectedOil.BaseCritChance !== undefined) {
+                oilStatModifiers.BaseCritChance += selectedOil.BaseCritChance;
+            }
+            if (selectedOil.DamageAdd != 0 && selectedOil.DamageAdd !== undefined) {
+                oilStatModifiers.DamageAdd += selectedOil.DamageAdd;
+            }
+            if (selectedOil.DamageMult != 0 && selectedOil.DamageMult !== undefined) {
+                oilStatModifiers.DamageMult += selectedOil.DamageMult;
+            }
+            if (selectedOil.CanADS != "Yes" && selectedOil.CanADS !== undefined) {
+                oilStatModifiers.CanADS = selectedOil.CanADS;
+            }
+            if (selectedOil.JumpPower != 0 && selectedOil.JumpPower !== undefined) {
+                oilStatModifiers.JumpPower += selectedOil.JumpPower;
+            }
+            if (selectedOil.LootDropChance != 0 && selectedOil.LootDropChance !== undefined) {
+                oilStatModifiers.LootDropChance += selectedOil.LootDropChance;
+            }
+            if (selectedOil.DurabilityMult != 0 && selectedOil.DurabilityMult !== undefined) {
+                oilStatModifiers.DurabilityMult += selectedOil.DurabilityMult;
+            }
+            if (selectedOil.MovementSpeedMult != 0 && selectedOil.MovementSpeedMult !== undefined) {
+                oilStatModifiers.MovementSpeedMult += selectedOil.MovementSpeedMult;
+            }
+            if (selectedOil.MoneyDrops != "Yes" && selectedOil.MoneyDrops !== undefined) {
+                oilStatModifiers.MoneyDrops = selectedOil.MoneyDrops;
+            }
+            if (selectedOil.OrganDrops != "Yes" && selectedOil.OrganDrops !== undefined) {
+                oilStatModifiers.OrganDrops = selectedOil.OrganDrops;
+            }
+            if (selectedOil.Penetrations != 0 && selectedOil.Penetrations !== undefined) {
+                oilStatModifiers.Penetrations += selectedOil.Penetrations;
+            }
+            if (selectedOil.ProjectileMult != 0 && selectedOil.ProjectileMult !== undefined) {
+                oilStatModifiers.ProjectileMult += selectedOil.ProjectileMult;
+            }
+            if (selectedOil.RPM != 0 && selectedOil.RPM !== undefined) {
+                oilStatModifiers.RPM += selectedOil.RPM;
+            }
+            if (selectedOil.RecoilAdd != 0 && selectedOil.RecoilAdd !== undefined) {
+                oilStatModifiers.RecoilAdd += selectedOil.RecoilAdd;
+            }
+            if (selectedOil.RecoilMult != 0 && selectedOil.RecoilMult !== undefined) {
+                oilStatModifiers.RecoilMult += selectedOil.RecoilMult;
+            }
+            if (selectedOil.ReloadSpeed < 0 && selectedOil.ReloadSpeed !== undefined) {
+                oilStatModifiers.ReloadNegative *= (1 + selectedOil.ReloadSpeed);
+            }
+            if (selectedOil.ReloadSpeed > 0 && selectedOil.ReloadSpeed !== undefined) {
+                oilStatModifiers.ReloadPositive += selectedOil.ReloadSpeed;
+            }
+            if (selectedOil.SpreadAdd != 0 && selectedOil.SpreadAdd !== undefined) {
+                oilStatModifiers.SpreadAdd += selectedOil.SpreadAdd;
+            }
+            if (selectedOil.SpreadMult != 0 && selectedOil.SpreadMult !== undefined) {
+                oilStatModifiers.SpreadMult += selectedOil.SpreadMult;
+            }
+            if (selectedOil.Drag != 0 && selectedOil.Drag !== undefined) {
+                oilStatModifiers.Drag += selectedOil.Drag;
+            }
+            if (selectedOil.DurabilityUsage != 0 && selectedOil.DurabilityUsage !== undefined) {
+                oilStatModifiers.DurabilityUsage += selectedOil.DurabilityUsage;
+            }
+            if (selectedOil.BulletBounciness != 0 && selectedOil.BulletBounciness !== undefined) {
+                oilStatModifiers.BulletBounciness += selectedOil.BulletBounciness;
+            }
+            if (selectedOil.MovingAccuracy != 0 && selectedOil.MovingAccuracy !== undefined) {
+                oilStatModifiers.MovingAccuracy += selectedOil.MovingAccuracy;
+            }
+            if (selectedOil.DurLossMult != 0 && selectedOil.DurLossMult !== undefined) {
+                oilStatModifiers.DurLossMult += selectedOil.DurLossMult;
+            }
+            if (selectedOil.ADSCritChance != 0 && selectedOil.ADSCritChance !== undefined) {
+                oilStatModifiers.ADSCritChance += selectedOil.ADSCritChance;
+            }
+            if (selectedOil.Firemode !== 'None' && selectedOil.Firemode !== undefined) {
+                oilStatModifiers.Firemode = selectedOil.Firemode;
+            }
+            if (selectedOil.BulletSize < 0 && selectedOil.BulletSize !== undefined) {
+                oilStatModifiers.BulletSizeNegative *= (1 + selectedOil.BulletSize);
+            }
+            if (selectedOil.BulletSize > 0 && selectedOil.BulletSize !== undefined) {
+                oilStatModifiers.BulletSizePositive += selectedOil.BulletSize;
+            }
+            if (selectedOil.RPMBaseShift !== 0 && selectedOil.RPMBaseShift !== undefined) {
+                oilStatModifiers.RPMBaseShift = selectedOil.RPMBaseShift;
+            }
+            if (selectedOil.IsRailgun !== false && selectedOil.IsRailgun !== undefined) {
+                oilStatModifiers.IsRailgun = selectedOil.IsRailgun;
+            }
+            if (selectedOil.HeadshotDamage !== 0 && selectedOil.HeadshotDamage !== undefined) {
+                oilStatModifiers.HeadshotDamage = selectedOil.HeadshotDamage;
+            }
+            if (selectedOil.ScrollField !== "None" && selectedOil.ScrollField !== undefined) {
+                oilStatModifiers.ScrollField = selectedOil.ScrollField;
+            }
+            if (selectedOil.DamageMultInd !== "None" && selectedOil.DamageMultInd !== 0) {
+                oilStatModifiers.DamageMultInd = selectedOil.DamageMultInd;
+            }
+            if (selectedOil.DamageMultWearableAR !== 0 && selectedOil.DamageMultWearableAR !== undefined) {
+                oilStatModifiers.DamageMultWearableAR += selectedOil.DamageMultWearableAR;
+            }
+            if (selectedOil.DamageMultWearableAutomatic !== 0 && selectedOil.DamageMultWearableAutomatic !== undefined) {
+                oilStatModifiers.DamageMultWearableAutomatic += selectedOil.DamageMultWearableAutomatic;
+            }
+            if (selectedOil.DamageMultWearableLMG !== 0 && selectedOil.DamageMultWearableLMG !== undefined) {
+                oilStatModifiers.DamageMultWearableLMG += selectedOil.DamageMultWearableLMG;
+            }
+            if (selectedOil.DamageMultWearablePistol !== 0 && selectedOil.DamageMultWearablePistol !== undefined) {
+                oilStatModifiers.DamageMultWearablePistol += selectedOil.DamageMultWearablePistol;
+            }
+            if (selectedOil.DamageMultWearableRevolver !== 0 && selectedOil.DamageMultWearableRevolver !== undefined) {
+                oilStatModifiers.DamageMultWearableRevolver += selectedOil.DamageMultWearableRevolver;
+            }
+            if (selectedOil.DamageMultWearableRifle !== 0 && selectedOil.DamageMultWearableRifle !== undefined) {
+                oilStatModifiers.DamageMultWearableRifle += selectedOil.DamageMultWearableRifle;
+            }
+            if (selectedOil.DamageMultWearableShotgun !== 0 && selectedOil.DamageMultWearableShotgun !== undefined) {
+                oilStatModifiers.DamageMultWearableShotgun += selectedOil.DamageMultWearableShotgun;
+            }
+            if (selectedOil.DamageMultWearableSniper !== 0 && selectedOil.DamageMultWearableSniper !== undefined) {
+                oilStatModifiers.DamageMultWearableSniper += selectedOil.DamageMultWearableSniper;
+            }
+            if (selectedOil.MovementSpeedEquipment !== 0 && selectedOil.MovementSpeedEquipment !== undefined) {
+                oilStatModifiers.MovementSpeedEquipment += selectedOil.MovementSpeedEquipment;
+            }
+            if (selectedOil.SprintSpeedEquipment !== 0 && selectedOil.SprintSpeedEquipment !== undefined) {
+                oilStatModifiers.SprintSpeedEquipment += selectedOil.SprintSpeedEquipment;
+            }
+            if (selectedOil.SwimSpeedEquipment !== 0 && selectedOil.SwimSpeedEquipment !== undefined) {
+                oilStatModifiers.SwimSpeedEquipment += selectedOil.SwimSpeedEquipment;
+            }
+            if (selectedOil.JumpPowerEquipment !== 0 && selectedOil.JumpPowerEquipment !== undefined) {
+                oilStatModifiers.JumpPowerEquipment += selectedOil.JumpPowerEquipment;
+            }
+            if (selectedOil.MeleeDamageMultEquip !== 0 && selectedOil.MeleeDamageMultEquip !== undefined) {
+                oilStatModifiers.MeleeDamageMultEquip += selectedOil.MeleeDamageMultEquip;
+            }
+            if (selectedOil.WeaponWeightModifier !== 0 && selectedOil.WeaponWeightModifier !== undefined) {
+                oilStatModifiers.WeaponWeightModifier += selectedOil.WeaponWeightModifier;
+            }
+            if (selectedOil.MoveAccuracyEquipment !== 0 && selectedOil.MoveAccuracyEquipment !== undefined) {
+                oilStatModifiers.MoveAccuracyEquipment += selectedOil.MoveAccuracyEquipment;
+            }
+            if (selectedOil.MeleeDamageMultEquip !== 0 && selectedOil.MeleeDamageMultEquip !== undefined) {
+                oilStatModifiers.ExtraJumpsMult += selectedOil.ExtraJumpsMult;
+            }
+            if (selectedOil.Charisma !== 0 && selectedOil.Charisma !== undefined) {
+                oilStatModifiers.Charisma += selectedOil.Charisma;
+            }
+            if (selectedOil.Armor !== 0 && selectedOil.Armor !== undefined) {
+                oilStatModifiers.Armor += selectedOil.Armor;
+            }
+            if (selectedOil.CharmResistance !== 0 && selectedOil.CharmResistance !== undefined) {
+                oilStatModifiers.CharmResistance += selectedOil.CharmResistance;
+            }
+            if (selectedOil.CoyoteTime !== 0 && selectedOil.CoyoteTime !== undefined) {
+                oilStatModifiers.CoyoteTime += selectedOil.CoyoteTime;
+            }
+            if (selectedOil.DamageResistElectric !== 0 && selectedOil.DamageResistElectric !== undefined) {
+                oilStatModifiers.DamageResistElectric += selectedOil.DamageResistElectric;
+            }
+            if (selectedOil.DamageResistExplosive !== 0 && selectedOil.DamageResistExplosive !== undefined) {
+                oilStatModifiers.DamageResistExplosive += selectedOil.DamageResistExplosive;
+            }
+            if (selectedOil.DamageResistFire !== 0 && selectedOil.DamageResistFire !== undefined) {
+                oilStatModifiers.DamageResistFire += selectedOil.DamageResistFire;
+            }
+            if (selectedOil.DamageResistFrost !== 0 && selectedOil.DamageResistFrost !== undefined) {
+                oilStatModifiers.DamageResistFrost += selectedOil.DamageResistFrost;
+            }
+            if (selectedOil.DamageResistLight !== 0 && selectedOil.DamageResistLight !== undefined) {
+                oilStatModifiers.DamageResistLight += selectedOil.DamageResistLight;
+            }
+            if (selectedOil.DamageResistPoison !== 0 && selectedOil.DamageResistPoison !== undefined) {
+                oilStatModifiers.DamageResistPoison += selectedOil.DamageResistPoison;
+            }
+            if (selectedOil.ExtraJumps !== 0 && selectedOil.ExtraJumps !== undefined) {
+                oilStatModifiers.ExtraJumps += selectedOil.ExtraJumps;
+            }
+            if (selectedOil.Luck !== 0 && selectedOil.Luck !== undefined) {
+                oilStatModifiers.Luck += selectedOil.Luck;
+            }
+            if (selectedOil.AmmoType !== "Default" && selectedOil.AmmoType !== undefined) {
+                oilStatModifiers.AmmoType = selectedOil.AmmoType;
+            }
+            if (selectedOil.Damage !== 0 && selectedOil.Damage !== 0) {
+                oilStatModifiers.Damage += selectedOil.Damage;
+            }
+            if (selectedOil.Projectiles !== 0 && selectedOil.Projectiles !== 0) {
+                oilStatModifiers.Projectiles += selectedOil.Projectiles;
+            }
+            if (selectedOil.DamageMultTrinketAR !== 0 && selectedOil.DamageMultTrinketAR !== 0) {
+                oilStatModifiers.DamageMultTrinketAR += selectedOil.DamageMultTrinketAR;
+            }
+            if (selectedOil.DamageMultTrinketAutomatic !== 0 && selectedOil.DamageMultTrinketAutomatic !== 0) {
+                oilStatModifiers.DamageMultTrinketAutomatic += selectedOil.DamageMultTrinketAutomatic;
+            }
+            if (selectedOil.DamageMultTrinketLMG !== 0 && selectedOil.DamageMultTrinketLMG !== 0) {
+                oilStatModifiers.DamageMultTrinketLMG += selectedOil.DamageMultTrinketLMG;
+            }
+            if (selectedOil.DamageMultTrinketPistol !== 0 && selectedOil.DamageMultTrinketPistol !== 0) {
+                oilStatModifiers.DamageMultTrinketPistol += selectedOil.DamageMultTrinketPistol;
+            }
+            if (selectedOil.DamageMultTrinketRevolver !== 0 && selectedOil.DamageMultTrinketRevolver !== 0) {
+                oilStatModifiers.DamageMultTrinketRevolver += selectedOil.DamageMultTrinketRevolver;
+            }
+            if (selectedOil.DamageMultTrinketRifle !== 0 && selectedOil.DamageMultTrinketRifle !== 0) {
+                oilStatModifiers.DamageMultTrinketRifle += selectedOil.DamageMultTrinketRifle;
+            }
+            if (selectedOil.DamageMultTrinketShotgun !== 0 && selectedOil.DamageMultTrinketShotgun !== 0) {
+                oilStatModifiers.DamageMultTrinketShotgun += selectedOil.DamageMultTrinketShotgun;
+            }
+            if (selectedOil.DamageMultTrinketSniper !== 0 && selectedOil.DamageMultTrinketSniper !== 0) {
+                oilStatModifiers.DamageMultTrinketSniper += selectedOil.DamageMultTrinketSniper;
+            }
         }
     }
 
@@ -4974,7 +5164,7 @@ function oilStats() {
         
         let coreName = value.Name;
         if (key !== "weapon") {
-            oilStatCalcs(coreName);
+            oilStatCalcs(coreName, key);
         }
         
     }
@@ -5002,13 +5192,13 @@ function oilCalcs(calcOil) {
     
     let chamber = chamberStats;
 
-    weapon.Damage = weapon.DamageMultiplier * chamber.Damage;
-    weapon.AmmoType = chamber.AmmoType;
-    weapon.Projectiles = chamber.Projectiles;
+    weapon.Damage = weapon.DamageMultiplier * calcOil.Damage;
+    weapon.AmmoType = calcOil.AmmoType;
+    weapon.Projectiles = calcOil.Projectiles;
    
-    weaponOriginal.Damage = Math.round(((weapon.DamageMultiplier * chamber.Damage) + Number.EPSILON)* 100) / 100;
-    weaponOriginal.AmmoType = chamber.AmmoType;
-    weaponOriginal.Projectiles = chamber.Projectiles;
+    weaponOriginal.Damage = Math.round(((weapon.DamageMultiplier * calcOil.Damage) + Number.EPSILON)* 100) / 100;
+    weaponOriginal.AmmoType = calcOil.AmmoType;
+    weaponOriginal.Projectiles = calcOil.Projectiles;
 
     if (weapon.Name === "Augusta") {
         weapon.Projectiles = 3;
@@ -5036,6 +5226,27 @@ function oilCalcs(calcOil) {
 
     document.getElementById("cardWeaponType").textContent = weapon.Type;
     document.getElementById("cardAmmoType").textContent = weapon.AmmoType;
+
+    switch (weapon.AmmoType) {
+        case "9mm":
+            document.getElementById("ammoimage").src = ".\\Images\\Flavor\\9mm.png";
+            break;
+        case "Energy":
+            document.getElementById("ammoimage").src = ".\\Images\\Flavor\\Energy.png";
+            break;
+        case "5.56mm":
+            document.getElementById("ammoimage").src = ".\\Images\\Flavor\\556mm.png";
+            break;
+        case "7.62mm":
+            document.getElementById("ammoimage").src = ".\\Images\\Flavor\\762mm.png";
+            break;
+        case ".50 BMG":
+            document.getElementById("ammoimage").src = ".\\Images\\Flavor\\50bmg.png";
+            break;
+        case "12Ga":
+            document.getElementById("ammoimage").src = ".\\Images\\Flavor\\12Ga.png";
+            break;
+    }
 
     //////////////////////
     //// Scroll Cards ////
@@ -5081,31 +5292,35 @@ function oilCalcs(calcOil) {
     document.getElementById("scrollinfovoodoo").style.display = "none";
 
     function animateScrollCard(id) {
-        
         if (id === undefined) {
-            scrollDefaultCard.classList.remove("scrollcardanimate");
-            setTimeout(() => {
-                scrollDefaultCard.classList.add("scrollcardanimate");
-            }, 50);
+            if (checkboxing === false) {
+                scrollDefaultCard.classList.remove("scrollcardanimate");
+                setTimeout(() => {
+                    scrollDefaultCard.classList.add("scrollcardanimate");
+                }, 50);
+            }
             scrollDefaultCard.style.display = "flex";
         }
         else if (id === "None") {
-            scrollDefaultCard.classList.remove("scrollcardanimate");
-            setTimeout(() => {
-                scrollDefaultCard.classList.add("scrollcardanimate");
-            }, 50);
+            if (checkboxing === false) {
+                scrollDefaultCard.classList.remove("scrollcardanimate");
+                setTimeout(() => {
+                    scrollDefaultCard.classList.add("scrollcardanimate");
+                }, 50);
+            }
             scrollDefaultCard.style.display = "flex";
         }
         else {
-            document.getElementById(id).classList.remove("scrollcardanimate");
-            setTimeout(() => {
-                document.getElementById(id).classList.add("scrollcardanimate");
-            }, 50);
+            if (checkboxing === false) {
+                document.getElementById(id).classList.remove("scrollcardanimate");
+                setTimeout(() => {
+                    document.getElementById(id).classList.add("scrollcardanimate");
+                }, 50);
+            }
             scrollDefaultCard.style.display = "none";
             document.getElementById(id).style.display = "";
         }
     }
-    
     animateScrollCard(calcOil.ScrollField);
     //#endregion
 
@@ -5121,6 +5336,22 @@ function oilCalcs(calcOil) {
     document.getElementById("cardRPMLBrac").textContent = "";
     document.getElementById("cardRPMComp").textContent = "";
     document.getElementById("cardRPMRBrac").textContent = "";
+
+    if (coreSelections.get("firemode").Name.Name === "Gun Crank") {
+        switch (weapon.Name) {
+            case "Cavalier":
+                weapon.RPM = 600;
+                break;
+            case "M3 Termite":
+                weapon.RPM = 1100;
+                break;
+            case "Socom ACR":
+                weapon.RPM = 1100;
+                break;
+            default:
+        }
+
+    }
 
     let rpmShift = weapon.RPM * (1 + calcOil.RPMBaseShift);
 
@@ -5145,7 +5376,7 @@ function oilCalcs(calcOil) {
             document.getElementById("cardRPMComp").textContent = weaponOriginal.RPM;
         }
         document.getElementById("cardRPM").style.color = "Lime";
-        document.getElementById("cardRPMArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardRPMArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardRPMArrow").style.color = "Lime";
         document.getElementById("cardRPMLBrac").textContent = "(";
         document.getElementById("cardRPMRBrac").textContent = ")";
@@ -5161,7 +5392,7 @@ function oilCalcs(calcOil) {
         }
 
         document.getElementById("cardRPM").style.color = "OrangeRed";
-        document.getElementById("cardRPMArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardRPMArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardRPMArrow").style.color = "OrangeRed";
         document.getElementById("cardRPMLBrac").textContent = "(";
         document.getElementById("cardRPMRBrac").textContent = ")";
@@ -5204,7 +5435,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardAmmo").style.color = "Lime";
         document.getElementById("cardAmmo%").textContent = "%";
         document.getElementById("cardAmmo%").style.color = "Lime";
-        document.getElementById("cardAmmoArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardAmmoArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardAmmoArrow").style.color = "Lime";
         document.getElementById("cardAmmoLBrac").textContent = "(";
         document.getElementById("cardAmmoComp").textContent = "100%";
@@ -5244,7 +5475,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardExtra").style.color = "OrangeRed";
         document.getElementById("cardExtra%").textContent = "%";
         document.getElementById("cardExtra%").style.color = "OrangeRed";
-        document.getElementById("cardExtraArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardExtraArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardExtraArrow").style.color = "OrangeRed";
         document.getElementById("cardExtraLBrac").textContent = "(";
         document.getElementById("cardExtraComp").textContent = "0%";
@@ -5312,7 +5543,7 @@ function oilCalcs(calcOil) {
     if (weapon.Bounces > 0.0) {
         document.getElementById("cardBounces").textContent = weapon.Bounces;
         document.getElementById("cardBounces").style.color = "Lime";
-        document.getElementById("cardBouncesArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardBouncesArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardBouncesArrow").style.color = "Lime";
         document.getElementById("cardBouncesLBrac").textContent = "(";
         document.getElementById("cardBouncesComp").textContent = "0";
@@ -5345,7 +5576,7 @@ function oilCalcs(calcOil) {
             document.getElementById("dropmeters").textContent = `~${dropMeterRound}m`;
         document.getElementById("cardDrop").textContent = weapon.BulletDrop;
         document.getElementById("cardDrop").style.color = "OrangeRed";
-        document.getElementById("cardDropArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardDropArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardDropArrow").style.color = "OrangeRed";
         document.getElementById("cardDropLBrac").textContent = "(";
         document.getElementById("cardDropComp").textContent = "0";
@@ -5390,7 +5621,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSpeed").style.color = "Lime";
         document.getElementById("cardSpeed%").textContent = "%";
         document.getElementById("cardSpeed%").style.color = "Lime";
-        document.getElementById("cardSpeedArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardSpeedArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardSpeedArrow").style.color = "Lime";
         document.getElementById("cardSpeedLBrac").textContent = "(";
         document.getElementById("cardSpeedComp").textContent = "100%";
@@ -5401,7 +5632,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSpeed").style.color = "OrangeRed";
         document.getElementById("cardSpeed%").textContent = "%";
         document.getElementById("cardSpeed%").style.color = "OrangeRed";
-        document.getElementById("cardSpeedArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardSpeedArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardSpeedArrow").style.color = "OrangeRed";
         document.getElementById("cardSpeedLBrac").textContent = "(";
         document.getElementById("cardSpeedComp").textContent = "100%";
@@ -5442,7 +5673,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSize").style.color = "Lime";
         document.getElementById("cardSize%").textContent = "%";
         document.getElementById("cardSize%").style.color = "Lime";
-        document.getElementById("cardSizeArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardSizeArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardSizeArrow").style.color = "Lime";
         document.getElementById("cardSizeLBrac").textContent = "(";
         document.getElementById("cardSizeComp").textContent = "100%";
@@ -5453,7 +5684,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSize").style.color = "OrangeRed";
         document.getElementById("cardSize%").textContent = "%";
         document.getElementById("cardSize%").style.color = "OrangeRed";
-        document.getElementById("cardSizeArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardSizeArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardSizeArrow").style.color = "OrangeRed";
         document.getElementById("cardSizeLBrac").textContent = "(";
         document.getElementById("cardSizeComp").textContent = "100%";
@@ -5487,7 +5718,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardCrit").style.color = "Lime";
         document.getElementById("cardCrit%").textContent = "%";
         document.getElementById("cardCrit%").style.color = "Lime";
-        document.getElementById("cardCritArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardCritArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardCritArrow").style.color = "Lime";
     }
     else {
@@ -5517,7 +5748,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardADSCrit").style.color = "Lime";
         document.getElementById("cardADSCrit%").textContent = "%";
         document.getElementById("cardADSCrit%").style.color = "Lime";
-        document.getElementById("cardADSCritArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardADSCritArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardADSCritArrow").style.color = "Lime";
     }
     else {
@@ -5536,7 +5767,7 @@ function oilCalcs(calcOil) {
                 Run runTCrit = new Run($"{weapon.TotalCritChance.ToString("#####0.#")}%");
         runTCrit.Foreground = Brushes.Lime;
 
-                Run runArrowUp1 = new Run("<span class='fa-solid fa-caret-up'></span>");
+                Run runArrowUp1 = new Run("<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>");
         runArrowUp1.Foreground = Brushes.Lime;
 
                 Run runNoTCrit = new Run("(0%)");
@@ -5626,7 +5857,6 @@ function oilCalcs(calcOil) {
     //// Damage Add
     let damAdd = weapon.Damage + calcOil.DamageAdd;
     let zeroDamage = damAdd;
-
     //// Damage Multiplier
     let damCalc = damAdd * (1 + calcOil.DamageMult);
     let damSub = damCalc * (1 + calcOil.DamageMultInd);
@@ -5634,41 +5864,48 @@ function oilCalcs(calcOil) {
     if (zeroDamage > 0 && damSubRound <= 0) {
         damSubRound = zeroDamage * 0.01;
     }
-
     let eqpDmgMod = 1;
-
+    let trinkDmgMod = 1;
     switch (weapon.Type) {
         case "AR":
             eqpDmgMod += calcOil.DamageMultWearableAR;
+            trinkDmgMod += calcOil.DamageMultTrinketAR;
             break;
         case "Rifle":
             eqpDmgMod += calcOil.DamageMultWearableRifle;
+            trinkDmgMod += calcOil.DamageMultTrinketRifle;
             break;
         case "LMG":
             eqpDmgMod += calcOil.DamageMultWearableLMG;
+            trinkDmgMod += calcOil.DamageMultTrinketLMG;
             break;
         case "Pistol":
             eqpDmgMod += calcOil.DamageMultWearablePistol;
+            trinkDmgMod += calcOil.DamageMultTrinketPistol;
             break;
         case "Revolver":
             eqpDmgMod += calcOil.DamageMultWearableRevolver;
+            trinkDmgMod += calcOil.DamageMultTrinketRevolver;
             break;
         case "Shotgun":
             eqpDmgMod += calcOil.DamageMultWearableShotgun;
+            trinkDmgMod += calcOil.DamageMultTrinketShotgun;
             break;
         case "Sniper":
             eqpDmgMod += calcOil.DamageMultWearableSniper;
+            trinkDmgMod += calcOil.DamageMultTrinketSniper;
             break;
     }
 
     if (weapon.Firemode === "Auto") {
         eqpDmgMod += calcOil.DamageMultWearableAutomatic;
+        trinkDmgMod += calcOil.DamageMultTrinketAutomatic;
     }
     
     let eqpModifiedDmg = damSubRound * eqpDmgMod;
+    let totEqpModDmg = eqpModifiedDmg * trinkDmgMod;
 
-    let damRound = Math.round((eqpModifiedDmg + Number.EPSILON)* 100) / 100;
-
+    let damRound = Math.round((totEqpModDmg + Number.EPSILON)* 100) / 100;
     //// Total Damage Calc
     let totalCalc = damRound * weapProj * weapon.MultiShot;
     let totalRound = Math.round((totalCalc + Number.EPSILON)* 100) / 100;
@@ -5712,14 +5949,14 @@ function oilCalcs(calcOil) {
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "OrangeRed";
-            document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
@@ -5734,14 +5971,14 @@ function oilCalcs(calcOil) {
         if (weapProj > weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "OrangeRed";
-            document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "Lime";
-            document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardDamageProjArrow").style.color = "Lime";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
@@ -5756,7 +5993,7 @@ function oilCalcs(calcOil) {
         if (weapProj === weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "OrangeRed";
-            document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
@@ -5777,14 +6014,14 @@ function oilCalcs(calcOil) {
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "Lime";
-            document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardDamageArrow").style.color = "Lime";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
@@ -5799,14 +6036,14 @@ function oilCalcs(calcOil) {
         if (weapProj > weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "Lime";
-            document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardDamageArrow").style.color = "Lime";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "Lime";
-            document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardDamageProjArrow").style.color = "Lime";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
@@ -5821,7 +6058,7 @@ function oilCalcs(calcOil) {
         if (weapProj === weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "Lime";
-            document.getElementById("cardDamageArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardDamageArrow").style.color = "Lime";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
@@ -5846,7 +6083,7 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
@@ -5865,7 +6102,7 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "Lime";
-            document.getElementById("cardDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardDamageProjArrow").style.color = "Lime";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardDamageX").innerHTML = " <span class='fa-solid fa-x'></span> ";
@@ -5893,7 +6130,7 @@ function oilCalcs(calcOil) {
     if (totalComp > weaponOriginal.TotalDamage) {
             document.getElementById("cardDamageTotal").textContent = totalRound;
             document.getElementById("cardDamageTotal").style.color = "Lime";
-            document.getElementById("cardDamageTotalArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardDamageTotalArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardDamageTotalArrow").style.color = "Lime";
             document.getElementById("cardDamageTotalLBrac").textContent = "(";
             document.getElementById("cardDamageTotalComp").textContent = weaponOriginal.TotalDamage;
@@ -5902,7 +6139,7 @@ function oilCalcs(calcOil) {
     if (totalComp < weaponOriginal.TotalDamage) {
             document.getElementById("cardDamageTotal").textContent = totalRound;
             document.getElementById("cardDamageTotal").style.color = "OrangeRed";
-            document.getElementById("cardDamageTotalArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardDamageTotalArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardDamageTotalArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageTotalLBrac").textContent = "(";
             document.getElementById("cardDamageTotalComp").textContent = weaponOriginal.TotalDamage;
@@ -5955,15 +6192,15 @@ function oilCalcs(calcOil) {
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardHeadDamageArrow").style.color = OrangeRed;
             document.getElementById("cardHeadDamageComp").textContent = damRound;
-            document.getElementById("cardHeadDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
+            document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageLBrac").textContent = "(";
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardHeadDamageProjArrow").style.color = OrangeRed;
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
@@ -5978,15 +6215,15 @@ function oilCalcs(calcOil) {
         if (weapProj > weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardHeadDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardHeadDamageComp").textContent = damRound;
-            document.getElementById("cardHeadDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
+            document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageLBrac").textContent = "(";
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProj").style.color = "Lime";
-            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardHeadDamageProjArrow").style.color = "Lime";
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
@@ -6001,9 +6238,9 @@ function oilCalcs(calcOil) {
         if (weapProj === weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardHeadDamageArrow").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
+            document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageComp").textContent = damRound;
             document.getElementById("cardHeadDamageLBrac").textContent = "(";
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
@@ -6024,15 +6261,15 @@ function oilCalcs(calcOil) {
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "Lime";
-            document.getElementById("cardHeadDamageArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardHeadDamageArrow").style.color = "Lime";
-            document.getElementById("cardHeadDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
+            document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageComp").textContent = damRound;
             document.getElementById("cardHeadDamageLBrac").textContent = "(";
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardHeadDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
@@ -6047,15 +6284,15 @@ function oilCalcs(calcOil) {
         if (weapProj > weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "Lime";
-            document.getElementById("cardHeadDamageArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardHeadDamageArrow").style.color = "Lime";
-            document.getElementById("cardHeadDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
+            document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageComp").textContent = damRound;
             document.getElementById("cardHeadDamageLBrac").textContent = "(";
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProj").style.color = "Lime";
-            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardHeadDamageProjArrow").style.color = "Lime";
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
@@ -6070,9 +6307,9 @@ function oilCalcs(calcOil) {
         if (weapProj === weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "Lime";
-            document.getElementById("cardHeadDamageArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardHeadDamageArrow").style.color = "Lime";
-            document.getElementById("cardHeadDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
+            document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageComp").textContent = damRound;
             document.getElementById("cardHeadDamageLBrac").textContent = "(";
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
@@ -6092,12 +6329,12 @@ function oilCalcs(calcOil) {
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamageComp").textContent = damRound;
-            document.getElementById("cardHeadDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
+            document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageLBrac").textContent = "(";
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardHeadDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
@@ -6112,12 +6349,12 @@ function oilCalcs(calcOil) {
         if (weapProj > weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamageComp").textContent = damRound;
-            document.getElementById("cardHeadDamageLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
+            document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageLBrac").textContent = "(";
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProj").style.color = "Lime";
-            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardHeadDamageProjArrow").style.color = "Lime";
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
             document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
@@ -6154,9 +6391,9 @@ function oilCalcs(calcOil) {
     if (totalHeadRound > weaponOriginal.TotalDamage) {
             document.getElementById("cardHeadDamageTotal").textContent = totalHeadRound;
             document.getElementById("cardHeadDamageTotal").style.color = "Lime";
-            document.getElementById("cardHeadDamageTotalArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+            document.getElementById("cardHeadDamageTotalArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
             document.getElementById("cardHeadDamageTotalArrow").style.color = "Lime";
-            document.getElementById("cardHeadDamageTotalLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
+            document.getElementById("cardHeadDamageTotalLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageTotalLBrac").textContent = "(";
             document.getElementById("cardHeadDamageTotalComp").textContent = totalRound;
             document.getElementById("cardHeadDamageTotalRBrac").textContent = ")";
@@ -6164,9 +6401,9 @@ function oilCalcs(calcOil) {
     if (totalHeadRound < weaponOriginal.TotalDamage) {
             document.getElementById("cardHeadDamageTotal").textContent = totalHeadRound;
             document.getElementById("cardHeadDamageTotal").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageTotalArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+            document.getElementById("cardHeadDamageTotalArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
             document.getElementById("cardHeadDamageTotalArrow").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageTotalLRArrow").innerHTML = " <span style='color: #89a0b8' class='fa-solid fa-arrow-left'></span> ";
+            document.getElementById("cardHeadDamageTotalLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageTotalLBrac").textContent = "(";
             document.getElementById("cardHeadDamageTotalComp").textContent = totalRound;
             document.getElementById("cardHeadDamageTotalRBrac").textContent = ")";
@@ -6248,7 +6485,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardJump").style.color = "OrangeRed";
         document.getElementById("cardJump%").textContent = "%";
         document.getElementById("cardJump%").style.color = "OrangeRed";
-        document.getElementById("cardJumpArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardJumpArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardJumpArrow").style.color = "OrangeRed";
         document.getElementById("cardJumpLBrac").textContent = "(";
         document.getElementById("cardJumpComp").textContent = "100%";
@@ -6259,7 +6496,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardJump").style.color = "Lime";
         document.getElementById("cardJump%").textContent = "%";
         document.getElementById("cardJump%").style.color = "Lime";
-        document.getElementById("cardJumpArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardJumpArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardJumpArrow").style.color = "Lime";
         document.getElementById("cardJumpLBrac").textContent = "(";
         document.getElementById("cardJumpComp").textContent = "100%";
@@ -6297,7 +6534,7 @@ function oilCalcs(calcOil) {
     if (lootRound < lootRoundOrig) {
         document.getElementById("cardLoot").textContent = lootRound;
         document.getElementById("cardLoot").style.color = "OrangeRed";
-        document.getElementById("cardLootArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardLootArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardLoot%").textContent = "%";
         document.getElementById("cardLoot%").style.color = "OrangeRed";
         document.getElementById("cardLootArrow").style.color = "OrangeRed";
@@ -6335,7 +6572,7 @@ function oilCalcs(calcOil) {
                 
         document.getElementById("cardDurability").textContent = durRound;
         document.getElementById("cardDurability").style.color = "OrangeRed";
-        document.getElementById("cardDurabilityArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardDurabilityArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardDurabilityArrow").style.color = "OrangeRed";
         document.getElementById("cardDurabilityLBrac").textContent = "(";
         document.getElementById("cardDurabilityComp").textContent = weaponOriginal.Durability;
@@ -6345,7 +6582,7 @@ function oilCalcs(calcOil) {
 
         document.getElementById("cardDurability").textContent = durRound;
         document.getElementById("cardDurability").style.color = "Lime";
-        document.getElementById("cardDurabilityArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardDurabilityArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardDurabilityArrow").style.color = "Lime";
         document.getElementById("cardDurabilityLBrac").textContent = "(";
         document.getElementById("cardDurabilityComp").textContent = weaponOriginal.Durability;
@@ -6384,7 +6621,7 @@ function oilCalcs(calcOil) {
     if (weaponWeightFinal < weapon.WeaponWeight) {
         document.getElementById("cardWeight").textContent = weaponWeightFinal;
         document.getElementById("cardWeight").style.color = "Lime";
-        document.getElementById("cardWeightArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardWeightArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardWeightArrow").style.color = "Lime";
         document.getElementById("cardWeightLBrac").textContent = "(";
         document.getElementById("cardWeightComp").textContent = weapon.WeaponWeight;
@@ -6393,7 +6630,7 @@ function oilCalcs(calcOil) {
     else if (weaponWeightFinal > weapon.WeaponWeight) {
         document.getElementById("cardWeight").textContent = weaponWeightFinal;
         document.getElementById("cardWeight").style.color = "OrangeRed";
-        document.getElementById("cardWeightArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardWeightArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardWeightArrow").style.color = "OrangeRed";
         document.getElementById("cardWeightLBrac").textContent = "(";
         document.getElementById("cardWeightComp").textContent = weapon.WeaponWeight;
@@ -6424,7 +6661,7 @@ function oilCalcs(calcOil) {
     if (moveRound < resultMovementSpeedComp) {
         document.getElementById("cardMove").textContent = moveRound;
         document.getElementById("cardMove").style.color = "OrangeRed";
-        document.getElementById("cardMoveArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardMoveArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardMove%").textContent = "%";
         document.getElementById("cardMove%").style.color = "OrangeRed";
         document.getElementById("cardMoveArrow").style.color = "OrangeRed";
@@ -6435,7 +6672,7 @@ function oilCalcs(calcOil) {
     if (moveRound > resultMovementSpeedComp) {
         document.getElementById("cardMove").textContent = moveRound;
         document.getElementById("cardMove").style.color = "Lime";
-        document.getElementById("cardMoveArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardMoveArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardMove%").textContent = "%";
         document.getElementById("cardMove%").style.color = "Lime";
         document.getElementById("cardMoveArrow").style.color = "Lime";
@@ -6505,7 +6742,7 @@ function oilCalcs(calcOil) {
     if (weapon.Penetrations > weaponOriginal.Penetrations) {
         document.getElementById("cardPen").textContent = weapon.Penetrations;
         document.getElementById("cardPen").style.color = "Lime";
-        document.getElementById("cardPenArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardPenArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardPenArrow").style.color = "Lime";
         document.getElementById("cardPenLBrac").textContent = "(";
         document.getElementById("cardPenComp").textContent = "0";
@@ -6567,7 +6804,7 @@ function oilCalcs(calcOil) {
     if (recoilRound < weaponOriginal.RecoilBase) {
         document.getElementById("cardRecoil").textContent = recoilRound;
         document.getElementById("cardRecoil").style.color = "Lime";
-        document.getElementById("cardRecoilArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardRecoilArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardRecoilArrow").style.color = "Lime";
         document.getElementById("cardRecoilLBrac").textContent = "(";
         document.getElementById("cardRecoilComp").textContent = weaponOriginal.RecoilBase;
@@ -6576,7 +6813,7 @@ function oilCalcs(calcOil) {
     if (recoilRound > weaponOriginal.RecoilBase) {
         document.getElementById("cardRecoil").textContent = recoilRound;
         document.getElementById("cardRecoil").style.color = "OrangeRed";
-        document.getElementById("cardRecoilArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardRecoilArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardRecoilArrow").style.color = "OrangeRed";
         document.getElementById("cardRecoilLBrac").textContent = "(";
         document.getElementById("cardRecoilComp").textContent = weaponOriginal.RecoilBase;
@@ -6628,7 +6865,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardReloadSpeed").style.color = "OrangeRed";
         document.getElementById("cardReloadSpeed%").textContent = "%";
         document.getElementById("cardReloadSpeed%").style.color = "OrangeRed";
-        document.getElementById("cardReloadSpeedArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardReloadSpeedArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardReloadSpeedArrow").style.color = "OrangeRed";
         document.getElementById("cardReloadSpeedLBrac").textContent = "(";
         document.getElementById("cardReloadSpeedComp").textContent = relSpdConvOrig;
@@ -6639,7 +6876,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardReloadSpeed").style.color = "Lime";
         document.getElementById("cardReloadSpeed%").textContent = "%";
         document.getElementById("cardReloadSpeed%").style.color = "Lime";
-        document.getElementById("cardReloadSpeedArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardReloadSpeedArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardReloadSpeedArrow").style.color = "Lime";
         document.getElementById("cardReloadSpeedLBrac").textContent = "(";
         document.getElementById("cardReloadSpeedComp").textContent = relSpdConvOrig;
@@ -6670,7 +6907,7 @@ function oilCalcs(calcOil) {
     if (reloadTimeRound > weapon.ReloadTime) {
         document.getElementById("cardReloadTime").textContent = `${reloadTimeRound}s`;
         document.getElementById("cardReloadTime").style.color = "OrangeRed";
-        document.getElementById("cardReloadTimeArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardReloadTimeArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardReloadTimeArrow").style.color = "OrangeRed";
         document.getElementById("cardReloadTimeLBrac").textContent = "(";
         document.getElementById("cardReloadTimeComp").textContent = `${weapon.ReloadTime}s`;
@@ -6679,7 +6916,7 @@ function oilCalcs(calcOil) {
     if (reloadTimeRound < weaponOriginal.ReloadTime) {
         document.getElementById("cardReloadTime").textContent = `${reloadTimeRound}s`;
         document.getElementById("cardReloadTime").style.color = "Lime";
-        document.getElementById("cardReloadTimeArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardReloadTimeArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardReloadTimeArrow").style.color = "Lime";
         document.getElementById("cardReloadTimeLBrac").textContent = "(";
         document.getElementById("cardReloadTimeComp").textContent = `${weapon.ReloadTime}s`;
@@ -6739,7 +6976,7 @@ function oilCalcs(calcOil) {
         }
 
         document.getElementById("cardSpready").style.color = "OrangeRed";
-        document.getElementById("cardSpreadArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardSpreadArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardSpreadArrow").style.color = "OrangeRed";
         document.getElementById("cardSpreadLBrac").textContent = "(";
         document.getElementById("cardSpreadRBrac").textContent = ")";
@@ -6754,7 +6991,7 @@ function oilCalcs(calcOil) {
             document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
         }
         document.getElementById("cardSpready").style.color = "Lime";
-        document.getElementById("cardSpreadArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardSpreadArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardSpreadArrow").style.color = "Lime";
         document.getElementById("cardSpreadLBrac").textContent = "(";
         document.getElementById("cardSpreadRBrac").textContent = ")";
@@ -6767,6 +7004,19 @@ function oilCalcs(calcOil) {
             document.getElementById("cardSpready").textContent = spreadRound;
         }
     }
+
+    // Spread in degrees
+
+    let minScale = 0;
+    let maxScale = 100;
+
+    let spreadDegrees = Math.round((((180 * spreadRound) / maxScale) + Number.EPSILON)* 100) / 100;
+
+    let spreadDegreesUnit = (4 * spreadDegrees) + "px";
+    
+    document.getElementById("cardSpreadDegrees").innerHTML = spreadDegrees;
+    document.getElementById("spreadcircle").style.width = spreadDegreesUnit;
+
     //#endregion
     
     //////////////
@@ -6787,7 +7037,7 @@ function oilCalcs(calcOil) {
     if (weapon.Drag > 0) {
         document.getElementById("cardDrag").textContent = weapon.Drag;
         document.getElementById("cardDrag").style.color = "OrangeRed";
-        document.getElementById("cardDragArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardDragArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardDragArrow").style.color = "OrangeRed";
         document.getElementById("cardDragLBrac").textContent = "(";
         document.getElementById("cardDragComp").textContent = "0";
@@ -7078,7 +7328,7 @@ function oilCalcs(calcOil) {
     if (totalRatio < origRatio) {
         document.getElementById("cardRTR").textContent = totalRatio;
         document.getElementById("cardRTR").style.color = "Lime";
-        document.getElementById("cardRTRArrow").innerHTML = "<span class='fa-solid fa-caret-down'></span>";
+        document.getElementById("cardRTRArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
         document.getElementById("cardRTRArrow").style.color = "Lime";
         document.getElementById("cardRTRComp").textContent = origRatio;
         document.getElementById("cardRTRLBrac").textContent = "(";
@@ -7087,7 +7337,7 @@ function oilCalcs(calcOil) {
     if (totalRatio > origRatio) {
         document.getElementById("cardRTR").textContent = totalRatio;
         document.getElementById("cardRTR").style.color = "OrangeRed";
-        document.getElementById("cardRTRArrow").innerHTML = "<span class='fa-solid fa-caret-up'></span>";
+        document.getElementById("cardRTRArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
         document.getElementById("cardRTRArrow").style.color = "OrangeRed";
         document.getElementById("cardRTRComp").textContent = origRatio;
         document.getElementById("cardRTRLBrac").textContent = "(";
@@ -7774,7 +8024,6 @@ function rollSelections(flag, selector, selID, value, type) {
     let selectedValue = null;
 
     function rollEnch(value, flag) {
-        
         switch (value) {
             case "static-no-selection":
                 selectedItem = getOilByName("None");
@@ -7863,7 +8112,7 @@ function rollSelections(flag, selector, selID, value, type) {
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-bullet-speed":
-               shuffle(oilsSpeed);
+            shuffle(oilsSpeed);
                 selectedItem = getOilByName(oilsSpeed[0]);
                 selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);
@@ -7905,7 +8154,7 @@ function rollSelections(flag, selector, selID, value, type) {
                 addToCoreMap(flag, selectedItem, selectedValue);
                 break;
             case "static-random-reload-speed":
-               shuffle(oilsReload);
+            shuffle(oilsReload);
                 selectedItem = getOilByName(oilsReload[0]);
                 selectedValue = oilNameIndexer.get(selectedItem.Name);
                 addToCoreMap(flag, selectedItem, selectedValue);

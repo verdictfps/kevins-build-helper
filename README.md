@@ -23,6 +23,8 @@ No need to clone, this will update automatically.
 
 * An intricate assortment of buttons to cater to your every need
 
+* Enable and disable components on the fly
+
 * Screenshotting built-in! Use the Copy Screenshot or Save Screenshot buttons above the weapon image window to nab a screenshot of your Build Card and paste (or post) wherever you like
 
 * Unique links for every build - use the Copy button above the weapon image window or copy directly from the address bar to share a direct link of your build, and opening a link loads the build itself; pasting a link into the box allows builds to be loaded directly into the current session
@@ -32,8 +34,6 @@ No need to clone, this will update automatically.
 
 
 ## Coming Soon
-
-* Armor and Trinkets
 
 * More sharing features
 
@@ -50,6 +50,8 @@ No need to clone, this will update automatically.
 * MORE BUTTONS
 
 * A single database to search when you just want to reference stuff, instead of jumping between boxes
+
+* Comparison chart
 
 * MORE EASTER EGGS
 
