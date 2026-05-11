@@ -24,6 +24,9 @@ function mobileCSS() {
 
         document.getElementById("mobilefooterbox").style.display = "flex";
 
+        document.getElementById("mobilecontainer").classList.remove("mobile-container");
+        document.getElementById("mobilecontainer").classList.add("mobile-container-mobile");
+
         document.getElementById("mainbuildcontainer").classList.remove("container");
         document.getElementById("mainbuildcontainer").classList.add("container-mobile");
         
@@ -63,6 +66,9 @@ function mobileCSS() {
         document.getElementById("mobilearrow").classList.remove("mobile-arrow");
         document.getElementById("mobilearrow").classList.add("mobile-arrow-mobile");
 
+        document.getElementById("mobilearrow-up").classList.remove("mobile-arrow-up");
+        document.getElementById("mobilearrow-up").classList.add("mobile-arrow-up-mobile");
+
         //document.getElementById("containerheaders").classList.add("containerheadershidden");
         //document.getElementById("containerheaders").classList.remove("containerheaders");
         //document.getElementById("containerheaders2").classList.add("containerheaders3");
@@ -95,9 +101,6 @@ function mobileCSS() {
 
         document.getElementById("extendstatbox").classList.remove("extendstatbox");
         document.getElementById("extendstatbox").classList.add("extendstatbox-mobile");
-
-        document.getElementById("yetanotherspacer").classList.remove("mobile-arrow");
-        document.getElementById("yetanotherspacer").classList.add("ext-mob");
 
         document.getElementById("spacer1").style.display = "none";
         document.getElementById("spacer2").style.display = "none";
@@ -147,6 +150,9 @@ function mobileCSS() {
         document.getElementById("session-stats").style.marginBottom = "0px";
         document.getElementById("session-stats").style.background = "#2D424B";
 
+        document.getElementById("gunextendstatbox").style.marginBottom = "20px";
+        document.getElementById("armorextendstatbox").style.marginBottom = "20px";
+
         document.getElementById("weapon-parts-button").style.fontSize = "4vw";
         document.getElementById("equipment-button").style.fontSize = "4vw";
         
@@ -168,8 +174,8 @@ function mobileCSS() {
         document.querySelectorAll(".attachtitle").forEach(e => {e.classList.add("attachtitle-mobile")});
         document.querySelectorAll(".attachtitle").forEach(e => {e.classList.remove("attachtitle")});
 
-        document.querySelectorAll(".build-copy-button").forEach(e => {e.classList.add("build-copy-button-mobile")});
-        document.querySelectorAll(".build-copy-button").forEach(e => {e.classList.remove("build-copy-button")});
+        //document.querySelectorAll(".build-copy-button").forEach(e => {e.classList.add("build-copy-button-mobile")});
+        //document.querySelectorAll(".build-copy-button").forEach(e => {e.classList.remove("build-copy-button")});
 
         document.querySelectorAll(".stat-header").forEach(e => {e.classList.add("stat-header-mobile")});
         document.querySelectorAll(".stat-header").forEach(e => {e.classList.remove("stat-header")});
@@ -185,16 +191,19 @@ function mobileCSS() {
         document.querySelectorAll(".oils").forEach(e => {e.classList.add("oils-mobile")});
         document.querySelectorAll(".oils").forEach(e => {e.classList.remove("oils")});
         document.querySelectorAll("h2").forEach(e => {e.style.fontSize = "3vw"});
-        document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "50px", e.style.width = "50px"});
+        document.querySelectorAll(".buttonCommitInd").forEach(e => {e.style.height = "70px", e.style.width = "70px"});
 
         document.querySelectorAll(".cardStat").forEach(e => {e.classList.add("cardStat-mobile")});
         document.querySelectorAll(".cardStat").forEach(e => {e.classList.remove("cardStat")});
 
+        document.querySelectorAll(".compLabel").forEach(e => {e.classList.add("compLabel-mobile")});
+        document.querySelectorAll(".compLabel").forEach(e => {e.classList.remove("compLabel")});
+
         document.querySelectorAll(".oilimages").forEach(e => {e.classList.add("oilimages-mobile")});
         document.querySelectorAll(".oilimages").forEach(e => {e.classList.remove("oilimages")});
 
-        document.querySelectorAll(".build-chooser-button").forEach(e => {e.classList.add("build-chooser-button-mobile")});
-        document.querySelectorAll(".build-chooser-button").forEach(e => {e.classList.remove("build-chooser-button")});
+        //document.querySelectorAll(".build-chooser-button").forEach(e => {e.classList.add("build-chooser-button-mobile")});
+        //document.querySelectorAll(".build-chooser-button").forEach(e => {e.classList.remove("build-chooser-button")});
 
         document.querySelectorAll(".selector-header").forEach(e => {e.style.marginBottom = "5px";});
 
@@ -230,8 +239,6 @@ function mobileCSS() {
         document.getElementById("build-chooser-button-div").classList.add("build-chooser-button-div-mobile");
         document.getElementById("build-chooser-button-div").classList.remove("build-chooser-button-div");
 
-        document.getElementById("boxglowthing").style.height = "125px";
-
         //document.getElementById("containerheaders2").style.display = "";
         
         document.querySelectorAll(".stuffbutton").forEach(e => {e.classList.add("stuffbutton-mobile")});
@@ -246,10 +253,17 @@ function mobileCSS() {
         let spacer3 = document.getElementById("spacer3");
         let mobilearrow = document.getElementById("mobilearrow");
         let builddiv = document.getElementById("build-chooser-button-div");
+        let mobilecontainer = document.getElementById("mobilecontainer");
+        let footer = document.getElementById("mobilefooterbox");
+        let oilresult = document.getElementById("oilresultcontainer");
+        let oilresultglass = document.getElementById("oilresultcontainer-glass");
+        let targetme = document.getElementById("targetme");
+        let shufflebut = document.getElementById("build-shuffle-button");
 
-        target.append(second, mobilearrow)
+        target.append(targetme, second, mobilearrow)
         mainbuild.append(bigbox, target, extend);
-        mobilebuild.append(tooltip, builddiv);
+        mobilebuild.append(tooltip, builddiv, shufflebut, oilresultglass, oilresult);
+        mobilecontainer.append(mobilebuild, mainbuild, footer)
 
         let buildcardrow1 = document.getElementById("buildcardrow1");
         let buildcardrow2 = document.getElementById("buildcardrow2");
@@ -280,6 +294,8 @@ function mobileCSS() {
         let dpsbox = document.getElementById("dpsbox");
         let movementbox = document.getElementById("movementbox");
         let weaponbox = document.getElementById("weaponbox");
+
+        weaponbox.style.borderRadius = "0px";
 
         generalstatbox.style.paddingBottom = "5px";
         generalstatbox.style.borderRight = "0px";
@@ -323,7 +339,10 @@ function mobileCSS() {
         guncardgrid6.style.width = "100%";
         guncardgrid6.style.flexDirection = "column";
 
+        guncardgrid5.style.borderRadius = "0px";
+
         buildcardrow2.style.borderTop = "1px solid #FDB142";
+        guncardgrid1.style.borderTop = "1px solid #FDB142";
         guncardgrid2.style.borderTop = "0px";
 
         document.getElementById("scrollinfobackground").style.display = "none"
@@ -411,6 +430,16 @@ function mobileCSS() {
                 document.getElementById("mobilearrow").classList.remove("mobile-arrow");
                 document.getElementById("mobilearrow").classList.add("mobile-arrow-mobile");
             }
+            if (target.scrollTop < (target.scrollTopMax * 0.2)) {
+                document.getElementById("mobilearrow-up").classList.remove("mobile-arrow-up-mobile");
+                document.getElementById("mobilearrow-up").classList.add("mobile-arrow-up");
+                return;
+            }
+            else {
+                document.getElementById("mobilearrow-up").classList.remove("mobile-arrow-up");
+                document.getElementById("mobilearrow-up").classList.add("mobile-arrow-up-mobile");
+            }
+
         });
     }
 }
@@ -1265,11 +1294,11 @@ async function createProDropdown(select) {
     const buttonAlph = document.createElement("button");
     if (isMobile === true) {
         buttonAlph.className = "custom-select-panel-button-mobile";
-        buttonAlph.innerHTML = `<span id='${select.id}-sortalphbuttonicon' class='fa-solid fa-arrow-down-a-z sortfilterselected' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto;'></span>`; 
+        buttonAlph.innerHTML = `<img id='${select.id}-sortalphbuttonicon' src='.\\Images\\svg\\arrow-down-a-z-solid-full.svg' class='filter-white filter-sulfur' style='height: 50px; display: flex; text-align: center; justify-content: center; width: auto;'>`; 
     }
     else {
         buttonAlph.className = "custom-select-panel-button";
-        buttonAlph.innerHTML = `<span id='${select.id}-sortalphbuttonicon' class='fa-solid fa-arrow-down-a-z sortfilterselected' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>`;
+        buttonAlph.innerHTML = `<img id='${select.id}-sortalphbuttonicon' src='.\\Images\\svg\\arrow-down-a-z-solid-full.svg' class='filter-white filter-sulfur' style='height: 18px; display: flex; text-align: center; justify-content: center; width: auto;'>`;
     }
 
     buttonAlph.currentSort = "alphdefault";
@@ -1289,11 +1318,11 @@ async function createProDropdown(select) {
     const buttonPos = document.createElement("button");
     if (isMobile === true) {
         buttonPos.className = "custom-select-panel-button-mobile";
-        buttonPos.innerHTML = `<span id='${select.id}-sortscorebuttonicon' class='fa-solid fa-arrow-down-9-1' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto;'></span>`;
+        buttonPos.innerHTML = `<img id='${select.id}-sortscorebuttonicon' src='.\\Images\\svg\\arrow-down-9-1-solid-full.svg' class='filter-white' style='display: flex; text-align: center; justify-content: center; width: auto; height: 50px;'>`;
     }
     else {
         buttonPos.className = "custom-select-panel-button";
-        buttonPos.innerHTML = `<span id='${select.id}-sortscorebuttonicon' class='fa-solid fa-arrow-down-9-1' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>`;
+        buttonPos.innerHTML = `<img id='${select.id}-sortscorebuttonicon' src='.\\Images\\svg\\arrow-down-9-1-solid-full.svg' class='filter-white' style='display: flex; text-align: center; justify-content: center; width: auto; height: 18px;'>`;
     }
 
     buttonPos.currentSort = "scorenull";
@@ -1314,11 +1343,11 @@ async function createProDropdown(select) {
     
     if (isMobile === true) {
         buttonFilter.className = "custom-select-panel-button-mobile";
-        buttonFilter.innerHTML = "<span id='${select.id}-filterbuttonicon' class='fa-solid fa-filter' style='font-size: 50px; display: flex; text-align: center; justify-content: center; width: auto; height: auto;'></span>";
+        buttonFilter.innerHTML = `<img id='${select.id}-filterbuttonicon' src='.\\Images\\svg\\filter-solid-full.svg' class='filter-white' style='display: flex; text-align: center; justify-content: center; width: auto; height: 50px'>`;
     }
     else {
         buttonFilter.className = "custom-select-panel-button";
-        buttonFilter.innerHTML = "<span id='${select.id}-filterbuttonicon' class='fa-solid fa-filter' style='font-size: 15px; display: flex; text-align: center; justify-content: center; width: auto; height: auto'></span>";
+        buttonFilter.innerHTML = `<img id='${select.id}-filterbuttonicon' src='.\\Images\\svg\\filter-solid-full.svg' class='filter-white' style='display: flex; text-align: center; justify-content: center; width: auto; height: 18px'>`;
     }
 
     buttonFilter.currentFilter = "positive";
@@ -1327,7 +1356,7 @@ async function createProDropdown(select) {
         filterChanger(buttonFilter, select);
     });
     buttonFilter.addEventListener("mouseover", () => {
-        infoboxHover('button', 0, '', 'Cycles through positive, negative, and no category group modes.');
+        infoboxHover('button', 0, '', 'Toggles between positive and negative category group modes.');
     });
     buttonFilter.addEventListener("mouseout", () => {
         infoboxClear();
@@ -1338,11 +1367,11 @@ async function createProDropdown(select) {
     const buttonClose = document.createElement("button");
     if (isMobile === true) {
         buttonClose.className = "custom-select-panel-close-mobile";
-        buttonClose.innerHTML = "<span style='font-size: 50px; display: flex;' class='fa-solid fa-xmark'></span>"
+        buttonClose.innerHTML = "<img style='height: 50px; display: flex; width: 50px;' class='filter-white' src='.\\Images\\svg\\xmark-solid-full.svg'>"
     }
     else {
         buttonClose.className = "custom-select-panel-close";
-        buttonClose.innerHTML = "<span style='font-size: 20px; display: flex' class='fa-solid fa-xmark'></span>"
+        buttonClose.innerHTML = "<img style='height: 20px; display: flex; width: 20px; margin-right: 10px;' class='filter-white' src='.\\Images\\svg\\xmark-solid-full.svg'>"
     }
     
     buttonClose.addEventListener("click", () => {
@@ -2277,6 +2306,14 @@ function scrollExtendedStats() {
     window.scrollTo({ top: 9999999, behavior: 'smooth' });
 }
 
+function scrollTargetMobileDown() {
+    document.getElementById("targetcontainer").scrollTo({ top: 9999999, behavior: 'smooth' });
+}
+
+function scrollTargetMobileUp() {
+    document.getElementById("targetcontainer").scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function scrollMobileLeft() {
     scrollBlock = true;
     document.getElementById("mobilescrollbuttonright").classList.remove("mobile-scroll-button-selected");
@@ -2348,7 +2385,7 @@ async function captureElement(activated, save) {
         document.getElementById("secondpagediv").classList.remove("secondpagediv");
         document.getElementById("secondpagediv").classList.add("secondpagediv-screen");
 
-        document.getElementById("containerglass").style.opacity = "30%";
+        document.getElementById("weaponcontainer-glass").style.opacity = "10%";
 
         let node = null;
         let clone = null;
@@ -2406,7 +2443,7 @@ async function captureElement(activated, save) {
         document.getElementById("bigboxdeals").classList.add("bigboxdeals");
         document.getElementById("secondpagediv").classList.remove("secondpagediv-screen");
         document.getElementById("secondpagediv").classList.add("secondpagediv");
-        document.getElementById("containerglass").style.opacity = "100%";
+        document.getElementById("weaponcontainer-glass").style.opacity = "";
         document.getElementById("targetme").style.backgroundColor = "";
         document.getElementById("boxglowthing").classList.add("boxglowthing");
         document.getElementById("otherboxthing").classList.add("otherboxthing");
@@ -2437,7 +2474,7 @@ async function captureElement(activated, save) {
         document.getElementById("secondpagediv").classList.remove("secondpagediv-mobile");
         document.getElementById("secondpagediv").classList.add("secondpagediv-screen-mobile");
 
-        document.getElementById("containerglass").style.opacity = "30%";
+        document.getElementById("weaponcontainer-glass").style.opacity = "10%";
 
         document.getElementById("targetcontainer").style.backgroundColor = "#2D424B";
         document.getElementById("mobilearrow").style.display = "none";
@@ -2476,7 +2513,7 @@ async function captureElement(activated, save) {
         document.getElementById("build-chooser-button-div").style.display = "";
         document.getElementById("secondpagediv").classList.remove("secondpagediv-screen-mobile");
         document.getElementById("secondpagediv").classList.add("secondpagediv-mobile");
-        document.getElementById("containerglass").style.opacity = "100%";
+        document.getElementById("weaponcontainer-glass").style.opacity = "";
         document.getElementById("targetme").style.backgroundColor = "";
         document.getElementById("boxglowthing").classList.add("boxglowthing");
         document.getElementById("otherboxthing").classList.add("otherboxthing");
@@ -2992,12 +3029,16 @@ function makeEquipmentMenuVisible() {
         document.getElementById("equipment-button").classList.add("menu-switcher-button-selected");
         document.getElementById("weaponstuffcontainer").classList.add("hide-selectors-mobile");
         document.getElementById("weaponstuffcontainerequip").classList.remove("hide-selectors-mobile");
+        document.getElementById("menuswitcherarrowleft").classList.add("menu-switcher-button-animation-left");
+        document.getElementById("menuswitcherarrowright").classList.remove("menu-switcher-button-animation-right");
     }
     else {
         document.getElementById("weapon-parts-button").classList.remove("menu-switcher-button-selected");
         document.getElementById("equipment-button").classList.add("menu-switcher-button-selected");
         document.getElementById("weaponstuffcontainer").classList.add("hide-selectors");
         document.getElementById("weaponstuffcontainerequip").classList.remove("hide-selectors");
+        document.getElementById("menuswitcherarrowleft").classList.add("menu-switcher-button-animation-left");
+        document.getElementById("menuswitcherarrowright").classList.remove("menu-switcher-button-animation-right");
     }
 }
 
@@ -3007,13 +3048,32 @@ function makeWeaponStuffMenuVisible() {
         document.getElementById("weapon-parts-button").classList.add("menu-switcher-button-selected");
         document.getElementById("weaponstuffcontainerequip").classList.add("hide-selectors-mobile");
         document.getElementById("weaponstuffcontainer").classList.remove("hide-selectors-mobile");
+        document.getElementById("menuswitcherarrowright").classList.add("menu-switcher-button-animation-right");
+        document.getElementById("menuswitcherarrowleft").classList.remove("menu-switcher-button-animation-left");
     }
     else {
         document.getElementById("equipment-button").classList.remove("menu-switcher-button-selected");
         document.getElementById("weapon-parts-button").classList.add("menu-switcher-button-selected");
         document.getElementById("weaponstuffcontainerequip").classList.add("hide-selectors");
         document.getElementById("weaponstuffcontainer").classList.remove("hide-selectors");
+        document.getElementById("menuswitcherarrowright").classList.add("menu-switcher-button-animation-right");
+        document.getElementById("menuswitcherarrowleft").classList.remove("menu-switcher-button-animation-left");
     }
+}
+
+function openPopupBox(purpose) {
+    document.getElementById("popup-maindiv").style.display = "flex";
+    switch (purpose) {
+        case "simulate":
+            document.getElementById("popup-simulate").style.display = "flex";
+            document.getElementById("popup-header-title").textContent = "Simulate Firing";
+            break;
+    }
+}
+
+function closePopupBox() {
+    document.getElementById("popup-simulate").style.display = "none";
+    document.getElementById("popup-maindiv").style.display = "none";
 }
 
 function checkAnimation() {
@@ -4090,20 +4150,19 @@ function toggleNeg(select) {
 
 function filterChanger(button, selector) {
     //remember you have a None filter too now
+    console.log(selector)
+    let filterimg = document.getElementById(`${selector.id}-filterbuttonicon`);
     switch (button.currentFilter) {
         case "positive":
             selector.setGroupMode("negative");
             button.currentFilter = "negative";
+            filterimg.src = ".\\Images\\svg\\filter-circle-xmark-solid-full.svg"
             selector.render();
             break;
         case "negative":
-            selector.setGroupMode("None");
-            button.currentFilter = "None";
-            selector.render();
-            break;
-        case "None":
             selector.setGroupMode("positive");
             button.currentFilter = "positive";
+            filterimg.src = ".\\Images\\svg\\filter-solid-full.svg"
             selector.render();
             break;
     }
@@ -4118,48 +4177,42 @@ function sortChanger(selector, button, otherbutton) {
             selector.setSortMode("ascending");
             button.currentSort = "scoreascending";
             otherbutton.currentSort = "alphnull";
-            alphspan.classList.remove("sortfilterselected");
-            scorespan.classList.add("sortfilterselected");
-            alphspan.classList.remove("fa-arrow-down-z-a");
-            alphspan.classList.add("fa-arrow-down-a-z");
+            alphspan.classList.remove("filter-sulfur");
+            scorespan.classList.add("filter-sulfur");
+            alphspan.src = ".\\Images\\svg\\arrow-down-a-z-solid-full.svg";
             selector.render(true, selector);
             break;
         case "scoreascending":
             selector.setSortMode("descending");
             button.currentSort = "scoredescending";
-            scorespan.classList.remove("fa-arrow-down-9-1");
-            scorespan.classList.add("fa-arrow-down-1-9");
+            scorespan.src = ".\\Images\\svg\\arrow-up-9-1-solid-full.svg";
             selector.render(true, selector);
             break;
         case "scoredescending":
             selector.setSortMode("ascending");
             button.currentSort = "scoreascending";
-            scorespan.classList.remove("fa-arrow-down-1-9");
-            scorespan.classList.add("fa-arrow-down-9-1");
+            scorespan.src = ".\\Images\\svg\\arrow-down-9-1-solid-full.svg";
             selector.render(true, selector);
             break;
         case "alphnull":
             selector.setSortMode("default");
             button.currentSort = "alphdefault";
             otherbutton.currentSort = "scorenull";
-            scorespan.classList.remove("sortfilterselected");
-            alphspan.classList.add("sortfilterselected");
-            scorespan.classList.remove("fa-arrow-down-1-9");
-            scorespan.classList.add("fa-arrow-down-9-1");
+            scorespan.classList.remove("filter-sulfur");
+            alphspan.classList.add("filter-sulfur");
+            scorespan.src = ".\\Images\\svg\\arrow-down-9-1-solid-full.svg";
             selector.render(true, selector);
             break;
         case "alphdefault":
             selector.setSortMode("defaultrev");
             button.currentSort = "alphdefaultrev";
-            alphspan.classList.remove("fa-arrow-down-a-z");
-            alphspan.classList.add("fa-arrow-down-z-a");
+            alphspan.src = ".\\Images\\svg\\arrow-up-a-z-solid-full.svg";
             selector.render(true, selector);
             break;
         case "alphdefaultrev":
             selector.setSortMode("default");
             button.currentSort = "alphdefault";
-            alphspan.classList.remove("fa-arrow-down-z-a");
-            alphspan.classList.add("fa-arrow-down-a-z");
+            alphspan.src = ".\\Images\\svg\\arrow-down-a-z-solid-full.svg";
             selector.render(true, selector);
             break;
     }
@@ -4563,7 +4616,7 @@ function addCountToDisplay() {
 }
 
 async function rollAggregator(flag, selector, selID, selValue, selType, last, source) {
-
+    resetCalculatedStats();
     //if (buildSwapping === false && checkboxing === false) {
         document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
         document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
@@ -5280,6 +5333,29 @@ function oilStats() {
     
 }
 
+let calculatedStats = new Map();
+
+function resetCalculatedStats() {
+    calculatedStats.set("WEAP", "None")
+    calculatedStats.set("ACC", 0);
+    calculatedStats.set("EAUC", 0);
+    calculatedStats.set("RPM", 0);
+    calculatedStats.set("DUR", 0);
+    calculatedStats.set("PDMG", 0);
+    calculatedStats.set("TDMG", 0);
+    calculatedStats.set("HDMG", 0);
+    calculatedStats.set("SCRL", "None");
+    calculatedStats.set("MAG", 0);
+    calculatedStats.set("EMAG", 0);
+    calculatedStats.set("BNCE", 0);
+    calculatedStats.set("DROP", 0);
+    calculatedStats.set("BSPD", 0);
+    calculatedStats.set("BSZE", 0);
+    calculatedStats.set("ACC", 0);
+    calculatedStats.set("ACC", 0);
+    calculatedStats.set("ACC", 0);
+}
+
 function oilCalcs(calcOil) {
     let weaponName = coreSelections.get("weapon");
     let weaponStats = getWeaponByName(weaponName.Name.Name);
@@ -5483,7 +5559,7 @@ function oilCalcs(calcOil) {
             document.getElementById("cardRPMComp").textContent = weaponOriginal.RPM;
         }
         document.getElementById("cardRPM").style.color = "Lime";
-        document.getElementById("cardRPMArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardRPMArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardRPMArrow").style.color = "Lime";
         document.getElementById("cardRPMLBrac").textContent = "(";
         document.getElementById("cardRPMRBrac").textContent = ")";
@@ -5499,7 +5575,7 @@ function oilCalcs(calcOil) {
         }
 
         document.getElementById("cardRPM").style.color = "OrangeRed";
-        document.getElementById("cardRPMArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardRPMArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardRPMArrow").style.color = "OrangeRed";
         document.getElementById("cardRPMLBrac").textContent = "(";
         document.getElementById("cardRPMRBrac").textContent = ")";
@@ -5542,7 +5618,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardAmmo").style.color = "Lime";
         document.getElementById("cardAmmo%").textContent = "%";
         document.getElementById("cardAmmo%").style.color = "Lime";
-        document.getElementById("cardAmmoArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardAmmoArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardAmmoArrow").style.color = "Lime";
         document.getElementById("cardAmmoLBrac").textContent = "(";
         document.getElementById("cardAmmoComp").textContent = "100%";
@@ -5582,7 +5658,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardExtra").style.color = "OrangeRed";
         document.getElementById("cardExtra%").textContent = "%";
         document.getElementById("cardExtra%").style.color = "OrangeRed";
-        document.getElementById("cardExtraArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardExtraArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardExtraArrow").style.color = "OrangeRed";
         document.getElementById("cardExtraLBrac").textContent = "(";
         document.getElementById("cardExtraComp").textContent = "0%";
@@ -5650,7 +5726,7 @@ function oilCalcs(calcOil) {
     if (weapon.Bounces > 0.0) {
         document.getElementById("cardBounces").textContent = weapon.Bounces;
         document.getElementById("cardBounces").style.color = "Lime";
-        document.getElementById("cardBouncesArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardBouncesArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardBouncesArrow").style.color = "Lime";
         document.getElementById("cardBouncesLBrac").textContent = "(";
         document.getElementById("cardBouncesComp").textContent = "0";
@@ -5683,7 +5759,7 @@ function oilCalcs(calcOil) {
             document.getElementById("dropmeters").textContent = `~${dropMeterRound}m`;
         document.getElementById("cardDrop").textContent = weapon.BulletDrop;
         document.getElementById("cardDrop").style.color = "OrangeRed";
-        document.getElementById("cardDropArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardDropArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardDropArrow").style.color = "OrangeRed";
         document.getElementById("cardDropLBrac").textContent = "(";
         document.getElementById("cardDropComp").textContent = "0";
@@ -5728,7 +5804,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSpeed").style.color = "Lime";
         document.getElementById("cardSpeed%").textContent = "%";
         document.getElementById("cardSpeed%").style.color = "Lime";
-        document.getElementById("cardSpeedArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardSpeedArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardSpeedArrow").style.color = "Lime";
         document.getElementById("cardSpeedLBrac").textContent = "(";
         document.getElementById("cardSpeedComp").textContent = "100%";
@@ -5739,7 +5815,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSpeed").style.color = "OrangeRed";
         document.getElementById("cardSpeed%").textContent = "%";
         document.getElementById("cardSpeed%").style.color = "OrangeRed";
-        document.getElementById("cardSpeedArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardSpeedArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardSpeedArrow").style.color = "OrangeRed";
         document.getElementById("cardSpeedLBrac").textContent = "(";
         document.getElementById("cardSpeedComp").textContent = "100%";
@@ -5780,7 +5856,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSize").style.color = "Lime";
         document.getElementById("cardSize%").textContent = "%";
         document.getElementById("cardSize%").style.color = "Lime";
-        document.getElementById("cardSizeArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardSizeArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardSizeArrow").style.color = "Lime";
         document.getElementById("cardSizeLBrac").textContent = "(";
         document.getElementById("cardSizeComp").textContent = "100%";
@@ -5791,7 +5867,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardSize").style.color = "OrangeRed";
         document.getElementById("cardSize%").textContent = "%";
         document.getElementById("cardSize%").style.color = "OrangeRed";
-        document.getElementById("cardSizeArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardSizeArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardSizeArrow").style.color = "OrangeRed";
         document.getElementById("cardSizeLBrac").textContent = "(";
         document.getElementById("cardSizeComp").textContent = "100%";
@@ -5825,7 +5901,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardCrit").style.color = "Lime";
         document.getElementById("cardCrit%").textContent = "%";
         document.getElementById("cardCrit%").style.color = "Lime";
-        document.getElementById("cardCritArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardCritArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardCritArrow").style.color = "Lime";
     }
     else {
@@ -5855,7 +5931,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardADSCrit").style.color = "Lime";
         document.getElementById("cardADSCrit%").textContent = "%";
         document.getElementById("cardADSCrit%").style.color = "Lime";
-        document.getElementById("cardADSCritArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardADSCritArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardADSCritArrow").style.color = "Lime";
     }
     else {
@@ -5874,7 +5950,7 @@ function oilCalcs(calcOil) {
                 Run runTCrit = new Run($"{weapon.TotalCritChance.ToString("#####0.#")}%");
         runTCrit.Foreground = Brushes.Lime;
 
-                Run runArrowUp1 = new Run("<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>");
+                Run runArrowUp1 = new Run("<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>");
         runArrowUp1.Foreground = Brushes.Lime;
 
                 Run runNoTCrit = new Run("(0%)");
@@ -6056,63 +6132,63 @@ function oilCalcs(calcOil) {
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "OrangeRed";
-            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapProj > weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "OrangeRed";
-            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "Lime";
-            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardDamageProjArrow").style.color = "Lime";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapProj === weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "OrangeRed";
-            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -6121,63 +6197,63 @@ function oilCalcs(calcOil) {
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "Lime";
-            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardDamageArrow").style.color = "Lime";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapProj > weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "Lime";
-            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardDamageArrow").style.color = "Lime";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "Lime";
-            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardDamageProjArrow").style.color = "Lime";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapProj === weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamage").style.color = "Lime";
-            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardDamageArrow").style.color = "Lime";
             document.getElementById("cardDamageComp").textContent = weaponOriginal.Damage;
             document.getElementById("cardDamageLBrac").textContent = "(";
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -6190,15 +6266,15 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -6209,24 +6285,24 @@ function oilCalcs(calcOil) {
             document.getElementById("cardDamageRBrac").textContent = ")";
             document.getElementById("cardDamageProj").textContent = weapProj;
             document.getElementById("cardDamageProj").style.color = "Lime";
-            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardDamageProjArrow").style.color = "Lime";
             document.getElementById("cardDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardDamageX").innerHTML = " <span class='fa-solid fa-x'></span> ";
-            document.getElementById("cardDamageXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+            document.getElementById("cardDamageX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
+            document.getElementById("cardDamageXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapProj === weaponOriginal.Projectiles) {
             document.getElementById("cardDamage").textContent = damRound;
             document.getElementById("cardDamageProj").textContent = weapProj;
-            document.getElementById("cardDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardDamageMulti").textContent = weapon.MultiShot;
             }
         }
@@ -6237,7 +6313,7 @@ function oilCalcs(calcOil) {
     if (totalComp > weaponOriginal.TotalDamage) {
             document.getElementById("cardDamageTotal").textContent = totalRound;
             document.getElementById("cardDamageTotal").style.color = "Lime";
-            document.getElementById("cardDamageTotalArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardDamageTotalArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardDamageTotalArrow").style.color = "Lime";
             document.getElementById("cardDamageTotalLBrac").textContent = "(";
             document.getElementById("cardDamageTotalComp").textContent = weaponOriginal.TotalDamage;
@@ -6246,7 +6322,7 @@ function oilCalcs(calcOil) {
     if (totalComp < weaponOriginal.TotalDamage) {
             document.getElementById("cardDamageTotal").textContent = totalRound;
             document.getElementById("cardDamageTotal").style.color = "OrangeRed";
-            document.getElementById("cardDamageTotalArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardDamageTotalArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardDamageTotalArrow").style.color = "OrangeRed";
             document.getElementById("cardDamageTotalLBrac").textContent = "(";
             document.getElementById("cardDamageTotalComp").textContent = weaponOriginal.TotalDamage;
@@ -6299,7 +6375,7 @@ function oilCalcs(calcOil) {
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardHeadDamageArrow").style.color = OrangeRed;
             document.getElementById("cardHeadDamageComp").textContent = damRound;
             document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
@@ -6307,22 +6383,22 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardHeadDamageProjArrow").style.color = OrangeRed;
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardHeadDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardHeadDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapProj > weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardHeadDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardHeadDamageComp").textContent = damRound;
             document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
@@ -6330,22 +6406,22 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProj").style.color = "Lime";
-            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardHeadDamageProjArrow").style.color = "Lime";
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardHeadDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardHeadDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapProj === weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardHeadDamageArrow").style.color = "OrangeRed";
             document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageComp").textContent = damRound;
@@ -6353,12 +6429,12 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardHeadDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardHeadDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -6368,7 +6444,7 @@ function oilCalcs(calcOil) {
         if (weapProj < weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "Lime";
-            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardHeadDamageArrow").style.color = "Lime";
             document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageComp").textContent = damRound;
@@ -6376,22 +6452,22 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardHeadDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardHeadDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardHeadDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapProj > weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "Lime";
-            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardHeadDamageArrow").style.color = "Lime";
             document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageComp").textContent = damRound;
@@ -6399,22 +6475,22 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProj").style.color = "Lime";
-            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardHeadDamageProjArrow").style.color = "Lime";
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardHeadDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardHeadDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapProj === weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamage").style.color = "Lime";
-            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardHeadDamageArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardHeadDamageArrow").style.color = "Lime";
             document.getElementById("cardHeadDamageLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageComp").textContent = damRound;
@@ -6422,12 +6498,12 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardHeadDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardHeadDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -6441,15 +6517,15 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProj").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardHeadDamageProjArrow").style.color = "OrangeRed";
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardHeadDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardHeadDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
@@ -6461,24 +6537,24 @@ function oilCalcs(calcOil) {
             document.getElementById("cardHeadDamageRBrac").textContent = ")";
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
             document.getElementById("cardHeadDamageProj").style.color = "Lime";
-            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardHeadDamageProjArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardHeadDamageProjArrow").style.color = "Lime";
             document.getElementById("cardHeadDamageProjComp").textContent = weaponOriginal.Projectiles;
-            document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
-            document.getElementById("cardHeadDamageXComp").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardHeadDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
+            document.getElementById("cardHeadDamageXComp").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
-                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <span class='fa-solid fa-x'></span> ";
+                document.getElementById("cardHeadDamageMultiXComp").innerHTML = " <img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'> ";
                 document.getElementById("cardHeadDamageMultiComp").textContent = weaponOriginal.MultiShot;
             }
         }
         if (weapProj === weaponOriginal.Projectiles) {
             document.getElementById("cardHeadDamage").textContent = headshotDamage;
             document.getElementById("cardHeadDamageProj").textContent = weapProj;
-            document.getElementById("cardHeadDamageX").innerHTML = "<span class='fa-solid fa-x'></span>";
+            document.getElementById("cardHeadDamageX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
             if (weapon.MultiShot > 1.0) {
-                document.getElementById("cardHeadDamageMultiX").innerHTML = "<span class='fa-solid fa-x'></span>";
+                document.getElementById("cardHeadDamageMultiX").innerHTML = "<img src='.\\Images\\svg\\x-solid-full.svg' class='cardX filter-lblue'>";
                 document.getElementById("cardHeadDamageMulti").textContent = weapon.MultiShot;
             }
         }
@@ -6498,7 +6574,7 @@ function oilCalcs(calcOil) {
     if (totalHeadRound > weaponOriginal.TotalDamage) {
             document.getElementById("cardHeadDamageTotal").textContent = totalHeadRound;
             document.getElementById("cardHeadDamageTotal").style.color = "Lime";
-            document.getElementById("cardHeadDamageTotalArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+            document.getElementById("cardHeadDamageTotalArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
             document.getElementById("cardHeadDamageTotalArrow").style.color = "Lime";
             document.getElementById("cardHeadDamageTotalLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageTotalLBrac").textContent = "(";
@@ -6508,7 +6584,7 @@ function oilCalcs(calcOil) {
     if (totalHeadRound < weaponOriginal.TotalDamage) {
             document.getElementById("cardHeadDamageTotal").textContent = totalHeadRound;
             document.getElementById("cardHeadDamageTotal").style.color = "OrangeRed";
-            document.getElementById("cardHeadDamageTotalArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+            document.getElementById("cardHeadDamageTotalArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
             document.getElementById("cardHeadDamageTotalArrow").style.color = "OrangeRed";
             document.getElementById("cardHeadDamageTotalLRArrow").innerHTML = "<img src='.\\Images\\svg\\arrow-left-solid-full.svg' style='height: 12px; vertical-align: center'>";
             document.getElementById("cardHeadDamageTotalLBrac").textContent = "(";
@@ -6592,7 +6668,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardJump").style.color = "OrangeRed";
         document.getElementById("cardJump%").textContent = "%";
         document.getElementById("cardJump%").style.color = "OrangeRed";
-        document.getElementById("cardJumpArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardJumpArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardJumpArrow").style.color = "OrangeRed";
         document.getElementById("cardJumpLBrac").textContent = "(";
         document.getElementById("cardJumpComp").textContent = "100%";
@@ -6603,7 +6679,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardJump").style.color = "Lime";
         document.getElementById("cardJump%").textContent = "%";
         document.getElementById("cardJump%").style.color = "Lime";
-        document.getElementById("cardJumpArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardJumpArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardJumpArrow").style.color = "Lime";
         document.getElementById("cardJumpLBrac").textContent = "(";
         document.getElementById("cardJumpComp").textContent = "100%";
@@ -6641,7 +6717,7 @@ function oilCalcs(calcOil) {
     if (lootRound < lootRoundOrig) {
         document.getElementById("cardLoot").textContent = lootRound;
         document.getElementById("cardLoot").style.color = "OrangeRed";
-        document.getElementById("cardLootArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardLootArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardLoot%").textContent = "%";
         document.getElementById("cardLoot%").style.color = "OrangeRed";
         document.getElementById("cardLootArrow").style.color = "OrangeRed";
@@ -6679,7 +6755,7 @@ function oilCalcs(calcOil) {
                 
         document.getElementById("cardDurability").textContent = durRound;
         document.getElementById("cardDurability").style.color = "OrangeRed";
-        document.getElementById("cardDurabilityArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardDurabilityArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardDurabilityArrow").style.color = "OrangeRed";
         document.getElementById("cardDurabilityLBrac").textContent = "(";
         document.getElementById("cardDurabilityComp").textContent = weaponOriginal.Durability;
@@ -6689,7 +6765,7 @@ function oilCalcs(calcOil) {
 
         document.getElementById("cardDurability").textContent = durRound;
         document.getElementById("cardDurability").style.color = "Lime";
-        document.getElementById("cardDurabilityArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardDurabilityArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardDurabilityArrow").style.color = "Lime";
         document.getElementById("cardDurabilityLBrac").textContent = "(";
         document.getElementById("cardDurabilityComp").textContent = weaponOriginal.Durability;
@@ -6728,7 +6804,7 @@ function oilCalcs(calcOil) {
     if (weaponWeightFinal < weapon.WeaponWeight) {
         document.getElementById("cardWeight").textContent = weaponWeightFinal;
         document.getElementById("cardWeight").style.color = "Lime";
-        document.getElementById("cardWeightArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardWeightArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardWeightArrow").style.color = "Lime";
         document.getElementById("cardWeightLBrac").textContent = "(";
         document.getElementById("cardWeightComp").textContent = weapon.WeaponWeight;
@@ -6737,7 +6813,7 @@ function oilCalcs(calcOil) {
     else if (weaponWeightFinal > weapon.WeaponWeight) {
         document.getElementById("cardWeight").textContent = weaponWeightFinal;
         document.getElementById("cardWeight").style.color = "OrangeRed";
-        document.getElementById("cardWeightArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardWeightArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardWeightArrow").style.color = "OrangeRed";
         document.getElementById("cardWeightLBrac").textContent = "(";
         document.getElementById("cardWeightComp").textContent = weapon.WeaponWeight;
@@ -6768,7 +6844,7 @@ function oilCalcs(calcOil) {
     if (moveRound < resultMovementSpeedComp) {
         document.getElementById("cardMove").textContent = moveRound;
         document.getElementById("cardMove").style.color = "OrangeRed";
-        document.getElementById("cardMoveArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardMoveArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardMove%").textContent = "%";
         document.getElementById("cardMove%").style.color = "OrangeRed";
         document.getElementById("cardMoveArrow").style.color = "OrangeRed";
@@ -6779,7 +6855,7 @@ function oilCalcs(calcOil) {
     if (moveRound > resultMovementSpeedComp) {
         document.getElementById("cardMove").textContent = moveRound;
         document.getElementById("cardMove").style.color = "Lime";
-        document.getElementById("cardMoveArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardMoveArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardMove%").textContent = "%";
         document.getElementById("cardMove%").style.color = "Lime";
         document.getElementById("cardMoveArrow").style.color = "Lime";
@@ -6849,7 +6925,7 @@ function oilCalcs(calcOil) {
     if (weapon.Penetrations > weaponOriginal.Penetrations) {
         document.getElementById("cardPen").textContent = weapon.Penetrations;
         document.getElementById("cardPen").style.color = "Lime";
-        document.getElementById("cardPenArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardPenArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardPenArrow").style.color = "Lime";
         document.getElementById("cardPenLBrac").textContent = "(";
         document.getElementById("cardPenComp").textContent = "0";
@@ -6911,7 +6987,7 @@ function oilCalcs(calcOil) {
     if (recoilRound < weaponOriginal.RecoilBase) {
         document.getElementById("cardRecoil").textContent = recoilRound;
         document.getElementById("cardRecoil").style.color = "Lime";
-        document.getElementById("cardRecoilArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardRecoilArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardRecoilArrow").style.color = "Lime";
         document.getElementById("cardRecoilLBrac").textContent = "(";
         document.getElementById("cardRecoilComp").textContent = weaponOriginal.RecoilBase;
@@ -6920,7 +6996,7 @@ function oilCalcs(calcOil) {
     if (recoilRound > weaponOriginal.RecoilBase) {
         document.getElementById("cardRecoil").textContent = recoilRound;
         document.getElementById("cardRecoil").style.color = "OrangeRed";
-        document.getElementById("cardRecoilArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardRecoilArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardRecoilArrow").style.color = "OrangeRed";
         document.getElementById("cardRecoilLBrac").textContent = "(";
         document.getElementById("cardRecoilComp").textContent = weaponOriginal.RecoilBase;
@@ -6972,7 +7048,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardReloadSpeed").style.color = "OrangeRed";
         document.getElementById("cardReloadSpeed%").textContent = "%";
         document.getElementById("cardReloadSpeed%").style.color = "OrangeRed";
-        document.getElementById("cardReloadSpeedArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardReloadSpeedArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardReloadSpeedArrow").style.color = "OrangeRed";
         document.getElementById("cardReloadSpeedLBrac").textContent = "(";
         document.getElementById("cardReloadSpeedComp").textContent = relSpdConvOrig;
@@ -6983,7 +7059,7 @@ function oilCalcs(calcOil) {
         document.getElementById("cardReloadSpeed").style.color = "Lime";
         document.getElementById("cardReloadSpeed%").textContent = "%";
         document.getElementById("cardReloadSpeed%").style.color = "Lime";
-        document.getElementById("cardReloadSpeedArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardReloadSpeedArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardReloadSpeedArrow").style.color = "Lime";
         document.getElementById("cardReloadSpeedLBrac").textContent = "(";
         document.getElementById("cardReloadSpeedComp").textContent = relSpdConvOrig;
@@ -7014,7 +7090,7 @@ function oilCalcs(calcOil) {
     if (reloadTimeRound > weapon.ReloadTime) {
         document.getElementById("cardReloadTime").textContent = `${reloadTimeRound}s`;
         document.getElementById("cardReloadTime").style.color = "OrangeRed";
-        document.getElementById("cardReloadTimeArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardReloadTimeArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardReloadTimeArrow").style.color = "OrangeRed";
         document.getElementById("cardReloadTimeLBrac").textContent = "(";
         document.getElementById("cardReloadTimeComp").textContent = `${weapon.ReloadTime}s`;
@@ -7023,7 +7099,7 @@ function oilCalcs(calcOil) {
     if (reloadTimeRound < weaponOriginal.ReloadTime) {
         document.getElementById("cardReloadTime").textContent = `${reloadTimeRound}s`;
         document.getElementById("cardReloadTime").style.color = "Lime";
-        document.getElementById("cardReloadTimeArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardReloadTimeArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardReloadTimeArrow").style.color = "Lime";
         document.getElementById("cardReloadTimeLBrac").textContent = "(";
         document.getElementById("cardReloadTimeComp").textContent = `${weapon.ReloadTime}s`;
@@ -7083,7 +7159,7 @@ function oilCalcs(calcOil) {
         }
 
         document.getElementById("cardSpready").style.color = "OrangeRed";
-        document.getElementById("cardSpreadArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardSpreadArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardSpreadArrow").style.color = "OrangeRed";
         document.getElementById("cardSpreadLBrac").textContent = "(";
         document.getElementById("cardSpreadRBrac").textContent = ")";
@@ -7098,7 +7174,7 @@ function oilCalcs(calcOil) {
             document.getElementById("cardSpreadComp").textContent = weaponOriginal.Spread;
         }
         document.getElementById("cardSpready").style.color = "Lime";
-        document.getElementById("cardSpreadArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardSpreadArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardSpreadArrow").style.color = "Lime";
         document.getElementById("cardSpreadLBrac").textContent = "(";
         document.getElementById("cardSpreadRBrac").textContent = ")";
@@ -7144,7 +7220,7 @@ function oilCalcs(calcOil) {
     if (weapon.Drag > 0) {
         document.getElementById("cardDrag").textContent = weapon.Drag;
         document.getElementById("cardDrag").style.color = "OrangeRed";
-        document.getElementById("cardDragArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardDragArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardDragArrow").style.color = "OrangeRed";
         document.getElementById("cardDragLBrac").textContent = "(";
         document.getElementById("cardDragComp").textContent = "0";
@@ -7435,7 +7511,7 @@ function oilCalcs(calcOil) {
     if (totalRatio < origRatio) {
         document.getElementById("cardRTR").textContent = totalRatio;
         document.getElementById("cardRTR").style.color = "Lime";
-        document.getElementById("cardRTRArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-lime'>";
+        document.getElementById("cardRTRArrow").innerHTML = "<img src='.\\Images\\svg\\caret-down-solid-full.svg' class='cardArrow filter-lime'>";
         document.getElementById("cardRTRArrow").style.color = "Lime";
         document.getElementById("cardRTRComp").textContent = origRatio;
         document.getElementById("cardRTRLBrac").textContent = "(";
@@ -7444,7 +7520,7 @@ function oilCalcs(calcOil) {
     if (totalRatio > origRatio) {
         document.getElementById("cardRTR").textContent = totalRatio;
         document.getElementById("cardRTR").style.color = "OrangeRed";
-        document.getElementById("cardRTRArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' style='height: 12px; vertical-align: center;' class='filter-orangered'>";
+        document.getElementById("cardRTRArrow").innerHTML = "<img src='.\\Images\\svg\\caret-up-solid-full.svg' class='cardArrow filter-orangered'>";
         document.getElementById("cardRTRArrow").style.color = "OrangeRed";
         document.getElementById("cardRTRComp").textContent = origRatio;
         document.getElementById("cardRTRLBrac").textContent = "(";
