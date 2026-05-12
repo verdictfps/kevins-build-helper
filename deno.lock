@@ -12,7 +12,10 @@
     "packageJson": {
       "dependencies": [
         "npm:@netlify/blobs@^10.7.4",
-        "npm:html2canvas@^1.4.1"
+        "npm:@netlify/database@1",
+        "npm:@netlify/functions@^5.2.0",
+        "npm:html2canvas@^1.4.1",
+        "npm:passport-steam@^1.0.18"
       ]
     }
   }

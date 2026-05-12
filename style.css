@@ -848,6 +848,82 @@ body {
         font-size: 1.5em !important;
     }
 
+    .steam-auth-panel {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        min-height: 42px;
+        margin: 0 0 8px;
+        color: white;
+        font-family: "Fredoka", sans-serif;
+        flex-wrap: wrap;
+    }
+
+    .steam-auth-identity {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 0;
+        color: white;
+    }
+
+    .steam-auth-avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        border: 1px solid #FDB142;
+        object-fit: cover;
+    }
+
+    .steam-auth-name {
+        max-width: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 0.95rem;
+    }
+
+    .steam-auth-button {
+        width: auto;
+        height: auto;
+        min-height: 34px;
+        padding: 6px 12px;
+        font-size: 0.95rem;
+        border: 2px solid black;
+        box-shadow: 2px 2px 0 black;
+        white-space: nowrap;
+    }
+
+    .steam-auth-button:hover {
+        width: auto;
+    }
+
+    .steam-auth-button:active {
+        width: auto;
+    }
+
+    .steam-auth-button-secondary {
+        background-color: #35525f;
+        color: white;
+        border-color: #FDB142;
+    }
+
+    .steam-auth-status {
+        min-width: 126px;
+        font-size: 0.85rem;
+        color: #e2edf0;
+        text-align: right;
+    }
+
+    .steam-auth-status[data-state="success"] {
+        color: #b9ffb9;
+    }
+
+    .steam-auth-status[data-state="error"] {
+        color: #ffb3a8;
+    }
+
     div.containerweapon {
         background-color: #FDB142;
         border: 1px solid #FDB142;

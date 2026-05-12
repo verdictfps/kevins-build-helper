@@ -663,6 +663,15 @@
         }
     </script>-->
     <h1 style="display: none">Wanna make a build? Kevin's got your back. Build calculator and randomizer for the video game SULFUR. Optimize your build, generate missing pieces, and get detailed stats you didn't even know existed."</h1>
+    <div id="steam-auth-panel" class="steam-auth-panel">
+        <div id="steam-auth-identity" class="steam-auth-identity" hidden>
+            <img id="steam-auth-avatar" class="steam-auth-avatar" alt="" hidden>
+            <span id="steam-auth-name" class="steam-auth-name"></span>
+        </div>
+        <button id="steam-sign-in-button" class="steam-auth-button" type="button" onclick="beginSteamSignIn()">Sign in with Steam</button>
+        <button id="steam-sign-out-button" class="steam-auth-button steam-auth-button-secondary" type="button" onclick="signOutSteam()" hidden>Sign out</button>
+        <span id="steam-auth-status" class="steam-auth-status">Checking Steam sign-in...</span>
+    </div>
     <div id="contextMenu" class="context-menu" style="display:none">
         <ul>
             <li><a href="#">Formula Breakdown</a></li>
