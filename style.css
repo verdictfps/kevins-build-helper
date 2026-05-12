@@ -850,14 +850,17 @@ body {
 
     .steam-auth-panel {
         display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 8px;
-        min-height: 42px;
+        justify-content: center;
+        align-items: flex-end;
         margin: 0 0 8px;
         color: white;
         font-family: "Fredoka", sans-serif;
         flex-wrap: wrap;
+        width: auto !important;
+        padding: 0 !important;
+        flex-grow: 0;
+        gap: 8px;
+        flex-direction: column;
     }
 
     .steam-auth-identity {
@@ -897,10 +900,24 @@ body {
 
     .steam-auth-button:hover {
         width: auto;
+        height: auto;
+        min-height: 34px;
+        padding: 6px 12px;
+        font-size: 0.95rem;
+        border: 2px solid rgb(255, 255, 255);
+        box-shadow: 2px 2px 0 black;
+        white-space: nowrap;
     }
 
     .steam-auth-button:active {
         width: auto;
+        height: auto;
+        min-height: 34px;
+        padding: 6px 12px;
+        font-size: 0.95rem;
+        border: 2px solid black;
+        box-shadow: 2px 2px 0 black;
+        white-space: nowrap;
     }
 
     .steam-auth-button-secondary {
@@ -910,8 +927,8 @@ body {
     }
 
     .steam-auth-status {
-        min-width: 126px;
-        font-size: 0.85rem;
+        width: auto;
+        font-size: 0.7rem;
         color: #e2edf0;
         text-align: right;
     }
@@ -1088,14 +1105,13 @@ body {
     color: black;
     box-shadow: 3px 3px 0px 0px black;
     border-radius: 5px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     padding: 0px;
     margin: 0px;
     margin-bottom: 4px;
     align-items: center;
     justify-content: center;
-    min-width: 50px;
 }
 
     .buttonMedia:hover {
@@ -1103,12 +1119,12 @@ body {
         font-weight: 500;
         background-color: #FDB142;
         border: 2px solid rgb(253, 255, 149);
-        width: 100%;
+        width: 40px;
+        height: 40px;
         box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
         color: rgb(253, 255, 149);
         border-radius: 5px;
         text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
-        min-width: 50px;
     }
 
     .buttonMedia:active {
@@ -1116,12 +1132,12 @@ body {
         font-weight: 500;
         background-color: #e4a039;
         border: 1px solid black;
-        width: 100%;
+        width: 40px;
+        height: 40px;
         box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
         text-shadow: 2px 2px 0px black;
         color: transparent;
         transform: translate(3px, 3px);
-        min-width: 50px;
     }
     
 .buttonGeneral-glass {

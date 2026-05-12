@@ -12,5 +12,8 @@ CREATE TABLE IF NOT EXISTS steam_users (
   profile_url text,
   last_login_at timestamptz NOT NULL DEFAULT now(),
   created_at timestamptz NOT NULL DEFAULT now(),
-  updated_at timestamptz NOT NULL DEFAULT now()
+  updated_at timestamptz NOT NULL DEFAULT now(),
+  saved_builds json,
+  blacklist json,
+  favorites json
 );

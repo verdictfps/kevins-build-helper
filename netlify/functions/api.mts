@@ -13,7 +13,7 @@ const itemDataDirectoryCandidates = [
 ];
 let itemDataDirectoryPromise: Promise<string> | null = null;
 let itemDataFilesPromise: Promise<Set<string>> | null = null;
-const steamOpenIdProvider = "https://steamcommunity.com/openid/login";
+const steamOpenIdProvider = "https://steamcommunity.com/openid";
 const steamClaimPrefix = "https://steamcommunity.com/openid/id/";
 const stateCookieName = "kbh_steam_state";
 const sessionCookieName = "kbh_steam_session";

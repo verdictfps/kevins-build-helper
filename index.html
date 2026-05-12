@@ -663,15 +663,6 @@
         }
     </script>-->
     <h1 style="display: none">Wanna make a build? Kevin's got your back. Build calculator and randomizer for the video game SULFUR. Optimize your build, generate missing pieces, and get detailed stats you didn't even know existed."</h1>
-    <div id="steam-auth-panel" class="steam-auth-panel">
-        <div id="steam-auth-identity" class="steam-auth-identity" hidden>
-            <img id="steam-auth-avatar" class="steam-auth-avatar" alt="" hidden>
-            <span id="steam-auth-name" class="steam-auth-name"></span>
-        </div>
-        <button id="steam-sign-in-button" class="steam-auth-button" type="button" onclick="beginSteamSignIn()">Sign in with Steam</button>
-        <button id="steam-sign-out-button" class="steam-auth-button steam-auth-button-secondary" type="button" onclick="signOutSteam()" hidden>Sign out</button>
-        <span id="steam-auth-status" class="steam-auth-status">Checking Steam sign-in...</span>
-    </div>
     <div id="contextMenu" class="context-menu" style="display:none">
         <ul>
             <li><a href="#">Formula Breakdown</a></li>
@@ -1189,28 +1180,37 @@
                     <!--------->
                     <!--Links-->
                     <!--------->
-                    <div class="containerweapchoose" id="containerweapchoose" style="border: 0px; border-radius: 5px; margin-bottom: 5px; margin-top: 5px; margin-right: 0px; margin-left: 0px; padding-left: 10px; padding-right: 0px; height: auto; display: flex; align-items: center; justify-content: center; flex-basis: 20%; flex-grow: 1;">                    
-                        <div id="function-div" style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: row; flex-grow: 1; justify-content: space-evenly; flex-wrap: wrap;">
+                    <div class="containerweapchoose" id="containerweapchoose" style="border: 0px; border-radius: 5px; margin-bottom: 5px; margin-top: 5px; margin-right: 0px; margin-left: 0px; padding-left: 10px; padding-right: 0px; height: auto; display: flex; align-items: start; justify-content: center; flex-basis: 20%; flex-grow: 1; gap: 15px;">                    
+                        <div id="function-div" style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: row; flex-grow: 1; justify-content: center; flex-wrap: wrap; flex-basis: 30%; gap: 15px;">
                             <!--Temp Popup Box Button-->
                             <!--vvvvvvvvvvvvvvvvvvvvv-->
-                            <button class="buttonMedia" id="buttonPopup" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Opens the popup box')" onmouseout="infoboxClear()" onclick="openPopupBox('open')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\Enchantments\None.webp" style="height: 40px; width: 40px; margin: 0px; mix-blend-mode: color-burn;"></img></span></button>
-                            <button class="buttonMedia" id="buttonPopupSimulate" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Opens the popup box for simulations')" onmouseout="infoboxClear()" onclick="openPopupBox('simulate')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\Enchantments\None.webp" style="height: 40px; width: 40px; margin: 0px; mix-blend-mode: color-burn;"></img></span></button>
-                            <button class="buttonMedia" id="buttonPopupSessionStats" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Opens the popup box for session & global stats.')" onmouseout="infoboxClear()" onclick="openPopupBox('session')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\Enchantments\None.webp" style="height: 40px; width: 40px; margin: 0px; mix-blend-mode: color-burn;"></img></span></button>
+                            <button class="buttonMedia" id="buttonPopup" style="padding: 0px; margin: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Opens the popup box')" onmouseout="infoboxClear()" onclick="openPopupBox('open')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\Enchantments\None.webp" style="height: 40px; width: 40px; margin: 0px; mix-blend-mode: color-burn;"></img></span></button>
+                            <button class="buttonMedia" id="buttonPopupSimulate" style="padding: 0px; margin: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Opens the popup box for simulations')" onmouseout="infoboxClear()" onclick="openPopupBox('simulate')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\Enchantments\None.webp" style="height: 40px; width: 40px; margin: 0px; mix-blend-mode: color-burn;"></img></span></button>
+                            <button class="buttonMedia" id="buttonPopupSessionStats" style="padding: 0px; margin: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Opens the popup box for session & global stats.')" onmouseout="infoboxClear()" onclick="openPopupBox('session')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\Enchantments\None.webp" style="height: 40px; width: 40px; margin: 0px; mix-blend-mode: color-burn;"></img></span></button>
                         </div>
-                        <div id="social-div" style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: row; flex-grow: 1; justify-content: space-evenly; flex-wrap: wrap;">
+                        <div id="social-div" style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: row; flex-grow: 1; justify-content: center; flex-wrap: wrap; flex-basis: 30%; gap: 15px;">
                             <!--KBH Discord Button-->
                             <!--vvvvvvvvvvvvvvvvvv-->
-                            <button class="buttonMedia" id="buttonDiscord" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px; display: flex; justify-content: center;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to the Kevin\'s Build Helper Discord server.')" onmouseout="infoboxClear()" onclick="clickLink('discord')"><img src=".\\Images\\svg\\discord-brands-solid-full.svg" style="font-size: 20px; display: flex; text-align: center; justify-content: center; width: auto; height: 30px"></button>
+                            <button class="buttonMedia" id="buttonDiscord" style="padding: 0px; margin: 0px; display: flex; justify-content: center;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to the Kevin\'s Build Helper Discord server.')" onmouseout="infoboxClear()" onclick="clickLink('discord')"><img src=".\\Images\\svg\\discord-brands-solid-full.svg" style="font-size: 20px; display: flex; text-align: center; justify-content: center; width: auto; height: 30px"></button>
                             <!--Vern Website Button-->
                             <!--vvvvvvvvvvvvvvvvvvv-->
-                            <button class="buttonMedia" id="buttonVern" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to Vern Carson\'s website for music and other projects.')" onmouseout="infoboxClear()" onclick="clickLink('vern')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\vern_final_new_logo_whitte.png" style="height: 40px; width: 40px; margin: 0px"></img></span></button>
+                            <button class="buttonMedia" id="buttonVern" style="padding: 0px; margin: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to Vern Carson\'s website for music and other projects.')" onmouseout="infoboxClear()" onclick="clickLink('vern')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\vern_final_new_logo_whitte.png" style="height: 40px; width: 40px; margin: 0px"></img></span></button>
                             <!--SULFUR Wiki Button-->
                             <!--vvvvvvvvvvvvvvvvvv-->
-                            <button class="buttonMedia" id="buttonWiki" style="width: 50px; height: 50px; padding: 0px; margin-right: 15px; margin-bottom: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to the SULFUR wiki.')" onmouseout="infoboxClear()" onclick="clickLink('wiki')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\90px-Website_icon.webp" style="height: 40px; width: 40px; margin: 0px; mix-blend-mode: color-burn;"></img></span></button>
+                            <button class="buttonMedia" id="buttonWiki" style="padding: 0px; margin: 0px;" onmouseover="infoboxHover('button', 0, 'buttonRandomGun', 'Go to the SULFUR wiki.')" onmouseout="infoboxClear()" onclick="clickLink('wiki')"><span style="font-size: 0px; display: flex; text-align: center; justify-content: center; width: auto; height: auto; margin: 0px; padding: 0px"><img src=".\Images\90px-Website_icon.webp" style="height: 40px; width: 40px; margin: 0px; mix-blend-mode: color-burn;"></img></span></button>
                         </div>
-                        <div id="kofi-div" style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-evenly;">
+                        <div id="kofi-div" style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-evenly; width: 30%;">
                             <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#f573f1', 'Y8Y0WWOA4');kofiwidget2.draw();</script>
                             <p style="margin: 0; color: white;">Help keep this running!</p>
+                        </div>
+                        <div id="steam-auth-panel" class="steam-auth-panel">
+                            <button id="steam-sign-in-button" class="steam-auth-button" type="button" onclick="beginSteamSignIn()">Sign in with Steam</button>
+                            <button id="steam-sign-out-button" class="steam-auth-button steam-auth-button-secondary" type="button" onclick="signOutSteam()" hidden>Sign out</button>
+                            <span id="steam-auth-status" class="steam-auth-status">Checking Steam sign-in...</span>
+                            <div id="steam-auth-identity" class="steam-auth-identity" hidden>
+                                <img id="steam-auth-avatar" class="steam-auth-avatar" alt="" hidden>
+                                <span id="steam-auth-name" class="steam-auth-name"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
