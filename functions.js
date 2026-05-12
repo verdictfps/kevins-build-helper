@@ -126,9 +126,6 @@ function mobileCSS() {
         document.getElementById("bigbuttondiv2").style.display = "none";
         document.getElementById("bigbuttondiv1").style.display = "none";
 
-        document.getElementById("externalbuttondiv").classList.remove("external-button-cont");
-        document.getElementById("externalbuttondiv").classList.add("external-button-cont-mobile");
-
         document.getElementById("weaponstatcontainer").classList.remove("resultcontainer");
         document.getElementById("weaponstatcontainer").classList.add("resultcontainer-mobile");
 
@@ -2379,11 +2376,11 @@ async function captureElement(activated, save) {
         document.getElementById("sharingbar").style.display = "none";
         document.getElementById("weaponnamebar").style.width = "100%";
 
-        document.getElementById("bigboxdeals").classList.remove("bigboxdeals");
-        document.getElementById("bigboxdeals").classList.add("bigboxdeals-screen");
+        //document.getElementById("bigboxdeals").classList.remove("bigboxdeals");
+        //document.getElementById("bigboxdeals").classList.add("bigboxdeals-screen");
 
-        document.getElementById("secondpagediv").classList.remove("secondpagediv");
-        document.getElementById("secondpagediv").classList.add("secondpagediv-screen");
+       //document.getElementById("secondpagediv").classList.remove("secondpagediv");
+        //document.getElementById("secondpagediv").classList.add("secondpagediv-screen");
 
         document.getElementById("weaponcontainer-glass").style.opacity = "10%";
 
@@ -2393,14 +2390,14 @@ async function captureElement(activated, save) {
         let clone1 = null;
         
         if (mode.textContent === "Simple") {
-            document.getElementById("containerheaders").classList.remove("containerheaders");
-            document.getElementById("containerheaders").classList.add("mobile-arrow");
-            document.getElementById("build-chooser-button-div").style.display = "none";
+            //document.getElementById("containerheaders").classList.remove("containerheaders");
+            //document.getElementById("containerheaders").classList.add("mobile-arrow");
+            //document.getElementById("build-chooser-button-div").style.display = "none";
             document.getElementById("targetme").style.backgroundColor = "#2D424B";
             document.getElementById("targetme").classList.remove("build-card");
             document.getElementById("targetme").classList.add("build-card-screen");
             document.getElementById("oilequipwrapper").style.marginTop = "1px";
-            newtarget = "targetme";
+            newtarget = "screenshot-div-fr-this-time";
         }
         else {
             node = document.getElementById("extendstatbox");
@@ -2423,8 +2420,8 @@ async function captureElement(activated, save) {
         }
 
         if (mode.textContent === "Simple") {
-            document.getElementById("containerheaders").classList.remove("mobile-arrow");
-            document.getElementById("containerheaders").classList.add("containerheaders");
+           // document.getElementById("containerheaders").classList.remove("mobile-arrow");
+           // document.getElementById("containerheaders").classList.add("containerheaders");
             document.getElementById("build-chooser-button-div").style.display = "";
             document.getElementById("targetme").style.backgroundColor = "";
             document.getElementById("targetme").classList.remove("build-card-screen");
@@ -2439,10 +2436,10 @@ async function captureElement(activated, save) {
 
         document.getElementById("sharingbar").style.display = "flex";
         document.getElementById("weaponnamebar").style.width = "30%";
-        document.getElementById("bigboxdeals").classList.remove("bigboxdeals-screen");
-        document.getElementById("bigboxdeals").classList.add("bigboxdeals");
-        document.getElementById("secondpagediv").classList.remove("secondpagediv-screen");
-        document.getElementById("secondpagediv").classList.add("secondpagediv");
+        //document.getElementById("bigboxdeals").classList.remove("bigboxdeals-screen");
+        //document.getElementById("bigboxdeals").classList.add("bigboxdeals");
+        //document.getElementById("secondpagediv").classList.remove("secondpagediv-screen");
+        //document.getElementById("secondpagediv").classList.add("secondpagediv");
         document.getElementById("weaponcontainer-glass").style.opacity = "";
         document.getElementById("targetme").style.backgroundColor = "";
         document.getElementById("boxglowthing").classList.add("boxglowthing");
@@ -2451,6 +2448,7 @@ async function captureElement(activated, save) {
         document.getElementById("weaponimage").classList.remove("weaponimage2");
     }
     else {
+        console.log("hello")
         document.getElementById("oilstatcontainer1").classList.remove("spinanimation");
         document.getElementById("oilstatcontainer2").classList.remove("spinanimation");
         document.getElementById("oilstatcontainer3").classList.remove("spinanimation");
@@ -2529,7 +2527,7 @@ async function takeScreenshot(activated, save, target2) {
     infoboxClear();
 
     const canvas = await html2canvas(target, {
-        scale: 1.4,
+        scale: 1.3,
         allowTaint: true,
         removeContainer: true
     });
@@ -2979,6 +2977,14 @@ function copyLoadButton() {
 
 async function copyBuildLink() {
     let copyObj = document.getElementById("linkbox");
+
+    let loadingbar =  document.getElementById("loadingbar");
+    let screenbar =  document.getElementById("screenbar");
+    let linkbar =  document.getElementById("linkbar");
+
+    mainHeader.style.display = "none";
+    loadingbar.style.display = "flex";
+
     const buildPayload = getCurrentBuildPayload();
 
     if (buildPayload !== false) {
@@ -3011,6 +3017,8 @@ function pasteBuildLink() {
             infoboxHover('loadfail')
         }
 }
+
+
 
 function setAllAsRandom() {
     shallNotPass = true;
@@ -3068,11 +3076,16 @@ function openPopupBox(purpose) {
             document.getElementById("popup-simulate").style.display = "flex";
             document.getElementById("popup-header-title").textContent = "Simulate Firing";
             break;
+        case "session":
+            document.getElementById("popup-session").style.display = "flex";
+            document.getElementById("popup-header-title").textContent = "Session & Global Stats";
+            break;
     }
 }
 
 function closePopupBox() {
     document.getElementById("popup-simulate").style.display = "none";
+    document.getElementById("popup-session").style.display = "none";
     document.getElementById("popup-maindiv").style.display = "none";
 }
 
@@ -4835,8 +4848,9 @@ function addName() {
         switch (key) {
             case "weapon":
                 let test = Math.floor(Math.random() * 200);
+                console.log(test)
                 document.getElementById("bydonk").hidden = true;
-                if (test > 199) {
+                if (test > 198) {
                     let weapReplace = coreName.replaceAll(" ", "_");
                     document.getElementById("weaponimage").src = `.\\Images\\Dead_Skrip.png`;
                     document.getElementById("cardWeaponName").textContent = coreName;

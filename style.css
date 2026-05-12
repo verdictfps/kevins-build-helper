@@ -22,6 +22,12 @@
   to {box-shadow: inset 2px 2px 5px 0px #000000, inset 0px 0px 10px 0px #FDB142, inset 0px 0px 80px 70px #2D424B;}
 }
 
+@keyframes loadingtext {
+    0% {background-position: 100% 50%;}
+    50% {background-position: 50% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
 @keyframes menuswitchlightsright {
     0% {color: transparent; background-clip: text; background-image: linear-gradient(90deg,rgba(255, 255, 255, 1) 33%, rgba(0, 0, 0, 1) 0%);}
     20% {color: transparent; background-clip: text; background-image: linear-gradient(90deg,rgba(255, 255, 255, 1) 33%, rgba(0, 0, 0, 1) 0%);}
@@ -106,6 +112,7 @@
     color: #A3D5EA;
     font-variation-settings: "wdth" 95;
     font-size: 0.7vw !important;
+    text-shadow: 2px 2px 0px rgb(77, 0, 77);
 }
 
 .compLabel-mobile {
@@ -154,11 +161,15 @@
 .cardStat {
     font-family: "Fredoka", sans-serif;
     color: white;
-    padding: 5px !important;
-    padding-top: 3px !important;
+    padding-top: 0px !important;
     padding-bottom: 1px !important;
     text-align: left;
-    font-variation-settings: "wdth" 95;
+    font-variation-settings: "wdth" 85;
+    font-variant-caps: all-petite-caps;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    text-shadow: 2px 2px 0px black;
+    font-weight: 500;
 }
 
 .cardStatHeader {
@@ -1008,6 +1019,7 @@ body {
     margin-bottom: 4px;
     align-items: center;
     justify-content: center;
+    min-width: 50px;
 }
 
     .buttonMedia:hover {
@@ -1020,6 +1032,7 @@ body {
         color: rgb(253, 255, 149);
         border-radius: 5px;
         text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+        min-width: 50px;
     }
 
     .buttonMedia:active {
@@ -1032,6 +1045,7 @@ body {
         text-shadow: 2px 2px 0px black;
         color: transparent;
         transform: translate(3px, 3px);
+        min-width: 50px;
     }
     
 .buttonGeneral-glass {
@@ -1148,6 +1162,38 @@ body {
 .stuffbutton-mobile {
     height: 50px !important;
     width: 50px !important;
+}
+
+.loading-bar{
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background-color: #18252b;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+#loadingbar-text-generating {
+    animation: loadingtext 1s infinite linear;
+    color: transparent;
+    margin: 0;
+    background-clip: text;
+    background-image: linear-gradient(90deg,rgba(255, 255, 255, 1) 31%, rgba(0, 247, 255, 1) 50%, rgba(255, 255, 255, 1) 67%);
+    background-size: 300% 300%;
+}
+
+#loadingbar-text-generating-success {
+    animation: loadingtext 5s 1 linear;
+    color: transparent;
+    margin: 0;
+    background-clip: text;
+    background-image: linear-gradient(90deg,rgba(255, 255, 255, 1) 31%, rgba(0, 247, 255, 1) 50%, rgba(255, 255, 255, 1) 67%);
+    background-size: 300% 300%;
+    display: none;
 }
 
 .ext-mob {
@@ -1412,6 +1458,11 @@ select.custom-dropdown {
     align-items: center;
     justify-content: space-evenly;
     width: 100% !important;
+}
+
+.btn-container {
+    width: auto !important;
+    padding: 5px !important;
 }
 
 .tooltipboxdiv {
@@ -1802,6 +1853,16 @@ select.custom-dropdown {
     margin: 5px;
 }
 
+.popup-session {
+    height: auto;
+    width: auto;
+    margin: 5px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+}
+
 .build-card {
     border:0px !important;
     margin-left:0px !important;
@@ -1826,13 +1887,12 @@ select.custom-dropdown {
     margin-top: 0px !important;
     padding: 0px !important;
     position: fixed !important;
-    min-height: auto !important;
+    min-height: 98vh !important;
     max-height: 98vh !important;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
-    gap: 10px !important;
 }
 
 .stat-text {
@@ -3019,6 +3079,15 @@ input[type=checkbox]
     .custom-select-header {
         height: 12em;
     }
+    #extendstatsbutton span {
+        font-size: 0.5em;
+    }
+    #extendstatsbutton img {
+        height: 0.75em !important;
+    }
+    #extendstatsbutton {
+        height: 1em !important;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -3063,6 +3132,7 @@ input[type=checkbox]
     }
     .cardStat {
         font-size: 0.45em;
+        line-height: 10px;
     }
     .containerattachdivheader {
         font-size: 0.7em;
@@ -3081,6 +3151,16 @@ input[type=checkbox]
     }
     .cardStat {
         font-size: 0.65em;
+        line-height: 11px;
+    }
+    #extendstatsbutton span {
+        font-size: 1em;
+    }
+    #extendstatsbutton img {
+        height: 1.5em !important;
+    }
+    #extendstatsbutton {
+        height: 2.5em !important;
     }
 }
 
@@ -3117,7 +3197,7 @@ input[type=checkbox]
     }
     .commitgrid {
         padding: 2px !important;
-        margin: 2px !important;
+        margin: 5px !important;
     }
     #cardWeaponName {
         font-size: 1.3em !important;
@@ -3145,19 +3225,22 @@ input[type=checkbox]
         height: 10px;
     }
     .cardStat {
-        font-size: 0.55em;
+        font-size: 0.85em;
+        line-height: 14px;
     }
 }
 
 @media (min-width: 1800px) {
     .cardStat {
-        font-size: 0.85em;
+        font-size: 1em;
+        line-height: 16px;
     }
 }
 
 @media (min-width: 2000px) {
   .cardStat {
-    font-size: 0.5vw;
+    font-size: 0.8em;
+    line-height: 16px;
   }
 }
 
