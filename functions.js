@@ -465,6 +465,115 @@ let selectedLaser = null;
 let selectedFiremode = null;
 let selectedChamber = null;
 let selectedAttachments = null;
+let steamUser = null;
+
+function getSteamReturnPath() {
+    return `${window.location.pathname}${window.location.search}${window.location.hash}`;
+}
+
+function setSteamStatus(message, state = "") {
+    const status = document.getElementById("steam-auth-status");
+
+    if (!status) {
+        return;
+    }
+
+    status.textContent = message;
+    status.dataset.state = state;
+}
+
+function renderSteamUser(user) {
+    const signInButton = document.getElementById("steam-sign-in-button");
+    const signOutButton = document.getElementById("steam-sign-out-button");
+    const identity = document.getElementById("steam-auth-identity");
+    const avatar = document.getElementById("steam-auth-avatar");
+    const name = document.getElementById("steam-auth-name");
+
+    if (!signInButton || !signOutButton || !identity || !avatar || !name) {
+        return;
+    }
+
+    steamUser = user || null;
+    signInButton.hidden = Boolean(user);
+    signOutButton.hidden = !user;
+    identity.hidden = !user;
+
+    if (!user) {
+        avatar.hidden = true;
+        avatar.removeAttribute("src");
+        name.textContent = "";
+        setSteamStatus("Not signed in");
+        return;
+    }
+
+    name.textContent = user.displayName || `Steam ${user.steamId}`;
+
+    if (user.avatarUrl) {
+        avatar.src = user.avatarUrl;
+        avatar.hidden = false;
+    }
+    else {
+        avatar.hidden = true;
+        avatar.removeAttribute("src");
+    }
+
+    setSteamStatus("Signed in with Steam", "success");
+}
+
+async function loadSteamSession() {
+    try {
+        const response = await fetch("/api/auth/steam/me", {
+            credentials: "same-origin",
+        });
+        const data = await response.json();
+        renderSteamUser(data.user);
+    }
+    catch {
+        renderSteamUser(null);
+        setSteamStatus("Steam sign-in unavailable", "error");
+    }
+}
+
+function beginSteamSignIn() {
+    const loginUrl = new URL("/api/auth/steam/login", window.location.origin);
+    loginUrl.searchParams.set("returnTo", getSteamReturnPath());
+    window.location.assign(loginUrl.toString());
+}
+
+async function signOutSteam() {
+    setSteamStatus("Signing out...");
+
+    try {
+        await fetch("/api/auth/steam/logout", {
+            method: "POST",
+            credentials: "same-origin",
+        });
+    }
+    finally {
+        renderSteamUser(null);
+    }
+}
+
+function consumeSteamRedirectStatus() {
+    const url = new URL(window.location.href);
+    const status = url.searchParams.get("steamSignIn");
+
+    if (!status) {
+        return;
+    }
+
+    url.searchParams.delete("steamSignIn");
+    window.history.replaceState({}, "", url.toString());
+
+    if (status === "failed") {
+        setSteamStatus("Steam sign-in failed", "error");
+    }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    consumeSteamRedirectStatus();
+    loadSteamSession();
+});
 
 // Initiate item data
 
@@ -487,92 +596,92 @@ let scrollDupe = null;
 let oilScrollDupe = null;
 
 async function loadChamber() {
-    const response = await fetch("./itemdata/Chamber.json");
+    const response = await fetch("/api/itemdata/Chamber.json");
     chamberData = await response.json();
-    const response2 = await fetch("./itemdata/ChamberNoEn.json");
+    const response2 = await fetch("/api/itemdata/ChamberNoEn.json");
     chamberData2 = await response2.json();
     chamberDupe = structuredClone(chamberData2);
     return chamberData2;
 }
 
 async function loadWeapons() {
-    const response = await fetch("./itemdata/Weapons.json");
+    const response = await fetch("/api/itemdata/Weapons.json");
     weaponsData = await response.json();
     return weaponsData;
 }
 
 async function loadOrigWeapons() {
-    const response = await fetch("./itemdata/OrigWeapons.json");
+    const response = await fetch("/api/itemdata/OrigWeapons.json");
     weaponsOrigData = await response.json();
     return weaponsOrigData;
 }
 
 async function loadAttachments() {
-    const response = await fetch("./itemdata/Attachments.json");
+    const response = await fetch("/api/itemdata/Attachments.json");
     attachmentsData = await response.json();
     return attachmentsData;
 }
 
 async function loadBarrels() {
-    const response = await fetch("./itemdata/Barrels.json");
+    const response = await fetch("/api/itemdata/Barrels.json");
     barrelsData = await response.json();
     return barrelsData;
 }
 
 async function loadOptics() {
-    const response = await fetch("./itemdata/Optics.json");
+    const response = await fetch("/api/itemdata/Optics.json");
     opticsData = await response.json();
     return opticsData;
 }
 
 async function loadLasers() {
-    const response = await fetch("./itemdata/Lasers.json");
+    const response = await fetch("/api/itemdata/Lasers.json");
     lasersData = await response.json();
     return lasersData;
 }
 
 async function loadFiremodes() {
-    const response = await fetch("./itemdata/Firemodes.json");
+    const response = await fetch("/api/itemdata/Firemodes.json");
     firemodesData = await response.json();
     return firemodesData;
 }
 
 async function loadOils() {
-    const response = await fetch("./itemdata//Oils.json");
+    const response = await fetch("/api/itemdata/Oils.json");
     oilsData = await response.json();
     
     return oilsData;
 }
 
 async function loadScrolls() {
-    const response = await fetch("./itemdata/Scrolls.json");
+    const response = await fetch("/api/itemdata/Scrolls.json");
     scrollsData = await response.json();
     return scrollsData;
 }
 
 async function loadOilsScrolls() {
-    const response = await fetch("./itemdata/OilsScrolls.json");
+    const response = await fetch("/api/itemdata/OilsScrolls.json");
     oilsScrollsData = await response.json();
     return oilsScrollsData;
 }
 
 async function loadHeadArmor() {
-    const response = await fetch("./itemdata/armorHead.json");
+    const response = await fetch("/api/itemdata/armorHead.json");
     armorHeadData = await response.json();
     return armorHeadData;
 }
 async function loadChestArmor() {
-    const response = await fetch("./itemdata/armorChest.json");
+    const response = await fetch("/api/itemdata/armorChest.json");
     armorChestData = await response.json();
     return armorChestData;
 }
 async function loadFootArmor() {
-    const response = await fetch("./itemdata/armorFeet.json");
+    const response = await fetch("/api/itemdata/armorFeet.json");
     armorFootData = await response.json();
     return armorFootData;
 }
 async function loadTrinkets() {
-    const response = await fetch("./itemdata/Trinkets.json");
+    const response = await fetch("/api/itemdata/Trinkets.json");
     trinketData = await response.json();
     return trinketData;
 }

@@ -1,11 +1,9 @@
 {
   "dependencies": {
     "@netlify/blobs": "^10.7.4",
+    "@netlify/database": "^1.0.0",
     "@netlify/functions": "^5.2.0",
-    "@types/express": "^5.0.6",
-    "express": "^5.2.1",
     "html2canvas": "^1.4.1",
-    "passport-steam": "^1.0.18",
-    "serverless-http": "^4.0.0"
+    "passport-steam": "^1.0.18"
   }
 }
