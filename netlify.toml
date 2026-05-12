@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/itemdata/*.json"
+to = "/404"
+status = 404

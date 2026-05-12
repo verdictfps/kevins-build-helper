@@ -17,6 +17,72 @@
   }
 }
 
+.steam-auth-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 44px;
+    margin: 0 0 8px;
+    color: white;
+    font-family: "Fredoka", Arial, sans-serif;
+}
+
+.steam-auth-button,
+.steam-auth-link {
+    border: 2px solid #111;
+    border-radius: 5px;
+    background: #FDB142;
+    color: #111;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.steam-auth-button {
+    min-height: 36px;
+    padding: 6px 12px;
+    box-shadow: 2px 2px 0 #111;
+}
+
+.steam-auth-link {
+    padding: 4px 8px;
+}
+
+.steam-auth-button:hover,
+.steam-auth-link:hover {
+    background: #ffd083;
+}
+
+.steam-user-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: min(100%, 360px);
+    padding: 4px 6px;
+    border: 2px solid #FDB142;
+    border-radius: 5px;
+    background: #2D424B;
+    box-shadow: 2px 2px 0 #111;
+}
+
+.steam-user-card[hidden] {
+    display: none;
+}
+
+.steam-user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid #FDB142;
+    object-fit: cover;
+}
+
+.steam-user-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 @keyframes breatheBox {
   from {box-shadow: inset 2px 2px 5px 0px #000000, inset 0px 0px 0px 0px #FDB142, inset 0px 0px 80px 70px #2D424B;}
   to {box-shadow: inset 2px 2px 5px 0px #000000, inset 0px 0px 10px 0px #FDB142, inset 0px 0px 80px 70px #2D424B;}
