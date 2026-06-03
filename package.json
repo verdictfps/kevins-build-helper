@@ -3,7 +3,13 @@
     "@netlify/blobs": "^10.7.4",
     "@netlify/database": "^1.0.0",
     "@netlify/functions": "^5.2.0",
+    "cookie": "^1.1.1",
+    "express": "^5.2.1",
     "html2canvas": "^1.4.1",
-    "passport-steam": "^1.0.18"
+    "jsonwebtoken": "^9.0.3",
+    "openid": "^2.0.15",
+    "passport": "^0.7.0",
+    "passport-steam": "^1.0.18",
+    "postgres": "^3.4.9"
   }
 }

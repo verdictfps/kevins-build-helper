@@ -1,9 +1,10 @@
 import type { Config } from "@netlify/functions";
-import { getDatabase } from "@netlify/database";
 import { createHmac, randomBytes, timingSafeEqual } from "node:crypto";
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import postgres from "postgres";
+import { getDb } from "./db.mts";
 
 const functionDirectory = path.dirname(fileURLToPath(import.meta.url));
 const itemDataDirectoryCandidates = [
@@ -18,6 +19,8 @@ const steamClaimPrefix = "https://steamcommunity.com/openid/id/";
 const stateCookieName = "kbh_steam_state";
 const sessionCookieName = "kbh_steam_session";
 const cookieMaxAgeSeconds = 60 * 60 * 24 * 30;
+
+let localSql: postgres.Sql | null = null;
 
 type RouteContext = {
     params?: {
@@ -184,7 +187,7 @@ function redirectResponse(location: string, headers?: HeadersInit) {
 }
 
 async function seedItemDataFile(fileName: string) {
-    const db = getDatabase();
+    
     const itemDataDirectory = await getItemDataDirectory();
     const filePath = path.join(itemDataDirectory, fileName);
     const [raw, fileStats] = await Promise.all([
@@ -192,10 +195,10 @@ async function seedItemDataFile(fileName: string) {
         stat(filePath),
     ]);
     const data = JSON.parse(raw);
-
-    await db.sql`
+    const sql = getDb();
+    await sql`
         INSERT INTO item_data (file_name, data, source_updated_at, seeded_at)
-        VALUES (${fileName}, ${JSON.stringify(data)}::jsonb, ${fileStats.mtime.toISOString()}, now())
+        VALUES (${fileName}, ${data}, ${fileStats.mtime.toISOString()}, now())
         ON CONFLICT (file_name) DO UPDATE SET
             data = EXCLUDED.data,
             source_updated_at = EXCLUDED.source_updated_at,
@@ -205,9 +208,10 @@ async function seedItemDataFile(fileName: string) {
 }
 
 async function getItemData(fileName: string) {
-    const db = getDatabase();
+    
     await seedItemDataFile(fileName);
-    const rows = await db.sql`
+    const sql = getDb();
+    const rows = await sql`
         SELECT data
         FROM item_data
         WHERE file_name = ${fileName}
@@ -262,11 +266,12 @@ async function handleSteamUserSave(req: Request) {
         return jsonResponse({ error: "Valid Steam ID is required" }, { status: 400 });
     }
 
-    const db = getDatabase();
+    
     const savedDisplayName = optionalString(displayName);
     const savedAvatarUrl = optionalString(avatarUrl);
     const savedProfileUrl = optionalString(profileUrl);
-    const rows = await db.sql`
+    const sql = getDb();
+    const rows = await sql`
         INSERT INTO steam_users (steam_id, display_name, avatar_url, profile_url, last_login_at, updated_at)
         VALUES (${steamId}, ${savedDisplayName}, ${savedAvatarUrl}, ${savedProfileUrl}, now(), now())
         ON CONFLICT (steam_id) DO UPDATE SET
@@ -282,8 +287,9 @@ async function handleSteamUserSave(req: Request) {
 }
 
 async function saveSteamUser(user: SteamSessionUser) {
-    const db = getDatabase();
-    const rows = await db.sql`
+    
+    const sql = getDb();
+    const rows = await sql`
         INSERT INTO steam_users (steam_id, display_name, avatar_url, profile_url, last_login_at, updated_at)
         VALUES (${user.steamId}, ${user.displayName}, ${user.avatarUrl}, ${user.profileUrl}, now(), now())
         ON CONFLICT (steam_id) DO UPDATE SET
@@ -518,9 +524,14 @@ export default async (req: Request, context: RouteContext) => {
         return jsonResponse({ error: "Not found" }, { status: 404 });
     }
     catch (error) {
-        const errorName = error instanceof Error ? error.name : "UnknownError";
-        console.error(`API request failed: ${errorName}`);
-        return jsonResponse({ error: "Internal server error" }, { status: 500 });
+        console.error("API request failed:", error);
+
+        return jsonResponse(
+            {
+                error: error instanceof Error ? error.message : "Internal server error",
+            },
+            { status: 500 }
+        );
     }
 };
 

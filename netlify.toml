@@ -2,3 +2,6 @@
   external_node_modules = ["@netlify/database"]
   included_files = ["itemdata/*.json"]
   node_bundler = "esbuild"
+[dev]
+  targetPort = 3000
+  port = 8888
